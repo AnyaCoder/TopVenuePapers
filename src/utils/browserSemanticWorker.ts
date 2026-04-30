@@ -6,6 +6,7 @@ interface EmbeddingMeta {
   dimensions: number
   ids: string[]
   titles: string[]
+  catalogGeneratedAt?: string
 }
 
 interface BrowserSemanticResult {
@@ -56,6 +57,7 @@ type WorkerMessage = InitMessage | WarmupMessage | SearchMessage
 const baseUrl = self.location.origin + import.meta.env.BASE_URL
 const metaUrl = `${baseUrl}data/semantic/paper-embeddings-all-MiniLM-L6-v2.meta.json`
 const embeddingsUrl = `${baseUrl}data/semantic/paper-embeddings-all-MiniLM-L6-v2.f32.bin`
+const semanticCacheName = 'top-venue-papers-semantic-v1'
 
 let indexPromise: Promise<BrowserSemanticIndex> | undefined
 
@@ -149,25 +151,12 @@ async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
 
   postProgress({
     stage: 'index',
-    status: 'download',
-    message: 'Downloading semantic index...',
+    status: 'initiate',
+    message: 'Checking semantic index cache...',
   })
 
-  const [metaResponse, embeddingsResponse] = await Promise.all([
-    fetch(metaUrl),
-    fetch(embeddingsUrl),
-  ])
-
-  if (!metaResponse.ok) {
-    throw new Error(`Could not load semantic metadata: ${metaResponse.status}`)
-  }
-
-  if (!embeddingsResponse.ok) {
-    throw new Error(`Could not load semantic index: ${embeddingsResponse.status}`)
-  }
-
-  const meta = (await metaResponse.json()) as EmbeddingMeta
-  const buffer = await readEmbeddingsWithProgress(embeddingsResponse)
+  const meta = await loadSemanticMeta()
+  const buffer = await loadSemanticEmbeddings(meta)
   const embeddings = new Float32Array(buffer)
 
   if (embeddings.length !== meta.count * meta.dimensions) {
@@ -218,6 +207,81 @@ async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
     embeddings,
     extractor,
   }
+}
+
+async function loadSemanticMeta() {
+  const cache = await openSemanticCache()
+  const cacheKey = new Request(metaUrl)
+
+  try {
+    const response = await fetch(metaUrl, { cache: 'no-store' })
+
+    if (!response.ok) {
+      throw new Error(`Could not load semantic metadata: ${response.status}`)
+    }
+
+    await cache.put(cacheKey, response.clone())
+    return (await response.json()) as EmbeddingMeta
+  } catch (error) {
+    const cached = await cache.match(cacheKey)
+
+    if (cached) {
+      postProgress({
+        stage: 'index',
+        status: 'done',
+        message: 'Using cached semantic metadata.',
+      })
+      return (await cached.json()) as EmbeddingMeta
+    }
+
+    throw error
+  }
+}
+
+async function loadSemanticEmbeddings(meta: EmbeddingMeta) {
+  const cache = await openSemanticCache()
+  const version = getSemanticVersion(meta)
+  const cacheKey = new Request(`${embeddingsUrl}?semantic-cache=${encodeURIComponent(version)}`)
+  const cached = await cache.match(cacheKey)
+
+  if (cached) {
+    const buffer = await cached.arrayBuffer()
+    postProgress({
+      stage: 'index',
+      status: 'done',
+      progress: 100,
+      loaded: buffer.byteLength,
+      total: buffer.byteLength,
+      message: `Semantic index loaded from browser cache (${formatBytes(buffer.byteLength)}).`,
+    })
+    return buffer
+  }
+
+  postProgress({
+    stage: 'index',
+    status: 'download',
+    message: 'Downloading semantic index...',
+  })
+
+  const response = await fetch(embeddingsUrl, { cache: 'no-store' })
+
+  if (!response.ok) {
+    throw new Error(`Could not load semantic index: ${response.status}`)
+  }
+
+  const buffer = await readEmbeddingsWithProgress(response)
+  await pruneSemanticEmbeddingCache(cache, cacheKey.url)
+  await cache.put(
+    cacheKey,
+    new Response(buffer, {
+      headers: {
+        'Content-Type': 'application/octet-stream',
+        'Content-Length': String(buffer.byteLength),
+      },
+    }),
+  )
+
+  return buffer
 }
 
 async function readEmbeddingsWithProgress(response: Response) {
@@ -285,6 +349,33 @@ async function readEmbeddingsWithProgress(response: Response) {
   })
 
   return merged.buffer
+}
+
+async function openSemanticCache() {
+  if (typeof caches === 'undefined') {
+    throw new Error('Browser Cache API is unavailable for semantic assets.')
+  }
+
+  return caches.open(semanticCacheName)
+}
+
+async function pruneSemanticEmbeddingCache(cache: Cache, keepUrl: string) {
+  const keys = await cache.keys()
+
+  for (const key of keys) {
+    if (key.url.startsWith(embeddingsUrl) && key.url !== keepUrl) {
+      await cache.delete(key)
+    }
+  }
+}
+
+function getSemanticVersion(meta: EmbeddingMeta) {
+  return [
+    meta.model,
+    meta.count,
+    meta.dimensions,
+    meta.catalogGeneratedAt ?? 'unknown',
+  ].join(':')
 }
 
 function postProgress(payload: BrowserSemanticProgressPayload) {

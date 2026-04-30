@@ -181,6 +181,10 @@ const semanticMatchesById = computed(() =>
 
 const semanticStatusLabel = computed(() => {
   if (semanticStatus.value === 'ready') {
+    if (semanticProgress.value?.message?.includes('browser cache')) {
+      return `Semantic ready from browser cache: ${semanticModel.value} (${semanticPaperCount.value || paperCatalog.value.length} papers)`
+    }
+
     return `Semantic ready: ${semanticModel.value} (${semanticPaperCount.value || paperCatalog.value.length} papers)`
   }
 
@@ -236,7 +240,7 @@ const semanticProgressMessage = computed(() => {
 
   if (semanticStatus.value === 'checking') {
     return useBrowserSemantic
-      ? 'Starting browser semantic warmup and cache check...'
+      ? 'Checking browser cache for semantic index...'
       : 'Checking local semantic server...'
   }
 
@@ -480,8 +484,8 @@ async function scheduleSemanticWarmup() {
       if (!semanticProgress.value) {
         semanticProgress.value = {
           stage: 'index',
-          status: 'download',
-          message: 'Starting browser semantic warmup and cache check...',
+          status: 'initiate',
+          message: 'Checking browser cache for semantic index...',
         }
       }
     }
@@ -794,13 +798,12 @@ function buildBibtexForView(paper: PaperCatalogIndexRecord) {
         <h1>AI Paper Finder</h1>
         <p>Discover relevant 2026 AI papers across selected top venues.</p>
         <div class="finder-hero__meta">
-          <span>CCF-A / ICLR 2026</span>
+          <span>CCF-A Papers</span>
           <a href="https://openreview.net" target="_blank" rel="noreferrer">
             OpenReview
           </a>
           <span>{{ paperCatalog.length }} papers loaded.</span>
           <span>{{ guidedPaperCount }} with Chinese guides.</span>
-          <span>{{ semanticStatusLabel }}</span>
           <span v-if="catalogUpdatedAt">Updated {{ catalogUpdatedAt.slice(0, 10) }}</span>
         </div>
       </div>
