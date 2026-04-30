@@ -1,19 +1,33 @@
 #!/usr/bin/env node
-import { createHash } from 'node:crypto'
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
-import { dirname } from 'node:path'
+import { readFile } from 'node:fs/promises'
+import { dirname, join } from 'node:path'
 import { env, pipeline } from '@huggingface/transformers'
+import {
+  buildChunkedMeta,
+  buildReusePlan,
+  buildSemanticChunks,
+  hashSemanticText,
+  loadPreviousChunkManifest,
+  loadPreviousSemanticArtifacts,
+  removeSemanticLegacyArtifacts,
+  paperToSemanticText,
+  writeSemanticMeta,
+  writeSemanticChunks,
+} from './semantic-artifacts.mjs'
 
 const DEFAULT_MODEL = 'Xenova/all-MiniLM-L6-v2'
 const DEFAULT_CATALOG = 'data/papers.catalog.json'
 const DEFAULT_OUT = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.f32.bin'
 const DEFAULT_META = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.meta.json'
+const DEFAULT_CHUNK_META = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.chunked.meta.json'
 
 const args = parseArgs(process.argv.slice(2))
 const modelName = args.model ?? DEFAULT_MODEL
 const catalogPath = args.catalog ?? DEFAULT_CATALOG
 const outPath = args.out ?? DEFAULT_OUT
 const metaPath = args.metaOut ?? DEFAULT_META
+const chunkMetaPath = args.chunkMetaOut ?? DEFAULT_CHUNK_META
+const emitLegacy = args.emitLegacy === 'true'
 const batchSize = Number(args.batchSize ?? 32)
 env.cacheDir = args.cacheDir ?? 'data/semantic/transformers-cache'
 if (args.remoteHost) {
@@ -21,12 +35,29 @@ if (args.remoteHost) {
 }
 
 const payload = JSON.parse(await readFile(catalogPath, 'utf8'))
-const papers = Array.isArray(payload) ? payload : payload.papers ?? []
-const texts = papers.map(paperToText)
-const fingerprints = texts.map(hashText)
-const previousArtifacts = await loadPreviousArtifacts(metaPath, outPath)
+const papers = (Array.isArray(payload) ? payload : payload.papers ?? []).map((paper) => ({
+  ...paper,
+  shardKey: paper.shardKey ?? `${paper.year}-${paper.venue}`,
+}))
+const texts = papers.map(paperToSemanticText)
+const fingerprints = texts.map(hashSemanticText)
+papers.forEach((paper, index) => {
+  paper.semanticFingerprint = fingerprints[index]
+})
+const previousArtifacts = await loadPreviousSemanticArtifacts({
+  chunkMetaPath,
+  metaPath,
+  outPath,
+})
+const previousChunkMeta = await loadPreviousChunkManifest(chunkMetaPath)
 
-const reuse = buildReusePlan(papers, fingerprints, previousArtifacts)
+const reuse = buildReusePlan({
+  papers,
+  texts,
+  fingerprints,
+  previousArtifacts,
+  modelName,
+})
 let extractor = null
 let dimensions = previousArtifacts?.meta?.dimensions ?? 0
 const vectors = new Array(papers.length)
@@ -70,126 +101,55 @@ if (!dimensions) {
   dimensions = previousArtifacts?.meta?.dimensions ?? 0
 }
 
-const flat = new Float32Array(vectors.length * dimensions)
-vectors.forEach((vector, row) => {
-  flat.set(vector, row * dimensions)
+const chunks = buildSemanticChunks({
+  papers,
+  vectors,
+  dimensions,
 })
 
-const meta = {
-  model: modelName,
-  task: 'feature-extraction',
-  catalog: catalogPath,
-  catalogGeneratedAt: payload.generatedAt ?? null,
-  count: papers.length,
+const chunkedMeta = buildChunkedMeta({
+  modelName,
+  catalogPath,
+  payload,
+  papers,
   dimensions,
-  normalized: true,
-  ids: papers.map((paper) => paper.id),
-  titles: papers.map((paper) => paper.title),
-  fingerprints,
+  chunks,
+})
+
+const chunkWriteStats = await writeSemanticChunks({
+  chunks,
+  chunkDir: join(dirname(chunkMetaPath), 'chunks'),
+  previousMeta: previousChunkMeta,
+})
+await writeSemanticMeta(chunkMetaPath, chunkedMeta)
+
+if (emitLegacy) {
+  const { buildLegacyMeta, flattenVectors } = await import('./semantic-artifacts.mjs')
+  const flat = flattenVectors(vectors, dimensions)
+  const meta = buildLegacyMeta({
+    modelName,
+    catalogPath,
+    payload,
+    papers,
+    dimensions,
+    fingerprints,
+  })
+  const { mkdir, writeFile } = await import('node:fs/promises')
+  await mkdir(dirname(outPath), { recursive: true })
+  await mkdir(dirname(metaPath), { recursive: true })
+  await writeFile(outPath, Buffer.from(flat.buffer))
+  await writeSemanticMeta(metaPath, meta)
+  console.log(`Wrote ${outPath}`)
+  console.log(`Wrote ${metaPath}`)
+} else {
+  await removeSemanticLegacyArtifacts({ metaPath, outPath })
 }
 
-await mkdir(dirname(outPath), { recursive: true })
-await mkdir(dirname(metaPath), { recursive: true })
-await writeFile(outPath, Buffer.from(flat.buffer))
-await writeFile(metaPath, `${JSON.stringify(meta, null, 2)}\n`, 'utf8')
-
-console.log(`Wrote ${outPath}`)
-console.log(`Wrote ${metaPath}`)
+console.log(`Wrote ${chunkMetaPath}`)
+console.log(
+  `Chunk files: reused ${chunkWriteStats.reused}, wrote ${chunkWriteStats.written}, total ${chunkWriteStats.count}.`,
+)
 console.log(`Reused ${reuse.reused.length} embedding(s); encoded ${reuse.pending.length} changed embedding(s).`)
-
-function paperToText(paper) {
-  const fields = [
-    paper.title,
-    paper.titleZh,
-    paper.venue,
-    paper.track,
-    (paper.keywords ?? []).join(' '),
-    (paper.categories ?? []).join(' '),
-    paper.tldr,
-    paper.abstract,
-    ...Object.values(paper.introZh ?? {}),
-  ]
-
-  return fields.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim()
-}
-
-async function loadPreviousArtifacts(metaPath, outPath) {
-  try {
-    const [metaText, binary] = await Promise.all([
-      readFile(metaPath, 'utf8'),
-      readFile(outPath),
-    ])
-    const meta = JSON.parse(metaText)
-
-    if (!meta?.count || !meta?.dimensions) {
-      return null
-    }
-
-    return {
-      meta,
-      vectors: new Float32Array(binary.buffer, binary.byteOffset, binary.byteLength / 4),
-    }
-  } catch {
-    return null
-  }
-}
-
-function buildReusePlan(papers, fingerprints, previousArtifacts) {
-  if (
-    !previousArtifacts ||
-    previousArtifacts.meta.model !== modelName ||
-    !Array.isArray(previousArtifacts.meta.ids) ||
-    !Array.isArray(previousArtifacts.meta.fingerprints)
-  ) {
-    return {
-      reused: [],
-      pending: papers.map((paper, index) => ({
-        index,
-        id: paper.id,
-        text: texts[index],
-      })),
-    }
-  }
-
-  const previousIndex = new Map()
-  const dimensions = previousArtifacts.meta.dimensions
-
-  previousArtifacts.meta.ids.forEach((id, index) => {
-    previousIndex.set(id, {
-      index,
-      fingerprint: previousArtifacts.meta.fingerprints[index],
-    })
-  })
-
-  const reused = []
-  const pending = []
-
-  papers.forEach((paper, index) => {
-    const previous = previousIndex.get(paper.id)
-
-    if (previous && previous.fingerprint === fingerprints[index]) {
-      const start = previous.index * dimensions
-      const end = start + dimensions
-      reused.push({
-        index,
-        vector: Array.from(previousArtifacts.vectors.slice(start, end)),
-      })
-      return
-    }
-
-    pending.push({
-      index,
-      id: paper.id,
-      text: texts[index],
-    })
-  })
-
-  return { reused, pending }
-}
-
-function hashText(text) {
-  return createHash('sha1').update(text).digest('hex')
-}
 
 function parseArgs(argv) {
   const parsed = {}
@@ -205,6 +165,10 @@ function parseArgs(argv) {
       parsed.out = argv[++index]
     } else if (arg === '--meta-out') {
       parsed.metaOut = argv[++index]
+    } else if (arg === '--chunk-meta-out') {
+      parsed.chunkMetaOut = argv[++index]
+    } else if (arg === '--emit-legacy') {
+      parsed.emitLegacy = 'true'
     } else if (arg === '--batch-size') {
       parsed.batchSize = argv[++index]
     } else if (arg === '--cache-dir') {
@@ -231,6 +195,8 @@ Options:
   --catalog <path>     Paper catalog JSON. Default: data/papers.catalog.json.
   --out <path>         Float32 binary output.
   --meta-out <path>    Metadata JSON output.
+  --chunk-meta-out <path> Chunked metadata JSON output.
+  --emit-legacy        Also emit legacy monolithic binary/meta files.
   --batch-size <n>     Encoding batch size. Default: 32.
   --cache-dir <path>   Transformers.js cache directory.
   --remote-host <url>  Optional Hugging Face-compatible mirror.

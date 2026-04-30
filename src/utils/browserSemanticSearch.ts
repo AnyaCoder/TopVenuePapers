@@ -5,11 +5,26 @@ export interface BrowserSemanticResult {
 }
 
 export interface BrowserSemanticMeta {
+  format?: string
   model: string
   count: number
   dimensions: number
   ids: string[]
   titles: string[]
+  fingerprints?: string[]
+  catalogGeneratedAt?: string
+  chunks?: Array<{
+    key: string
+    venue: string
+    year: number
+    part?: number
+    offset?: number
+    count: number
+    dimensions: number
+    file: string
+    bytes: number
+    fingerprint?: string
+  }>
 }
 
 export interface BrowserSemanticIndexHandle {

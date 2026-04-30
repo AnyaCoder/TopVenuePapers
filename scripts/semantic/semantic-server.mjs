@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 import { createServer } from 'node:http'
-import { readFile } from 'node:fs/promises'
 import { env, pipeline } from '@huggingface/transformers'
+import {
+  loadSemanticSearchMatrix,
+} from './semantic-artifacts.mjs'
 
 const DEFAULT_MODEL = 'Xenova/all-MiniLM-L6-v2'
 const DEFAULT_EMBEDDINGS = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.f32.bin'
 const DEFAULT_META = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.meta.json'
+const DEFAULT_CHUNK_META = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.chunked.meta.json'
 
 const args = parseArgs(process.argv.slice(2))
 const host = args.host ?? '127.0.0.1'
@@ -13,18 +16,17 @@ const port = Number(args.port ?? 8765)
 const modelName = args.model ?? DEFAULT_MODEL
 const embeddingsPath = args.embeddings ?? DEFAULT_EMBEDDINGS
 const metaPath = args.meta ?? DEFAULT_META
+const chunkMetaPath = args.chunkMeta ?? DEFAULT_CHUNK_META
 env.cacheDir = args.cacheDir ?? 'data/semantic/transformers-cache'
 if (args.remoteHost) {
   env.remoteHost = args.remoteHost
 }
 
-const meta = JSON.parse(await readFile(metaPath, 'utf8'))
-const embeddingBuffer = await readFile(embeddingsPath)
-const embeddings = new Float32Array(
-  embeddingBuffer.buffer,
-  embeddingBuffer.byteOffset,
-  embeddingBuffer.byteLength / Float32Array.BYTES_PER_ELEMENT,
-)
+const { meta, embeddings } = await loadSemanticSearchMatrix({
+  metaPath,
+  chunkMetaPath,
+  outPath: embeddingsPath,
+})
 const dimensions = meta.dimensions
 const count = meta.count
 
@@ -173,6 +175,8 @@ function parseArgs(argv) {
       parsed.embeddings = argv[++index]
     } else if (arg === '--meta') {
       parsed.meta = argv[++index]
+    } else if (arg === '--chunk-meta') {
+      parsed.chunkMeta = argv[++index]
     } else if (arg === '--host') {
       parsed.host = argv[++index]
     } else if (arg === '--port') {
@@ -200,6 +204,7 @@ Options:
   --model <name>       Transformers.js model. Default: Xenova/all-MiniLM-L6-v2.
   --embeddings <path>  Float32 embedding binary.
   --meta <path>        Metadata JSON.
+  --chunk-meta <path>  Chunked metadata JSON.
   --host <host>        Default: 127.0.0.1.
   --port <port>        Default: 8765.
   --cache-dir <path>   Transformers.js cache directory.
