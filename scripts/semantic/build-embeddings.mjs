@@ -4,7 +4,7 @@ import { dirname } from 'node:path'
 import { env, pipeline } from '@huggingface/transformers'
 
 const DEFAULT_MODEL = 'Xenova/all-MiniLM-L6-v2'
-const DEFAULT_CATALOG = 'public/data/papers.catalog.json'
+const DEFAULT_CATALOG = 'data/papers.catalog.json'
 const DEFAULT_OUT = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.f32.bin'
 const DEFAULT_META = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.meta.json'
 
@@ -130,7 +130,7 @@ Usage:
 
 Options:
   --model <name>       Transformers.js model. Default: Xenova/all-MiniLM-L6-v2.
-  --catalog <path>     Paper catalog JSON. Default: public/data/papers.catalog.json.
+  --catalog <path>     Paper catalog JSON. Default: data/papers.catalog.json.
   --out <path>         Float32 binary output.
   --meta-out <path>    Metadata JSON output.
   --batch-size <n>     Encoding batch size. Default: 32.

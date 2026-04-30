@@ -18,6 +18,7 @@ const concurrency = Number(args.concurrency ?? 12)
 const maxCvprDetails = parseLimit(args.maxCvprDetails)
 const maxAaaiDetails = parseLimit(args.maxAaaiDetails)
 const useCache = !args.noCache
+const filterRelevantOnly = Boolean(args.filterRelevantOnly)
 
 const guideRecords = await readJsonArray(guideInput).catch(() => [])
 const guideIndex = buildGuideIndex(guideRecords)
@@ -46,7 +47,9 @@ const payload = {
   ],
   notes: [
     'Newly ingested papers intentionally keep guideStatus=pending unless a prior Chinese guide exists.',
-    'CVPR and AAAI are filtered by LLM/VLM/VLA/MLLM-adjacent title signals before detail-page fetching.',
+    filterRelevantOnly
+      ? 'CVPR and AAAI are filtered by LLM/VLM/VLA/MLLM-adjacent title signals before detail-page fetching.'
+      : 'CVPR, AAAI, and ICLR are ingested as full official 2026 conference sets.',
   ],
   papers: merged,
 }
@@ -91,7 +94,9 @@ async function collectIclrPapers() {
 
 async function collectCvprPapers() {
   const html = await fetchTextCached(CVPR_PAPERS_URL, 'cvpr-2026-papers.html')
-  const candidates = parseCvprList(html).filter((paper) => isRelevantTitle(paper.title))
+  const candidates = parseCvprList(html).filter((paper) =>
+    filterRelevantOnly ? isRelevantTitle(paper.title) : true,
+  )
   const selected = Number.isFinite(maxCvprDetails)
     ? candidates.slice(0, maxCvprDetails)
     : candidates
@@ -131,8 +136,9 @@ async function collectAaaiPapers() {
     return fetchTextCached(url, `aaai-issue-${url.split('/').pop()}.html`)
   })
 
-  const candidates = issuePages.flatMap(parseAaaiIssueArticles)
-    .filter((paper) => isRelevantTitle(paper.title))
+  const candidates = issuePages
+    .flatMap(parseAaaiIssueArticles)
+    .filter((paper) => (filterRelevantOnly ? isRelevantTitle(paper.title) : true))
   const selected = Number.isFinite(maxAaaiDetails)
     ? candidates.slice(0, maxAaaiDetails)
     : candidates
@@ -221,9 +227,18 @@ function parseCvprDetail(html, fallback) {
 function parseAaaiIssueUrls(html) {
   return Array.from(
     new Set(
-      [...html.matchAll(/https:\/\/ojs\.aaai\.org\/index\.php\/AAAI\/issue\/view\/(\d+)/g)]
-        .map((match) => Number(match[1]))
-        .filter((id) => id >= 683 && id <= 733),
+      [...html.matchAll(/<a class="title" href="https:\/\/ojs\.aaai\.org\/index\.php\/AAAI\/issue\/view\/(\d+)">([\s\S]*?)<\/a>[\s\S]*?<div class="series">([\s\S]*?)<\/div>/g)]
+        .map((match) => ({
+          id: Number(match[1]),
+          title: cleanText(match[2]),
+          series: cleanText(match[3]),
+        }))
+        .filter(
+          (entry) =>
+            entry.series.startsWith('Vol. 40 No.') &&
+            entry.title.startsWith('AAAI-26 Technical Tracks'),
+        )
+        .map((entry) => entry.id),
     ),
   )
     .sort((left, right) => left - right)
@@ -574,6 +589,8 @@ function parseArgs(argv) {
       parsed.maxCvprDetails = argv[++index]
     } else if (arg === '--max-aaai-details') {
       parsed.maxAaaiDetails = argv[++index]
+    } else if (arg === '--filter-relevant-only') {
+      parsed.filterRelevantOnly = true
     } else if (arg === '--no-cache') {
       parsed.noCache = true
     } else if (arg === '--help') {
@@ -597,6 +614,7 @@ Options:
   --max-cvpr-details <n|all>  Cap CVPR detail-page fetches. Default: all title candidates.
   --max-aaai-details <n|all>  Cap AAAI detail-page fetches. Default: all title candidates.
   --concurrency <n>           Detail fetch concurrency. Default: 12.
+  --filter-relevant-only      Keep the old topic-filtered CVPR/AAAI behavior.
   --no-cache                  Ignore cached HTML and refetch.
 `)
   process.exit(0)

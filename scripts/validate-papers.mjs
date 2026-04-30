@@ -23,6 +23,12 @@ async function readRecords(path) {
 
   if (path.endsWith('.json')) {
     const parsed = JSON.parse(text)
+    if (Array.isArray(parsed.papers)) {
+      return parsed.papers
+    }
+    if (Array.isArray(parsed.records)) {
+      return parsed.records
+    }
     return parsed.papers ?? parsed
   }
 

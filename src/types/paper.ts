@@ -57,3 +57,38 @@ export interface PaperRecord {
   sourceId?: string
   guideStatus?: 'ready' | 'pending'
 }
+
+export interface PaperCatalogShardRef {
+  key: string
+  venue: string
+  year: number
+  path: string
+  count: number
+}
+
+export interface PaperCatalogIndexRecord
+  extends Omit<PaperRecord, 'abstract' | 'introZh'> {
+  abstract?: string
+  shardKey: string
+  hasIntroZh: boolean
+  hasAbstract: boolean
+}
+
+export interface PaperCatalogShardPayload {
+  key: string
+  venue: string
+  year: number
+  count: number
+  papers: PaperRecord[]
+}
+
+export interface PaperCatalogIndexPayload {
+  generatedAt: string
+  count: number
+  guidedCount: number
+  venueYearCount: number
+  sources?: Array<{ name: string; url: string; count: number }>
+  notes?: string[]
+  shards: PaperCatalogShardRef[]
+  papers: PaperCatalogIndexRecord[]
+}

@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
 import { usePaperSearch } from './composables/usePaperSearch'
-import type { CategoryKey, PaperRecord } from './types/paper'
+import type {
+  CategoryKey,
+  PaperCatalogIndexPayload,
+  PaperCatalogIndexRecord,
+  PaperCatalogShardPayload,
+  PaperRecord,
+} from './types/paper'
 
 type SearchMode = 'semantic' | 'keyword'
 type SemanticStatus = 'idle' | 'checking' | 'ready' | 'searching' | 'offline' | 'error'
@@ -51,10 +57,13 @@ const semanticRequestId = ref(0)
 const selectedVenueYears = ref(new Set<string>())
 const selectedCategories = ref(new Set<CategoryKey>())
 const openSections = ref(new Set<string>())
-const paperCatalog = ref<PaperRecord[]>([])
+const paperCatalog = ref<PaperCatalogIndexRecord[]>([])
 const isLoadingPapers = ref(true)
 const loadError = ref('')
 const catalogUpdatedAt = ref('')
+const detailRequestId = ref(0)
+const detailShardCache = new Map<string, Promise<PaperCatalogShardPayload>>()
+const detailedPapers = ref<Record<string, PaperRecord>>({})
 const semanticApiBase = import.meta.env.PROD
   ? '/api/semantic'
   : 'http://127.0.0.1:8765'
@@ -68,7 +77,9 @@ const semanticPaperCount = ref(0)
 const semanticResults = ref<SemanticResult[]>([])
 const lastSemanticQuery = ref('')
 
-const { query, outcome } = usePaperSearch(paperCatalog)
+const { query, outcome } = usePaperSearch(
+  paperCatalog as unknown as import('vue').Ref<PaperRecord[]>,
+)
 
 const venueGroups = computed(() => {
   const groups = new Map<string, { years: Set<number>; counts: Map<number, number> }>()
@@ -111,7 +122,7 @@ const categoryOptions = computed(() =>
 )
 
 const guidedPaperCount = computed(
-  () => paperCatalog.value.filter((paper) => paper.introZh).length,
+  () => paperCatalog.value.filter((paper) => paper.hasIntroZh).length,
 )
 
 const paperById = computed(() =>
@@ -121,7 +132,7 @@ const paperById = computed(() =>
 const semanticRankedPapers = computed(() =>
   semanticResults.value
     .map((result) => paperById.value.get(result.id))
-    .filter((paper): paper is PaperRecord => Boolean(paper)),
+    .filter((paper): paper is PaperCatalogIndexRecord => Boolean(paper)),
 )
 
 const hasSemanticRanking = computed(
@@ -132,8 +143,10 @@ const hasSemanticRanking = computed(
     semanticRankedPapers.value.length > 0,
 )
 
-const rankedPapers = computed(() =>
-  hasSemanticRanking.value ? semanticRankedPapers.value : outcome.value.papers,
+const rankedPapers = computed<PaperCatalogIndexRecord[]>(() =>
+  hasSemanticRanking.value
+    ? semanticRankedPapers.value
+    : (outcome.value.papers as PaperCatalogIndexRecord[]),
 )
 
 const semanticMatchesById = computed(() =>
@@ -179,7 +192,7 @@ const semanticStatusLabel = computed(() => {
     : `Semantic model: ${semanticModel.value}`
 })
 
-const filteredPapers = computed(() => {
+const filteredPapers = computed<PaperCatalogIndexRecord[]>(() => {
   const venueSet = selectedVenueYears.value
   const categorySet = selectedCategories.value
 
@@ -249,13 +262,13 @@ async function loadPaperCatalog() {
   loadError.value = ''
 
   try {
-    const response = await fetch(`${dataBaseUrl}data/papers.catalog.json`)
+    const response = await fetch(`${dataBaseUrl}data/catalog/index.json`)
 
     if (!response.ok) {
       throw new Error(`${response.status} ${response.statusText}`)
     }
 
-    const payload = await response.json()
+    const payload = (await response.json()) as PaperCatalogIndexPayload
     const records = Array.isArray(payload) ? payload : payload.papers
 
     if (!Array.isArray(records)) {
@@ -471,6 +484,7 @@ function toggleCategory(category: CategoryKey) {
 function toggleSection(paperId: string, section: string) {
   const next = new Set(openSections.value)
   const key = `${paperId}:${section}`
+  const isOpening = !next.has(key)
 
   if (next.has(key)) {
     next.delete(key)
@@ -479,10 +493,68 @@ function toggleSection(paperId: string, section: string) {
   }
 
   openSections.value = next
+
+  if (isOpening && (section === 'abstract' || section === 'guide')) {
+    void ensurePaperDetailsLoaded(paperId)
+  }
 }
 
 function isSectionOpen(paperId: string, section: string) {
   return openSections.value.has(`${paperId}:${section}`)
+}
+
+async function ensurePaperDetailsLoaded(paperId: string) {
+  if (detailedPapers.value[paperId]) {
+    return
+  }
+
+  const indexPaper = paperCatalog.value.find((paper) => paper.id === paperId)
+
+  if (!indexPaper) {
+    return
+  }
+
+  const requestId = detailRequestId.value + 1
+  detailRequestId.value = requestId
+
+  try {
+    const shard = await loadShard(indexPaper.shardKey)
+
+    if (detailRequestId.value < requestId) {
+      return
+    }
+
+    const detailPaper = shard.papers.find((paper) => paper.id === paperId)
+
+    if (!detailPaper) {
+      return
+    }
+
+    detailedPapers.value = {
+      ...detailedPapers.value,
+      [paperId]: detailPaper,
+    }
+  } catch (error) {
+    console.warn('Failed to load paper details', error)
+  }
+}
+
+async function loadShard(shardKey: string) {
+  let promise = detailShardCache.get(shardKey)
+
+  if (!promise) {
+    promise = fetch(`${dataBaseUrl}data/catalog/shards/${shardKey}.json`)
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`${response.status} ${response.statusText}`)
+        }
+
+        return (await response.json()) as PaperCatalogShardPayload
+      })
+    detailShardCache.set(shardKey, promise)
+  }
+
+  return promise
 }
 
 function previousPage() {
@@ -508,7 +580,7 @@ function getVenueName(venue: string) {
   return venue.split(/\s+/)[0] || venue
 }
 
-function getVenueYearKey(paper: PaperRecord) {
+function getVenueYearKey(paper: Pick<PaperRecord, 'venue' | 'year'>) {
   return `${getVenueName(paper.venue)}:${paper.year}`
 }
 
@@ -517,7 +589,7 @@ function selectedYearCount(venue: string, years: number[]) {
     .length
 }
 
-function formatAffinity(paper: PaperRecord) {
+function formatAffinity(paper: PaperCatalogIndexRecord) {
   if (hasSemanticRanking.value) {
     const semanticScore = semanticMatchesById.value[paper.id]?.score
 
@@ -545,6 +617,14 @@ function buildBibtex(paper: PaperRecord) {
   year={${paper.year}},
   url={${paper.openreviewUrl}}
 }`
+}
+
+function getPaperDetail(paper: PaperCatalogIndexRecord) {
+  return detailedPapers.value[paper.id] ?? paper
+}
+
+function buildBibtexForView(paper: PaperCatalogIndexRecord) {
+  return buildBibtex(getPaperDetail(paper))
 }
 </script>
 
@@ -790,15 +870,18 @@ function buildBibtex(paper: PaperRecord) {
                 Show Abstract
               </button>
               <p v-if="isSectionOpen(paper.id, 'abstract')" class="detail-copy">
-                {{ paper.abstract || 'No abstract was exposed by the source page.' }}
+                {{
+                  getPaperDetail(paper).abstract ||
+                  'Abstract is loading or was not exposed by the source page.'
+                }}
               </p>
 
               <button type="button" @click="toggleSection(paper.id, 'guide')">
                 <span>{{ isSectionOpen(paper.id, 'guide') ? '▾' : '▸' }}</span>
-                {{ paper.introZh ? 'Show 中文导读' : '中文导读待补充' }}
+                {{ paper.hasIntroZh ? 'Show 中文导读' : '中文导读待补充' }}
               </button>
               <div
-                v-if="isSectionOpen(paper.id, 'guide') && paper.introZh"
+                v-if="isSectionOpen(paper.id, 'guide') && getPaperDetail(paper).introZh"
                 class="guide-grid"
               >
                 <article
@@ -807,7 +890,7 @@ function buildBibtex(paper: PaperRecord) {
                   class="guide-cell"
                 >
                   <strong>{{ label }}</strong>
-                  <p>{{ paper.introZh[key] }}</p>
+                  <p>{{ getPaperDetail(paper).introZh?.[key] }}</p>
                 </article>
               </div>
               <p
@@ -822,7 +905,7 @@ function buildBibtex(paper: PaperRecord) {
                 Show BibTeX
               </button>
               <pre v-if="isSectionOpen(paper.id, 'bibtex')" class="bibtex">{{
-                buildBibtex(paper)
+                buildBibtexForView(paper)
               }}</pre>
             </div>
           </article>

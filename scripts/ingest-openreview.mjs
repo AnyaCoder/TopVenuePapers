@@ -14,9 +14,11 @@ const outFile = args.out ?? 'data/openreview/iclr-2026-candidates.json'
 const venues = args.venue?.length ? args.venue : DEFAULT_VENUES
 const apiBase = args.apiBase ?? 'https://api2.openreview.net'
 const pageLimit = Number(args.limit ?? 500)
-const maxPages = Number(args.maxPages ?? 6)
+const maxPages = Number(args.maxPages ?? 20)
 const includeAll = Boolean(args.includeAll)
 const dryRun = Boolean(args.dryRun)
+const invitation =
+  args.invitation ?? 'ICLR.cc/2026/Conference/-/Submission'
 
 if (!Number.isFinite(pageLimit) || pageLimit <= 0) {
   throw new Error('--limit must be a positive number')
@@ -25,7 +27,13 @@ if (!Number.isFinite(pageLimit) || pageLimit <= 0) {
 const allCandidates = []
 
 for (const venue of venues) {
-  const notes = await fetchVenueNotes({ apiBase, venue, pageLimit, maxPages })
+  const notes = await fetchVenueNotes({
+    apiBase,
+    venue,
+    invitation,
+    pageLimit,
+    maxPages,
+  })
 
   for (const note of notes) {
     const candidate = normalizeOpenReviewNote(note)
@@ -45,6 +53,7 @@ const payload = {
   venues,
   filters: {
     includeAll,
+    invitation,
     topic: 'LLM/VLM/VLA/MLLM adjacent papers',
   },
   count: deduped.length,
@@ -60,13 +69,20 @@ if (dryRun) {
   console.log(`\nWrote ${outFile}`)
 }
 
-async function fetchVenueNotes({ apiBase, venue, pageLimit, maxPages }) {
+async function fetchVenueNotes({
+  apiBase,
+  venue,
+  invitation,
+  pageLimit,
+  maxPages,
+}) {
   const notes = []
 
   for (let page = 0; page < maxPages; page += 1) {
     const offset = page * pageLimit
     const url = new URL('/notes', apiBase)
     url.searchParams.set('content.venue', venue)
+    url.searchParams.set('invitation', invitation)
     url.searchParams.set('limit', String(pageLimit))
     url.searchParams.set('offset', String(offset))
 
@@ -144,6 +160,8 @@ function parseArgs(argv) {
       parsed.out = argv[++index]
     } else if (arg === '--api-base') {
       parsed.apiBase = argv[++index]
+    } else if (arg === '--invitation') {
+      parsed.invitation = argv[++index]
     } else if (arg === '--limit') {
       parsed.limit = argv[++index]
     } else if (arg === '--max-pages') {
@@ -170,8 +188,9 @@ Usage:
 Options:
   --venue <name>      OpenReview content.venue value. Repeatable.
   --out <path>        Output JSON path.
+  --invitation <id>   OpenReview invitation. Default: ICLR.cc/2026/Conference/-/Submission.
   --limit <n>         Page size. Default: 500.
-  --max-pages <n>     Max pages per venue. Default: 6.
+  --max-pages <n>     Max pages per venue. Default: 20.
   --include-all       Keep every accepted paper instead of topic filtering.
   --dry-run           Fetch and summarize without writing.
 `)
