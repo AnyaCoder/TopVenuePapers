@@ -42,7 +42,7 @@ const payload = {
   sources: [
     { name: 'ICLR 2026 OpenReview', url: OPENREVIEW_URL, count: iclr.records.length },
     { name: 'CVPR 2026 Virtual', url: CVPR_PAPERS_URL, count: cvpr.records.length },
-    { name: 'AAAI-26 OJS', url: AAAI_ARCHIVE_URL, count: aaai.records.length },
+    { name: 'AAAI OJS', url: AAAI_ARCHIVE_URL, count: aaai.records.length },
   ],
   notes: [
     'Newly ingested papers intentionally keep guideStatus=pending unless a prior Chinese guide exists.',
@@ -147,7 +147,7 @@ async function collectAaaiPapers() {
         ...paper,
         ...detail,
         source: 'aaai',
-        venue: 'AAAI-26',
+      venue: 'AAAI',
         year: 2026,
       })
     } catch (error) {
@@ -155,7 +155,7 @@ async function collectAaaiPapers() {
       return normalizeRecord({
         ...paper,
         source: 'aaai',
-        venue: 'AAAI-26',
+        venue: 'AAAI',
         year: 2026,
         abstract: '',
       })
@@ -270,7 +270,7 @@ function parseAaaiArticle(html, fallback) {
     .map((match) => decodeHtml(match[1]))
     .filter(Boolean)
   const pdfUrl = meta('citation_pdf_url') || fallback.pdfUrl
-  const track = meta('DC.Type.articleType') || 'AAAI-26'
+  const track = meta('DC.Type.articleType') || 'AAAI'
 
   return {
     title,

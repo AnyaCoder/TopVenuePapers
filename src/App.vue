@@ -46,6 +46,8 @@ const draftQuery = ref('')
 const maxResults = ref(100)
 const perPage = ref(10)
 const currentPage = ref(1)
+const catalogRequestId = ref(0)
+const semanticRequestId = ref(0)
 const selectedVenueYears = ref(new Set<string>())
 const selectedCategories = ref(new Set<CategoryKey>())
 const openSections = ref(new Set<string>())
@@ -69,20 +71,29 @@ const lastSemanticQuery = ref('')
 const { query, outcome } = usePaperSearch(paperCatalog)
 
 const venueGroups = computed(() => {
-  const groups = new Map<string, Set<number>>()
+  const groups = new Map<string, { years: Set<number>; counts: Map<number, number> }>()
 
   for (const paper of paperCatalog.value) {
     const venue = getVenueName(paper.venue)
-    const years = groups.get(venue) ?? new Set<number>()
-    years.add(paper.year)
-    groups.set(venue, years)
+    const group = groups.get(venue) ?? {
+      years: new Set<number>(),
+      counts: new Map<number, number>(),
+    }
+    group.years.add(paper.year)
+    group.counts.set(paper.year, (group.counts.get(paper.year) ?? 0) + 1)
+    groups.set(venue, group)
   }
 
   return Array.from(groups.entries())
     .sort(([left], [right]) => left.localeCompare(right))
-    .map(([venue, years]) => ({
+    .map(([venue, group]) => ({
       venue,
-      years: Array.from(years).sort((left, right) => right - left),
+      years: Array.from(group.years)
+        .sort((left, right) => right - left)
+        .map((year) => ({
+          value: year,
+          count: group.counts.get(year) ?? 0,
+        })),
     }))
 })
 
@@ -232,6 +243,8 @@ onMounted(() => {
 })
 
 async function loadPaperCatalog() {
+  const requestId = catalogRequestId.value + 1
+  catalogRequestId.value = requestId
   isLoadingPapers.value = true
   loadError.value = ''
 
@@ -249,14 +262,24 @@ async function loadPaperCatalog() {
       throw new Error('Catalog JSON must be an array or an object with papers.')
     }
 
+    if (catalogRequestId.value !== requestId) {
+      return
+    }
+
     paperCatalog.value = records
     catalogUpdatedAt.value = payload.generatedAt ?? ''
     maxResults.value = Math.min(Math.max(maxResults.value, 100), records.length)
   } catch (error) {
+    if (catalogRequestId.value !== requestId) {
+      return
+    }
+
     loadError.value =
       error instanceof Error ? error.message : 'Could not load paper catalog.'
   } finally {
-    isLoadingPapers.value = false
+    if (catalogRequestId.value === requestId) {
+      isLoadingPapers.value = false
+    }
   }
 }
 
@@ -332,6 +355,8 @@ async function checkSemanticHealth() {
 }
 
 async function runSemanticSearch(rawQuery: string) {
+  const requestId = semanticRequestId.value + 1
+  semanticRequestId.value = requestId
   semanticStatus.value = 'searching'
   semanticError.value = ''
 
@@ -345,7 +370,15 @@ async function runSemanticSearch(rawQuery: string) {
       const { searchBrowserSemanticIndex } = await import(
         './utils/browserSemanticSearch'
       )
+      if (semanticRequestId.value !== requestId) {
+        return
+      }
       semanticResults.value = await searchBrowserSemanticIndex(rawQuery, topK)
+
+      if (semanticRequestId.value !== requestId || query.value.trim() !== rawQuery) {
+        return
+      }
+
       lastSemanticQuery.value = rawQuery
       semanticStatus.value = 'ready'
       return
@@ -362,7 +395,7 @@ async function runSemanticSearch(rawQuery: string) {
 
     const payload = await response.json()
 
-    if (query.value.trim() !== rawQuery) {
+    if (semanticRequestId.value !== requestId || query.value.trim() !== rawQuery) {
       return
     }
 
@@ -372,6 +405,10 @@ async function runSemanticSearch(rawQuery: string) {
     lastSemanticQuery.value = rawQuery
     semanticStatus.value = 'ready'
   } catch (error) {
+    if (semanticRequestId.value !== requestId) {
+      return
+    }
+
     semanticResults.value = []
     lastSemanticQuery.value = ''
     semanticStatus.value = 'error'
@@ -630,20 +667,20 @@ function buildBibtex(paper: PaperRecord) {
                 <div class="venue-row__top">
                   <strong>{{ group.venue }}</strong>
                   <span>
-                    {{ selectedYearCount(group.venue, group.years) }}/{{
+                    {{ selectedYearCount(group.venue, group.years.map((item) => item.value)) }}/{{
                       group.years.length
                     }}
                     selected
                   </span>
                   <button
                     type="button"
-                    @click="toggleVenueGroup(group.venue, group.years)"
+                    @click="toggleVenueGroup(group.venue, group.years.map((item) => item.value))"
                   >
                     Select all years
                   </button>
                   <button
                     type="button"
-                    @click="clearVenueGroup(group.venue, group.years)"
+                    @click="clearVenueGroup(group.venue, group.years.map((item) => item.value))"
                   >
                     Clear
                   </button>
@@ -651,14 +688,14 @@ function buildBibtex(paper: PaperRecord) {
                 <div class="year-pills">
                   <button
                     v-for="year in group.years"
-                    :key="year"
+                    :key="year.value"
                     type="button"
                     :class="{
-                      'is-active': selectedVenueYears.has(`${group.venue}:${year}`),
+                      'is-active': selectedVenueYears.has(`${group.venue}:${year.value}`),
                     }"
-                    @click="toggleVenueYear(group.venue, year)"
+                    @click="toggleVenueYear(group.venue, year.value)"
                   >
-                    {{ year }}
+                    {{ year.value }} ({{ year.count }})
                   </button>
                 </div>
               </article>
