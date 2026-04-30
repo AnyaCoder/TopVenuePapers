@@ -164,7 +164,7 @@ const semanticStatusLabel = computed(() => {
   }
 
   return useBrowserSemantic
-    ? `Semantic model will download in your browser on first use: ${semanticModel.value}`
+    ? `Semantic model downloads once and then reuses browser cache: ${semanticModel.value}`
     : `Semantic model: ${semanticModel.value}`
 })
 
