@@ -2,6 +2,10 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { classifyText, normalizeText, slugify } from './lib/paper-taxonomy.mjs'
+import {
+  materializeUnofficialCatalogRecords,
+  readUnofficialStore,
+} from './lib/unofficial-papers.mjs'
 
 const CVPR_PAPERS_URL = 'https://cvpr.thecvf.com/virtual/2026/papers.html'
 const AAAI_ARCHIVE_URL = 'https://ojs.aaai.org/index.php/AAAI/issue/archive'
@@ -14,6 +18,10 @@ const iclrInput = args.iclr ?? 'data/openreview/iclr-2026-candidates.json'
 const guideInput = args.guides ?? 'data/papers.generated.json'
 const outFile = args.out ?? 'public/data/papers.catalog.json'
 const mirrorOutFile = args.mirrorOut ?? 'data/papers.catalog.json'
+const officialMirrorOutFile =
+  args.officialMirrorOut ?? 'data/papers.catalog.official.json'
+const unofficialStorePath =
+  args.unofficialStore ?? 'data/unofficial/unofficial-papers.json'
 const concurrency = Number(args.concurrency ?? 12)
 const maxCvprDetails = parseLimit(args.maxCvprDetails)
 const maxAaaiDetails = parseLimit(args.maxAaaiDetails)
@@ -36,7 +44,7 @@ const merged = dedupeRecords([...iclr.records, ...cvpr.records, ...aaai.records]
     return venueDiff || left.title.localeCompare(right.title)
   })
 
-const payload = {
+const officialPayload = {
   generatedAt: new Date().toISOString(),
   count: merged.length,
   guidedCount: merged.filter((paper) => paper.introZh).length,
@@ -46,20 +54,57 @@ const payload = {
     { name: 'AAAI OJS', url: AAAI_ARCHIVE_URL, count: aaai.records.length },
   ],
   notes: [
-    'Newly ingested papers intentionally keep guideStatus=pending unless a prior Chinese guide exists.',
-    filterRelevantOnly
-      ? 'CVPR and AAAI are filtered by LLM/VLM/VLA/MLLM-adjacent title signals before detail-page fetching.'
-      : 'CVPR, AAAI, and ICLR are ingested as full official 2026 conference sets.',
+    'Official-only mirror used for reconciliation against social/unofficial discoveries.',
   ],
   papers: merged,
 }
 
+const unofficialStore = await readUnofficialStore(unofficialStorePath).catch(() => ({
+  papers: [],
+  generatedAt: '',
+  notes: [],
+}))
+const unofficialRecords = materializeUnofficialCatalogRecords(
+  unofficialStore.papers,
+  merged,
+)
+const combined = dedupeRecords([...merged, ...unofficialRecords]).sort((left, right) => {
+  const venueDiff = left.venue.localeCompare(right.venue)
+  return venueDiff || left.title.localeCompare(right.title)
+})
+
+const payload = {
+  generatedAt: new Date().toISOString(),
+  count: combined.length,
+  guidedCount: combined.filter((paper) => paper.introZh).length,
+  sources: [
+    { name: 'ICLR 2026 OpenReview', url: OPENREVIEW_URL, count: iclr.records.length },
+    { name: 'CVPR 2026 Virtual', url: CVPR_PAPERS_URL, count: cvpr.records.length },
+    { name: 'AAAI OJS', url: AAAI_ARCHIVE_URL, count: aaai.records.length },
+    {
+      name: 'Zhipu unofficial discovery',
+      url: 'https://docs.bigmodel.cn/api-reference/工具-api/网络搜索',
+      count: unofficialRecords.length,
+    },
+  ],
+  notes: [
+    'Newly ingested papers intentionally keep guideStatus=pending unless a prior Chinese guide exists.',
+    filterRelevantOnly
+      ? 'CVPR and AAAI are filtered by LLM/VLM/VLA/MLLM-adjacent title signals before detail-page fetching.'
+      : 'CVPR, AAAI, and ICLR are ingested as full official 2026 conference sets.',
+    'Unofficial discoveries stay in 未分类 / Unclassified until exact-title official publication catches up.',
+  ],
+  papers: combined,
+}
+
 await writeJson(outFile, payload)
 await writeJson(mirrorOutFile, payload)
+await writeJson(officialMirrorOutFile, officialPayload)
 
-console.log(`Wrote ${merged.length} records.`)
+console.log(`Wrote ${combined.length} records.`)
 console.log(`Guided records: ${payload.guidedCount}`)
 console.log(`ICLR: ${iclr.records.length}; CVPR: ${cvpr.records.length}; AAAI: ${aaai.records.length}`)
+console.log(`Unofficial: ${unofficialRecords.length}`)
 console.log(`Output: ${outFile}`)
 
 async function collectIclrPapers() {
@@ -344,6 +389,7 @@ function normalizeRecord(input) {
     source: input.source,
     sourceId: input.sourceId,
     guideStatus: input.introZh ? 'ready' : 'pending',
+    sourceType: input.sourceType ?? 'official',
   }
 }
 
@@ -577,10 +623,14 @@ function parseArgs(argv) {
       parsed.out = argv[++index]
     } else if (arg === '--mirror-out') {
       parsed.mirrorOut = argv[++index]
+    } else if (arg === '--official-mirror-out') {
+      parsed.officialMirrorOut = argv[++index]
     } else if (arg === '--iclr') {
       parsed.iclr = argv[++index]
     } else if (arg === '--guides') {
       parsed.guides = argv[++index]
+    } else if (arg === '--unofficial-store') {
+      parsed.unofficialStore = argv[++index]
     } else if (arg === '--cache-dir') {
       parsed.cacheDir = argv[++index]
     } else if (arg === '--concurrency') {
@@ -611,6 +661,8 @@ Usage:
 Options:
   --out <path>                Public lazy JSON output. Default: public/data/papers.catalog.json.
   --mirror-out <path>         Workspace mirror output. Default: data/papers.catalog.json.
+  --official-mirror-out <path> Official-only mirror output. Default: data/papers.catalog.official.json.
+  --unofficial-store <path>   Unofficial-paper store. Default: data/unofficial/unofficial-papers.json.
   --max-cvpr-details <n|all>  Cap CVPR detail-page fetches. Default: all title candidates.
   --max-aaai-details <n|all>  Cap AAAI detail-page fetches. Default: all title candidates.
   --concurrency <n>           Detail fetch concurrency. Default: 12.

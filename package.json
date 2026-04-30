@@ -13,13 +13,17 @@
     "papers:generate": "node scripts/generate-paper-intros.mjs --input data/openreview/iclr-2026-candidates.json --out data/papers.generated.json",
     "papers:generate:local": "node scripts/generate-local-guides.mjs --input data/openreview/iclr-2026-candidates.json --count 100 --out data/papers.generated.json",
     "papers:validate": "node scripts/validate-papers.mjs --input public/data/papers.catalog.json --require-records --strict",
+    "papers:unofficial:discover": "node scripts/discover-unofficial-papers.mjs",
+    "papers:unofficial:reconcile": "node scripts/reconcile-unofficial-papers.mjs",
     "catalog:shards": "node scripts/build-catalog-shards.mjs",
     "semantic:build": "node scripts/semantic/build-embeddings.mjs --model Xenova/all-MiniLM-L6-v2",
     "semantic:build:mirror": "node scripts/semantic/build-embeddings.mjs --model Xenova/all-MiniLM-L6-v2 --remote-host https://hf-mirror.com",
     "semantic:sync-public": "node scripts/sync-semantic-public.mjs",
     "semantic:serve": "node scripts/semantic/semantic-server.mjs --model Xenova/all-MiniLM-L6-v2",
     "semantic:serve:mirror": "node scripts/semantic/semantic-server.mjs --model Xenova/all-MiniLM-L6-v2 --remote-host https://hf-mirror.com",
-    "deploy:serve": "node scripts/semantic/serve-app.mjs --host 0.0.0.0 --port 4174 --model Xenova/all-MiniLM-L6-v2 --remote-host https://hf-mirror.com"
+    "deploy:serve": "node scripts/semantic/serve-app.mjs --host 0.0.0.0 --port 4174 --model Xenova/all-MiniLM-L6-v2 --remote-host https://hf-mirror.com",
+    "pipeline:refresh": "node scripts/refresh-pipeline.mjs",
+    "pipeline:refresh:discover": "node scripts/refresh-pipeline.mjs --with-discovery"
   },
   "dependencies": {
     "@huggingface/transformers": "^3.8.1",

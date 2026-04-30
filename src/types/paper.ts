@@ -56,6 +56,14 @@ export interface PaperRecord {
   source?: string
   sourceId?: string
   guideStatus?: 'ready' | 'pending'
+  sourceType?: 'official' | 'unofficial'
+  acceptanceStatus?: 'candidate' | 'accepted'
+  acceptedVenue?: string
+  acceptedYear?: number
+  discoveredAt?: string
+  lastCheckedAt?: string
+  evidenceCount?: number
+  platforms?: string[]
 }
 
 export interface PaperCatalogShardRef {
