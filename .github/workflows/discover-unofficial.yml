@@ -14,7 +14,6 @@ concurrency:
 
 jobs:
   discover:
-    if: ${{ secrets.ZHIPU_API_KEY != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,6 +29,15 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Check Zhipu secret
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+        run: |
+          if [ -z "$ZHIPU_API_KEY" ]; then
+            echo "ZHIPU_API_KEY is not configured."
+            exit 1
+          fi
 
       - name: Refresh unofficial discoveries and rebuild assets
         env:
