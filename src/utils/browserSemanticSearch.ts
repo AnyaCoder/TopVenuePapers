@@ -66,6 +66,7 @@ export async function searchBrowserSemanticIndex(query: string, topK: number) {
 
 async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
   env.allowLocalModels = false
+  env.useBrowserCache = true
 
   const [metaResponse, embeddingsResponse] = await Promise.all([
     fetch(metaUrl),
