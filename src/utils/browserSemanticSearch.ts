@@ -1,6 +1,10 @@
-import { env, pipeline } from '@huggingface/transformers'
+export interface BrowserSemanticResult {
+  id: string
+  score: number
+  title?: string
+}
 
-interface EmbeddingMeta {
+export interface BrowserSemanticMeta {
   model: string
   count: number
   dimensions: number
@@ -8,127 +12,135 @@ interface EmbeddingMeta {
   titles: string[]
 }
 
-export interface BrowserSemanticResult {
-  id: string
-  score: number
-  title?: string
+export interface BrowserSemanticIndexHandle {
+  meta: BrowserSemanticMeta
 }
 
-interface BrowserSemanticIndex {
-  meta: EmbeddingMeta
-  embeddings: Float32Array
-  extractor: (
-    text: string,
-    options: { pooling: 'mean'; normalize: true },
-  ) => Promise<{ data: Float32Array }>
+interface BrowserSemanticWorkerRequestMap {
+  init: undefined
+  warmup: { query: string }
+  search: { query: string; topK: number }
 }
 
-const baseUrl = import.meta.env.BASE_URL
-const metaUrl = `${baseUrl}data/semantic/paper-embeddings-all-MiniLM-L6-v2.meta.json`
-const embeddingsUrl = `${baseUrl}data/semantic/paper-embeddings-all-MiniLM-L6-v2.f32.bin`
+interface BrowserSemanticWorkerResponseMap {
+  init: BrowserSemanticIndexHandle
+  warmup: { ok: true }
+  search: BrowserSemanticResult[]
+}
 
-let indexPromise: Promise<BrowserSemanticIndex> | undefined
+interface WorkerResponseEnvelope<T extends keyof BrowserSemanticWorkerResponseMap> {
+  id: number
+  type: T
+  payload: BrowserSemanticWorkerResponseMap[T]
+}
+
+interface WorkerErrorEnvelope {
+  id: number
+  error: string
+}
+
+type WorkerEnvelope<T extends keyof BrowserSemanticWorkerResponseMap> =
+  | WorkerResponseEnvelope<T>
+  | WorkerErrorEnvelope
+
+let workerPromise: Promise<Worker> | undefined
+let initPromise: Promise<BrowserSemanticIndexHandle> | undefined
+let requestCounter = 0
+const pendingRequests = new Map<
+  number,
+  {
+    resolve: (value: unknown) => void
+    reject: (reason?: unknown) => void
+  }
+>()
 
 export async function loadBrowserSemanticIndex() {
-  indexPromise ??= createBrowserSemanticIndex()
-  return indexPromise
+  initPromise ??= callWorker('init', undefined)
+  return initPromise
+}
+
+export async function preloadBrowserSemanticIndex() {
+  if (initPromise) {
+    return initPromise
+  }
+
+  initPromise = loadBrowserSemanticIndex().catch((error) => {
+    initPromise = undefined
+    throw error
+  })
+
+  return initPromise
+}
+
+export async function warmupBrowserSemanticModel(query = 'video understanding') {
+  await loadBrowserSemanticIndex()
+  return callWorker('warmup', { query })
 }
 
 export async function searchBrowserSemanticIndex(query: string, topK: number) {
-  const index = await loadBrowserSemanticIndex()
-  const output = await index.extractor(query, {
-    pooling: 'mean',
-    normalize: true,
+  await loadBrowserSemanticIndex()
+  return callWorker('search', { query, topK })
+}
+
+function getWorker() {
+  workerPromise ??= Promise.resolve(
+    new Worker(new URL('./browserSemanticWorker.ts', import.meta.url), {
+      type: 'module',
+    }),
+  ).then((worker) => {
+    worker.addEventListener('message', handleWorkerMessage)
+    worker.addEventListener('error', (event) => {
+      rejectAllPending(event.message || 'Browser semantic worker crashed.')
+      workerPromise = undefined
+      initPromise = undefined
+    })
+
+    return worker
   })
-  const queryVector = output.data as Float32Array
-  const limit = clamp(topK, 1, index.meta.count)
-  const hits: Array<{ index: number; score: number }> = []
 
-  for (let row = 0; row < index.meta.count; row += 1) {
-    let score = 0
-    const offset = row * index.meta.dimensions
-
-    for (let col = 0; col < index.meta.dimensions; col += 1) {
-      score += index.embeddings[offset + col] * queryVector[col]
-    }
-
-    pushTopK(hits, { index: row, score }, limit)
-  }
-
-  return hits
-    .sort((left, right) => right.score - left.score)
-    .map<BrowserSemanticResult>(({ index: row, score }) => ({
-      id: index.meta.ids[row],
-      score,
-      title: index.meta.titles[row],
-    }))
+  return workerPromise
 }
 
-async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
-  env.allowLocalModels = false
-  env.useBrowserCache = true
-
-  const [metaResponse, embeddingsResponse] = await Promise.all([
-    fetch(metaUrl),
-    fetch(embeddingsUrl),
-  ])
-
-  if (!metaResponse.ok) {
-    throw new Error(`Could not load semantic metadata: ${metaResponse.status}`)
-  }
-
-  if (!embeddingsResponse.ok) {
-    throw new Error(`Could not load semantic index: ${embeddingsResponse.status}`)
-  }
-
-  const meta = (await metaResponse.json()) as EmbeddingMeta
-  const buffer = await embeddingsResponse.arrayBuffer()
-  const embeddings = new Float32Array(buffer)
-
-  if (embeddings.length !== meta.count * meta.dimensions) {
-    throw new Error(
-      `Semantic index size mismatch: got ${embeddings.length}, expected ${
-        meta.count * meta.dimensions
-      }`,
-    )
-  }
-
-  const extractor = (await pipeline('feature-extraction', meta.model)) as unknown as BrowserSemanticIndex['extractor']
-
-  return {
-    meta,
-    embeddings,
-    extractor,
-  }
-}
-
-function pushTopK(
-  hits: Array<{ index: number; score: number }>,
-  item: { index: number; score: number },
-  limit: number,
+async function callWorker<T extends keyof BrowserSemanticWorkerResponseMap>(
+  type: T,
+  payload: BrowserSemanticWorkerRequestMap[T],
 ) {
-  if (hits.length < limit) {
-    hits.push(item)
+  const worker = await getWorker()
+  const id = requestCounter++
+
+  return new Promise<BrowserSemanticWorkerResponseMap[T]>((resolve, reject) => {
+    pendingRequests.set(id, {
+      resolve: (value) => resolve(value as BrowserSemanticWorkerResponseMap[T]),
+      reject,
+    })
+    worker.postMessage({ id, type, payload })
+  })
+}
+
+function handleWorkerMessage(
+  event: MessageEvent<WorkerEnvelope<keyof BrowserSemanticWorkerResponseMap>>,
+) {
+  const message = event.data
+  const pending = pendingRequests.get(message.id)
+
+  if (!pending) {
     return
   }
 
-  let minIndex = 0
+  pendingRequests.delete(message.id)
 
-  for (let index = 1; index < hits.length; index += 1) {
-    if (hits[index].score < hits[minIndex].score) {
-      minIndex = index
-    }
+  if ('error' in message) {
+    pending.reject(new Error(message.error))
+    return
   }
 
-  if (item.score > hits[minIndex].score) {
-    hits[minIndex] = item
-  }
+  pending.resolve(message.payload)
 }
 
-function clamp(value: number, min: number, max: number) {
-  if (!Number.isFinite(value)) {
-    return min
+function rejectAllPending(message: string) {
+  for (const pending of pendingRequests.values()) {
+    pending.reject(new Error(message))
   }
 
-  return Math.min(Math.max(Math.trunc(value), min), max)
+  pendingRequests.clear()
 }

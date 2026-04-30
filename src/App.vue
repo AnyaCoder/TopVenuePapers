@@ -77,9 +77,23 @@ const semanticPaperCount = ref(0)
 const semanticResults = ref<SemanticResult[]>([])
 const lastSemanticQuery = ref('')
 
-const { query, outcome } = usePaperSearch(
+  const { query, outcome } = usePaperSearch(
   paperCatalog as unknown as import('vue').Ref<PaperRecord[]>,
 )
+
+const idleScheduler =
+  typeof window !== 'undefined' &&
+  'requestIdleCallback' in window
+    ? window.requestIdleCallback.bind(window)
+    : (callback: IdleRequestCallback) =>
+        window.setTimeout(
+          () =>
+            callback({
+              didTimeout: false,
+              timeRemaining: () => 0,
+            } as IdleDeadline),
+          1200,
+        )
 
 const venueGroups = computed(() => {
   const groups = new Map<string, { years: Set<number>; counts: Map<number, number> }>()
@@ -250,9 +264,7 @@ watch(totalPages, (pages) => {
 
 onMounted(() => {
   void loadPaperCatalog()
-  if (!useBrowserSemantic) {
-    void checkSemanticHealth()
-  }
+  void scheduleSemanticWarmup()
 })
 
 async function loadPaperCatalog() {
@@ -365,6 +377,35 @@ async function checkSemanticHealth() {
     semanticError.value =
       error instanceof Error ? error.message : 'Semantic server is offline.'
   }
+}
+
+async function scheduleSemanticWarmup() {
+  if (!useBrowserSemantic) {
+    await checkSemanticHealth()
+    return
+  }
+
+  idleScheduler(async () => {
+    try {
+      const { preloadBrowserSemanticIndex, warmupBrowserSemanticModel } = await import(
+        './utils/browserSemanticSearch'
+      )
+      await preloadBrowserSemanticIndex()
+      const shouldMarkChecking = semanticStatus.value === 'idle'
+
+      if (shouldMarkChecking) {
+        semanticStatus.value = 'checking'
+      }
+      await warmupBrowserSemanticModel()
+      if (shouldMarkChecking && semanticStatus.value === 'checking') {
+        await checkSemanticHealth()
+      }
+    } catch {
+      if (semanticStatus.value === 'idle') {
+        semanticStatus.value = 'offline'
+      }
+    }
+  })
 }
 
 async function runSemanticSearch(rawQuery: string) {
