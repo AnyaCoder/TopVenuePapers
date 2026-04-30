@@ -23,6 +23,17 @@ interface BrowserSemanticIndex {
   ) => Promise<{ data: Float32Array }>
 }
 
+interface BrowserSemanticProgressPayload {
+  stage: 'index' | 'model'
+  status: 'initiate' | 'download' | 'progress' | 'done' | 'ready'
+  name?: string
+  file?: string
+  progress?: number
+  loaded?: number
+  total?: number
+  message: string
+}
+
 interface InitMessage {
   id: number
   type: 'init'
@@ -69,6 +80,11 @@ async function handleMessage(message: WorkerMessage) {
       await index.extractor(message.payload.query, {
         pooling: 'mean',
         normalize: true,
+      })
+      postProgress({
+        stage: 'model',
+        status: 'ready',
+        message: 'Semantic model ready in browser cache.',
       })
       self.postMessage({
         id: message.id,
@@ -131,6 +147,12 @@ async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
   env.allowLocalModels = false
   env.useBrowserCache = true
 
+  postProgress({
+    stage: 'index',
+    status: 'download',
+    message: 'Downloading semantic index...',
+  })
+
   const [metaResponse, embeddingsResponse] = await Promise.all([
     fetch(metaUrl),
     fetch(embeddingsUrl),
@@ -145,7 +167,7 @@ async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
   }
 
   const meta = (await metaResponse.json()) as EmbeddingMeta
-  const buffer = await embeddingsResponse.arrayBuffer()
+  const buffer = await readEmbeddingsWithProgress(embeddingsResponse)
   const embeddings = new Float32Array(buffer)
 
   if (embeddings.length !== meta.count * meta.dimensions) {
@@ -156,16 +178,178 @@ async function createBrowserSemanticIndex(): Promise<BrowserSemanticIndex> {
     )
   }
 
-  const extractor = (await pipeline(
-    'feature-extraction',
-    meta.model,
-  )) as unknown as BrowserSemanticIndex['extractor']
+  postProgress({
+    stage: 'model',
+    status: 'download',
+    message: 'Preparing semantic model...',
+  })
+
+  const extractor = (await pipeline('feature-extraction', meta.model, {
+    progress_callback: (data) => {
+      if (
+        data.status === 'initiate' ||
+        data.status === 'download' ||
+        data.status === 'progress' ||
+        data.status === 'done' ||
+        data.status === 'ready'
+      ) {
+        postProgress({
+          stage: 'model',
+          status: data.status,
+          name: 'name' in data ? data.name : undefined,
+          file: 'file' in data ? data.file : undefined,
+          progress: 'progress' in data ? data.progress : undefined,
+          loaded: 'loaded' in data ? data.loaded : undefined,
+          total: 'total' in data ? data.total : undefined,
+          message: describeModelProgress(data),
+        })
+      }
+    },
+  })) as unknown as BrowserSemanticIndex['extractor']
+
+  postProgress({
+    stage: 'model',
+    status: 'ready',
+    message: 'Semantic model ready in browser cache.',
+  })
 
   return {
     meta,
     embeddings,
     extractor,
   }
+}
+
+async function readEmbeddingsWithProgress(response: Response) {
+  const total = Number(response.headers.get('content-length') ?? 0)
+  const reader = response.body?.getReader()
+
+  if (!reader) {
+    const fallback = await response.arrayBuffer()
+    postProgress({
+      stage: 'index',
+      status: 'done',
+      progress: 100,
+      loaded: fallback.byteLength,
+      total: fallback.byteLength,
+      message: `Semantic index ready (${formatBytes(fallback.byteLength)}).`,
+    })
+    return fallback
+  }
+
+  const chunks: Uint8Array[] = []
+  let loaded = 0
+
+  while (true) {
+    const { done, value } = await reader.read()
+
+    if (done) {
+      break
+    }
+
+    if (!value) {
+      continue
+    }
+
+    chunks.push(value)
+    loaded += value.byteLength
+
+    postProgress({
+      stage: 'index',
+      status: 'progress',
+      progress: total > 0 ? (loaded / total) * 100 : undefined,
+      loaded,
+      total,
+      message:
+        total > 0
+          ? `Downloading semantic index: ${Math.round((loaded / total) * 100)}% (${formatBytes(loaded)} / ${formatBytes(total)})`
+          : `Downloading semantic index: ${formatBytes(loaded)}`,
+    })
+  }
+
+  const merged = new Uint8Array(loaded)
+  let offset = 0
+
+  for (const chunk of chunks) {
+    merged.set(chunk, offset)
+    offset += chunk.byteLength
+  }
+
+  postProgress({
+    stage: 'index',
+    status: 'done',
+    progress: 100,
+    loaded,
+    total: total || loaded,
+    message: `Semantic index ready (${formatBytes(loaded)}).`,
+  })
+
+  return merged.buffer
+}
+
+function postProgress(payload: BrowserSemanticProgressPayload) {
+  self.postMessage({
+    type: 'progress',
+    payload,
+  })
+}
+
+function describeModelProgress(data: {
+  status: 'initiate' | 'download' | 'progress' | 'done' | 'ready'
+  file?: string
+  progress?: number
+  loaded?: number
+  total?: number
+}) {
+  const file = data.file ? simplifyFileName(data.file) : 'model files'
+
+  if (data.status === 'ready') {
+    return 'Semantic model ready in browser cache.'
+  }
+
+  if (data.status === 'done') {
+    return `Prepared ${file}.`
+  }
+
+  if (data.status === 'progress') {
+    if (typeof data.progress === 'number' && data.total) {
+      return `Preparing model: ${Math.round(data.progress)}% (${formatBytes(
+        data.loaded ?? 0,
+      )} / ${formatBytes(data.total)})`
+    }
+
+    if (typeof data.progress === 'number') {
+      return `Preparing model: ${Math.round(data.progress)}%`
+    }
+  }
+
+  if (data.status === 'initiate') {
+    return `Checking ${file}...`
+  }
+
+  return `Preparing ${file}...`
+}
+
+function simplifyFileName(file: string) {
+  const parts = file.split(/[\\/]/)
+  return parts[parts.length - 1] || file
+}
+
+function formatBytes(value: number) {
+  if (!Number.isFinite(value) || value <= 0) {
+    return '0 B'
+  }
+
+  const units = ['B', 'KB', 'MB', 'GB']
+  let index = 0
+  let size = value
+
+  while (size >= 1024 && index < units.length - 1) {
+    size /= 1024
+    index += 1
+  }
+
+  return `${size >= 10 || index === 0 ? size.toFixed(0) : size.toFixed(1)} ${units[index]}`
 }
 
 function pushTopK(

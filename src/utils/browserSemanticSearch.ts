@@ -16,6 +16,17 @@ export interface BrowserSemanticIndexHandle {
   meta: BrowserSemanticMeta
 }
 
+export interface BrowserSemanticProgress {
+  stage: 'index' | 'model'
+  status: 'initiate' | 'download' | 'progress' | 'done' | 'ready'
+  name?: string
+  file?: string
+  progress?: number
+  loaded?: number
+  total?: number
+  message: string
+}
+
 interface BrowserSemanticWorkerRequestMap {
   init: undefined
   warmup: { query: string }
@@ -39,13 +50,22 @@ interface WorkerErrorEnvelope {
   error: string
 }
 
+interface WorkerProgressEnvelope {
+  type: 'progress'
+  payload: BrowserSemanticProgress
+}
+
 type WorkerEnvelope<T extends keyof BrowserSemanticWorkerResponseMap> =
   | WorkerResponseEnvelope<T>
   | WorkerErrorEnvelope
+  | WorkerProgressEnvelope
+
+type ProgressListener = (progress: BrowserSemanticProgress) => void
 
 let workerPromise: Promise<Worker> | undefined
 let initPromise: Promise<BrowserSemanticIndexHandle> | undefined
 let requestCounter = 0
+const progressListeners = new Set<ProgressListener>()
 const pendingRequests = new Map<
   number,
   {
@@ -80,6 +100,14 @@ export async function warmupBrowserSemanticModel(query = 'video understanding') 
 export async function searchBrowserSemanticIndex(query: string, topK: number) {
   await loadBrowserSemanticIndex()
   return callWorker('search', { query, topK })
+}
+
+export function subscribeBrowserSemanticProgress(listener: ProgressListener) {
+  progressListeners.add(listener)
+
+  return () => {
+    progressListeners.delete(listener)
+  }
 }
 
 function getWorker() {
@@ -121,6 +149,14 @@ function handleWorkerMessage(
   event: MessageEvent<WorkerEnvelope<keyof BrowserSemanticWorkerResponseMap>>,
 ) {
   const message = event.data
+
+  if ('type' in message && message.type === 'progress') {
+    for (const listener of progressListeners) {
+      listener(message.payload)
+    }
+    return
+  }
+
   const pending = pendingRequests.get(message.id)
 
   if (!pending) {

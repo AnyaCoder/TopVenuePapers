@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { usePaperSearch } from './composables/usePaperSearch'
 import type {
   CategoryKey,
@@ -8,6 +8,7 @@ import type {
   PaperCatalogShardPayload,
   PaperRecord,
 } from './types/paper'
+import type { BrowserSemanticProgress } from './utils/browserSemanticSearch'
 
 type SearchMode = 'semantic' | 'keyword'
 type SemanticStatus = 'idle' | 'checking' | 'ready' | 'searching' | 'offline' | 'error'
@@ -76,8 +77,10 @@ const semanticModel = ref('all-MiniLM-L6-v2')
 const semanticPaperCount = ref(0)
 const semanticResults = ref<SemanticResult[]>([])
 const lastSemanticQuery = ref('')
+const semanticProgress = ref<BrowserSemanticProgress | null>(null)
+let detachSemanticProgress: (() => void) | undefined
 
-  const { query, outcome } = usePaperSearch(
+const { query, outcome } = usePaperSearch(
   paperCatalog as unknown as import('vue').Ref<PaperRecord[]>,
 )
 
@@ -182,10 +185,16 @@ const semanticStatusLabel = computed(() => {
   }
 
   if (semanticStatus.value === 'searching') {
-    return `Semantic searching with ${semanticModel.value}...`
+    return semanticProgress.value?.message
+      ? `${semanticProgress.value.message} Searching with ${semanticModel.value}...`
+      : `Semantic searching with ${semanticModel.value}...`
   }
 
   if (semanticStatus.value === 'checking') {
+    if (semanticProgress.value?.message) {
+      return semanticProgress.value.message
+    }
+
     return useBrowserSemantic
       ? 'Loading browser semantic index...'
       : 'Checking local semantic server...'
@@ -205,6 +214,54 @@ const semanticStatusLabel = computed(() => {
     ? `Semantic model downloads once and then reuses browser cache: ${semanticModel.value}`
     : `Semantic model: ${semanticModel.value}`
 })
+
+const semanticProgressPercent = computed(() => {
+  const value = semanticProgress.value?.progress
+
+  if (typeof value !== 'number' || !Number.isFinite(value)) {
+    return null
+  }
+
+  return Math.max(0, Math.min(100, Math.round(value)))
+})
+
+const semanticProgressMessage = computed(() => {
+  if (semanticProgress.value?.message) {
+    return semanticProgress.value.message
+  }
+
+  if (semanticStatus.value === 'searching') {
+    return `Searching with ${semanticModel.value}...`
+  }
+
+  if (semanticStatus.value === 'checking') {
+    return useBrowserSemantic
+      ? 'Starting browser semantic warmup and cache check...'
+      : 'Checking local semantic server...'
+  }
+
+  return ''
+})
+
+const semanticProgressStageLabel = computed(() => {
+  const stage = semanticProgress.value?.stage
+
+  if (stage === 'model') {
+    return 'Semantic model'
+  }
+
+  if (stage === 'index') {
+    return 'Semantic index'
+  }
+
+  return semanticStatus.value === 'searching' ? 'Semantic search' : 'Semantic warmup'
+})
+
+const showSemanticProgress = computed(
+  () =>
+    Boolean(useBrowserSemantic) &&
+    (semanticStatus.value === 'checking' || semanticStatus.value === 'searching'),
+)
 
 const filteredPapers = computed<PaperCatalogIndexRecord[]>(() => {
   const venueSet = selectedVenueYears.value
@@ -264,7 +321,11 @@ watch(totalPages, (pages) => {
 
 onMounted(() => {
   void loadPaperCatalog()
-  void scheduleSemanticWarmup()
+  void initializeSemanticWarmup()
+})
+
+onUnmounted(() => {
+  detachSemanticProgress?.()
 })
 
 async function loadPaperCatalog() {
@@ -349,6 +410,13 @@ function setSearchMode(mode: SearchMode) {
 async function checkSemanticHealth() {
   semanticStatus.value = 'checking'
   semanticError.value = ''
+  if (useBrowserSemantic && !semanticProgress.value) {
+    semanticProgress.value = {
+      stage: 'index',
+      status: 'download',
+      message: 'Starting browser semantic warmup and cache check...',
+    }
+  }
 
   try {
     if (useBrowserSemantic) {
@@ -379,6 +447,25 @@ async function checkSemanticHealth() {
   }
 }
 
+async function setupSemanticProgress() {
+  if (!useBrowserSemantic || detachSemanticProgress) {
+    return
+  }
+
+  const { subscribeBrowserSemanticProgress } = await import(
+    './utils/browserSemanticSearch'
+  )
+
+  detachSemanticProgress = subscribeBrowserSemanticProgress((progress) => {
+    semanticProgress.value = progress
+  })
+}
+
+async function initializeSemanticWarmup() {
+  await setupSemanticProgress()
+  await scheduleSemanticWarmup()
+}
+
 async function scheduleSemanticWarmup() {
   if (!useBrowserSemantic) {
     await checkSemanticHealth()
@@ -386,16 +473,24 @@ async function scheduleSemanticWarmup() {
   }
 
   idleScheduler(async () => {
+    const shouldMarkChecking = semanticStatus.value === 'idle'
+
+    if (shouldMarkChecking) {
+      semanticStatus.value = 'checking'
+      if (!semanticProgress.value) {
+        semanticProgress.value = {
+          stage: 'index',
+          status: 'download',
+          message: 'Starting browser semantic warmup and cache check...',
+        }
+      }
+    }
+
     try {
       const { preloadBrowserSemanticIndex, warmupBrowserSemanticModel } = await import(
         './utils/browserSemanticSearch'
       )
       await preloadBrowserSemanticIndex()
-      const shouldMarkChecking = semanticStatus.value === 'idle'
-
-      if (shouldMarkChecking) {
-        semanticStatus.value = 'checking'
-      }
       await warmupBrowserSemanticModel()
       if (shouldMarkChecking && semanticStatus.value === 'checking') {
         await checkSemanticHealth()
@@ -413,6 +508,13 @@ async function runSemanticSearch(rawQuery: string) {
   semanticRequestId.value = requestId
   semanticStatus.value = 'searching'
   semanticError.value = ''
+  if (useBrowserSemantic) {
+    semanticProgress.value = {
+      stage: 'model',
+      status: 'progress',
+      message: `Searching with ${semanticModel.value}...`,
+    }
+  }
 
   try {
     const topK = Math.min(
@@ -435,6 +537,11 @@ async function runSemanticSearch(rawQuery: string) {
 
       lastSemanticQuery.value = rawQuery
       semanticStatus.value = 'ready'
+      semanticProgress.value = {
+        stage: 'model',
+        status: 'ready',
+        message: 'Semantic search ready. Cached for future visits.',
+      }
       return
     }
 
@@ -753,6 +860,22 @@ function buildBibtexForView(paper: PaperCatalogIndexRecord) {
           >
             {{ semanticStatusLabel }}
           </p>
+
+          <div v-if="showSemanticProgress" class="semantic-progress-card">
+            <div class="semantic-progress-card__top">
+              <strong>{{ semanticProgressStageLabel }}</strong>
+              <span v-if="semanticProgressPercent !== null">{{ semanticProgressPercent }}%</span>
+            </div>
+            <div class="semantic-progress-bar" aria-hidden="true">
+              <div
+                class="semantic-progress-bar__fill"
+                :style="{ width: `${semanticProgressPercent ?? 12}%` }"
+              />
+            </div>
+            <p class="semantic-progress-card__copy">
+              {{ semanticProgressMessage }}
+            </p>
+          </div>
 
           <div class="compact-grid">
             <label class="field-block">
