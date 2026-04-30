@@ -3,6 +3,7 @@ import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { usePaperSearch } from './composables/usePaperSearch'
 import type {
   CategoryKey,
+  PaperAbstractPayload,
   PaperCatalogIndexPayload,
   PaperCatalogIndexRecord,
   PaperCatalogShardPayload,
@@ -64,7 +65,9 @@ const loadError = ref('')
 const catalogUpdatedAt = ref('')
 const detailRequestId = ref(0)
 const detailShardCache = new Map<string, Promise<PaperCatalogShardPayload>>()
+const abstractShardCache = new Map<string, Promise<PaperAbstractPayload>>()
 const detailedPapers = ref<Record<string, PaperRecord>>({})
+const abstractLoadState = ref<Record<string, 'idle' | 'loading' | 'ready' | 'error'>>({})
 const semanticApiBase = import.meta.env.PROD
   ? '/api/semantic'
   : 'http://127.0.0.1:8765'
@@ -646,7 +649,11 @@ function toggleSection(paperId: string, section: string) {
 
   openSections.value = next
 
-  if (isOpening && (section === 'abstract' || section === 'guide')) {
+  if (isOpening && section === 'abstract') {
+    void ensurePaperAbstractLoaded(paperId)
+  }
+
+  if (isOpening && section === 'guide') {
     void ensurePaperDetailsLoaded(paperId)
   }
 }
@@ -691,6 +698,61 @@ async function ensurePaperDetailsLoaded(paperId: string) {
   }
 }
 
+async function ensurePaperAbstractLoaded(paperId: string) {
+  const existing = detailedPapers.value[paperId]
+
+  if (existing?.abstract?.trim()) {
+    abstractLoadState.value = {
+      ...abstractLoadState.value,
+      [paperId]: 'ready',
+    }
+    return
+  }
+
+  const indexPaper = paperCatalog.value.find((paper) => paper.id === paperId)
+
+  if (!indexPaper) {
+    return
+  }
+
+  abstractLoadState.value = {
+    ...abstractLoadState.value,
+    [paperId]: 'loading',
+  }
+
+  try {
+    const payload = await loadAbstractShard(indexPaper.shardKey)
+    const match = payload.papers.find((paper) => paper.id === paperId)
+
+    if (!match) {
+      abstractLoadState.value = {
+        ...abstractLoadState.value,
+        [paperId]: 'error',
+      }
+      return
+    }
+
+    detailedPapers.value = {
+      ...detailedPapers.value,
+      [paperId]: {
+        ...(detailedPapers.value[paperId] ?? indexPaper),
+        abstract: match.abstract,
+      } as PaperRecord,
+    }
+
+    abstractLoadState.value = {
+      ...abstractLoadState.value,
+      [paperId]: 'ready',
+    }
+  } catch (error) {
+    console.warn('Failed to load paper abstract', error)
+    abstractLoadState.value = {
+      ...abstractLoadState.value,
+      [paperId]: 'error',
+    }
+  }
+}
+
 async function loadShard(shardKey: string) {
   let promise = detailShardCache.get(shardKey)
 
@@ -704,6 +766,24 @@ async function loadShard(shardKey: string) {
         return (await response.json()) as PaperCatalogShardPayload
       })
     detailShardCache.set(shardKey, promise)
+  }
+
+  return promise
+}
+
+async function loadAbstractShard(shardKey: string) {
+  let promise = abstractShardCache.get(shardKey)
+
+  if (!promise) {
+    promise = fetch(`${dataBaseUrl}data/catalog/abstracts/${shardKey}.json`)
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`${response.status} ${response.statusText}`)
+        }
+
+        return (await response.json()) as PaperAbstractPayload
+      })
+    abstractShardCache.set(shardKey, promise)
   }
 
   return promise
@@ -773,6 +853,26 @@ function buildBibtex(paper: PaperRecord) {
 
 function getPaperDetail(paper: PaperCatalogIndexRecord) {
   return detailedPapers.value[paper.id] ?? paper
+}
+
+function getAbstractCopy(paper: PaperCatalogIndexRecord) {
+  const abstract = getPaperDetail(paper).abstract?.trim()
+
+  if (abstract) {
+    return abstract
+  }
+
+  const state = abstractLoadState.value[paper.id] ?? 'idle'
+
+  if (state === 'loading') {
+    return 'Loading abstract...'
+  }
+
+  if (state === 'error') {
+    return 'Abstract failed to load. Please try again.'
+  }
+
+  return 'Abstract is available but still loading...'
 }
 
 function buildBibtexForView(paper: PaperCatalogIndexRecord) {
@@ -1037,10 +1137,7 @@ function buildBibtexForView(paper: PaperCatalogIndexRecord) {
                 Show Abstract
               </button>
               <p v-if="isSectionOpen(paper.id, 'abstract')" class="detail-copy">
-                {{
-                  getPaperDetail(paper).abstract ||
-                  'Abstract is loading or was not exposed by the source page.'
-                }}
+                {{ getAbstractCopy(paper) }}
               </p>
 
               <button type="button" @click="toggleSection(paper.id, 'guide')">

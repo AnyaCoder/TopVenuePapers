@@ -90,6 +90,17 @@ export interface PaperCatalogShardPayload {
   papers: PaperRecord[]
 }
 
+export interface PaperAbstractPayload {
+  key: string
+  venue: string
+  year: number
+  count: number
+  papers: Array<{
+    id: string
+    abstract: string
+  }>
+}
+
 export interface PaperCatalogIndexPayload {
   generatedAt: string
   count: number

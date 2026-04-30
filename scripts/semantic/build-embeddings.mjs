@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { createHash } from 'node:crypto'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname } from 'node:path'
 import { env, pipeline } from '@huggingface/transformers'
@@ -22,15 +23,26 @@ if (args.remoteHost) {
 const payload = JSON.parse(await readFile(catalogPath, 'utf8'))
 const papers = Array.isArray(payload) ? payload : payload.papers ?? []
 const texts = papers.map(paperToText)
+const fingerprints = texts.map(hashText)
+const previousArtifacts = await loadPreviousArtifacts(metaPath, outPath)
 
-console.log(`Loading Transformers.js feature-extraction model: ${modelName}`)
-const extractor = await pipeline('feature-extraction', modelName)
+const reuse = buildReusePlan(papers, fingerprints, previousArtifacts)
+let extractor = null
+let dimensions = previousArtifacts?.meta?.dimensions ?? 0
+const vectors = new Array(papers.length)
 
-const vectors = []
-let dimensions = 0
+for (const item of reuse.reused) {
+  vectors[item.index] = item.vector
+}
 
-for (let start = 0; start < texts.length; start += batchSize) {
-  const batchTexts = texts.slice(start, start + batchSize)
+if (reuse.pending.length > 0) {
+  console.log(`Loading Transformers.js feature-extraction model: ${modelName}`)
+  extractor = await pipeline('feature-extraction', modelName)
+}
+
+for (let start = 0; start < reuse.pending.length; start += batchSize) {
+  const batchItems = reuse.pending.slice(start, start + batchSize)
+  const batchTexts = batchItems.map((item) => item.text)
   const output = await extractor(batchTexts, {
     pooling: 'mean',
     normalize: true,
@@ -46,10 +58,16 @@ for (let start = 0; start < texts.length; start += batchSize) {
 
   for (let row = 0; row < dims[0]; row += 1) {
     const offset = row * dimensions
-    vectors.push(data.slice(offset, offset + dimensions))
+    vectors[batchItems[row].index] = data.slice(offset, offset + dimensions)
   }
 
-  console.log(`Encoded ${Math.min(start + batchSize, texts.length)} / ${texts.length}`)
+  console.log(
+    `Encoded ${Math.min(start + batchItems.length, reuse.pending.length)} / ${reuse.pending.length} changed paper(s)`,
+  )
+}
+
+if (!dimensions) {
+  dimensions = previousArtifacts?.meta?.dimensions ?? 0
 }
 
 const flat = new Float32Array(vectors.length * dimensions)
@@ -67,6 +85,7 @@ const meta = {
   normalized: true,
   ids: papers.map((paper) => paper.id),
   titles: papers.map((paper) => paper.title),
+  fingerprints,
 }
 
 await mkdir(dirname(outPath), { recursive: true })
@@ -76,6 +95,7 @@ await writeFile(metaPath, `${JSON.stringify(meta, null, 2)}\n`, 'utf8')
 
 console.log(`Wrote ${outPath}`)
 console.log(`Wrote ${metaPath}`)
+console.log(`Reused ${reuse.reused.length} embedding(s); encoded ${reuse.pending.length} changed embedding(s).`)
 
 function paperToText(paper) {
   const fields = [
@@ -91,6 +111,84 @@ function paperToText(paper) {
   ]
 
   return fields.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim()
+}
+
+async function loadPreviousArtifacts(metaPath, outPath) {
+  try {
+    const [metaText, binary] = await Promise.all([
+      readFile(metaPath, 'utf8'),
+      readFile(outPath),
+    ])
+    const meta = JSON.parse(metaText)
+
+    if (!meta?.count || !meta?.dimensions) {
+      return null
+    }
+
+    return {
+      meta,
+      vectors: new Float32Array(binary.buffer, binary.byteOffset, binary.byteLength / 4),
+    }
+  } catch {
+    return null
+  }
+}
+
+function buildReusePlan(papers, fingerprints, previousArtifacts) {
+  if (
+    !previousArtifacts ||
+    previousArtifacts.meta.model !== modelName ||
+    !Array.isArray(previousArtifacts.meta.ids) ||
+    !Array.isArray(previousArtifacts.meta.fingerprints)
+  ) {
+    return {
+      reused: [],
+      pending: papers.map((paper, index) => ({
+        index,
+        id: paper.id,
+        text: texts[index],
+      })),
+    }
+  }
+
+  const previousIndex = new Map()
+  const dimensions = previousArtifacts.meta.dimensions
+
+  previousArtifacts.meta.ids.forEach((id, index) => {
+    previousIndex.set(id, {
+      index,
+      fingerprint: previousArtifacts.meta.fingerprints[index],
+    })
+  })
+
+  const reused = []
+  const pending = []
+
+  papers.forEach((paper, index) => {
+    const previous = previousIndex.get(paper.id)
+
+    if (previous && previous.fingerprint === fingerprints[index]) {
+      const start = previous.index * dimensions
+      const end = start + dimensions
+      reused.push({
+        index,
+        vector: Array.from(previousArtifacts.vectors.slice(start, end)),
+      })
+      return
+    }
+
+    pending.push({
+      index,
+      id: paper.id,
+      text: texts[index],
+    })
+  })
+
+  return { reused, pending }
+}
+
+function hashText(text) {
+  return createHash('sha1').update(text).digest('hex')
 }
 
 function parseArgs(argv) {

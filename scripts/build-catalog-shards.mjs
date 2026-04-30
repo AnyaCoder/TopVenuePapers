@@ -79,8 +79,20 @@ for (const shard of shards) {
     count: shard.papers.length,
     papers: shard.papers,
   }
+  const abstractPayload = {
+    key: shard.key,
+    venue: shard.venue,
+    year: shard.year,
+    count: shard.papers.length,
+    papers: shard.papers.map((paper) => ({
+      id: paper.id,
+      abstract: paper.abstract ?? '',
+    })),
+  }
   await writeJson(join(outDir, 'shards', `${shard.key}.json`), shardPayload)
   await writeJson(join(mirrorOutDir, 'shards', `${shard.key}.json`), shardPayload)
+  await writeJson(join(outDir, 'abstracts', `${shard.key}.json`), abstractPayload)
+  await writeJson(join(mirrorOutDir, 'abstracts', `${shard.key}.json`), abstractPayload)
 }
 
 console.log(`Wrote shard index with ${indexPayload.count} records across ${shards.length} venue/year shards.`)
