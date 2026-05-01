@@ -290,6 +290,63 @@
   gap: 14px;
 }
 
+.trace-collapse {
+  border: 1px solid rgba(35, 75, 130, 0.14);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(246, 250, 255, 0.82), rgba(255, 253, 248, 0.92)),
+    rgba(255, 255, 255, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
+}
+
+.trace-collapse > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  cursor: pointer;
+  color: #1d2a3d;
+  font-weight: 900;
+  list-style: none;
+}
+
+.trace-collapse > summary::-webkit-details-marker {
+  display: none;
+}
+
+.trace-collapse > summary::before {
+  content: '+';
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 999px;
+  background: #234b82;
+  color: #fffdf8;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.trace-collapse[open] > summary::before {
+  content: '-';
+}
+
+.trace-collapse > summary span {
+  margin-right: auto;
+}
+
+.trace-collapse > summary small {
+  color: #617086;
+  font-weight: 800;
+  text-align: right;
+}
+
+.trace-collapse > :not(summary) {
+  margin: 0 16px 16px;
+}
+
 .trace-board {
   gap: 22px;
 }

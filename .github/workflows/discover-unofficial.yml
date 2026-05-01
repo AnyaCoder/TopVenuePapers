@@ -64,6 +64,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: discovery-trace
+          retention-days: 30
           path: |
             data/unofficial/discovery-trace.json
             public/data/unofficial/discovery-trace.json

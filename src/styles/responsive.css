@@ -92,6 +92,17 @@
     min-height: 48px;
   }
 
+  .trace-collapse > summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .trace-collapse > summary small {
+    width: 100%;
+    padding-left: 44px;
+    text-align: left;
+  }
+
   .detail-copy,
   .bibtex,
   .guide-grid {

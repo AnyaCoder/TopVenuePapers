@@ -273,138 +273,151 @@ function statusSnapshotLabel(
           </a>
         </div>
 
-        <div v-if="traceLoading" class="empty-state">
-          Loading discovery trace...
-        </div>
-        <div v-else-if="traceError" class="error-diagnostic">
-          <div class="error-diagnostic__head">
-            <strong>{{ traceError.message }}</strong>
-            <span v-if="traceError.status">{{ traceError.status }} {{ traceError.statusText }}</span>
-          </div>
-          <dl>
-            <div v-if="traceError.url">
-              <dt>Request URL</dt>
-              <dd>{{ traceError.url }}</dd>
-            </div>
-            <div v-if="traceError.body">
-              <dt>Response body</dt>
-              <dd><code>{{ traceError.body }}</code></dd>
-            </div>
-          </dl>
-        </div>
-        <div v-else-if="!discoveryTrace" class="empty-state">
-          No trace file has been published yet. It will appear after the next successful discovery run.
-        </div>
-        <div v-else class="trace-board">
-          <div class="trace-summary">
-            <article>
-              <span>Model</span>
-              <strong>{{ discoveryTrace.model }}</strong>
-              <small>{{ discoveryTrace.searchTool }} / {{ discoveryTrace.readerTool }}</small>
-            </article>
-            <article>
-              <span>Search Evidence</span>
-              <strong>{{ discoveryTrace.summary.searchEvidenceCollected }}</strong>
-              <small>{{ discoveryTrace.queries.length }} queries</small>
-            </article>
-            <article>
-              <span>Reader Pass</span>
-              <strong>{{ discoveryTrace.summary.readerEnrichedEvidence }}</strong>
-              <small>{{ discoveryTrace.readers.length }} recorded links</small>
-            </article>
-            <article>
-              <span>Candidates</span>
-              <strong>{{ discoveryTrace.summary.extractedCandidates }}</strong>
-              <small>{{ discoveryTrace.summary.added }} added / {{ discoveryTrace.summary.updated }} updated</small>
-            </article>
-          </div>
+        <details class="trace-collapse">
+          <summary>
+            <span>Show debugging trace</span>
+            <small v-if="discoveryTrace">
+              {{ formatDateTime(discoveryTrace.generatedAt) }} / {{ discoveryTrace.queries.length }} queries /
+              {{ discoveryTrace.summary.extractedCandidates }} candidates
+            </small>
+            <small v-else-if="traceLoading">Loading static trace snapshot...</small>
+            <small v-else-if="traceError">Trace load failed; expand for details.</small>
+            <small v-else>No trace snapshot has been published yet.</small>
+          </summary>
 
-          <div v-if="discoveryTrace.errors.length" class="error-diagnostic">
+          <div v-if="traceLoading" class="empty-state">
+            Loading discovery trace...
+          </div>
+          <div v-else-if="traceError" class="error-diagnostic">
             <div class="error-diagnostic__head">
-              <strong>Discovery run warnings</strong>
-              <span>{{ discoveryTrace.errors.length }}</span>
+              <strong>{{ traceError.message }}</strong>
+              <span v-if="traceError.status">{{ traceError.status }} {{ traceError.statusText }}</span>
             </div>
-            <ul class="notes-list">
-              <li v-for="error in discoveryTrace.errors" :key="error">{{ error }}</li>
-            </ul>
+            <dl>
+              <div v-if="traceError.url">
+                <dt>Request URL</dt>
+                <dd>{{ traceError.url }}</dd>
+              </div>
+              <div v-if="traceError.body">
+                <dt>Response body</dt>
+                <dd><code>{{ traceError.body }}</code></dd>
+              </div>
+            </dl>
           </div>
-
-          <section class="trace-section">
-            <h3>Search Queries</h3>
-            <div class="trace-list">
-              <article
-                v-for="item in discoveryTrace.queries"
-                :key="item.query"
-                class="trace-card"
-              >
-                <div class="trace-card__head">
-                  <strong>{{ item.query }}</strong>
-                  <span>{{ item.resultCount }} hits</span>
-                </div>
-                <p v-if="item.error" class="trace-error">{{ item.error }}</p>
-                <ul>
-                  <li v-for="result in item.results.slice(0, 4)" :key="result.url">
-                    <a :href="result.url" target="_blank" rel="noreferrer">
-                      {{ result.title || result.url }}
-                    </a>
-                    <span>{{ humanizePlatform(result.platform) }}</span>
-                  </li>
-                </ul>
+          <div v-else-if="!discoveryTrace" class="empty-state">
+            No trace file has been published yet. It will appear after the next successful discovery run.
+          </div>
+          <div v-else class="trace-board">
+            <div class="trace-summary">
+              <article>
+                <span>Model</span>
+                <strong>{{ discoveryTrace.model }}</strong>
+                <small>{{ discoveryTrace.searchTool }} / {{ discoveryTrace.readerTool }}</small>
+              </article>
+              <article>
+                <span>Search Evidence</span>
+                <strong>{{ discoveryTrace.summary.searchEvidenceCollected }}</strong>
+                <small>{{ discoveryTrace.queries.length }} queries</small>
+              </article>
+              <article>
+                <span>Reader Pass</span>
+                <strong>{{ discoveryTrace.summary.readerEnrichedEvidence }}</strong>
+                <small>{{ discoveryTrace.readers.length }} recorded links</small>
+              </article>
+              <article>
+                <span>Candidates</span>
+                <strong>{{ discoveryTrace.summary.extractedCandidates }}</strong>
+                <small>{{ discoveryTrace.summary.added }} added / {{ discoveryTrace.summary.updated }} updated</small>
               </article>
             </div>
-          </section>
 
-          <section class="trace-section">
-            <h3>Reader Pass</h3>
-            <div class="trace-list">
-              <article
-                v-for="item in discoveryTrace.readers.slice(0, 8)"
-                :key="item.url"
-                class="trace-card"
-              >
-                <div class="trace-card__head">
-                  <strong>{{ item.readerTitle || item.title || item.url }}</strong>
-                  <span>{{ humanizePlatform(item.platform) }}</span>
-                </div>
-                <p v-if="item.readerError" class="trace-error">{{ item.readerError }}</p>
-                <p v-else>{{ item.readerExcerpt || item.snippet || 'No reader excerpt.' }}</p>
-                <a :href="item.url" target="_blank" rel="noreferrer">Open source</a>
-              </article>
+            <div v-if="discoveryTrace.errors.length" class="error-diagnostic">
+              <div class="error-diagnostic__head">
+                <strong>Discovery run warnings</strong>
+                <span>{{ discoveryTrace.errors.length }}</span>
+              </div>
+              <ul class="notes-list">
+                <li v-for="error in discoveryTrace.errors" :key="error">{{ error }}</li>
+              </ul>
             </div>
-          </section>
 
-          <section class="trace-section">
-            <h3>Extraction Prompts & Model Output</h3>
-            <p class="muted-copy">
-              This records the prompt and visible model response returned by the API. Hidden model reasoning is not exposed by the API and is not stored here.
-            </p>
-            <div class="trace-list">
-              <article
-                v-for="batch in discoveryTrace.extractionBatches"
-                :key="batch.index"
-                class="trace-card trace-card--wide"
-              >
-                <div class="trace-card__head">
-                  <strong>Batch {{ batch.index + 1 }} / {{ batch.evidenceCount }} evidence items</strong>
-                  <span>{{ batch.parsedCount }} parsed</span>
-                </div>
-                <p v-if="batch.error" class="trace-error">{{ batch.error }}</p>
-                <details>
-                  <summary>System prompt</summary>
-                  <pre>{{ batch.systemPrompt }}</pre>
-                </details>
-                <details>
-                  <summary>User prompt</summary>
-                  <pre>{{ tracePromptPreview(batch.prompt) }}</pre>
-                </details>
-                <details open>
-                  <summary>Model visible output</summary>
-                  <pre>{{ batch.responseText || 'No model output captured.' }}</pre>
-                </details>
-              </article>
-            </div>
-          </section>
-        </div>
+            <section class="trace-section">
+              <h3>Search Queries</h3>
+              <div class="trace-list">
+                <article
+                  v-for="item in discoveryTrace.queries"
+                  :key="item.query"
+                  class="trace-card"
+                >
+                  <div class="trace-card__head">
+                    <strong>{{ item.query }}</strong>
+                    <span>{{ item.resultCount }} hits</span>
+                  </div>
+                  <p v-if="item.error" class="trace-error">{{ item.error }}</p>
+                  <ul>
+                    <li v-for="result in item.results.slice(0, 4)" :key="result.url">
+                      <a :href="result.url" target="_blank" rel="noreferrer">
+                        {{ result.title || result.url }}
+                      </a>
+                      <span>{{ humanizePlatform(result.platform) }}</span>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="trace-section">
+              <h3>Reader Pass</h3>
+              <div class="trace-list">
+                <article
+                  v-for="item in discoveryTrace.readers.slice(0, 8)"
+                  :key="item.url"
+                  class="trace-card"
+                >
+                  <div class="trace-card__head">
+                    <strong>{{ item.readerTitle || item.title || item.url }}</strong>
+                    <span>{{ humanizePlatform(item.platform) }}</span>
+                  </div>
+                  <p v-if="item.readerError" class="trace-error">{{ item.readerError }}</p>
+                  <p v-else>{{ item.readerExcerpt || item.snippet || 'No reader excerpt.' }}</p>
+                  <a :href="item.url" target="_blank" rel="noreferrer">Open source</a>
+                </article>
+              </div>
+            </section>
+
+            <section class="trace-section">
+              <h3>Extraction Prompts & Model Output</h3>
+              <p class="muted-copy">
+                This records the prompt and visible model response returned by the API. Hidden model reasoning is not exposed by the API and is not stored here.
+              </p>
+              <div class="trace-list">
+                <article
+                  v-for="batch in discoveryTrace.extractionBatches"
+                  :key="batch.index"
+                  class="trace-card trace-card--wide"
+                >
+                  <div class="trace-card__head">
+                    <strong>Batch {{ batch.index + 1 }} / {{ batch.evidenceCount }} evidence items</strong>
+                    <span>{{ batch.parsedCount }} parsed</span>
+                  </div>
+                  <p v-if="batch.error" class="trace-error">{{ batch.error }}</p>
+                  <details>
+                    <summary>System prompt</summary>
+                    <pre>{{ batch.systemPrompt }}</pre>
+                  </details>
+                  <details>
+                    <summary>User prompt</summary>
+                    <pre>{{ tracePromptPreview(batch.prompt) }}</pre>
+                  </details>
+                  <details open>
+                    <summary>Model visible output</summary>
+                    <pre>{{ batch.responseText || 'No model output captured.' }}</pre>
+                  </details>
+                </article>
+              </div>
+            </section>
+          </div>
+        </details>
       </article>
 
       <article class="page-card page-card--wide">
