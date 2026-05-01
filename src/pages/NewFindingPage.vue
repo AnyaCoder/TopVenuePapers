@@ -40,8 +40,32 @@ defineProps<{
   dataBaseUrl: string
 }>()
 
+const emit = defineEmits<{
+  refreshWorkflowRuns: []
+}>()
+
 function tracePromptPreview(prompt: string) {
   return prompt.length > 1400 ? `${prompt.slice(0, 1400)}\n...` : prompt
+}
+
+function statusSnapshotLabel(
+  latestWorkflowRun: GitHubWorkflowRun | null,
+  discoveryTrace: DiscoveryTracePayload | null,
+  unofficialStore: UnofficialPaperStorePayload | null,
+) {
+  if (latestWorkflowRun) {
+    return `Live Actions checked ${formatDateTime(latestWorkflowRun.updated_at)}.`
+  }
+
+  if (discoveryTrace?.generatedAt) {
+    return `Static discovery trace generated ${formatDateTime(discoveryTrace.generatedAt)}.`
+  }
+
+  if (unofficialStore?.generatedAt) {
+    return `Static unofficial queue generated ${formatDateTime(unofficialStore.generatedAt)}.`
+  }
+
+  return 'Static snapshots load first; use live check only when you need the latest workflow state.'
 }
 </script>
 
@@ -81,42 +105,36 @@ function tracePromptPreview(prompt: string) {
       <article class="page-card">
         <div class="page-card__head">
           <h2>Pipeline Status</h2>
-          <a
-            class="text-link"
-            href="https://github.com/AnyaCoder/TopVenuePapers/actions/workflows/discover-unofficial.yml"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open Actions
-          </a>
+          <div class="header-actions">
+            <button
+              type="button"
+              class="quiet-button"
+              :disabled="workflowLoading"
+              @click="emit('refreshWorkflowRuns')"
+            >
+              {{ workflowLoading ? 'Checking...' : 'Check live Actions' }}
+            </button>
+            <a
+              class="text-link"
+              href="https://github.com/AnyaCoder/TopVenuePapers/actions/workflows/discover-unofficial.yml"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Actions
+            </a>
+          </div>
         </div>
 
         <div v-if="workflowLoading" class="empty-state">
           Loading workflow status...
         </div>
-        <div v-else-if="workflowError" class="error-diagnostic">
-          <div class="error-diagnostic__head">
-            <strong>{{ workflowError.message }}</strong>
-            <span v-if="workflowError.status">{{ workflowError.status }} {{ workflowError.statusText }}</span>
-          </div>
-          <p v-if="workflowError.hint">{{ workflowError.hint }}</p>
-          <dl>
-            <div v-if="workflowError.url">
-              <dt>Request URL</dt>
-              <dd>{{ workflowError.url }}</dd>
-            </div>
-            <div v-if="workflowError.body">
-              <dt>Response body</dt>
-              <dd><code>{{ workflowError.body }}</code></dd>
-            </div>
-          </dl>
-          <a
-            href="https://github.com/AnyaCoder/TopVenuePapers/actions/workflows/discover-unofficial.yml"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open Actions directly
-          </a>
+        <div v-else-if="workflowRuns.length === 0" class="snapshot-status">
+          <strong>Static snapshot mode</strong>
+          <p>{{ statusSnapshotLabel(latestWorkflowRun, discoveryTrace, unofficialStore) }}</p>
+          <p>
+            Public visitors read the published JSON snapshots by default, so this page
+            does not spend GitHub's anonymous API quota on every refresh.
+          </p>
         </div>
         <div v-else class="run-list">
           <article
@@ -137,6 +155,32 @@ function tracePromptPreview(prompt: string) {
             <a :href="run.html_url" target="_blank" rel="noreferrer">Open run</a>
           </article>
         </div>
+
+        <details v-if="workflowError" class="soft-diagnostic">
+          <summary>
+            Live Actions check failed
+            <span v-if="workflowError.status">{{ workflowError.status }} {{ workflowError.statusText }}</span>
+          </summary>
+          <p>{{ workflowError.message }}</p>
+          <p v-if="workflowError.hint">{{ workflowError.hint }}</p>
+          <dl>
+            <div v-if="workflowError.url">
+              <dt>Request URL</dt>
+              <dd>{{ workflowError.url }}</dd>
+            </div>
+            <div v-if="workflowError.body">
+              <dt>Response body</dt>
+              <dd><code>{{ workflowError.body }}</code></dd>
+            </div>
+          </dl>
+          <a
+            href="https://github.com/AnyaCoder/TopVenuePapers/actions/workflows/discover-unofficial.yml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Actions directly
+          </a>
+        </details>
       </article>
 
       <article class="page-card">

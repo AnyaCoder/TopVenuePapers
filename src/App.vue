@@ -66,8 +66,6 @@ const semanticProgress = ref<BrowserSemanticProgress | null>(null)
 const semanticRequestId = ref(0)
 let detachSemanticProgress: (() => void) | undefined
 
-let workflowIntervalId: number | undefined
-
 const brainstormDraft = reactive<BrainstormDraft>({
   background: '',
   idea: '',
@@ -512,7 +510,7 @@ watch(activePage, async (page) => {
   }
 
   if (page === 'new-finding') {
-    await Promise.all([loadUnofficialStore(), loadDiscoveryRuns(), loadDiscoveryTrace()])
+    await Promise.all([loadUnofficialStore(), loadDiscoveryTrace()])
   }
 
   if (page === 'brain-storm') {
@@ -528,19 +526,8 @@ onMounted(() => {
   void loadPaperCatalog()
   void initializeSemanticWarmup()
   void loadUnofficialStore()
-  void loadDiscoveryRuns()
   void loadDiscoveryTrace()
   void loadBrainstormBackendStatus()
-
-  if (typeof window !== 'undefined') {
-    workflowIntervalId = window.setInterval(() => {
-      if (activePage.value === 'new-finding') {
-        void loadDiscoveryRuns()
-        void loadUnofficialStore()
-        void loadDiscoveryTrace()
-      }
-    }, 60000)
-  }
 })
 
 onUnmounted(() => {
@@ -548,10 +535,6 @@ onUnmounted(() => {
 
   if (typeof window !== 'undefined') {
     window.removeEventListener('hashchange', syncPageFromHash)
-  }
-
-  if (workflowIntervalId !== undefined && typeof window !== 'undefined') {
-    window.clearInterval(workflowIntervalId)
   }
 })
 
@@ -582,6 +565,10 @@ async function loadBrainstormBackendStatus(force = false) {
   } finally {
     brainstormBackendLoading.value = false
   }
+}
+
+async function refreshWorkflowRuns() {
+  await loadDiscoveryRuns()
 }
 
 function runSearch() {
@@ -1178,6 +1165,7 @@ function resolveBrainstormBackendMessage(error: unknown) {
       :discovery-timeline="discoveryTimeline"
       :latest-evidence-cards="latestEvidenceCards"
       :data-base-url="dataBaseUrl"
+      @refresh-workflow-runs="refreshWorkflowRuns"
     />
 
     <BrainStormPage

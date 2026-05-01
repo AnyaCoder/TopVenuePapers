@@ -125,6 +125,22 @@
   background: linear-gradient(180deg, rgba(246, 234, 230, 0.92), rgba(251, 247, 239, 0.86));
 }
 
+.snapshot-status {
+  padding: 16px;
+  border: 1px solid rgba(35, 75, 130, 0.14);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(244, 248, 253, 0.92), rgba(251, 247, 239, 0.86));
+}
+
+.snapshot-status strong {
+  color: #1d2a3d;
+}
+
+.snapshot-status p {
+  margin: 8px 0 0;
+  color: #536174;
+}
+
 .discovery-card__top,
 .brainstorm-paper-card__top {
   align-items: start;
@@ -217,6 +233,54 @@
 
 .error-diagnostic code {
   white-space: pre-wrap;
+}
+
+.soft-diagnostic {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(170, 77, 56, 0.2);
+  border-radius: 16px;
+  background: rgba(250, 246, 239, 0.72);
+  color: #743625;
+}
+
+.soft-diagnostic summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  color: #8d3d2a;
+  font-weight: 900;
+}
+
+.soft-diagnostic p {
+  margin: 10px 0 0;
+}
+
+.soft-diagnostic dl {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.soft-diagnostic dt {
+  font-weight: 900;
+}
+
+.soft-diagnostic dd {
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.soft-diagnostic code {
+  white-space: pre-wrap;
+}
+
+.soft-diagnostic a {
+  color: #234b82;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .trace-board,
