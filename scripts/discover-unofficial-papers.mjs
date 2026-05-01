@@ -24,13 +24,31 @@ const DEFAULT_QUERIES = [
   '小红书 新论文 大模型 多模态 智能体 具身 2026',
 ]
 
+const ZH_XIAOHONGSHU = '\u5c0f\u7ea2\u4e66'
+const ZH_NEW_PAPER = '\u65b0\u8bba\u6587'
+const ZH_PAPER_ACCEPTED = '\u8bba\u6587\u63a5\u6536'
+const ZH_LLM = '\u5927\u6a21\u578b'
+const ZH_MULTIMODAL = '\u591a\u6a21\u6001'
+const ZH_AGENT = '\u667a\u80fd\u4f53'
+const ZH_EMBODIED = '\u5177\u8eab'
+const ZH_TOP_VENUE = '\u9876\u4f1a'
+const DEFAULT_SEARCH_PLANS = buildDefaultSearchPlans()
+
 const args = parseArgs(process.argv.slice(2))
 const storePath = args.store ?? 'data/unofficial/unofficial-papers.json'
 const tracePath = args.trace ?? 'data/unofficial/discovery-trace.json'
 const officialCatalogPath = args.officialCatalog ?? 'data/papers.catalog.official.json'
-const queryList = args.query.length > 0 ? args.query : DEFAULT_QUERIES
-const maxResultsPerQuery = Number(args.maxResults ?? 8)
-const maxReaders = Number(args.maxReaders ?? 18)
+const searchPlans = args.query.length > 0
+  ? args.query.map((query, index) => ({
+      label: `custom-${index + 1}`,
+      query,
+      platform: detectQueryPlatform(query),
+      recencyFilter: args.recency,
+    }))
+  : DEFAULT_SEARCH_PLANS
+const maxResultsPerQuery = Number(args.maxResults ?? 10)
+const maxReaders = Number(args.maxReaders ?? 60)
+const minReaderCandidates = Number(args.minReaders ?? 18)
 const dryRun = Boolean(args.dryRun)
 const forceReader = Boolean(args.forceReader)
 
@@ -43,33 +61,60 @@ const officialCatalog = await readCatalog(officialCatalogPath)
 const officialIndex = buildOfficialTitleIndex(officialCatalog)
 const trace = createTrace(client)
 const results = []
+const rejectedEvidence = []
 
-for (const query of queryList) {
+for (const plan of searchPlans) {
   const queryTrace = {
-    query,
+    label: plan.label,
+    query: plan.query,
+    platform: plan.platform,
+    searchEngine: plan.searchEngine || client.searchTool,
+    domainFilter: plan.domainFilter || '',
+    recencyFilter: plan.recencyFilter || '',
     requestedCount: maxResultsPerQuery,
+    rawResultCount: 0,
     resultCount: 0,
+    rejectedCount: 0,
     results: [],
+    rejected: [],
   }
 
   try {
-    const searchResponse = await zhipuWebSearch(client, query, {
+    const searchResponse = await zhipuWebSearch(client, plan.query, {
       count: maxResultsPerQuery,
-      domainFilter: domainFilterForQuery(query),
+      domainFilter: plan.domainFilter,
+      recencyFilter: plan.recencyFilter,
+      searchEngine: plan.searchEngine,
+      contentSize: plan.contentSize,
     })
-    const items = collectSearchItems(searchResponse, query)
-    queryTrace.resultCount = items.length
-    queryTrace.results = items.map(summarizeEvidence)
-    results.push(...items)
+    const scored = collectSearchItems(searchResponse, plan).map(scoreEvidence)
+    const accepted = scored.filter((item) => item.relevance.keep)
+    const rejected = scored.filter((item) => !item.relevance.keep)
+
+    queryTrace.responseKeys = Object.keys(searchResponse ?? {}).slice(0, 12)
+    queryTrace.rawResultCount = scored.length
+    queryTrace.resultCount = accepted.length
+    queryTrace.rejectedCount = rejected.length
+    queryTrace.results = accepted.map(summarizeEvidence)
+    queryTrace.rejected = rejected.slice(0, 4).map(summarizeEvidence)
+    results.push(...accepted)
+    rejectedEvidence.push(...rejected)
   } catch (error) {
     queryTrace.error = errorToMessage(error)
-    trace.errors.push(`Search failed for query "${query}": ${queryTrace.error}`)
+    trace.errors.push(`Search failed for query "${plan.query}": ${queryTrace.error}`)
   }
 
   trace.queries.push(queryTrace)
 }
 
-const dedupedEvidence = dedupeEvidence(results).slice(0, Math.max(maxReaders, results.length))
+const dedupedAccepted = dedupeEvidence(results).sort(compareEvidenceRelevance)
+const backfillEvidence = dedupeEvidence(rejectedEvidence)
+  .filter((item) => item.relevance.score >= 0 && !item.relevance.strongReject)
+  .sort(compareEvidenceRelevance)
+const dedupedEvidence = fillReaderCandidates(dedupedAccepted, backfillEvidence, {
+  maxReaders,
+  minReaderCandidates,
+})
 const enrichedEvidence = []
 
 for (const item of dedupedEvidence) {
@@ -157,7 +202,10 @@ const nextStore = {
 }
 
 trace.summary = {
-  searchEvidenceCollected: results.length,
+  searchQueriesRun: trace.queries.length,
+  rawSearchEvidenceCollected: results.length + rejectedEvidence.length,
+  searchEvidenceCollected: dedupedAccepted.length,
+  rejectedSearchEvidence: rejectedEvidence.length,
   readerEnrichedEvidence: enrichedEvidence.length,
   extractedCandidates: extractedCandidates.length,
   added,
@@ -309,7 +357,111 @@ ${JSON.stringify(evidenceBatch, null, 2)}
 `.trim()
 }
 
-function collectSearchItems(response, query) {
+function buildDefaultSearchPlans() {
+  const plans = [
+    ...englishSocialPlans(),
+    ...paperIndexPlans(),
+    ...projectPagePlans(),
+    ...chineseSocialPlans(),
+  ]
+  const seen = new Set()
+
+  return plans.filter((plan) => {
+    const key = `${plan.searchEngine || ''}:${plan.domainFilter || ''}:${plan.recencyFilter || ''}:${plan.query}`
+    if (seen.has(key)) {
+      return false
+    }
+    seen.add(key)
+    return true
+  })
+}
+
+function englishSocialPlans() {
+  const themes = [
+    'LLM VLM multimodal agent reasoning',
+    'video understanding 3D Gaussian Splatting robotics embodied AI',
+    'VLA vision language action world model',
+    'MLLM benchmark evaluation post-training RL',
+  ]
+  const announcementPhrases = [
+    'Introducing our paper',
+    '"our new work"',
+    '"accepted to" paper',
+    '"paper accepted"',
+  ]
+
+  return announcementPhrases.flatMap((phrase) =>
+    themes.map((theme, index) => ({
+      label: `x-${slugForLabel(phrase)}-${index + 1}`,
+      query: `${phrase} ${theme} 2026`,
+      platform: 'x',
+      domainFilter: 'x.com',
+      recencyFilter: 'oneMonth',
+      searchEngine: 'search_pro',
+    })),
+  )
+}
+
+function paperIndexPlans() {
+  return [
+    'LLM VLM agent reasoning accepted 2026 paper arXiv',
+    'multimodal video understanding robotics embodied AI new paper arXiv 2026',
+    '3D Gaussian Splatting VLM MLLM new paper 2026',
+    'vision language action VLA world model paper 2026',
+  ].map((query, index) => ({
+    label: `arxiv-${index + 1}`,
+    query,
+    platform: 'arxiv',
+    domainFilter: 'arxiv.org',
+    recencyFilter: 'oneMonth',
+    searchEngine: 'search_pro',
+  }))
+}
+
+function projectPagePlans() {
+  return [
+    '"project page" "paper" LLM VLM MLLM 2026',
+    '"project page" "accepted" multimodal agent robotics 2026',
+    'site:github.io "paper" "LLM" "2026"',
+    'site:github.io "multimodal" "paper" "2026"',
+    'site:edu "our paper" "accepted to" "2026" "LLM"',
+  ].map((query, index) => ({
+    label: `homepage-${index + 1}`,
+    query,
+    platform: 'homepage',
+    recencyFilter: 'oneMonth',
+    searchEngine: 'search_pro',
+  }))
+}
+
+function chineseSocialPlans() {
+  const themes = [
+    `${ZH_NEW_PAPER} ${ZH_LLM} ${ZH_MULTIMODAL}`,
+    `${ZH_PAPER_ACCEPTED} ${ZH_TOP_VENUE} ${ZH_LLM}`,
+    `${ZH_NEW_PAPER} ${ZH_AGENT} ${ZH_EMBODIED}`,
+    `LLM VLM MLLM VLA ${ZH_NEW_PAPER}`,
+  ]
+
+  return themes.flatMap((theme, index) => [
+    {
+      label: `xiaohongshu-${index + 1}`,
+      query: `${ZH_XIAOHONGSHU} ${theme} 2026`,
+      platform: 'xiaohongshu',
+      domainFilter: 'xiaohongshu.com',
+      recencyFilter: 'oneMonth',
+      searchEngine: 'search_pro',
+    },
+    {
+      label: `cn-web-${index + 1}`,
+      query: `${theme} AAAI ACL CVPR ICLR 2026`,
+      platform: 'web',
+      recencyFilter: 'oneMonth',
+      searchEngine: 'search_pro',
+    },
+  ])
+}
+
+function collectSearchItems(response, plan) {
   const payloads = [
     ...(Array.isArray(response?.search_result) ? response.search_result : []),
     ...(Array.isArray(response?.data) ? response.data : []),
@@ -321,15 +473,188 @@ function collectSearchItems(response, query) {
 
   return payloads
     .map((item) => ({
-      platform: detectPlatform(item.link || item.url || ''),
+      platform: detectPlatform(item.link || item.url || '') || plan.platform || 'web',
       url: item.link || item.url || '',
       title: item.title || item.name || '',
       author: item.author || item.site_name || '',
       snippet: item.content || item.snippet || item.description || item.summary || '',
       publishDate: item.publish_date || item.publish_time || item.date || '',
-      query,
+      query: plan.query,
+      queryLabel: plan.label,
     }))
     .filter((item) => item.url && item.title)
+}
+
+function scoreEvidence(item) {
+  const text = normalizeForScoring([
+    item.title,
+    item.snippet,
+    item.url,
+  ].join(' '))
+  const signals = []
+  let score = 0
+
+  score += addWeightedSignals(text, signals, 'paper', [
+    ['paper', 3],
+    ['preprint', 2],
+    ['arxiv', 3],
+    ['project page', 3],
+    ['technical report', 2],
+    ['论文', 3],
+    ['预印本', 2],
+  ])
+  score += addWeightedSignals(text, signals, 'announcement', [
+    ['introducing', 3],
+    ['new work', 3],
+    ['our work', 2],
+    ['our paper', 4],
+    ['accepted to', 4],
+    ['paper accepted', 4],
+    ['to appear', 3],
+    ['开源', 1],
+    ['新论文', 4],
+    ['论文接收', 4],
+    ['录用', 3],
+  ])
+  score += addWeightedSignals(text, signals, 'topic', [
+    ['llm', 2],
+    ['large language model', 2],
+    ['vlm', 2],
+    ['vision-language', 2],
+    ['vision language', 2],
+    ['mllm', 2],
+    ['multimodal', 2],
+    ['multi-modal', 2],
+    ['vla', 2],
+    ['agent', 2],
+    ['reasoning', 2],
+    ['robotics', 2],
+    ['embodied', 2],
+    ['video understanding', 2],
+    ['3d gaussian', 2],
+    ['3dgs', 2],
+    ['world model', 2],
+    ['大模型', 2],
+    ['多模态', 2],
+    ['智能体', 2],
+    ['具身', 2],
+  ])
+  score += addWeightedSignals(text, signals, 'venue', [
+    ['aaai', 2],
+    ['acl', 2],
+    ['emnlp', 2],
+    ['cvpr', 2],
+    ['iccv', 2],
+    ['iclr', 2],
+    ['icml', 2],
+    ['neurips', 2],
+    ['siggraph', 2],
+    ['顶会', 2],
+  ])
+
+  const strongReject = [
+    'miniapp',
+    '小程序开放平台',
+    '招聘',
+    '课程',
+    'tutorial',
+    'challenge',
+    'call for papers',
+    'cfp',
+    'workshop',
+    'sponsor',
+    'product',
+    'documentation',
+  ].some((term) => text.includes(term))
+
+  if (strongReject) {
+    score -= 5
+    signals.push('reject:non-paper-page')
+  }
+
+  const keep = score >= 3 || (score >= 1 && /arxiv\.org|github\.io|x\.com|twitter\.com/i.test(item.url))
+
+  return {
+    ...item,
+    relevance: {
+      score,
+      keep,
+      strongReject,
+      signals,
+    },
+  }
+}
+
+function addWeightedSignals(text, signals, prefix, terms) {
+  let score = 0
+
+  for (const [term, weight] of terms) {
+    if (text.includes(term)) {
+      score += weight
+      signals.push(`${prefix}:${term}`)
+    }
+  }
+
+  return score
+}
+
+function compareEvidenceRelevance(left, right) {
+  return (right.relevance?.score ?? 0) - (left.relevance?.score ?? 0)
+}
+
+function fillReaderCandidates(accepted, backfill, options) {
+  const output = []
+  const seen = new Set()
+
+  for (const item of [...accepted, ...backfill]) {
+    if (!item.url || seen.has(item.url)) {
+      continue
+    }
+    seen.add(item.url)
+    output.push(item)
+
+    if (output.length >= options.maxReaders) {
+      break
+    }
+  }
+
+  return output.slice(0, Math.max(options.minReaderCandidates, Math.min(options.maxReaders, output.length)))
+}
+
+function normalizeForScoring(value) {
+  return String(value ?? '')
+    .toLowerCase()
+    .normalize('NFKC')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function detectQueryPlatform(query) {
+  if (/xiaohongshu/i.test(query) || query.includes(ZH_XIAOHONGSHU)) {
+    return 'xiaohongshu'
+  }
+
+  if (/\bx\b|twitter/i.test(query)) {
+    return 'x'
+  }
+
+  if (/arxiv/i.test(query)) {
+    return 'arxiv'
+  }
+
+  if (/github|project page|homepage|site:/i.test(query)) {
+    return 'homepage'
+  }
+
+  return 'web'
+}
+
+function slugForLabel(value) {
+  return String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 32) || 'query'
 }
 
 function normalizeReaderPayload(response) {
@@ -359,18 +684,6 @@ function normalizeReaderPayload(response) {
   }
 }
 
-function domainFilterForQuery(query) {
-  if (/xiaohongshu|小红书/i.test(query)) {
-    return 'xiaohongshu.com'
-  }
-
-  if (/\bx\b|twitter/i.test(query)) {
-    return 'x.com'
-  }
-
-  return undefined
-}
-
 function createTrace(client) {
   return {
     version: 1,
@@ -382,7 +695,10 @@ function createTrace(client) {
     readers: [],
     extractionBatches: [],
     summary: {
+      searchQueriesRun: 0,
+      rawSearchEvidenceCollected: 0,
       searchEvidenceCollected: 0,
+      rejectedSearchEvidence: 0,
       readerEnrichedEvidence: 0,
       extractedCandidates: 0,
       added: 0,
@@ -399,6 +715,9 @@ function summarizeEvidence(item) {
     title: item.title || '',
     snippet: String(item.snippet || '').slice(0, 700),
     publishDate: item.publishDate || '',
+    relevanceScore: item.relevance?.score,
+    relevanceSignals: item.relevance?.signals?.slice(0, 10) ?? [],
+    queryLabel: item.queryLabel || '',
   }
 }
 
@@ -526,6 +845,10 @@ function parseArgs(argv) {
       parsed.maxResults = argv[++index]
     } else if (arg === '--max-readers') {
       parsed.maxReaders = argv[++index]
+    } else if (arg === '--min-readers') {
+      parsed.minReaders = argv[++index]
+    } else if (arg === '--recency') {
+      parsed.recency = argv[++index]
     } else if (arg === '--model') {
       parsed.model = argv[++index]
     } else if (arg === '--force-reader') {
@@ -552,8 +875,10 @@ Options:
   --trace <path>               Discovery trace output path.
   --official-catalog <path>    Official catalog mirror for dedupe.
   --query <text>               Search query. Repeatable.
-  --max-results <n>            Search hits per query. Default: 8.
-  --max-readers <n>            Reader-enriched link cap. Default: 18.
+  --max-results <n>            Search hits per query. Default: 10.
+  --max-readers <n>            Reader-enriched link cap. Default: 60.
+  --min-readers <n>            Backfill at least this many links when available. Default: 18.
+  --recency <filter>           Zhipu recency filter for custom queries. Default: oneMonth.
   --model <name>               Zhipu chat model.
   --force-reader               Always run the webpage reader for candidate links.
   --dry-run                    Do not persist results.
