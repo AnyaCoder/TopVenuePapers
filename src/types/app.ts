@@ -35,6 +35,65 @@ export interface GitHubWorkflowRun {
   run_number: number
 }
 
+export interface FeedLoadError {
+  message: string
+  status?: number
+  statusText?: string
+  url?: string
+  body?: string
+  hint?: string
+}
+
+export interface DiscoveryTraceSearchResult {
+  platform: string
+  url: string
+  title: string
+  snippet?: string
+  publishDate?: string
+}
+
+export interface DiscoveryTraceReaderResult extends DiscoveryTraceSearchResult {
+  readerTitle?: string
+  readerExcerpt?: string
+  readerError?: string
+}
+
+export interface DiscoveryTraceExtractionBatch {
+  index: number
+  evidenceCount: number
+  prompt: string
+  systemPrompt: string
+  model: string
+  responseText: string
+  parsedCount: number
+  error?: string
+}
+
+export interface DiscoveryTracePayload {
+  version: number
+  generatedAt: string
+  model: string
+  searchTool: string
+  readerTool: string
+  queries: Array<{
+    query: string
+    requestedCount: number
+    resultCount: number
+    results: DiscoveryTraceSearchResult[]
+    error?: string
+  }>
+  readers: DiscoveryTraceReaderResult[]
+  extractionBatches: DiscoveryTraceExtractionBatch[]
+  summary: {
+    searchEvidenceCollected: number
+    readerEnrichedEvidence: number
+    extractedCandidates: number
+    added: number
+    updated: number
+  }
+  errors: string[]
+}
+
 export interface BrainstormRelatedPaper {
   paper: PaperCatalogIndexRecord
   score: number

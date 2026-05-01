@@ -176,6 +176,142 @@
   color: #234b82;
 }
 
+.error-diagnostic,
+.trace-card,
+.trace-summary article {
+  padding: 16px;
+  border: 1px solid rgba(34, 48, 68, 0.14);
+  border-radius: 18px;
+  background: rgba(250, 246, 239, 0.74);
+}
+
+.error-diagnostic {
+  border-color: rgba(170, 77, 56, 0.28);
+  background: rgba(246, 234, 230, 0.82);
+  color: #743625;
+}
+
+.error-diagnostic__head,
+.trace-card__head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.error-diagnostic dl {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.error-diagnostic dt {
+  color: #8d3d2a;
+  font-weight: 900;
+}
+
+.error-diagnostic dd {
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.error-diagnostic code {
+  white-space: pre-wrap;
+}
+
+.trace-board,
+.trace-section,
+.trace-list {
+  display: grid;
+  gap: 14px;
+}
+
+.trace-board {
+  gap: 22px;
+}
+
+.trace-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.trace-summary span,
+.trace-card__head span {
+  color: #6f7b8d;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.trace-summary strong {
+  display: block;
+  margin: 6px 0;
+  color: #1d2a3d;
+  font-size: 1.35rem;
+}
+
+.trace-summary small {
+  color: #617086;
+}
+
+.trace-section h3 {
+  margin: 0;
+  color: #1d2a3d;
+}
+
+.trace-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.trace-card li {
+  color: #536174;
+}
+
+.trace-card a,
+.error-diagnostic a {
+  color: #234b82;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.trace-card p {
+  margin: 10px 0 0;
+  color: #536174;
+}
+
+.trace-error {
+  color: #8d3d2a;
+  font-weight: 800;
+}
+
+.trace-card details {
+  margin-top: 12px;
+  border: 1px solid rgba(34, 48, 68, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, 0.76);
+}
+
+.trace-card summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  color: #234b82;
+  font-weight: 900;
+}
+
+.trace-card pre {
+  max-height: 360px;
+  margin: 0;
+  padding: 0 14px 14px;
+  overflow: auto;
+  color: #24344c;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
 .empty-results {
   padding: 28px;
   border: 1px solid rgba(34, 48, 68, 0.15);

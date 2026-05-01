@@ -101,10 +101,14 @@ const {
   unofficialStore,
   unofficialLoading,
   unofficialError,
+  discoveryTrace,
+  traceLoading,
+  traceError,
   workflowRuns,
   workflowLoading,
   workflowError,
   loadUnofficialStore,
+  loadDiscoveryTrace,
   loadDiscoveryRuns,
 } = useDiscoveryFeed(dataBaseUrl)
 
@@ -508,7 +512,7 @@ watch(activePage, async (page) => {
   }
 
   if (page === 'new-finding') {
-    await Promise.all([loadUnofficialStore(), loadDiscoveryRuns()])
+    await Promise.all([loadUnofficialStore(), loadDiscoveryRuns(), loadDiscoveryTrace()])
   }
 
   if (page === 'brain-storm') {
@@ -525,6 +529,7 @@ onMounted(() => {
   void initializeSemanticWarmup()
   void loadUnofficialStore()
   void loadDiscoveryRuns()
+  void loadDiscoveryTrace()
   void loadBrainstormBackendStatus()
 
   if (typeof window !== 'undefined') {
@@ -532,6 +537,7 @@ onMounted(() => {
       if (activePage.value === 'new-finding') {
         void loadDiscoveryRuns()
         void loadUnofficialStore()
+        void loadDiscoveryTrace()
       }
     }, 60000)
   }
@@ -1159,6 +1165,9 @@ function resolveBrainstormBackendMessage(error: unknown) {
       :workflow-runs="workflowRuns"
       :workflow-loading="workflowLoading"
       :workflow-error="workflowError"
+      :discovery-trace="discoveryTrace"
+      :trace-loading="traceLoading"
+      :trace-error="traceError"
       :unofficial-store="unofficialStore"
       :unofficial-loading="unofficialLoading"
       :unofficial-error="unofficialError"

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { readFile } from 'node:fs/promises'
-import { dirname, join } from 'node:path'
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { dirname } from 'node:path'
 import {
   buildOfficialTitleIndex,
   buildUnofficialId,
@@ -20,14 +20,14 @@ import {
 const DEFAULT_QUERIES = [
   'site:x.com (introducing OR "new work" OR "our paper" OR accepted) (llm OR vlm OR vla OR mllm OR multimodal) 2026',
   'site:x.com ("new paper" OR "paper accepted" OR accepted) (agent OR reasoning OR video OR embodied OR robotics) 2026',
-  'site:xiaohongshu.com (Introducing OR "new work" OR "paper accepted") (LLM OR VLM OR VLA OR MLLM OR 多模态) 2026',
-  'site:xiaohongshu.com ("论文 accepted" OR "中稿" OR "新 work") (推理 OR Agent OR 视频 OR 机器人 OR world model) 2026',
+  'site:xiaohongshu.com (Introducing OR "new work" OR "paper accepted") (LLM OR VLM OR VLA OR MLLM OR multimodal) 2026',
+  'site:xiaohongshu.com ("paper accepted" OR "new work" OR "new paper" OR "accepted to") (reasoning OR Agent OR video OR robotics OR world model) 2026',
 ]
 
 const args = parseArgs(process.argv.slice(2))
 const storePath = args.store ?? 'data/unofficial/unofficial-papers.json'
+const tracePath = args.trace ?? 'data/unofficial/discovery-trace.json'
 const officialCatalogPath = args.officialCatalog ?? 'data/papers.catalog.official.json'
-const cacheDir = args.cacheDir ?? 'data/unofficial/cache'
 const queryList = args.query.length > 0 ? args.query : DEFAULT_QUERIES
 const maxResultsPerQuery = Number(args.maxResults ?? 8)
 const maxReaders = Number(args.maxReaders ?? 18)
@@ -41,15 +41,31 @@ const client = createZhipuClient({
 const existingStore = await readUnofficialStore(storePath)
 const officialCatalog = await readCatalog(officialCatalogPath)
 const officialIndex = buildOfficialTitleIndex(officialCatalog)
-
+const trace = createTrace(client)
 const results = []
 
 for (const query of queryList) {
-  const searchResponse = await zhipuWebSearch(client, query, {
-    count: maxResultsPerQuery,
-  })
-  const items = collectSearchItems(searchResponse, query)
-  results.push(...items)
+  const queryTrace = {
+    query,
+    requestedCount: maxResultsPerQuery,
+    resultCount: 0,
+    results: [],
+  }
+
+  try {
+    const searchResponse = await zhipuWebSearch(client, query, {
+      count: maxResultsPerQuery,
+    })
+    const items = collectSearchItems(searchResponse, query)
+    queryTrace.resultCount = items.length
+    queryTrace.results = items.map(summarizeEvidence)
+    results.push(...items)
+  } catch (error) {
+    queryTrace.error = errorToMessage(error)
+    trace.errors.push(`Search failed for query "${query}": ${queryTrace.error}`)
+  }
+
+  trace.queries.push(queryTrace)
 }
 
 const dedupedEvidence = dedupeEvidence(results).slice(0, Math.max(maxReaders, results.length))
@@ -58,6 +74,7 @@ const enrichedEvidence = []
 for (const item of dedupedEvidence) {
   let readerTitle = ''
   let readerExcerpt = ''
+  let readerError = ''
 
   if (forceReader || isLikelyHelpfulReaderTarget(item.url)) {
     try {
@@ -66,22 +83,26 @@ for (const item of dedupedEvidence) {
       readerTitle = readerPayload.title
       readerExcerpt = readerPayload.excerpt
     } catch (error) {
-      readerExcerpt = `reader failed: ${error.message}`
+      readerError = errorToMessage(error)
+      readerExcerpt = `reader failed: ${readerError}`
     }
   }
 
-  enrichedEvidence.push({
+  const enriched = {
     ...item,
     readerTitle,
     readerExcerpt,
-  })
+  }
+
+  enrichedEvidence.push(enriched)
+  trace.readers.push(summarizeReaderEvidence(enriched, readerError))
 }
 
 const batches = chunk(enrichedEvidence, 6)
 const extractedCandidates = []
 
-for (const batch of batches) {
-  const extraction = await extractCandidatesFromEvidence(client, batch)
+for (const [batchIndex, batch] of batches.entries()) {
+  const extraction = await extractCandidatesFromEvidence(client, batch, batchIndex, trace)
   extractedCandidates.push(...extraction)
 }
 
@@ -122,10 +143,10 @@ for (const candidate of extractedCandidates) {
 }
 
 const nextStore = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: trace.generatedAt,
   notes: [
     'Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.',
-    'Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under 未分类 / Unclassified.',
+    'Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified.',
   ],
   papers: mergedPapers.sort((left, right) => {
     const leftTime = left.updatedAt || left.discoveredAt || ''
@@ -134,8 +155,17 @@ const nextStore = {
   }),
 }
 
+trace.summary = {
+  searchEvidenceCollected: results.length,
+  readerEnrichedEvidence: enrichedEvidence.length,
+  extractedCandidates: extractedCandidates.length,
+  added,
+  updated,
+}
+
 if (!dryRun) {
   await writeUnofficialStore(storePath, nextStore)
+  await writeJson(tracePath, trace)
 }
 
 console.log(`Search evidence collected: ${results.length}`)
@@ -144,76 +174,49 @@ console.log(`Extracted unofficial candidates: ${extractedCandidates.length}`)
 console.log(`Store additions: ${added}; updates: ${updated}`)
 if (!dryRun) {
   console.log(`Wrote ${storePath}`)
+  console.log(`Wrote ${tracePath}`)
 }
 
-async function extractCandidatesFromEvidence(client, evidenceBatch) {
-  const prompt = `
-你现在是论文发现助手。请根据下面的网页/帖子搜索证据，找出可能对应 2026 年 AI 顶会主会议论文的条目。
+async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, trace) {
+  const systemPrompt =
+    'You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.'
+  const prompt = buildExtractionPrompt(evidenceBatch)
+  let text = ''
+  let papers = []
+  let errorMessage = ''
 
-范围：
-- 平台来源重点是 X / Xiaohongshu / 个人主页 / 实验室主页。
-- 方向重点是 LLM, VLM, VLA, MLLM, Agent, reasoning, video understanding, 3D, robotics, embodied AI 等。
-- 只保留“像论文”的项目。需要有论文标题或非常接近论文标题的项目。
-- 若明显是 workshop/findings/demo/tutorial/challenge/课程/招聘/纯产品发布，不要收录。
-- 如果帖子里出现 accepted / accepted to / AAAI / ACL / EMNLP / CVPR / ICCV / ICLR / ICML / NeurIPS 等信息，可以判定 acceptedVenue。
-
-请输出 JSON，格式如下：
-{
-  "papers": [
-    {
-      "title": "paper title",
-      "titleZh": "可选",
-      "summary": "一句中文概括",
-      "reason": "为什么认为这是一篇论文，以及接受/未接受判断依据",
-      "status": "candidate 或 accepted",
-      "confidence": 0.0,
-      "acceptedVenue": "如 ACL 2026 / AAAI / CVPR 2026，没有就留空",
-      "acceptedYear": 2026,
-      "primaryUrl": "最主要证据链接",
-      "canonicalUrl": "若有论文页或主页则填，没有就留空",
-      "pdfUrl": "可选",
-      "authors": ["作者1", "作者2"],
-      "keywords": ["llm", "agent"],
-      "platforms": ["x", "xiaohongshu", "homepage"],
-      "evidence": [
+  try {
+    const response = await zhipuChat(client, {
+      messages: [
         {
-          "platform": "x",
-          "url": "https://...",
-          "title": "搜索结果标题",
-          "author": "若能看出作者",
-          "snippet": "检索摘要或正文摘要",
-          "readerTitle": "reader 读到的标题",
-          "readerExcerpt": "reader 读到的关键片段",
-          "publishDate": "可选"
-        }
-      ]
-    }
-  ]
-}
+          role: 'system',
+          content: systemPrompt,
+        },
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ],
+    })
 
-必须只返回 JSON。
+    text = extractMessageText(response)
+    const parsed = tryParseJsonBlock(text)
+    papers = Array.isArray(parsed?.papers) ? parsed.papers : []
+  } catch (error) {
+    errorMessage = errorToMessage(error)
+    trace.errors.push(`Extraction failed for batch ${batchIndex + 1}: ${errorMessage}`)
+  }
 
-证据如下：
-${JSON.stringify(evidenceBatch, null, 2)}
-`.trim()
-
-  const response = await zhipuChat(client, {
-    messages: [
-      {
-        role: 'system',
-        content:
-          '你是严谨的信息抽取器，只能根据提供的证据生成 JSON，不要编造缺失事实。',
-      },
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
+  trace.extractionBatches.push({
+    index: batchIndex,
+    evidenceCount: evidenceBatch.length,
+    prompt,
+    systemPrompt,
+    model: client.model,
+    responseText: text.slice(0, 12000),
+    parsedCount: papers.length,
+    error: errorMessage || undefined,
   })
-
-  const text = extractMessageText(response)
-  const parsed = tryParseJsonBlock(text)
-  const papers = Array.isArray(parsed?.papers) ? parsed.papers : []
 
   return papers
     .filter((paper) => paper?.title && paper?.primaryUrl)
@@ -251,6 +254,58 @@ ${JSON.stringify(evidenceBatch, null, 2)}
       discoveredAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     }))
+}
+
+function buildExtractionPrompt(evidenceBatch) {
+  return `
+You are helping maintain a 2026 top-venue AI paper tracker.
+
+Task:
+- Inspect the search and reader evidence below.
+- Extract only items that are likely to be real research papers or paper project pages.
+- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.
+- Prefer announcements using phrases like "Introducing", "new work", "our paper", "accepted to", or venue names.
+- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.
+- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.
+- If acceptance is unclear, use status "candidate".
+
+Return JSON only:
+{
+  "papers": [
+    {
+      "title": "paper title",
+      "titleZh": "optional Chinese title",
+      "summary": "one concise Chinese summary",
+      "reason": "why this looks like a paper and what evidence supports acceptance or candidate status",
+      "status": "candidate or accepted",
+      "confidence": 0.0,
+      "acceptedVenue": "ACL 2026 / AAAI / CVPR 2026, or empty",
+      "acceptedYear": 2026,
+      "primaryUrl": "main evidence URL",
+      "canonicalUrl": "paper/project/homepage URL if available",
+      "pdfUrl": "optional PDF URL",
+      "authors": ["author"],
+      "keywords": ["llm", "agent"],
+      "platforms": ["x", "xiaohongshu", "homepage"],
+      "evidence": [
+        {
+          "platform": "x",
+          "url": "https://...",
+          "title": "search result title",
+          "author": "author if visible",
+          "snippet": "search or page excerpt",
+          "readerTitle": "reader title",
+          "readerExcerpt": "reader excerpt",
+          "publishDate": "optional"
+        }
+      ]
+    }
+  ]
+}
+
+Evidence:
+${JSON.stringify(evidenceBatch, null, 2)}
+`.trim()
 }
 
 function collectSearchItems(response, query) {
@@ -293,6 +348,51 @@ function normalizeReaderPayload(response) {
   }
 }
 
+function createTrace(client) {
+  return {
+    version: 1,
+    generatedAt: new Date().toISOString(),
+    model: client.model,
+    searchTool: client.searchTool,
+    readerTool: client.readerTool,
+    queries: [],
+    readers: [],
+    extractionBatches: [],
+    summary: {
+      searchEvidenceCollected: 0,
+      readerEnrichedEvidence: 0,
+      extractedCandidates: 0,
+      added: 0,
+      updated: 0,
+    },
+    errors: [],
+  }
+}
+
+function summarizeEvidence(item) {
+  return {
+    platform: item.platform || 'web',
+    url: item.url || '',
+    title: item.title || '',
+    snippet: String(item.snippet || '').slice(0, 700),
+    publishDate: item.publishDate || '',
+  }
+}
+
+function summarizeReaderEvidence(item, readerError) {
+  const summary = {
+    ...summarizeEvidence(item),
+    readerTitle: item.readerTitle || '',
+    readerExcerpt: readerError ? '' : String(item.readerExcerpt || '').slice(0, 1400),
+  }
+
+  if (readerError) {
+    summary.readerError = readerError
+  }
+
+  return summary
+}
+
 function dedupeEvidence(items) {
   const byUrl = new Map()
 
@@ -322,6 +422,15 @@ async function readCatalog(path) {
     }
     throw error
   }
+}
+
+async function writeJson(path, payload) {
+  await mkdir(dirname(path), { recursive: true })
+  const tmpPath = `${path}.tmp`
+  await writeFile(tmpPath, `${JSON.stringify(payload, null, 2)}\n`)
+  await rm(path, { force: true })
+  await writeFile(path, `${JSON.stringify(payload, null, 2)}\n`)
+  await rm(tmpPath, { force: true })
 }
 
 function normalizeTitleKey(title) {
@@ -370,6 +479,10 @@ function chunk(items, size) {
   return output
 }
 
+function errorToMessage(error) {
+  return error instanceof Error ? error.message : String(error)
+}
+
 function parseArgs(argv) {
   const parsed = {
     query: [],
@@ -380,10 +493,10 @@ function parseArgs(argv) {
 
     if (arg === '--store') {
       parsed.store = argv[++index]
+    } else if (arg === '--trace') {
+      parsed.trace = argv[++index]
     } else if (arg === '--official-catalog') {
       parsed.officialCatalog = argv[++index]
-    } else if (arg === '--cache-dir') {
-      parsed.cacheDir = argv[++index]
     } else if (arg === '--query') {
       parsed.query.push(argv[++index])
     } else if (arg === '--max-results') {
@@ -413,6 +526,7 @@ Usage:
 
 Options:
   --store <path>               Unofficial-paper store path.
+  --trace <path>               Discovery trace output path.
   --official-catalog <path>    Official catalog mirror for dedupe.
   --query <text>               Search query. Repeatable.
   --max-results <n>            Search hits per query. Default: 8.

@@ -7,6 +7,10 @@ const jobs = [
     from: 'data/unofficial/unofficial-papers.json',
     to: 'public/data/unofficial/unofficial-papers.json',
   },
+  {
+    from: 'data/unofficial/discovery-trace.json',
+    to: 'public/data/unofficial/discovery-trace.json',
+  },
 ]
 
 for (const job of jobs) {
