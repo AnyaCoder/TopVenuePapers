@@ -18,10 +18,10 @@ import {
 } from './lib/zhipu-client.mjs'
 
 const DEFAULT_QUERIES = [
-  'site:x.com (introducing OR "new work" OR "our paper" OR accepted) (llm OR vlm OR vla OR mllm OR multimodal) 2026',
-  'site:x.com ("new paper" OR "paper accepted" OR accepted) (agent OR reasoning OR video OR embodied OR robotics) 2026',
-  'site:xiaohongshu.com (Introducing OR "new work" OR "paper accepted") (LLM OR VLM OR VLA OR MLLM OR multimodal) 2026',
-  'site:xiaohongshu.com ("paper accepted" OR "new work" OR "new paper" OR "accepted to") (reasoning OR Agent OR video OR robotics OR world model) 2026',
+  'X Introducing new paper LLM VLM multimodal agent 2026',
+  'X "our paper" "accepted to" LLM VLM MLLM VLA 2026',
+  '"new work" video understanding 3D robotics embodied AI 2026',
+  '小红书 新论文 大模型 多模态 智能体 具身 2026',
 ]
 
 const args = parseArgs(process.argv.slice(2))
@@ -55,6 +55,7 @@ for (const query of queryList) {
   try {
     const searchResponse = await zhipuWebSearch(client, query, {
       count: maxResultsPerQuery,
+      domainFilter: domainFilterForQuery(query),
     })
     const items = collectSearchItems(searchResponse, query)
     queryTrace.resultCount = items.length
@@ -310,26 +311,36 @@ ${JSON.stringify(evidenceBatch, null, 2)}
 
 function collectSearchItems(response, query) {
   const payloads = [
+    ...(Array.isArray(response?.search_result) ? response.search_result : []),
     ...(Array.isArray(response?.data) ? response.data : []),
+    ...(Array.isArray(response?.data?.search_result) ? response.data.search_result : []),
+    ...(Array.isArray(response?.result?.search_result) ? response.result.search_result : []),
     ...(Array.isArray(response?.results) ? response.results : []),
     ...(Array.isArray(response?.items) ? response.items : []),
   ]
 
   return payloads
     .map((item) => ({
-      platform: detectPlatform(item.url || item.link || ''),
-      url: item.url || item.link || '',
+      platform: detectPlatform(item.link || item.url || ''),
+      url: item.link || item.url || '',
       title: item.title || item.name || '',
       author: item.author || item.site_name || '',
-      snippet: item.content || item.snippet || item.description || '',
-      publishDate: item.publish_time || item.date || '',
+      snippet: item.content || item.snippet || item.description || item.summary || '',
+      publishDate: item.publish_date || item.publish_time || item.date || '',
       query,
     }))
     .filter((item) => item.url && item.title)
 }
 
 function normalizeReaderPayload(response) {
-  const data = response?.data ?? response?.result ?? response ?? {}
+  const data =
+    response?.reader_result ??
+    response?.webpage_content ??
+    response?.data?.reader_result ??
+    response?.data ??
+    response?.result ??
+    response ??
+    {}
   const title =
     data.title ||
     data.page_title ||
@@ -346,6 +357,18 @@ function normalizeReaderPayload(response) {
     title: String(title || '').trim(),
     excerpt: String(excerpt || '').replace(/\s+/g, ' ').slice(0, 2200).trim(),
   }
+}
+
+function domainFilterForQuery(query) {
+  if (/xiaohongshu|小红书/i.test(query)) {
+    return 'xiaohongshu.com'
+  }
+
+  if (/\bx\b|twitter/i.test(query)) {
+    return 'x.com'
+  }
+
+  return undefined
 }
 
 function createTrace(client) {

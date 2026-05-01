@@ -11,8 +11,8 @@ export function createZhipuClient(options = {}) {
     apiBase: options.apiBase || process.env.ZHIPU_API_BASE || DEFAULT_API_BASE,
     apiKey,
     model: options.model || process.env.ZHIPU_MODEL || 'glm-4.5-flash',
-    searchTool: options.searchTool || process.env.ZHIPU_SEARCH_TOOL || 'web-search-pro',
-    readerTool: options.readerTool || process.env.ZHIPU_READER_TOOL || 'web-browser',
+    searchTool: options.searchTool || process.env.ZHIPU_SEARCH_TOOL || 'search_pro',
+    readerTool: options.readerTool || process.env.ZHIPU_READER_TOOL || 'reader',
   }
 }
 
@@ -88,26 +88,54 @@ export async function zhipuTool(client, tool, body = {}, retries = 3) {
 }
 
 export async function zhipuWebSearch(client, query, options = {}) {
-  return zhipuTool(client, client.searchTool, {
-    messages: [
-      {
-        role: 'user',
-        content: query,
-      },
-    ],
-    search_engine: options.searchEngine,
+  return zhipuPost(client, 'web_search', {
+    search_query: query,
+    search_engine: normalizeSearchEngine(options.searchEngine || client.searchTool),
+    search_intent: false,
     search_domain_filter: options.domainFilter,
-    search_recency_filter: options.recencyFilter,
+    search_recency_filter: options.recencyFilter || 'oneMonth',
+    content_size: options.contentSize || 'medium',
     count: options.count,
   })
 }
 
 export async function zhipuWebReader(client, url, options = {}) {
-  return zhipuTool(client, client.readerTool, {
+  return zhipuPost(client, 'reader', {
     url,
-    extract_level: options.extractLevel || 'deep',
-    with_images: false,
+    ...options.extraBody,
   })
+}
+
+export async function zhipuPost(client, endpoint, body = {}, retries = 3) {
+  const url = `${client.apiBase}/${endpoint}`
+  let lastError
+
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${client.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(stripUndefined(body)),
+      })
+
+      if (!response.ok) {
+        const details = await safeReadText(response)
+        throw new Error(`Zhipu ${endpoint} failed: ${response.status} ${response.statusText} ${details}`.trim())
+      }
+
+      return await response.json()
+    } catch (error) {
+      lastError = error
+      if (attempt < retries) {
+        await sleep(700 * attempt)
+      }
+    }
+  }
+
+  throw lastError
 }
 
 export function extractMessageText(response) {
@@ -159,6 +187,34 @@ export function tryParseJsonBlock(text) {
 
     return null
   }
+}
+
+function normalizeSearchEngine(value) {
+  const normalized = String(value || '').trim().toLowerCase()
+
+  if (normalized === 'web-search-pro' || normalized === 'search_pro') {
+    return 'search_pro'
+  }
+
+  if (normalized === 'web-search-std' || normalized === 'search_std') {
+    return 'search_std'
+  }
+
+  if (normalized === 'search_pro_sogou' || normalized === 'sogou') {
+    return 'search_pro_sogou'
+  }
+
+  if (normalized === 'search_pro_quark' || normalized === 'quark') {
+    return 'search_pro_quark'
+  }
+
+  return 'search_pro'
+}
+
+function stripUndefined(value) {
+  return Object.fromEntries(
+    Object.entries(value).filter(([, item]) => item !== undefined && item !== ''),
+  )
 }
 
 async function safeReadText(response) {

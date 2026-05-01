@@ -4,7 +4,7 @@ import { spawn } from 'node:child_process'
 const args = parseArgs(process.argv.slice(2))
 
 const steps = [
-  ['npm', ['run', 'papers:ingest:ccfa']],
+  ['npm', ['run', 'papers:ingest:ccfa', ...(args.reuseOfficialMirror ? ['--', '--reuse-official-mirror'] : [])]],
   ['npm', ['run', 'catalog:shards']],
   ['npm', ['run', 'data:sync-public']],
   ['npm', ['run', 'semantic:build:mirror']],
@@ -13,6 +13,7 @@ const steps = [
 ]
 
 if (args.withDiscovery) {
+  args.reuseOfficialMirror = true
   steps.unshift(
     ['npm', ['run', 'papers:unofficial:discover']],
     ['npm', ['run', 'papers:unofficial:reconcile']],
@@ -51,6 +52,8 @@ function parseArgs(argv) {
   for (const arg of argv) {
     if (arg === '--with-discovery') {
       parsed.withDiscovery = true
+    } else if (arg === '--reuse-official-mirror') {
+      parsed.reuseOfficialMirror = true
     } else if (arg === '--help') {
       console.log(`
 Usage:
@@ -58,6 +61,8 @@ Usage:
 
 Options:
   --with-discovery   Run unofficial discovery + reconciliation before rebuild.
+  --reuse-official-mirror
+                     Skip official-source crawling and rebuild from the committed official mirror.
 `)
       process.exit(0)
     } else {

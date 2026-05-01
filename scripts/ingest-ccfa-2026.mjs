@@ -27,15 +27,28 @@ const maxCvprDetails = parseLimit(args.maxCvprDetails)
 const maxAaaiDetails = parseLimit(args.maxAaaiDetails)
 const useCache = !args.noCache
 const filterRelevantOnly = Boolean(args.filterRelevantOnly)
+const reuseOfficialMirror = Boolean(args.reuseOfficialMirror)
 
 const guideRecords = await readJsonArray(guideInput).catch(() => [])
 const guideIndex = buildGuideIndex(guideRecords)
+const previousOfficialMirror = await readJson(officialMirrorOutFile).catch(() => ({
+  papers: [],
+  sources: [],
+  generatedAt: '',
+}))
+const fallbackNotes = []
 
-const [iclr, cvpr, aaai] = await Promise.all([
-  collectIclrPapers(),
-  collectCvprPapers(),
-  collectAaaiPapers(),
-])
+const [iclr, cvpr, aaai] = reuseOfficialMirror
+  ? [
+      collectFromOfficialMirror('ICLR', previousOfficialMirror),
+      collectFromOfficialMirror('CVPR', previousOfficialMirror),
+      collectFromOfficialMirror('AAAI', previousOfficialMirror),
+    ]
+  : await Promise.all([
+      collectWithFallback('ICLR', collectIclrPapers, previousOfficialMirror),
+      collectWithFallback('CVPR', collectCvprPapers, previousOfficialMirror),
+      collectWithFallback('AAAI', collectAaaiPapers, previousOfficialMirror),
+    ])
 
 const merged = dedupeRecords([...iclr.records, ...cvpr.records, ...aaai.records])
   .map((record) => mergeGuide(record, guideIndex))
@@ -55,6 +68,7 @@ const officialPayload = {
   ],
   notes: [
     'Official-only mirror used for reconciliation against social/unofficial discoveries.',
+    ...fallbackNotes,
   ],
   papers: merged,
 }
@@ -97,6 +111,8 @@ const payload = {
   papers: combined,
 }
 
+payload.notes.push(...fallbackNotes)
+
 await writeJson(outFile, payload)
 await writeJson(mirrorOutFile, payload)
 await writeJson(officialMirrorOutFile, officialPayload)
@@ -135,6 +151,65 @@ async function collectIclrPapers() {
     )
 
   return { records }
+}
+
+async function collectWithFallback(label, collector, previousMirror) {
+  try {
+    return await collector()
+  } catch (error) {
+    const fallback = recordsFromPreviousMirror(previousMirror, label)
+
+    if (fallback.length === 0) {
+      throw error
+    }
+
+    const message = `${label} source refresh failed; reused ${fallback.length} records from previous official mirror. Reason: ${errorToMessage(error)}`
+    console.warn(message)
+    fallbackNotes.push(message)
+
+    return {
+      records: fallback,
+      fallback: true,
+      error: errorToMessage(error),
+    }
+  }
+}
+
+function recordsFromPreviousMirror(previousMirror, label) {
+  const papers = Array.isArray(previousMirror?.papers) ? previousMirror.papers : []
+  const normalizedLabel = normalizeText(label)
+
+  return papers
+    .filter((paper) => {
+      const venue = normalizeText(paper.venue || '')
+      const source = normalizeText(paper.source || '')
+      return venue.startsWith(normalizedLabel) || source === normalizedLabel
+    })
+    .map((paper) =>
+      normalizeRecord({
+        ...paper,
+        source: paper.source || normalizedLabel,
+        venue: paper.venue || label,
+        year: paper.year || 2026,
+      }),
+    )
+}
+
+function collectFromOfficialMirror(label, previousMirror) {
+  const records = recordsFromPreviousMirror(previousMirror, label)
+
+  if (records.length === 0) {
+    throw new Error(`Cannot reuse official mirror for ${label}: no matching records found.`)
+  }
+
+  const message = `${label} source refresh skipped; reused ${records.length} records from previous official mirror.`
+  console.log(message)
+  fallbackNotes.push(message)
+
+  return {
+    records,
+    reused: true,
+  }
 }
 
 async function collectCvprPapers() {
@@ -609,6 +684,10 @@ function parseLimit(value) {
   return Number.isFinite(number) && number >= 0 ? number : Number.POSITIVE_INFINITY
 }
 
+function errorToMessage(error) {
+  return error instanceof Error ? error.message : String(error)
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
@@ -641,6 +720,8 @@ function parseArgs(argv) {
       parsed.maxAaaiDetails = argv[++index]
     } else if (arg === '--filter-relevant-only') {
       parsed.filterRelevantOnly = true
+    } else if (arg === '--reuse-official-mirror') {
+      parsed.reuseOfficialMirror = true
     } else if (arg === '--no-cache') {
       parsed.noCache = true
     } else if (arg === '--help') {
@@ -667,6 +748,7 @@ Options:
   --max-aaai-details <n|all>  Cap AAAI detail-page fetches. Default: all title candidates.
   --concurrency <n>           Detail fetch concurrency. Default: 12.
   --filter-relevant-only      Keep the old topic-filtered CVPR/AAAI behavior.
+  --reuse-official-mirror     Skip official-source crawling and rebuild from data/papers.catalog.official.json.
   --no-cache                  Ignore cached HTML and refetch.
 `)
   process.exit(0)
