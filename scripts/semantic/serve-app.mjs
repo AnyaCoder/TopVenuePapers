@@ -120,7 +120,7 @@ async function search(query, topK) {
     .map(({ index, score }) => ({
       id: meta.ids[index],
       score,
-      title: meta.titles[index],
+      title: meta.titles?.[index],
     }))
 }
 

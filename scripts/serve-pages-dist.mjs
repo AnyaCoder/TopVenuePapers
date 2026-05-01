@@ -2,7 +2,7 @@
 import { createReadStream } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { createServer } from 'node:http'
-import { extname, join, normalize, resolve } from 'node:path'
+import { extname, join, normalize, resolve, sep } from 'node:path'
 
 const args = parseArgs(process.argv.slice(2))
 const host = args.host ?? '127.0.0.1'
@@ -31,7 +31,7 @@ const server = createServer(async (request, response) => {
     const relativePath = normalize(pathname).replace(/^[/\\]+/, '') || 'index.html'
     const filePath = resolve(join(distDir, relativePath))
 
-    if (!filePath.startsWith(distDir)) {
+    if (!filePath.startsWith(`${distDir}${sep}`) && filePath !== distDir) {
       response.writeHead(403)
       response.end('Forbidden')
       return
@@ -42,11 +42,17 @@ const server = createServer(async (request, response) => {
       response.writeHead(200, {
         'Content-Type': getContentType(filePath),
         'Content-Length': body.length,
+        'Cache-Control': filePath.endsWith('.html')
+          ? 'no-cache'
+          : 'public, max-age=31536000, immutable',
       })
       response.end(body)
     } catch {
       const indexPath = join(distDir, 'index.html')
-      response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+      response.writeHead(200, {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Cache-Control': 'no-cache',
+      })
       createReadStream(indexPath).pipe(response)
     }
   } catch (error) {
@@ -104,7 +110,7 @@ Usage:
 
 Options:
   --host <host>   Default: 127.0.0.1.
-  --port <port>   Default: 4176.
+  --port <port>   Default: 4176. The root path redirects to the configured base path.
   --dist <dir>    Default: dist.
   --base <path>   Default: /TopVenuePapers/.
 `)

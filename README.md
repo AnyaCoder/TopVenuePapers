@@ -24,6 +24,15 @@ npm ci
 npm run dev -- --host 127.0.0.1 --port 4174
 ```
 
+To preview the GitHub Pages build locally:
+
+```bash
+npm run build:pages
+npm run preview:pages
+```
+
+Then open `http://127.0.0.1:4182/`. The local preview redirects to `/TopVenuePapers/` automatically so the production asset paths resolve correctly.
+
 For local semantic search with the Node helper:
 
 ```bash

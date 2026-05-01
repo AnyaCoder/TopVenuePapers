@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "build:pages": "vue-tsc -b && vite build --base=/TopVenuePapers/",
+    "build:pages": "node scripts/clean-dist.mjs && vue-tsc -b && vite build --base=/TopVenuePapers/",
     "preview": "vite preview",
+    "preview:pages": "node scripts/serve-pages-dist.mjs --host 127.0.0.1 --port 4182",
     "papers:ingest:iclr": "node scripts/ingest-openreview.mjs --limit 500 --max-pages 6 --out data/openreview/iclr-2026-candidates.json",
     "papers:ingest:ccfa": "node scripts/ingest-ccfa-2026.mjs",
     "papers:generate": "node scripts/generate-paper-intros.mjs --input data/openreview/iclr-2026-candidates.json --out data/papers.generated.json",

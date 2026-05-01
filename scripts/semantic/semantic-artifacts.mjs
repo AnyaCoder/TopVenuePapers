@@ -368,7 +368,7 @@ export function normalizeChunkedMeta(meta) {
 
   const ids = []
   const fingerprints = []
-  const titles = Array.isArray(meta.titles) ? meta.titles : undefined
+  const titles = Array.isArray(meta.titles) ? meta.titles : []
 
   if (Array.isArray(meta.ids) && meta.ids.length > 0) {
     ids.push(...meta.ids)
@@ -390,7 +390,7 @@ export function normalizeChunkedMeta(meta) {
     ...meta,
     ids,
     fingerprints,
-    ...(titles ? { titles } : {}),
+    titles,
   }
 }
 
