@@ -1,0 +1,194 @@
+.result-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid rgba(34, 48, 68, 0.15);
+  border-radius: 20px;
+  background: rgba(255, 253, 248, 0.76);
+}
+
+.result-card__titleline {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.result-card__titlegroup {
+  display: grid;
+  gap: 6px;
+}
+
+.result-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  color: #728096;
+  font-size: 0.9rem;
+}
+
+.venue-chip,
+.status-pill,
+.score-chip,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.venue-chip {
+  border: 1px solid rgba(35, 75, 130, 0.36);
+  background: #e0e9f6;
+  color: #234b82;
+}
+
+.status-pill,
+.score-chip,
+.tag {
+  border: 1px solid rgba(34, 48, 68, 0.14);
+  background: rgba(255, 253, 248, 0.86);
+  color: #516073;
+  font-size: 0.82rem;
+}
+
+.status-pill[data-tone="good"] {
+  background: rgba(226, 239, 232, 0.92);
+  color: #34564c;
+}
+
+.status-pill[data-tone="active"] {
+  background: rgba(224, 233, 246, 0.92);
+  color: #234b82;
+}
+
+.status-pill[data-tone="bad"] {
+  background: rgba(244, 222, 214, 0.92);
+  color: #8d3d2a;
+}
+
+.result-card h3,
+.discovery-card h3,
+.brainstorm-paper-card h3 {
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+  line-height: 1.22;
+}
+
+.result-card h3 {
+  margin: 0;
+  color: #182436;
+}
+
+.result-card__zh,
+.result-card__authors,
+.result-card__score,
+.result-card__hook,
+.discovery-card__summary,
+.brainstorm-paper-card__abstract {
+  margin: 6px 0 0;
+  color: #536174;
+}
+
+.result-card__hook {
+  color: #29394f;
+}
+
+.result-card__details {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(34, 48, 68, 0.12);
+}
+
+.result-card__details button {
+  width: fit-content;
+  padding: 0;
+  background: transparent;
+  color: #182436;
+  font-weight: 800;
+  font-size: 1.08rem;
+}
+
+.result-card__details button span {
+  display: inline-block;
+  width: 22px;
+  color: #65748b;
+}
+
+.open-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  min-height: 82px;
+  color: #1e3f6e;
+  text-align: center;
+  font-weight: 800;
+}
+
+.detail-copy,
+.bibtex,
+.guide-cell {
+  padding: 14px;
+  border: 1px solid rgba(34, 48, 68, 0.13);
+  border-radius: 16px;
+  background: rgba(248, 244, 236, 0.88);
+  color: #455366;
+}
+
+.detail-copy,
+.bibtex {
+  margin: 4px 0 10px 22px;
+}
+
+.bibtex {
+  overflow-x: auto;
+  white-space: pre;
+  font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.guide-grid,
+.plan-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.guide-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 4px 0 10px 22px;
+}
+
+.plan-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.plan-card--wide {
+  grid-column: 1 / -1;
+}
+
+.plan-card ul,
+.notes-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.plan-card p,
+.plan-card li,
+.notes-list li,
+.run-card p,
+.discovery-card__foot {
+  color: #536174;
+}
+
+.plan-card li,
+.notes-list li {
+  margin-bottom: 8px;
+}

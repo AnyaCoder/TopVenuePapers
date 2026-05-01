@@ -1,0 +1,363 @@
+.panel-actions,
+.pager,
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-actions button,
+.pager button,
+.venue-row button,
+.year-pills button,
+.category-filter-list button,
+.primary-action,
+.secondary-action,
+.quiet-button,
+.open-link,
+.run-card a,
+.discovery-card__top a,
+.brainstorm-paper-card a {
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid rgba(34, 48, 68, 0.16);
+  border-radius: 14px;
+  background: rgba(250, 246, 239, 0.92);
+  color: #24344c;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.panel-actions button:hover,
+.pager button:hover,
+.venue-row button:hover,
+.year-pills button:hover,
+.category-filter-list button:hover,
+.primary-action:hover,
+.secondary-action:hover,
+.quiet-button:hover,
+.open-link:hover,
+.run-card a:hover,
+.discovery-card__top a:hover,
+.brainstorm-paper-card a:hover {
+  border-color: rgba(31, 57, 93, 0.32);
+  background: #f2eadc;
+}
+
+.primary-action {
+  min-height: 56px;
+  background: linear-gradient(180deg, #5270a7, #244a82);
+  border-color: rgba(35, 75, 130, 0.38);
+  color: #fff;
+  font-weight: 800;
+}
+
+.primary-action:hover {
+  background: linear-gradient(180deg, #5d7aaf, #2b548d);
+}
+
+.secondary-action {
+  min-height: 50px;
+  font-weight: 800;
+}
+
+.quiet-button {
+  min-height: 38px;
+  padding: 0 14px;
+}
+
+.primary-action:disabled,
+.secondary-action:disabled,
+.pager button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.pager strong {
+  min-width: 112px;
+  color: #26354b;
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+.filter-body,
+.results-list {
+  height: calc(100% - 76px);
+  overflow-y: auto;
+  scrollbar-color: #9aa3b2 transparent;
+  scrollbar-width: thin;
+}
+
+.filter-body {
+  padding: 20px;
+}
+
+.results-list {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: 20px;
+}
+
+.catalog-status,
+.empty-state {
+  padding: 14px 16px;
+  border: 1px solid rgba(35, 75, 130, 0.2);
+  border-radius: 14px;
+  background: rgba(224, 233, 246, 0.68);
+  color: #234b82;
+  font-weight: 800;
+}
+
+.catalog-status {
+  margin-bottom: 16px;
+}
+
+.catalog-status--error,
+.empty-state--error {
+  border-color: rgba(170, 77, 56, 0.28);
+  background: rgba(244, 222, 214, 0.72);
+  color: #8d3d2a;
+}
+
+.semantic-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.semantic-controls button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(34, 48, 68, 0.16);
+  border-radius: 999px;
+  background: rgba(250, 246, 239, 0.92);
+  color: #24344c;
+  font-weight: 800;
+}
+
+.semantic-controls button.is-active,
+.year-pills button.is-active,
+.category-filter-list button.is-active {
+  border-color: rgba(35, 75, 130, 0.42);
+  background: #dfe8f4;
+  color: #17375f;
+}
+
+.semantic-hint,
+.muted-copy {
+  color: #5a6577;
+}
+
+.semantic-hint {
+  margin: 10px 0 0;
+  font-size: 0.92rem;
+}
+
+.semantic-hint--error {
+  color: #8d3d2a;
+}
+
+.semantic-progress-card,
+.brainstorm-enhance {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid rgba(35, 75, 130, 0.16);
+  border-radius: 16px;
+  background: rgba(248, 250, 253, 0.92);
+}
+
+.semantic-progress-card__top,
+.brainstorm-enhance__head,
+.feed-summary__row,
+.run-card__top,
+.discovery-card__top,
+.brainstorm-paper-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.semantic-progress-card__top {
+  color: #17375f;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.semantic-progress-bar {
+  margin-top: 10px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(35, 75, 130, 0.1);
+  overflow: hidden;
+}
+
+.semantic-progress-bar__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #7f9bc7, #244a82);
+  transition: width 180ms ease;
+}
+
+.semantic-progress-card__copy {
+  margin: 9px 0 0;
+  color: #5a6577;
+  font-size: 0.9rem;
+}
+
+.field-block,
+.form-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.field-block {
+  color: #5a6577;
+}
+
+.field-block span {
+  font-size: 0.96rem;
+}
+
+.field-block textarea,
+.field-block input {
+  width: 100%;
+  border: 1px solid rgba(34, 48, 68, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.92);
+  color: #1d2a3d;
+  outline: none;
+}
+
+.field-block textarea {
+  resize: vertical;
+  min-height: 116px;
+  padding: 16px 18px;
+  font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+.field-block input {
+  min-height: 52px;
+  padding: 0 18px;
+}
+
+.field-block textarea:focus,
+.field-block input:focus {
+  border-color: rgba(35, 75, 130, 0.46);
+  box-shadow: 0 0 0 3px rgba(35, 75, 130, 0.12);
+}
+
+.compact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(140px, 1fr);
+  gap: 14px;
+  align-items: end;
+  margin-top: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(34, 48, 68, 0.14);
+}
+
+.filter-section {
+  padding: 20px 0 0;
+}
+
+.filter-section__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.filter-section__heading h3,
+.brainstorm-enhance__head h3,
+.plan-card h3,
+.discovery-card h3,
+.brainstorm-paper-card h3 {
+  margin: 0;
+  color: #1d2a3d;
+}
+
+.filter-section__heading span,
+.brainstorm-enhance__head span {
+  color: #748197;
+}
+
+.venue-list,
+.category-filter-list,
+.run-list,
+.discovery-list,
+.brainstorm-paper-list {
+  display: grid;
+  gap: 12px;
+}
+
+.venue-row,
+.run-card,
+.discovery-card,
+.brainstorm-paper-card,
+.plan-card {
+  padding: 16px;
+  border: 1px solid rgba(34, 48, 68, 0.14);
+  border-radius: 18px;
+  background: rgba(250, 246, 239, 0.72);
+}
+
+.venue-row__top {
+  display: grid;
+  grid-template-columns: minmax(72px, 1fr) auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.venue-row__top strong {
+  color: #1d2a3d;
+  font-size: 1.15rem;
+}
+
+.venue-row__top span {
+  min-height: 30px;
+  padding: 3px 12px;
+  border: 1px solid rgba(34, 48, 68, 0.13);
+  border-radius: 999px;
+  color: #5f6c7f;
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.venue-row button {
+  min-height: 34px;
+  padding: 0 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.year-pills,
+.tag-row,
+.discovery-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.year-pills {
+  margin-top: 12px;
+}
+
+.year-pills button,
+.category-filter-list button {
+  min-height: 36px;
+}
+
+.category-filter-list button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.category-filter-list small {
+  color: #718098;
+}

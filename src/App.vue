@@ -1,120 +1,43 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
+import TopNavigation from './components/TopNavigation.vue'
+import { categoryLabels, pageTabs } from './constants/appMetadata'
+import { useDiscoveryFeed } from './composables/useDiscoveryFeed'
 import { usePaperSearch } from './composables/usePaperSearch'
+import BrainStormPage from './pages/BrainStormPage.vue'
+import FinderPage from './pages/FinderPage.vue'
+import NewFindingPage from './pages/NewFindingPage.vue'
+import { usePaperCatalogData } from './composables/usePaperCatalogData'
+import type {
+  AppPage,
+  BrainstormRelatedPaper,
+  BrainstormStatus,
+  DiscoveryEvidenceCard,
+  DiscoveryTimelineItem,
+  SearchMode,
+  SemanticResult,
+  SemanticStatus,
+} from './types/app'
 import type {
   CategoryKey,
-  PaperAbstractPayload,
-  PaperCatalogIndexPayload,
   PaperCatalogIndexRecord,
-  PaperCatalogShardPayload,
   PaperRecord,
-  UnofficialPaperEntry,
-  UnofficialPaperStorePayload,
 } from './types/paper'
 import type { BrowserSemanticProgress } from './utils/browserSemanticSearch'
 import { buildBrainstormQuery, buildLocalBrainstormPlan, rankPapersByTextQuery, type BrainstormDraft } from './utils/brainstorm'
-import { getVenueBadge } from './utils/venue'
+import {
+  clampNumber,
+  humanizePlatform,
+  humanizeWorkflowStatus,
+  resolvePageFromHash,
+  timestampValue,
+  workflowTone,
+} from './utils/display'
+import { buildHybridRanking } from './utils/hybridRanking'
 import type {
   BrainstormBackendStatus,
   BrainstormEnhancement,
 } from './utils/brainstormApi'
-
-type AppPage = 'finder' | 'new-finding' | 'brain-storm'
-type SearchMode = 'semantic' | 'keyword'
-type SemanticStatus = 'idle' | 'checking' | 'ready' | 'searching' | 'offline' | 'error'
-type BrainstormStatus = 'idle' | 'searching' | 'ready' | 'error'
-
-interface SemanticResult {
-  id: string
-  score: number
-  title?: string
-}
-
-interface GitHubWorkflowRun {
-  id: number
-  html_url: string
-  status: string
-  conclusion: string | null
-  created_at: string
-  updated_at: string
-  display_title: string
-  event: string
-  run_number: number
-}
-
-interface BrainstormRelatedPaper {
-  paper: PaperCatalogIndexRecord
-  score: number
-}
-
-interface DiscoveryTimelineItem {
-  id: string
-  kind: 'workflow' | 'snapshot' | 'paper'
-  title: string
-  detail: string
-  timestamp: string
-  tone: 'good' | 'active' | 'muted' | 'bad'
-  href?: string
-}
-
-interface DiscoveryEvidenceCard {
-  id: string
-  title: string
-  paperTitle: string
-  platform: string
-  snippet: string
-  timestamp: string
-  href: string
-  tone: 'good' | 'active'
-}
-
-const pageTabs: Array<{ key: AppPage; label: string; blurb: string }> = [
-  {
-    key: 'finder',
-    label: 'Home',
-    blurb: 'Search official and unofficial 2026 papers.',
-  },
-  {
-    key: 'new-finding',
-    label: 'New Finding',
-    blurb: 'Monitor the social-media discovery pipeline.',
-  },
-  {
-    key: 'brain-storm',
-    label: 'Brain Storm',
-    blurb: 'Shape new paper ideas with semantic retrieval.',
-  },
-]
-
-const categoryLabels: Record<CategoryKey, string> = {
-  'evaluation-benchmarks': 'Evaluation',
-  reasoning: 'Reasoning',
-  'rl-post-training': 'RL / Post-training',
-  'agents-tool-use': 'Agent / Tool Use',
-  'rag-knowledge': 'RAG / Knowledge',
-  'alignment-safety': 'Alignment / Safety',
-  'efficiency-systems': 'Efficiency / Systems',
-  'coding-formal-tasks': 'Coding / Formal',
-  'mllm-foundations': 'MLLM Foundations',
-  'vlm-understanding': 'VLM Understanding',
-  'video-understanding': 'Video Understanding',
-  'audio-speech': 'Audio / Speech',
-  'three-d-world-modeling': '3D / World Model',
-  'vla-embodied-learning': 'VLA / Embodied',
-  'robotics-planning': 'Robotics / Planning',
-  'scientific-discovery': 'Scientific Discovery',
-  'data-synthesis-curation': 'Data / Curation',
-  'multimodal-generation': 'Multimodal Generation',
-}
-
-const guideLabels = [
-  ['motivation', 'Research Motivation'],
-  ['problem', 'Problem'],
-  ['analysis', 'Analysis'],
-  ['method', 'Method'],
-  ['experiment', 'Data & Experiments'],
-  ['contribution', 'Contribution'],
-] as const
 
 const activePage = ref<AppPage>(resolvePageFromHash())
 
@@ -125,18 +48,6 @@ const currentPage = ref(1)
 const selectedVenueYears = ref(new Set<string>())
 const selectedCategories = ref(new Set<CategoryKey>())
 const openSections = ref(new Set<string>())
-
-const paperCatalog = ref<PaperCatalogIndexRecord[]>([])
-const isLoadingPapers = ref(true)
-const loadError = ref('')
-const catalogUpdatedAt = ref('')
-const catalogRequestId = ref(0)
-
-const detailRequestId = ref(0)
-const detailShardCache = new Map<string, Promise<PaperCatalogShardPayload>>()
-const abstractShardCache = new Map<string, Promise<PaperAbstractPayload>>()
-const detailedPapers = ref<Record<string, PaperRecord>>({})
-const abstractLoadState = ref<Record<string, 'idle' | 'loading' | 'ready' | 'error'>>({})
 
 const semanticApiBase = import.meta.env.PROD
   ? '/api/semantic'
@@ -155,12 +66,6 @@ const semanticProgress = ref<BrowserSemanticProgress | null>(null)
 const semanticRequestId = ref(0)
 let detachSemanticProgress: (() => void) | undefined
 
-const unofficialStore = ref<UnofficialPaperStorePayload | null>(null)
-const unofficialLoading = ref(true)
-const unofficialError = ref('')
-const workflowRuns = ref<GitHubWorkflowRun[]>([])
-const workflowLoading = ref(false)
-const workflowError = ref('')
 let workflowIntervalId: number | undefined
 
 const brainstormDraft = reactive<BrainstormDraft>({
@@ -179,7 +84,31 @@ const brainstormBackendLoading = ref(false)
 const brainstormRequestedModel = ref('')
 const brainstormEnhancing = ref(false)
 
-const { query, outcome } = usePaperSearch(
+const {
+  paperCatalog,
+  isLoadingPapers,
+  loadError,
+  catalogUpdatedAt,
+  loadPaperCatalog,
+  ensurePaperDetailsLoaded,
+  ensurePaperAbstractLoaded,
+  getPaperDetail,
+  getAbstractCopy,
+  buildBibtexForView,
+} = usePaperCatalogData(dataBaseUrl, maxResults)
+
+const {
+  unofficialStore,
+  unofficialLoading,
+  unofficialError,
+  workflowRuns,
+  workflowLoading,
+  workflowError,
+  loadUnofficialStore,
+  loadDiscoveryRuns,
+} = useDiscoveryFeed(dataBaseUrl)
+
+const { query, outcome, searchLexical } = usePaperSearch(
   paperCatalog as unknown as import('vue').Ref<PaperRecord[]>,
 )
 
@@ -361,14 +290,17 @@ const discoveryTimeline = computed<DiscoveryTimelineItem[]>(() => {
 
 const latestWorkflowRun = computed(() => workflowRuns.value[0] ?? null)
 
-const paperById = computed(
-  () => new Map(paperCatalog.value.map((paper) => [paper.id, paper])),
+const hybridRanking = computed(() =>
+  buildHybridRanking({
+    papers: paperCatalog.value,
+    semanticResults: semanticResults.value,
+    lexicalResults: outcome.value.lexicalResults,
+    semanticModel: semanticModel.value,
+  }),
 )
 
 const semanticRankedPapers = computed(() =>
-  semanticResults.value
-    .map((result) => paperById.value.get(result.id))
-    .filter((paper): paper is PaperCatalogIndexRecord => Boolean(paper)),
+  hybridRanking.value.papers,
 )
 
 const hasSemanticRanking = computed(
@@ -386,16 +318,7 @@ const rankedPapers = computed<PaperCatalogIndexRecord[]>(() =>
 )
 
 const semanticMatchesById = computed(() =>
-  Object.fromEntries(
-    semanticResults.value.map((result) => [
-      result.id,
-      {
-        score: result.score,
-        exactTitleMatch: false,
-        matchedSignals: [semanticModel.value],
-      },
-    ]),
-  ),
+  hybridRanking.value.matchesById,
 )
 
 const sanitizedMaxResults = computed(() =>
@@ -632,98 +555,6 @@ function syncPageFromHash() {
 
 function navigateToPage(page: AppPage) {
   activePage.value = page
-}
-
-async function loadPaperCatalog() {
-  const requestId = catalogRequestId.value + 1
-  catalogRequestId.value = requestId
-  isLoadingPapers.value = true
-  loadError.value = ''
-
-  try {
-    const response = await fetch(`${dataBaseUrl}data/catalog/index.json`)
-
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`)
-    }
-
-    const payload = (await response.json()) as PaperCatalogIndexPayload
-    const records = Array.isArray(payload) ? payload : payload.papers
-
-    if (!Array.isArray(records)) {
-      throw new Error('Catalog JSON must be an array or an object with papers.')
-    }
-
-    if (catalogRequestId.value !== requestId) {
-      return
-    }
-
-    paperCatalog.value = records
-    catalogUpdatedAt.value = payload.generatedAt ?? ''
-    maxResults.value = Math.min(Math.max(maxResults.value, 100), records.length)
-  } catch (error) {
-    if (catalogRequestId.value !== requestId) {
-      return
-    }
-
-    loadError.value =
-      error instanceof Error ? error.message : 'Could not load paper catalog.'
-  } finally {
-    if (catalogRequestId.value === requestId) {
-      isLoadingPapers.value = false
-    }
-  }
-}
-
-async function loadUnofficialStore() {
-  unofficialLoading.value = true
-  unofficialError.value = ''
-
-  try {
-    const response = await fetch(`${dataBaseUrl}data/unofficial/unofficial-papers.json`, {
-      cache: 'no-store',
-    })
-
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`)
-    }
-
-    unofficialStore.value = (await response.json()) as UnofficialPaperStorePayload
-  } catch (error) {
-    unofficialError.value =
-      error instanceof Error ? error.message : 'Could not load unofficial discovery feed.'
-  } finally {
-    unofficialLoading.value = false
-  }
-}
-
-async function loadDiscoveryRuns() {
-  workflowLoading.value = true
-  workflowError.value = ''
-
-  try {
-    const response = await fetch(
-      'https://api.github.com/repos/AnyaCoder/TopVenuePapers/actions/workflows/discover-unofficial.yml/runs?per_page=5',
-      {
-        cache: 'no-store',
-        headers: {
-          Accept: 'application/vnd.github+json',
-        },
-      },
-    )
-
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`)
-    }
-
-    const payload = (await response.json()) as { workflow_runs?: GitHubWorkflowRun[] }
-    workflowRuns.value = Array.isArray(payload.workflow_runs) ? payload.workflow_runs : []
-  } catch (error) {
-    workflowError.value =
-      error instanceof Error ? error.message : 'Could not load workflow status.'
-  } finally {
-    workflowLoading.value = false
-  }
 }
 
 async function loadBrainstormBackendStatus(force = false) {
@@ -970,6 +801,10 @@ async function runBrainstormSearch() {
 
   try {
     const maxPapersForIdea = clampNumber(brainstormDraft.maxPapers, 1, 20)
+    const lexicalOutcome = searchLexical(
+      composedQuery,
+      Math.min(Math.max(maxPapersForIdea * 8, 40), 160),
+    )
     let related: BrainstormRelatedPaper[] = []
 
     try {
@@ -978,33 +813,45 @@ async function runBrainstormSearch() {
         composedQuery,
         Math.min(Math.max(maxPapersForIdea * 6, 24), 120),
       )
+      const hybrid = buildHybridRanking({
+        papers: paperCatalog.value,
+        semanticResults: semanticHits,
+        lexicalResults: lexicalOutcome.lexicalResults,
+        semanticModel: semanticModel.value,
+      })
 
-      const semanticRelated: BrainstormRelatedPaper[] = []
+      related = hybrid.papers
+        .slice(0, maxPapersForIdea)
+        .map((paper) => {
+          const match = hybrid.matchesById[paper.id]
 
-      for (const item of semanticHits) {
-        const paper = paperById.value.get(item.id)
-
-        if (!paper) {
-          continue
-        }
-
-        semanticRelated.push({
-          paper,
-          score: item.score,
+          return {
+            paper,
+            score: match?.rankScore ?? match?.semanticScore ?? match?.lexicalScore ?? 0,
+            semanticScore: match?.semanticScore,
+            lexicalScore: match?.lexicalScore,
+            signals: match?.matchedSignals ?? [],
+          }
         })
-
-        if (semanticRelated.length >= maxPapersForIdea) {
-          break
-        }
-      }
-
-      related = semanticRelated
     } catch {
-      related = rankPapersByTextQuery(
-        paperCatalog.value,
-        composedQuery,
-        maxPapersForIdea,
-      ).map((paper) => ({ paper, score: 0 }))
+      const lexicalPapers = lexicalOutcome.papers.length > 0
+        ? lexicalOutcome.papers
+        : rankPapersByTextQuery(
+          paperCatalog.value,
+          composedQuery,
+          maxPapersForIdea,
+        )
+
+      related = lexicalPapers.slice(0, maxPapersForIdea).map((paper) => {
+        const match = lexicalOutcome.matchesById[paper.id]
+
+        return {
+          paper: paper as PaperCatalogIndexRecord,
+          score: match?.score ?? 0,
+          lexicalScore: match?.score,
+          signals: match?.matchedSignals ?? [],
+        }
+      })
     }
 
     if (related.length === 0) {
@@ -1175,133 +1022,6 @@ function isSectionOpen(paperId: string, section: string) {
   return openSections.value.has(`${paperId}:${section}`)
 }
 
-async function ensurePaperDetailsLoaded(paperId: string) {
-  if (detailedPapers.value[paperId]) {
-    return
-  }
-
-  const indexPaper = paperCatalog.value.find((paper) => paper.id === paperId)
-
-  if (!indexPaper) {
-    return
-  }
-
-  const requestId = detailRequestId.value + 1
-  detailRequestId.value = requestId
-
-  try {
-    const shard = await loadShard(indexPaper.shardKey)
-
-    if (detailRequestId.value < requestId) {
-      return
-    }
-
-    const detailPaper = shard.papers.find((paper) => paper.id === paperId)
-
-    if (!detailPaper) {
-      return
-    }
-
-    detailedPapers.value = {
-      ...detailedPapers.value,
-      [paperId]: detailPaper,
-    }
-  } catch (error) {
-    console.warn('Failed to load paper details', error)
-  }
-}
-
-async function ensurePaperAbstractLoaded(paperId: string) {
-  const existing = detailedPapers.value[paperId]
-
-  if (existing?.abstract?.trim()) {
-    abstractLoadState.value = {
-      ...abstractLoadState.value,
-      [paperId]: 'ready',
-    }
-    return
-  }
-
-  const indexPaper = paperCatalog.value.find((paper) => paper.id === paperId)
-
-  if (!indexPaper) {
-    return
-  }
-
-  abstractLoadState.value = {
-    ...abstractLoadState.value,
-    [paperId]: 'loading',
-  }
-
-  try {
-    const payload = await loadAbstractShard(indexPaper.shardKey)
-    const match = payload.papers.find((paper) => paper.id === paperId)
-
-    if (!match) {
-      abstractLoadState.value = {
-        ...abstractLoadState.value,
-        [paperId]: 'error',
-      }
-      return
-    }
-
-    detailedPapers.value = {
-      ...detailedPapers.value,
-      [paperId]: {
-        ...(detailedPapers.value[paperId] ?? indexPaper),
-        abstract: match.abstract,
-      } as PaperRecord,
-    }
-
-    abstractLoadState.value = {
-      ...abstractLoadState.value,
-      [paperId]: 'ready',
-    }
-  } catch (error) {
-    console.warn('Failed to load paper abstract', error)
-    abstractLoadState.value = {
-      ...abstractLoadState.value,
-      [paperId]: 'error',
-    }
-  }
-}
-
-async function loadShard(shardKey: string) {
-  let promise = detailShardCache.get(shardKey)
-
-  if (!promise) {
-    promise = fetch(`${dataBaseUrl}data/catalog/shards/${shardKey}.json`)
-      .then(async (response) => {
-        if (!response.ok) {
-          throw new Error(`${response.status} ${response.statusText}`)
-        }
-
-        return (await response.json()) as PaperCatalogShardPayload
-      })
-    detailShardCache.set(shardKey, promise)
-  }
-
-  return promise
-}
-
-async function loadAbstractShard(shardKey: string) {
-  let promise = abstractShardCache.get(shardKey)
-
-  if (!promise) {
-    promise = fetch(`${dataBaseUrl}data/catalog/abstracts/${shardKey}.json`)
-      .then(async (response) => {
-        if (!response.ok) {
-          throw new Error(`${response.status} ${response.statusText}`)
-        }
-
-        return (await response.json()) as PaperAbstractPayload
-      })
-    abstractShardCache.set(shardKey, promise)
-  }
-
-  return promise
-}
-
 function previousPage() {
   currentPage.value = Math.max(1, currentPage.value - 1)
 }
@@ -1340,10 +1060,18 @@ function selectedYearCount(venue: string, years: number[]) {
 
 function formatAffinity(paper: PaperCatalogIndexRecord) {
   if (hasSemanticRanking.value) {
-    const semanticScore = semanticMatchesById.value[paper.id]?.score
+    const match = semanticMatchesById.value[paper.id]
 
-    if (semanticScore !== undefined) {
-      return semanticScore.toFixed(4)
+    if (match?.lexicalScore !== undefined) {
+      return `L${Math.round(match.lexicalScore)}`
+    }
+
+    if (match?.semanticScore !== undefined) {
+      return match.semanticScore.toFixed(4)
+    }
+
+    if (match?.rankScore !== undefined) {
+      return `H${match.rankScore.toFixed(4)}`
     }
   }
 
@@ -1354,170 +1082,6 @@ function formatAffinity(paper: PaperCatalogIndexRecord) {
   }
 
   return Math.min(score / 100, 0.9999).toFixed(4)
-}
-
-function buildBibtex(paper: PaperRecord) {
-  const key = `${paper.authors[0]?.split(' ').at(-1)?.toLowerCase() ?? 'paper'}${paper.year}${paper.id.slice(0, 8)}`
-
-  return `@inproceedings{${key},
-  title={${paper.title}},
-  author={${paper.authors.join(' and ')}},
-  booktitle={${paper.venue}},
-  year={${paper.year}},
-  url={${paper.openreviewUrl}}
-}`
-}
-
-function getPaperDetail(paper: PaperCatalogIndexRecord) {
-  return detailedPapers.value[paper.id] ?? paper
-}
-
-function getAbstractCopy(paper: PaperCatalogIndexRecord) {
-  const abstract = getPaperDetail(paper).abstract?.trim()
-
-  if (abstract) {
-    return abstract
-  }
-
-  const state = abstractLoadState.value[paper.id] ?? 'idle'
-
-  if (state === 'loading') {
-    return 'Loading abstract...'
-  }
-
-  if (state === 'error') {
-    return 'Abstract failed to load. Please try again.'
-  }
-
-  return 'Abstract is available but still loading...'
-}
-
-function buildBibtexForView(paper: PaperCatalogIndexRecord) {
-  return buildBibtex(getPaperDetail(paper))
-}
-
-function formatDateTime(value?: string) {
-  if (!value) {
-    return 'Unknown'
-  }
-
-  const date = new Date(value)
-
-  if (Number.isNaN(date.getTime())) {
-    return value
-  }
-
-  return new Intl.DateTimeFormat('en-GB', {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  }).format(date)
-}
-
-function formatRelativeTime(value?: string) {
-  const date = value ? new Date(value) : null
-
-  if (!date || Number.isNaN(date.getTime())) {
-    return 'Unknown time'
-  }
-
-  const diffMs = Date.now() - date.getTime()
-  const diffMinutes = Math.round(diffMs / 60000)
-
-  if (Math.abs(diffMinutes) < 1) {
-    return 'Just now'
-  }
-
-  if (Math.abs(diffMinutes) < 60) {
-    return `${Math.abs(diffMinutes)} min ${diffMinutes >= 0 ? 'ago' : 'later'}`
-  }
-
-  const diffHours = Math.round(diffMinutes / 60)
-  if (Math.abs(diffHours) < 48) {
-    return `${Math.abs(diffHours)} hr ${diffHours >= 0 ? 'ago' : 'later'}`
-  }
-
-  const diffDays = Math.round(diffHours / 24)
-  return `${Math.abs(diffDays)} day${Math.abs(diffDays) === 1 ? '' : 's'} ${diffDays >= 0 ? 'ago' : 'later'}`
-}
-
-function workflowTone(run: GitHubWorkflowRun | null) {
-  if (!run) {
-    return 'muted'
-  }
-  if (run.status === 'in_progress') {
-    return 'active'
-  }
-  if (run.conclusion === 'success') {
-    return 'good'
-  }
-  if (run.conclusion === 'failure' || run.conclusion === 'cancelled') {
-    return 'bad'
-  }
-  return 'muted'
-}
-
-function humanizeWorkflowStatus(run: GitHubWorkflowRun | null) {
-  if (!run) {
-    return 'No workflow run yet.'
-  }
-
-  if (run.status === 'in_progress') {
-    return 'Running'
-  }
-
-  if (run.conclusion === 'success') {
-    return 'Healthy'
-  }
-
-  if (run.conclusion === 'failure') {
-    return 'Failed'
-  }
-
-  if (run.conclusion === 'cancelled') {
-    return 'Cancelled'
-  }
-
-  return run.status
-}
-
-function humanizePlatform(platform: string) {
-  const normalized = platform.trim().toLowerCase()
-
-  if (normalized === 'x') {
-    return 'X'
-  }
-  if (normalized === 'xiaohongshu') {
-    return 'Xiaohongshu'
-  }
-  if (normalized === 'web') {
-    return 'Web / Homepage'
-  }
-  if (normalized === 'arxiv') {
-    return 'arXiv'
-  }
-
-  return platform
-}
-
-function discoveryTone(entry: UnofficialPaperEntry) {
-  if (entry.status === 'accepted') {
-    return 'good'
-  }
-
-  return 'active'
-}
-
-function topEvidence(entry: UnofficialPaperEntry) {
-  return entry.evidence?.[0] ?? null
-}
-
-function timestampValue(value?: string) {
-  if (!value) {
-    return 0
-  }
-
-  const time = new Date(value).getTime()
-  return Number.isNaN(time) ? 0 : time
 }
 
 function resolveBrainstormBackendMessage(error: unknown) {
@@ -1533,862 +1097,102 @@ function resolveBrainstormBackendMessage(error: unknown) {
 
   return message
 }
-
-function clampNumber(value: number, min: number, max: number) {
-  if (!Number.isFinite(value)) {
-    return min
-  }
-
-  return Math.min(Math.max(Math.trunc(value), min), max)
-}
-
-function resolvePageFromHash(): AppPage {
-  if (typeof window === 'undefined') {
-    return 'finder'
-  }
-
-  const hash = window.location.hash.replace(/^#/, '').trim()
-
-  if (hash === 'new-finding' || hash === 'brain-storm') {
-    return hash
-  }
-
-  return 'finder'
-}
 </script>
 
 <template>
   <main class="app-shell">
-    <header class="topbar">
-      <div class="topbar__inner">
-        <nav class="topbar__nav" aria-label="Primary">
-          <button
-            v-for="tab in pageTabs"
-            :key="tab.key"
-            type="button"
-            class="topbar__tab"
-            :class="{ 'is-active': activePage === tab.key }"
-            @click="navigateToPage(tab.key)"
-          >
-            <span>{{ tab.label }}</span>
-            <small>{{ tab.blurb }}</small>
-          </button>
-        </nav>
+    <TopNavigation
+      :active-page="activePage"
+      :tabs="pageTabs"
+      @navigate="navigateToPage"
+    />
 
-      </div>
-    </header>
+    <FinderPage
+      v-if="activePage === 'finder'"
+      v-model:draft-query="draftQuery"
+      v-model:max-results="maxResults"
+      v-model:per-page="perPage"
+      :paper-count="paperCatalog.length"
+      :guided-paper-count="guidedPaperCount"
+      :catalog-updated-at="catalogUpdatedAt"
+      :is-loading-papers="isLoadingPapers"
+      :load-error="loadError"
+      :search-mode="searchMode"
+      :semantic-status="semanticStatus"
+      :semantic-status-label="semanticStatusLabel"
+      :show-semantic-progress="showSemanticProgress"
+      :semantic-progress-stage-label="semanticProgressStageLabel"
+      :semantic-progress-percent="semanticProgressPercent"
+      :semantic-progress-message="semanticProgressMessage"
+      :active-filter-count="activeFilterCount"
+      :venue-groups="venueGroups"
+      :category-options="categoryOptions"
+      :selected-venue-years="selectedVenueYears"
+      :selected-categories="selectedCategories"
+      :has-semantic-ranking="hasSemanticRanking"
+      :current-page="currentPage"
+      :total-pages="totalPages"
+      :visible-papers="visiblePapers"
+      :selected-year-count="selectedYearCount"
+      :is-section-open="isSectionOpen"
+      :get-paper-detail="getPaperDetail"
+      :get-abstract-copy="getAbstractCopy"
+      :format-affinity="formatAffinity"
+      :build-bibtex-for-view="buildBibtexForView"
+      @export-results="exportResults"
+      @clear-search="clearSearch"
+      @run-search="runSearch"
+      @set-search-mode="setSearchMode"
+      @check-semantic-health="checkSemanticHealth"
+      @toggle-venue-group="toggleVenueGroup"
+      @clear-venue-group="clearVenueGroup"
+      @toggle-venue-year="toggleVenueYear"
+      @toggle-category="toggleCategory"
+      @previous-page="previousPage"
+      @next-page="nextPage"
+      @toggle-section="toggleSection"
+    />
 
-    <section v-if="activePage === 'finder'" class="finder-shell">
-      <header class="finder-hero">
-        <div class="finder-hero__cloud" aria-hidden="true">
-          <span>ICLR</span>
-          <span>CCF-A</span>
-          <span>VLM</span>
-          <span>Agent</span>
-          <span>VLA</span>
-          <span>Reasoning</span>
-          <span>MLLM</span>
-          <span>RAG</span>
-        </div>
+    <NewFindingPage
+      v-else-if="activePage === 'new-finding'"
+      :latest-workflow-run="latestWorkflowRun"
+      :workflow-runs="workflowRuns"
+      :workflow-loading="workflowLoading"
+      :workflow-error="workflowError"
+      :unofficial-store="unofficialStore"
+      :unofficial-loading="unofficialLoading"
+      :unofficial-error="unofficialError"
+      :unofficial-papers="unofficialPapers"
+      :unofficial-accepted-count="unofficialAcceptedCount"
+      :unofficial-candidate-count="unofficialCandidateCount"
+      :unofficial-platform-breakdown="unofficialPlatformBreakdown"
+      :discovery-timeline="discoveryTimeline"
+      :latest-evidence-cards="latestEvidenceCards"
+      :data-base-url="dataBaseUrl"
+    />
 
-        <div class="finder-hero__content">
-          <h1>AI Paper Finder</h1>
-          <p>Discover relevant 2026 AI papers across selected top venues.</p>
-          <div class="finder-hero__meta">
-            <span>CCF-A Papers</span>
-            <a href="https://openreview.net" target="_blank" rel="noreferrer">
-              OpenReview
-            </a>
-            <span>{{ paperCatalog.length }} papers loaded.</span>
-            <span>{{ guidedPaperCount }} with Chinese guides.</span>
-            <span v-if="catalogUpdatedAt">Updated {{ catalogUpdatedAt.slice(0, 10) }}</span>
-          </div>
-        </div>
-      </header>
-
-      <section class="finder-workspace">
-        <aside class="finder-panel finder-panel--search">
-          <div class="panel-heading">
-            <h2>Search</h2>
-            <div class="panel-actions">
-              <button type="button" @click="exportResults">Export Results</button>
-              <button type="button" @click="clearSearch">Clear</button>
-            </div>
-          </div>
-
-          <div class="filter-body">
-            <div v-if="isLoadingPapers" class="catalog-status">
-              Loading lazy paper catalog...
-            </div>
-            <div v-else-if="loadError" class="catalog-status catalog-status--error">
-              Catalog failed to load: {{ loadError }}
-            </div>
-
-            <label class="field-block">
-              <span>Query (best: paste an abstract)</span>
-              <textarea
-                v-model="draftQuery"
-                rows="5"
-                placeholder="vlm, video, embodied agent, long-context reasoning..."
-                @keydown.ctrl.enter.prevent="runSearch"
-              />
-            </label>
-
-            <div class="semantic-controls">
-              <button
-                type="button"
-                :class="{ 'is-active': searchMode === 'semantic' }"
-                @click="setSearchMode('semantic')"
-              >
-                Semantic local
-              </button>
-              <button
-                type="button"
-                :class="{ 'is-active': searchMode === 'keyword' }"
-                @click="setSearchMode('keyword')"
-              >
-                Keyword / fuzzy
-              </button>
-              <button type="button" @click="checkSemanticHealth">
-                Check model
-              </button>
-            </div>
-
-            <p
-              class="semantic-hint"
-              :class="{ 'semantic-hint--error': semanticStatus === 'error' }"
-            >
-              {{ semanticStatusLabel }}
-            </p>
-
-            <div v-if="showSemanticProgress" class="semantic-progress-card">
-              <div class="semantic-progress-card__top">
-                <strong>{{ semanticProgressStageLabel }}</strong>
-                <span v-if="semanticProgressPercent !== null">{{ semanticProgressPercent }}%</span>
-              </div>
-              <div class="semantic-progress-bar" aria-hidden="true">
-                <div
-                  class="semantic-progress-bar__fill"
-                  :style="{ width: `${semanticProgressPercent ?? 12}%` }"
-                />
-              </div>
-              <p class="semantic-progress-card__copy">
-                {{ semanticProgressMessage }}
-              </p>
-            </div>
-
-            <div class="compact-grid">
-              <label class="field-block">
-                <span>Number of results</span>
-                <input v-model.number="maxResults" type="number" min="1" />
-              </label>
-              <label class="field-block">
-                <span>Per page</span>
-                <input v-model.number="perPage" type="number" min="1" max="50" />
-              </label>
-              <button
-                class="primary-action"
-                type="button"
-                :disabled="semanticStatus === 'searching'"
-                @click="runSearch"
-              >
-                {{ semanticStatus === 'searching' ? 'Searching...' : 'Search' }}
-              </button>
-            </div>
-
-            <div class="filter-section">
-              <div class="filter-section__heading">
-                <h3>Select Venues & Years</h3>
-                <span>{{ activeFilterCount }} active</span>
-              </div>
-
-              <div class="venue-list">
-                <article
-                  v-for="group in venueGroups"
-                  :key="group.venue"
-                  class="venue-row"
-                >
-                  <div class="venue-row__top">
-                    <strong>{{ group.venue }}</strong>
-                    <span>
-                      {{ selectedYearCount(group.venue, group.years.map((item) => item.value)) }}/{{
-                        group.years.length
-                      }}
-                      selected
-                    </span>
-                    <button
-                      type="button"
-                      @click="toggleVenueGroup(group.venue, group.years.map((item) => item.value))"
-                    >
-                      Select all years
-                    </button>
-                    <button
-                      type="button"
-                      @click="clearVenueGroup(group.venue, group.years.map((item) => item.value))"
-                    >
-                      Clear
-                    </button>
-                  </div>
-                  <div class="year-pills">
-                    <button
-                      v-for="year in group.years"
-                      :key="year.value"
-                      type="button"
-                      :class="{
-                        'is-active': selectedVenueYears.has(`${group.venue}:${year.value}`),
-                      }"
-                      @click="toggleVenueYear(group.venue, year.value)"
-                    >
-                      {{ year.value }} ({{ year.count }})
-                    </button>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <div class="filter-section">
-              <div class="filter-section__heading">
-                <h3>Subfields</h3>
-                <span>{{ selectedCategories.size }} selected</span>
-              </div>
-              <div class="category-filter-list">
-                <button
-                  v-for="category in categoryOptions"
-                  :key="category.key"
-                  type="button"
-                  :class="{ 'is-active': selectedCategories.has(category.key) }"
-                  @click="toggleCategory(category.key)"
-                >
-                  <span>{{ category.label }}</span>
-                  <small>{{ category.count }}</small>
-                </button>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <section class="finder-panel finder-panel--results">
-          <div class="results-heading">
-            <h2>
-              Results
-              <small>{{ hasSemanticRanking ? 'Semantic ranking' : 'Keyword ranking' }}</small>
-            </h2>
-            <div class="pager">
-              <button
-                type="button"
-                :disabled="currentPage === 1"
-                @click="previousPage"
-              >
-                Previous
-              </button>
-              <strong>Page {{ currentPage }} / {{ totalPages }}</strong>
-              <button
-                type="button"
-                :disabled="currentPage === totalPages"
-                @click="nextPage"
-              >
-                Next
-              </button>
-            </div>
-          </div>
-
-          <div class="results-list" aria-live="polite">
-            <article
-              v-for="paper in visiblePapers"
-              :key="paper.id"
-              class="result-card"
-            >
-              <div class="result-card__main">
-                <div class="result-card__titleline">
-                  <span class="venue-chip">{{ getVenueBadge(paper) }}</span>
-                  <div class="result-card__titlegroup">
-                    <h3>{{ paper.title }}</h3>
-                    <p class="result-card__meta">
-                      <span>{{ paper.venue }}</span>
-                      <span v-if="paper.track">{{ paper.track }}</span>
-                    </p>
-                  </div>
-                </div>
-                <p v-if="paper.titleZh" class="result-card__zh">
-                  {{ paper.titleZh }}
-                </p>
-                <p class="result-card__authors">
-                  <strong>Authors:</strong> {{ paper.authors.join(', ') }}
-                </p>
-                <p class="result-card__score">
-                  <strong>{{ hasSemanticRanking ? 'Semantic Score:' : 'Affinity Score:' }}</strong>
-                  {{ formatAffinity(paper) }}
-                </p>
-                <p v-if="paper.hookZh" class="result-card__hook">{{ paper.hookZh }}</p>
-                <p v-else class="result-card__hook">
-                  Metadata collected. Chinese guide is pending.
-                </p>
-              </div>
-
-              <a
-                class="open-link"
-                :href="paper.openreviewUrl"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open
-                <br />
-                Link
-              </a>
-
-              <div class="result-card__details">
-                <button type="button" @click="toggleSection(paper.id, 'abstract')">
-                  <span>{{ isSectionOpen(paper.id, 'abstract') ? '▾' : '▸' }}</span>
-                  Show Abstract
-                </button>
-                <p v-if="isSectionOpen(paper.id, 'abstract')" class="detail-copy">
-                  {{ getAbstractCopy(paper) }}
-                </p>
-
-                <button type="button" @click="toggleSection(paper.id, 'guide')">
-                  <span>{{ isSectionOpen(paper.id, 'guide') ? '▾' : '▸' }}</span>
-                  {{ paper.hasIntroZh ? 'Show Chinese Guide' : 'Chinese Guide Pending' }}
-                </button>
-                <div
-                  v-if="isSectionOpen(paper.id, 'guide') && getPaperDetail(paper).introZh"
-                  class="guide-grid"
-                >
-                  <article
-                    v-for="[key, label] in guideLabels"
-                    :key="key"
-                    class="guide-cell"
-                  >
-                    <strong>{{ label }}</strong>
-                    <p>{{ getPaperDetail(paper).introZh?.[key] }}</p>
-                  </article>
-                </div>
-                <p
-                  v-else-if="isSectionOpen(paper.id, 'guide')"
-                  class="detail-copy"
-                >
-                  This paper is already indexed. The six-dimension Chinese guide can be generated later.
-                </p>
-
-                <button type="button" @click="toggleSection(paper.id, 'bibtex')">
-                  <span>{{ isSectionOpen(paper.id, 'bibtex') ? '▾' : '▸' }}</span>
-                  Show BibTeX
-                </button>
-                <pre v-if="isSectionOpen(paper.id, 'bibtex')" class="bibtex">{{
-                  buildBibtexForView(paper)
-                }}</pre>
-              </div>
-            </article>
-
-            <article v-if="visiblePapers.length === 0" class="empty-results">
-              <h3>No matching papers</h3>
-              <p>Try a broader query, clear a venue filter, or remove a subfield.</p>
-            </article>
-          </div>
-        </section>
-      </section>
-    </section>
-
-    <section v-else-if="activePage === 'new-finding'" class="page-shell">
-      <header class="page-hero page-hero--dashboard">
-        <div class="page-hero__content">
-          <p class="page-hero__eyebrow">Daily Social Discovery</p>
-          <h1>New Finding</h1>
-          <p>
-            Track the scheduled Zhipu-based discovery job that scans X, Xiaohongshu,
-            and personal homepages for fresh 2026 paper announcements.
-          </p>
-        </div>
-        <div class="page-hero__meta-grid">
-          <article class="hero-stat-card" :data-tone="workflowTone(latestWorkflowRun)">
-            <span>Workflow</span>
-            <strong>{{ humanizeWorkflowStatus(latestWorkflowRun) }}</strong>
-            <small>
-              {{ latestWorkflowRun ? formatDateTime(latestWorkflowRun.updated_at) : 'Waiting for the first run.' }}
-            </small>
-          </article>
-          <article class="hero-stat-card" data-tone="good">
-            <span>Unofficial Queue</span>
-            <strong>{{ unofficialPapers.length }}</strong>
-            <small>{{ unofficialAcceptedCount }} accepted-signal, {{ unofficialCandidateCount }} candidate</small>
-          </article>
-          <article class="hero-stat-card" data-tone="active">
-            <span>Schedule</span>
-            <strong>09:15 CST daily</strong>
-            <small>GitHub Actions workflow with concurrency protection.</small>
-          </article>
-        </div>
-      </header>
-
-      <section class="page-grid page-grid--dashboard">
-        <article class="page-card">
-          <div class="page-card__head">
-            <h2>Pipeline Status</h2>
-            <a
-              class="text-link"
-              href="https://github.com/AnyaCoder/TopVenuePapers/actions/workflows/discover-unofficial.yml"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open Actions
-            </a>
-          </div>
-
-          <div v-if="workflowLoading" class="empty-state">
-            Loading workflow status...
-          </div>
-          <div v-else-if="workflowError" class="empty-state empty-state--error">
-            {{ workflowError }}
-          </div>
-          <div v-else class="run-list">
-            <article
-              v-for="run in workflowRuns"
-              :key="run.id"
-              class="run-card"
-              :data-tone="workflowTone(run)"
-            >
-              <div class="run-card__top">
-                <strong>{{ run.display_title }}</strong>
-                <span class="status-pill" :data-tone="workflowTone(run)">
-                  {{ humanizeWorkflowStatus(run) }}
-                </span>
-              </div>
-              <p>
-                Run #{{ run.run_number }} · {{ run.event }} · Updated {{ formatDateTime(run.updated_at) }}
-              </p>
-              <a :href="run.html_url" target="_blank" rel="noreferrer">Open run</a>
-            </article>
-          </div>
-        </article>
-
-        <article class="page-card">
-          <div class="page-card__head">
-            <h2>Source Breakdown</h2>
-            <a
-              class="text-link"
-              :href="`${dataBaseUrl}data/unofficial/unofficial-papers.json`"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Raw JSON
-            </a>
-          </div>
-
-          <div v-if="unofficialLoading" class="empty-state">
-            Loading unofficial discovery queue...
-          </div>
-          <div v-else-if="unofficialError" class="empty-state empty-state--error">
-            {{ unofficialError }}
-          </div>
-          <div v-else class="source-breakdown">
-            <div class="feed-summary__row">
-              <span>Last generated</span>
-              <strong>{{ formatDateTime(unofficialStore?.generatedAt) }}</strong>
-            </div>
-            <div class="feed-summary__row">
-              <span>Platform spread</span>
-              <div class="tag-row">
-                <span
-                  v-for="item in unofficialPlatformBreakdown"
-                  :key="item.platform"
-                  class="tag"
-                >
-                  {{ item.platform }} · {{ item.count }}
-                </span>
-                <span v-if="unofficialPlatformBreakdown.length === 0" class="tag">No platform hits yet</span>
-              </div>
-            </div>
-            <div v-if="unofficialPlatformBreakdown.length > 0" class="source-breakdown__list">
-              <article
-                v-for="item in unofficialPlatformBreakdown"
-                :key="`breakdown:${item.platform}`"
-                class="source-breakdown__item"
-              >
-                <div class="source-breakdown__head">
-                  <strong>{{ item.platform }}</strong>
-                  <span>{{ item.count }}</span>
-                </div>
-                <div class="source-breakdown__bar" aria-hidden="true">
-                  <div
-                    class="source-breakdown__fill"
-                    :style="{ width: `${(item.count / (unofficialPlatformBreakdown[0]?.count || 1)) * 100}%` }"
-                  />
-                </div>
-              </article>
-            </div>
-            <div class="feed-summary__row">
-              <span>Notes</span>
-              <ul class="notes-list">
-                <li v-for="note in unofficialStore?.notes ?? []" :key="note">{{ note }}</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="page-card page-card--wide">
-          <div class="page-card__head">
-            <h2>Discovered Papers</h2>
-            <span>{{ unofficialPapers.length }} items</span>
-          </div>
-
-          <div v-if="!unofficialLoading && unofficialPapers.length === 0" class="empty-state">
-            No unofficial papers are waiting in the queue right now.
-          </div>
-          <div v-else class="discovery-list">
-            <article
-              v-for="entry in unofficialPapers"
-              :key="entry.id"
-              class="discovery-card"
-            >
-              <div class="discovery-card__top">
-                <div>
-                  <div class="discovery-card__badges">
-                    <span class="status-pill" :data-tone="discoveryTone(entry)">
-                      {{ entry.status === 'accepted' ? 'Accepted signal' : 'Candidate signal' }}
-                    </span>
-                    <span class="status-pill" data-tone="muted">
-                      {{ entry.acceptedVenue || 'Unclassified' }}
-                    </span>
-                    <span class="status-pill" data-tone="muted">
-                      {{ entry.confidence ? `${Math.round(entry.confidence * 100)}% confidence` : 'No confidence score' }}
-                    </span>
-                  </div>
-                  <h3>{{ entry.title }}</h3>
-                  <p v-if="entry.titleZh" class="muted-copy">{{ entry.titleZh }}</p>
-                </div>
-                <a :href="entry.primaryUrl" target="_blank" rel="noreferrer">Open source</a>
-              </div>
-
-              <p class="discovery-card__summary">
-                {{ entry.summary || entry.reason || 'No summary yet.' }}
-              </p>
-
-              <div class="tag-row">
-                <span v-for="platform in entry.platforms ?? []" :key="platform" class="tag">
-                  {{ humanizePlatform(platform) }}
-                </span>
-                <span v-for="keyword in (entry.keywords ?? []).slice(0, 5)" :key="keyword" class="tag">
-                  {{ keyword }}
-                </span>
-              </div>
-
-              <div class="discovery-card__foot">
-                <span>Discovered {{ formatDateTime(entry.discoveredAt) }}</span>
-                <span v-if="topEvidence(entry)">
-                  Evidence: {{ topEvidence(entry)?.title || topEvidence(entry)?.readerTitle || humanizePlatform(topEvidence(entry)?.platform || 'web') }}
-                </span>
-              </div>
-            </article>
-          </div>
-        </article>
-
-        <article class="page-card page-card--wide">
-          <div class="page-card__head">
-            <h2>Live Timeline</h2>
-            <span>{{ discoveryTimeline.length }} events</span>
-          </div>
-
-          <div v-if="discoveryTimeline.length === 0" class="empty-state">
-            Timeline events will appear here after the crawler starts producing snapshots.
-          </div>
-          <div v-else class="timeline-list">
-            <article
-              v-for="item in discoveryTimeline"
-              :key="item.id"
-              class="timeline-card"
-              :data-tone="item.tone"
-            >
-              <div class="timeline-card__dot" aria-hidden="true" />
-              <div class="timeline-card__body">
-                <div class="timeline-card__head">
-                  <strong>{{ item.title }}</strong>
-                  <span>{{ formatRelativeTime(item.timestamp) }}</span>
-                </div>
-                <p>{{ item.detail }}</p>
-                <div class="timeline-card__meta">
-                  <span>{{ formatDateTime(item.timestamp) }}</span>
-                  <a v-if="item.href" :href="item.href" target="_blank" rel="noreferrer">
-                    Open
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </article>
-
-        <article class="page-card page-card--wide">
-          <div class="page-card__head">
-            <h2>Latest Evidence</h2>
-            <span>{{ latestEvidenceCards.length }} cards</span>
-          </div>
-
-          <div v-if="latestEvidenceCards.length === 0" class="empty-state">
-            Evidence cards will show the strongest snippets from X, Xiaohongshu, or homepages once discovered.
-          </div>
-          <div v-else class="evidence-list">
-            <article
-              v-for="card in latestEvidenceCards"
-              :key="card.id"
-              class="evidence-card"
-              :data-tone="card.tone"
-            >
-              <div class="evidence-card__head">
-                <span class="status-pill" :data-tone="card.tone">{{ card.platform }}</span>
-                <span>{{ formatRelativeTime(card.timestamp) }}</span>
-              </div>
-              <h3>{{ card.title }}</h3>
-              <p class="muted-copy">{{ card.paperTitle }}</p>
-              <p class="evidence-card__snippet">{{ card.snippet }}</p>
-              <a :href="card.href" target="_blank" rel="noreferrer">Open evidence</a>
-            </article>
-          </div>
-        </article>
-      </section>
-    </section>
-
-    <section v-else class="page-shell">
-      <header class="page-hero page-hero--idea">
-        <div class="page-hero__content">
-          <p class="page-hero__eyebrow">Semantic Ideation Copilot</p>
-          <h1>Brain Storm</h1>
-          <p>
-            Write the background, the rough idea, and your constraints. The page pulls
-            semantically related papers first, then can refine the research plan with Zhipu.
-          </p>
-        </div>
-        <div class="page-hero__meta-grid">
-          <article class="hero-stat-card" data-tone="good">
-            <span>Semantic Engine</span>
-            <strong>{{ semanticModel }}</strong>
-            <small>{{ semanticPaperCount || paperCatalog.length }} indexed papers</small>
-          </article>
-          <article class="hero-stat-card" data-tone="active">
-            <span>Max Related Papers</span>
-            <strong>{{ clampNumber(brainstormDraft.maxPapers, 1, 20) }}</strong>
-            <small>Adjust how many references guide the idea.</small>
-          </article>
-          <article class="hero-stat-card" data-tone="muted">
-            <span>Secure AI Refinement</span>
-            <strong>{{ brainstormEnhancementStateLabel }}</strong>
-            <small>{{ brainstormBackendAvailable ? brainstormModelLabel : 'Backend not enabled on this deployment.' }}</small>
-          </article>
-        </div>
-      </header>
-
-      <section class="page-grid page-grid--idea">
-        <article class="page-card page-card--sticky">
-          <div class="page-card__head">
-            <h2>Idea Input</h2>
-            <div class="header-actions">
-              <button type="button" class="quiet-button" @click="loadBrainstormBackendStatus(true)">
-                Refresh backend
-              </button>
-              <button type="button" class="quiet-button" @click="resetBrainstorm">
-                Reset
-              </button>
-            </div>
-          </div>
-
-          <div class="form-stack">
-            <label class="field-block">
-              <span>Problem background</span>
-              <textarea
-                v-model="brainstormDraft.background"
-                rows="5"
-                placeholder="What setting, failure case, or user need are you trying to address?"
-              />
-            </label>
-
-            <label class="field-block">
-              <span>Core idea</span>
-              <textarea
-                v-model="brainstormDraft.idea"
-                rows="6"
-                placeholder="Describe the method intuition, architecture sketch, or hypothesis."
-              />
-            </label>
-
-            <label class="field-block">
-              <span>Constraints / desired properties</span>
-              <textarea
-                v-model="brainstormDraft.constraints"
-                rows="4"
-                placeholder="Latency, data limits, benchmark preference, interpretability, deployment, and so on."
-              />
-            </label>
-
-            <label class="field-block">
-              <span>Maximum related papers</span>
-              <input v-model.number="brainstormDraft.maxPapers" type="number" min="1" max="20" />
-            </label>
-
-            <div class="action-row">
-              <button
-                type="button"
-                class="primary-action"
-                :disabled="brainstormStatus === 'searching'"
-                @click="runBrainstormSearch"
-              >
-                {{ brainstormStatus === 'searching' ? 'Scanning papers...' : 'Find related papers' }}
-              </button>
-            </div>
-
-            <div class="brainstorm-enhance">
-              <div class="brainstorm-enhance__head">
-                <h3>Secure AI Refinement</h3>
-                <span>{{ brainstormEnhancementStateLabel }}</span>
-              </div>
-              <p class="muted-copy">
-                {{ brainstormBackendMessage }}
-              </p>
-              <label class="field-block">
-                <span>Preferred model (optional)</span>
-                <input
-                  v-model="brainstormRequestedModel"
-                  type="text"
-                  placeholder="glm-4.5-flash"
-                />
-              </label>
-              <button
-                type="button"
-                class="secondary-action"
-                :disabled="brainstormEnhancing || !brainstormBackendAvailable"
-                @click="runBrainstormEnhancement"
-              >
-                {{ brainstormEnhancing ? 'Enhancing...' : 'Refine with Zhipu' }}
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <section class="idea-output">
-          <article class="page-card">
-            <div class="page-card__head">
-              <h2>Drafted Research Plan</h2>
-              <span>{{ brainstormResults.length }} related papers</span>
-            </div>
-
-            <div v-if="brainstormStatus === 'idle'" class="empty-state">
-              Start with a background and idea sketch. The page will run semantic search first.
-            </div>
-            <div v-else-if="brainstormStatus === 'error'" class="empty-state empty-state--error">
-              {{ brainstormError }}
-            </div>
-            <div v-else-if="brainstormPlan" class="plan-grid">
-              <article class="plan-card">
-                <h3>Positioning</h3>
-                <ul>
-                  <li v-for="item in brainstormPlan.positioning" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-
-              <article class="plan-card">
-                <h3>Method Blueprint</h3>
-                <ul>
-                  <li v-for="item in brainstormPlan.methodBlueprint" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-
-              <article class="plan-card">
-                <h3>Evaluation Plan</h3>
-                <ul>
-                  <li v-for="item in brainstormPlan.evaluationPlan" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-
-              <article class="plan-card">
-                <h3>Novelty Angles</h3>
-                <ul>
-                  <li v-for="item in brainstormPlan.noveltyAngles" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-            </div>
-          </article>
-
-          <article v-if="brainstormEnhancement" class="page-card">
-            <div class="page-card__head">
-              <h2>Zhipu Refined Outline</h2>
-              <span>{{ brainstormModelLabel }}</span>
-            </div>
-
-            <div class="plan-grid">
-              <article class="plan-card plan-card--wide">
-                <h3>Refined Problem</h3>
-                <p>{{ brainstormEnhancement.refinedProblem }}</p>
-              </article>
-              <article class="plan-card">
-                <h3>Method Modules</h3>
-                <ul>
-                  <li v-for="item in brainstormEnhancement.methodModules" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-              <article class="plan-card">
-                <h3>Experiment Plan</h3>
-                <ul>
-                  <li v-for="item in brainstormEnhancement.experimentPlan" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-              <article class="plan-card">
-                <h3>Novelty Angles</h3>
-                <ul>
-                  <li v-for="item in brainstormEnhancement.noveltyAngles" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-              <article class="plan-card">
-                <h3>Risks</h3>
-                <ul>
-                  <li v-for="item in brainstormEnhancement.risks" :key="item">{{ item }}</li>
-                </ul>
-              </article>
-            </div>
-          </article>
-
-          <article class="page-card">
-            <div class="page-card__head">
-              <h2>Related Papers</h2>
-              <span>{{ brainstormResults.length }} matches</span>
-            </div>
-
-            <div v-if="brainstormResults.length === 0" class="empty-state">
-              Related papers will appear here after semantic retrieval.
-            </div>
-            <div v-else class="brainstorm-paper-list">
-              <article
-                v-for="item in brainstormResults"
-                :key="item.paper.id"
-                class="brainstorm-paper-card"
-              >
-                <div class="brainstorm-paper-card__top">
-                  <span class="venue-chip">{{ getVenueBadge(item.paper) }}</span>
-                  <div>
-                    <h3>{{ item.paper.title }}</h3>
-                    <p class="muted-copy">
-                      {{ item.paper.authors.join(', ') }}
-                    </p>
-                  </div>
-                  <span v-if="item.score !== undefined" class="score-chip">
-                    {{ item.score.toFixed(4) }}
-                  </span>
-                </div>
-                <p class="brainstorm-paper-card__abstract">
-                  {{ getPaperDetail(item.paper).abstract || item.paper.hookZh || 'Abstract will load on demand.' }}
-                </p>
-                <div class="tag-row">
-                  <span
-                    v-for="keyword in item.paper.keywords.slice(0, 6)"
-                    :key="keyword"
-                    class="tag"
-                  >
-                    {{ keyword }}
-                  </span>
-                </div>
-                <a :href="item.paper.openreviewUrl" target="_blank" rel="noreferrer">
-                  Open paper
-                </a>
-              </article>
-            </div>
-          </article>
-        </section>
-      </section>
-    </section>
+    <BrainStormPage
+      v-else
+      v-model:requested-model="brainstormRequestedModel"
+      :semantic-model="semanticModel"
+      :semantic-paper-count="semanticPaperCount"
+      :paper-count="paperCatalog.length"
+      :brainstorm-draft="brainstormDraft"
+      :brainstorm-status="brainstormStatus"
+      :brainstorm-error="brainstormError"
+      :brainstorm-results="brainstormResults"
+      :brainstorm-plan="brainstormPlan"
+      :brainstorm-enhancement="brainstormEnhancement"
+      :brainstorm-backend-available="brainstormBackendAvailable"
+      :brainstorm-backend-message="brainstormBackendMessage"
+      :brainstorm-enhancement-state-label="brainstormEnhancementStateLabel"
+      :brainstorm-model-label="brainstormModelLabel"
+      :brainstorm-enhancing="brainstormEnhancing"
+      :get-paper-detail="getPaperDetail"
+      @refresh-backend="loadBrainstormBackendStatus(true)"
+      @reset="resetBrainstorm"
+      @search="runBrainstormSearch"
+      @enhance="runBrainstormEnhancement"
+    />
   </main>
 </template>

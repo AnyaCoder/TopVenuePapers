@@ -2,7 +2,7 @@ export function normalizeText(value: string) {
   return value
     .toLowerCase()
     .normalize('NFKC')
-    .replace(/[’']/g, '')
+    .replace(/[\u2019'`]/g, '')
     .replace(/[^\p{L}\p{N}\s-]+/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim()

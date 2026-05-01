@@ -1,0 +1,322 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 18px 24px 0;
+  backdrop-filter: blur(16px);
+}
+
+.topbar__inner {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  align-items: center;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  border: 1px solid rgba(26, 40, 54, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 251, 244, 0.82);
+  box-shadow: 0 18px 48px rgba(18, 28, 40, 0.08);
+}
+
+.topbar__eyebrow,
+.page-hero__eyebrow {
+  color: #74839a;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.topbar__nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.topbar__tab {
+  display: grid;
+  gap: 2px;
+  min-width: 170px;
+  padding: 10px 14px;
+  border: 1px solid rgba(26, 40, 54, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.75);
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.topbar__tab span {
+  color: #1b2d43;
+  font-weight: 800;
+}
+
+.topbar__tab small {
+  color: #7a8798;
+  font-size: 0.84rem;
+}
+
+.topbar__tab:hover,
+.topbar__tab.is-active {
+  border-color: rgba(35, 75, 130, 0.28);
+  background: linear-gradient(180deg, rgba(232, 239, 246, 0.96), rgba(250, 246, 239, 0.92));
+  transform: translateY(-1px);
+}
+
+.finder-shell {
+  min-height: 100vh;
+}
+
+.finder-hero,
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  max-width: 1480px;
+  margin: 22px auto 0;
+  border: 1px solid rgba(34, 48, 68, 0.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(90deg, rgba(248, 244, 236, 0.92), rgba(227, 236, 245, 0.88)),
+    #eef1f2;
+  box-shadow: 0 24px 70px rgba(27, 34, 47, 0.08);
+}
+
+.finder-hero {
+  min-height: 190px;
+  padding: 30px 32px 28px;
+}
+
+.finder-hero::after,
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 250, 242, 0.44);
+  pointer-events: none;
+}
+
+.finder-hero__cloud {
+  position: absolute;
+  inset: -34px -10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 4px 24px;
+  color: rgba(31, 57, 93, 0.13);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 800;
+  line-height: 0.86;
+  transform: rotate(-1deg);
+  user-select: none;
+}
+
+.finder-hero__cloud span:nth-child(2n) {
+  color: rgba(74, 108, 93, 0.14);
+}
+
+.finder-hero__cloud span:nth-child(3n) {
+  color: rgba(159, 107, 55, 0.14);
+}
+
+.finder-hero__content,
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+}
+
+.finder-hero h1,
+.page-hero h1 {
+  margin: 0;
+  color: #182436;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.finder-hero p,
+.page-hero p {
+  margin: 18px 0 0;
+  color: #59677b;
+  font-size: 1.16rem;
+}
+
+.finder-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  color: #4d5b70;
+  font-size: 1.05rem;
+}
+
+.finder-hero__meta a,
+.finder-hero__meta span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.finder-hero__meta a,
+.text-link {
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(31, 57, 93, 0.2);
+  border-radius: 999px;
+  color: #234b82;
+  text-decoration: none;
+  background: rgba(255, 253, 248, 0.58);
+}
+
+.page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 22px;
+  padding: 28px 30px;
+}
+
+.page-hero__meta-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+}
+
+.hero-stat-card {
+  padding: 16px 18px;
+  border: 1px solid rgba(26, 40, 54, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.84);
+}
+
+.hero-stat-card span {
+  display: block;
+  color: #6f7b8d;
+  font-size: 0.86rem;
+}
+
+.hero-stat-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #1b2d43;
+  font-size: 1.45rem;
+  font-family: var(--font-heading);
+}
+
+.hero-stat-card small {
+  display: block;
+  margin-top: 6px;
+  color: #6f7b8d;
+}
+
+.hero-stat-card[data-tone="good"] {
+  background: linear-gradient(180deg, rgba(233, 242, 238, 0.96), rgba(252, 248, 241, 0.9));
+}
+
+.hero-stat-card[data-tone="active"] {
+  background: linear-gradient(180deg, rgba(225, 235, 247, 0.96), rgba(252, 248, 241, 0.9));
+}
+
+.hero-stat-card[data-tone="bad"] {
+  background: linear-gradient(180deg, rgba(244, 226, 221, 0.96), rgba(252, 248, 241, 0.9));
+}
+
+.finder-workspace,
+.page-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 24px 24px 32px;
+}
+
+.finder-workspace {
+  grid-template-columns: minmax(320px, 36vw) minmax(0, 1fr);
+}
+
+.page-grid--dashboard {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.8fr);
+}
+
+.page-grid--idea {
+  grid-template-columns: minmax(330px, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+}
+
+.finder-panel,
+.page-card {
+  border: 1px solid rgba(34, 48, 68, 0.16);
+  border-radius: 22px;
+  background: rgba(255, 251, 244, 0.84);
+  box-shadow: 0 24px 70px rgba(27, 34, 47, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.finder-panel {
+  min-height: calc(100vh - 286px);
+  max-height: calc(100vh - 286px);
+  overflow: hidden;
+}
+
+.page-card {
+  padding: 22px;
+}
+
+.page-card--wide {
+  grid-column: 1 / -1;
+}
+
+.page-card--sticky {
+  position: sticky;
+  top: 108px;
+}
+
+.page-card__head,
+.panel-heading,
+.results-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-heading,
+.results-heading {
+  min-height: 76px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(34, 48, 68, 0.14);
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.page-card__head {
+  margin-bottom: 18px;
+}
+
+.page-card__head h2,
+.panel-heading h2,
+.results-heading h2 {
+  margin: 0;
+  color: #182436;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.page-card__head span,
+.results-heading h2 small {
+  color: #6d7a8d;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.results-heading h2 small {
+  display: block;
+  margin-top: 4px;
+}
