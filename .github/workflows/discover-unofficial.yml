@@ -43,13 +43,26 @@ jobs:
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           ZHIPU_MODEL: glm-4.5-flash
+          ZHIPU_SEARCH_TOOL: search_pro
+          ZHIPU_READER_TOOL: reader
         run: npm run pipeline:refresh:discover
 
+      - name: Upload discovery trace for debugging
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-trace
+          path: |
+            data/unofficial/discovery-trace.json
+            public/data/unofficial/discovery-trace.json
+          if-no-files-found: warn
+
       - name: Commit updates
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data public
+          git add data/unofficial public/data/unofficial data/catalog public/data/catalog data/semantic public/data/semantic data/papers.catalog.json data/papers.catalog.official.json public/data/papers.catalog.json
           if git diff --cached --quiet; then
             echo "No unofficial paper changes."
             exit 0

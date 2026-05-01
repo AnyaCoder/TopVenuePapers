@@ -3,6 +3,10 @@ import { spawn } from 'node:child_process'
 
 const args = parseArgs(process.argv.slice(2))
 
+if (args.withDiscovery) {
+  args.reuseOfficialMirror = true
+}
+
 const steps = [
   ['npm', ['run', 'papers:ingest:ccfa', ...(args.reuseOfficialMirror ? ['--', '--reuse-official-mirror'] : [])]],
   ['npm', ['run', 'catalog:shards']],
@@ -13,7 +17,6 @@ const steps = [
 ]
 
 if (args.withDiscovery) {
-  args.reuseOfficialMirror = true
   steps.unshift(
     ['npm', ['run', 'papers:unofficial:discover']],
     ['npm', ['run', 'papers:unofficial:reconcile']],
