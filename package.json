@@ -17,6 +17,7 @@
     "papers:unofficial:discover": "node scripts/discover-unofficial-papers.mjs",
     "papers:unofficial:reconcile": "node scripts/reconcile-unofficial-papers.mjs",
     "catalog:shards": "node scripts/build-catalog-shards.mjs",
+    "data:sync-public": "node scripts/sync-public-data.mjs",
     "semantic:build": "node scripts/semantic/build-embeddings.mjs --model Xenova/all-MiniLM-L6-v2",
     "semantic:build:mirror": "node scripts/semantic/build-embeddings.mjs --model Xenova/all-MiniLM-L6-v2 --remote-host https://hf-mirror.com",
     "semantic:sync-public": "node scripts/sync-semantic-public.mjs",

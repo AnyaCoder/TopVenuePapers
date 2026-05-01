@@ -6,6 +6,7 @@ const args = parseArgs(process.argv.slice(2))
 const steps = [
   ['npm', ['run', 'papers:ingest:ccfa']],
   ['npm', ['run', 'catalog:shards']],
+  ['npm', ['run', 'data:sync-public']],
   ['npm', ['run', 'semantic:build:mirror']],
   ['npm', ['run', 'semantic:sync-public']],
   ['npm', ['run', 'papers:validate']],

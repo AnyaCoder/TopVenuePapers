@@ -11,6 +11,7 @@ The semantic model uses the browser Cache API through Transformers.js. After the
 The repo also supports a daily unofficial-paper queue for cases where 2026 papers are announced on X, Xiaohongshu, or personal homepages before official venue pages go live.
 
 - `data/unofficial/unofficial-papers.json` stores candidate and accepted-but-not-yet-official entries.
+- `public/data/unofficial/unofficial-papers.json` mirrors that queue for the `New Finding` page.
 - `npm run papers:unofficial:discover` uses the Zhipu web search + reader flow to discover likely papers.
 - `npm run papers:unofficial:reconcile` re-checks unofficial entries and removes them from the queue once they appear in the official catalog mirror.
 - `npm run pipeline:refresh:discover` runs discovery, reconciliation, catalog rebuild, semantic rebuild, and validation in one pass.

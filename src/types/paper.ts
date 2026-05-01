@@ -111,3 +111,51 @@ export interface PaperCatalogIndexPayload {
   shards: PaperCatalogShardRef[]
   papers: PaperCatalogIndexRecord[]
 }
+
+export interface UnofficialPaperEvidence {
+  platform: string
+  url: string
+  title?: string
+  author?: string
+  snippet?: string
+  readerTitle?: string
+  readerExcerpt?: string
+  publishDate?: string
+  query?: string
+}
+
+export interface UnofficialPaperEntry {
+  id: string
+  title: string
+  titleZh?: string
+  summary?: string
+  abstract?: string
+  reason?: string
+  hookZh?: string
+  primaryUrl: string
+  canonicalUrl?: string
+  pdfUrl?: string
+  sourceId?: string
+  year?: number
+  status?: 'ignored' | 'candidate' | 'accepted' | 'officially-published'
+  confidence?: number
+  acceptedVenue?: string
+  acceptedYear?: number
+  discoveredAt?: string
+  updatedAt?: string
+  lastCheckedAt?: string
+  authors?: string[]
+  keywords?: string[]
+  titleAliases?: string[]
+  aliases?: string[]
+  platforms?: string[]
+  evidence?: UnofficialPaperEvidence[]
+  evidenceCount?: number
+}
+
+export interface UnofficialPaperStorePayload {
+  version: number
+  generatedAt: string
+  notes: string[]
+  papers: UnofficialPaperEntry[]
+}
