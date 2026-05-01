@@ -5,6 +5,10 @@ import { createReadStream } from 'node:fs'
 import { extname, join, normalize, resolve, sep } from 'node:path'
 import { env, pipeline } from '@huggingface/transformers'
 import { loadSemanticSearchMatrix } from './semantic-artifacts.mjs'
+import {
+  enhanceBrainstormDraft,
+  getBrainstormBackendStatus,
+} from '../lib/brainstorm-zhipu.mjs'
 
 const DEFAULT_MODEL = 'Xenova/all-MiniLM-L6-v2'
 const DEFAULT_EMBEDDINGS = 'data/semantic/paper-embeddings-all-MiniLM-L6-v2.f32.bin'
@@ -69,6 +73,18 @@ const server = createServer(async (request, response) => {
 
       const results = await search(query, topK)
       writeJson(response, { query, results })
+      return
+    }
+
+    if (request.method === 'GET' && url.pathname === '/api/brainstorm/status') {
+      writeJson(response, getBrainstormBackendStatus())
+      return
+    }
+
+    if (request.method === 'POST' && url.pathname === '/api/brainstorm/enhance') {
+      const body = await readJsonBody(request)
+      const enhancement = await enhanceBrainstormDraft(body)
+      writeJson(response, enhancement)
       return
     }
 
@@ -193,6 +209,28 @@ function writeJson(response, payload, status = 200) {
     'Cache-Control': 'no-cache',
   })
   response.end(body)
+}
+
+async function readJsonBody(request) {
+  const chunks = []
+
+  for await (const chunk of request) {
+    chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk)
+  }
+
+  const raw = Buffer.concat(chunks).toString('utf-8').trim()
+
+  if (!raw) {
+    return {}
+  }
+
+  try {
+    return JSON.parse(raw)
+  } catch (error) {
+    throw new Error(
+      `Invalid JSON body: ${error instanceof Error ? error.message : String(error)}`,
+    )
+  }
 }
 
 function getContentType(filePath) {

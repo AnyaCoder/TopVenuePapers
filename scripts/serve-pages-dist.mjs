@@ -3,6 +3,10 @@ import { createReadStream } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { createServer } from 'node:http'
 import { extname, join, normalize, resolve, sep } from 'node:path'
+import {
+  enhanceBrainstormDraft,
+  getBrainstormBackendStatus,
+} from './lib/brainstorm-zhipu.mjs'
 
 const args = parseArgs(process.argv.slice(2))
 const host = args.host ?? '127.0.0.1'
@@ -14,6 +18,18 @@ const server = createServer(async (request, response) => {
   try {
     const requestUrl = new URL(request.url ?? '/', `http://${host}:${port}`)
     let pathname = decodeURIComponent(requestUrl.pathname)
+
+    if (request.method === 'GET' && pathname === '/api/brainstorm/status') {
+      writeJson(response, getBrainstormBackendStatus())
+      return
+    }
+
+    if (request.method === 'POST' && pathname === '/api/brainstorm/enhance') {
+      const body = await readJsonBody(request)
+      const enhancement = await enhanceBrainstormDraft(body)
+      writeJson(response, enhancement)
+      return
+    }
 
     if (pathname === '/') {
       response.writeHead(302, { Location: `${basePath}/` })
@@ -77,6 +93,38 @@ function getContentType(filePath) {
   }
 
   return types[extname(filePath)] ?? 'application/octet-stream'
+}
+
+function writeJson(response, payload, status = 200) {
+  const body = JSON.stringify(payload)
+  response.writeHead(status, {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Content-Length': Buffer.byteLength(body),
+    'Cache-Control': 'no-cache',
+  })
+  response.end(body)
+}
+
+async function readJsonBody(request) {
+  const chunks = []
+
+  for await (const chunk of request) {
+    chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk)
+  }
+
+  const raw = Buffer.concat(chunks).toString('utf-8').trim()
+
+  if (!raw) {
+    return {}
+  }
+
+  try {
+    return JSON.parse(raw)
+  } catch (error) {
+    throw new Error(
+      `Invalid JSON body: ${error instanceof Error ? error.message : String(error)}`,
+    )
+  }
 }
 
 function parseArgs(argv) {

@@ -14,7 +14,10 @@ import type {
 import type { BrowserSemanticProgress } from './utils/browserSemanticSearch'
 import { buildBrainstormQuery, buildLocalBrainstormPlan, rankPapersByTextQuery, type BrainstormDraft } from './utils/brainstorm'
 import { getVenueBadge } from './utils/venue'
-import type { BrainstormEnhancement } from './utils/zhipuBrowser'
+import type {
+  BrainstormBackendStatus,
+  BrainstormEnhancement,
+} from './utils/brainstormApi'
 
 type AppPage = 'finder' | 'new-finding' | 'brain-storm'
 type SearchMode = 'semantic' | 'keyword'
@@ -42,6 +45,27 @@ interface GitHubWorkflowRun {
 interface BrainstormRelatedPaper {
   paper: PaperCatalogIndexRecord
   score: number
+}
+
+interface DiscoveryTimelineItem {
+  id: string
+  kind: 'workflow' | 'snapshot' | 'paper'
+  title: string
+  detail: string
+  timestamp: string
+  tone: 'good' | 'active' | 'muted' | 'bad'
+  href?: string
+}
+
+interface DiscoveryEvidenceCard {
+  id: string
+  title: string
+  paperTitle: string
+  platform: string
+  snippet: string
+  timestamp: string
+  href: string
+  tone: 'good' | 'active'
 }
 
 const pageTabs: Array<{ key: AppPage; label: string; blurb: string }> = [
@@ -117,6 +141,7 @@ const abstractLoadState = ref<Record<string, 'idle' | 'loading' | 'ready' | 'err
 const semanticApiBase = import.meta.env.PROD
   ? '/api/semantic'
   : 'http://127.0.0.1:8765'
+const brainstormApiBase = '/api/brainstorm'
 const useBrowserSemantic = import.meta.env.PROD
 const dataBaseUrl = import.meta.env.BASE_URL
 const searchMode = ref<SearchMode>('semantic')
@@ -149,8 +174,9 @@ const brainstormError = ref('')
 const brainstormResults = ref<BrainstormRelatedPaper[]>([])
 const brainstormPlan = ref<ReturnType<typeof buildLocalBrainstormPlan> | null>(null)
 const brainstormEnhancement = ref<BrainstormEnhancement | null>(null)
-const brainstormZhipuKey = ref('')
-const brainstormZhipuModel = ref('glm-4.5-flash')
+const brainstormBackend = ref<BrainstormBackendStatus | null>(null)
+const brainstormBackendLoading = ref(false)
+const brainstormRequestedModel = ref('')
 const brainstormEnhancing = ref(false)
 
 const { query, outcome } = usePaperSearch(
@@ -243,6 +269,94 @@ const unofficialPlatformBreakdown = computed(() => {
   return Array.from(counts.entries())
     .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
     .map(([platform, count]) => ({ platform, count }))
+})
+
+const latestUnofficialPapers = computed(() =>
+  [...unofficialPapers.value]
+    .sort((left, right) => timestampValue(right.updatedAt || right.discoveredAt) - timestampValue(left.updatedAt || left.discoveredAt))
+    .slice(0, 8),
+)
+
+const latestEvidenceCards = computed<DiscoveryEvidenceCard[]>(() =>
+  unofficialPapers.value
+    .flatMap((paper) =>
+      (paper.evidence ?? []).map((evidence, index) => ({
+        id: `${paper.id}:${index}`,
+        title:
+          evidence.title ||
+          evidence.readerTitle ||
+          `${humanizePlatform(evidence.platform)} signal`,
+        paperTitle: paper.title,
+        platform: humanizePlatform(evidence.platform || 'web'),
+        snippet:
+          evidence.readerExcerpt ||
+          evidence.snippet ||
+          paper.summary ||
+          paper.reason ||
+          'No summary snippet yet.',
+        timestamp:
+          evidence.publishDate ||
+          paper.updatedAt ||
+          paper.discoveredAt ||
+          unofficialStore.value?.generatedAt ||
+          '',
+        href: evidence.url || paper.primaryUrl,
+        tone: paper.status === 'accepted' ? ('good' as const) : ('active' as const),
+      })),
+    )
+    .sort((left, right) => timestampValue(right.timestamp) - timestampValue(left.timestamp))
+    .slice(0, 6),
+)
+
+const discoveryTimeline = computed<DiscoveryTimelineItem[]>(() => {
+  const items: DiscoveryTimelineItem[] = []
+
+  if (unofficialStore.value?.generatedAt) {
+    items.push({
+      id: `snapshot:${unofficialStore.value.generatedAt}`,
+      kind: 'snapshot',
+      title: 'Discovery snapshot refreshed',
+      detail: `${unofficialPapers.value.length} unofficial papers in the latest exported queue.`,
+      timestamp: unofficialStore.value.generatedAt,
+      tone: 'good',
+      href: `${dataBaseUrl}data/unofficial/unofficial-papers.json`,
+    })
+  }
+
+  for (const run of workflowRuns.value.slice(0, 4)) {
+    items.push({
+      id: `workflow:${run.id}`,
+      kind: 'workflow',
+      title: run.display_title || `Workflow run #${run.run_number}`,
+      detail: `${humanizeWorkflowStatus(run)} via ${run.event}.`,
+      timestamp: run.updated_at || run.created_at,
+      tone: workflowTone(run) as DiscoveryTimelineItem['tone'],
+      href: run.html_url,
+    })
+  }
+
+  for (const paper of latestUnofficialPapers.value.slice(0, 6)) {
+    items.push({
+      id: `paper:${paper.id}`,
+      kind: 'paper',
+      title: paper.title,
+      detail:
+        paper.summary ||
+        paper.reason ||
+        `${paper.status === 'accepted' ? 'Accepted signal' : 'Candidate signal'} from ${paper.platforms?.map(humanizePlatform).join(', ') || 'social discovery'}.`,
+      timestamp:
+        paper.updatedAt ||
+        paper.discoveredAt ||
+        unofficialStore.value?.generatedAt ||
+        '',
+      tone: paper.status === 'accepted' ? 'good' : 'active',
+      href: paper.primaryUrl,
+    })
+  }
+
+  return items
+    .sort((left, right) => timestampValue(right.timestamp) - timestampValue(left.timestamp))
+    .slice(0, 10)
 })
 
 const latestWorkflowRun = computed(() => workflowRuns.value[0] ?? null)
@@ -416,6 +530,40 @@ const showSemanticProgress = computed(
     (semanticStatus.value === 'checking' || semanticStatus.value === 'searching'),
 )
 
+const brainstormBackendAvailable = computed(
+  () => brainstormBackend.value?.available ?? false,
+)
+
+const brainstormBackendMessage = computed(() => {
+  if (brainstormBackendLoading.value && !brainstormBackend.value) {
+    return 'Checking whether secure AI refinement is available on this deployment...'
+  }
+
+  return (
+    brainstormBackend.value?.message ||
+    'Secure AI refinement is not available on this deployment yet.'
+  )
+})
+
+const brainstormEnhancementStateLabel = computed(() => {
+  if (brainstormEnhancement.value) {
+    return 'Ready'
+  }
+
+  if (brainstormBackendAvailable.value) {
+    return 'Available'
+  }
+
+  return 'Offline'
+})
+
+const brainstormModelLabel = computed(
+  () =>
+    brainstormEnhancement.value?.model ||
+    brainstormBackend.value?.model ||
+    'glm-4.5-flash',
+)
+
 watch([filteredPapers, sanitizedPerPage], () => {
   currentPage.value = 1
 })
@@ -439,6 +587,10 @@ watch(activePage, async (page) => {
   if (page === 'new-finding') {
     await Promise.all([loadUnofficialStore(), loadDiscoveryRuns()])
   }
+
+  if (page === 'brain-storm') {
+    await loadBrainstormBackendStatus()
+  }
 })
 
 onMounted(() => {
@@ -450,6 +602,7 @@ onMounted(() => {
   void initializeSemanticWarmup()
   void loadUnofficialStore()
   void loadDiscoveryRuns()
+  void loadBrainstormBackendStatus()
 
   if (typeof window !== 'undefined') {
     workflowIntervalId = window.setInterval(() => {
@@ -570,6 +723,27 @@ async function loadDiscoveryRuns() {
       error instanceof Error ? error.message : 'Could not load workflow status.'
   } finally {
     workflowLoading.value = false
+  }
+}
+
+async function loadBrainstormBackendStatus(force = false) {
+  if (brainstormBackendLoading.value && !force) {
+    return
+  }
+
+  brainstormBackendLoading.value = true
+
+  try {
+    const { fetchBrainstormBackendStatus } = await import('./utils/brainstormApi')
+    brainstormBackend.value = await fetchBrainstormBackendStatus(brainstormApiBase)
+  } catch (error) {
+    brainstormBackend.value = {
+      available: false,
+      model: 'glm-4.5-flash',
+      message: resolveBrainstormBackendMessage(error),
+    }
+  } finally {
+    brainstormBackendLoading.value = false
   }
 }
 
@@ -860,10 +1034,17 @@ async function runBrainstormSearch() {
 }
 
 async function runBrainstormEnhancement() {
-  const apiKey = brainstormZhipuKey.value.trim()
+  if (!brainstormBackendAvailable.value) {
+    await loadBrainstormBackendStatus(true)
 
-  if (!apiKey) {
-    brainstormError.value = 'Enter a Zhipu API key before running enhancement.'
+    if (!brainstormBackendAvailable.value) {
+      brainstormError.value = brainstormBackendMessage.value
+      return
+    }
+  }
+
+  if (!brainstormDraft.background.trim() && !brainstormDraft.idea.trim()) {
+    brainstormError.value = 'Describe the background or idea first.'
     return
   }
 
@@ -878,7 +1059,7 @@ async function runBrainstormEnhancement() {
   brainstormError.value = ''
 
   try {
-    const { enhanceBrainstormWithZhipu } = await import('./utils/zhipuBrowser')
+    const { enhanceBrainstormWithBackend } = await import('./utils/brainstormApi')
 
     const papers = brainstormResults.value.map(({ paper }) => {
       const detail = getPaperDetail(paper)
@@ -888,9 +1069,9 @@ async function runBrainstormEnhancement() {
       }
     })
 
-    brainstormEnhancement.value = await enhanceBrainstormWithZhipu({
-      apiKey,
-      model: brainstormZhipuModel.value.trim() || undefined,
+    brainstormEnhancement.value = await enhanceBrainstormWithBackend({
+      apiBase: brainstormApiBase,
+      model: brainstormRequestedModel.value.trim() || undefined,
       draft: {
         ...brainstormDraft,
         maxPapers: clampNumber(brainstormDraft.maxPapers, 1, 20),
@@ -1232,6 +1413,33 @@ function formatDateTime(value?: string) {
   }).format(date)
 }
 
+function formatRelativeTime(value?: string) {
+  const date = value ? new Date(value) : null
+
+  if (!date || Number.isNaN(date.getTime())) {
+    return 'Unknown time'
+  }
+
+  const diffMs = Date.now() - date.getTime()
+  const diffMinutes = Math.round(diffMs / 60000)
+
+  if (Math.abs(diffMinutes) < 1) {
+    return 'Just now'
+  }
+
+  if (Math.abs(diffMinutes) < 60) {
+    return `${Math.abs(diffMinutes)} min ${diffMinutes >= 0 ? 'ago' : 'later'}`
+  }
+
+  const diffHours = Math.round(diffMinutes / 60)
+  if (Math.abs(diffHours) < 48) {
+    return `${Math.abs(diffHours)} hr ${diffHours >= 0 ? 'ago' : 'later'}`
+  }
+
+  const diffDays = Math.round(diffHours / 24)
+  return `${Math.abs(diffDays)} day${Math.abs(diffDays) === 1 ? '' : 's'} ${diffDays >= 0 ? 'ago' : 'later'}`
+}
+
 function workflowTone(run: GitHubWorkflowRun | null) {
   if (!run) {
     return 'muted'
@@ -1303,6 +1511,29 @@ function topEvidence(entry: UnofficialPaperEntry) {
   return entry.evidence?.[0] ?? null
 }
 
+function timestampValue(value?: string) {
+  if (!value) {
+    return 0
+  }
+
+  const time = new Date(value).getTime()
+  return Number.isNaN(time) ? 0 : time
+}
+
+function resolveBrainstormBackendMessage(error: unknown) {
+  const message = error instanceof Error ? error.message : 'Could not reach the brainstorm backend.'
+
+  if (typeof window !== 'undefined' && /github\.io$/i.test(window.location.hostname)) {
+    return 'This public Pages site keeps semantic search local in your browser. Secure Zhipu refinement is available only when the project is opened through a server deployment with ZHIPU_API_KEY configured.'
+  }
+
+  if (message.includes('404')) {
+    return 'Secure AI refinement endpoint is not enabled on this local preview yet. Start the bundled preview server or deploy the project with the backend route enabled.'
+  }
+
+  return message
+}
+
 function clampNumber(value: number, min: number, max: number) {
   if (!Number.isFinite(value)) {
     return min
@@ -1330,11 +1561,6 @@ function resolvePageFromHash(): AppPage {
   <main class="app-shell">
     <header class="topbar">
       <div class="topbar__inner">
-        <button class="topbar__brand" type="button" @click="navigateToPage('finder')">
-          <span class="topbar__eyebrow">TopVenuePapers</span>
-          <strong>CCF-A Papers</strong>
-        </button>
-
         <nav class="topbar__nav" aria-label="Primary">
           <button
             v-for="tab in pageTabs"
@@ -1349,10 +1575,6 @@ function resolvePageFromHash(): AppPage {
           </button>
         </nav>
 
-        <div class="topbar__status">
-          <span>11797 papers</span>
-          <span>{{ unofficialPapers.length }} new-finding items</span>
-        </div>
       </div>
     </header>
 
@@ -1740,7 +1962,7 @@ function resolvePageFromHash(): AppPage {
 
         <article class="page-card">
           <div class="page-card__head">
-            <h2>Discovery Feed</h2>
+            <h2>Source Breakdown</h2>
             <a
               class="text-link"
               :href="`${dataBaseUrl}data/unofficial/unofficial-papers.json`"
@@ -1757,7 +1979,7 @@ function resolvePageFromHash(): AppPage {
           <div v-else-if="unofficialError" class="empty-state empty-state--error">
             {{ unofficialError }}
           </div>
-          <div v-else class="feed-summary">
+          <div v-else class="source-breakdown">
             <div class="feed-summary__row">
               <span>Last generated</span>
               <strong>{{ formatDateTime(unofficialStore?.generatedAt) }}</strong>
@@ -1774,6 +1996,24 @@ function resolvePageFromHash(): AppPage {
                 </span>
                 <span v-if="unofficialPlatformBreakdown.length === 0" class="tag">No platform hits yet</span>
               </div>
+            </div>
+            <div v-if="unofficialPlatformBreakdown.length > 0" class="source-breakdown__list">
+              <article
+                v-for="item in unofficialPlatformBreakdown"
+                :key="`breakdown:${item.platform}`"
+                class="source-breakdown__item"
+              >
+                <div class="source-breakdown__head">
+                  <strong>{{ item.platform }}</strong>
+                  <span>{{ item.count }}</span>
+                </div>
+                <div class="source-breakdown__bar" aria-hidden="true">
+                  <div
+                    class="source-breakdown__fill"
+                    :style="{ width: `${(item.count / (unofficialPlatformBreakdown[0]?.count || 1)) * 100}%` }"
+                  />
+                </div>
+              </article>
             </div>
             <div class="feed-summary__row">
               <span>Notes</span>
@@ -1840,6 +2080,68 @@ function resolvePageFromHash(): AppPage {
             </article>
           </div>
         </article>
+
+        <article class="page-card page-card--wide">
+          <div class="page-card__head">
+            <h2>Live Timeline</h2>
+            <span>{{ discoveryTimeline.length }} events</span>
+          </div>
+
+          <div v-if="discoveryTimeline.length === 0" class="empty-state">
+            Timeline events will appear here after the crawler starts producing snapshots.
+          </div>
+          <div v-else class="timeline-list">
+            <article
+              v-for="item in discoveryTimeline"
+              :key="item.id"
+              class="timeline-card"
+              :data-tone="item.tone"
+            >
+              <div class="timeline-card__dot" aria-hidden="true" />
+              <div class="timeline-card__body">
+                <div class="timeline-card__head">
+                  <strong>{{ item.title }}</strong>
+                  <span>{{ formatRelativeTime(item.timestamp) }}</span>
+                </div>
+                <p>{{ item.detail }}</p>
+                <div class="timeline-card__meta">
+                  <span>{{ formatDateTime(item.timestamp) }}</span>
+                  <a v-if="item.href" :href="item.href" target="_blank" rel="noreferrer">
+                    Open
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="page-card page-card--wide">
+          <div class="page-card__head">
+            <h2>Latest Evidence</h2>
+            <span>{{ latestEvidenceCards.length }} cards</span>
+          </div>
+
+          <div v-if="latestEvidenceCards.length === 0" class="empty-state">
+            Evidence cards will show the strongest snippets from X, Xiaohongshu, or homepages once discovered.
+          </div>
+          <div v-else class="evidence-list">
+            <article
+              v-for="card in latestEvidenceCards"
+              :key="card.id"
+              class="evidence-card"
+              :data-tone="card.tone"
+            >
+              <div class="evidence-card__head">
+                <span class="status-pill" :data-tone="card.tone">{{ card.platform }}</span>
+                <span>{{ formatRelativeTime(card.timestamp) }}</span>
+              </div>
+              <h3>{{ card.title }}</h3>
+              <p class="muted-copy">{{ card.paperTitle }}</p>
+              <p class="evidence-card__snippet">{{ card.snippet }}</p>
+              <a :href="card.href" target="_blank" rel="noreferrer">Open evidence</a>
+            </article>
+          </div>
+        </article>
       </section>
     </section>
 
@@ -1865,9 +2167,9 @@ function resolvePageFromHash(): AppPage {
             <small>Adjust how many references guide the idea.</small>
           </article>
           <article class="hero-stat-card" data-tone="muted">
-            <span>Zhipu Enhancement</span>
-            <strong>{{ brainstormEnhancement ? 'Ready' : 'Optional' }}</strong>
-            <small>Triggered only after you provide a key and click enhance.</small>
+            <span>Secure AI Refinement</span>
+            <strong>{{ brainstormEnhancementStateLabel }}</strong>
+            <small>{{ brainstormBackendAvailable ? brainstormModelLabel : 'Backend not enabled on this deployment.' }}</small>
           </article>
         </div>
       </header>
@@ -1876,9 +2178,14 @@ function resolvePageFromHash(): AppPage {
         <article class="page-card page-card--sticky">
           <div class="page-card__head">
             <h2>Idea Input</h2>
-            <button type="button" class="quiet-button" @click="resetBrainstorm">
-              Reset
-            </button>
+            <div class="header-actions">
+              <button type="button" class="quiet-button" @click="loadBrainstormBackendStatus(true)">
+                Refresh backend
+              </button>
+              <button type="button" class="quiet-button" @click="resetBrainstorm">
+                Reset
+              </button>
+            </div>
           </div>
 
           <div class="form-stack">
@@ -1927,26 +2234,16 @@ function resolvePageFromHash(): AppPage {
 
             <div class="brainstorm-enhance">
               <div class="brainstorm-enhance__head">
-                <h3>Zhipu Enhancement</h3>
-                <span>Optional</span>
+                <h3>Secure AI Refinement</h3>
+                <span>{{ brainstormEnhancementStateLabel }}</span>
               </div>
               <p class="muted-copy">
-                The key stays in this browser session. When you click enhance, your
-                draft and the related paper summaries are sent directly to Zhipu.
+                {{ brainstormBackendMessage }}
               </p>
               <label class="field-block">
-                <span>Zhipu API key</span>
+                <span>Preferred model (optional)</span>
                 <input
-                  v-model="brainstormZhipuKey"
-                  type="password"
-                  autocomplete="off"
-                  placeholder="Paste a Zhipu API key for method refinement."
-                />
-              </label>
-              <label class="field-block">
-                <span>Zhipu model</span>
-                <input
-                  v-model="brainstormZhipuModel"
+                  v-model="brainstormRequestedModel"
                   type="text"
                   placeholder="glm-4.5-flash"
                 />
@@ -1954,10 +2251,10 @@ function resolvePageFromHash(): AppPage {
               <button
                 type="button"
                 class="secondary-action"
-                :disabled="brainstormEnhancing"
+                :disabled="brainstormEnhancing || !brainstormBackendAvailable"
                 @click="runBrainstormEnhancement"
               >
-                {{ brainstormEnhancing ? 'Enhancing...' : 'Enhance with Zhipu' }}
+                {{ brainstormEnhancing ? 'Enhancing...' : 'Refine with Zhipu' }}
               </button>
             </div>
           </div>
@@ -2010,7 +2307,7 @@ function resolvePageFromHash(): AppPage {
           <article v-if="brainstormEnhancement" class="page-card">
             <div class="page-card__head">
               <h2>Zhipu Refined Outline</h2>
-              <span>{{ brainstormZhipuModel }}</span>
+              <span>{{ brainstormModelLabel }}</span>
             </div>
 
             <div class="plan-grid">
