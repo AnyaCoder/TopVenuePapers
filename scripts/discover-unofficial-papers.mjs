@@ -38,7 +38,7 @@ const args = parseArgs(process.argv.slice(2))
 const storePath = args.store ?? 'data/unofficial/unofficial-papers.json'
 const tracePath = args.trace ?? 'data/unofficial/discovery-trace.json'
 const officialCatalogPath = args.officialCatalog ?? 'data/papers.catalog.official.json'
-const searchPlans = args.query.length > 0
+const rawSearchPlans = args.query.length > 0
   ? args.query.map((query, index) => ({
       label: `custom-${index + 1}`,
       query,
@@ -46,11 +46,18 @@ const searchPlans = args.query.length > 0
       recencyFilter: args.recency,
     }))
   : DEFAULT_SEARCH_PLANS
-const maxResultsPerQuery = Number(args.maxResults ?? 10)
-const maxReaders = Number(args.maxReaders ?? 60)
-const minReaderCandidates = Number(args.minReaders ?? 18)
+const maxQueries = readPositiveInt(args.maxQueries ?? process.env.DISCOVERY_MAX_QUERIES, 16)
+const searchPlans = rawSearchPlans.slice(0, maxQueries)
+const skippedSearchPlans = Math.max(0, rawSearchPlans.length - searchPlans.length)
+const maxResultsPerQuery = readPositiveInt(args.maxResults ?? process.env.DISCOVERY_MAX_RESULTS, 8)
+const maxReaders = readPositiveInt(args.maxReaders ?? process.env.DISCOVERY_MAX_READERS, 24)
+const minReaderCandidates = readPositiveInt(args.minReaders ?? process.env.DISCOVERY_MIN_READERS, 8)
+const maxExtractionBatches = readPositiveInt(args.maxBatches ?? process.env.DISCOVERY_MAX_BATCHES, 4)
+const apiRetries = readPositiveInt(args.retries ?? process.env.ZHIPU_RETRIES, 1)
+const discoveryBudgetMs = readPositiveInt(args.budgetMs ?? process.env.DISCOVERY_BUDGET_MS, 20 * 60 * 1000)
 const dryRun = Boolean(args.dryRun)
 const forceReader = Boolean(args.forceReader)
+const discoveryStartedAt = Date.now()
 
 const client = createZhipuClient({
   model: args.model,
@@ -59,11 +66,33 @@ const client = createZhipuClient({
 const existingStore = await readUnofficialStore(storePath)
 const officialCatalog = await readCatalog(officialCatalogPath)
 const officialIndex = buildOfficialTitleIndex(officialCatalog)
-const trace = createTrace(client)
+const trace = createTrace(client, {
+  totalSearchPlans: rawSearchPlans.length,
+  maxQueries,
+  skippedSearchPlans,
+  maxResultsPerQuery,
+  maxReaders,
+  minReaderCandidates,
+  maxExtractionBatches,
+  apiRetries,
+  discoveryBudgetMs,
+})
 const results = []
 const rejectedEvidence = []
 
-for (const plan of searchPlans) {
+logProgress(
+  trace,
+  `Discovery started: ${searchPlans.length}/${rawSearchPlans.length} queries, max ${maxReaders} readers, max ${maxExtractionBatches} extraction batches.`,
+)
+
+for (const [planIndex, plan] of searchPlans.entries()) {
+  if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
+    trace.errors.push(`Discovery budget expired before search ${planIndex + 1}.`)
+    logProgress(trace, `Discovery budget expired; skipping ${searchPlans.length - planIndex} remaining searches.`)
+    break
+  }
+
+  const queryStartedAt = Date.now()
   const queryTrace = {
     label: plan.label,
     query: plan.query,
@@ -75,17 +104,20 @@ for (const plan of searchPlans) {
     rawResultCount: 0,
     resultCount: 0,
     rejectedCount: 0,
+    startedAt: new Date().toISOString(),
     results: [],
     rejected: [],
   }
 
   try {
+    logProgress(trace, `[search ${planIndex + 1}/${searchPlans.length}] ${plan.label}: ${plan.query}`)
     const searchResponse = await zhipuWebSearch(client, plan.query, {
       count: maxResultsPerQuery,
       domainFilter: plan.domainFilter,
       recencyFilter: plan.recencyFilter,
       searchEngine: plan.searchEngine,
       contentSize: plan.contentSize,
+      retries: apiRetries,
     })
     const scored = collectSearchItems(searchResponse, plan).map(scoreEvidence)
     const accepted = scored.filter((item) => item.relevance.keep)
@@ -104,7 +136,12 @@ for (const plan of searchPlans) {
     trace.errors.push(`Search failed for query "${plan.query}": ${queryTrace.error}`)
   }
 
+  queryTrace.durationMs = Date.now() - queryStartedAt
   trace.queries.push(queryTrace)
+  logProgress(
+    trace,
+    `[search ${planIndex + 1}/${searchPlans.length}] done raw=${queryTrace.rawResultCount} kept=${queryTrace.resultCount} rejected=${queryTrace.rejectedCount} in ${formatDuration(queryTrace.durationMs)}${queryTrace.error ? ` error=${queryTrace.error}` : ''}`,
+  )
 }
 
 const dedupedAccepted = dedupeEvidence(results).sort(compareEvidenceRelevance)
@@ -117,14 +154,31 @@ const dedupedEvidence = fillReaderCandidates(dedupedAccepted, backfillEvidence, 
 })
 const enrichedEvidence = []
 
-for (const item of dedupedEvidence) {
+logProgress(trace, `Reader stage started: ${dedupedEvidence.length} candidate links.`)
+
+for (const [readerIndex, item] of dedupedEvidence.entries()) {
+  if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
+    trace.errors.push(`Discovery budget expired before reader ${readerIndex + 1}.`)
+    logProgress(trace, `Discovery budget expired; skipping ${dedupedEvidence.length - readerIndex} remaining readers.`)
+    break
+  }
+
+  const readerStartedAt = Date.now()
   let readerTitle = ''
   let readerExcerpt = ''
   let readerError = ''
+  const shouldRead = forceReader || isLikelyHelpfulReaderTarget(item.url)
 
-  if (forceReader || isLikelyHelpfulReaderTarget(item.url)) {
+  logProgress(
+    trace,
+    `[reader ${readerIndex + 1}/${dedupedEvidence.length}] ${shouldRead ? 'read' : 'skip'} ${shortenLogText(item.title || item.url, 90)}`,
+  )
+
+  if (shouldRead) {
     try {
-      const readerResponse = await zhipuWebReader(client, item.url)
+      const readerResponse = await zhipuWebReader(client, item.url, {
+        retries: apiRetries,
+      })
       const readerPayload = normalizeReaderPayload(readerResponse)
       readerTitle = readerPayload.title
       readerExcerpt = readerPayload.excerpt
@@ -141,15 +195,34 @@ for (const item of dedupedEvidence) {
   }
 
   enrichedEvidence.push(enriched)
-  trace.readers.push(summarizeReaderEvidence(enriched, readerError))
+  const readerTrace = summarizeReaderEvidence(enriched, readerError)
+  readerTrace.durationMs = Date.now() - readerStartedAt
+  readerTrace.skipped = !shouldRead
+  trace.readers.push(readerTrace)
+  logProgress(
+    trace,
+    `[reader ${readerIndex + 1}/${dedupedEvidence.length}] done in ${formatDuration(readerTrace.durationMs)}${readerError ? ` error=${readerError}` : ''}`,
+  )
 }
 
-const batches = chunk(enrichedEvidence, 6)
+const allBatches = chunk(enrichedEvidence, 6)
+const batches = allBatches.slice(0, maxExtractionBatches)
+const skippedExtractionBatches = Math.max(0, allBatches.length - batches.length)
 const extractedCandidates = []
 
+logProgress(trace, `Extraction stage started: ${batches.length}/${allBatches.length} batches.`)
+
 for (const [batchIndex, batch] of batches.entries()) {
+  if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
+    trace.errors.push(`Discovery budget expired before extraction batch ${batchIndex + 1}.`)
+    logProgress(trace, `Discovery budget expired; skipping ${batches.length - batchIndex} remaining extraction batches.`)
+    break
+  }
+
+  logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] ${batch.length} evidence items.`)
   const extraction = await extractCandidatesFromEvidence(client, batch, batchIndex, trace)
   extractedCandidates.push(...extraction)
+  logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] parsed=${extraction.length}`)
 }
 
 const existingById = new Map(existingStore.papers.map((paper) => [paper.id, paper]))
@@ -203,13 +276,17 @@ const nextStore = {
 
 trace.summary = {
   searchQueriesRun: trace.queries.length,
+  skippedSearchPlans,
   rawSearchEvidenceCollected: results.length + rejectedEvidence.length,
   searchEvidenceCollected: dedupedAccepted.length,
   rejectedSearchEvidence: rejectedEvidence.length,
   readerEnrichedEvidence: enrichedEvidence.length,
+  extractionBatchesRun: batches.length,
+  skippedExtractionBatches,
   extractedCandidates: extractedCandidates.length,
   added,
   updated,
+  durationMs: Date.now() - discoveryStartedAt,
 }
 
 if (!dryRun) {
@@ -227,6 +304,7 @@ if (!dryRun) {
 }
 
 async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, trace) {
+  const extractionStartedAt = Date.now()
   const systemPrompt =
     'You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.'
   const prompt = buildExtractionPrompt(evidenceBatch)
@@ -246,6 +324,8 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
           content: prompt,
         },
       ],
+    }, apiRetries, {
+      timeoutMs: Number(process.env.ZHIPU_CHAT_TIMEOUT_MS) || undefined,
     })
 
     text = extractMessageText(response)
@@ -264,6 +344,7 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
     model: client.model,
     responseText: text.slice(0, 12000),
     parsedCount: papers.length,
+    durationMs: Date.now() - extractionStartedAt,
     error: errorMessage || undefined,
   })
 
@@ -684,13 +765,15 @@ function normalizeReaderPayload(response) {
   }
 }
 
-function createTrace(client) {
+function createTrace(client, controls = {}) {
   return {
     version: 1,
     generatedAt: new Date().toISOString(),
     model: client.model,
     searchTool: client.searchTool,
     readerTool: client.readerTool,
+    controls,
+    progress: [],
     queries: [],
     readers: [],
     extractionBatches: [],
@@ -821,6 +904,37 @@ function chunk(items, size) {
   return output
 }
 
+function logProgress(trace, message) {
+  const entry = {
+    at: new Date().toISOString(),
+    message,
+  }
+  trace.progress.push(entry)
+  console.log(message)
+}
+
+function readPositiveInt(value, fallback) {
+  const parsed = Number(value)
+  return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : fallback
+}
+
+function formatDuration(ms) {
+  if (!Number.isFinite(ms) || ms < 1000) {
+    return `${Math.max(0, Math.round(ms || 0))}ms`
+  }
+
+  return `${(ms / 1000).toFixed(1)}s`
+}
+
+function shortenLogText(value, maxLength) {
+  const text = String(value ?? '').replace(/\s+/g, ' ').trim()
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}...` : text
+}
+
+function isBudgetExpired(startedAt, budgetMs) {
+  return Date.now() - startedAt >= budgetMs
+}
+
 function errorToMessage(error) {
   return error instanceof Error ? error.message : String(error)
 }
@@ -841,12 +955,20 @@ function parseArgs(argv) {
       parsed.officialCatalog = argv[++index]
     } else if (arg === '--query') {
       parsed.query.push(argv[++index])
+    } else if (arg === '--max-queries') {
+      parsed.maxQueries = argv[++index]
     } else if (arg === '--max-results') {
       parsed.maxResults = argv[++index]
     } else if (arg === '--max-readers') {
       parsed.maxReaders = argv[++index]
     } else if (arg === '--min-readers') {
       parsed.minReaders = argv[++index]
+    } else if (arg === '--max-batches') {
+      parsed.maxBatches = argv[++index]
+    } else if (arg === '--retries') {
+      parsed.retries = argv[++index]
+    } else if (arg === '--budget-ms') {
+      parsed.budgetMs = argv[++index]
     } else if (arg === '--recency') {
       parsed.recency = argv[++index]
     } else if (arg === '--model') {
@@ -875,9 +997,13 @@ Options:
   --trace <path>               Discovery trace output path.
   --official-catalog <path>    Official catalog mirror for dedupe.
   --query <text>               Search query. Repeatable.
-  --max-results <n>            Search hits per query. Default: 10.
-  --max-readers <n>            Reader-enriched link cap. Default: 60.
-  --min-readers <n>            Backfill at least this many links when available. Default: 18.
+  --max-queries <n>            Query-plan cap. Default: 16.
+  --max-results <n>            Search hits per query. Default: 8.
+  --max-readers <n>            Reader-enriched link cap. Default: 24.
+  --min-readers <n>            Backfill at least this many links when available. Default: 8.
+  --max-batches <n>            LLM extraction-batch cap. Default: 4.
+  --retries <n>                Zhipu retry count per request. Default: 1.
+  --budget-ms <n>              Whole discovery soft budget. Default: 1200000.
   --recency <filter>           Zhipu recency filter for custom queries. Default: oneMonth.
   --model <name>               Zhipu chat model.
   --force-reader               Always run the webpage reader for candidate links.

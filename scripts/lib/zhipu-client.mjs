@@ -1,4 +1,7 @@
 const DEFAULT_API_BASE = 'https://open.bigmodel.cn/api/paas/v4'
+const DEFAULT_SEARCH_TIMEOUT_MS = 20_000
+const DEFAULT_READER_TIMEOUT_MS = 20_000
+const DEFAULT_CHAT_TIMEOUT_MS = 30_000
 
 export function createZhipuClient(options = {}) {
   const apiKey = options.apiKey || process.env.ZHIPU_API_KEY
@@ -16,13 +19,14 @@ export function createZhipuClient(options = {}) {
   }
 }
 
-export async function zhipuChat(client, body, retries = 3) {
+export async function zhipuChat(client, body, retries = 3, options = {}) {
   const url = `${client.apiBase}/chat/completions`
   let lastError
+  const timeoutMs = readTimeoutMs(options.timeoutMs, 'ZHIPU_CHAT_TIMEOUT_MS', DEFAULT_CHAT_TIMEOUT_MS)
 
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try {
-      const response = await fetch(url, {
+      const response = await fetchWithTimeout(url, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${client.apiKey}`,
@@ -33,7 +37,7 @@ export async function zhipuChat(client, body, retries = 3) {
           temperature: 0.1,
           ...body,
         }),
-      })
+      }, timeoutMs)
 
       if (!response.ok) {
         const details = await safeReadText(response)
@@ -52,13 +56,14 @@ export async function zhipuChat(client, body, retries = 3) {
   throw lastError
 }
 
-export async function zhipuTool(client, tool, body = {}, retries = 3) {
+export async function zhipuTool(client, tool, body = {}, retries = 3, options = {}) {
   const url = `${client.apiBase}/tools`
   let lastError
+  const timeoutMs = readTimeoutMs(options.timeoutMs, 'ZHIPU_TOOL_TIMEOUT_MS', DEFAULT_CHAT_TIMEOUT_MS)
 
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try {
-      const response = await fetch(url, {
+      const response = await fetchWithTimeout(url, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${client.apiKey}`,
@@ -68,7 +73,7 @@ export async function zhipuTool(client, tool, body = {}, retries = 3) {
           tool,
           ...body,
         }),
-      })
+      }, timeoutMs)
 
       if (!response.ok) {
         const details = await safeReadText(response)
@@ -96,6 +101,8 @@ export async function zhipuWebSearch(client, query, options = {}) {
     search_recency_filter: options.recencyFilter || 'oneMonth',
     content_size: options.contentSize || 'medium',
     count: options.count,
+  }, options.retries ?? 3, {
+    timeoutMs: options.timeoutMs ?? readTimeoutMs(undefined, 'ZHIPU_SEARCH_TIMEOUT_MS', DEFAULT_SEARCH_TIMEOUT_MS),
   })
 }
 
@@ -103,23 +110,30 @@ export async function zhipuWebReader(client, url, options = {}) {
   return zhipuPost(client, 'reader', {
     url,
     ...options.extraBody,
+  }, options.retries ?? 2, {
+    timeoutMs: options.timeoutMs ?? readTimeoutMs(undefined, 'ZHIPU_READER_TIMEOUT_MS', DEFAULT_READER_TIMEOUT_MS),
   })
 }
 
-export async function zhipuPost(client, endpoint, body = {}, retries = 3) {
+export async function zhipuPost(client, endpoint, body = {}, retries = 3, options = {}) {
   const url = `${client.apiBase}/${endpoint}`
   let lastError
+  const timeoutMs = readTimeoutMs(
+    options.timeoutMs,
+    endpoint === 'reader' ? 'ZHIPU_READER_TIMEOUT_MS' : 'ZHIPU_SEARCH_TIMEOUT_MS',
+    endpoint === 'reader' ? DEFAULT_READER_TIMEOUT_MS : DEFAULT_SEARCH_TIMEOUT_MS,
+  )
 
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try {
-      const response = await fetch(url, {
+      const response = await fetchWithTimeout(url, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${client.apiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(stripUndefined(body)),
-      })
+      }, timeoutMs)
 
       if (!response.ok) {
         const details = await safeReadText(response)
@@ -215,6 +229,30 @@ function stripUndefined(value) {
   return Object.fromEntries(
     Object.entries(value).filter(([, item]) => item !== undefined && item !== ''),
   )
+}
+
+async function fetchWithTimeout(url, options, timeoutMs) {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), timeoutMs)
+
+  try {
+    return await fetch(url, {
+      ...options,
+      signal: controller.signal,
+    })
+  } catch (error) {
+    if (error?.name === 'AbortError') {
+      throw new Error(`request timed out after ${timeoutMs}ms`)
+    }
+    throw error
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
+function readTimeoutMs(value, envName, fallback) {
+  const parsed = Number(value ?? process.env[envName])
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback
 }
 
 async function safeReadText(response) {

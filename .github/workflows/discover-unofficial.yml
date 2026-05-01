@@ -15,6 +15,7 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,11 +41,22 @@ jobs:
           fi
 
       - name: Refresh unofficial discoveries and rebuild assets
+        timeout-minutes: 35
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           ZHIPU_MODEL: glm-4.5-flash
           ZHIPU_SEARCH_TOOL: search_pro
           ZHIPU_READER_TOOL: reader
+          ZHIPU_SEARCH_TIMEOUT_MS: 20000
+          ZHIPU_READER_TIMEOUT_MS: 20000
+          ZHIPU_CHAT_TIMEOUT_MS: 30000
+          ZHIPU_RETRIES: 1
+          DISCOVERY_BUDGET_MS: 1200000
+          DISCOVERY_MAX_QUERIES: 16
+          DISCOVERY_MAX_RESULTS: 8
+          DISCOVERY_MAX_READERS: 24
+          DISCOVERY_MIN_READERS: 8
+          DISCOVERY_MAX_BATCHES: 4
         run: npm run pipeline:refresh:discover
 
       - name: Upload discovery trace for debugging
