@@ -1,14 +1,74 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-03T06:00:37.132Z",
+  "generatedAt": "2026-05-03T06:09:11.920Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
+      "id": "unofficial-9662f73df483",
+      "title": "Grounded Vision-Language Models Research",
+      "titleZh": "基础视觉语言模型研究",
+      "summary": "从项目页或代码仓库识别到 ICLR 2026 接收信号，标题为 GitHub - JieyuZ2/jieyuz2.github.io。",
+      "reason": "作者在GitHub个人主页上明确提到'CVPR 2026 research entries'，表明有论文被CVPR 2026接受。研究兴趣包括视觉语言模型、多智能体系统等，与任务要求的研究领域高度相关。",
+      "primaryUrl": "https://github.com/JieyuZ2/jieyuz2.github.io",
+      "canonicalUrl": "https://github.com/JieyuZ2/jieyuz2.github.io",
+      "pdfUrl": "",
+      "sourceId": "unofficial-9662f73df483",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8,
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:31:45.466Z",
+      "updatedAt": "2026-05-03T06:06:39.360Z",
+      "lastCheckedAt": "",
+      "authors": [
+        "Jieyu Zhang"
+      ],
+      "keywords": [
+        "vision-language",
+        "llm",
+        "agents",
+        "vlm",
+        "agent",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/JieyuZ2/jieyuz2.github.io",
+          "title": "GitHub - JieyuZ2/jieyuz2.github.io",
+          "author": "Jieyu Zhang",
+          "snippet": "I'm a 4-th year Ph.D. student in Computer Science at the University of Washington, Seattle... My current research interests are interactive and data-centric AI/ML with an emphasis on faithful evaluation and effort-light approaches...",
+          "readerTitle": "GitHub - JieyuZ2/jieyuz2.github.io",
+          "readerExcerpt": "I'm a 4-th year Ph.D. student in Computer Science at the University of Washington, Seattle... My current research interests are interactive and data-centric AI/ML with an emphasis on faithful evaluation and effort-light approaches with applications in natural language processing, computer vision, foundation models, science, etc. I have contributed to many exciting projects including AutoGen, DataComp, and BLIP3.",
+          "publishDate": "2026-04-27",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/JieyuZ2/jieyuz2.github.io",
+          "title": "GitHub - JieyuZ2/jieyuz2.github.io · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit JieyuZ2 Update README.md success Apr 27, 2026 7334247 · Apr 27, 2026 History 489 Commits Open commit details 489 Commits _layouts _layouts Update default.html Jul 17, 2024 assets/ css assets/ css Update style.scss Apr 26, 2026 img img Add files via upload Jan 19, 2023 README.md README.md Update README.md Apr 27, 2026 _config.yml _config.yml Update _config.yml Jan 19, 2023 mentoring.md mentoring.md Update mentoring.md Apr 26, 2026 research.md research.md Revise CVPR 2026 research entries and add presentation info Apr 10, 2026 View all files Repository files navigation I'm a final year Ph.D. student in Computer Science at the University of Washington, Seattle, advised by Prof. Ranjay Krishna and Prof. Alex Ratner . Before that, I was an undergraduate student in Computer Science at the University of Illinois Urbana-Champaign, where I was fortunate to be advised by Prof. Jiawei Han . I study grounded vision-language models — buil",
+          "readerTitle": "GitHub - JieyuZ2/jieyuz2.github.io",
+          "readerExcerpt": "I'm a 4-th year Ph.D. student in Computer Science at the University of Washington, Seattle, advised by Prof. Ranjay Krishna and Prof. Alex Ratner. Before that, I was an undergraduate student in Computer Science at the University of Illinois Urbana-Champaign, where I was fortunate to be advised by Prof. Jiawei Han. __Research Interests__: My current research interests are __interactive and data-centric AI/ML__ with an emphasis on __faithful evaluation__ and __effort-light approaches__ with applications in natural language processing, computer vision, foundation models, science, etc. I have contributed to many exciting projects including AutoGen, DataComp, and BLIP3. My research is supported by 2024 Apple AI/ML PhD fellowship (Data-centric AI track) and OpenAI Superalignment Fellowship. I'm passionate about mentoring and teaching. I was - co-instructor of __CSE 455: Computer Vision (undergrad)__ - TA of __CS 344: Introduction to Data Management (undergrad)__ - TA of __CS 599C: Training Data Management & Weak Supervision (grad)__ - mentor of __CSE 492 R: CSE Group Research (undergrad)__. I'm happy to mentor a few students on research and especially encourage students from __underrepresented groups__ to reach out. If you are a junior student and want to discuss research and/or look for advice, feel free to schedule a chat via this link. ## 📑 AutoGen Blogs - AgentOptimizer: An Agentic Way to Train Your LLM Agent - Agent AutoBuild: Automatically Building Multi-agent Systems - EcoAssistant: Using LLM Assistant More Affordably and Accurately ## 📝 Selected Research (* denotes equal contribution) ### Agentic AI - Offline Training of Language Model Agents with Functions as Learnable Weights Shaokun Zhang*, __Jieyu Zhang*__, Jiale Liu, Linxin Song, Chi Wang, Ranjay Krishna, Qingyun Wu. _ICML 2024_ - AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework Qingyun Wu, Gagan Bansal, __Jieyu Zhang__, Yiran Wu, Beibin Li, Erkang Zhu, Li Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, Ahmed Awadallah, Ryen White, Doug Burger, Chi Wang _COLM 2024_ | _LLM Agents @ ICLR 2024_ Best Paper The Economist article The Forbes article ### Data-centric AI - Task",
+          "publishDate": "2026-04-27",
+          "query": "site:github.io \"paper\" \"LLM\" \"2026\""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
       "id": "unofficial-f312a023943c",
-      "title": "``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
+      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
       "summary": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation。",
       "reason": "Local high-confidence extraction found AAAI acceptance signal in the source title or excerpt.",
       "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
@@ -21,7 +81,7 @@
       "acceptedVenue": "AAAI",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T05:47:16.331Z",
-      "updatedAt": "2026-05-03T05:58:04.671Z",
+      "updatedAt": "2026-05-03T06:06:39.358Z",
       "lastCheckedAt": "",
       "authors": [],
       "keywords": [
@@ -206,52 +266,6 @@
           "title": "ACL 2026答得更准还写得更短?华为泰勒实验室提出SHAPE,给LLM推理装了个「推理税」",
           "snippet": "来自华为泰勒实验室､北京大学和上海财经大学的研究团队提出了 SHAPE(Stage-aware Hierarchical Advantage via Potential Estimation),给推理链装上了一套｢里程碑 + 推理税｣机制——不仅告诉模型每一步推得对不对,还让它为啰嗦付出代价｡结果是:准确率平均提升 3%,token 消耗直降 30%｡</p><p>该工作已被 ACL 2026 主会接收｡",
           "publishDate": "2026-04-28",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-9662f73df483",
-      "title": "Grounded Vision-Language Models Research",
-      "titleZh": "基础视觉语言模型研究",
-      "summary": "关于基础视觉语言模型的研究，包括多智能体框架和语言模型代理的训练方法",
-      "reason": "作者在GitHub个人主页上明确提到'CVPR 2026 research entries'，表明有论文被CVPR 2026接受。研究兴趣包括视觉语言模型、多智能体系统等，与任务要求的研究领域高度相关。",
-      "primaryUrl": "https://github.com/JieyuZ2/jieyuz2.github.io",
-      "canonicalUrl": "https://github.com/JieyuZ2/jieyuz2.github.io",
-      "pdfUrl": "",
-      "sourceId": "unofficial-9662f73df483",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:31:45.466Z",
-      "updatedAt": "2026-05-01T07:31:45.466Z",
-      "lastCheckedAt": "",
-      "authors": [
-        "Jieyu Zhang"
-      ],
-      "keywords": [
-        "vision-language",
-        "llm",
-        "agents"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/JieyuZ2/jieyuz2.github.io",
-          "title": "GitHub - JieyuZ2/jieyuz2.github.io",
-          "author": "Jieyu Zhang",
-          "snippet": "I'm a 4-th year Ph.D. student in Computer Science at the University of Washington, Seattle... My current research interests are interactive and data-centric AI/ML with an emphasis on faithful evaluation and effort-light approaches...",
-          "readerTitle": "GitHub - JieyuZ2/jieyuz2.github.io",
-          "readerExcerpt": "I'm a 4-th year Ph.D. student in Computer Science at the University of Washington, Seattle... My current research interests are interactive and data-centric AI/ML with an emphasis on faithful evaluation and effort-light approaches with applications in natural language processing, computer vision, foundation models, science, etc. I have contributed to many exciting projects including AutoGen, DataComp, and BLIP3.",
-          "publishDate": "2026-04-27",
           "query": ""
         }
       ],

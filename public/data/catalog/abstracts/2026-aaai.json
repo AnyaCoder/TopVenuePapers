@@ -5,10 +5,6 @@
   "count": 2376,
   "papers": [
     {
-      "id": "unofficial-f312a023943c",
-      "abstract": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation。"
-    },
-    {
       "id": "aaai-38975",
       "abstract": "The ASP(Q) language extends Answer Set Programming (ASP) with Quantifiers that operate over answer sets.\nThus, ASP(Q) facilitates a more natural encoding of problems whose complexity exceeds NP within the ASP framework.\nIn this paper we focus on ASP(Q) programs with two quantifiers, i.e., 2-ASP(Q) programs, which can be used to model problems in the second level of the Polynomial Hierarchy. \nIn particular, we propose an approach for evaluating 2-ASP(Q) programs that is inspired by Counterexample Guided Abstraction Refinement (CEGAR).\nUnlike existing state-of-the-art ASP(Q) solvers, which are typically based on QBF solvers, our new approach leverages ASP solvers, and suffers no overhead due to the effects of translating ASP(Q) in QBF.\nExperimental results demonstrate that our technique consistently outperforms state-of-the-art ASP(Q) solvers, across benchmark problems located at the second level of the polynomial hierarchy."
     },
@@ -4875,6 +4871,10 @@
     {
       "id": "aaai-38388",
       "abstract": "Rectification flow Transformers (RFTs) have shown promising performance in diffusion-based image synthesis but are typically confined to lower-resolution scenarios, limiting their ability to generate high-resolution images. \nExisting resolution extrapolation approaches often suffer from excessive computational overhead, resulting in prolonged inference times. \nWe propose LookFlow, a training-free high-resolution synthesis framework that accelerates inference while preserving visual quality.\nBuilding on pretrained text-to-image RFTs, LookFlow employs a dynamic lookahead guidance flow  mechanism to refine high-resolution velocity predictions by leveraging multi-timestep lookahead information extracted from a low-resolution flow. \nAdditionally, reusing temporally similar features across consecutive timesteps drastically reduces computation and significantly decreases inference time overhead.\nExtensive experiments on COCO demonstrate that LookFlow robustly scales resolutions from 4× to 25×, achieving up to a maximum speedup of 2.01× while maintaining competitive visual fidelity."
+    },
+    {
+      "id": "unofficial-f312a023943c",
+      "abstract": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation。"
     },
     {
       "id": "aaai-39082",
