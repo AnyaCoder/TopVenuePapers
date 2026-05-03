@@ -5,6 +5,7 @@ import {
   buildOfficialTitleIndex,
   buildUnofficialId,
   mergeUnofficialEntry,
+  normalizeAcceptedVenue,
   readUnofficialStore,
   writeUnofficialStore,
 } from './lib/unofficial-papers.mjs'
@@ -218,9 +219,11 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
 const allBatches = chunk(enrichedEvidence, extractionBatchSize)
 const batches = allBatches.slice(0, maxExtractionBatches)
 const skippedExtractionBatches = Math.max(0, allBatches.length - batches.length)
-const extractedCandidates = []
+const heuristicCandidates = extractHeuristicCandidates(enrichedEvidence, trace)
+const extractedCandidates = [...heuristicCandidates]
 
-logProgress(trace, `Extraction stage started: ${batches.length}/${allBatches.length} batches.`)
+logProgress(trace, `Heuristic extraction produced ${heuristicCandidates.length} candidates.`)
+logProgress(trace, `Zhipu extraction stage started: ${batches.length}/${allBatches.length} batches.`)
 
 for (const [batchIndex, batch] of batches.entries()) {
   if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
@@ -315,6 +318,165 @@ console.log(`Store additions: ${added}; updates: ${updated}`)
 if (!dryRun) {
   console.log(`Wrote ${storePath}`)
   console.log(`Wrote ${tracePath}`)
+}
+
+function extractHeuristicCandidates(evidenceItems, trace) {
+  const candidates = []
+  const skipped = []
+
+  for (const item of evidenceItems) {
+    const candidate = buildHeuristicCandidate(item)
+
+    if (candidate) {
+      candidates.push(candidate)
+    } else {
+      skipped.push(summarizeEvidence(item))
+    }
+  }
+
+  const deduped = dedupeCandidates(candidates)
+  trace.heuristicExtraction = {
+    candidateCount: deduped.length,
+    candidates: deduped.map((candidate) => ({
+      title: candidate.title,
+      status: candidate.status,
+      acceptedVenue: candidate.acceptedVenue || '',
+      confidence: candidate.confidence,
+      primaryUrl: candidate.primaryUrl,
+      reason: candidate.reason,
+    })),
+    skipped: skipped.slice(0, 12),
+  }
+
+  return deduped
+}
+
+function buildHeuristicCandidate(item) {
+  const sourceText = [
+    item.readerTitle,
+    item.title,
+    item.snippet,
+    item.readerExcerpt,
+    item.url,
+  ].filter(Boolean).join('\n')
+  const venue = normalizeAcceptedVenue(sourceText)
+  const title = cleanHeuristicTitle(item.readerTitle || item.title)
+  const text = normalizeForScoring(sourceText)
+
+  if (!venue || !hasCurrentVenueSignal(sourceText) || !title || !isLikelyPaperProject(item, text)) {
+    return null
+  }
+
+  return {
+    id: buildUnofficialId(title),
+    title,
+    summary: buildHeuristicSummary(title, venue.venue),
+    reason: `Local high-confidence extraction found ${venue.venue} acceptance signal in the source title or excerpt.`,
+    status: 'accepted',
+    confidence: item.relevance?.score >= 8 ? 0.88 : 0.76,
+    acceptedVenue: venue.venue,
+    acceptedYear: venue.year,
+    primaryUrl: item.url,
+    canonicalUrl: item.url,
+    authors: [],
+    keywords: inferKeywords(sourceText),
+    platforms: normalizeStringArray([item.platform || detectPlatform(item.url)]),
+    evidence: [{
+      platform: item.platform || detectPlatform(item.url),
+      url: item.url,
+      title: item.title || '',
+      author: item.author || '',
+      snippet: item.snippet || '',
+      readerTitle: item.readerTitle || '',
+      readerExcerpt: item.readerExcerpt || '',
+      publishDate: item.publishDate || '',
+      query: item.query || '',
+    }],
+    discoveredAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+function isLikelyPaperProject(item, text) {
+  if (!/github\.com|github\.io|arxiv\.org|\.edu|openreview\.net/i.test(item.url || '')) {
+    return false
+  }
+
+  if (/\bawesome\b|curated list|reading list|survey list|leaderboard|toolkit|benchmark list|hiring|recruit/i.test(text)) {
+    return false
+  }
+
+  if (/arxiv\.org\/list\//i.test(item.url || '')) {
+    return false
+  }
+
+  return /\bpaper\b|official repo|official code|project page|accepted|oral|poster|conference|论文|代码|项目/i.test(text)
+}
+
+function hasCurrentVenueSignal(text) {
+  return /\b(aaai|acl|emnlp|cvpr|iccv|iclr|icml|neurips|siggraph|kdd|www|ijcai|colm|mm|sigir)[-\s]?(?:2026|26)\b/i.test(text)
+}
+
+function cleanHeuristicTitle(value) {
+  let title = String(value ?? '')
+    .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
+    .replace(/[·|]\s*GitHub\s*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  title = title
+    .replace(/^\[[^\]]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW)[^\]]*\]\s*/i, '')
+    .replace(/^【[^】]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW)[^】]*】\s*/i, '')
+    .replace(/^Official\s+(Repo|Repository|Code)\s+for\s+(Paper\s+)?/i, '')
+    .replace(/^The official code for\s+/i, '')
+    .replace(/^Paper\s+[\"'`“”‘’]+/i, '')
+    .replace(/[\"'`“”‘’]+$/g, '')
+    .trim()
+
+  const quoted = title.match(/[\"'`“”‘’]{1,2}([^\"'`“”‘’]{18,220})[\"'`“”‘’]{1,2}/)?.[1]
+  if (quoted) {
+    title = quoted.trim()
+  }
+
+  if (title.length > 220) {
+    title = title.slice(0, 220).trim()
+  }
+
+  return title.length >= 12 ? title : ''
+}
+
+function buildHeuristicSummary(title, venue) {
+  return `从项目页或代码仓库识别到 ${venue} 接收信号，标题为 ${title}。`
+}
+
+function inferKeywords(text) {
+  const normalized = normalizeForScoring(text)
+  const keywords = []
+  const keywordSignals = [
+    ['llm', 'llm'],
+    ['large language model', 'llm'],
+    ['vlm', 'vlm'],
+    ['vision-language', 'vlm'],
+    ['multimodal', 'multimodal'],
+    ['multi-modal', 'multimodal'],
+    ['mllm', 'mllm'],
+    ['vla', 'vla'],
+    ['agent', 'agent'],
+    ['rag', 'rag'],
+    ['reasoning', 'reasoning'],
+    ['3d', '3d'],
+    ['robot', 'robotics'],
+    ['embodied', 'embodied ai'],
+    ['video', 'video understanding'],
+  ]
+
+  for (const [needle, keyword] of keywordSignals) {
+    if (normalized.includes(needle)) {
+      keywords.push(keyword)
+    }
+  }
+
+  return normalizeStringArray(keywords).slice(0, 10)
 }
 
 async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, trace) {
@@ -913,6 +1075,24 @@ function dedupeEvidence(items) {
   }
 
   return Array.from(byUrl.values())
+}
+
+function dedupeCandidates(items) {
+  const byTitle = new Map()
+
+  for (const item of items) {
+    const key = normalizeTitleKey(item.title)
+    if (!key) {
+      continue
+    }
+
+    const existing = byTitle.get(key)
+    if (!existing || item.confidence > existing.confidence) {
+      byTitle.set(key, item)
+    }
+  }
+
+  return Array.from(byTitle.values())
 }
 
 function isLikelyHelpfulReaderTarget(url) {
