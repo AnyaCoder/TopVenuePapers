@@ -47,7 +47,11 @@ const rawSearchPlans = args.query.length > 0
     }))
   : DEFAULT_SEARCH_PLANS
 const maxQueries = readPositiveInt(args.maxQueries ?? process.env.DISCOVERY_MAX_QUERIES, 16)
-const searchPlans = rawSearchPlans.slice(0, maxQueries)
+const searchPlans = selectSearchPlans(rawSearchPlans, {
+  maxQueries,
+  strategy: args.planStrategy ?? process.env.DISCOVERY_PLAN_STRATEGY,
+  preserveOrder: args.query.length > 0,
+})
 const skippedSearchPlans = Math.max(0, rawSearchPlans.length - searchPlans.length)
 const maxResultsPerQuery = readPositiveInt(args.maxResults ?? process.env.DISCOVERY_MAX_RESULTS, 8)
 const maxReaders = readPositiveInt(args.maxReaders ?? process.env.DISCOVERY_MAX_READERS, 24)
@@ -70,6 +74,8 @@ const trace = createTrace(client, {
   totalSearchPlans: rawSearchPlans.length,
   maxQueries,
   skippedSearchPlans,
+  selectedSearchPlanLabels: searchPlans.map((plan) => plan.label),
+  planStrategy: args.planStrategy ?? process.env.DISCOVERY_PLAN_STRATEGY ?? 'balanced',
   maxResultsPerQuery,
   maxReaders,
   minReaderCandidates,
@@ -455,6 +461,76 @@ function buildDefaultSearchPlans() {
     seen.add(key)
     return true
   })
+}
+
+function selectSearchPlans(plans, options) {
+  const maxQueries = Math.min(options.maxQueries, plans.length)
+
+  if (options.preserveOrder || options.strategy === 'prefix') {
+    return plans.slice(0, maxQueries)
+  }
+
+  const priority = ['homepage', 'arxiv', 'web', 'xiaohongshu', 'x']
+  const groups = new Map()
+
+  for (const plan of plans) {
+    const key = plan.platform || 'web'
+    if (!groups.has(key)) {
+      groups.set(key, [])
+    }
+    groups.get(key).push(plan)
+  }
+
+  const selected = []
+  const seen = new Set()
+
+  // First pass: guarantee that low-volume high-signal sources are represented.
+  for (const platform of priority) {
+    const item = groups.get(platform)?.shift()
+    if (item) {
+      selected.push(item)
+      seen.add(item.label)
+    }
+  }
+
+  // Round-robin the remaining quota so no noisy source can monopolize the run.
+  while (selected.length < maxQueries) {
+    let added = false
+
+    for (const platform of priority) {
+      const item = groups.get(platform)?.shift()
+      if (!item || seen.has(item.label)) {
+        continue
+      }
+
+      selected.push(item)
+      seen.add(item.label)
+      added = true
+
+      if (selected.length >= maxQueries) {
+        break
+      }
+    }
+
+    if (!added) {
+      break
+    }
+  }
+
+  if (selected.length < maxQueries) {
+    for (const plan of plans) {
+      if (seen.has(plan.label)) {
+        continue
+      }
+      selected.push(plan)
+      seen.add(plan.label)
+      if (selected.length >= maxQueries) {
+        break
+      }
+    }
+  }
+
+  return selected
 }
 
 function englishSocialPlans() {
@@ -957,6 +1033,8 @@ function parseArgs(argv) {
       parsed.query.push(argv[++index])
     } else if (arg === '--max-queries') {
       parsed.maxQueries = argv[++index]
+    } else if (arg === '--plan-strategy') {
+      parsed.planStrategy = argv[++index]
     } else if (arg === '--max-results') {
       parsed.maxResults = argv[++index]
     } else if (arg === '--max-readers') {
@@ -998,6 +1076,7 @@ Options:
   --official-catalog <path>    Official catalog mirror for dedupe.
   --query <text>               Search query. Repeatable.
   --max-queries <n>            Query-plan cap. Default: 16.
+  --plan-strategy <name>       Plan selection strategy: balanced or prefix. Default: balanced.
   --max-results <n>            Search hits per query. Default: 8.
   --max-readers <n>            Reader-enriched link cap. Default: 24.
   --min-readers <n>            Backfill at least this many links when available. Default: 8.

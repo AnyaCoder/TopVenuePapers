@@ -1,6 +1,12 @@
 name: Discover Unofficial Papers
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/discover-unofficial.yml'
+      - 'scripts/discover-unofficial-papers.mjs'
+      - 'scripts/lib/zhipu-client.mjs'
   schedule:
     - cron: '15 1 * * *'
   workflow_dispatch:
@@ -53,6 +59,7 @@ jobs:
           ZHIPU_RETRIES: 1
           DISCOVERY_BUDGET_MS: 1200000
           DISCOVERY_MAX_QUERIES: 16
+          DISCOVERY_PLAN_STRATEGY: balanced
           DISCOVERY_MAX_RESULTS: 8
           DISCOVERY_MAX_READERS: 24
           DISCOVERY_MIN_READERS: 8
