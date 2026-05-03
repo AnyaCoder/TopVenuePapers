@@ -956,7 +956,33 @@ function addWeightedSignals(text, signals, prefix, terms) {
 }
 
 function compareEvidenceRelevance(left, right) {
-  return (right.relevance?.score ?? 0) - (left.relevance?.score ?? 0)
+  return evidencePriority(right) - evidencePriority(left)
+}
+
+function evidencePriority(item) {
+  let score = item.relevance?.score ?? 0
+  const text = [
+    item.title,
+    item.snippet,
+    item.readerTitle,
+    item.readerExcerpt,
+    item.url,
+  ].filter(Boolean).join(' ')
+
+  if (/github\.com|github\.io/i.test(item.url || '')) {
+    score += 4
+  }
+  if (hasCurrentVenueSignal(text)) {
+    score += 8
+  }
+  if (/arxiv\.org\/list\//i.test(item.url || '')) {
+    score -= 8
+  }
+  if (/\bawesome\b|curated list|reading list|survey list|leaderboard/i.test(normalizeForScoring(text))) {
+    score -= 8
+  }
+
+  return score
 }
 
 function fillReaderCandidates(accepted, backfill, options) {

@@ -251,7 +251,7 @@ export function mergeUnofficialEntry(existing, incoming) {
     ...existing,
     ...incoming,
     id: existing.id ?? incoming.id ?? buildUnofficialId(existing.title || incoming.title),
-    title: pickBetterText(existing.title, incoming.title),
+    title: pickBetterTitle(existing.title, incoming.title),
     titleZh: pickBetterText(existing.titleZh, incoming.titleZh),
     summary: pickBetterText(existing.summary, incoming.summary),
     abstract: pickBetterText(existing.abstract, incoming.abstract),
@@ -413,6 +413,37 @@ function pickBetterText(left, right) {
   }
 
   return rightText.length > leftText.length ? rightText : leftText
+}
+
+function pickBetterTitle(left, right) {
+  const leftText = String(left ?? '').trim()
+  const rightText = String(right ?? '').trim()
+
+  if (!leftText || !rightText) {
+    return rightText || leftText || undefined
+  }
+
+  return titleQuality(rightText) >= titleQuality(leftText) ? rightText : leftText
+}
+
+function titleQuality(value) {
+  const text = String(value ?? '').trim()
+  let score = Math.min(text.length, 180)
+
+  if (/github|official repo|official code/i.test(text)) {
+    score -= 60
+  }
+  if (/^[`"“”‘’']|[`"“”‘’']$/.test(text)) {
+    score -= 20
+  }
+  if (/for$|via$|with$|and$|of$|the$/i.test(text)) {
+    score -= 80
+  }
+  if (/[.:?]$/.test(text)) {
+    score += 6
+  }
+
+  return score
 }
 
 function safeNumber(value) {
