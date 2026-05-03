@@ -1,11 +1,57 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-03T06:58:59.056Z",
+  "generatedAt": "2026-05-03T07:33:20.359Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-93d8a75fd664",
+      "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
+      "summary": "从项目页或代码仓库识别到 ICLR 2026 接收信号，标题为 TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis。",
+      "reason": "Local high-confidence extraction found ICLR 2026 acceptance signal in the source title or excerpt.",
+      "primaryUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+      "canonicalUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+      "pdfUrl": "",
+      "sourceId": "unofficial-93d8a75fd664",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.88,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T05:47:16.333Z",
+      "updatedAt": "2026-05-03T07:33:20.358Z",
+      "lastCheckedAt": "2026-05-03T07:33:20.357Z",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZJU4HealthCare/TumorChain",
+          "title": "GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
+          "snippet": "ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image",
+          "readerExcerpt": "reader failed: request timed out after 20000ms",
+          "publishDate": "2026-04-28",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=bmQXN1Kg5i",
+        "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
     {
       "id": "unofficial-b09792bf2db3",
       "title": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
@@ -88,52 +134,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-93d8a75fd664",
-      "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
-      "summary": "从项目页或代码仓库识别到 ICLR 2026 接收信号，标题为 TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis。",
-      "reason": "Local high-confidence extraction found ICLR 2026 acceptance signal in the source title or excerpt.",
-      "primaryUrl": "https://github.com/ZJU4HealthCare/TumorChain",
-      "canonicalUrl": "https://github.com/ZJU4HealthCare/TumorChain",
-      "pdfUrl": "",
-      "sourceId": "unofficial-93d8a75fd664",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.88,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T05:47:16.333Z",
-      "updatedAt": "2026-05-03T06:58:59.054Z",
-      "lastCheckedAt": "2026-05-03T06:58:59.054Z",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "reasoning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/ZJU4HealthCare/TumorChain",
-          "title": "GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
-          "snippet": "ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image",
-          "readerExcerpt": "reader failed: request timed out after 20000ms",
-          "publishDate": "2026-04-28",
-          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=bmQXN1Kg5i",
-        "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
-        "venue": "ICLR 2026 Poster"
-      }
     },
     {
       "id": "unofficial-439348b87abd",
