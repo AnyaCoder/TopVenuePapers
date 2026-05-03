@@ -2,8 +2,12 @@
   "key": "2026-aaai",
   "venue": "AAAI",
   "year": 2026,
-  "count": 2375,
+  "count": 2376,
   "papers": [
+    {
+      "id": "unofficial-f312a023943c",
+      "abstract": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation。"
+    },
     {
       "id": "aaai-38975",
       "abstract": "The ASP(Q) language extends Answer Set Programming (ASP) with Quantifiers that operate over answer sets.\nThus, ASP(Q) facilitates a more natural encoding of problems whose complexity exceeds NP within the ASP framework.\nIn this paper we focus on ASP(Q) programs with two quantifiers, i.e., 2-ASP(Q) programs, which can be used to model problems in the second level of the Polynomial Hierarchy. \nIn particular, we propose an approach for evaluating 2-ASP(Q) programs that is inspired by Counterexample Guided Abstraction Refinement (CEGAR).\nUnlike existing state-of-the-art ASP(Q) solvers, which are typically based on QBF solvers, our new approach leverages ASP solvers, and suffers no overhead due to the effects of translating ASP(Q) in QBF.\nExperimental results demonstrate that our technique consistently outperforms state-of-the-art ASP(Q) solvers, across benchmark problems located at the second level of the polynomial hierarchy."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-03T05:31:31.465Z",
+  "generatedAt": "2026-05-03T05:45:16.410Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -38,315 +38,319 @@
   },
   "progress": [
     {
-      "at": "2026-05-03T05:31:31.465Z",
+      "at": "2026-05-03T05:45:16.410Z",
       "message": "Discovery started: 16/33 queries, max 16 readers, max 4 extraction batches."
     },
     {
-      "at": "2026-05-03T05:31:31.468Z",
+      "at": "2026-05-03T05:45:16.413Z",
       "message": "[search 1/16] homepage-1: \"project page\" \"paper\" LLM VLM MLLM 2026"
     },
     {
-      "at": "2026-05-03T05:31:33.615Z",
-      "message": "[search 1/16] done raw=10 kept=3 rejected=7 in 2.1s"
+      "at": "2026-05-03T05:45:18.957Z",
+      "message": "[search 1/16] done raw=10 kept=3 rejected=7 in 2.5s"
     },
     {
-      "at": "2026-05-03T05:31:33.615Z",
+      "at": "2026-05-03T05:45:18.957Z",
       "message": "[search 2/16] arxiv-1: LLM VLM agent reasoning accepted 2026 paper arXiv"
     },
     {
-      "at": "2026-05-03T05:31:35.359Z",
-      "message": "[search 2/16] done raw=10 kept=10 rejected=0 in 1.7s"
+      "at": "2026-05-03T05:45:20.495Z",
+      "message": "[search 2/16] done raw=10 kept=10 rejected=0 in 1.5s"
     },
     {
-      "at": "2026-05-03T05:31:35.359Z",
+      "at": "2026-05-03T05:45:20.495Z",
       "message": "[search 3/16] cn-web-1: 新论文 大模型 多模态 AAAI ACL CVPR ICLR 2026"
     },
     {
-      "at": "2026-05-03T05:31:36.298Z",
-      "message": "[search 3/16] done raw=0 kept=0 rejected=0 in 939ms"
+      "at": "2026-05-03T05:45:21.544Z",
+      "message": "[search 3/16] done raw=0 kept=0 rejected=0 in 1.0s"
     },
     {
-      "at": "2026-05-03T05:31:36.298Z",
+      "at": "2026-05-03T05:45:21.544Z",
       "message": "[search 4/16] xiaohongshu-1: 小红书 新论文 大模型 多模态 2026"
     },
     {
-      "at": "2026-05-03T05:31:37.542Z",
-      "message": "[search 4/16] done raw=1 kept=0 rejected=1 in 1.2s"
+      "at": "2026-05-03T05:45:22.845Z",
+      "message": "[search 4/16] done raw=1 kept=0 rejected=1 in 1.3s"
     },
     {
-      "at": "2026-05-03T05:31:37.543Z",
+      "at": "2026-05-03T05:45:22.845Z",
       "message": "[search 5/16] x-introducing-our-paper-1: Introducing our paper LLM VLM multimodal agent reasoning 2026"
     },
     {
-      "at": "2026-05-03T05:31:38.525Z",
-      "message": "[search 5/16] done raw=0 kept=0 rejected=0 in 982ms"
+      "at": "2026-05-03T05:45:24.012Z",
+      "message": "[search 5/16] done raw=0 kept=0 rejected=0 in 1.2s"
     },
     {
-      "at": "2026-05-03T05:31:38.525Z",
+      "at": "2026-05-03T05:45:24.012Z",
       "message": "[search 6/16] homepage-2: \"project page\" \"accepted\" multimodal agent robotics 2026"
     },
     {
-      "at": "2026-05-03T05:31:40.112Z",
-      "message": "[search 6/16] done raw=10 kept=4 rejected=6 in 1.6s"
+      "at": "2026-05-03T05:45:25.506Z",
+      "message": "[search 6/16] done raw=10 kept=4 rejected=6 in 1.5s"
     },
     {
-      "at": "2026-05-03T05:31:40.112Z",
+      "at": "2026-05-03T05:45:25.506Z",
       "message": "[search 7/16] arxiv-2: multimodal video understanding robotics embodied AI new paper arXiv 2026"
     },
     {
-      "at": "2026-05-03T05:31:41.599Z",
-      "message": "[search 7/16] done raw=10 kept=10 rejected=0 in 1.5s"
+      "at": "2026-05-03T05:45:27.409Z",
+      "message": "[search 7/16] done raw=10 kept=10 rejected=0 in 1.9s"
     },
     {
-      "at": "2026-05-03T05:31:41.599Z",
+      "at": "2026-05-03T05:45:27.409Z",
       "message": "[search 8/16] cn-web-2: 论文接收 顶会 大模型 AAAI ACL CVPR ICLR 2026"
     },
     {
-      "at": "2026-05-03T05:31:42.360Z",
-      "message": "[search 8/16] done raw=0 kept=0 rejected=0 in 761ms"
+      "at": "2026-05-03T05:45:28.290Z",
+      "message": "[search 8/16] done raw=0 kept=0 rejected=0 in 881ms"
     },
     {
-      "at": "2026-05-03T05:31:42.360Z",
+      "at": "2026-05-03T05:45:28.290Z",
       "message": "[search 9/16] xiaohongshu-2: 小红书 论文接收 顶会 大模型 2026"
     },
     {
-      "at": "2026-05-03T05:31:43.428Z",
-      "message": "[search 9/16] done raw=0 kept=0 rejected=0 in 1.1s"
+      "at": "2026-05-03T05:45:29.467Z",
+      "message": "[search 9/16] done raw=0 kept=0 rejected=0 in 1.2s"
     },
     {
-      "at": "2026-05-03T05:31:43.428Z",
+      "at": "2026-05-03T05:45:29.468Z",
       "message": "[search 10/16] x-introducing-our-paper-2: Introducing our paper video understanding 3D Gaussian Splatting robotics embodied AI 2026"
     },
     {
-      "at": "2026-05-03T05:31:44.446Z",
-      "message": "[search 10/16] done raw=0 kept=0 rejected=0 in 1.0s"
+      "at": "2026-05-03T05:45:30.608Z",
+      "message": "[search 10/16] done raw=0 kept=0 rejected=0 in 1.1s"
     },
     {
-      "at": "2026-05-03T05:31:44.446Z",
+      "at": "2026-05-03T05:45:30.608Z",
       "message": "[search 11/16] homepage-3: site:github.io \"paper\" \"LLM\" \"2026\""
     },
     {
-      "at": "2026-05-03T05:31:46.017Z",
-      "message": "[search 11/16] done raw=10 kept=7 rejected=3 in 1.6s"
+      "at": "2026-05-03T05:45:32.362Z",
+      "message": "[search 11/16] done raw=10 kept=7 rejected=3 in 1.8s"
     },
     {
-      "at": "2026-05-03T05:31:46.017Z",
+      "at": "2026-05-03T05:45:32.362Z",
       "message": "[search 12/16] arxiv-3: 3D Gaussian Splatting VLM MLLM new paper 2026"
     },
     {
-      "at": "2026-05-03T05:31:48.078Z",
-      "message": "[search 12/16] done raw=10 kept=10 rejected=0 in 2.1s"
+      "at": "2026-05-03T05:45:34.144Z",
+      "message": "[search 12/16] done raw=10 kept=10 rejected=0 in 1.8s"
     },
     {
-      "at": "2026-05-03T05:31:48.078Z",
+      "at": "2026-05-03T05:45:34.144Z",
       "message": "[search 13/16] cn-web-3: 新论文 智能体 具身 AAAI ACL CVPR ICLR 2026"
     },
     {
-      "at": "2026-05-03T05:31:48.840Z",
-      "message": "[search 13/16] done raw=0 kept=0 rejected=0 in 762ms"
+      "at": "2026-05-03T05:45:35.018Z",
+      "message": "[search 13/16] done raw=0 kept=0 rejected=0 in 874ms"
     },
     {
-      "at": "2026-05-03T05:31:48.840Z",
+      "at": "2026-05-03T05:45:35.018Z",
       "message": "[search 14/16] xiaohongshu-3: 小红书 新论文 智能体 具身 2026"
     },
     {
-      "at": "2026-05-03T05:31:50.012Z",
-      "message": "[search 14/16] done raw=1 kept=0 rejected=1 in 1.2s"
+      "at": "2026-05-03T05:45:36.447Z",
+      "message": "[search 14/16] done raw=1 kept=0 rejected=1 in 1.4s"
     },
     {
-      "at": "2026-05-03T05:31:50.012Z",
+      "at": "2026-05-03T05:45:36.447Z",
       "message": "[search 15/16] x-introducing-our-paper-3: Introducing our paper VLA vision language action world model 2026"
     },
     {
-      "at": "2026-05-03T05:31:50.966Z",
-      "message": "[search 15/16] done raw=0 kept=0 rejected=0 in 954ms"
+      "at": "2026-05-03T05:45:37.516Z",
+      "message": "[search 15/16] done raw=0 kept=0 rejected=0 in 1.1s"
     },
     {
-      "at": "2026-05-03T05:31:50.966Z",
+      "at": "2026-05-03T05:45:37.516Z",
       "message": "[search 16/16] homepage-4: site:github.io \"multimodal\" \"paper\" \"2026\""
     },
     {
-      "at": "2026-05-03T05:31:52.481Z",
-      "message": "[search 16/16] done raw=10 kept=7 rejected=3 in 1.5s"
+      "at": "2026-05-03T05:45:39.216Z",
+      "message": "[search 16/16] done raw=10 kept=7 rejected=3 in 1.7s"
     },
     {
-      "at": "2026-05-03T05:31:52.482Z",
+      "at": "2026-05-03T05:45:39.216Z",
       "message": "Reader stage started: 16 candidate links."
     },
     {
-      "at": "2026-05-03T05:31:52.482Z",
+      "at": "2026-05-03T05:45:39.217Z",
       "message": "[reader 1/16] read GitHub - ActiveVisionLab/Awesome-LLM-3D: Awesome-LLM-3D: a curated list of Multi-modal La..."
     },
     {
-      "at": "2026-05-03T05:32:07.924Z",
-      "message": "[reader 1/16] done in 15.4s"
+      "at": "2026-05-03T05:45:40.596Z",
+      "message": "[reader 1/16] done in 1.4s"
     },
     {
-      "at": "2026-05-03T05:32:07.924Z",
+      "at": "2026-05-03T05:45:40.596Z",
       "message": "[reader 2/16] read Machine Learning"
     },
     {
-      "at": "2026-05-03T05:32:10.372Z",
-      "message": "[reader 2/16] done in 2.4s"
+      "at": "2026-05-03T05:45:43.542Z",
+      "message": "[reader 2/16] done in 2.9s"
     },
     {
-      "at": "2026-05-03T05:32:10.372Z",
+      "at": "2026-05-03T05:45:43.542Z",
       "message": "[reader 3/16] read GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for LoopLLM: Transfera..."
     },
     {
-      "at": "2026-05-03T05:32:11.381Z",
-      "message": "[reader 3/16] done in 1.0s"
+      "at": "2026-05-03T05:45:44.432Z",
+      "message": "[reader 3/16] done in 890ms"
     },
     {
-      "at": "2026-05-03T05:32:11.382Z",
+      "at": "2026-05-03T05:45:44.432Z",
       "message": "[reader 4/16] read GitHub - Persdre/awesome-llm-human-simulation: [ICLR 2025 BlogPost] LLM Simulating Humani..."
     },
     {
-      "at": "2026-05-03T05:32:12.635Z",
-      "message": "[reader 4/16] done in 1.3s"
+      "at": "2026-05-03T05:45:45.524Z",
+      "message": "[reader 4/16] done in 1.1s"
     },
     {
-      "at": "2026-05-03T05:32:12.635Z",
+      "at": "2026-05-03T05:45:45.524Z",
       "message": "[reader 5/16] read Programming Languages"
     },
     {
-      "at": "2026-05-03T05:32:13.250Z",
-      "message": "[reader 5/16] done in 615ms"
+      "at": "2026-05-03T05:46:05.527Z",
+      "message": "[reader 5/16] done in 20.0s error=request timed out after 20000ms"
     },
     {
-      "at": "2026-05-03T05:32:13.250Z",
+      "at": "2026-05-03T05:46:05.527Z",
       "message": "[reader 6/16] read Databases"
     },
     {
-      "at": "2026-05-03T05:32:14.058Z",
-      "message": "[reader 6/16] done in 808ms"
+      "at": "2026-05-03T05:46:24.711Z",
+      "message": "[reader 6/16] done in 19.2s"
     },
     {
-      "at": "2026-05-03T05:32:14.058Z",
+      "at": "2026-05-03T05:46:24.711Z",
       "message": "[reader 7/16] skip Thomas Cohn"
     },
     {
-      "at": "2026-05-03T05:32:14.058Z",
+      "at": "2026-05-03T05:46:24.711Z",
       "message": "[reader 7/16] done in 0ms"
     },
     {
-      "at": "2026-05-03T05:32:14.058Z",
+      "at": "2026-05-03T05:46:24.711Z",
       "message": "[reader 8/16] read Computer Science"
     },
     {
-      "at": "2026-05-03T05:32:14.731Z",
-      "message": "[reader 8/16] done in 673ms"
+      "at": "2026-05-03T05:46:27.273Z",
+      "message": "[reader 8/16] done in 2.6s"
     },
     {
-      "at": "2026-05-03T05:32:14.731Z",
+      "at": "2026-05-03T05:46:27.273Z",
       "message": "[reader 9/16] read GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Inte..."
     },
     {
-      "at": "2026-05-03T05:32:15.418Z",
-      "message": "[reader 9/16] done in 687ms"
+      "at": "2026-05-03T05:46:47.273Z",
+      "message": "[reader 9/16] done in 20.0s error=request timed out after 20000ms"
     },
     {
-      "at": "2026-05-03T05:32:15.418Z",
+      "at": "2026-05-03T05:46:47.273Z",
       "message": "[reader 10/16] read Mesoscale and Nanoscale Physics"
     },
     {
-      "at": "2026-05-03T05:32:16.386Z",
-      "message": "[reader 10/16] done in 968ms"
+      "at": "2026-05-03T05:46:49.470Z",
+      "message": "[reader 10/16] done in 2.2s"
     },
     {
-      "at": "2026-05-03T05:32:16.387Z",
+      "at": "2026-05-03T05:46:49.471Z",
       "message": "[reader 11/16] read GitHub - multimodal-art-projection/MAP-NEO · GitHub"
     },
     {
-      "at": "2026-05-03T05:32:33.001Z",
-      "message": "[reader 11/16] done in 16.6s"
+      "at": "2026-05-03T05:46:50.434Z",
+      "message": "[reader 11/16] done in 963ms"
     },
     {
-      "at": "2026-05-03T05:32:33.001Z",
+      "at": "2026-05-03T05:46:50.434Z",
       "message": "[reader 12/16] read Computer Science"
     },
     {
-      "at": "2026-05-03T05:32:33.719Z",
-      "message": "[reader 12/16] done in 718ms"
+      "at": "2026-05-03T05:46:51.232Z",
+      "message": "[reader 12/16] done in 798ms"
     },
     {
-      "at": "2026-05-03T05:32:33.719Z",
+      "at": "2026-05-03T05:46:51.232Z",
       "message": "[reader 13/16] read Computers and Society"
     },
     {
-      "at": "2026-05-03T05:32:38.671Z",
-      "message": "[reader 13/16] done in 5.0s"
+      "at": "2026-05-03T05:47:11.233Z",
+      "message": "[reader 13/16] done in 20.0s error=request timed out after 20000ms"
     },
     {
-      "at": "2026-05-03T05:32:38.671Z",
+      "at": "2026-05-03T05:47:11.233Z",
       "message": "[reader 14/16] read Statistics"
     },
     {
-      "at": "2026-05-03T05:32:58.674Z",
-      "message": "[reader 14/16] done in 20.0s error=request timed out after 20000ms"
+      "at": "2026-05-03T05:47:13.296Z",
+      "message": "[reader 14/16] done in 2.1s"
     },
     {
-      "at": "2026-05-03T05:32:58.674Z",
+      "at": "2026-05-03T05:47:13.296Z",
       "message": "[reader 15/16] read Computer Science"
     },
     {
-      "at": "2026-05-03T05:33:02.535Z",
-      "message": "[reader 15/16] done in 3.9s"
+      "at": "2026-05-03T05:47:15.531Z",
+      "message": "[reader 15/16] done in 2.2s"
     },
     {
-      "at": "2026-05-03T05:33:02.535Z",
+      "at": "2026-05-03T05:47:15.531Z",
       "message": "[reader 16/16] read GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph..."
     },
     {
-      "at": "2026-05-03T05:33:03.406Z",
-      "message": "[reader 16/16] done in 871ms"
+      "at": "2026-05-03T05:47:16.328Z",
+      "message": "[reader 16/16] done in 797ms"
     },
     {
-      "at": "2026-05-03T05:33:03.406Z",
-      "message": "Extraction stage started: 4/4 batches."
+      "at": "2026-05-03T05:47:16.335Z",
+      "message": "Heuristic extraction produced 2 candidates."
     },
     {
-      "at": "2026-05-03T05:33:03.406Z",
+      "at": "2026-05-03T05:47:16.335Z",
+      "message": "Zhipu extraction stage started: 4/4 batches."
+    },
+    {
+      "at": "2026-05-03T05:47:16.335Z",
       "message": "[extract 1/4] 4 evidence items."
     },
     {
-      "at": "2026-05-03T05:34:03.407Z",
+      "at": "2026-05-03T05:48:16.337Z",
       "message": "[extract 1/4] parsed=0"
     },
     {
-      "at": "2026-05-03T05:34:03.407Z",
+      "at": "2026-05-03T05:48:16.337Z",
       "message": "[extract 2/4] 4 evidence items."
     },
     {
-      "at": "2026-05-03T05:34:03.407Z",
+      "at": "2026-05-03T05:48:16.337Z",
       "message": "[extract 2/4] waiting 10.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-03T05:35:13.413Z",
+      "at": "2026-05-03T05:49:26.344Z",
       "message": "[extract 2/4] parsed=0"
     },
     {
-      "at": "2026-05-03T05:35:13.413Z",
+      "at": "2026-05-03T05:49:26.344Z",
       "message": "[extract 3/4] 4 evidence items."
     },
     {
-      "at": "2026-05-03T05:35:13.413Z",
+      "at": "2026-05-03T05:49:26.344Z",
       "message": "[extract 3/4] waiting 10.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-03T05:35:24.385Z",
+      "at": "2026-05-03T05:50:36.351Z",
       "message": "[extract 3/4] parsed=0"
     },
     {
-      "at": "2026-05-03T05:35:24.385Z",
+      "at": "2026-05-03T05:50:36.351Z",
       "message": "[extract 4/4] 4 evidence items."
     },
     {
-      "at": "2026-05-03T05:35:24.385Z",
+      "at": "2026-05-03T05:50:36.351Z",
       "message": "[extract 4/4] waiting 10.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-03T05:35:35.196Z",
+      "at": "2026-05-03T05:50:47.293Z",
       "message": "[extract 4/4] parsed=0"
     }
   ],
@@ -362,7 +366,7 @@
       "rawResultCount": 10,
       "resultCount": 3,
       "rejectedCount": 7,
-      "startedAt": "2026-05-03T05:31:31.468Z",
+      "startedAt": "2026-05-03T05:45:16.413Z",
       "results": [
         {
           "platform": "web",
@@ -460,7 +464,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2147
+      "durationMs": 2544
     },
     {
       "label": "arxiv-1",
@@ -473,7 +477,7 @@
       "rawResultCount": 10,
       "resultCount": 10,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:33.615Z",
+      "startedAt": "2026-05-03T05:45:18.957Z",
       "results": [
         {
           "platform": "arxiv",
@@ -616,7 +620,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1744
+      "durationMs": 1538
     },
     {
       "label": "cn-web-1",
@@ -629,7 +633,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:35.359Z",
+      "startedAt": "2026-05-03T05:45:20.495Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -639,7 +643,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 939
+      "durationMs": 1049
     },
     {
       "label": "xiaohongshu-1",
@@ -652,7 +656,7 @@
       "rawResultCount": 1,
       "resultCount": 0,
       "rejectedCount": 1,
-      "startedAt": "2026-05-03T05:31:36.298Z",
+      "startedAt": "2026-05-03T05:45:21.544Z",
       "results": [],
       "rejected": [
         {
@@ -673,7 +677,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1244
+      "durationMs": 1301
     },
     {
       "label": "x-introducing-our-paper-1",
@@ -686,7 +690,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:37.543Z",
+      "startedAt": "2026-05-03T05:45:22.845Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -696,7 +700,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 982
+      "durationMs": 1167
     },
     {
       "label": "homepage-2",
@@ -709,7 +713,7 @@
       "rawResultCount": 10,
       "resultCount": 4,
       "rejectedCount": 6,
-      "startedAt": "2026-05-03T05:31:38.525Z",
+      "startedAt": "2026-05-03T05:45:24.012Z",
       "results": [
         {
           "platform": "arxiv",
@@ -787,6 +791,20 @@
         },
         {
           "platform": "web",
+          "url": "http://algorithmic-robotics.org/",
+          "title": "WAFR 2026  Website of the 2026 World Symposium on the Algorithmic Foundations of Robotics (WAFR).",
+          "snippet": "17th World Symposium on the Algorithmic Foundations of Robotics (WAFR) The 17th World Symposium on the Algorithmic Foundations of Robotics (WAFR) will be held on June 15 to June 17, 2026 in Oulu, Finland.Symposium participants are also invited to join a day trip to the Arctic Circle on Sunday, June 14! Important dates Paper submission deadline: January 15, 2026 February 1, 2026 (Anywhere on Earth) Notification of acceptance: March 15, 2026 April 1, 2026 Preliminary paper deadline: May 15, 2026 Excursion to Arctic Circle: June 14, 2026 Symposium attendance: June 15-17, 2026 Note that the submission deadline has been extended. Call for papers The World Symposium on the Algorithmic Foundations ",
+          "publishDate": "2026-04-22",
+          "relevanceScore": 0,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:robotics",
+            "reject:non-paper-page"
+          ],
+          "queryLabel": "homepage-2"
+        },
+        {
+          "platform": "web",
           "url": "http://www.igm-china.com/?6zfs/ym9g7z.html",
           "title": "起始页 - igm robotersysteme AG - 来自奥地利的焊接机器人",
           "snippet": "main area No matching entries could be found 01 挖掘机 02 铁路 03 叉车 04 起重机 05 矿业 06 锅炉与船舶 07 其他行业 RTE400机器人 编程 在K6编程示教器和离线教学系统方面拥有卓越的编程技术 大工作区域 由于轴可以调整最佳位置,所以可以完美找到焊缝位置 最优设置 所有系统组件的最佳设置使得所有结构尺寸的传输时间减少高达30% 中空轴 所有电缆都在机器人手臂内使用空心轴 UzMetalMashExpo Tashkent/Uzbekistan International Industry Fair Celje/Slovenia 客户服务 igm客户和igm机器人: igm服务团队使其完美组合 培训课程 我们在全球很多地方设立了办事处,并提供全面的从基础到高级的培训。 示范和培训中心 在我们最先进的设备培训中心,我们提供各种基础和高级培训。 11 13 Welding, welding, welding 💥💪 #igmsystem #igmweldingrobot #igmrobotics #igmroboticwelding ... 19 igm insights 💥💪Bradly has been working as a service technician at igm since 2021 and is part ... 03.04.2026 18:03 12 igm insights  Bradly has been working as a service technician at",
@@ -809,18 +827,6 @@
             "venue:acl"
           ],
           "queryLabel": "homepage-2"
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/irishrobotics",
-          "title": "IrishRobotics · GitHub",
-          "snippet": "RHS Robotics 2014-Present United States of America Pinned Loading 2025 FRC Reefscape Java Our 2025 FTC robot code. Java 1 Java 1 Repositories Showing 10 of 20 repositories IrishRobotics/2026-FRC-Rebuilt’s past year of commit activity Our 2025 FTC robot code. IrishRobotics/FTC25’s past year of commit activity Java 1 BSD-3-Clause-Clear 8,952 6 0 Updated 2025 FRC Reefscape IrishRobotics/2025-Reefscape’s past year of commit activity Java 0 0 0 0 Updated IrishRobotics/2024-Crescendo’s past year of commit activity Java 0 0 0 0 Updated IrishRobotics/2023-ChargedUp’s past year of commit activity Java 0 0 0 1 Updated Rapid React 2606 main repo IrishRobotics/RapidReact2606’s past year of commit activi",
-          "publishDate": "2026-04-22",
-          "relevanceScore": 2,
-          "relevanceSignals": [
-            "topic:robotics"
-          ],
-          "queryLabel": "homepage-2"
         }
       ],
       "responseKeys": [
@@ -830,7 +836,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1587
+      "durationMs": 1494
     },
     {
       "label": "arxiv-2",
@@ -843,7 +849,7 @@
       "rawResultCount": 10,
       "resultCount": 10,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:40.112Z",
+      "startedAt": "2026-05-03T05:45:25.506Z",
       "results": [
         {
           "platform": "arxiv",
@@ -988,7 +994,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1487
+      "durationMs": 1903
     },
     {
       "label": "cn-web-2",
@@ -1001,7 +1007,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:41.599Z",
+      "startedAt": "2026-05-03T05:45:27.409Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1011,7 +1017,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 761
+      "durationMs": 881
     },
     {
       "label": "xiaohongshu-2",
@@ -1024,7 +1030,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:42.360Z",
+      "startedAt": "2026-05-03T05:45:28.290Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1034,7 +1040,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1068
+      "durationMs": 1177
     },
     {
       "label": "x-introducing-our-paper-2",
@@ -1047,7 +1053,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:43.428Z",
+      "startedAt": "2026-05-03T05:45:29.468Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1057,7 +1063,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1018
+      "durationMs": 1140
     },
     {
       "label": "homepage-3",
@@ -1070,7 +1076,7 @@
       "rawResultCount": 10,
       "resultCount": 7,
       "rejectedCount": 3,
-      "startedAt": "2026-05-03T05:31:44.446Z",
+      "startedAt": "2026-05-03T05:45:30.608Z",
       "results": [
         {
           "platform": "web",
@@ -1213,7 +1219,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1571
+      "durationMs": 1754
     },
     {
       "label": "arxiv-3",
@@ -1226,7 +1232,7 @@
       "rawResultCount": 10,
       "resultCount": 10,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:46.017Z",
+      "startedAt": "2026-05-03T05:45:32.362Z",
       "results": [
         {
           "platform": "arxiv",
@@ -1360,7 +1366,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2061
+      "durationMs": 1782
     },
     {
       "label": "cn-web-3",
@@ -1373,7 +1379,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:48.078Z",
+      "startedAt": "2026-05-03T05:45:34.144Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1383,7 +1389,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 762
+      "durationMs": 874
     },
     {
       "label": "xiaohongshu-3",
@@ -1396,7 +1402,7 @@
       "rawResultCount": 1,
       "resultCount": 0,
       "rejectedCount": 1,
-      "startedAt": "2026-05-03T05:31:48.840Z",
+      "startedAt": "2026-05-03T05:45:35.018Z",
       "results": [],
       "rejected": [
         {
@@ -1417,7 +1423,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1172
+      "durationMs": 1429
     },
     {
       "label": "x-introducing-our-paper-3",
@@ -1430,7 +1436,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-03T05:31:50.012Z",
+      "startedAt": "2026-05-03T05:45:36.447Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1440,7 +1446,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 954
+      "durationMs": 1069
     },
     {
       "label": "homepage-4",
@@ -1453,7 +1459,7 @@
       "rawResultCount": 10,
       "resultCount": 7,
       "rejectedCount": 3,
-      "startedAt": "2026-05-03T05:31:50.966Z",
+      "startedAt": "2026-05-03T05:45:37.516Z",
       "results": [
         {
           "platform": "web",
@@ -1600,7 +1606,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1515
+      "durationMs": 1700
     }
   ],
   "readers": [
@@ -1623,7 +1629,7 @@
       "queryLabel": "homepage-2",
       "readerTitle": "GitHub - ActiveVisionLab/Awesome-LLM-3D: Awesome-LLM-3D: a curated list of Multi-modal Large Language Model in 3D world  Resources · GitHub",
       "readerExcerpt": "GitHub - ActiveVisionLab/Awesome-LLM-3D: Awesome-LLM-3D: a curated list of Multi-modal Large Language Model in 3D world Resources · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - Resources - EXPLORE BY TOPIC - AI - Software Development - DevOps - Security - View all topics - EXPLORE BY TYPE - Customer stories - Events & webinars - Ebooks & reports - Business insights - GitHub Skills - SUPPORT & SERVICES - Documentation - Customer support - Co",
-      "durationMs": 15442,
+      "durationMs": 1380,
       "skipped": false
     },
     {
@@ -1643,7 +1649,7 @@
       "queryLabel": "arxiv-2",
       "readerTitle": "Machine Learning",
       "readerExcerpt": "Machine Learning Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.LG Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Machine Learning - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Friday, 1 May 2026 Total of 261 entries Showing up to 2000 entries per page: fewer | more | all ### New submissions (showing 87 of 87 entries) [1] arXiv:2604.26984 [pdf, html, other] : Title: Monitoring Neural Training with Topology: A Footprint-Predictable Collapse Index Alexander Kalinowski Subjects: Machine Learning (cs.LG) Representational collapse, where embeddings become ",
-      "durationMs": 2448,
+      "durationMs": 2946,
       "skipped": false
     },
     {
@@ -1663,7 +1669,7 @@
       "queryLabel": "homepage-3",
       "readerTitle": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation''",
       "readerExcerpt": "This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## π Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90% of the maximum output length, compared to 20% for baselines, and improving transferability by around 40% to DeepSeek-V3 and Gemini 2.5 Flash. ![Image 1: overview](https://github.com/neuron-insight-lab/L",
-      "durationMs": 1009,
+      "durationMs": 890,
       "skipped": false
     },
     {
@@ -1683,7 +1689,7 @@
       "queryLabel": "homepage-3",
       "readerTitle": "GitHub - Persdre/awesome-llm-human-simulation: [ICLR 2025 BlogPost] LLM Simulating Humanity Papers https://arxiv.org/abs/2501.08579",
       "readerExcerpt": "![Image 1: PR Welcome](https://camo.githubusercontent.com/8044932e4d65e1fbb9c1a6748c252052df35e41ac18b4a6548aba1ce19a72a40/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e) ![Image 2: License: MIT](https://camo.githubusercontent.com/fdf2982b9f5d7489dcf44570e714e3a15fce6253e0cc6b5aa61a075aac2ff71b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667) A curated list of research papers and resources on __LLM-based Human Simulation__ — the use of Large Language Models to simulate human behavior, cognition, and social interactions. This rapidly growing field spans psychology, economics, education, political science, and AI safety. Contributions are welcome! If you would like to add a paper, please open a pull request. --- ## Table of Contents - 1. Foundations & Surveys - 2. LLM for Human Behavior Simulation - 3. LLM Agent - 4. LLM Bias & Value - 5. LLM Simulation Applications - 5.1 Economics & Finance - 5.2 Politics & Society - 5.3 Education - 5.4 Recommendation System & User Simulation - 5.5 Customer & Consumer Simulation - 5.6 Others - 6. LLM Evaluation - 7. Cognition & Psychology - 8. Social Simulation - 9. Conference - 10. Others - Acknowledgement - Citation --- ## 1. Foundations & Surveys - __From Persona to Personalization: A Survey on Role-Playing Language Agents__ (arXiv",
-      "durationMs": 1253,
+      "durationMs": 1092,
       "skipped": false
     },
     {
@@ -1700,9 +1706,10 @@
         "topic:agent"
       ],
       "queryLabel": "arxiv-1",
-      "readerTitle": "Programming Languages",
-      "readerExcerpt": "Programming Languages Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.PL Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Programming Languages ## Authors and titles for recent submissions - Fri, 1 May 2026 - Thu, 30 Apr 2026 - Wed, 29 Apr 2026 - Tue, 28 Apr 2026 - Mon, 27 Apr 2026 See today's new changes Total of 21 entries Showing up to 50 entries per page: fewer | more | all ### Fri, 1 May 2026 (showing 6 of 6 entries ) [1] arXiv:2604.27863 [pdf, other] : Title: A Monadic Implementation of Functional Logic Programs Michael Hanus, Kai-Oliver Prott, Finn Teegen Comments: Under consideration in Theory a",
-      "durationMs": 615,
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "readerError": "request timed out after 20000ms",
+      "durationMs": 20003,
       "skipped": false
     },
     {
@@ -1721,7 +1728,7 @@
       "queryLabel": "arxiv-2",
       "readerTitle": "Databases",
       "readerExcerpt": "Databases Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.DB Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Databases ## Authors and titles for recent submissions - Fri, 1 May 2026 - Thu, 30 Apr 2026 - Wed, 29 Apr 2026 - Tue, 28 Apr 2026 - Mon, 27 Apr 2026 See today's new changes Total of 33 entries Showing up to 50 entries per page: fewer | more | all ### Fri, 1 May 2026 (showing 8 of 8 entries ) [1] arXiv:2604.28141 [pdf, other] : Title: Index-Assisted Stratified Sampling for Online Aggregation Yunnan Yu, Zhuoyue Zhao Subjects: Databases (cs.DB) [2] arXiv:2604.28079 [pdf, html, other] : Title: Tailw",
-      "durationMs": 808,
+      "durationMs": 19184,
       "skipped": false
     },
     {
@@ -1759,7 +1766,7 @@
       "queryLabel": "arxiv-2",
       "readerTitle": "Computer Science",
       "readerExcerpt": "Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Wed, 19 Feb 2025 - Tue, 18 Feb 2025 - Mon, 17 Feb 2025 - Fri, 14 Feb 2025 - Thu, 13 Feb 2025 See today's new changes Total of 3025 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3001-3025 Showing up to 25 entries per page: fewer | more | all ### Wed, 19 Feb 2025 (continued, showing 25 of 598 entries ) [361] arXiv:2502.12501 [pdf, html, other] : Title: Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge Qiyuan Zhang, Y",
-      "durationMs": 673,
+      "durationMs": 2562,
       "skipped": false
     },
     {
@@ -1776,9 +1783,10 @@
         "venue:iclr"
       ],
       "queryLabel": "homepage-4",
-      "readerTitle": "GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis‘’",
-      "readerExcerpt": "Sijing Li1,2*, Zhongwei Qiu2,3,1*, Jiang Liu1, Wenqiao Zhang1†, Tianwei Lin1,2, Yihan Xie1, Jianxiang An1, Boxiang Yun2, Chenglin Yang1, Jun Xiao1, Guangyu Guo2,1, Jiawen Yao2, Wei Liu2, Yuan Gao2, Ke Yan2, Weiwei Cao2, Zhilin Zheng2 Tony C. W. MOK2, Kai Cao4, Yu Shi5, Jiuyu Zhang5, Jian Zhou6 Beng Chin Ooi1, Yingda Xia†2, Ling Zhang2 1Zhejiang University 2DAMO Academy, Alibaba Group 3Hupan Lab 4Shanghai Institution of Pancreatic Disease 5Shengjing Hospital of China Medical University 6Sun Yat-sen University Cancer Center ![Image 1](https://camo.githubusercontent.com/ffb10f4c78537310375b88fb12757d6375a4ec30641b4069801d2cf6a7b58859/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617065722d41727869762d726564) ![Image 2](https://camo.githubusercontent.com/f4f2f8b61d31647b57e2ff7dd46e74d0cb65d9ad57aff2a36a80a6961bef5906/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f44414d4f2d4769744875622d677265656e) ## 🌟 Overview Welcome to __TumorChain!__ Our goal is to advance clinical tumor analysis through reliable multimodal reasoning at scale. This project presents a cohesive three-part framework—Dataset, Benchmark, and Model—to enable safe, explainable, and reproducible tumor assessment in high-stakes settings. ![Image 3](https://github.com/ZJU4HealthCare/TumorChain/raw/main/image/teaser.png) ##### 👏 Core Vision: - Establish a closed-loop multimodal reasoning pipel",
-      "durationMs": 687,
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "readerError": "request timed out after 20000ms",
+      "durationMs": 20000,
       "skipped": false
     },
     {
@@ -1796,7 +1804,7 @@
       "queryLabel": "arxiv-1",
       "readerTitle": "Mesoscale and Nanoscale Physics",
       "readerExcerpt": "Mesoscale and Nanoscale Physics Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cond-mat.mes-hall Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Mesoscale and Nanoscale Physics ## Authors and titles for recent submissions - Thu, 26 Jun 2025 - Wed, 25 Jun 2025 - Tue, 24 Jun 2025 - Mon, 23 Jun 2025 - Thu, 19 Jun 2025 See today's new changes Total of 110 entries : 1-100 101-110 Showing up to 100 entries per page: fewer | more | all ### Thu, 26 Jun 2025 (showing 21 of 21 entries ) [1] arXiv:2506.20571 [pdf, html, other] : Title: Micromagnetic structure of oxidized magnetite nanoparticles: sharp structural versus diffuse magnetic interface Elizabeth M. Jefremov",
-      "durationMs": 968,
+      "durationMs": 2197,
       "skipped": false
     },
     {
@@ -1815,7 +1823,7 @@
       "queryLabel": "homepage-4",
       "readerTitle": "GitHub - multimodal-art-projection/MAP-NEO",
       "readerExcerpt": "## MAP-NEO: A fully open-sourced Large Language Model __MAP-NEO__ is a __fully open-sourced__ Large Language Model that includes the pretraining data, a data processing pipeline (__Matrix__), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-model-like performance in challenging tasks such as reasoning, mathematics, and coding, outperforming its peers of similar size. For research purposes, we aim to achieve full transparency in the LLM training process. To this end, we have made a comprehensive release of MAP-Neo, including the final and intermediate checkpoints, a self-trained tokenizer, the pre-training corpus, and an efficient, stable optimized pre-training codebase. ![Image 1: SLAM-LLM Logo](https://github.com/multimodal-art-projection/MAP-NEO/raw/main/figure/map-neo-bold.jpg) ![Image 2: Discord](https://camo.githubusercontent.com/db20181591cd7dd6b91cd192b65e526a5dd3f3c68a38d457204a7bf65961087e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446973636f72642d4d41502532304e454f2d3732383964613f6c6f676f3d646973636f7264266c6f676f436f6c6f723d776869746526636f6c6f723d373238396461) ![Image 3: Wechat](https://camo.githubusercontent.com/3459053134e29318e3e8d44ae48a4c4bd05ad67e1431d1af3f5e9ec813948d0c/68747470733a2f2f696d672e736869656c6",
-      "durationMs": 16614,
+      "durationMs": 963,
       "skipped": false
     },
     {
@@ -1833,7 +1841,7 @@
       "queryLabel": "homepage-2",
       "readerTitle": "Computer Science",
       "readerExcerpt": "Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Thu, 11 Sep 2025 - Wed, 10 Sep 2025 - Tue, 9 Sep 2025 - Mon, 8 Sep 2025 - Fri, 5 Sep 2025 See today's new changes Total of 2511 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 2501-2511 Showing up to 25 entries per page: fewer | more | all ### Thu, 11 Sep 2025 (continued, showing last 19 of 425 entries ) [407] arXiv:2509.08171 (cross-list from quant-ph) [pdf, html, other] : Title: RAPID Quantum Detection and Demodulation of Covert Communications: Bre",
-      "durationMs": 718,
+      "durationMs": 798,
       "skipped": false
     },
     {
@@ -1848,9 +1856,10 @@
         "paper:arxiv"
       ],
       "queryLabel": "arxiv-1",
-      "readerTitle": "Computers and Society",
-      "readerExcerpt": "Computers and Society Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.CY Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computers and Society - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Friday, 1 May 2026 Total of 48 entries Showing up to 2000 entries per page: fewer | more | all ### New submissions (showing 23 of 23 entries) [1] arXiv:2604.26954 [pdf, other] : Title: The Impact of LLM Self-Consistency and Reasoning Effort on Automated Scoring Accuracy and Cost Scott Frohn Comments: 14 pages, 10 tables, 2 figures. Presented at the 2026 National Counc",
-      "durationMs": 4952,
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "readerError": "request timed out after 20000ms",
+      "durationMs": 20001,
       "skipped": false
     },
     {
@@ -1865,10 +1874,9 @@
         "paper:arxiv"
       ],
       "queryLabel": "arxiv-3",
-      "readerTitle": "",
-      "readerExcerpt": "",
-      "readerError": "request timed out after 20000ms",
-      "durationMs": 20003,
+      "readerTitle": "Statistics",
+      "readerExcerpt": "Statistics Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > stat Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Statistics - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Friday, 1 May 2026 Total of 82 entries Showing up to 2000 entries per page: fewer | more | all ### New submissions (showing 28 of 28 entries) [1] arXiv:2604.26992 [pdf, html, other] : Title: Adaptive Robust Confidence Intervals in Efron's Gaussian Two-Groups Model Qiaosen Wang, Shuwen Chai, Chao Gao Subjects: Statistics Theory (math.ST); Methodology (stat.ME); Machine Learning (stat.ML) Rob",
+      "durationMs": 2063,
       "skipped": false
     },
     {
@@ -1885,7 +1893,7 @@
       "queryLabel": "arxiv-3",
       "readerTitle": "Computer Science",
       "readerExcerpt": "Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Tuesday, 18 November 2025 Total of 1995 entries : 1-250 251-500 380-629 501-750 751-1000 1001-1250 ... 1751-1995 Showing up to 250 entries per page: fewer | more | all ### New submissions (continued, showing 250 of 1177 entries) [380] arXiv:2511.12175 [pdf, html, other] : Title: AI-Enhanced IoT Systems for Predictive Maintenance and Affordability Optimization in Smart Microgrids: A Digital Twin Approach Koushik Ahmed Kushal, Florimo",
-      "durationMs": 3861,
+      "durationMs": 2235,
       "skipped": false
     },
     {
@@ -1903,7 +1911,7 @@
       "queryLabel": "homepage-4",
       "readerTitle": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG",
       "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone h",
-      "durationMs": 871,
+      "durationMs": 797,
       "skipped": false
     }
   ],
@@ -1922,7 +1930,7 @@
     {
       "index": 1,
       "evidenceCount": 4,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the search and reader evidence below.\n- Extract only items that are likely to be real research papers or paper project pages.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Prefer announcements using phrases like \"Introducing\", \"new work\", \"our paper\", \"accepted to\", or venue names.\n- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.\n- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- If acceptance is unclear, use status \"candidate\".\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nEvidence:\n[\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs.PL/recent\",\n    \"title\": \"Programming Languages\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 48 entries Showing up to 50 entries per page: fewer | more | all Title: HELIX: Verified compilation of cyber-physical controlTo Binaries To Make Disassembly Decidable Comments: 12 pages, 5 figures, 2 tables. Submitted to QRS 2026 Subjects: Cryptography and Security (cs.CR) ; Programming Languages (cs.PL) Title: Formally Vertelligence (cs.AI) ; Logic in Computer Science (cs.LO); Programming Languages (cs.PL) Title: ARGUS: Agentic GPU Optimization Guided by Data-Flow Invariants Subjects: Distributed, Parallel, and Clusterial Cyber-Physical Systems Subjects: Programming Languages (cs.PL) Title: Provable Coordination for LLM Agents via Message Sequence Charts Comments: 39 pages Subjects: Programming Languages (cs.PL) ; Artintracts for typed JVM and Spark pipelines Comments: 7 pages, 2 figures, 1 table. Mechanism artifact paper with reproducible benchmarks. Code at this https URL Subjects: Programming Languages (cs.P\",\n    \"publishDate\": \"2026-04-22\",\n    \"query\": \"LLM VLM agent reasoning accepted 2026 paper arXiv\",\n    \"queryLabel\": \"arxiv-1\",\n    \"relevance\": {\n      \"score\": 10,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\",\n        \"topic:llm\",\n        \"topic:agent\"\n      ]\n    },\n    \"readerTitle\": \"Programming Languages\",\n    \"readerExcerpt\": \"Programming Languages Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.PL Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Programming Languages ## Authors and titles for recent submissions - Fri, 1 May 2026 - Thu, 30 Apr 2026 - Wed, 29 Apr 2026 - Tue, 28 Apr 2026 - Mon, 27 Apr 2026 See today's new changes Total of 21 entries Showing up to 50 entries per page: fewer | more | all ### Fri, 1 May 2026 (showing 6 of 6 entries ) [1] arXiv:2604.27863 [pdf, other] : Title: A Monadic Implementation of Functional Logic Programs Michael Hanus, Kai-Oliver Prott, Finn Teegen Comments: Under consideration in Theory and Practice of Logic Programming (TPLP) Subjects: Programming Languages (cs.PL) [2] arXiv:2604.26967 [pdf, html, other] : Title: Literate Execution Joe Bond, Jacob Pake, Cristina David, Andrew McNutt, Trevor Sseguya Muwonge, Dominic Orchard, Roly Perera Subjects: Programming Languages (cs.PL) [3] arXiv:2604.27644 (cross-list from cs.LG) [pdf, html, other] : Title: ANCORA: Learning to Question via Manifold-Anchored Self-Play for Verifiable Reasoning Chengcao Yang, Jun Chen Subjects: Machine Learning (cs.LG); Artificial Intelligence (cs.AI); Programming Languages (cs.PL) [4] arXiv:2604.27268 (cross-list from cs.LO) [pdf, other] : Title: A Diagrammatic Axiomatisation of Behavioural Distance of Nondeterministic Processes Wojciech Różowski, Robin Piedeleu, Alexandra Silva, Fabio Zanasi Comments\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs.DB/recent\",\n    \"title\": \"Databases\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 43 entries Showing up to 50 entries per page: fewer | more | all Title: An Alternate Agentic AI Architecture (It's About the Data) Comments: 15 pages,2 figures, 2 tables Subjects: Databases (cs.DB) Title: SQLyzr: A Comprehensive Benchmark and Evaluation Platform for Text-to-SQL Subjects: Databases (cs.DB) ; Artificial Intelligence (cs.AI) Title: Towards Universal Tabular Embeddings: A Benchmark Across Data Tasks Subjects: Machine Learning (cs.LG) ; Databases (cs.DB) Title: Using ASP(Q) to Handle Inconsistent Prioritized Data Comments: This is an extended version of a paper appearing at the 23rd International Conference on Principles of Knowledge Representation and Reasoning (KR 2026). 21 pages Subjects: Logic in Computer Science (cs.LO) ; Artificial Intelligence (cs.AI); Databases (cs.DB) Title: Research on the efficiency of data loading and storage in Data Lakehouse architectures for the formation of analytical\",\n    \"publishDate\": \"2026-04-24\",\n    \"query\": \"multimodal video understanding robotics embodied AI new paper arXiv 2026\",\n    \"queryLabel\": \"arxiv-2\",\n    \"relevance\": {\n      \"score\": 10,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\",\n        \"topic:agent\",\n        \"topic:reasoning\"\n      ]\n    },\n    \"readerTitle\": \"Databases\",\n    \"readerExcerpt\": \"Databases Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.DB Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Databases ## Authors and titles for recent submissions - Fri, 1 May 2026 - Thu, 30 Apr 2026 - Wed, 29 Apr 2026 - Tue, 28 Apr 2026 - Mon, 27 Apr 2026 See today's new changes Total of 33 entries Showing up to 50 entries per page: fewer | more | all ### Fri, 1 May 2026 (showing 8 of 8 entries ) [1] arXiv:2604.28141 [pdf, other] : Title: Index-Assisted Stratified Sampling for Online Aggregation Yunnan Yu, Zhuoyue Zhao Subjects: Databases (cs.DB) [2] arXiv:2604.28079 [pdf, html, other] : Title: Tailwind: A Practical Framework for Query Accelerators Geoffrey X. Yu, Ryan Marcus, Tim Kraska Comments: 15 pages, 11 figures Subjects: Databases (cs.DB) [3] arXiv:2604.27261 [pdf, html, other] : Title: SynSQL: Synthesizing Relational Databases for Robust Evaluation of Text-to-SQL Systems Mohammadamin Habibollah, Davood Rafiei Subjects: Databases (cs.DB) [4] arXiv:2604.27252 [pdf, html, other] : Title: Unified Data Discovery across Query Modalities and User Intents Tingting Wang, Shixun Huang, Zhifeng Bao, J. Shane Culpepper, Shazia Sadiq, Volkan Dedeoglu, Reza Arablouei Subjects: Databases (cs.DB) [5] arXiv:2604.27223 [pdf, html, other] : Title: Graphify: Automated Synthesis of Type-Safe Graph Backends via $O(S)$ GraphQL-to-Gremlin Transpilation Johannes Graf Comments: 18 pages, 5 figures. Int\"\n  },\n  {\n    \"platform\": \"web\",\n    \"url\": \"http://tommycohn.com/\",\n    \"title\": \"Thomas Cohn\",\n    \"author\": \"\",\n    \"snippet\": \"About Me Thomas Cohn Robotics &bullet; Math &bullet; Computer Science Computer Science PhD student at the Massachusetts Institute of Technology, advised by Russ Tedrake. Member of the Robot Locomotion Group . CV (Last updated April 2026) Research Blog Featured Videos Publications & Preprints \\\"SceneSmith: Agentic Generation of Simulation-Ready Indoor Scenes\\\" (Under review) Nicholas Pfaff , Thomas Cohn , Sergey Zakharov , Rick Cory , Russ Tedrake [ Preprint ] [ Project Page ] We present an automated agentic pipeline for generating simulation-ready scenes from only a natural language description, including fully automated asset generation and physical property estimation. These scenes can be used to safely evaluate robot foundation models at scale. \\\"A Framework for Combining Optimization-Based and Analytic Inverse Kinematics\\\" (Under review) Thomas Cohn* , Lihan Tang* , Alexandre Amice , Russ Tedrake *Denotes equal contribution. [ Preprint ] We present a new formulation for optimization IK\",\n    \"publishDate\": \"2026-04-23\",\n    \"query\": \"\\\"project page\\\" \\\"accepted\\\" multimodal agent robotics 2026\",\n    \"queryLabel\": \"homepage-2\",\n    \"relevance\": {\n      \"score\": 9,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:preprint\",\n        \"paper:project page\",\n        \"topic:agent\",\n        \"topic:robotics\"\n      ]\n    },\n    \"readerTitle\": \"\",\n    \"readerExcerpt\": \"\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs/recent?skip=360&show=25\",\n    \"title\": \"Computer Science\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 3858 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3851-3858 Showing up to 25 entries per pan Configuration via Relaxed Coverage and Revisit Objectives Shreeyam Kacker , Kerri Cahoy Subjects: Robotics (cs.RO) Title: Three-Module SC-VAMP for LDPC-Coded Nonlinear Channels Tadashi Wadayama , Takumi Takahashi Subjects: Information Theory (cs.IT) Title: Reinforcement Learning Improves LLM Accuracy and Reasoning in Disease Classification from Radiology Reports Yishu Wei , Yi Lin , Adam Flanders , George Shih , Yifan Peng Subjects: Artificial Intelligence (cs.AI) Title: AeroBridge-TTA: Test-Time Adaptive Language-Conditioned Control for UAVs Lingxue Lyu Subjects: Robotics (cs.RO) Title: Heuristic Search Space Partitioning for Low-Latency Multi-Tenant Cloud Queries Prashant Kumar Pathak , Chandra Biksheswaran Mouleeswaran , Rama Teja Repaka Comments: 10 pages, 3 figures, 3 tables. Submit\",\n    \"publishDate\": \"2026-04-22\",\n    \"query\": \"multimodal video understanding robotics embodied AI new paper arXiv 2026\",\n    \"queryLabel\": \"arxiv-2\",\n    \"relevance\": {\n      \"score\": 9,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:arxiv\",\n        \"topic:llm\",\n        \"topic:reasoning\",\n        \"topic:robotics\"\n      ]\n    },\n    \"readerTitle\": \"Computer Science\",\n    \"readerExcerpt\": \"Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Wed, 19 Feb 2025 - Tue, 18 Feb 2025 - Mon, 17 Feb 2025 - Fri, 14 Feb 2025 - Thu, 13 Feb 2025 See today's new changes Total of 3025 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3001-3025 Showing up to 25 entries per page: fewer | more | all ### Wed, 19 Feb 2025 (continued, showing 25 of 598 entries ) [361] arXiv:2502.12501 [pdf, html, other] : Title: Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge Qiyuan Zhang, Yufei Wang, Yuxin Jiang, Liangyou Li, Chuhan Wu, Yasheng Wang, Xin Jiang, Lifeng Shang, Ruiming Tang, Fuyuan Lyu, Chen Ma Subjects: Computation and Language (cs.CL) [362] arXiv:2502.12499 [pdf, html, other] : Title: GPU Memory Usage Optimization for Backward Propagation in Deep Network Training Ding-Yong Hong, Tzu-Hsien Tsai, Ning Wang, Pangfeng Liu, Jan-Jan Wu Comments: To appear in JPDC 2025 Subjects: Machine Learning (cs.LG); Data Structures and Algorithms (cs.DS) [363] arXiv:2502.12498 [pdf, html, other] : Title: USPilot: An Embodied Robotic Assistant Ultrasound System with Large Language Model Enhanced Graph Planner Mingcong Chen, Siqi Fan, Guanglin Cao, Hongbin Liu Subjects: Robotics (cs.RO) [364] arXiv:2502.12497 [pdf, html, other] : Title: SoK: Understanding Vulnerabilities in the L\"\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the search and reader evidence below.\n- Extract only items that are likely to be real research papers or paper project pages.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Prefer announcements using phrases like \"Introducing\", \"new work\", \"our paper\", \"accepted to\", or venue names.\n- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.\n- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- If acceptance is unclear, use status \"candidate\".\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nEvidence:\n[\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs.PL/recent\",\n    \"title\": \"Programming Languages\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 48 entries Showing up to 50 entries per page: fewer | more | all Title: HELIX: Verified compilation of cyber-physical controlTo Binaries To Make Disassembly Decidable Comments: 12 pages, 5 figures, 2 tables. Submitted to QRS 2026 Subjects: Cryptography and Security (cs.CR) ; Programming Languages (cs.PL) Title: Formally Vertelligence (cs.AI) ; Logic in Computer Science (cs.LO); Programming Languages (cs.PL) Title: ARGUS: Agentic GPU Optimization Guided by Data-Flow Invariants Subjects: Distributed, Parallel, and Clusterial Cyber-Physical Systems Subjects: Programming Languages (cs.PL) Title: Provable Coordination for LLM Agents via Message Sequence Charts Comments: 39 pages Subjects: Programming Languages (cs.PL) ; Artintracts for typed JVM and Spark pipelines Comments: 7 pages, 2 figures, 1 table. Mechanism artifact paper with reproducible benchmarks. Code at this https URL Subjects: Programming Languages (cs.P\",\n    \"publishDate\": \"2026-04-22\",\n    \"query\": \"LLM VLM agent reasoning accepted 2026 paper arXiv\",\n    \"queryLabel\": \"arxiv-1\",\n    \"relevance\": {\n      \"score\": 10,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\",\n        \"topic:llm\",\n        \"topic:agent\"\n      ]\n    },\n    \"readerTitle\": \"\",\n    \"readerExcerpt\": \"reader failed: request timed out after 20000ms\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs.DB/recent\",\n    \"title\": \"Databases\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 43 entries Showing up to 50 entries per page: fewer | more | all Title: An Alternate Agentic AI Architecture (It's About the Data) Comments: 15 pages,2 figures, 2 tables Subjects: Databases (cs.DB) Title: SQLyzr: A Comprehensive Benchmark and Evaluation Platform for Text-to-SQL Subjects: Databases (cs.DB) ; Artificial Intelligence (cs.AI) Title: Towards Universal Tabular Embeddings: A Benchmark Across Data Tasks Subjects: Machine Learning (cs.LG) ; Databases (cs.DB) Title: Using ASP(Q) to Handle Inconsistent Prioritized Data Comments: This is an extended version of a paper appearing at the 23rd International Conference on Principles of Knowledge Representation and Reasoning (KR 2026). 21 pages Subjects: Logic in Computer Science (cs.LO) ; Artificial Intelligence (cs.AI); Databases (cs.DB) Title: Research on the efficiency of data loading and storage in Data Lakehouse architectures for the formation of analytical\",\n    \"publishDate\": \"2026-04-24\",\n    \"query\": \"multimodal video understanding robotics embodied AI new paper arXiv 2026\",\n    \"queryLabel\": \"arxiv-2\",\n    \"relevance\": {\n      \"score\": 10,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\",\n        \"topic:agent\",\n        \"topic:reasoning\"\n      ]\n    },\n    \"readerTitle\": \"Databases\",\n    \"readerExcerpt\": \"Databases Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.DB Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Databases ## Authors and titles for recent submissions - Fri, 1 May 2026 - Thu, 30 Apr 2026 - Wed, 29 Apr 2026 - Tue, 28 Apr 2026 - Mon, 27 Apr 2026 See today's new changes Total of 33 entries Showing up to 50 entries per page: fewer | more | all ### Fri, 1 May 2026 (showing 8 of 8 entries ) [1] arXiv:2604.28141 [pdf, other] : Title: Index-Assisted Stratified Sampling for Online Aggregation Yunnan Yu, Zhuoyue Zhao Subjects: Databases (cs.DB) [2] arXiv:2604.28079 [pdf, html, other] : Title: Tailwind: A Practical Framework for Query Accelerators Geoffrey X. Yu, Ryan Marcus, Tim Kraska Comments: 15 pages, 11 figures Subjects: Databases (cs.DB) [3] arXiv:2604.27261 [pdf, html, other] : Title: SynSQL: Synthesizing Relational Databases for Robust Evaluation of Text-to-SQL Systems Mohammadamin Habibollah, Davood Rafiei Subjects: Databases (cs.DB) [4] arXiv:2604.27252 [pdf, html, other] : Title: Unified Data Discovery across Query Modalities and User Intents Tingting Wang, Shixun Huang, Zhifeng Bao, J. Shane Culpepper, Shazia Sadiq, Volkan Dedeoglu, Reza Arablouei Subjects: Databases (cs.DB) [5] arXiv:2604.27223 [pdf, html, other] : Title: Graphify: Automated Synthesis of Type-Safe Graph Backends via $O(S)$ GraphQL-to-Gremlin Transpilation Johannes Graf Comments: 18 pages, 5 figures. Int\"\n  },\n  {\n    \"platform\": \"web\",\n    \"url\": \"http://tommycohn.com/\",\n    \"title\": \"Thomas Cohn\",\n    \"author\": \"\",\n    \"snippet\": \"About Me Thomas Cohn Robotics &bullet; Math &bullet; Computer Science Computer Science PhD student at the Massachusetts Institute of Technology, advised by Russ Tedrake. Member of the Robot Locomotion Group . CV (Last updated April 2026) Research Blog Featured Videos Publications & Preprints \\\"SceneSmith: Agentic Generation of Simulation-Ready Indoor Scenes\\\" (Under review) Nicholas Pfaff , Thomas Cohn , Sergey Zakharov , Rick Cory , Russ Tedrake [ Preprint ] [ Project Page ] We present an automated agentic pipeline for generating simulation-ready scenes from only a natural language description, including fully automated asset generation and physical property estimation. These scenes can be used to safely evaluate robot foundation models at scale. \\\"A Framework for Combining Optimization-Based and Analytic Inverse Kinematics\\\" (Under review) Thomas Cohn* , Lihan Tang* , Alexandre Amice , Russ Tedrake *Denotes equal contribution. [ Preprint ] We present a new formulation for optimization IK\",\n    \"publishDate\": \"2026-04-23\",\n    \"query\": \"\\\"project page\\\" \\\"accepted\\\" multimodal agent robotics 2026\",\n    \"queryLabel\": \"homepage-2\",\n    \"relevance\": {\n      \"score\": 9,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:preprint\",\n        \"paper:project page\",\n        \"topic:agent\",\n        \"topic:robotics\"\n      ]\n    },\n    \"readerTitle\": \"\",\n    \"readerExcerpt\": \"\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs/recent?skip=360&show=25\",\n    \"title\": \"Computer Science\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 3858 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3851-3858 Showing up to 25 entries per pan Configuration via Relaxed Coverage and Revisit Objectives Shreeyam Kacker , Kerri Cahoy Subjects: Robotics (cs.RO) Title: Three-Module SC-VAMP for LDPC-Coded Nonlinear Channels Tadashi Wadayama , Takumi Takahashi Subjects: Information Theory (cs.IT) Title: Reinforcement Learning Improves LLM Accuracy and Reasoning in Disease Classification from Radiology Reports Yishu Wei , Yi Lin , Adam Flanders , George Shih , Yifan Peng Subjects: Artificial Intelligence (cs.AI) Title: AeroBridge-TTA: Test-Time Adaptive Language-Conditioned Control for UAVs Lingxue Lyu Subjects: Robotics (cs.RO) Title: Heuristic Search Space Partitioning for Low-Latency Multi-Tenant Cloud Queries Prashant Kumar Pathak , Chandra Biksheswaran Mouleeswaran , Rama Teja Repaka Comments: 10 pages, 3 figures, 3 tables. Submit\",\n    \"publishDate\": \"2026-04-22\",\n    \"query\": \"multimodal video understanding robotics embodied AI new paper arXiv 2026\",\n    \"queryLabel\": \"arxiv-2\",\n    \"relevance\": {\n      \"score\": 9,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:arxiv\",\n        \"topic:llm\",\n        \"topic:reasoning\",\n        \"topic:robotics\"\n      ]\n    },\n    \"readerTitle\": \"Computer Science\",\n    \"readerExcerpt\": \"Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Wed, 19 Feb 2025 - Tue, 18 Feb 2025 - Mon, 17 Feb 2025 - Fri, 14 Feb 2025 - Thu, 13 Feb 2025 See today's new changes Total of 3025 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3001-3025 Showing up to 25 entries per page: fewer | more | all ### Wed, 19 Feb 2025 (continued, showing 25 of 598 entries ) [361] arXiv:2502.12501 [pdf, html, other] : Title: Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge Qiyuan Zhang, Yufei Wang, Yuxin Jiang, Liangyou Li, Chuhan Wu, Yasheng Wang, Xin Jiang, Lifeng Shang, Ruiming Tang, Fuyuan Lyu, Chen Ma Subjects: Computation and Language (cs.CL) [362] arXiv:2502.12499 [pdf, html, other] : Title: GPU Memory Usage Optimization for Backward Propagation in Deep Network Training Ding-Yong Hong, Tzu-Hsien Tsai, Ning Wang, Pangfeng Liu, Jan-Jan Wu Comments: To appear in JPDC 2025 Subjects: Machine Learning (cs.LG); Data Structures and Algorithms (cs.DS) [363] arXiv:2502.12498 [pdf, html, other] : Title: USPilot: An Embodied Robotic Assistant Ultrasound System with Large Language Model Enhanced Graph Planner Mingcong Chen, Siqi Fan, Guanglin Cao, Hongbin Liu Subjects: Robotics (cs.RO) [364] arXiv:2502.12497 [pdf, html, other] : Title: SoK: Understanding Vulnerabilities in the L\"\n  }\n]",
       "systemPrompt": "You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.",
       "model": "glm-4.5-flash",
       "responseText": "",
@@ -1933,23 +1941,23 @@
     {
       "index": 2,
       "evidenceCount": 4,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the search and reader evidence below.\n- Extract only items that are likely to be real research papers or paper project pages.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Prefer announcements using phrases like \"Introducing\", \"new work\", \"our paper\", \"accepted to\", or venue names.\n- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.\n- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- If acceptance is unclear, use status \"candidate\".\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nEvidence:\n[\n  {\n    \"platform\": \"web\",\n    \"url\": \"https://github.com/ZJU4HealthCare/TumorChain\",\n    \"title\": \"GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for\",\n    \"author\": \"\",\n    \"snippet\": \"ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image     \",\n    \"publishDate\": \"2026-04-28\",\n    \"query\": \"site:github.io \\\"multimodal\\\" \\\"paper\\\" \\\"2026\\\"\",\n    \"queryLabel\": \"homepage-4\",\n    \"relevance\": {\n      \"score\": 9,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"topic:multimodal\",\n        \"topic:reasoning\",\n        \"venue:iclr\"\n      ]\n    },\n    \"readerTitle\": \"GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis‘’\",\n    \"readerExcerpt\": \"Sijing Li1,2*, Zhongwei Qiu2,3,1*, Jiang Liu1, Wenqiao Zhang1†, Tianwei Lin1,2, Yihan Xie1, Jianxiang An1, Boxiang Yun2, Chenglin Yang1, Jun Xiao1, Guangyu Guo2,1, Jiawen Yao2, Wei Liu2, Yuan Gao2, Ke Yan2, Weiwei Cao2, Zhilin Zheng2 Tony C. W. MOK2, Kai Cao4, Yu Shi5, Jiuyu Zhang5, Jian Zhou6 Beng Chin Ooi1, Yingda Xia†2, Ling Zhang2 1Zhejiang University 2DAMO Academy, Alibaba Group 3Hupan Lab 4Shanghai Institution of Pancreatic Disease 5Shengjing Hospital of China Medical University 6Sun Yat-sen University Cancer Center ![Image 1](https://camo.githubusercontent.com/ffb10f4c78537310375b88fb12757d6375a4ec30641b4069801d2cf6a7b58859/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617065722d41727869762d726564) ![Image 2](https://camo.githubusercontent.com/f4f2f8b61d31647b57e2ff7dd46e74d0cb65d9ad57aff2a36a80a6961bef5906/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f44414d4f2d4769744875622d677265656e) ## 🌟 Overview Welcome to __TumorChain!__ Our goal is to advance clinical tumor analysis through reliable multimodal reasoning at scale. This project presents a cohesive three-part framework—Dataset, Benchmark, and Model—to enable safe, explainable, and reproducible tumor assessment in high-stakes settings. ![Image 3](https://github.com/ZJU4HealthCare/TumorChain/raw/main/image/teaser.png) ##### 👏 Core Vision: - Establish a closed-loop multimodal reasoning pipeline that standardizes the path from findings to impressions to pathology. - Create high-quality benchmarks and reproducible evaluation protocols to enable cross-institution comparison and robust generalization. - Deliver an interpretable, calibrated, and traceable multimodal framework that reduces hallucinations and supports real-world clinical decision-making. ## 📫 Data collection and statistics We introduce TumorCoT-1.5M — a large-scale dataset comprising 1.5 million Chain-of-Thought (CoT) labeled VQA prompts, paired with 3D CT scans, featuring stepwise reasoning and cross-modal alignments along the findings–impression–pathology trajectory. ![Image 4](https://github.com/ZJU4HealthCare/TumorChain/raw/main/image/agent.jpg)![Image 5](https://github.com/ZJU4HealthCare/TumorChain/raw/main/im\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cond-mat.mes-hall/pastweek?skip=0&show=100\",\n    \"title\": \"Mesoscale and Nanoscale Physics\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 131 entries : 1-100 101-131 Title: Thermodynamic signatures of non-Hermiticity in Dirac materials via quantum capacitance Jua in Su-Schrieffer-Heeger chains Tomasz Kwapinski , Marcin Kurzyna , Luis E. F. Foa Torres Comments: Accepted for publication in Physical Review B, 15 pages, 10 figures Subjects: Mesoscale and Nanoscald-mat.str-el) Title: Hierarchical Bayesian calibration of mesoscopic models for ultrasound contrast agents from force spectroscopy data Brieuc Benvegnen , Nikolaos Ntarakas , Tilen Potisk , Ignacio Parodynamic Mesoscopic Channel Comments: 10 pages, 5 figures in press Journal-ref: Scientific Report, 2026 Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall) Title: Dynamical Poles in Non-Her in the magnetoelectric conductivity of gapped nodal rings Comments: 23 pages, 5 figures; follow-up paper of arXiv:2503.10712 Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall) Title: Polym\",\n    \"publishDate\": \"2026-04-16\",\n    \"query\": \"LLM VLM agent reasoning accepted 2026 paper arXiv\",\n    \"queryLabel\": \"arxiv-1\",\n    \"relevance\": {\n      \"score\": 8,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\",\n        \"topic:agent\"\n      ]\n    },\n    \"readerTitle\": \"Mesoscale and Nanoscale Physics\",\n    \"readerExcerpt\": \"Mesoscale and Nanoscale Physics Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cond-mat.mes-hall Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Mesoscale and Nanoscale Physics ## Authors and titles for recent submissions - Thu, 26 Jun 2025 - Wed, 25 Jun 2025 - Tue, 24 Jun 2025 - Mon, 23 Jun 2025 - Thu, 19 Jun 2025 See today's new changes Total of 110 entries : 1-100 101-110 Showing up to 100 entries per page: fewer | more | all ### Thu, 26 Jun 2025 (showing 21 of 21 entries ) [1] arXiv:2506.20571 [pdf, html, other] : Title: Micromagnetic structure of oxidized magnetite nanoparticles: sharp structural versus diffuse magnetic interface Elizabeth M. Jefremovas, Michael P. Adams, Lucía Gandarias, Lourdes Marcano, Javier Alonso, Andreas Michels, Jonathan Leliaert Comments: Supplementary Information available at this http URL uploaded with this submission Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall); Materials Science (cond-mat.mtrl-sci) [2] arXiv:2506.20510 [pdf, other] : Title: High-temperature helical edge states in BiSbTeSe$_2$/graphene van der Waals heterostructure Yoichi Tanabe, Ngoc Han Tu, Ming-Chun Jiang, Yi Ling Chiew, Mitsutaka Haruta, Kiyohiro Adachi, David Pomaranski, Ryo Ito, Yuya Shimazaki, Daisuke Hashizume, Xiuzhen Yu, Guang-Yu Guo, Ryotaro Arita, Michihisa Yamamoto Comments: 31pages, 4 figures, and 7 supporting figures Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall); Materials Science (cond-mat.mt\"\n  },\n  {\n    \"platform\": \"web\",\n    \"url\": \"https://github.com/multimodal-art-projection/MAP-NEO\",\n    \"title\": \"GitHub - multimodal-art-projection/MAP-NEO · GitHub\",\n    \"author\": \"\",\n    \"snippet\": \"multimodal-art-projection/MAP-NEO   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 37 Commits 37 Commits Matrix Matrix     Megatron-LM-NEO @ 5215161 Megatron-LM-NEO @ 5215161     figure figure     .gitmodules .gitmodules     README.md README.md     View all files Repository files navigation MAP-NEO is a fully open-sourced Large Language Model that includes the pretraining data, a data processing pipeline ( Matrix ), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-model-like performance in challenging tasks such as reasoning, mathematics, and coding, outperforming its peers of similar size. For research purposes, we aim to achieve full transparency in the LLM training process. To this end, we have made a comprehensive release of MAP-Neo, including the final and \",\n    \"publishDate\": \"2026-04-30\",\n    \"query\": \"site:github.io \\\"multimodal\\\" \\\"paper\\\" \\\"2026\\\"\",\n    \"queryLabel\": \"homepage-4\",\n    \"relevance\": {\n      \"score\": 8,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"topic:llm\",\n        \"topic:large language model\",\n        \"topic:multimodal\",\n        \"topic:reasoning\"\n      ]\n    },\n    \"readerTitle\": \"GitHub - multimodal-art-projection/MAP-NEO\",\n    \"readerExcerpt\": \"## MAP-NEO: A fully open-sourced Large Language Model __MAP-NEO__ is a __fully open-sourced__ Large Language Model that includes the pretraining data, a data processing pipeline (__Matrix__), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-model-like performance in challenging tasks such as reasoning, mathematics, and coding, outperforming its peers of similar size. For research purposes, we aim to achieve full transparency in the LLM training process. To this end, we have made a comprehensive release of MAP-Neo, including the final and intermediate checkpoints, a self-trained tokenizer, the pre-training corpus, and an efficient, stable optimized pre-training codebase. ![Image 1: SLAM-LLM Logo](https://github.com/multimodal-art-projection/MAP-NEO/raw/main/figure/map-neo-bold.jpg) ![Image 2: Discord](https://camo.githubusercontent.com/db20181591cd7dd6b91cd192b65e526a5dd3f3c68a38d457204a7bf65961087e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446973636f72642d4d41502532304e454f2d3732383964613f6c6f676f3d646973636f7264266c6f676f436f6c6f723d776869746526636f6c6f723d373238396461) ![Image 3: Wechat](https://camo.githubusercontent.com/3459053134e29318e3e8d44ae48a4c4bd05ad67e1431d1af3f5e9ec813948d0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5765436861742d4d41502532304e454f2d627269676874677265656e3f6c6f676f3d776563686174266c6f676f436f6c6f723d7768697465) ![Image 4: Twitter Follow](https://camo.githubusercontent.com/5724ba88f7a559ff5a3638eabed1b512db296db11726d93b3c4401efb6e1b3a7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547769747465722d4d41502532304e454f2d6c69676874677265793f6c6f676f3d78266c6f676f436f6c6f723d7768697465) ![Image 5: mit](https://camo.githubusercontent.com/784362b26e4b3546254f1893e778ba64616e362bd6ac791991d2c9e880a3a64e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d677265656e2e737667) ## Evaluation Results ### MAP-NEO 7B Series We evaluated the MAP-Neo 7B Series and other similarly sized models on various benchmarks, as shown in the followi\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs/pastweek?skip=406&show=25\",\n    \"title\": \"Computer Science\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 3859 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 3851-3859 Showing up to 25 entries per page: fewer | more | all Title: Lucky High Dynamic Range Smartphone Imaging Baiang Li , Ruyu Yan , Ethan Tseng , Zhoutong Zhang , Adam Finkelstein , Jiawen Chen , Felix Heide Comments: 13 pages, 12 figures Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Are LLM Uncertainty and Correctness Encoded by the Same Features? A Functional Dissociation via Sparse Autoencoders Het Patel , Tiejin Chen , Hua Wei , Evangelos E. Papalexakis , Jia Chen Subjects: Machine Learning (cs.LG) ; Computation and Language (cs.CL) Title: Semantic Prompting: Agentic Incremental Narrative Refinement through Spatial Semantic Interaction Xuxin Tang , Ibrahim Tahmid , Eric Krokos , Kirsten Whitley , Xuan Wang , Chris North Comments: 9 pages, 7 figures, accepted by ACM AVI 2026 Subjects: Human-Computer In\",\n    \"publishDate\": \"2026-04-23\",\n    \"query\": \"\\\"project page\\\" \\\"accepted\\\" multimodal agent robotics 2026\",\n    \"queryLabel\": \"homepage-2\",\n    \"relevance\": {\n      \"score\": 7,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:arxiv\",\n        \"topic:llm\",\n        \"topic:agent\"\n      ]\n    },\n    \"readerTitle\": \"Computer Science\",\n    \"readerExcerpt\": \"Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Thu, 11 Sep 2025 - Wed, 10 Sep 2025 - Tue, 9 Sep 2025 - Mon, 8 Sep 2025 - Fri, 5 Sep 2025 See today's new changes Total of 2511 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 2501-2511 Showing up to 25 entries per page: fewer | more | all ### Thu, 11 Sep 2025 (continued, showing last 19 of 425 entries ) [407] arXiv:2509.08171 (cross-list from quant-ph) [pdf, html, other] : Title: RAPID Quantum Detection and Demodulation of Covert Communications: Breaking the Noise Limit with Solid-State Spin Sensors Amirhossein Taherpour, Abbas Taherpour, Tamer Khattab Subjects: Quantum Physics (quant-ph); Machine Learning (cs.LG); Signal Processing (eess.SP) [408] arXiv:2509.08169 (cross-list from math.OC) [pdf, html, other] : Title: OCTANE -- Optimal Control for Tensor-based Autoencoder Network Emergence: Explicit Case Ratna Khatri, Anthony Kolshorn, Colin Olson, Harbir Antil Subjects: Optimization and Control (math.OC); Machine Learning (cs.LG) [409] arXiv:2509.08167 (cross-list from q-bio.MN) [pdf, html, other] : Title: Optimizing information flow in Gene Regulatory Networks: a geometric perspective Miguel Ángel García-Ariza, Alessandro Bravetti, Pablo Padilla, J Roberto Romero-Arias Subjects: Molecular Networks (q-bio.MN); Information Theory (cs\"\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the search and reader evidence below.\n- Extract only items that are likely to be real research papers or paper project pages.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Prefer announcements using phrases like \"Introducing\", \"new work\", \"our paper\", \"accepted to\", or venue names.\n- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.\n- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- If acceptance is unclear, use status \"candidate\".\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nEvidence:\n[\n  {\n    \"platform\": \"web\",\n    \"url\": \"https://github.com/ZJU4HealthCare/TumorChain\",\n    \"title\": \"GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for\",\n    \"author\": \"\",\n    \"snippet\": \"ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image     \",\n    \"publishDate\": \"2026-04-28\",\n    \"query\": \"site:github.io \\\"multimodal\\\" \\\"paper\\\" \\\"2026\\\"\",\n    \"queryLabel\": \"homepage-4\",\n    \"relevance\": {\n      \"score\": 9,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"topic:multimodal\",\n        \"topic:reasoning\",\n        \"venue:iclr\"\n      ]\n    },\n    \"readerTitle\": \"\",\n    \"readerExcerpt\": \"reader failed: request timed out after 20000ms\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cond-mat.mes-hall/pastweek?skip=0&show=100\",\n    \"title\": \"Mesoscale and Nanoscale Physics\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 131 entries : 1-100 101-131 Title: Thermodynamic signatures of non-Hermiticity in Dirac materials via quantum capacitance Jua in Su-Schrieffer-Heeger chains Tomasz Kwapinski , Marcin Kurzyna , Luis E. F. Foa Torres Comments: Accepted for publication in Physical Review B, 15 pages, 10 figures Subjects: Mesoscale and Nanoscald-mat.str-el) Title: Hierarchical Bayesian calibration of mesoscopic models for ultrasound contrast agents from force spectroscopy data Brieuc Benvegnen , Nikolaos Ntarakas , Tilen Potisk , Ignacio Parodynamic Mesoscopic Channel Comments: 10 pages, 5 figures in press Journal-ref: Scientific Report, 2026 Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall) Title: Dynamical Poles in Non-Her in the magnetoelectric conductivity of gapped nodal rings Comments: 23 pages, 5 figures; follow-up paper of arXiv:2503.10712 Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall) Title: Polym\",\n    \"publishDate\": \"2026-04-16\",\n    \"query\": \"LLM VLM agent reasoning accepted 2026 paper arXiv\",\n    \"queryLabel\": \"arxiv-1\",\n    \"relevance\": {\n      \"score\": 8,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\",\n        \"topic:agent\"\n      ]\n    },\n    \"readerTitle\": \"Mesoscale and Nanoscale Physics\",\n    \"readerExcerpt\": \"Mesoscale and Nanoscale Physics Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cond-mat.mes-hall Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Mesoscale and Nanoscale Physics ## Authors and titles for recent submissions - Thu, 26 Jun 2025 - Wed, 25 Jun 2025 - Tue, 24 Jun 2025 - Mon, 23 Jun 2025 - Thu, 19 Jun 2025 See today's new changes Total of 110 entries : 1-100 101-110 Showing up to 100 entries per page: fewer | more | all ### Thu, 26 Jun 2025 (showing 21 of 21 entries ) [1] arXiv:2506.20571 [pdf, html, other] : Title: Micromagnetic structure of oxidized magnetite nanoparticles: sharp structural versus diffuse magnetic interface Elizabeth M. Jefremovas, Michael P. Adams, Lucía Gandarias, Lourdes Marcano, Javier Alonso, Andreas Michels, Jonathan Leliaert Comments: Supplementary Information available at this http URL uploaded with this submission Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall); Materials Science (cond-mat.mtrl-sci) [2] arXiv:2506.20510 [pdf, other] : Title: High-temperature helical edge states in BiSbTeSe$_2$/graphene van der Waals heterostructure Yoichi Tanabe, Ngoc Han Tu, Ming-Chun Jiang, Yi Ling Chiew, Mitsutaka Haruta, Kiyohiro Adachi, David Pomaranski, Ryo Ito, Yuya Shimazaki, Daisuke Hashizume, Xiuzhen Yu, Guang-Yu Guo, Ryotaro Arita, Michihisa Yamamoto Comments: 31pages, 4 figures, and 7 supporting figures Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall); Materials Science (cond-mat.mt\"\n  },\n  {\n    \"platform\": \"web\",\n    \"url\": \"https://github.com/multimodal-art-projection/MAP-NEO\",\n    \"title\": \"GitHub - multimodal-art-projection/MAP-NEO · GitHub\",\n    \"author\": \"\",\n    \"snippet\": \"multimodal-art-projection/MAP-NEO   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 37 Commits 37 Commits Matrix Matrix     Megatron-LM-NEO @ 5215161 Megatron-LM-NEO @ 5215161     figure figure     .gitmodules .gitmodules     README.md README.md     View all files Repository files navigation MAP-NEO is a fully open-sourced Large Language Model that includes the pretraining data, a data processing pipeline ( Matrix ), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-model-like performance in challenging tasks such as reasoning, mathematics, and coding, outperforming its peers of similar size. For research purposes, we aim to achieve full transparency in the LLM training process. To this end, we have made a comprehensive release of MAP-Neo, including the final and \",\n    \"publishDate\": \"2026-04-30\",\n    \"query\": \"site:github.io \\\"multimodal\\\" \\\"paper\\\" \\\"2026\\\"\",\n    \"queryLabel\": \"homepage-4\",\n    \"relevance\": {\n      \"score\": 8,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"topic:llm\",\n        \"topic:large language model\",\n        \"topic:multimodal\",\n        \"topic:reasoning\"\n      ]\n    },\n    \"readerTitle\": \"GitHub - multimodal-art-projection/MAP-NEO\",\n    \"readerExcerpt\": \"## MAP-NEO: A fully open-sourced Large Language Model __MAP-NEO__ is a __fully open-sourced__ Large Language Model that includes the pretraining data, a data processing pipeline (__Matrix__), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-model-like performance in challenging tasks such as reasoning, mathematics, and coding, outperforming its peers of similar size. For research purposes, we aim to achieve full transparency in the LLM training process. To this end, we have made a comprehensive release of MAP-Neo, including the final and intermediate checkpoints, a self-trained tokenizer, the pre-training corpus, and an efficient, stable optimized pre-training codebase. ![Image 1: SLAM-LLM Logo](https://github.com/multimodal-art-projection/MAP-NEO/raw/main/figure/map-neo-bold.jpg) ![Image 2: Discord](https://camo.githubusercontent.com/db20181591cd7dd6b91cd192b65e526a5dd3f3c68a38d457204a7bf65961087e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446973636f72642d4d41502532304e454f2d3732383964613f6c6f676f3d646973636f7264266c6f676f436f6c6f723d776869746526636f6c6f723d373238396461) ![Image 3: Wechat](https://camo.githubusercontent.com/3459053134e29318e3e8d44ae48a4c4bd05ad67e1431d1af3f5e9ec813948d0c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5765436861742d4d41502532304e454f2d627269676874677265656e3f6c6f676f3d776563686174266c6f676f436f6c6f723d7768697465) ![Image 4: Twitter Follow](https://camo.githubusercontent.com/5724ba88f7a559ff5a3638eabed1b512db296db11726d93b3c4401efb6e1b3a7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547769747465722d4d41502532304e454f2d6c69676874677265793f6c6f676f3d78266c6f676f436f6c6f723d7768697465) ![Image 5: mit](https://camo.githubusercontent.com/784362b26e4b3546254f1893e778ba64616e362bd6ac791991d2c9e880a3a64e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d677265656e2e737667) ## Evaluation Results ### MAP-NEO 7B Series We evaluated the MAP-Neo 7B Series and other similarly sized models on various benchmarks, as shown in the followi\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs/pastweek?skip=406&show=25\",\n    \"title\": \"Computer Science\",\n    \"author\": \"\",\n    \"snippet\": \"Authors and titles for recent submissions See today's new changes Total of 3859 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 3851-3859 Showing up to 25 entries per page: fewer | more | all Title: Lucky High Dynamic Range Smartphone Imaging Baiang Li , Ruyu Yan , Ethan Tseng , Zhoutong Zhang , Adam Finkelstein , Jiawen Chen , Felix Heide Comments: 13 pages, 12 figures Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Are LLM Uncertainty and Correctness Encoded by the Same Features? A Functional Dissociation via Sparse Autoencoders Het Patel , Tiejin Chen , Hua Wei , Evangelos E. Papalexakis , Jia Chen Subjects: Machine Learning (cs.LG) ; Computation and Language (cs.CL) Title: Semantic Prompting: Agentic Incremental Narrative Refinement through Spatial Semantic Interaction Xuxin Tang , Ibrahim Tahmid , Eric Krokos , Kirsten Whitley , Xuan Wang , Chris North Comments: 9 pages, 7 figures, accepted by ACM AVI 2026 Subjects: Human-Computer In\",\n    \"publishDate\": \"2026-04-23\",\n    \"query\": \"\\\"project page\\\" \\\"accepted\\\" multimodal agent robotics 2026\",\n    \"queryLabel\": \"homepage-2\",\n    \"relevance\": {\n      \"score\": 7,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:arxiv\",\n        \"topic:llm\",\n        \"topic:agent\"\n      ]\n    },\n    \"readerTitle\": \"Computer Science\",\n    \"readerExcerpt\": \"Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Thu, 11 Sep 2025 - Wed, 10 Sep 2025 - Tue, 9 Sep 2025 - Mon, 8 Sep 2025 - Fri, 5 Sep 2025 See today's new changes Total of 2511 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 2501-2511 Showing up to 25 entries per page: fewer | more | all ### Thu, 11 Sep 2025 (continued, showing last 19 of 425 entries ) [407] arXiv:2509.08171 (cross-list from quant-ph) [pdf, html, other] : Title: RAPID Quantum Detection and Demodulation of Covert Communications: Breaking the Noise Limit with Solid-State Spin Sensors Amirhossein Taherpour, Abbas Taherpour, Tamer Khattab Subjects: Quantum Physics (quant-ph); Machine Learning (cs.LG); Signal Processing (eess.SP) [408] arXiv:2509.08169 (cross-list from math.OC) [pdf, html, other] : Title: OCTANE -- Optimal Control for Tensor-based Autoencoder Network Emergence: Explicit Case Ratna Khatri, Anthony Kolshorn, Colin Olson, Harbir Antil Subjects: Optimization and Control (math.OC); Machine Learning (cs.LG) [409] arXiv:2509.08167 (cross-list from q-bio.MN) [pdf, html, other] : Title: Optimizing information flow in Gene Regulatory Networks: a geometric perspective Miguel Ángel García-Ariza, Alessandro Bravetti, Pablo Padilla, J Roberto Romero-Arias Subjects: Molecular Networks (q-bio.MN); Information Theory (cs\"\n  }\n]",
       "systemPrompt": "You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.",
       "model": "glm-4.5-flash",
       "responseText": "",
       "parsedCount": 0,
-      "durationMs": 967,
-      "error": "Zhipu chat failed: 429 Too Many Requests {\"error\":{\"code\":\"1302\",\"message\":\"您的账户已达到速率限制，请您控制请求频率\"}}"
+      "durationMs": 60001,
+      "error": "request timed out after 60000ms"
     },
     {
       "index": 3,
       "evidenceCount": 4,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the search and reader evidence below.\n- Extract only items that are likely to be real research papers or paper project pages.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Prefer announcements using phrases like \"Introducing\", \"new work\", \"our paper\", \"accepted to\", or venue names.\n- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.\n- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- If acceptance is unclear, use status \"candidate\".\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nEvidence:\n[\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs.CY/new\",\n    \"title\": \"Computers and Society\",\n    \"author\": \"\",\n    \"snippet\": \"s. Accepted at NCME 2026 Subjects: Computers and Society (cs.CY) ; Artificial Intelligence (cs.AI); Computation and Langework for Street-Level Economics Comments: Submitted to ACM Transactions on Spatial Computing. This paper is currently under review Subjects: Computers and Society (cs.CY) ;\",\n    \"publishDate\": \"2026-04-23\",\n    \"query\": \"LLM VLM agent reasoning accepted 2026 paper arXiv\",\n    \"queryLabel\": \"arxiv-1\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\"\n      ]\n    },\n    \"readerTitle\": \"Computers and Society\",\n    \"readerExcerpt\": \"Computers and Society Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.CY Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computers and Society - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Friday, 1 May 2026 Total of 48 entries Showing up to 2000 entries per page: fewer | more | all ### New submissions (showing 23 of 23 entries) [1] arXiv:2604.26954 [pdf, other] : Title: The Impact of LLM Self-Consistency and Reasoning Effort on Automated Scoring Accuracy and Cost Scott Frohn Comments: 14 pages, 10 tables, 2 figures. Presented at the 2026 National Council on Measurement in Education (NCME) Annual Meeting, April 11, 2026, Los Angeles, CA Subjects: Computers and Society (cs.CY); Artificial Intelligence (cs.AI) Strategic model selection and reasoning settings are more effective than ensembling for optimizing automated scoring with large language models (LLMs). We examined self-consistency (intra-model majority voting) and reasoning effort for scoring conversation-based assessment items in high school mathematics, evaluating 900 student conversations against human-scored ground truths using frontier and low-cost models from OpenAI and Google. Temperature sampling significantly improved accuracy over deterministic calls, but increasing ensemble size (j = 1 to 7) produced no significant gains. Higher reasoning effort showed a significant posit\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/stat/new\",\n    \"title\": \"Statistics\",\n    \"author\": \"\",\n    \"snippet\": \"of 86 entries Showing up to 2000 entries per page: fewer | more | all New submissions (showing 35 of 35 entries) Title: Achieving the Kesten-Stigum bound in the non-uniform hypergraph stochastic block model Comments: 67 pages,eficial based on the surrogate but is actually harmful with respect to the primary outcome. In this paper, we propose a functional class-based method to assess resilience to the surrogate paradox in ad apply our method to data from clinical trials in schizophrenia. Title: The geometry of conflict : 3D Spatio-temporal patterns in fatalities prediction Thomas Schincariol Comments: 68 Pages, 34 figurction regions that \",\n    \"publishDate\": \"2026-04-24\",\n    \"query\": \"3D Gaussian Splatting VLM MLLM new paper 2026\",\n    \"queryLabel\": \"arxiv-3\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\"\n      ]\n    },\n    \"readerTitle\": \"\",\n    \"readerExcerpt\": \"reader failed: request timed out after 20000ms\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs/new?skip=379&show=250\",\n    \"title\": \"Computer Science\",\n    \"author\": \"\",\n    \"snippet\": \"This paper studies the data-driven synthesis of linear quadratic integral (LQI) controllers for continuou The objective is to achieve optimal state-feedback control with integral action for reference tracking using only measured data. To this end, we derive a data-driven closed-loop parameterization of the augmented dynamics that incorporates the integral state while relying solely on input-state-output measurements of the underlying system. Based on this parameterization, a data-driven convex optimization problem is formulated ration, especially in multilingual settings and for low-resource languages such as Lithuanian. This paper \",\n    \"publishDate\": \"2026-04-17\",\n    \"query\": \"3D Gaussian Splatting VLM MLLM new paper 2026\",\n    \"queryLabel\": \"arxiv-3\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\"\n      ]\n    },\n    \"readerTitle\": \"Computer Science\",\n    \"readerExcerpt\": \"Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Tuesday, 18 November 2025 Total of 1995 entries : 1-250 251-500 380-629 501-750 751-1000 1001-1250 ... 1751-1995 Showing up to 250 entries per page: fewer | more | all ### New submissions (continued, showing 250 of 1177 entries) [380] arXiv:2511.12175 [pdf, html, other] : Title: AI-Enhanced IoT Systems for Predictive Maintenance and Affordability Optimization in Smart Microgrids: A Digital Twin Approach Koushik Ahmed Kushal, Florimond Gueniat Comments: 12 pages, 6 figures, includes simulation and evaluation results Subjects: Systems and Control (eess.SY); Artificial Intelligence (cs.AI) This study presents an AI enhanced IoT framework for predictive maintenance and affordability optimization in smart microgrids using a Digital Twin modeling approach. The proposed system integrates real time sensor data, machine learning based fault prediction, and cost aware operational analytics to improve reliability and energy efficiency in distributed microgrid environments. By synchronizing physical microgrid components with a virtual Digital Twin, the framework enables early detection of component degradation, dynamic load management, and optimized maintenance scheduling. Experimental evaluations demonstrate improved predictive\"\n  },\n  {\n    \"platform\": \"web\",\n    \"url\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n    \"title\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub\",\n    \"author\": \"\",\n    \"snippet\": \"master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses. \",\n    \"publishDate\": \"2026-04-30\",\n    \"query\": \"site:github.io \\\"multimodal\\\" \\\"paper\\\" \\\"2026\\\"\",\n    \"queryLabel\": \"homepage-4\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"topic:multimodal\",\n        \"topic:reasoning\",\n        \"venue:acl\"\n      ]\n    },\n    \"readerTitle\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG\",\n    \"readerExcerpt\": \"## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \\\"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\\\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\"\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the search and reader evidence below.\n- Extract only items that are likely to be real research papers or paper project pages.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Prefer announcements using phrases like \"Introducing\", \"new work\", \"our paper\", \"accepted to\", or venue names.\n- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.\n- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- If acceptance is unclear, use status \"candidate\".\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nEvidence:\n[\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs.CY/new\",\n    \"title\": \"Computers and Society\",\n    \"author\": \"\",\n    \"snippet\": \"s. Accepted at NCME 2026 Subjects: Computers and Society (cs.CY) ; Artificial Intelligence (cs.AI); Computation and Langework for Street-Level Economics Comments: Submitted to ACM Transactions on Spatial Computing. This paper is currently under review Subjects: Computers and Society (cs.CY) ;\",\n    \"publishDate\": \"2026-04-23\",\n    \"query\": \"LLM VLM agent reasoning accepted 2026 paper arXiv\",\n    \"queryLabel\": \"arxiv-1\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\"\n      ]\n    },\n    \"readerTitle\": \"\",\n    \"readerExcerpt\": \"reader failed: request timed out after 20000ms\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/stat/new\",\n    \"title\": \"Statistics\",\n    \"author\": \"\",\n    \"snippet\": \"of 86 entries Showing up to 2000 entries per page: fewer | more | all New submissions (showing 35 of 35 entries) Title: Achieving the Kesten-Stigum bound in the non-uniform hypergraph stochastic block model Comments: 67 pages,eficial based on the surrogate but is actually harmful with respect to the primary outcome. In this paper, we propose a functional class-based method to assess resilience to the surrogate paradox in ad apply our method to data from clinical trials in schizophrenia. Title: The geometry of conflict : 3D Spatio-temporal patterns in fatalities prediction Thomas Schincariol Comments: 68 Pages, 34 figurction regions that \",\n    \"publishDate\": \"2026-04-24\",\n    \"query\": \"3D Gaussian Splatting VLM MLLM new paper 2026\",\n    \"queryLabel\": \"arxiv-3\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\"\n      ]\n    },\n    \"readerTitle\": \"Statistics\",\n    \"readerExcerpt\": \"Statistics Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > stat Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Statistics - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Friday, 1 May 2026 Total of 82 entries Showing up to 2000 entries per page: fewer | more | all ### New submissions (showing 28 of 28 entries) [1] arXiv:2604.26992 [pdf, html, other] : Title: Adaptive Robust Confidence Intervals in Efron's Gaussian Two-Groups Model Qiaosen Wang, Shuwen Chai, Chao Gao Subjects: Statistics Theory (math.ST); Methodology (stat.ME); Machine Learning (stat.ML) Robust uncertainty quantification is increasingly important in modern data analysis and is often formalized under Huber's model, which allows an $\\\\varepsilon$-fraction of arbitrary corruptions. In many experimental sciences, however, the measurement protocol is well controlled, and contamination is more plausibly introduced upstream. Motivated by this noise-oblivious nature of adversaries, we study confidence intervals for the null location parameter $\\\\theta$ in Efron's Gaussian two-groups model, where an unknown fraction $\\\\varepsilon$ of observations have arbitrarily shifted means, but all samples share the same law of additive Gaussian measurement noise with variance $\\\\sigma^2$. We characterize the minimax-optimal length among confidence intervals with a prescribed coverage level uniformly\"\n  },\n  {\n    \"platform\": \"arxiv\",\n    \"url\": \"https://arxiv.org/list/cs/new?skip=379&show=250\",\n    \"title\": \"Computer Science\",\n    \"author\": \"\",\n    \"snippet\": \"This paper studies the data-driven synthesis of linear quadratic integral (LQI) controllers for continuou The objective is to achieve optimal state-feedback control with integral action for reference tracking using only measured data. To this end, we derive a data-driven closed-loop parameterization of the augmented dynamics that incorporates the integral state while relying solely on input-state-output measurements of the underlying system. Based on this parameterization, a data-driven convex optimization problem is formulated ration, especially in multilingual settings and for low-resource languages such as Lithuanian. This paper \",\n    \"publishDate\": \"2026-04-17\",\n    \"query\": \"3D Gaussian Splatting VLM MLLM new paper 2026\",\n    \"queryLabel\": \"arxiv-3\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"paper:paper\",\n        \"paper:arxiv\"\n      ]\n    },\n    \"readerTitle\": \"Computer Science\",\n    \"readerExcerpt\": \"Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science - New submissions - Cross-lists - Replacements See recent articles ### Showing new listings for Tuesday, 18 November 2025 Total of 1995 entries : 1-250 251-500 380-629 501-750 751-1000 1001-1250 ... 1751-1995 Showing up to 250 entries per page: fewer | more | all ### New submissions (continued, showing 250 of 1177 entries) [380] arXiv:2511.12175 [pdf, html, other] : Title: AI-Enhanced IoT Systems for Predictive Maintenance and Affordability Optimization in Smart Microgrids: A Digital Twin Approach Koushik Ahmed Kushal, Florimond Gueniat Comments: 12 pages, 6 figures, includes simulation and evaluation results Subjects: Systems and Control (eess.SY); Artificial Intelligence (cs.AI) This study presents an AI enhanced IoT framework for predictive maintenance and affordability optimization in smart microgrids using a Digital Twin modeling approach. The proposed system integrates real time sensor data, machine learning based fault prediction, and cost aware operational analytics to improve reliability and energy efficiency in distributed microgrid environments. By synchronizing physical microgrid components with a virtual Digital Twin, the framework enables early detection of component degradation, dynamic load management, and optimized maintenance scheduling. Experimental evaluations demonstrate improved predictive\"\n  },\n  {\n    \"platform\": \"web\",\n    \"url\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n    \"title\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub\",\n    \"author\": \"\",\n    \"snippet\": \"master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses. \",\n    \"publishDate\": \"2026-04-30\",\n    \"query\": \"site:github.io \\\"multimodal\\\" \\\"paper\\\" \\\"2026\\\"\",\n    \"queryLabel\": \"homepage-4\",\n    \"relevance\": {\n      \"score\": 6,\n      \"keep\": true,\n      \"strongReject\": false,\n      \"signals\": [\n        \"topic:multimodal\",\n        \"topic:reasoning\",\n        \"venue:acl\"\n      ]\n    },\n    \"readerTitle\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG\",\n    \"readerExcerpt\": \"## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \\\"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\\\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\"\n  }\n]",
       "systemPrompt": "You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.",
       "model": "glm-4.5-flash",
       "responseText": "",
       "parsedCount": 0,
-      "durationMs": 805,
+      "durationMs": 937,
       "error": "Zhipu chat failed: 429 Too Many Requests {\"error\":{\"code\":\"1302\",\"message\":\"您的账户已达到速率限制，请您控制请求频率\"}}"
     }
   ],
@@ -1962,15 +1970,217 @@
     "readerEnrichedEvidence": 16,
     "extractionBatchesRun": 4,
     "skippedExtractionBatches": 0,
-    "extractedCandidates": 0,
-    "added": 0,
+    "extractedCandidates": 2,
+    "added": 2,
     "updated": 0,
-    "durationMs": 243974
+    "durationMs": 331133
   },
   "errors": [
     "Extraction failed for batch 1: request timed out after 60000ms",
     "Extraction failed for batch 2: request timed out after 60000ms",
-    "Extraction failed for batch 3: Zhipu chat failed: 429 Too Many Requests {\"error\":{\"code\":\"1302\",\"message\":\"您的账户已达到速率限制，请您控制请求频率\"}}",
+    "Extraction failed for batch 3: request timed out after 60000ms",
     "Extraction failed for batch 4: Zhipu chat failed: 429 Too Many Requests {\"error\":{\"code\":\"1302\",\"message\":\"您的账户已达到速率限制，请您控制请求频率\"}}"
-  ]
+  ],
+  "heuristicExtraction": {
+    "candidateCount": 2,
+    "candidates": [
+      {
+        "title": "``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
+        "status": "accepted",
+        "acceptedVenue": "AAAI",
+        "confidence": 0.88,
+        "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+        "reason": "Local high-confidence extraction found AAAI acceptance signal in the source title or excerpt."
+      },
+      {
+        "title": "‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
+        "status": "accepted",
+        "acceptedVenue": "ICLR 2026",
+        "confidence": 0.88,
+        "primaryUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+        "reason": "Local high-confidence extraction found ICLR 2026 acceptance signal in the source title or excerpt."
+      }
+    ],
+    "skipped": [
+      {
+        "platform": "web",
+        "url": "https://github.com/ActiveVisionLab/Awesome-LLM-3D",
+        "title": "GitHub - ActiveVisionLab/Awesome-LLM-3D: Awesome-LLM-3D: a curated list of Multi-modal Large Language Model in 3D world Resources · GitHub",
+        "snippet": "Name Name Last commit message Last commit date Latest commit xianzhengma Merge pull request #75 from Germany321/patch-3 Open commit details Apr 17, 2026 f01b39b · Apr 17, 2026 History 520 Commits Open commit details 520 Commits assets assets update to 2025.06 Jun 10, 2025 .gitignore .gitignore test push Dec 16, 2023 LICENSE LICENSE Create LICENSE Dec 16, 2023 README.md README.md new literature on 3d scene understanding Apr 11, 2026 contributing.md contributing.md Update contributing.md Oct 23, 2024 View all files Repository files navigation Awesome-LLM-3D 🏠 About Here is a curated list of papers about 3D-Related Tasks empowered by Large Language Models (LLMs).It contains various tasks inclu",
+        "publishDate": "2026-04-17",
+        "relevanceScore": 15,
+        "relevanceSignals": [
+          "paper:paper",
+          "topic:llm",
+          "topic:large language model",
+          "topic:multi-modal",
+          "topic:agent",
+          "topic:reasoning",
+          "topic:embodied"
+        ],
+        "queryLabel": "homepage-2"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cs.LG/new",
+        "title": "Machine Learning",
+        "snippet": "Total of 270 entries Showing up to 2000 entries per page: fewer | more | all New submissions (showing 92 of 92 entries) Title: Compile to Compress: Boosting Formal Theorem Provers by Compiler Outputs Subjects: Machine Learning (cs.LG) ; Artificial Intelligence (cs.AI); Logic in Computer Science (cs.LO); Programming Languages (cs.PL) Large language models (LLMs) have demonstrated significant potential in formal theorem proving, yet sservation that compilers map a vast space of diverse proof attempts to a compact set of structured failure modes. We introduce a learning-to-refine framework that leverages this compression to perform efficient learning and proof exploration. We perform tree searc",
+        "publishDate": "2026-04-22",
+        "relevanceScore": 13,
+        "relevanceSignals": [
+          "paper:arxiv",
+          "announcement:accepted to",
+          "topic:llm",
+          "topic:large language model",
+          "venue:acl"
+        ],
+        "queryLabel": "arxiv-2"
+      },
+      {
+        "platform": "web",
+        "url": "https://github.com/Persdre/llm-human-simulation",
+        "title": "GitHub - Persdre/awesome-llm-human-simulation: [ICLR 2025 BlogPost] LLM Simulating Humanity Papers https://arxiv.org/abs/2501.08579",
+        "snippet": "Name Name Last commit message Last commit date Latest commit Persdre Merge pull request #3 from Nicolas99-9/patch-1 Open commit details Apr 14, 2026 b609d59 · Apr 14, 2026 History 20 Commits Open commit details 20 Commits README.md README.md Update README.md Apr 14, 2026 View all files Repository files navigation Awesome LLM-based Human Simulation A curated list of research papers and resources on LLM-based Human Simulation — the use of Large Language Models to simulate human behavior, cognition, and social interactions. This rapidly growing field spans psychology, economics, education, political science, and AI safety. Contributions are ",
+        "publishDate": "2026-04-14",
+        "relevanceScore": 12,
+        "relevanceSignals": [
+          "paper:paper",
+          "paper:arxiv",
+          "topic:llm",
+          "topic:large language model",
+          "venue:iclr"
+        ],
+        "queryLabel": "homepage-3"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cs.PL/recent",
+        "title": "Programming Languages",
+        "snippet": "Authors and titles for recent submissions See today's new changes Total of 48 entries Showing up to 50 entries per page: fewer | more | all Title: HELIX: Verified compilation of cyber-physical controlTo Binaries To Make Disassembly Decidable Comments: 12 pages, 5 figures, 2 tables. Submitted to QRS 2026 Subjects: Cryptography and Security (cs.CR) ; Programming Languages (cs.PL) Title: Formally Vertelligence (cs.AI) ; Logic in Computer Science (cs.LO); Programming Languages (cs.PL) Title: ARGUS: Agentic GPU Optimization Guided by Data-Flow Invariants Subjects: Distributed, Parallel, and Clusterial Cyber-Physical Systems Subjects: Programming Languages (cs.PL) Title: Provable Coordination for ",
+        "publishDate": "2026-04-22",
+        "relevanceScore": 10,
+        "relevanceSignals": [
+          "paper:paper",
+          "paper:arxiv",
+          "topic:llm",
+          "topic:agent"
+        ],
+        "queryLabel": "arxiv-1"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cs.DB/recent",
+        "title": "Databases",
+        "snippet": "Authors and titles for recent submissions See today's new changes Total of 43 entries Showing up to 50 entries per page: fewer | more | all Title: An Alternate Agentic AI Architecture (It's About the Data) Comments: 15 pages,2 figures, 2 tables Subjects: Databases (cs.DB) Title: SQLyzr: A Comprehensive Benchmark and Evaluation Platform for Text-to-SQL Subjects: Databases (cs.DB) ; Artificial Intelligence (cs.AI) Title: Towards Universal Tabular Embeddings: A Benchmark Across Data Tasks Subjects: Machine Learning (cs.LG) ; Databases (cs.DB) Title: Using ASP(Q) to Handle Inconsistent Prioritized Data Comments: This is an extended version of a paper appearing at the 23rd International Conferenc",
+        "publishDate": "2026-04-24",
+        "relevanceScore": 10,
+        "relevanceSignals": [
+          "paper:paper",
+          "paper:arxiv",
+          "topic:agent",
+          "topic:reasoning"
+        ],
+        "queryLabel": "arxiv-2"
+      },
+      {
+        "platform": "web",
+        "url": "http://tommycohn.com/",
+        "title": "Thomas Cohn",
+        "snippet": "About Me Thomas Cohn Robotics &bullet; Math &bullet; Computer Science Computer Science PhD student at the Massachusetts Institute of Technology, advised by Russ Tedrake. Member of the Robot Locomotion Group . CV (Last updated April 2026) Research Blog Featured Videos Publications & Preprints \"SceneSmith: Agentic Generation of Simulation-Ready Indoor Scenes\" (Under review) Nicholas Pfaff , Thomas Cohn , Sergey Zakharov , Rick Cory , Russ Tedrake [ Preprint ] [ Project Page ] We present an automated agentic pipeline for generating simulation-ready scenes from only a natural language description, including fully automated asset generation and physical property estimation. These scenes can be us",
+        "publishDate": "2026-04-23",
+        "relevanceScore": 9,
+        "relevanceSignals": [
+          "paper:preprint",
+          "paper:project page",
+          "topic:agent",
+          "topic:robotics"
+        ],
+        "queryLabel": "homepage-2"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cs/recent?skip=360&show=25",
+        "title": "Computer Science",
+        "snippet": "Authors and titles for recent submissions See today's new changes Total of 3858 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3851-3858 Showing up to 25 entries per pan Configuration via Relaxed Coverage and Revisit Objectives Shreeyam Kacker , Kerri Cahoy Subjects: Robotics (cs.RO) Title: Three-Module SC-VAMP for LDPC-Coded Nonlinear Channels Tadashi Wadayama , Takumi Takahashi Subjects: Information Theory (cs.IT) Title: Reinforcement Learning Improves LLM Accuracy and Reasoning in Disease Classification from Radiology Reports Yishu Wei , Yi Lin , Adam Flanders , George Shih , Yifan Peng Subjects: Artificial Intelligence (cs.AI) Title: AeroBridge-TTA: Test-T",
+        "publishDate": "2026-04-22",
+        "relevanceScore": 9,
+        "relevanceSignals": [
+          "paper:arxiv",
+          "topic:llm",
+          "topic:reasoning",
+          "topic:robotics"
+        ],
+        "queryLabel": "arxiv-2"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cond-mat.mes-hall/pastweek?skip=0&show=100",
+        "title": "Mesoscale and Nanoscale Physics",
+        "snippet": "Authors and titles for recent submissions See today's new changes Total of 131 entries : 1-100 101-131 Title: Thermodynamic signatures of non-Hermiticity in Dirac materials via quantum capacitance Jua in Su-Schrieffer-Heeger chains Tomasz Kwapinski , Marcin Kurzyna , Luis E. F. Foa Torres Comments: Accepted for publication in Physical Review B, 15 pages, 10 figures Subjects: Mesoscale and Nanoscald-mat.str-el) Title: Hierarchical Bayesian calibration of mesoscopic models for ultrasound contrast agents from force spectroscopy data Brieuc Benvegnen , Nikolaos Ntarakas , Tilen Potisk , Ignacio Parodynamic Mesoscopic Channel Comments: 10 pages, 5 figures in press Journal-ref: Scientific Report, ",
+        "publishDate": "2026-04-16",
+        "relevanceScore": 8,
+        "relevanceSignals": [
+          "paper:paper",
+          "paper:arxiv",
+          "topic:agent"
+        ],
+        "queryLabel": "arxiv-1"
+      },
+      {
+        "platform": "web",
+        "url": "https://github.com/multimodal-art-projection/MAP-NEO",
+        "title": "GitHub - multimodal-art-projection/MAP-NEO · GitHub",
+        "snippet": "multimodal-art-projection/MAP-NEO   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 37 Commits 37 Commits Matrix Matrix     Megatron-LM-NEO @ 5215161 Megatron-LM-NEO @ 5215161     figure figure     .gitmodules .gitmodules     README.md README.md     View all files Repository files navigation MAP-NEO is a fully open-sourced Large Language Model that includes the pretraining data, a data processing pipeline ( Matrix ), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-mod",
+        "publishDate": "2026-04-30",
+        "relevanceScore": 8,
+        "relevanceSignals": [
+          "topic:llm",
+          "topic:large language model",
+          "topic:multimodal",
+          "topic:reasoning"
+        ],
+        "queryLabel": "homepage-4"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cs/pastweek?skip=406&show=25",
+        "title": "Computer Science",
+        "snippet": "Authors and titles for recent submissions See today's new changes Total of 3859 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 3851-3859 Showing up to 25 entries per page: fewer | more | all Title: Lucky High Dynamic Range Smartphone Imaging Baiang Li , Ruyu Yan , Ethan Tseng , Zhoutong Zhang , Adam Finkelstein , Jiawen Chen , Felix Heide Comments: 13 pages, 12 figures Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Are LLM Uncertainty and Correctness Encoded by the Same Features? A Functional Dissociation via Sparse Autoencoders Het Patel , Tiejin Chen , Hua Wei , Evangelos E. Papalexakis , Jia Chen Subjects: Machine Learning (cs.LG) ; Comput",
+        "publishDate": "2026-04-23",
+        "relevanceScore": 7,
+        "relevanceSignals": [
+          "paper:arxiv",
+          "topic:llm",
+          "topic:agent"
+        ],
+        "queryLabel": "homepage-2"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/cs.CY/new",
+        "title": "Computers and Society",
+        "snippet": "s. Accepted at NCME 2026 Subjects: Computers and Society (cs.CY) ; Artificial Intelligence (cs.AI); Computation and Langework for Street-Level Economics Comments: Submitted to ACM Transactions on Spatial Computing. This paper is currently under review Subjects: Computers and Society (cs.CY) ;",
+        "publishDate": "2026-04-23",
+        "relevanceScore": 6,
+        "relevanceSignals": [
+          "paper:paper",
+          "paper:arxiv"
+        ],
+        "queryLabel": "arxiv-1"
+      },
+      {
+        "platform": "arxiv",
+        "url": "https://arxiv.org/list/stat/new",
+        "title": "Statistics",
+        "snippet": "of 86 entries Showing up to 2000 entries per page: fewer | more | all New submissions (showing 35 of 35 entries) Title: Achieving the Kesten-Stigum bound in the non-uniform hypergraph stochastic block model Comments: 67 pages,eficial based on the surrogate but is actually harmful with respect to the primary outcome. In this paper, we propose a functional class-based method to assess resilience to the surrogate paradox in ad apply our method to data from clinical trials in schizophrenia. Title: The geometry of conflict : 3D Spatio-temporal patterns in fatalities prediction Thomas Schincariol Comments: 68 Pages, 34 figurction regions that ",
+        "publishDate": "2026-04-24",
+        "relevanceScore": 6,
+        "relevanceSignals": [
+          "paper:paper",
+          "paper:arxiv"
+        ],
+        "queryLabel": "arxiv-3"
+      }
+    ]
+  }
 }

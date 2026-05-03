@@ -1,11 +1,91 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-03T05:35:35.581Z",
+  "generatedAt": "2026-05-03T05:50:47.676Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-303cda91f1a8",
+      "title": "‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
+      "summary": "从项目页或代码仓库识别到 ICLR 2026 接收信号，标题为 ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for。",
+      "reason": "Local high-confidence extraction found ICLR 2026 acceptance signal in the source title or excerpt.",
+      "primaryUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+      "canonicalUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+      "pdfUrl": "",
+      "sourceId": "unofficial-303cda91f1a8",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.88,
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T05:47:16.333Z",
+      "updatedAt": "2026-05-03T05:47:16.333Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZJU4HealthCare/TumorChain",
+          "title": "GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
+          "snippet": "ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image",
+          "readerExcerpt": "reader failed: request timed out after 20000ms",
+          "publishDate": "2026-04-28",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f312a023943c",
+      "title": "``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
+      "summary": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation。",
+      "reason": "Local high-confidence extraction found AAAI acceptance signal in the source title or excerpt.",
+      "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+      "canonicalUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f312a023943c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.88,
+      "acceptedVenue": "AAAI",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T05:47:16.331Z",
+      "updatedAt": "2026-05-03T05:47:16.331Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "llm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/neuron-insight-lab/LoopLLM",
+          "title": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive",
+          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 14 Commits 14 Commits assets assets utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md ensemble.py ensemble.py main.py main.py requirements.txt requirements.txt transfer.py transfer.py View all files Repository files navigation 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, maki",
+          "readerTitle": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for ``LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation''",
+          "readerExcerpt": "This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## π Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90% of the maximum output length, compared to 20% for baselines, and improving transferability by around 40% to DeepSeek-V3 and Gemini 2.5 Flash. ![Image 1: overview](https://github.com/neuron-insight-lab/LoopLLM/raw/main/assets/overview.png) ## π οΈ Installation ### π§ Environment Preparation ``` conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### π§ Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the `utils/__init__.py` file ## π‘ Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ``` python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## π The Examples of Real-World LLMs Screenshots of repetitive g",
+          "publishDate": "2026-05-02",
+          "query": "site:github.io \"paper\" \"LLM\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
     {
       "id": "unofficial-439348b87abd",
       "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
