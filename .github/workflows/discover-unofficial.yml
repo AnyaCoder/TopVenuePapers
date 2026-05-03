@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/discover-unofficial.yml'
       - 'scripts/discover-unofficial-papers.mjs'
+      - 'scripts/lib/unofficial-papers.mjs'
       - 'scripts/lib/zhipu-client.mjs'
   schedule:
     - cron: '15 1 * * *'

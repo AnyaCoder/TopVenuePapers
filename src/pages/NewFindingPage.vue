@@ -12,6 +12,7 @@ import type {
 } from '../types/paper'
 import {
   discoveryTone,
+  discoveryStatusLabel,
   formatDateTime,
   formatRelativeTime,
   humanizePlatform,
@@ -439,7 +440,7 @@ function statusSnapshotLabel(
               <div>
                 <div class="discovery-card__badges">
                   <span class="status-pill" :data-tone="discoveryTone(entry)">
-                    {{ entry.status === 'accepted' ? 'Accepted signal' : 'Candidate signal' }}
+                    {{ discoveryStatusLabel(entry) }}
                   </span>
                   <span class="status-pill" data-tone="muted">
                     {{ entry.acceptedVenue || 'Unclassified' }}

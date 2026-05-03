@@ -120,5 +120,5 @@ export interface DiscoveryEvidenceCard {
   snippet: string
   timestamp: string
   href: string
-  tone: 'good' | 'active'
+  tone: 'good' | 'active' | 'muted'
 }

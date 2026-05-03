@@ -27,6 +27,7 @@ import type { BrowserSemanticProgress } from './utils/browserSemanticSearch'
 import { buildBrainstormQuery, buildLocalBrainstormPlan, rankPapersByTextQuery, type BrainstormDraft } from './utils/brainstorm'
 import {
   clampNumber,
+  discoveryStatusLabel,
   humanizePlatform,
   humanizeWorkflowStatus,
   resolvePageFromHash,
@@ -181,7 +182,7 @@ const unofficialAcceptedCount = computed(
   () => unofficialPapers.value.filter((paper) => paper.status === 'accepted').length,
 )
 const unofficialCandidateCount = computed(
-  () => unofficialPapers.value.filter((paper) => paper.status !== 'accepted').length,
+  () => unofficialPapers.value.filter((paper) => paper.status === 'candidate').length,
 )
 const unofficialPlatformBreakdown = computed(() => {
   const counts = new Map<string, number>()
@@ -232,7 +233,7 @@ const latestEvidenceCards = computed<DiscoveryEvidenceCard[]>(() =>
           unofficialStore.value?.generatedAt ||
           '',
         href: evidence.url || paper.primaryUrl,
-        tone: paper.status === 'accepted' ? ('good' as const) : ('active' as const),
+        tone: paper.status === 'accepted' ? ('good' as const) : paper.status === 'officially-published' ? ('muted' as const) : ('active' as const),
       })),
     )
     .sort((left, right) => timestampValue(right.timestamp) - timestampValue(left.timestamp))
@@ -274,13 +275,13 @@ const discoveryTimeline = computed<DiscoveryTimelineItem[]>(() => {
       detail:
         paper.summary ||
         paper.reason ||
-        `${paper.status === 'accepted' ? 'Accepted signal' : 'Candidate signal'} from ${paper.platforms?.map(humanizePlatform).join(', ') || 'social discovery'}.`,
+        `${discoveryStatusLabel(paper)} from ${paper.platforms?.map(humanizePlatform).join(', ') || 'social discovery'}.`,
       timestamp:
         paper.updatedAt ||
         paper.discoveredAt ||
         unofficialStore.value?.generatedAt ||
         '',
-      tone: paper.status === 'accepted' ? 'good' : 'active',
+      tone: paper.status === 'accepted' ? 'good' : paper.status === 'officially-published' ? 'muted' : 'active',
       href: paper.primaryUrl,
     })
   }

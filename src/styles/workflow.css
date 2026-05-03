@@ -102,6 +102,11 @@
   background: linear-gradient(180deg, rgba(244, 248, 253, 0.92), rgba(251, 247, 239, 0.86));
 }
 
+.evidence-card[data-tone="muted"] {
+  background: linear-gradient(180deg, rgba(247, 244, 238, 0.9), rgba(251, 247, 239, 0.84));
+  opacity: 0.84;
+}
+
 .feed-summary__row {
   align-items: start;
 }

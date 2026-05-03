@@ -235,17 +235,25 @@ export function mergeUnofficialEntry(existing, incoming) {
       ? incoming.status
       : existing.status
 
+  const incomingVenueSignal = normalizeAcceptedVenue(
+    incoming.acceptedVenue,
+    incoming.reason,
+    incoming.summary,
+  )
+  const shouldTrustIncomingAcceptance =
+    !existing.acceptedVenue ||
+    safeNumber(incoming.confidence) > safeNumber(existing.confidence) + 0.05 ||
+    rankAcceptanceEvidence(incoming.acceptanceEvidence) >
+      rankAcceptanceEvidence(existing.acceptanceEvidence)
   const acceptedVenue =
-    incoming.acceptedVenue ||
-    existing.acceptedVenue ||
-    normalizeAcceptedVenue(incoming.reason)?.venue ||
-    undefined
+    shouldTrustIncomingAcceptance
+      ? incoming.acceptedVenue || incomingVenueSignal?.venue || existing.acceptedVenue || undefined
+      : existing.acceptedVenue || incoming.acceptedVenue || incomingVenueSignal?.venue || undefined
 
   const acceptedYear =
-    incoming.acceptedYear ??
-    existing.acceptedYear ??
-    normalizeAcceptedVenue(incoming.reason)?.year ??
-    undefined
+    shouldTrustIncomingAcceptance
+      ? incoming.acceptedYear ?? incomingVenueSignal?.year ?? existing.acceptedYear ?? undefined
+      : existing.acceptedYear ?? incoming.acceptedYear ?? incomingVenueSignal?.year ?? undefined
 
   return normalizeUnofficialEntry({
     ...existing,

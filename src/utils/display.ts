@@ -105,11 +105,27 @@ export function humanizePlatform(platform: string) {
 }
 
 export function discoveryTone(entry: UnofficialPaperEntry) {
+  if (entry.status === 'officially-published') {
+    return 'muted'
+  }
+
   if (entry.status === 'accepted') {
     return 'good'
   }
 
   return 'active'
+}
+
+export function discoveryStatusLabel(entry: UnofficialPaperEntry) {
+  if (entry.status === 'officially-published') {
+    return 'Officially published'
+  }
+
+  if (entry.status === 'accepted') {
+    return 'Accepted signal'
+  }
+
+  return 'Candidate signal'
 }
 
 export function topEvidence(entry: UnofficialPaperEntry) {

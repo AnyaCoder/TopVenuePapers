@@ -178,6 +178,8 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
   let readerTitle = ''
   let readerExcerpt = ''
   let readerError = ''
+  let githubReadmeTrace = null
+  let githubReadmeError = ''
   const shouldRead = forceReader || isLikelyHelpfulReaderTarget(item.url)
 
   logProgress(
@@ -199,6 +201,23 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
     }
   }
 
+  if (isGitHubRepositoryUrl(item.url)) {
+    try {
+      const githubReadme = await fetchGitHubReadmeEvidence(item.url)
+
+      if (githubReadme) {
+        readerTitle = pickBetterEvidenceText(readerTitle, githubReadme.title)
+        readerExcerpt = mergeReaderExcerpts(readerExcerpt, githubReadme.excerpt)
+        githubReadmeTrace = {
+          title: githubReadme.title,
+          excerptLength: githubReadme.excerpt.length,
+        }
+      }
+    } catch (error) {
+      githubReadmeError = errorToMessage(error)
+    }
+  }
+
   const enriched = {
     ...item,
     readerTitle,
@@ -209,6 +228,12 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
   const readerTrace = summarizeReaderEvidence(enriched, readerError)
   readerTrace.durationMs = Date.now() - readerStartedAt
   readerTrace.skipped = !shouldRead
+  if (githubReadmeTrace) {
+    readerTrace.githubReadme = githubReadmeTrace
+  }
+  if (githubReadmeError) {
+    readerTrace.githubReadmeError = githubReadmeError
+  }
   trace.readers.push(readerTrace)
   logProgress(
     trace,
@@ -259,7 +284,13 @@ const mergedPapers = [...existingStore.papers]
 let added = 0
 let updated = 0
 
-for (const candidate of extractedCandidates) {
+for (const rawCandidate of extractedCandidates) {
+  const candidate = normalizeDiscoveredCandidate(rawCandidate)
+
+  if (!candidate) {
+    continue
+  }
+
   const titleKey = normalizeTitleKey(candidate.title)
 
   if (!titleKey || officialIndex.has(titleKey)) {
@@ -379,7 +410,7 @@ function buildHeuristicCandidate(item) {
   const title = cleanHeuristicTitle(item.readerTitle || item.title, sourceText)
   const text = normalizeForScoring(sourceText)
 
-  if (!venue || !hasCurrentVenueSignal(sourceText) || !title || !isLikelyPaperProject(item, text)) {
+  if (!venue || !hasCurrentVenueSignal(sourceText) || !title || !isLikelyPaperProject(item, text, title)) {
     return null
   }
 
@@ -413,8 +444,12 @@ function buildHeuristicCandidate(item) {
   }
 }
 
-function isLikelyPaperProject(item, text) {
+function isLikelyPaperProject(item, text, title) {
   if (!/github\.com|github\.io|arxiv\.org|\.edu|openreview\.net/i.test(item.url || '')) {
+    return false
+  }
+
+  if (isPersonalGithubHomepageRepository(item.url) || !isPlausiblePaperTitle(title)) {
     return false
   }
 
@@ -434,6 +469,18 @@ function hasCurrentVenueSignal(text) {
 }
 
 function cleanHeuristicTitle(value, sourceText = '') {
+  const candidates = [
+    ...extractTitleCandidates(sourceText),
+    value,
+  ]
+    .map(cleanPaperTitleCandidate)
+    .filter(isPlausiblePaperTitle)
+
+  if (candidates.length > 0) {
+    candidates.sort((left, right) => scoreHeuristicTitle(right) - scoreHeuristicTitle(left))
+    return candidates[0]
+  }
+
   let title = String(value ?? '')
     .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
     .replace(/[·|]\s*GitHub\s*$/i, '')
@@ -473,6 +520,151 @@ function cleanHeuristicTitle(value, sourceText = '') {
   title = title.replace(/^[`"“”‘’']+|[`"“”‘’']+$/g, '').trim()
 
   return title.length >= 12 ? title : ''
+}
+
+function extractTitleCandidates(sourceText) {
+  const text = String(sourceText ?? '')
+  const withoutMarkup = stripMarkup(text)
+  const candidates = []
+  const patterns = [
+    /<h1\b[^>]*>([\s\S]{18,260}?)<\/h1>/gi,
+    /^#{1,3}\s+(.{18,220})$/gm,
+    /(?:paper|work)\s*[:\uFF1A]\s*\[([^\]\n]{18,220})\]\(/gi,
+    /(?:paper|work)\s*[:\uFF1A]\s*([^\n]{18,220})/gi,
+    /official\s+(?:repo|repository|implementation|code)\s+(?:for|of)\s+(?:our\s+)?(?:paper\s*)?[`"'\u2018\u2019\u201C\u201D]*([^\n]{18,220})/gi,
+    /GitHub\s+-\s+[^:]+:\s*(?:\[[^\]]+\]\s*)?([^\n]{18,220})/gi,
+  ]
+
+  for (const source of [text, withoutMarkup]) {
+    for (const pattern of patterns) {
+      pattern.lastIndex = 0
+      for (const match of source.matchAll(pattern)) {
+        candidates.push(match[1])
+      }
+    }
+  }
+
+  return candidates
+}
+
+function cleanPaperTitleCandidate(value) {
+  let title = stripMarkup(value)
+    .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
+    .replace(/\s*[|·-]\s*GitHub\s*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  title = title
+    .replace(/^\[[^\]]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|2026|26)[^\]]*\]\s*/i, '')
+    .replace(/^\u3010[^\u3011]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|2026|26)[^\u3011]*\u3011\s*/i, '')
+    .replace(/^The\s+official\s+(?:code|implementation)\s+for\s+/i, '')
+    .replace(/^Official\s+(?:Repo|Repository|Code|Implementation)\s+(?:for|of)\s+(?:our\s+)?(?:Paper\s+)?/i, '')
+    .replace(/^Paper\s+[`"'\u2018\u2019\u201C\u201D]*/i, '')
+    .replace(/^[`"'\u2018\u2019\u201C\u201D]+|[`"'\u2018\u2019\u201C\u201D]+$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  return title.length > 220 ? title.slice(0, 220).trim() : title
+}
+
+function isPlausiblePaperTitle(value) {
+  const title = String(value ?? '').trim()
+  const normalized = normalizeForScoring(title)
+
+  if (title.length < 12 || title.length > 220) {
+    return false
+  }
+
+  if (
+    /^github\s+-/i.test(title) ||
+    /\b(github topics|repository files navigation|acadhomepage|personal homepage|table of contents)\b/i.test(title) ||
+    /\b(awesome|curated list|reading list|leaderboard|hiring|recruiting|call for papers|workshop)\b/i.test(title) ||
+    /github\.io|github\.com|https?:\/\//i.test(title)
+  ) {
+    return false
+  }
+
+  if (/\b(research interests?|selected research|research)$/.test(normalized)) {
+    return false
+  }
+
+  if (/\b(for|via|with|and|of|the|to|from|in)$/.test(normalized)) {
+    return false
+  }
+
+  const alphaWords = title.match(/[A-Za-z][A-Za-z0-9-]*/g)?.length ?? 0
+  return alphaWords >= 3 || /^[A-Z][A-Za-z0-9-]+:/.test(title)
+}
+
+function scoreHeuristicTitle(value) {
+  const title = String(value ?? '').trim()
+  let score = Math.min(title.length, 180)
+
+  if (/:/.test(title)) {
+    score += 25
+  }
+  if (/\b(llm|vlm|mllm|vla|multimodal|reasoning|agent|video|3d|robot|language|vision)\b/i.test(title)) {
+    score += 10
+  }
+  if (/\b(dataset|benchmark|toolkit)\b/i.test(title)) {
+    score -= 12
+  }
+
+  return score
+}
+
+function stripMarkup(value) {
+  return String(value ?? '')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\[([^\]]{2,220})\]\([^)]+\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function normalizeDiscoveredCandidate(candidate) {
+  if (!candidate?.title || !candidate?.primaryUrl) {
+    return null
+  }
+
+  const sourceText = [
+    candidate.title,
+    candidate.summary,
+    candidate.reason,
+    ...(Array.isArray(candidate.evidence)
+      ? candidate.evidence.flatMap((item) => [
+          item?.title,
+          item?.snippet,
+          item?.readerTitle,
+          item?.readerExcerpt,
+          item?.url,
+        ])
+      : []),
+  ].filter(Boolean).join('\n')
+  const title = cleanHeuristicTitle(candidate.title, sourceText) || String(candidate.title).trim()
+
+  if (!isPlausiblePaperTitle(title) || isGenericHomepageCandidate(candidate, title)) {
+    return null
+  }
+
+  return {
+    ...candidate,
+    title,
+  }
+}
+
+function isGenericHomepageCandidate(candidate, title) {
+  const url = candidate.primaryUrl || candidate.canonicalUrl || ''
+
+  if (/github\.com\/topics\//i.test(url)) {
+    return true
+  }
+
+  if (isPersonalGithubHomepageRepository(url)) {
+    return true
+  }
+
+  return /\b(research interests?|selected research|grounded vision-language models research)\b/i.test(title)
 }
 
 function buildHeuristicSummary(title, venue) {
@@ -1110,7 +1302,7 @@ function summarizeReaderEvidence(item, readerError) {
   const summary = {
     ...summarizeEvidence(item),
     readerTitle: item.readerTitle || '',
-    readerExcerpt: readerError ? '' : String(item.readerExcerpt || '').slice(0, 1400),
+    readerExcerpt: String(item.readerExcerpt || '').slice(0, 1400),
   }
 
   if (readerError) {
@@ -1155,6 +1347,158 @@ function isLikelyHelpfulReaderTarget(url) {
   return /x\.com|twitter\.com|xiaohongshu\.com|arxiv\.org|github\.io|github\.com|\.edu|lab|homepage|personal/i.test(
     url,
   )
+}
+
+function isGitHubRepositoryUrl(url) {
+  return parseGitHubRepository(url) !== null
+}
+
+function isPersonalGithubHomepageRepository(url) {
+  const repo = parseGitHubRepository(url)
+
+  if (!repo) {
+    return false
+  }
+
+  return repo.name.toLowerCase() === `${repo.owner.toLowerCase()}.github.io`
+}
+
+function parseGitHubRepository(url) {
+  const match = String(url ?? '').match(/^https?:\/\/github\.com\/([^/\s?#]+)\/([^/\s?#]+)/i)
+
+  if (!match || match[2].toLowerCase() === 'topics') {
+    return null
+  }
+
+  return {
+    owner: match[1],
+    name: match[2].replace(/\.git$/i, ''),
+  }
+}
+
+async function fetchGitHubReadmeEvidence(url) {
+  const repo = parseGitHubRepository(url)
+
+  if (!repo || isPersonalGithubHomepageRepository(url)) {
+    return null
+  }
+
+  const candidates = [
+    {
+      url: `https://api.github.com/repos/${repo.owner}/${repo.name}/readme`,
+      headers: {
+        accept: 'application/vnd.github.raw',
+      },
+    },
+    {
+      url: `https://raw.githubusercontent.com/${repo.owner}/${repo.name}/HEAD/README.md`,
+      headers: {
+        accept: 'text/plain',
+      },
+    },
+    {
+      url: `https://raw.githubusercontent.com/${repo.owner}/${repo.name}/main/README.md`,
+      headers: {
+        accept: 'text/plain',
+      },
+    },
+    {
+      url: `https://raw.githubusercontent.com/${repo.owner}/${repo.name}/master/README.md`,
+      headers: {
+        accept: 'text/plain',
+      },
+    },
+  ]
+  let lastError
+
+  for (const candidate of candidates) {
+    try {
+      const response = await fetchWithTimeout(candidate.url, {
+        headers: {
+          'user-agent': 'TopVenuePapers-discovery',
+          ...candidate.headers,
+        },
+      }, 8_000)
+
+      if (!response.ok) {
+        lastError = new Error(`${response.status} ${response.statusText}`)
+        continue
+      }
+
+      const text = await response.text()
+      const excerpt = stripMarkup(text).slice(0, 3000).trim()
+
+      if (!excerpt) {
+        continue
+      }
+
+      return {
+        title: cleanHeuristicTitle('', text) || `${repo.owner}/${repo.name} README`,
+        excerpt,
+      }
+    } catch (error) {
+      lastError = error
+    }
+  }
+
+  if (lastError) {
+    throw lastError
+  }
+
+  return null
+}
+
+async function fetchWithTimeout(url, options, timeoutMs) {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), timeoutMs)
+
+  try {
+    return await fetch(url, {
+      ...options,
+      signal: controller.signal,
+    })
+  } catch (error) {
+    if (error?.name === 'AbortError') {
+      throw new Error(`request timed out after ${timeoutMs}ms`)
+    }
+    throw error
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
+function pickBetterEvidenceText(left, right) {
+  const leftText = String(left ?? '').trim()
+  const rightText = String(right ?? '').trim()
+
+  if (!leftText) {
+    return rightText
+  }
+
+  if (!rightText) {
+    return leftText
+  }
+
+  if (isPlausiblePaperTitle(rightText) && !isPlausiblePaperTitle(leftText)) {
+    return rightText
+  }
+
+  return rightText.length > leftText.length ? rightText : leftText
+}
+
+function mergeReaderExcerpts(left, right) {
+  const leftText = String(left ?? '').trim()
+  const rightText = String(right ?? '').trim()
+
+  if (!leftText || leftText.startsWith('reader failed:')) {
+    return rightText || leftText
+  }
+
+  if (!rightText || leftText.includes(rightText.slice(0, 120))) {
+    return leftText
+  }
+
+  return `${leftText}\n\n${rightText}`.slice(0, 5000)
 }
 
 async function readCatalog(path) {
