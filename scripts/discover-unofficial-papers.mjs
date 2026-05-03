@@ -564,7 +564,48 @@ function cleanPaperTitleCandidate(value) {
     .replace(/\s+/g, ' ')
     .trim()
 
+  title = trimTitleTail(title)
+
   return title.length > 220 ? title.slice(0, 220).trim() : title
+}
+
+function trimTitleTail(value) {
+  let title = String(value ?? '').trim()
+  const hardStopPatterns = [
+    /\s+[路·]\s+GitHub\b/i,
+    /\s+\|\s+GitHub\b/i,
+    /\s+Go to file\b/i,
+    /\s+master\s+Go to file\b/i,
+    /\s+main\s+Go to file\b/i,
+    /\s+Abstract\b/i,
+    /\s+Overview\b/i,
+    /\s+Installation\b/i,
+  ]
+
+  for (const pattern of hardStopPatterns) {
+    const match = title.match(pattern)
+    if (match?.index && match.index >= 12) {
+      title = title.slice(0, match.index).trim()
+    }
+  }
+
+  title = title
+    .replace(/\s+[🎓🚀🌟📌📖].*$/u, '')
+    .replace(/\s+[\uFFFD]+.*$/u, '')
+    .replace(/[路·|,-]\s*$/u, '')
+    .trim()
+
+  if (/^[A-Z][A-Za-z0-9-]+:\s+/.test(title)) {
+    const nextPseudoSection = title.match(/\s+[A-Z][A-Za-z0-9-]+:\s+/g)?.[0]
+    if (nextPseudoSection) {
+      const index = title.indexOf(nextPseudoSection, title.indexOf(':') + 1)
+      if (index > 24) {
+        title = title.slice(0, index).trim()
+      }
+    }
+  }
+
+  return title
 }
 
 function isPlausiblePaperTitle(value) {
