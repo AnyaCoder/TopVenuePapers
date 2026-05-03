@@ -56,7 +56,9 @@ const skippedSearchPlans = Math.max(0, rawSearchPlans.length - searchPlans.lengt
 const maxResultsPerQuery = readPositiveInt(args.maxResults ?? process.env.DISCOVERY_MAX_RESULTS, 8)
 const maxReaders = readPositiveInt(args.maxReaders ?? process.env.DISCOVERY_MAX_READERS, 24)
 const minReaderCandidates = readPositiveInt(args.minReaders ?? process.env.DISCOVERY_MIN_READERS, 8)
+const extractionBatchSize = readPositiveInt(args.batchSize ?? process.env.DISCOVERY_BATCH_SIZE, 4)
 const maxExtractionBatches = readPositiveInt(args.maxBatches ?? process.env.DISCOVERY_MAX_BATCHES, 4)
+const extractionDelayMs = readPositiveInt(args.extractionDelayMs ?? process.env.DISCOVERY_EXTRACTION_DELAY_MS, 8_000)
 const apiRetries = readPositiveInt(args.retries ?? process.env.ZHIPU_RETRIES, 1)
 const discoveryBudgetMs = readPositiveInt(args.budgetMs ?? process.env.DISCOVERY_BUDGET_MS, 20 * 60 * 1000)
 const dryRun = Boolean(args.dryRun)
@@ -79,7 +81,9 @@ const trace = createTrace(client, {
   maxResultsPerQuery,
   maxReaders,
   minReaderCandidates,
+  extractionBatchSize,
   maxExtractionBatches,
+  extractionDelayMs,
   apiRetries,
   discoveryBudgetMs,
 })
@@ -211,7 +215,7 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
   )
 }
 
-const allBatches = chunk(enrichedEvidence, 6)
+const allBatches = chunk(enrichedEvidence, extractionBatchSize)
 const batches = allBatches.slice(0, maxExtractionBatches)
 const skippedExtractionBatches = Math.max(0, allBatches.length - batches.length)
 const extractedCandidates = []
@@ -226,6 +230,10 @@ for (const [batchIndex, batch] of batches.entries()) {
   }
 
   logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] ${batch.length} evidence items.`)
+  if (batchIndex > 0 && extractionDelayMs > 0) {
+    logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] waiting ${formatDuration(extractionDelayMs)} to avoid rate limits.`)
+    await sleep(extractionDelayMs)
+  }
   const extraction = await extractCandidatesFromEvidence(client, batch, batchIndex, trace)
   extractedCandidates.push(...extraction)
   logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] parsed=${extraction.length}`)
@@ -1011,6 +1019,10 @@ function isBudgetExpired(startedAt, budgetMs) {
   return Date.now() - startedAt >= budgetMs
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
 function errorToMessage(error) {
   return error instanceof Error ? error.message : String(error)
 }
@@ -1043,6 +1055,10 @@ function parseArgs(argv) {
       parsed.minReaders = argv[++index]
     } else if (arg === '--max-batches') {
       parsed.maxBatches = argv[++index]
+    } else if (arg === '--batch-size') {
+      parsed.batchSize = argv[++index]
+    } else if (arg === '--extraction-delay-ms') {
+      parsed.extractionDelayMs = argv[++index]
     } else if (arg === '--retries') {
       parsed.retries = argv[++index]
     } else if (arg === '--budget-ms') {
@@ -1081,6 +1097,8 @@ Options:
   --max-readers <n>            Reader-enriched link cap. Default: 24.
   --min-readers <n>            Backfill at least this many links when available. Default: 8.
   --max-batches <n>            LLM extraction-batch cap. Default: 4.
+  --batch-size <n>             Evidence items per extraction batch. Default: 4.
+  --extraction-delay-ms <n>    Delay between extraction batches. Default: 8000.
   --retries <n>                Zhipu retry count per request. Default: 1.
   --budget-ms <n>              Whole discovery soft budget. Default: 1200000.
   --recency <filter>           Zhipu recency filter for custom queries. Default: oneMonth.
