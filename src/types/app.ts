@@ -64,9 +64,16 @@ export interface DiscoveryTraceExtractionBatch {
   prompt: string
   systemPrompt: string
   model: string
+  extractor?: string
   responseText: string
   parsedCount: number
   error?: string
+}
+
+export interface DiscoveryTraceRejectedCandidate {
+  title: string
+  primaryUrl: string
+  reason: string
 }
 
 export interface DiscoveryTracePayload {
@@ -75,6 +82,10 @@ export interface DiscoveryTracePayload {
   model: string
   searchTool: string
   readerTool: string
+  controls?: {
+    extractor?: string
+    [key: string]: unknown
+  }
   queries: Array<{
     query: string
     requestedCount: number
@@ -84,10 +95,12 @@ export interface DiscoveryTracePayload {
   }>
   readers: DiscoveryTraceReaderResult[]
   extractionBatches: DiscoveryTraceExtractionBatch[]
+  rejectedCandidates?: DiscoveryTraceRejectedCandidate[]
   summary: {
     searchEvidenceCollected: number
     readerEnrichedEvidence: number
     extractedCandidates: number
+    rejectedCandidates?: number
     added: number
     updated: number
   }

@@ -313,7 +313,10 @@ function statusSnapshotLabel(
               <article>
                 <span>Model</span>
                 <strong>{{ discoveryTrace.model }}</strong>
-                <small>{{ discoveryTrace.searchTool }} / {{ discoveryTrace.readerTool }}</small>
+                <small>
+                  {{ discoveryTrace.searchTool }} / {{ discoveryTrace.readerTool }} /
+                  {{ discoveryTrace.controls?.extractor || 'zhipu-only' }}
+                </small>
               </article>
               <article>
                 <span>Search Evidence</span>
@@ -328,7 +331,11 @@ function statusSnapshotLabel(
               <article>
                 <span>Candidates</span>
                 <strong>{{ discoveryTrace.summary.extractedCandidates }}</strong>
-                <small>{{ discoveryTrace.summary.added }} added / {{ discoveryTrace.summary.updated }} updated</small>
+                <small>
+                  {{ discoveryTrace.summary.added }} added /
+                  {{ discoveryTrace.summary.updated }} updated /
+                  {{ discoveryTrace.summary.rejectedCandidates || 0 }} rejected
+                </small>
               </article>
             </div>
 
@@ -399,7 +406,7 @@ function statusSnapshotLabel(
                 >
                   <div class="trace-card__head">
                     <strong>Batch {{ batch.index + 1 }} / {{ batch.evidenceCount }} evidence items</strong>
-                    <span>{{ batch.parsedCount }} parsed</span>
+                    <span>{{ batch.parsedCount }} parsed by {{ batch.extractor || 'zhipu-chat' }}</span>
                   </div>
                   <p v-if="batch.error" class="trace-error">{{ batch.error }}</p>
                   <details>
@@ -414,6 +421,36 @@ function statusSnapshotLabel(
                     <summary>Model visible output</summary>
                     <pre>{{ batch.responseText || 'No model output captured.' }}</pre>
                   </details>
+                </article>
+              </div>
+            </section>
+
+            <section
+              v-if="discoveryTrace.rejectedCandidates?.length"
+              class="trace-section"
+            >
+              <h3>Local Safety Rejections</h3>
+              <p class="muted-copy">
+                Zhipu performs extraction; this local guard only drops malformed titles, generic homepages, duplicate official papers, or missing URLs.
+              </p>
+              <div class="trace-list">
+                <article
+                  v-for="candidate in discoveryTrace.rejectedCandidates.slice(0, 12)"
+                  :key="`${candidate.reason}:${candidate.title}:${candidate.primaryUrl}`"
+                  class="trace-card"
+                >
+                  <div class="trace-card__head">
+                    <strong>{{ candidate.title || candidate.primaryUrl || 'Untitled candidate' }}</strong>
+                    <span>{{ candidate.reason }}</span>
+                  </div>
+                  <a
+                    v-if="candidate.primaryUrl"
+                    :href="candidate.primaryUrl"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open rejected source
+                  </a>
                 </article>
               </div>
             </section>

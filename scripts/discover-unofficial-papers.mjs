@@ -5,7 +5,6 @@ import {
   buildOfficialTitleIndex,
   buildUnofficialId,
   mergeUnofficialEntry,
-  normalizeAcceptedVenue,
   readUnofficialStore,
   writeUnofficialStore,
 } from './lib/unofficial-papers.mjs'
@@ -87,6 +86,7 @@ const trace = createTrace(client, {
   extractionDelayMs,
   apiRetries,
   discoveryBudgetMs,
+  extractor: 'zhipu-only',
 })
 const results = []
 const rejectedEvidence = []
@@ -206,7 +206,7 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
       const githubReadme = await fetchGitHubReadmeEvidence(item.url)
 
       if (githubReadme) {
-        readerTitle = pickBetterEvidenceText(readerTitle, githubReadme.title)
+        readerTitle = pickLongerEvidenceText(readerTitle, githubReadme.title)
         readerExcerpt = mergeReaderExcerpts(readerExcerpt, githubReadme.excerpt)
         githubReadmeTrace = {
           title: githubReadme.title,
@@ -244,10 +244,10 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
 const allBatches = chunk(enrichedEvidence, extractionBatchSize)
 const batches = allBatches.slice(0, maxExtractionBatches)
 const skippedExtractionBatches = Math.max(0, allBatches.length - batches.length)
-const heuristicCandidates = extractHeuristicCandidates(enrichedEvidence, trace)
-const extractedCandidates = [...heuristicCandidates]
+const extractedCandidates = []
+const rejectedCandidates = []
 
-logProgress(trace, `Heuristic extraction produced ${heuristicCandidates.length} candidates.`)
+logProgress(trace, 'Zhipu-only extraction enabled; local code will only reject malformed candidates before storage.')
 logProgress(trace, `Zhipu extraction stage started: ${batches.length}/${allBatches.length} batches.`)
 
 for (const [batchIndex, batch] of batches.entries()) {
@@ -285,7 +285,7 @@ let added = 0
 let updated = 0
 
 for (const rawCandidate of extractedCandidates) {
-  const candidate = normalizeDiscoveredCandidate(rawCandidate)
+  const candidate = normalizeDiscoveredCandidate(rawCandidate, { rejectedCandidates })
 
   if (!candidate) {
     continue
@@ -294,6 +294,11 @@ for (const rawCandidate of extractedCandidates) {
   const titleKey = normalizeTitleKey(candidate.title)
 
   if (!titleKey || officialIndex.has(titleKey)) {
+    rejectedCandidates.push({
+      title: candidate.title || rawCandidate?.title || '',
+      primaryUrl: candidate.primaryUrl || rawCandidate?.primaryUrl || '',
+      reason: officialIndex.has(titleKey) ? 'already-in-official-catalog' : 'missing-title-key',
+    })
     continue
   }
 
@@ -348,10 +353,12 @@ trace.summary = {
   extractionBatchesRun: batches.length,
   skippedExtractionBatches,
   extractedCandidates: extractedCandidates.length,
+  rejectedCandidates: rejectedCandidates.length,
   added,
   updated,
   durationMs: Date.now() - discoveryStartedAt,
 }
+trace.rejectedCandidates = rejectedCandidates.slice(0, 80)
 
 if (!dryRun) {
   await writeUnofficialStore(storePath, nextStore)
@@ -367,330 +374,31 @@ if (!dryRun) {
   console.log(`Wrote ${tracePath}`)
 }
 
-function extractHeuristicCandidates(evidenceItems, trace) {
-  const candidates = []
-  const skipped = []
+function normalizeDiscoveredCandidate(candidate, options = {}) {
+  const rejectedCandidates = options.rejectedCandidates
+  const title = normalizeCandidateText(candidate?.title)
+  const primaryUrl = normalizeCandidateUrl(candidate?.primaryUrl)
 
-  for (const item of evidenceItems) {
-    const candidate = buildHeuristicCandidate(item)
-
-    if (candidate) {
-      candidates.push(candidate)
-    } else {
-      skipped.push(summarizeEvidence(item))
-    }
-  }
-
-  const deduped = dedupeCandidates(candidates)
-  trace.heuristicExtraction = {
-    candidateCount: deduped.length,
-    candidates: deduped.map((candidate) => ({
-      title: candidate.title,
-      status: candidate.status,
-      acceptedVenue: candidate.acceptedVenue || '',
-      confidence: candidate.confidence,
-      primaryUrl: candidate.primaryUrl,
-      reason: candidate.reason,
-    })),
-    skipped: skipped.slice(0, 12),
-  }
-
-  return deduped
-}
-
-function buildHeuristicCandidate(item) {
-  const sourceText = [
-    item.readerTitle,
-    item.title,
-    item.snippet,
-    item.readerExcerpt,
-    item.url,
-  ].filter(Boolean).join('\n')
-  const venue = normalizeAcceptedVenue(sourceText)
-  const title = cleanHeuristicTitle(item.readerTitle || item.title, sourceText)
-  const text = normalizeForScoring(sourceText)
-
-  if (!venue || !hasCurrentVenueSignal(sourceText) || !title || !isLikelyPaperProject(item, text, title)) {
+  if (!title || !primaryUrl) {
+    recordRejectedCandidate(rejectedCandidates, candidate, 'missing-title-or-primary-url')
     return null
   }
 
-  return {
-    id: buildUnofficialId(title),
-    title,
-    summary: buildHeuristicSummary(title, venue.venue),
-    reason: `Local high-confidence extraction found ${venue.venue} acceptance signal in the source title or excerpt.`,
-    status: 'accepted',
-    confidence: item.relevance?.score >= 8 ? 0.88 : 0.76,
-    acceptedVenue: venue.venue,
-    acceptedYear: venue.year,
-    primaryUrl: item.url,
-    canonicalUrl: item.url,
-    authors: [],
-    keywords: inferKeywords(sourceText),
-    platforms: normalizeStringArray([item.platform || detectPlatform(item.url)]),
-    evidence: [{
-      platform: item.platform || detectPlatform(item.url),
-      url: item.url,
-      title: item.title || '',
-      author: item.author || '',
-      snippet: item.snippet || '',
-      readerTitle: item.readerTitle || '',
-      readerExcerpt: item.readerExcerpt || '',
-      publishDate: item.publishDate || '',
-      query: item.query || '',
-    }],
-    discoveredAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  }
-}
-
-function isLikelyPaperProject(item, text, title) {
-  if (!/github\.com|github\.io|arxiv\.org|\.edu|openreview\.net/i.test(item.url || '')) {
-    return false
-  }
-
-  if (isPersonalGithubHomepageRepository(item.url) || !isPlausiblePaperTitle(title)) {
-    return false
-  }
-
-  if (/\bawesome\b|curated list|reading list|survey list|leaderboard|toolkit|benchmark list|hiring|recruit/i.test(text)) {
-    return false
-  }
-
-  if (/arxiv\.org\/list\//i.test(item.url || '')) {
-    return false
-  }
-
-  return /\bpaper\b|official repo|official code|project page|accepted|oral|poster|conference|论文|代码|项目/i.test(text)
-}
-
-function hasCurrentVenueSignal(text) {
-  return /\b(aaai|acl|emnlp|cvpr|iccv|iclr|icml|neurips|siggraph|kdd|www|ijcai|colm|mm|sigir)[-\s]?(?:2026|26)\b/i.test(text)
-}
-
-function cleanHeuristicTitle(value, sourceText = '') {
-  const candidates = [
-    ...extractTitleCandidates(sourceText),
-    value,
-  ]
-    .map(cleanPaperTitleCandidate)
-    .filter(isPlausiblePaperTitle)
-
-  if (candidates.length > 0) {
-    candidates.sort((left, right) => scoreHeuristicTitle(right) - scoreHeuristicTitle(left))
-    return candidates[0]
-  }
-
-  let title = String(value ?? '')
-    .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
-    .replace(/[·|]\s*GitHub\s*$/i, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-
-  title = title
-    .replace(/^\[[^\]]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW)[^\]]*\]\s*/i, '')
-    .replace(/^【[^】]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW)[^】]*】\s*/i, '')
-    .replace(/^Official\s+(Repo|Repository|Code)\s+for\s+(Paper\s+)?/i, '')
-    .replace(/^The official code for\s+/i, '')
-    .replace(/^Paper\s+[\"'`“”‘’]+/i, '')
-    .replace(/[\"'`“”‘’]+$/g, '')
-    .trim()
-
-  const quoted =
-    sourceText.match(/(?:paper|for)\s*[:：]?\s*[`"“”‘’']{1,2}([^`"“”‘’'\n]{18,220})[`"“”‘’']{1,2}/i)?.[1] ||
-    title.match(/[\"'`“”‘’]{1,2}([^\"'`“”‘’]{18,220})[\"'`“”‘’]{1,2}/)?.[1]
-
-  if (quoted) {
-    title = quoted.trim()
-  }
-
-  const markdownHeading = sourceText.match(/^#{1,3}\s+(.{18,220})$/m)?.[1]
-  if (
-    markdownHeading &&
-    !/\b(github|navigation|license|abstract|introduction|news|todo|table of contents)\b/i.test(markdownHeading) &&
-    markdownHeading.length > title.length
-  ) {
-    title = markdownHeading.trim()
-  }
-
-  if (title.length > 220) {
-    title = title.slice(0, 220).trim()
-  }
-
-  title = title.replace(/^[`"“”‘’']+|[`"“”‘’']+$/g, '').trim()
-
-  return title.length >= 12 ? title : ''
-}
-
-function extractTitleCandidates(sourceText) {
-  const text = String(sourceText ?? '')
-  const withoutMarkup = stripMarkup(text)
-  const candidates = []
-  const patterns = [
-    /<h1\b[^>]*>([\s\S]{18,260}?)<\/h1>/gi,
-    /^#{1,3}\s+(.{18,220})$/gm,
-    /(?:paper|work)\s*[:\uFF1A]\s*\[([^\]\n]{18,220})\]\(/gi,
-    /(?:paper|work)\s*[:\uFF1A]\s*([^\n]{18,220})/gi,
-    /official\s+(?:repo|repository|implementation|code)\s+(?:for|of)\s+(?:our\s+)?(?:paper\s*)?[`"'\u2018\u2019\u201C\u201D]*([^\n]{18,220})/gi,
-    /GitHub\s+-\s+[^:]+:\s*(?:\[[^\]]+\]\s*)?([^\n]{18,220})/gi,
-  ]
-
-  for (const source of [text, withoutMarkup]) {
-    for (const pattern of patterns) {
-      pattern.lastIndex = 0
-      for (const match of source.matchAll(pattern)) {
-        candidates.push(match[1])
-      }
-    }
-  }
-
-  return candidates
-}
-
-function cleanPaperTitleCandidate(value) {
-  let title = stripMarkup(value)
-    .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
-    .replace(/\s*[|·-]\s*GitHub\s*$/i, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-
-  title = title
-    .replace(/^\[[^\]]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|2026|26)[^\]]*\]\s*/i, '')
-    .replace(/^\u3010[^\u3011]*(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|2026|26)[^\u3011]*\u3011\s*/i, '')
-    .replace(/^The\s+official\s+(?:code|implementation)\s+for\s+/i, '')
-    .replace(/^Official\s+(?:Repo|Repository|Code|Implementation)\s+(?:for|of)\s+(?:our\s+)?(?:Paper\s+)?/i, '')
-    .replace(/^Paper\s+[`"'\u2018\u2019\u201C\u201D]*/i, '')
-    .replace(/^[`"'\u2018\u2019\u201C\u201D]+|[`"'\u2018\u2019\u201C\u201D]+$/g, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-
-  title = trimTitleTail(title)
-
-  return title.length > 220 ? title.slice(0, 220).trim() : title
-}
-
-function trimTitleTail(value) {
-  let title = String(value ?? '').trim()
-  const hardStopPatterns = [
-    /\s+[路·]\s+GitHub\b/i,
-    /\s+\|\s+GitHub\b/i,
-    /\s+Go to file\b/i,
-    /\s+master\s+Go to file\b/i,
-    /\s+main\s+Go to file\b/i,
-    /\s+Abstract\b/i,
-    /\s+Overview\b/i,
-    /\s+Installation\b/i,
-  ]
-
-  for (const pattern of hardStopPatterns) {
-    const match = title.match(pattern)
-    if (match?.index && match.index >= 12) {
-      title = title.slice(0, match.index).trim()
-    }
-  }
-
-  title = title
-    .replace(/\s+[🎓🚀🌟📌📖].*$/u, '')
-    .replace(/\s+[\uFFFD]+.*$/u, '')
-    .replace(/[路·|,-]\s*$/u, '')
-    .trim()
-
-  if (/^[A-Z][A-Za-z0-9-]+:\s+/.test(title)) {
-    const nextPseudoSection = title.match(/\s+[A-Z][A-Za-z0-9-]+:\s+/g)?.[0]
-    if (nextPseudoSection) {
-      const index = title.indexOf(nextPseudoSection, title.indexOf(':') + 1)
-      if (index > 24) {
-        title = title.slice(0, index).trim()
-      }
-    }
-  }
-
-  return title
-}
-
-function isPlausiblePaperTitle(value) {
-  const title = String(value ?? '').trim()
-  const normalized = normalizeForScoring(title)
-
-  if (title.length < 12 || title.length > 220) {
-    return false
-  }
-
-  if (
-    /^github\s+-/i.test(title) ||
-    /\b(github topics|repository files navigation|acadhomepage|personal homepage|table of contents)\b/i.test(title) ||
-    /\b(awesome|curated list|reading list|leaderboard|hiring|recruiting|call for papers|workshop)\b/i.test(title) ||
-    /github\.io|github\.com|https?:\/\//i.test(title)
-  ) {
-    return false
-  }
-
-  if (/\b(research interests?|selected research|research)$/.test(normalized)) {
-    return false
-  }
-
-  if (/\b(for|via|with|and|of|the|to|from|in)$/.test(normalized)) {
-    return false
-  }
-
-  const alphaWords = title.match(/[A-Za-z][A-Za-z0-9-]*/g)?.length ?? 0
-  return alphaWords >= 3 || /^[A-Z][A-Za-z0-9-]+:/.test(title)
-}
-
-function scoreHeuristicTitle(value) {
-  const title = String(value ?? '').trim()
-  let score = Math.min(title.length, 180)
-
-  if (/:/.test(title)) {
-    score += 25
-  }
-  if (/\b(llm|vlm|mllm|vla|multimodal|reasoning|agent|video|3d|robot|language|vision)\b/i.test(title)) {
-    score += 10
-  }
-  if (/\b(dataset|benchmark|toolkit)\b/i.test(title)) {
-    score -= 12
-  }
-
-  return score
-}
-
-function stripMarkup(value) {
-  return String(value ?? '')
-    .replace(/<br\s*\/?>/gi, ' ')
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/\[([^\]]{2,220})\]\([^)]+\)/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-function normalizeDiscoveredCandidate(candidate) {
-  if (!candidate?.title || !candidate?.primaryUrl) {
+  if (hasBrokenTitleShape(title)) {
+    recordRejectedCandidate(rejectedCandidates, { ...candidate, title, primaryUrl }, 'broken-title-shape')
     return null
   }
 
-  const sourceText = [
-    candidate.title,
-    candidate.summary,
-    candidate.reason,
-    ...(Array.isArray(candidate.evidence)
-      ? candidate.evidence.flatMap((item) => [
-          item?.title,
-          item?.snippet,
-          item?.readerTitle,
-          item?.readerExcerpt,
-          item?.url,
-        ])
-      : []),
-  ].filter(Boolean).join('\n')
-  const title = cleanHeuristicTitle(candidate.title, sourceText) || String(candidate.title).trim()
-
-  if (!isPlausiblePaperTitle(title) || isGenericHomepageCandidate(candidate, title)) {
+  if (isGenericHomepageCandidate(candidate, title)) {
+    recordRejectedCandidate(rejectedCandidates, { ...candidate, title, primaryUrl }, 'generic-homepage-or-topic')
     return null
   }
 
   return {
     ...candidate,
     title,
+    primaryUrl,
+    canonicalUrl: normalizeCandidateUrl(candidate.canonicalUrl) || undefined,
   }
 }
 
@@ -705,41 +413,51 @@ function isGenericHomepageCandidate(candidate, title) {
     return true
   }
 
-  return /\b(research interests?|selected research|grounded vision-language models research)\b/i.test(title)
+  return /\b(research interests?|selected research)\b/i.test(title)
 }
 
-function buildHeuristicSummary(title, venue) {
-  return `从项目页或代码仓库识别到 ${venue} 接收信号，标题为 ${title}。`
+function normalizeCandidateText(value) {
+  return String(value ?? '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
-function inferKeywords(text) {
-  const normalized = normalizeForScoring(text)
-  const keywords = []
-  const keywordSignals = [
-    ['llm', 'llm'],
-    ['large language model', 'llm'],
-    ['vlm', 'vlm'],
-    ['vision-language', 'vlm'],
-    ['multimodal', 'multimodal'],
-    ['multi-modal', 'multimodal'],
-    ['mllm', 'mllm'],
-    ['vla', 'vla'],
-    ['agent', 'agent'],
-    ['rag', 'rag'],
-    ['reasoning', 'reasoning'],
-    ['3d', '3d'],
-    ['robot', 'robotics'],
-    ['embodied', 'embodied ai'],
-    ['video', 'video understanding'],
-  ]
+function normalizeCandidateUrl(value) {
+  const url = String(value ?? '').trim()
 
-  for (const [needle, keyword] of keywordSignals) {
-    if (normalized.includes(needle)) {
-      keywords.push(keyword)
-    }
+  return /^https?:\/\//i.test(url) ? url : ''
+}
+
+function hasBrokenTitleShape(title) {
+  const normalized = normalizeForScoring(title)
+
+  if (title.length < 4 || title.length > 300) {
+    return true
   }
 
-  return normalizeStringArray(keywords).slice(0, 10)
+  return [
+    /^github\s+-/i,
+    /\bgithub topics\b/i,
+    /\brepository files navigation\b/i,
+    /\bgo to file\b/i,
+    /\btable of contents\b/i,
+    /\bpersonal homepage\b/i,
+    /\bcall for papers\b/i,
+    /github\.io|github\.com|https?:\/\//i,
+  ].some((pattern) => pattern.test(title)) ||
+    /\b(research interests?|selected research)$/.test(normalized)
+}
+
+function recordRejectedCandidate(rejectedCandidates, candidate, reason) {
+  if (!Array.isArray(rejectedCandidates)) {
+    return
+  }
+
+  rejectedCandidates.push({
+    title: candidate?.title || '',
+    primaryUrl: candidate?.primaryUrl || '',
+    reason,
+  })
 }
 
 async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, trace) {
@@ -783,6 +501,7 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
     model: client.model,
     responseText: text.slice(0, 12000),
     parsedCount: papers.length,
+    extractor: 'zhipu-chat',
     durationMs: Date.now() - extractionStartedAt,
     error: errorMessage || undefined,
   })
@@ -830,13 +549,18 @@ function buildExtractionPrompt(evidenceBatch) {
 You are helping maintain a 2026 top-venue AI paper tracker.
 
 Task:
-- Inspect the search and reader evidence below.
-- Extract only items that are likely to be real research papers or paper project pages.
+- Inspect the search and reader evidence below and decide whether each item is a real research paper, preprint, accepted-paper announcement, or paper project page.
+- You are the primary extractor. The local pipeline will not infer missing titles or venues from heuristics.
 - Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.
 - Prefer announcements using phrases like "Introducing", "new work", "our paper", "accepted to", or venue names.
 - Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.
-- If evidence mentions acceptance to AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.
-- If acceptance is unclear, use status "candidate".
+- Extract the clean paper title only. Never include GitHub UI text such as "Go to file", "Repository files navigation", branch names, README navigation, website titles, URLs, or social-media boilerplate in title.
+- If the clean paper title is not explicitly supported by the evidence, return no paper for that item instead of guessing.
+- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.
+- Use status "accepted" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status "candidate".
+- Put a short exact evidence quote or close paraphrase in "reason", including the source that supports the title/status.
+- Use primaryUrl as the best paper/project/social announcement URL from the evidence. It must be an http(s) URL.
+- Return an empty papers array if the batch has no confidently identifiable papers.
 
 Return JSON only:
 {
@@ -1205,7 +929,7 @@ function evidencePriority(item) {
   if (/github\.com|github\.io/i.test(item.url || '')) {
     score += 4
   }
-  if (hasCurrentVenueSignal(text)) {
+  if (hasVenueYearSignal(text)) {
     score += 8
   }
   if (/arxiv\.org\/list\//i.test(item.url || '')) {
@@ -1216,6 +940,10 @@ function evidencePriority(item) {
   }
 
   return score
+}
+
+function hasVenueYearSignal(text) {
+  return /\b(aaai|acl|emnlp|cvpr|iccv|iclr|icml|neurips|siggraph|kdd|www|ijcai|colm|mm|sigir)[-\s]?(?:2026|26)\b/i.test(text)
 }
 
 function fillReaderCandidates(accepted, backfill, options) {
@@ -1306,22 +1034,24 @@ function createTrace(client, controls = {}) {
     generatedAt: new Date().toISOString(),
     model: client.model,
     searchTool: client.searchTool,
-    readerTool: client.readerTool,
-    controls,
-    progress: [],
-    queries: [],
-    readers: [],
-    extractionBatches: [],
-    summary: {
-      searchQueriesRun: 0,
-      rawSearchEvidenceCollected: 0,
-      searchEvidenceCollected: 0,
-      rejectedSearchEvidence: 0,
-      readerEnrichedEvidence: 0,
-      extractedCandidates: 0,
-      added: 0,
-      updated: 0,
-    },
+  readerTool: client.readerTool,
+  controls,
+  progress: [],
+  queries: [],
+  readers: [],
+  extractionBatches: [],
+  rejectedCandidates: [],
+  summary: {
+    searchQueriesRun: 0,
+    rawSearchEvidenceCollected: 0,
+    searchEvidenceCollected: 0,
+    rejectedSearchEvidence: 0,
+    readerEnrichedEvidence: 0,
+    extractedCandidates: 0,
+    rejectedCandidates: 0,
+    added: 0,
+    updated: 0,
+  },
     errors: [],
   }
 }
@@ -1364,24 +1094,6 @@ function dedupeEvidence(items) {
   }
 
   return Array.from(byUrl.values())
-}
-
-function dedupeCandidates(items) {
-  const byTitle = new Map()
-
-  for (const item of items) {
-    const key = normalizeTitleKey(item.title)
-    if (!key) {
-      continue
-    }
-
-    const existing = byTitle.get(key)
-    if (!existing || item.confidence > existing.confidence) {
-      byTitle.set(key, item)
-    }
-  }
-
-  return Array.from(byTitle.values())
 }
 
 function isLikelyHelpfulReaderTarget(url) {
@@ -1467,14 +1179,14 @@ async function fetchGitHubReadmeEvidence(url) {
       }
 
       const text = await response.text()
-      const excerpt = stripMarkup(text).slice(0, 3000).trim()
+      const excerpt = stripMarkupForEvidence(text).slice(0, 3000).trim()
 
       if (!excerpt) {
         continue
       }
 
       return {
-        title: cleanHeuristicTitle('', text) || `${repo.owner}/${repo.name} README`,
+        title: `${repo.owner}/${repo.name} README`,
         excerpt,
       }
     } catch (error) {
@@ -1508,7 +1220,16 @@ async function fetchWithTimeout(url, options, timeoutMs) {
   }
 }
 
-function pickBetterEvidenceText(left, right) {
+function stripMarkupForEvidence(value) {
+  return String(value ?? '')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\[([^\]]{2,220})\]\([^)]+\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function pickLongerEvidenceText(left, right) {
   const leftText = String(left ?? '').trim()
   const rightText = String(right ?? '').trim()
 
@@ -1518,10 +1239,6 @@ function pickBetterEvidenceText(left, right) {
 
   if (!rightText) {
     return leftText
-  }
-
-  if (isPlausiblePaperTitle(rightText) && !isPlausiblePaperTitle(leftText)) {
-    return rightText
   }
 
   return rightText.length > leftText.length ? rightText : leftText
