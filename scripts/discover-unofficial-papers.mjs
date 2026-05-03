@@ -246,6 +246,15 @@ const existingById = new Map(existingStore.papers.map((paper) => [paper.id, pape
 const existingByTitle = new Map(
   existingStore.papers.map((paper) => [normalizeTitleKey(paper.title), paper]),
 )
+const existingByUrl = new Map(
+  existingStore.papers
+    .flatMap((paper) => [
+      [paper.primaryUrl, paper],
+      [paper.canonicalUrl, paper],
+      ...(paper.evidence ?? []).map((item) => [item.url, paper]),
+    ])
+    .filter(([url]) => Boolean(url)),
+)
 const mergedPapers = [...existingStore.papers]
 let added = 0
 let updated = 0
@@ -259,7 +268,9 @@ for (const candidate of extractedCandidates) {
 
   const existing =
     existingById.get(candidate.id) ||
-    existingByTitle.get(titleKey)
+    existingByTitle.get(titleKey) ||
+    existingByUrl.get(candidate.primaryUrl) ||
+    existingByUrl.get(candidate.canonicalUrl)
 
   const merged = mergeUnofficialEntry(existing, candidate)
 
@@ -276,6 +287,11 @@ for (const candidate of extractedCandidates) {
 
   existingById.set(merged.id, merged)
   existingByTitle.set(titleKey, merged)
+  existingByUrl.set(merged.primaryUrl, merged)
+  existingByUrl.set(merged.canonicalUrl, merged)
+  for (const item of merged.evidence ?? []) {
+    existingByUrl.set(item.url, merged)
+  }
 }
 
 const nextStore = {
@@ -360,7 +376,7 @@ function buildHeuristicCandidate(item) {
     item.url,
   ].filter(Boolean).join('\n')
   const venue = normalizeAcceptedVenue(sourceText)
-  const title = cleanHeuristicTitle(item.readerTitle || item.title)
+  const title = cleanHeuristicTitle(item.readerTitle || item.title, sourceText)
   const text = normalizeForScoring(sourceText)
 
   if (!venue || !hasCurrentVenueSignal(sourceText) || !title || !isLikelyPaperProject(item, text)) {
@@ -417,7 +433,7 @@ function hasCurrentVenueSignal(text) {
   return /\b(aaai|acl|emnlp|cvpr|iccv|iclr|icml|neurips|siggraph|kdd|www|ijcai|colm|mm|sigir)[-\s]?(?:2026|26)\b/i.test(text)
 }
 
-function cleanHeuristicTitle(value) {
+function cleanHeuristicTitle(value, sourceText = '') {
   let title = String(value ?? '')
     .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
     .replace(/[·|]\s*GitHub\s*$/i, '')
@@ -433,14 +449,28 @@ function cleanHeuristicTitle(value) {
     .replace(/[\"'`“”‘’]+$/g, '')
     .trim()
 
-  const quoted = title.match(/[\"'`“”‘’]{1,2}([^\"'`“”‘’]{18,220})[\"'`“”‘’]{1,2}/)?.[1]
+  const quoted =
+    sourceText.match(/(?:paper|for)\s*[:：]?\s*[`"“”‘’']{1,2}([^`"“”‘’'\n]{18,220})[`"“”‘’']{1,2}/i)?.[1] ||
+    title.match(/[\"'`“”‘’]{1,2}([^\"'`“”‘’]{18,220})[\"'`“”‘’]{1,2}/)?.[1]
+
   if (quoted) {
     title = quoted.trim()
+  }
+
+  const markdownHeading = sourceText.match(/^#{1,3}\s+(.{18,220})$/m)?.[1]
+  if (
+    markdownHeading &&
+    !/\b(github|navigation|license|abstract|introduction|news|todo|table of contents)\b/i.test(markdownHeading) &&
+    markdownHeading.length > title.length
+  ) {
+    title = markdownHeading.trim()
   }
 
   if (title.length > 220) {
     title = title.slice(0, 220).trim()
   }
+
+  title = title.replace(/^[`"“”‘’']+|[`"“”‘’']+$/g, '').trim()
 
   return title.length >= 12 ? title : ''
 }
