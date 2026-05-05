@@ -12,11 +12,11 @@ The repo also supports a daily unofficial-paper queue for cases where 2026 paper
 
 - `data/unofficial/unofficial-papers.json` stores candidate and accepted-but-not-yet-official entries.
 - `public/data/unofficial/unofficial-papers.json` mirrors that queue for the `New Finding` page.
-- `npm run papers:unofficial:discover` uses an agentic staged search plan: high-confidence venue seeds, GitHub repository probes, arXiv/project-page probes, social announcements, Chinese web/social probes, and broad-recall fallback. Zhipu chat then extracts the clean paper title, status, venue evidence, and source URL.
+- `npm run papers:unofficial:discover` uses a Codex-style staged search loop: Zhipu first plans high-recall queries, the script runs static source probes across X/GitHub/arXiv/OpenReview/homepages/Chinese web, then evidence-derived follow-up queries trace likely titles, repositories, and venue-year signals. Zhipu chat then extracts the clean paper title, status, venue evidence, and source URL.
 - `npm run papers:unofficial:reconcile` re-checks unofficial entries and removes them from the queue once they appear in the official catalog mirror.
 - `npm run pipeline:refresh:discover` runs discovery, reconciliation, catalog rebuild, semantic rebuild, and validation in one pass.
 
-Set `ZHIPU_API_KEY` before running the discovery steps locally or in GitHub Actions. Local extraction heuristics are disabled by default; the script only keeps minimal safety guards for malformed titles, generic homepages, official-catalog duplicates, and missing URLs. If Zhipu returns `429 Too Many Requests`, the shared client backs off before retrying.
+Set `ZHIPU_API_KEY` before running the discovery steps locally or in GitHub Actions. Local extraction heuristics are disabled by default; the script only keeps minimal safety guards for malformed titles, generic homepages, official-catalog duplicates, and missing URLs. If Zhipu returns `429 Too Many Requests`, the shared client backs off before retrying. Discovery traces include the model-planning prompt, selected query intents, follow-up parent URLs, rejected search evidence, and extraction prompts for debugging recall.
 
 ## Local development
 

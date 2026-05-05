@@ -32,26 +32,24 @@ const ZH_COURSE = '\u8bfe\u7a0b'
 const ZH_RECRUITING = '\u62db\u8058'
 const ZH_MINIAPP_PLATFORM = '\u5c0f\u7a0b\u5e8f\u5f00\u653e\u5e73\u53f0'
 const DEFAULT_SEARCH_PLANS = buildDefaultSearchPlans()
+const SEARCH_STAGE_PRIORITY = [
+  'model-plan',
+  'seed',
+  'repository',
+  'paper-index',
+  'social',
+  'homepage',
+  'chinese',
+  'broad',
+  'follow-up',
+  'custom',
+]
 
 const args = parseArgs(process.argv.slice(2))
 const storePath = args.store ?? 'data/unofficial/unofficial-papers.json'
 const tracePath = args.trace ?? 'data/unofficial/discovery-trace.json'
 const officialCatalogPath = args.officialCatalog ?? 'data/papers.catalog.official.json'
-const rawSearchPlans = args.query.length > 0
-  ? args.query.map((query, index) => ({
-      label: `custom-${index + 1}`,
-      query,
-      platform: detectQueryPlatform(query),
-      recencyFilter: args.recency,
-    }))
-  : DEFAULT_SEARCH_PLANS
 const maxQueries = readPositiveInt(args.maxQueries ?? process.env.DISCOVERY_MAX_QUERIES, 16)
-const searchPlans = selectSearchPlans(rawSearchPlans, {
-  maxQueries,
-  strategy: args.planStrategy ?? process.env.DISCOVERY_PLAN_STRATEGY,
-  preserveOrder: args.query.length > 0,
-})
-const skippedSearchPlans = Math.max(0, rawSearchPlans.length - searchPlans.length)
 const maxResultsPerQuery = readPositiveInt(args.maxResults ?? process.env.DISCOVERY_MAX_RESULTS, 8)
 const maxReaders = readPositiveInt(args.maxReaders ?? process.env.DISCOVERY_MAX_READERS, 24)
 const minReaderCandidates = readPositiveInt(args.minReaders ?? process.env.DISCOVERY_MIN_READERS, 8)
@@ -60,6 +58,16 @@ const maxExtractionBatches = readPositiveInt(args.maxBatches ?? process.env.DISC
 const extractionDelayMs = readPositiveInt(args.extractionDelayMs ?? process.env.DISCOVERY_EXTRACTION_DELAY_MS, 8_000)
 const apiRetries = readPositiveInt(args.retries ?? process.env.ZHIPU_RETRIES, 1)
 const discoveryBudgetMs = readPositiveInt(args.budgetMs ?? process.env.DISCOVERY_BUDGET_MS, 20 * 60 * 1000)
+const maxFollowUpQueries = readPositiveInt(
+  args.maxFollowUpQueries ?? process.env.DISCOVERY_MAX_FOLLOW_UP_QUERIES,
+  Math.max(4, Math.floor(maxQueries * 0.35)),
+)
+const modelPlanningEnabled = args.query.length === 0 &&
+  readBoolean(args.modelPlanning ?? process.env.DISCOVERY_MODEL_PLANNING, true)
+const maxModelPlannedQueries = readPositiveInt(
+  args.maxModelQueries ?? process.env.DISCOVERY_MAX_MODEL_QUERIES,
+  Math.max(6, Math.floor(maxQueries * 0.35)),
+)
 const dryRun = Boolean(args.dryRun)
 const forceReader = Boolean(args.forceReader)
 const discoveryStartedAt = Date.now()
@@ -67,15 +75,48 @@ const discoveryStartedAt = Date.now()
 const client = createZhipuClient({
   model: args.model,
 })
+const staticSearchPlans = args.query.length > 0
+  ? args.query.map((query, index) => makeSearchPlan('custom', index, query, {
+      platform: detectQueryPlatform(query),
+      recencyFilter: args.recency,
+      contentSize: 'high',
+      intent: 'user-supplied query',
+    }))
+  : DEFAULT_SEARCH_PLANS
+const modelPlanning = await buildModelSearchPlans(client, {
+  enabled: modelPlanningEnabled,
+  maxPlans: maxModelPlannedQueries,
+  retries: apiRetries,
+})
+const rawSearchPlans = dedupeSearchPlans([
+  ...modelPlanning.plans,
+  ...staticSearchPlans,
+])
+const initialQueryBudget = args.query.length > 0
+  ? maxQueries
+  : Math.max(1, maxQueries - maxFollowUpQueries)
+const initialSearchPlans = selectSearchPlans(rawSearchPlans, {
+  maxQueries: initialQueryBudget,
+  strategy: args.planStrategy ?? process.env.DISCOVERY_PLAN_STRATEGY,
+  preserveOrder: args.query.length > 0,
+})
+let selectedSearchPlans = [...initialSearchPlans]
+let followUpSearchPlans = []
+let skippedFollowUpSearchPlans = 0
 
 const existingStore = await readUnofficialStore(storePath)
 const officialCatalog = await readCatalog(officialCatalogPath)
 const officialIndex = buildOfficialTitleIndex(officialCatalog)
 const trace = createTrace(client, {
   totalSearchPlans: rawSearchPlans.length,
+  staticSearchPlans: staticSearchPlans.length,
+  modelSearchPlans: modelPlanning.plans.length,
   maxQueries,
-  skippedSearchPlans,
-  selectedSearchPlanLabels: searchPlans.map((plan) => plan.label),
+  initialQueryBudget,
+  maxFollowUpQueries,
+  maxModelPlannedQueries,
+  skippedInitialSearchPlans: Math.max(0, rawSearchPlans.length - initialSearchPlans.length),
+  selectedSearchPlanLabels: selectedSearchPlans.map((plan) => plan.label),
   planStrategy: args.planStrategy ?? process.env.DISCOVERY_PLAN_STRATEGY ?? 'balanced',
   maxResultsPerQuery,
   maxReaders,
@@ -86,73 +127,59 @@ const trace = createTrace(client, {
   apiRetries,
   discoveryBudgetMs,
   extractor: 'zhipu-only',
+  modelPlanning,
 })
 const results = []
 const rejectedEvidence = []
 
 logProgress(
   trace,
-  `Discovery started: ${searchPlans.length}/${rawSearchPlans.length} queries, max ${maxReaders} readers, max ${maxExtractionBatches} extraction batches.`,
+  `Discovery started: ${selectedSearchPlans.length}/${rawSearchPlans.length} initial queries, max ${maxFollowUpQueries} follow-up queries, max ${maxReaders} readers, max ${maxExtractionBatches} extraction batches.`,
 )
 
-for (const [planIndex, plan] of searchPlans.entries()) {
-  if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
-    trace.errors.push(`Discovery budget expired before search ${planIndex + 1}.`)
-    logProgress(trace, `Discovery budget expired; skipping ${searchPlans.length - planIndex} remaining searches.`)
-    break
-  }
+await runSearchPlans(selectedSearchPlans, {
+  phase: 'initial',
+  client,
+  trace,
+  results,
+  rejectedEvidence,
+  maxResultsPerQuery,
+  apiRetries,
+  startedAt: discoveryStartedAt,
+  budgetMs: discoveryBudgetMs,
+})
 
-  const queryStartedAt = Date.now()
-  const queryTrace = {
-    label: plan.label,
-    query: plan.query,
-    stage: plan.stage || '',
-    platform: plan.platform,
-    searchEngine: plan.searchEngine || client.searchTool,
-    domainFilter: plan.domainFilter || '',
-    recencyFilter: plan.recencyFilter || '',
-    requestedCount: maxResultsPerQuery,
-    rawResultCount: 0,
-    resultCount: 0,
-    rejectedCount: 0,
-    startedAt: new Date().toISOString(),
-    results: [],
-    rejected: [],
-  }
+const allFollowUpSearchPlans = buildFollowUpSearchPlans(dedupeEvidence([...results, ...rejectedEvidence]))
+followUpSearchPlans = selectFollowUpSearchPlans(
+  allFollowUpSearchPlans,
+  {
+    maxQueries: Math.max(0, maxQueries - trace.queries.length),
+    existingPlans: selectedSearchPlans,
+  },
+)
+skippedFollowUpSearchPlans = Math.max(0, allFollowUpSearchPlans.length - followUpSearchPlans.length)
 
-  try {
-    logProgress(trace, `[search ${planIndex + 1}/${searchPlans.length}] ${plan.label}: ${plan.query}`)
-    const searchResponse = await zhipuWebSearch(client, plan.query, {
-      count: maxResultsPerQuery,
-      domainFilter: plan.domainFilter,
-      recencyFilter: plan.recencyFilter,
-      searchEngine: plan.searchEngine,
-      contentSize: plan.contentSize,
-      retries: apiRetries,
-    })
-    const scored = collectSearchItems(searchResponse, plan).map(scoreEvidence)
-    const accepted = scored.filter((item) => item.relevance.keep)
-    const rejected = scored.filter((item) => !item.relevance.keep)
-
-    queryTrace.responseKeys = Object.keys(searchResponse ?? {}).slice(0, 12)
-    queryTrace.rawResultCount = scored.length
-    queryTrace.resultCount = accepted.length
-    queryTrace.rejectedCount = rejected.length
-    queryTrace.results = accepted.map(summarizeEvidence)
-    queryTrace.rejected = rejected.slice(0, 4).map(summarizeEvidence)
-    results.push(...accepted)
-    rejectedEvidence.push(...rejected)
-  } catch (error) {
-    queryTrace.error = errorToMessage(error)
-    trace.errors.push(`Search failed for query "${plan.query}": ${queryTrace.error}`)
-  }
-
-  queryTrace.durationMs = Date.now() - queryStartedAt
-  trace.queries.push(queryTrace)
-  logProgress(
+if (followUpSearchPlans.length > 0) {
+  selectedSearchPlans = [...selectedSearchPlans, ...followUpSearchPlans]
+  trace.controls.followUpSearchPlans = followUpSearchPlans.length
+  trace.controls.skippedFollowUpSearchPlans = skippedFollowUpSearchPlans
+  trace.controls.selectedSearchPlanLabels = selectedSearchPlans.map((plan) => plan.label)
+  logProgress(trace, `Follow-up search started: ${followUpSearchPlans.length} evidence-derived queries.`)
+  await runSearchPlans(followUpSearchPlans, {
+    phase: 'follow-up',
+    client,
     trace,
-    `[search ${planIndex + 1}/${searchPlans.length}] done raw=${queryTrace.rawResultCount} kept=${queryTrace.resultCount} rejected=${queryTrace.rejectedCount} in ${formatDuration(queryTrace.durationMs)}${queryTrace.error ? ` error=${queryTrace.error}` : ''}`,
-  )
+    results,
+    rejectedEvidence,
+    maxResultsPerQuery,
+    apiRetries,
+    startedAt: discoveryStartedAt,
+    budgetMs: discoveryBudgetMs,
+  })
+} else {
+  trace.controls.followUpSearchPlans = 0
+  trace.controls.skippedFollowUpSearchPlans = skippedFollowUpSearchPlans
+  logProgress(trace, 'Follow-up search skipped: no remaining budget or no evidence-derived queries.')
 }
 
 const dedupedAccepted = dedupeEvidence(results).sort(compareEvidenceRelevance)
@@ -345,7 +372,10 @@ const nextStore = {
 
 trace.summary = {
   searchQueriesRun: trace.queries.length,
-  skippedSearchPlans,
+  skippedSearchPlans: Math.max(0, rawSearchPlans.length - initialSearchPlans.length) + skippedFollowUpSearchPlans,
+  selectedSearchPlans: selectedSearchPlans.length,
+  modelSearchPlans: modelPlanning.plans.length,
+  followUpSearchPlans: followUpSearchPlans.length,
   searchStageBreakdown: summarizeSearchStages(trace.queries),
   rawSearchEvidenceCollected: results.length + rejectedEvidence.length,
   searchEvidenceCollected: dedupedAccepted.length,
@@ -602,6 +632,128 @@ ${JSON.stringify(evidenceBatch, null, 2)}
 `.trim()
 }
 
+async function buildModelSearchPlans(client, options) {
+  const trace = {
+    enabled: Boolean(options.enabled),
+    requestedPlans: options.maxPlans,
+    prompt: '',
+    responseText: '',
+    parsedPlans: 0,
+    error: '',
+  }
+
+  if (!options.enabled || options.maxPlans <= 0) {
+    return {
+      ...trace,
+      plans: [],
+    }
+  }
+
+  const prompt = buildSearchPlanningPrompt(options.maxPlans)
+  trace.prompt = prompt
+
+  try {
+    const response = await zhipuChat(client, {
+      messages: [
+        {
+          role: 'system',
+          content: 'You plan high-recall web searches for newly announced AI research papers. Return JSON only.',
+        },
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ],
+    }, options.retries, {
+      timeoutMs: Number(process.env.ZHIPU_CHAT_TIMEOUT_MS) || undefined,
+    })
+    const text = extractMessageText(response)
+    const parsed = tryParseJsonBlock(text)
+    const rawPlans = Array.isArray(parsed?.queries) ? parsed.queries : []
+    const plans = rawPlans
+      .map((item, index) => normalizeModelSearchPlan(item, index))
+      .filter(Boolean)
+      .slice(0, options.maxPlans)
+
+    return {
+      ...trace,
+      responseText: text.slice(0, 8000),
+      parsedPlans: plans.length,
+      plans,
+    }
+  } catch (error) {
+    return {
+      ...trace,
+      error: errorToMessage(error),
+      plans: [],
+    }
+  }
+}
+
+function buildSearchPlanningPrompt(maxPlans) {
+  return `
+Design ${maxPlans} high-recall web-search queries for finding newly announced or unofficial 2026 top-venue AI papers before official proceedings pages are complete.
+
+Use a Codex-style search strategy:
+- Mix exact phrases, venue/year anchors, source-specific probes, and broad exploratory queries.
+- Search likely first-public places: X/Twitter posts, GitHub repositories, GitHub Pages project pages, lab/personal homepages, arXiv pages, OpenReview, Chinese web/social pages, and news mirrors.
+- Focus on LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D/3DGS, robotics, embodied AI, multimodal benchmarks, post-training/RL, RAG, document understanding, and world models.
+- Include queries for "Introducing", "happy to share", "our paper", "accepted to", "official code", "project page", "paper accepted", and venue names.
+- Avoid workshop-only or CFP queries.
+
+Return JSON only:
+{
+  "queries": [
+    {
+      "query": "search query text",
+      "stage": "model-plan",
+      "platform": "x | github | arxiv | homepage | xiaohongshu | web",
+      "domainFilter": "optional domain like x.com, github.com, arxiv.org, github.io, openreview.net",
+      "recencyFilter": "oneWeek | oneMonth | oneYear",
+      "contentSize": "medium | high",
+      "intent": "why this query should find new papers"
+    }
+  ]
+}
+`.trim()
+}
+
+function normalizeModelSearchPlan(item, index) {
+  const query = normalizeCandidateText(item?.query)
+
+  if (!query || query.length < 8) {
+    return null
+  }
+
+  const platform = normalizeCandidateText(item.platform) || detectQueryPlatform(query)
+
+  return makeSearchPlan('model-plan', index, query, {
+    platform,
+    domainFilter: normalizeDomainFilter(item.domainFilter),
+    recencyFilter: normalizeRecencyFilter(item.recencyFilter),
+    contentSize: normalizeContentSize(item.contentSize),
+    intent: normalizeCandidateText(item.intent),
+  })
+}
+
+function dedupeSearchPlans(plans) {
+  const seen = new Set()
+  const output = []
+
+  for (const plan of plans) {
+    const key = searchPlanKey(plan)
+
+    if (!key || seen.has(key)) {
+      continue
+    }
+
+    seen.add(key)
+    output.push(plan)
+  }
+
+  return output
+}
+
 function buildDefaultSearchPlans() {
   const plans = [
     ...seedVenuePlans(),
@@ -612,16 +764,8 @@ function buildDefaultSearchPlans() {
     ...chineseDiscoveryPlans(),
     ...broadRecallPlans(),
   ]
-  const seen = new Set()
 
-  return plans.filter((plan) => {
-    const key = `${plan.searchEngine || ''}:${plan.domainFilter || ''}:${plan.recencyFilter || ''}:${plan.query}`
-    if (seen.has(key)) {
-      return false
-    }
-    seen.add(key)
-    return true
-  })
+  return dedupeSearchPlans(plans)
 }
 
 function selectSearchPlans(plans, options) {
@@ -631,15 +775,6 @@ function selectSearchPlans(plans, options) {
     return plans.slice(0, maxQueries)
   }
 
-  const priority = [
-    'seed',
-    'repository',
-    'paper-index',
-    'social',
-    'homepage',
-    'chinese',
-    'broad',
-  ]
   const groups = new Map()
 
   for (const plan of plans) {
@@ -654,7 +789,7 @@ function selectSearchPlans(plans, options) {
   const seen = new Set()
 
   // First pass: guarantee that low-volume high-signal sources are represented.
-  for (const platform of priority) {
+  for (const platform of SEARCH_STAGE_PRIORITY) {
     const item = groups.get(platform)?.shift()
     if (item) {
       selected.push(item)
@@ -666,7 +801,7 @@ function selectSearchPlans(plans, options) {
   while (selected.length < maxQueries) {
     let added = false
 
-    for (const platform of priority) {
+    for (const platform of SEARCH_STAGE_PRIORITY) {
       const item = groups.get(platform)?.shift()
       if (!item || seen.has(item.label)) {
         continue
@@ -708,6 +843,10 @@ function seedVenuePlans() {
     '"accepted to" "ACL 2026" "official code"',
     '"accepted to" "ICLR 2026" "project page"',
     '"accepted to" "CVPR 2026" "multimodal"',
+    '"accepted at" "AAAI 2026" "LLM"',
+    '"accepted at" "ACL 2026" "VLM"',
+    '"to appear at" "ICLR 2026" "multimodal"',
+    '"main conference" "ACL 2026" "paper"',
     '"AAAI 2026" "our paper" "large language model"',
     '"ACL 2026" "our paper" "multimodal"',
     '"ICLR 2026" "our paper" "agent"',
@@ -726,6 +865,10 @@ function repositoryPlans() {
     'site:github.com "CVPR 2026" "project page" "3D"',
     'site:github.com "EMNLP 2026" "paper" "VLM"',
     'site:github.com "NeurIPS 2026" "paper" "VLA"',
+    'site:github.com "[AAAI 2026]" "This is the code repository for our paper"',
+    'site:github.com "[ACL 2026]" "official implementation"',
+    'site:github.com "[ICLR 2026]" "accepted"',
+    'site:github.com "2026" "This work has been accepted" "multimodal"',
   ].map((query, index) => makeSearchPlan('repository', index, query, {
     platform: 'github',
     domainFilter: 'github.com',
@@ -741,9 +884,13 @@ function paperIndexPlans() {
     'arxiv "vision language action" VLA "2026"',
     'arxiv "multimodal benchmark" "2026" "LLM"',
     'arxiv "agent" "reasoning" "accepted" "2026"',
+    'site:arxiv.org/abs "2026" "LLM" "accepted"',
+    'site:arxiv.org/abs "2026" "multimodal" "project page"',
+    'site:openreview.net/forum "ICLR 2026" "LLM"',
+    'site:openreview.net/forum "2026" "vision language"',
   ].map((query, index) => makeSearchPlan('paper-index', index, query, {
-    platform: 'arxiv',
-    domainFilter: 'arxiv.org',
+    platform: query.includes('openreview') ? 'openreview' : 'arxiv',
+    domainFilter: query.includes('openreview') ? 'openreview.net' : 'arxiv.org',
     contentSize: 'high',
   }))
 }
@@ -757,11 +904,14 @@ function socialAnnouncementPlans() {
     'multimodal RAG document understanding',
   ]
   const announcementPhrases = [
+    '"Introducing"',
     '"Introducing our paper"',
     '"our new work"',
     '"accepted to" "paper"',
     '"paper accepted"',
     '"happy to share" "accepted"',
+    '"thrilled to share" "paper"',
+    '"we release" "paper"',
   ]
 
   return announcementPhrases.flatMap((phrase) =>
@@ -778,9 +928,14 @@ function labHomepagePlans() {
     'site:github.io "accepted to" "2026" "LLM"',
     'site:github.io "paper" "multimodal" "2026"',
     'site:github.io "project page" "vision-language" "2026"',
+    'site:github.io "This work has been accepted" "2026"',
+    'site:github.io "official code" "AAAI 2026"',
+    'site:github.io "official code" "ACL 2026"',
     'site:edu "accepted to" "2026" "large language model"',
     'site:edu "our paper" "2026" "multimodal"',
     'site:edu "publication" "AAAI 2026" "LLM"',
+    'site:edu "news" "accepted to ACL 2026"',
+    'site:edu "publications" "ICLR 2026" "multimodal"',
   ].map((query, index) => makeSearchPlan('homepage', index, query, {
     platform: 'homepage',
     contentSize: 'high',
@@ -811,6 +966,10 @@ function broadRecallPlans() {
     '"2026" "paper" "3D Gaussian Splatting"',
     '"2026" "paper" "multimodal RAG"',
     '"2026" "paper" "reasoning" "RL"',
+    '"AAAI 2026" "GitHub" "large language models"',
+    '"ACL 2026" "GitHub" "multimodal"',
+    '"ICLR 2026" "GitHub" "agent"',
+    '"CVPR 2026" "project" "3DGS"',
   ].map((query, index) => makeSearchPlan('broad', index, query, {
     platform: 'web',
     contentSize: 'medium',
@@ -827,6 +986,8 @@ function makeSearchPlan(stage, index, query, options = {}) {
     recencyFilter: options.recencyFilter || 'oneMonth',
     searchEngine: options.searchEngine || 'search_pro',
     contentSize: options.contentSize || 'medium',
+    intent: options.intent || '',
+    parentUrl: options.parentUrl || '',
   }
 }
 
@@ -851,8 +1012,226 @@ function collectSearchItems(response, plan) {
       publishDate: item.publish_date || item.publish_time || item.date || '',
       query: plan.query,
       queryLabel: plan.label,
+      queryIntent: plan.intent || '',
+      parentUrl: plan.parentUrl || '',
     }))
     .filter((item) => item.url && item.title)
+}
+
+async function runSearchPlans(plans, options) {
+  for (const [planIndex, plan] of plans.entries()) {
+    if (isBudgetExpired(options.startedAt, options.budgetMs)) {
+      options.trace.errors.push(`Discovery budget expired before ${options.phase} search ${planIndex + 1}.`)
+      logProgress(options.trace, `Discovery budget expired; skipping ${plans.length - planIndex} remaining ${options.phase} searches.`)
+      break
+    }
+
+    const queryStartedAt = Date.now()
+    const queryTrace = {
+      label: plan.label,
+      query: plan.query,
+      stage: plan.stage || '',
+      phase: options.phase,
+      platform: plan.platform,
+      searchEngine: plan.searchEngine || options.client.searchTool,
+      domainFilter: plan.domainFilter || '',
+      recencyFilter: plan.recencyFilter || '',
+      contentSize: plan.contentSize || '',
+      intent: plan.intent || '',
+      parentUrl: plan.parentUrl || '',
+      requestedCount: options.maxResultsPerQuery,
+      rawResultCount: 0,
+      resultCount: 0,
+      rejectedCount: 0,
+      startedAt: new Date().toISOString(),
+      results: [],
+      rejected: [],
+    }
+
+    try {
+      logProgress(options.trace, `[${options.phase} search ${planIndex + 1}/${plans.length}] ${plan.label}: ${plan.query}`)
+      const searchResponse = await zhipuWebSearch(options.client, plan.query, {
+        count: options.maxResultsPerQuery,
+        domainFilter: plan.domainFilter,
+        recencyFilter: plan.recencyFilter,
+        searchEngine: plan.searchEngine,
+        contentSize: plan.contentSize,
+        retries: options.apiRetries,
+      })
+      const scored = collectSearchItems(searchResponse, plan).map(scoreEvidence)
+      const accepted = scored.filter((item) => item.relevance.keep)
+      const rejected = scored.filter((item) => !item.relevance.keep)
+
+      queryTrace.responseKeys = Object.keys(searchResponse ?? {}).slice(0, 12)
+      queryTrace.rawResultCount = scored.length
+      queryTrace.resultCount = accepted.length
+      queryTrace.rejectedCount = rejected.length
+      queryTrace.results = accepted.map(summarizeEvidence)
+      queryTrace.rejected = rejected.slice(0, 4).map(summarizeEvidence)
+      options.results.push(...accepted)
+      options.rejectedEvidence.push(...rejected)
+    } catch (error) {
+      queryTrace.error = errorToMessage(error)
+      options.trace.errors.push(`Search failed for query "${plan.query}": ${queryTrace.error}`)
+    }
+
+    queryTrace.durationMs = Date.now() - queryStartedAt
+    options.trace.queries.push(queryTrace)
+    logProgress(
+      options.trace,
+      `[${options.phase} search ${planIndex + 1}/${plans.length}] done raw=${queryTrace.rawResultCount} kept=${queryTrace.resultCount} rejected=${queryTrace.rejectedCount} in ${formatDuration(queryTrace.durationMs)}${queryTrace.error ? ` error=${queryTrace.error}` : ''}`,
+    )
+  }
+}
+
+function buildFollowUpSearchPlans(evidenceItems) {
+  const plans = []
+
+  for (const item of evidenceItems.sort(compareEvidenceRelevance)) {
+    if (!isFollowUpSeed(item)) {
+      continue
+    }
+
+    const terms = extractFollowUpTerms(item)
+
+    for (const term of terms) {
+      plans.push(makeSearchPlan('follow-up', plans.length, term.query, {
+        platform: term.platform,
+        domainFilter: term.domainFilter,
+        recencyFilter: term.recencyFilter,
+        contentSize: 'high',
+        parentUrl: item.url,
+        intent: term.intent,
+      }))
+    }
+  }
+
+  return dedupeSearchPlans(plans)
+}
+
+function selectFollowUpSearchPlans(plans, options) {
+  if (options.maxQueries <= 0) {
+    return []
+  }
+
+  const existingKeys = new Set(options.existingPlans.map(searchPlanKey))
+  const grouped = new Map()
+
+  for (const plan of plans) {
+    if (existingKeys.has(searchPlanKey(plan))) {
+      continue
+    }
+
+    const key = plan.platform || 'web'
+    if (!grouped.has(key)) {
+      grouped.set(key, [])
+    }
+    grouped.get(key).push(plan)
+  }
+
+  const selected = []
+  const platformPriority = ['github', 'homepage', 'arxiv', 'openreview', 'x', 'xiaohongshu', 'web']
+
+  while (selected.length < options.maxQueries) {
+    let added = false
+
+    for (const platform of platformPriority) {
+      const item = grouped.get(platform)?.shift()
+
+      if (!item) {
+        continue
+      }
+
+      selected.push(item)
+      added = true
+
+      if (selected.length >= options.maxQueries) {
+        break
+      }
+    }
+
+    if (!added) {
+      break
+    }
+  }
+
+  return selected
+}
+
+function isFollowUpSeed(item) {
+  if (!item?.url) {
+    return false
+  }
+
+  if (item.relevance?.strongReject) {
+    return false
+  }
+
+  return item.relevance?.score >= 2 || isHighSignalUrl(item.url)
+}
+
+function extractFollowUpTerms(item) {
+  const text = stripMarkupForEvidence([
+    item.title,
+    item.snippet,
+    item.readerTitle,
+    item.readerExcerpt,
+  ].filter(Boolean).join(' '))
+  const terms = []
+  const repo = parseGitHubRepository(item.url)
+  const titleCandidates = extractLikelyPaperTitles(text)
+  const venue = extractVenueYear(text)
+  const topics = extractTopicTerms(text).slice(0, 3).join(' ')
+
+  if (repo && !isPersonalGithubHomepageRepository(item.url)) {
+    terms.push({
+      query: `"${repo.owner}/${repo.name}" paper accepted 2026`,
+      platform: 'web',
+      intent: 'trace GitHub repository name across announcements and project pages',
+    })
+    terms.push({
+      query: `site:x.com "${repo.name}" paper`,
+      platform: 'x',
+      domainFilter: 'x.com',
+      intent: 'find social announcement for GitHub repository',
+    })
+  }
+
+  for (const title of titleCandidates.slice(0, 2)) {
+    terms.push({
+      query: `"${title}"`,
+      platform: 'web',
+      intent: 'exact title verification across web',
+    })
+    terms.push({
+      query: `site:github.com "${title}"`,
+      platform: 'github',
+      domainFilter: 'github.com',
+      intent: 'exact title GitHub verification',
+    })
+    terms.push({
+      query: `site:x.com "${title}"`,
+      platform: 'x',
+      domainFilter: 'x.com',
+      intent: 'exact title social announcement',
+    })
+  }
+
+  if (venue) {
+    terms.push({
+      query: `"${venue}" "${topics || 'paper'}" "official code"`,
+      platform: 'web',
+      intent: 'expand from venue-year signal to sibling papers',
+    })
+    terms.push({
+      query: `site:github.com "${venue}" "${topics || 'paper'}"`,
+      platform: 'github',
+      domainFilter: 'github.com',
+      intent: 'venue-year GitHub sibling search',
+    })
+  }
+
+  return terms
 }
 
 function scoreEvidence(item) {
@@ -965,7 +1344,21 @@ function scoreEvidence(item) {
     signals.push('source:high-signal-url')
   }
 
-  const keep = score >= 4 || (score >= 2 && isHighSignalUrl(item.url))
+  if (item.stage === 'model-plan') {
+    score += 1
+    signals.push('source:model-planned-query')
+  }
+
+  if (item.stage === 'follow-up') {
+    score += 2
+    signals.push('source:evidence-follow-up')
+  }
+
+  const keep = !strongReject && (
+    score >= 3 ||
+    (score >= 1 && isHighSignalUrl(item.url)) ||
+    (item.stage === 'follow-up' && score >= 1)
+  )
 
   return {
     ...item,
@@ -979,6 +1372,10 @@ function scoreEvidence(item) {
 }
 
 function stageWeight(stage) {
+  if (stage === 'model-plan' || stage === 'follow-up') {
+    return 2
+  }
+
   if (stage === 'seed' || stage === 'repository') {
     return 2
   }
@@ -1076,8 +1473,16 @@ function detectQueryPlatform(query) {
     return 'x'
   }
 
+  if (/github/i.test(query)) {
+    return 'github'
+  }
+
   if (/arxiv/i.test(query)) {
     return 'arxiv'
+  }
+
+  if (/openreview/i.test(query)) {
+    return 'openreview'
   }
 
   if (/github|project page|homepage|site:/i.test(query)) {
@@ -1093,6 +1498,128 @@ function slugForLabel(value) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .slice(0, 32) || 'query'
+}
+
+function searchPlanKey(plan) {
+  const domain = normalizeDomainFilter(plan.domainFilter)
+  const recency = normalizeRecencyFilter(plan.recencyFilter)
+  const engine = normalizeCandidateText(plan.searchEngine || 'search_pro').toLowerCase()
+  const query = normalizeForScoring(plan.query)
+
+  return query ? `${engine}:${domain}:${recency}:${query}` : ''
+}
+
+function normalizeDomainFilter(value) {
+  const domain = normalizeCandidateText(value)
+    .replace(/^https?:\/\//i, '')
+    .replace(/^www\./i, '')
+    .replace(/\/.*$/, '')
+    .toLowerCase()
+
+  if (!domain || /[^a-z0-9.-]/i.test(domain)) {
+    return undefined
+  }
+
+  return domain
+}
+
+function normalizeRecencyFilter(value) {
+  const normalized = normalizeCandidateText(value)
+
+  return ['noLimit', 'oneDay', 'oneWeek', 'oneMonth', 'oneYear'].includes(normalized)
+    ? normalized
+    : 'oneMonth'
+}
+
+function normalizeContentSize(value) {
+  const normalized = normalizeCandidateText(value)
+
+  return ['low', 'medium', 'high'].includes(normalized) ? normalized : 'medium'
+}
+
+function extractLikelyPaperTitles(text) {
+  const normalized = stripMarkupForEvidence(text)
+  const candidates = []
+  const patterns = [
+    /\[[A-Z]{2,12}\s*2026\]\s*([^:\n]{2,120}:\s*[^.\n]{8,180})/gi,
+    /(?:paper|work|repo(?:sitory)?)(?:\s+for)?[:\uFF1A]\s*([^.\n]{8,220})/gi,
+    /(?:title\s*=\s*\{)([^}]{8,220})(?:\})/gi,
+    /#\s*([^#\n]{8,220})/g,
+  ]
+
+  for (const pattern of patterns) {
+    for (const match of normalized.matchAll(pattern)) {
+      const title = cleanTitleCandidate(match[1])
+
+      if (title) {
+        candidates.push(title)
+      }
+    }
+  }
+
+  return Array.from(new Set(candidates)).slice(0, 5)
+}
+
+function cleanTitleCandidate(value) {
+  const title = normalizeCandidateText(value)
+    .replace(/^["'`]+|["'`]+$/g, '')
+    .replace(/\s*[-|]\s*GitHub$/i, '')
+    .replace(/\s*##.*$/g, '')
+    .replace(/\s*\bbibtex\b.*$/i, '')
+    .trim()
+
+  if (title.length < 8 || title.length > 220) {
+    return ''
+  }
+
+  if (/go to file|repository files navigation|github topics|https?:\/\//i.test(title)) {
+    return ''
+  }
+
+  if (!/[a-zA-Z]/.test(title)) {
+    return ''
+  }
+
+  return title
+}
+
+function extractVenueYear(text) {
+  const match = String(text ?? '').match(/\b(AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|IJCAI|COLM|MM|SIGIR)[-\s]?(2026|26)\b/i)
+
+  if (!match) {
+    return ''
+  }
+
+  return `${match[1].toUpperCase()} ${match[2] === '26' ? '2026' : match[2]}`
+}
+
+function extractTopicTerms(text) {
+  const normalized = normalizeForScoring(text)
+  const topics = [
+    'large language model',
+    'llm',
+    'vision language model',
+    'vlm',
+    'multimodal',
+    'mllm',
+    'vision language action',
+    'vla',
+    'agent',
+    'reasoning',
+    'video understanding',
+    '3d gaussian splatting',
+    '3dgs',
+    'robotics',
+    'embodied ai',
+    'rag',
+    'benchmark',
+    'post-training',
+    'reinforcement learning',
+    'world model',
+    'document understanding',
+  ]
+
+  return topics.filter((topic) => normalized.includes(topic))
 }
 
 function normalizeReaderPayload(response) {
@@ -1162,6 +1689,8 @@ function summarizeEvidence(item) {
     relevanceScore: item.relevance?.score,
     relevanceSignals: item.relevance?.signals?.slice(0, 10) ?? [],
     queryLabel: item.queryLabel || '',
+    queryIntent: item.queryIntent || '',
+    parentUrl: item.parentUrl || '',
   }
 }
 
@@ -1458,6 +1987,28 @@ function readPositiveInt(value, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : fallback
 }
 
+function readBoolean(value, fallback) {
+  if (value === undefined || value === null || value === '') {
+    return fallback
+  }
+
+  if (typeof value === 'boolean') {
+    return value
+  }
+
+  const normalized = String(value).trim().toLowerCase()
+
+  if (['1', 'true', 'yes', 'on'].includes(normalized)) {
+    return true
+  }
+
+  if (['0', 'false', 'no', 'off'].includes(normalized)) {
+    return false
+  }
+
+  return fallback
+}
+
 function formatDuration(ms) {
   if (!Number.isFinite(ms) || ms < 1000) {
     return `${Math.max(0, Math.round(ms || 0))}ms`
@@ -1523,6 +2074,14 @@ function parseArgs(argv) {
       parsed.recency = argv[++index]
     } else if (arg === '--model') {
       parsed.model = argv[++index]
+    } else if (arg === '--max-follow-up-queries') {
+      parsed.maxFollowUpQueries = argv[++index]
+    } else if (arg === '--max-model-queries') {
+      parsed.maxModelQueries = argv[++index]
+    } else if (arg === '--model-planning') {
+      parsed.modelPlanning = argv[++index]
+    } else if (arg === '--no-model-planning') {
+      parsed.modelPlanning = false
     } else if (arg === '--force-reader') {
       parsed.forceReader = true
     } else if (arg === '--dry-run') {
@@ -1559,6 +2118,10 @@ Options:
   --budget-ms <n>              Whole discovery soft budget. Default: 1200000.
   --recency <filter>           Zhipu recency filter for custom queries. Default: oneMonth.
   --model <name>               Zhipu chat model.
+  --max-follow-up-queries <n>   Evidence-derived follow-up query cap. Default: 35% of max queries.
+  --max-model-queries <n>       Zhipu planned query cap. Default: 35% of max queries.
+  --model-planning <bool>       Let Zhipu plan search queries before static probes. Default: true.
+  --no-model-planning           Disable Zhipu search-query planning.
   --force-reader               Always run the webpage reader for candidate links.
   --dry-run                    Do not persist results.
 `)
