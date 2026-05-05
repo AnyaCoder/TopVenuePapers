@@ -17,13 +17,6 @@ import {
   zhipuWebSearch,
 } from './lib/zhipu-client.mjs'
 
-const DEFAULT_QUERIES = [
-  'X Introducing new paper LLM VLM multimodal agent 2026',
-  'X "our paper" "accepted to" LLM VLM MLLM VLA 2026',
-  '"new work" video understanding 3D robotics embodied AI 2026',
-  '小红书 新论文 大模型 多模态 智能体 具身 2026',
-]
-
 const ZH_XIAOHONGSHU = '\u5c0f\u7ea2\u4e66'
 const ZH_NEW_PAPER = '\u65b0\u8bba\u6587'
 const ZH_PAPER_ACCEPTED = '\u8bba\u6587\u63a5\u6536'
@@ -32,6 +25,12 @@ const ZH_MULTIMODAL = '\u591a\u6a21\u6001'
 const ZH_AGENT = '\u667a\u80fd\u4f53'
 const ZH_EMBODIED = '\u5177\u8eab'
 const ZH_TOP_VENUE = '\u9876\u4f1a'
+const ZH_OPEN_SOURCE = '\u5f00\u6e90'
+const ZH_PREPRINT = '\u9884\u5370\u672c'
+const ZH_ACCEPTED = '\u5f55\u7528'
+const ZH_COURSE = '\u8bfe\u7a0b'
+const ZH_RECRUITING = '\u62db\u8058'
+const ZH_MINIAPP_PLATFORM = '\u5c0f\u7a0b\u5e8f\u5f00\u653e\u5e73\u53f0'
 const DEFAULT_SEARCH_PLANS = buildDefaultSearchPlans()
 
 const args = parseArgs(process.argv.slice(2))
@@ -107,6 +106,7 @@ for (const [planIndex, plan] of searchPlans.entries()) {
   const queryTrace = {
     label: plan.label,
     query: plan.query,
+    stage: plan.stage || '',
     platform: plan.platform,
     searchEngine: plan.searchEngine || client.searchTool,
     domainFilter: plan.domainFilter || '',
@@ -346,6 +346,7 @@ const nextStore = {
 trace.summary = {
   searchQueriesRun: trace.queries.length,
   skippedSearchPlans,
+  searchStageBreakdown: summarizeSearchStages(trace.queries),
   rawSearchEvidenceCollected: results.length + rejectedEvidence.length,
   searchEvidenceCollected: dedupedAccepted.length,
   rejectedSearchEvidence: rejectedEvidence.length,
@@ -603,10 +604,13 @@ ${JSON.stringify(evidenceBatch, null, 2)}
 
 function buildDefaultSearchPlans() {
   const plans = [
-    ...englishSocialPlans(),
+    ...seedVenuePlans(),
+    ...repositoryPlans(),
     ...paperIndexPlans(),
-    ...projectPagePlans(),
-    ...chineseSocialPlans(),
+    ...socialAnnouncementPlans(),
+    ...labHomepagePlans(),
+    ...chineseDiscoveryPlans(),
+    ...broadRecallPlans(),
   ]
   const seen = new Set()
 
@@ -627,11 +631,19 @@ function selectSearchPlans(plans, options) {
     return plans.slice(0, maxQueries)
   }
 
-  const priority = ['homepage', 'arxiv', 'web', 'xiaohongshu', 'x']
+  const priority = [
+    'seed',
+    'repository',
+    'paper-index',
+    'social',
+    'homepage',
+    'chinese',
+    'broad',
+  ]
   const groups = new Map()
 
   for (const plan of plans) {
-    const key = plan.platform || 'web'
+    const key = plan.stage || plan.platform || 'broad'
     if (!groups.has(key)) {
       groups.set(key, [])
     }
@@ -690,89 +702,132 @@ function selectSearchPlans(plans, options) {
   return selected
 }
 
-function englishSocialPlans() {
+function seedVenuePlans() {
+  return [
+    '"accepted to" "AAAI 2026" "official code"',
+    '"accepted to" "ACL 2026" "official code"',
+    '"accepted to" "ICLR 2026" "project page"',
+    '"accepted to" "CVPR 2026" "multimodal"',
+    '"AAAI 2026" "our paper" "large language model"',
+    '"ACL 2026" "our paper" "multimodal"',
+    '"ICLR 2026" "our paper" "agent"',
+    '"CVPR 2026" "our paper" "3D Gaussian Splatting"',
+  ].map((query, index) => makeSearchPlan('seed', index, query, {
+    platform: 'web',
+    contentSize: 'high',
+  }))
+}
+
+function repositoryPlans() {
+  return [
+    'site:github.com "AAAI 2026" "official code" "LLM"',
+    'site:github.com "ACL 2026" "accepted" "multimodal"',
+    'site:github.com "ICLR 2026" "official repo" "agent"',
+    'site:github.com "CVPR 2026" "project page" "3D"',
+    'site:github.com "EMNLP 2026" "paper" "VLM"',
+    'site:github.com "NeurIPS 2026" "paper" "VLA"',
+  ].map((query, index) => makeSearchPlan('repository', index, query, {
+    platform: 'github',
+    domainFilter: 'github.com',
+    contentSize: 'high',
+  }))
+}
+
+function paperIndexPlans() {
+  return [
+    'arxiv "accepted to" "2026" "large language model"',
+    'arxiv "project page" "2026" "vision language model"',
+    'arxiv "3D Gaussian Splatting" "VLM" "2026"',
+    'arxiv "vision language action" VLA "2026"',
+    'arxiv "multimodal benchmark" "2026" "LLM"',
+    'arxiv "agent" "reasoning" "accepted" "2026"',
+  ].map((query, index) => makeSearchPlan('paper-index', index, query, {
+    platform: 'arxiv',
+    domainFilter: 'arxiv.org',
+    contentSize: 'high',
+  }))
+}
+
+function socialAnnouncementPlans() {
   const themes = [
     'LLM VLM multimodal agent reasoning',
     'video understanding 3D Gaussian Splatting robotics embodied AI',
     'VLA vision language action world model',
     'MLLM benchmark evaluation post-training RL',
+    'multimodal RAG document understanding',
   ]
   const announcementPhrases = [
-    'Introducing our paper',
+    '"Introducing our paper"',
     '"our new work"',
-    '"accepted to" paper',
+    '"accepted to" "paper"',
     '"paper accepted"',
+    '"happy to share" "accepted"',
   ]
 
   return announcementPhrases.flatMap((phrase) =>
-    themes.map((theme, index) => ({
-      label: `x-${slugForLabel(phrase)}-${index + 1}`,
-      query: `${phrase} ${theme} 2026`,
+    themes.map((theme, index) => makeSearchPlan('social', `${slugForLabel(phrase)}-${index + 1}`, `${phrase} ${theme} 2026`, {
       platform: 'x',
       domainFilter: 'x.com',
-      recencyFilter: 'oneMonth',
-      searchEngine: 'search_pro',
+      contentSize: 'medium',
     })),
   )
 }
 
-function paperIndexPlans() {
+function labHomepagePlans() {
   return [
-    'LLM VLM agent reasoning accepted 2026 paper arXiv',
-    'multimodal video understanding robotics embodied AI new paper arXiv 2026',
-    '3D Gaussian Splatting VLM MLLM new paper 2026',
-    'vision language action VLA world model paper 2026',
-  ].map((query, index) => ({
-    label: `arxiv-${index + 1}`,
-    query,
-    platform: 'arxiv',
-    domainFilter: 'arxiv.org',
-    recencyFilter: 'oneMonth',
-    searchEngine: 'search_pro',
-  }))
-}
-
-function projectPagePlans() {
-  return [
-    '"project page" "paper" LLM VLM MLLM 2026',
-    '"project page" "accepted" multimodal agent robotics 2026',
-    'site:github.io "paper" "LLM" "2026"',
-    'site:github.io "multimodal" "paper" "2026"',
-    'site:edu "our paper" "accepted to" "2026" "LLM"',
-  ].map((query, index) => ({
-    label: `homepage-${index + 1}`,
-    query,
+    'site:github.io "accepted to" "2026" "LLM"',
+    'site:github.io "paper" "multimodal" "2026"',
+    'site:github.io "project page" "vision-language" "2026"',
+    'site:edu "accepted to" "2026" "large language model"',
+    'site:edu "our paper" "2026" "multimodal"',
+    'site:edu "publication" "AAAI 2026" "LLM"',
+  ].map((query, index) => makeSearchPlan('homepage', index, query, {
     platform: 'homepage',
-    recencyFilter: 'oneMonth',
-    searchEngine: 'search_pro',
+    contentSize: 'high',
   }))
 }
 
-function chineseSocialPlans() {
-  const themes = [
-    `${ZH_NEW_PAPER} ${ZH_LLM} ${ZH_MULTIMODAL}`,
-    `${ZH_PAPER_ACCEPTED} ${ZH_TOP_VENUE} ${ZH_LLM}`,
-    `${ZH_NEW_PAPER} ${ZH_AGENT} ${ZH_EMBODIED}`,
-    `LLM VLM MLLM VLA ${ZH_NEW_PAPER}`,
+function chineseDiscoveryPlans() {
+  const queries = [
+    `${ZH_PAPER_ACCEPTED} ${ZH_TOP_VENUE} ${ZH_LLM} AAAI ACL ICLR 2026`,
+    `${ZH_NEW_PAPER} ${ZH_MULTIMODAL} CVPR ICLR 2026`,
+    `${ZH_NEW_PAPER} ${ZH_AGENT} ${ZH_EMBODIED} 2026`,
+    `${ZH_XIAOHONGSHU} ${ZH_PAPER_ACCEPTED} ${ZH_TOP_VENUE} ${ZH_LLM} 2026`,
+    `${ZH_XIAOHONGSHU} ${ZH_NEW_PAPER} VLM MLLM VLA 2026`,
   ]
 
-  return themes.flatMap((theme, index) => [
-    {
-      label: `xiaohongshu-${index + 1}`,
-      query: `${ZH_XIAOHONGSHU} ${theme} 2026`,
-      platform: 'xiaohongshu',
-      domainFilter: 'xiaohongshu.com',
-      recencyFilter: 'oneMonth',
-      searchEngine: 'search_pro',
-    },
-    {
-      label: `cn-web-${index + 1}`,
-      query: `${theme} AAAI ACL CVPR ICLR 2026`,
-      platform: 'web',
-      recencyFilter: 'oneMonth',
-      searchEngine: 'search_pro',
-    },
-  ])
+  return queries.map((query, index) => makeSearchPlan('chinese', index, query, {
+    platform: query.includes(ZH_XIAOHONGSHU) ? 'xiaohongshu' : 'web',
+    domainFilter: query.includes(ZH_XIAOHONGSHU) ? 'xiaohongshu.com' : undefined,
+    contentSize: 'medium',
+  }))
+}
+
+function broadRecallPlans() {
+  return [
+    '"2026" "official repo" "multimodal"',
+    '"2026" "project page" "large language model"',
+    '"2026" "paper" "vision language action"',
+    '"2026" "paper" "3D Gaussian Splatting"',
+    '"2026" "paper" "multimodal RAG"',
+    '"2026" "paper" "reasoning" "RL"',
+  ].map((query, index) => makeSearchPlan('broad', index, query, {
+    platform: 'web',
+    contentSize: 'medium',
+  }))
+}
+
+function makeSearchPlan(stage, index, query, options = {}) {
+  return {
+    label: `${stage}-${index + 1}`,
+    query,
+    stage,
+    platform: options.platform || 'web',
+    domainFilter: options.domainFilter,
+    recencyFilter: options.recencyFilter || 'oneMonth',
+    searchEngine: options.searchEngine || 'search_pro',
+    contentSize: options.contentSize || 'medium',
+  }
 }
 
 function collectSearchItems(response, plan) {
@@ -788,6 +843,7 @@ function collectSearchItems(response, plan) {
   return payloads
     .map((item) => ({
       platform: detectPlatform(item.link || item.url || '') || plan.platform || 'web',
+      stage: plan.stage || '',
       url: item.link || item.url || '',
       title: item.title || item.name || '',
       author: item.author || item.site_name || '',
@@ -806,29 +862,33 @@ function scoreEvidence(item) {
     item.url,
   ].join(' '))
   const signals = []
-  let score = 0
+  let score = stageWeight(item.stage)
 
   score += addWeightedSignals(text, signals, 'paper', [
     ['paper', 3],
     ['preprint', 2],
     ['arxiv', 3],
-    ['project page', 3],
+    ['project page', 4],
     ['technical report', 2],
-    ['论文', 3],
-    ['预印本', 2],
+    [ZH_NEW_PAPER.replace('\u65b0', ''), 3],
+    [ZH_PREPRINT, 2],
   ])
   score += addWeightedSignals(text, signals, 'announcement', [
     ['introducing', 3],
     ['new work', 3],
     ['our work', 2],
     ['our paper', 4],
-    ['accepted to', 4],
-    ['paper accepted', 4],
+    ['accepted to', 5],
+    ['accepted by', 4],
+    ['paper accepted', 5],
     ['to appear', 3],
-    ['开源', 1],
-    ['新论文', 4],
-    ['论文接收', 4],
-    ['录用', 3],
+    ['official code', 4],
+    ['official repo', 4],
+    ['official implementation', 3],
+    [ZH_OPEN_SOURCE, 1],
+    [ZH_NEW_PAPER, 4],
+    [ZH_PAPER_ACCEPTED, 5],
+    [ZH_ACCEPTED, 4],
   ])
   score += addWeightedSignals(text, signals, 'topic', [
     ['llm', 2],
@@ -847,11 +907,15 @@ function scoreEvidence(item) {
     ['video understanding', 2],
     ['3d gaussian', 2],
     ['3dgs', 2],
+    ['gaussian splatting', 2],
     ['world model', 2],
-    ['大模型', 2],
-    ['多模态', 2],
-    ['智能体', 2],
-    ['具身', 2],
+    ['rag', 2],
+    ['post-training', 2],
+    ['reinforcement learning', 2],
+    [ZH_LLM, 2],
+    [ZH_MULTIMODAL, 2],
+    [ZH_AGENT, 2],
+    [ZH_EMBODIED, 2],
   ])
   score += addWeightedSignals(text, signals, 'venue', [
     ['aaai', 2],
@@ -863,14 +927,18 @@ function scoreEvidence(item) {
     ['icml', 2],
     ['neurips', 2],
     ['siggraph', 2],
-    ['顶会', 2],
+    ['ijcai', 2],
+    ['colm', 2],
+    ['kdd', 2],
+    ['www', 2],
+    [ZH_TOP_VENUE, 2],
   ])
 
   const strongReject = [
     'miniapp',
-    '小程序开放平台',
-    '招聘',
-    '课程',
+    ZH_MINIAPP_PLATFORM,
+    ZH_RECRUITING,
+    ZH_COURSE,
     'tutorial',
     'challenge',
     'call for papers',
@@ -879,6 +947,12 @@ function scoreEvidence(item) {
     'sponsor',
     'product',
     'documentation',
+    'presentation generator',
+    'awesome',
+    'curated list',
+    'reading list',
+    'survey list',
+    'leaderboard',
   ].some((term) => text.includes(term))
 
   if (strongReject) {
@@ -886,7 +960,12 @@ function scoreEvidence(item) {
     signals.push('reject:non-paper-page')
   }
 
-  const keep = score >= 3 || (score >= 1 && /arxiv\.org|github\.io|x\.com|twitter\.com/i.test(item.url))
+  if (isHighSignalUrl(item.url)) {
+    score += 2
+    signals.push('source:high-signal-url')
+  }
+
+  const keep = score >= 4 || (score >= 2 && isHighSignalUrl(item.url))
 
   return {
     ...item,
@@ -897,6 +976,20 @@ function scoreEvidence(item) {
       signals,
     },
   }
+}
+
+function stageWeight(stage) {
+  if (stage === 'seed' || stage === 'repository') {
+    return 2
+  }
+  if (stage === 'paper-index' || stage === 'homepage') {
+    return 1
+  }
+  return 0
+}
+
+function isHighSignalUrl(url) {
+  return /arxiv\.org|github\.com|github\.io|openreview\.net|x\.com|twitter\.com|\.edu/i.test(url || '')
 }
 
 function addWeightedSignals(text, signals, prefix, terms) {
@@ -926,6 +1019,7 @@ function evidencePriority(item) {
     item.url,
   ].filter(Boolean).join(' ')
 
+  score += stageWeight(item.stage)
   if (/github\.com|github\.io/i.test(item.url || '')) {
     score += 4
   }
@@ -1034,24 +1128,25 @@ function createTrace(client, controls = {}) {
     generatedAt: new Date().toISOString(),
     model: client.model,
     searchTool: client.searchTool,
-  readerTool: client.readerTool,
-  controls,
-  progress: [],
-  queries: [],
-  readers: [],
-  extractionBatches: [],
-  rejectedCandidates: [],
-  summary: {
-    searchQueriesRun: 0,
-    rawSearchEvidenceCollected: 0,
-    searchEvidenceCollected: 0,
-    rejectedSearchEvidence: 0,
-    readerEnrichedEvidence: 0,
-    extractedCandidates: 0,
-    rejectedCandidates: 0,
-    added: 0,
-    updated: 0,
-  },
+    readerTool: client.readerTool,
+    controls,
+    progress: [],
+    queries: [],
+    readers: [],
+    extractionBatches: [],
+    rejectedCandidates: [],
+    summary: {
+      searchQueriesRun: 0,
+      rawSearchEvidenceCollected: 0,
+      searchEvidenceCollected: 0,
+      searchStageBreakdown: {},
+      rejectedSearchEvidence: 0,
+      readerEnrichedEvidence: 0,
+      extractedCandidates: 0,
+      rejectedCandidates: 0,
+      added: 0,
+      updated: 0,
+    },
     errors: [],
   }
 }
@@ -1059,6 +1154,7 @@ function createTrace(client, controls = {}) {
 function summarizeEvidence(item) {
   return {
     platform: item.platform || 'web',
+    stage: item.stage || '',
     url: item.url || '',
     title: item.title || '',
     snippet: String(item.snippet || '').slice(0, 700),
@@ -1078,6 +1174,28 @@ function summarizeReaderEvidence(item, readerError) {
 
   if (readerError) {
     summary.readerError = readerError
+  }
+
+  return summary
+}
+
+function summarizeSearchStages(queries) {
+  const summary = {}
+
+  for (const query of queries) {
+    const stage = query.stage || 'unknown'
+    const current = summary[stage] ?? {
+      queries: 0,
+      raw: 0,
+      kept: 0,
+      rejected: 0,
+    }
+
+    current.queries += 1
+    current.raw += query.rawResultCount || 0
+    current.kept += query.resultCount || 0
+    current.rejected += query.rejectedCount || 0
+    summary[stage] = current
   }
 
   return summary

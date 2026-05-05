@@ -57,16 +57,17 @@ jobs:
           ZHIPU_SEARCH_TIMEOUT_MS: 20000
           ZHIPU_READER_TIMEOUT_MS: 20000
           ZHIPU_CHAT_TIMEOUT_MS: 60000
-          ZHIPU_RETRIES: 1
+          ZHIPU_RETRIES: 3
+          ZHIPU_RATE_LIMIT_DELAY_MS: 45000
           DISCOVERY_BUDGET_MS: 1200000
-          DISCOVERY_MAX_QUERIES: 16
+          DISCOVERY_MAX_QUERIES: 28
           DISCOVERY_PLAN_STRATEGY: balanced
-          DISCOVERY_MAX_RESULTS: 8
-          DISCOVERY_MAX_READERS: 16
-          DISCOVERY_MIN_READERS: 8
-          DISCOVERY_BATCH_SIZE: 4
-          DISCOVERY_MAX_BATCHES: 4
-          DISCOVERY_EXTRACTION_DELAY_MS: 10000
+          DISCOVERY_MAX_RESULTS: 6
+          DISCOVERY_MAX_READERS: 24
+          DISCOVERY_MIN_READERS: 12
+          DISCOVERY_BATCH_SIZE: 3
+          DISCOVERY_MAX_BATCHES: 6
+          DISCOVERY_EXTRACTION_DELAY_MS: 60000
         run: npm run pipeline:refresh:discover
 
       - name: Upload discovery trace for debugging

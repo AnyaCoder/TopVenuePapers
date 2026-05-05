@@ -8,15 +8,15 @@ The semantic model uses the browser Cache API through Transformers.js. After the
 
 ## Unofficial discovery pipeline
 
-The repo also supports a daily unofficial-paper queue for cases where 2026 papers are announced on X, Xiaohongshu, or personal homepages before official venue pages go live.
+The repo also supports a daily unofficial-paper queue for cases where 2026 papers are announced on X, Xiaohongshu, GitHub, arXiv, lab pages, or personal homepages before official venue pages go live.
 
 - `data/unofficial/unofficial-papers.json` stores candidate and accepted-but-not-yet-official entries.
 - `public/data/unofficial/unofficial-papers.json` mirrors that queue for the `New Finding` page.
-- `npm run papers:unofficial:discover` uses the Zhipu web search + reader flow to discover likely papers, then asks Zhipu chat to extract the clean paper title, status, venue evidence, and source URL.
+- `npm run papers:unofficial:discover` uses an agentic staged search plan: high-confidence venue seeds, GitHub repository probes, arXiv/project-page probes, social announcements, Chinese web/social probes, and broad-recall fallback. Zhipu chat then extracts the clean paper title, status, venue evidence, and source URL.
 - `npm run papers:unofficial:reconcile` re-checks unofficial entries and removes them from the queue once they appear in the official catalog mirror.
 - `npm run pipeline:refresh:discover` runs discovery, reconciliation, catalog rebuild, semantic rebuild, and validation in one pass.
 
-Set `ZHIPU_API_KEY` before running the discovery steps locally or in GitHub Actions. Local extraction heuristics are disabled by default; the script only keeps minimal safety guards for malformed titles, generic homepages, official-catalog duplicates, and missing URLs.
+Set `ZHIPU_API_KEY` before running the discovery steps locally or in GitHub Actions. Local extraction heuristics are disabled by default; the script only keeps minimal safety guards for malformed titles, generic homepages, official-catalog duplicates, and missing URLs. If Zhipu returns `429 Too Many Requests`, the shared client backs off before retrying.
 
 ## Local development
 

@@ -230,6 +230,7 @@ export function mergeUnofficialEntry(existing, incoming) {
     return normalizeUnofficialEntry(incoming)
   }
 
+  const shouldPreferIncomingContent = isLegacyHeuristicEntry(existing) && !isLegacyHeuristicEntry(incoming)
   const nextStatus =
     unofficialStatusRank[incoming.status] > unofficialStatusRank[existing.status]
       ? incoming.status
@@ -259,12 +260,24 @@ export function mergeUnofficialEntry(existing, incoming) {
     ...existing,
     ...incoming,
     id: existing.id ?? incoming.id ?? buildUnofficialId(existing.title || incoming.title),
-    title: pickBetterTitle(existing.title, incoming.title),
-    titleZh: pickBetterText(existing.titleZh, incoming.titleZh),
-    summary: pickBetterText(existing.summary, incoming.summary),
-    abstract: pickBetterText(existing.abstract, incoming.abstract),
-    reason: pickBetterText(existing.reason, incoming.reason),
-    hookZh: pickBetterText(existing.hookZh, incoming.hookZh),
+    title: shouldPreferIncomingContent
+      ? incoming.title || existing.title
+      : pickBetterTitle(existing.title, incoming.title),
+    titleZh: shouldPreferIncomingContent
+      ? incoming.titleZh || existing.titleZh
+      : pickBetterText(existing.titleZh, incoming.titleZh),
+    summary: shouldPreferIncomingContent
+      ? incoming.summary || existing.summary
+      : pickBetterText(existing.summary, incoming.summary),
+    abstract: shouldPreferIncomingContent
+      ? incoming.abstract || existing.abstract
+      : pickBetterText(existing.abstract, incoming.abstract),
+    reason: shouldPreferIncomingContent
+      ? incoming.reason || existing.reason
+      : pickBetterText(existing.reason, incoming.reason),
+    hookZh: shouldPreferIncomingContent
+      ? incoming.hookZh || existing.hookZh
+      : pickBetterText(existing.hookZh, incoming.hookZh),
     canonicalUrl: incoming.canonicalUrl || existing.canonicalUrl,
     primaryUrl: incoming.primaryUrl || existing.primaryUrl,
     pdfUrl: incoming.pdfUrl || existing.pdfUrl,
@@ -452,6 +465,12 @@ function titleQuality(value) {
   }
 
   return score
+}
+
+function isLegacyHeuristicEntry(entry) {
+  return /local high-confidence extraction/i.test(entry?.reason || '') ||
+    /^bibtex\s+@/i.test(entry?.title || '') ||
+    /\s##\s*$/.test(entry?.title || '')
 }
 
 function safeNumber(value) {

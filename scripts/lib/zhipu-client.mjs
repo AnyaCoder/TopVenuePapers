@@ -2,6 +2,8 @@ const DEFAULT_API_BASE = 'https://open.bigmodel.cn/api/paas/v4'
 const DEFAULT_SEARCH_TIMEOUT_MS = 20_000
 const DEFAULT_READER_TIMEOUT_MS = 20_000
 const DEFAULT_CHAT_TIMEOUT_MS = 30_000
+const DEFAULT_RETRY_BASE_DELAY_MS = 1_200
+const DEFAULT_RATE_LIMIT_BASE_DELAY_MS = 30_000
 
 export function createZhipuClient(options = {}) {
   const apiKey = options.apiKey || process.env.ZHIPU_API_KEY
@@ -23,6 +25,16 @@ export async function zhipuChat(client, body, retries = 3, options = {}) {
   const url = `${client.apiBase}/chat/completions`
   let lastError
   const timeoutMs = readTimeoutMs(options.timeoutMs, 'ZHIPU_CHAT_TIMEOUT_MS', DEFAULT_CHAT_TIMEOUT_MS)
+  const retryDelayMs = readTimeoutMs(
+    options.retryDelayMs,
+    'ZHIPU_RETRY_DELAY_MS',
+    DEFAULT_RETRY_BASE_DELAY_MS,
+  )
+  const rateLimitDelayMs = readTimeoutMs(
+    options.rateLimitDelayMs,
+    'ZHIPU_RATE_LIMIT_DELAY_MS',
+    DEFAULT_RATE_LIMIT_BASE_DELAY_MS,
+  )
 
   for (let attempt = 1; attempt <= retries; attempt += 1) {
     try {
@@ -41,14 +53,14 @@ export async function zhipuChat(client, body, retries = 3, options = {}) {
 
       if (!response.ok) {
         const details = await safeReadText(response)
-        throw new Error(`Zhipu chat failed: ${response.status} ${response.statusText} ${details}`.trim())
+        throw createHttpError('chat', response.status, response.statusText, details)
       }
 
       return await response.json()
     } catch (error) {
       lastError = error
       if (attempt < retries) {
-        await sleep(700 * attempt)
+        await sleep(getRetryDelay(error, attempt, { retryDelayMs, rateLimitDelayMs }))
       }
     }
   }
@@ -77,7 +89,7 @@ export async function zhipuTool(client, tool, body = {}, retries = 3, options = 
 
       if (!response.ok) {
         const details = await safeReadText(response)
-        throw new Error(`Zhipu tool failed: ${response.status} ${response.statusText} ${details}`.trim())
+        throw createHttpError('tool', response.status, response.statusText, details)
       }
 
       return await response.json()
@@ -137,7 +149,7 @@ export async function zhipuPost(client, endpoint, body = {}, retries = 3, option
 
       if (!response.ok) {
         const details = await safeReadText(response)
-        throw new Error(`Zhipu ${endpoint} failed: ${response.status} ${response.statusText} ${details}`.trim())
+        throw createHttpError(endpoint, response.status, response.statusText, details)
       }
 
       return await response.json()
@@ -261,6 +273,22 @@ async function safeReadText(response) {
   } catch {
     return ''
   }
+}
+
+function createHttpError(endpoint, status, statusText, details) {
+  const error = new Error(`Zhipu ${endpoint} failed: ${status} ${statusText} ${details}`.trim())
+  error.status = status
+  error.statusText = statusText
+  error.details = details
+  return error
+}
+
+function getRetryDelay(error, attempt, options) {
+  if (error?.status === 429) {
+    return options.rateLimitDelayMs * attempt
+  }
+
+  return options.retryDelayMs * attempt
 }
 
 function sleep(ms) {

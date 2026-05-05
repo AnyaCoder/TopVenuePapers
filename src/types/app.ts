@@ -46,6 +46,7 @@ export interface FeedLoadError {
 
 export interface DiscoveryTraceSearchResult {
   platform: string
+  stage?: string
   url: string
   title: string
   snippet?: string
@@ -88,6 +89,7 @@ export interface DiscoveryTracePayload {
   }
   queries: Array<{
     query: string
+    stage?: string
     requestedCount: number
     resultCount: number
     results: DiscoveryTraceSearchResult[]
@@ -98,6 +100,12 @@ export interface DiscoveryTracePayload {
   rejectedCandidates?: DiscoveryTraceRejectedCandidate[]
   summary: {
     searchEvidenceCollected: number
+    searchStageBreakdown?: Record<string, {
+      queries: number
+      raw: number
+      kept: number
+      rejected: number
+    }>
     readerEnrichedEvidence: number
     extractedCandidates: number
     rejectedCandidates?: number

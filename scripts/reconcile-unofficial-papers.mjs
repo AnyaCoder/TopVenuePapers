@@ -235,6 +235,10 @@ function shouldCheckCandidate(paper, forceChecks) {
     return false
   }
 
+  if (isLegacyHeuristicEntry(paper)) {
+    return true
+  }
+
   if (paper.status === 'accepted' && !forceChecks) {
     return false
   }
@@ -253,6 +257,12 @@ function shouldCheckCandidate(paper, forceChecks) {
   }
 
   return Date.now() - lastChecked > 1000 * 60 * 60 * 18
+}
+
+function isLegacyHeuristicEntry(paper) {
+  return /local high-confidence extraction/i.test(paper?.reason || '') ||
+    /^bibtex\s+@/i.test(paper?.title || '') ||
+    /\s##\s*$/.test(paper?.title || '')
 }
 
 function buildAcceptanceQuery(paper) {
