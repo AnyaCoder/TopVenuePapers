@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-04T04:53:30.183Z",
+  "generatedAt": "2026-05-05T04:30:42.121Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
@@ -21,8 +21,8 @@
       "acceptedVenue": "ICLR 2026 Poster",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T05:47:16.333Z",
-      "updatedAt": "2026-05-04T04:53:30.181Z",
-      "lastCheckedAt": "2026-05-04T04:53:30.181Z",
+      "updatedAt": "2026-05-05T04:29:28.363Z",
+      "lastCheckedAt": "2026-05-05T04:29:28.363Z",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -56,7 +56,7 @@
       "id": "unofficial-b09792bf2db3",
       "title": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
       "summary": "从项目页或代码仓库识别到 ACL 2026 接收信号，标题为 bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo。",
-      "reason": "Local high-confidence extraction found ACL 2026 acceptance signal in the source title or excerpt.",
+      "reason": "没有提供任何证据来确认论文的接收状态",
       "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
       "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
       "pdfUrl": "",
@@ -67,8 +67,8 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-05-03T06:56:26.092Z",
-      "lastCheckedAt": "",
+      "updatedAt": "2026-05-05T04:30:18.046Z",
+      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -99,7 +99,7 @@
       "id": "unofficial-f312a023943c",
       "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##",
       "summary": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##。",
-      "reason": "Local high-confidence extraction found AAAI acceptance signal in the source title or excerpt.",
+      "reason": "虽然论文状态显示为accepted，但接收地点是AAAI而非ACL 2026，且没有提供任何证据支持其被ACL 2026接收。",
       "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
       "canonicalUrl": "https://github.com/neuron-insight-lab/LoopLLM",
       "pdfUrl": "",
@@ -110,8 +110,8 @@
       "acceptedVenue": "AAAI",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T05:47:16.331Z",
-      "updatedAt": "2026-05-03T06:56:26.091Z",
-      "lastCheckedAt": "",
+      "updatedAt": "2026-05-05T04:30:42.121Z",
+      "lastCheckedAt": "2026-05-05T04:30:42.121Z",
       "authors": [],
       "keywords": [
         "llm"
