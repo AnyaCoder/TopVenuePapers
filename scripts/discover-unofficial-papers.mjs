@@ -63,7 +63,7 @@ const maxFollowUpQueries = readPositiveInt(
   Math.max(4, Math.floor(maxQueries * 0.35)),
 )
 const modelPlanningEnabled = args.query.length === 0 &&
-  readBoolean(args.modelPlanning ?? process.env.DISCOVERY_MODEL_PLANNING, true)
+  readBoolean(args.modelPlanning ?? process.env.DISCOVERY_MODEL_PLANNING, false)
 const maxModelPlannedQueries = readPositiveInt(
   args.maxModelQueries ?? process.env.DISCOVERY_MAX_MODEL_QUERIES,
   Math.max(6, Math.floor(maxQueries * 0.35)),
@@ -495,7 +495,8 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
   const extractionStartedAt = Date.now()
   const systemPrompt =
     'You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.'
-  const prompt = buildExtractionPrompt(evidenceBatch)
+  const compactEvidenceBatch = evidenceBatch.map(compactEvidenceForExtraction)
+  const prompt = buildExtractionPrompt(compactEvidenceBatch)
   let text = ''
   let papers = []
   let errorMessage = ''
@@ -526,7 +527,7 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
 
   trace.extractionBatches.push({
     index: batchIndex,
-    evidenceCount: evidenceBatch.length,
+    evidenceCount: compactEvidenceBatch.length,
     prompt,
     systemPrompt,
     model: client.model,
@@ -573,6 +574,43 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
       discoveredAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     }))
+}
+
+function compactEvidenceForExtraction(item) {
+  const readerExcerpt = compactEvidenceText(item.readerExcerpt, 900)
+  const snippet = compactEvidenceText(item.snippet, 450)
+
+  return {
+    platform: item.platform || 'web',
+    stage: item.stage || '',
+    url: item.url || '',
+    title: compactEvidenceText(item.title, 260),
+    author: compactEvidenceText(item.author, 120),
+    snippet,
+    publishDate: item.publishDate || '',
+    query: compactEvidenceText(item.query, 220),
+    queryLabel: item.queryLabel || '',
+    queryIntent: compactEvidenceText(item.queryIntent, 220),
+    parentUrl: item.parentUrl || '',
+    relevanceScore: item.relevance?.score ?? 0,
+    relevanceSignals: item.relevance?.signals?.slice(0, 14) ?? [],
+    readerTitle: compactEvidenceText(item.readerTitle, 260),
+    readerExcerpt,
+  }
+}
+
+function compactEvidenceText(value, maxLength) {
+  const text = stripMarkupForEvidence(value)
+    .replace(/(?:Go to file|Code|Issues|Pull requests|Actions|Projects|Security|Insights|Repository files navigation)/gi, ' ')
+    .replace(/\b(?:Name|Last commit message|Last commit date|History|Commits?|main|master)\b/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (text.length <= maxLength) {
+    return text
+  }
+
+  return `${text.slice(0, maxLength - 3).trim()}...`
 }
 
 function buildExtractionPrompt(evidenceBatch) {
@@ -2120,7 +2158,7 @@ Options:
   --model <name>               Zhipu chat model.
   --max-follow-up-queries <n>   Evidence-derived follow-up query cap. Default: 35% of max queries.
   --max-model-queries <n>       Zhipu planned query cap. Default: 35% of max queries.
-  --model-planning <bool>       Let Zhipu plan search queries before static probes. Default: true.
+  --model-planning <bool>       Let Zhipu plan search queries before static probes. Default: false.
   --no-model-planning           Disable Zhipu search-query planning.
   --force-reader               Always run the webpage reader for candidate links.
   --dry-run                    Do not persist results.
