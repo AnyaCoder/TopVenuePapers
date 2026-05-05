@@ -2,7 +2,7 @@
   "key": "2026-acl-2026",
   "venue": "ACL 2026",
   "year": 2026,
-  "count": 5,
+  "count": 8,
   "papers": [
     {
       "id": "unofficial-a5ff98563120",
@@ -47,18 +47,78 @@
       ]
     },
     {
-      "id": "unofficial-b09792bf2db3",
-      "title": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
+      "id": "unofficial-2d98176824ab",
+      "title": "Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
       "venue": "ACL 2026",
       "year": 2026,
       "track": "Accepted signal pending official venue page",
-      "primaryCategory": "rag-knowledge",
+      "primaryCategory": "mllm-foundations",
       "categories": [
-        "rag-knowledge",
+        "mllm-foundations",
         "evaluation-benchmarks",
         "reasoning",
-        "mllm-foundations"
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "rag",
+        "benchmark",
+        "adversarial",
+        "ACL 2026",
+        "web",
+        "github",
+        "unofficial"
+      ],
+      "authors": [
+        "Zhiheng Li",
+        "Zongyang Ma",
+        "Yuntong Pan",
+        "Ziqi Zhang",
+        "Xiaolei Lv",
+        "Bo Li",
+        "Jun Gao",
+        "Jianing Zhang",
+        "Chunfeng Yuan",
+        "Bing Li",
+        "Weiming Hu"
+      ],
+      "openreviewUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "aliases": [
+        "unofficial-2d98176824ab"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-2d98176824ab",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-05T05:27:22.696Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web",
+        "github"
+      ]
+    },
+    {
+      "id": "unofficial-b09792bf2db3",
+      "title": "MegaRAG: Multimodal Graph-based RAG",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "reasoning",
+      "categories": [
+        "reasoning",
+        "rag-knowledge",
+        "mllm-foundations",
+        "three-d-world-modeling"
       ],
       "keywords": [
         "multimodal",
@@ -73,8 +133,8 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "tldr": "从项目页或代码仓库识别到 ACL 2026 接收信号，标题为 bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo。",
-      "abstract": "从项目页或代码仓库识别到 ACL 2026 接收信号，标题为 bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo。",
+      "tldr": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "abstract": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
       "aliases": [
         "unofficial-b09792bf2db3"
       ],
@@ -174,6 +234,99 @@
       "discoveredAt": "2026-05-01T07:36:45.400Z",
       "evidenceCount": 1,
       "platforms": [
+        "web"
+      ]
+    },
+    {
+      "id": "unofficial-ffb5140d7bb4",
+      "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "reasoning",
+        "rl-post-training",
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark",
+        "ACL 2026",
+        "web",
+        "github",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/wzb-bupt/VGPO",
+      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "aliases": [
+        "unofficial-ffb5140d7bb4"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-ffb5140d7bb4",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-05T05:27:22.694Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web",
+        "github"
+      ]
+    },
+    {
+      "id": "unofficial-d1e541f099cf",
+      "title": "VoxMind: An End-to-End Agentic Spoken Dialogue System",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "reasoning",
+      "categories": [
+        "reasoning",
+        "agents-tool-use",
+        "audio-speech"
+      ],
+      "keywords": [
+        "agent",
+        "reasoning",
+        "dialogue",
+        "speech",
+        "ACL 2026",
+        "homepage",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/MM-Speech/VoxMind",
+      "tldr": "VoxMind是一个端到端的智能口语对话系统框架，采用'先思考后说话'的范式，为口语对话模型提供结构化推理、工具使用和动态访问外部功能等智能能力。",
+      "abstract": "VoxMind是一个端到端的智能口语对话系统框架，采用'先思考后说话'的范式，为口语对话模型提供结构化推理、工具使用和动态访问外部功能等智能能力。",
+      "aliases": [
+        "unofficial-d1e541f099cf"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-d1e541f099cf",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-05T05:29:41.121Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "homepage",
         "web"
       ]
     },
