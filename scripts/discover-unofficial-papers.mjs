@@ -271,10 +271,14 @@ for (const [readerIndex, item] of dedupedEvidence.entries()) {
 const allBatches = chunk(enrichedEvidence, extractionBatchSize)
 const batches = allBatches.slice(0, maxExtractionBatches)
 const skippedExtractionBatches = Math.max(0, allBatches.length - batches.length)
-const extractedCandidates = []
+const fallbackCandidates = buildEvidenceBackedCandidates(enrichedEvidence, {
+  maxCandidates: readPositiveInt(args.maxFallbackCandidates ?? process.env.DISCOVERY_MAX_FALLBACK_CANDIDATES, 24),
+})
+const extractedCandidates = [...fallbackCandidates]
 const rejectedCandidates = []
 
-logProgress(trace, 'Zhipu-only extraction enabled; local code will only reject malformed candidates before storage.')
+logProgress(trace, `Evidence-backed fallback staged ${fallbackCandidates.length} strong candidates before Zhipu extraction.`)
+logProgress(trace, 'Zhipu extraction enabled for cleanup/enrichment; local fallback only admits explicit venue-year paper evidence.')
 logProgress(trace, `Zhipu extraction stage started: ${batches.length}/${allBatches.length} batches.`)
 
 for (const [batchIndex, batch] of batches.entries()) {
@@ -376,6 +380,7 @@ trace.summary = {
   selectedSearchPlans: selectedSearchPlans.length,
   modelSearchPlans: modelPlanning.plans.length,
   followUpSearchPlans: followUpSearchPlans.length,
+  fallbackCandidates: fallbackCandidates.length,
   searchStageBreakdown: summarizeSearchStages(trace.queries),
   rawSearchEvidenceCollected: results.length + rejectedEvidence.length,
   searchEvidenceCollected: dedupedAccepted.length,
@@ -489,6 +494,202 @@ function recordRejectedCandidate(rejectedCandidates, candidate, reason) {
     primaryUrl: candidate?.primaryUrl || '',
     reason,
   })
+}
+
+function buildEvidenceBackedCandidates(evidenceItems, options = {}) {
+  const output = []
+  const seenTitles = new Set()
+
+  for (const item of evidenceItems.sort(compareEvidenceRelevance)) {
+    if (output.length >= options.maxCandidates) {
+      break
+    }
+
+    const candidate = extractCandidateFromStrongEvidence(item)
+    if (!candidate) {
+      continue
+    }
+
+    const titleKey = normalizeTitleKey(candidate.title)
+    if (!titleKey || seenTitles.has(titleKey)) {
+      continue
+    }
+
+    seenTitles.add(titleKey)
+    output.push(candidate)
+  }
+
+  return output
+}
+
+function extractCandidateFromStrongEvidence(item) {
+  const evidenceText = [
+    item.title,
+    item.readerTitle,
+    item.snippet,
+    item.readerExcerpt,
+  ].filter(Boolean).join(' ')
+  const venue = extractAcceptedVenue(evidenceText)
+
+  if (!venue || isNonMainTrackEvidence(evidenceText)) {
+    return null
+  }
+
+  const title = extractTitleFromEvidence(item, venue)
+
+  if (!title || hasBrokenTitleShape(title)) {
+    return null
+  }
+
+  const confidence = Math.min(0.96, Math.max(0.78, (item.relevance?.score ?? 12) / 36))
+
+  return {
+    id: buildUnofficialId(title),
+    title,
+    titleZh: '',
+    summary: `发现页在公开页面中识别到 ${venue.label} 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。`,
+    reason: `Evidence-backed fallback found explicit ${venue.label} signal in ${item.url}.`,
+    status: 'accepted',
+    confidence,
+    acceptedVenue: venue.label,
+    acceptedYear: venue.year,
+    primaryUrl: item.url,
+    canonicalUrl: item.url,
+    pdfUrl: '',
+    authors: [],
+    keywords: extractTopicTerms(evidenceText).slice(0, 8),
+    platforms: [item.platform || detectPlatform(item.url) || 'web'],
+    evidence: [
+      {
+        platform: item.platform || detectPlatform(item.url) || 'web',
+        url: item.url,
+        title: item.title || '',
+        author: item.author || '',
+        snippet: compactEvidenceText(item.snippet, 500),
+        readerTitle: item.readerTitle || '',
+        readerExcerpt: compactEvidenceText(item.readerExcerpt, 900),
+        publishDate: item.publishDate || '',
+      },
+    ],
+    discoveredAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+function extractAcceptedVenue(text) {
+  const normalized = normalizeForScoring(text)
+  const venueMatch = normalized.match(/\b(aaai|acl|emnlp|cvpr|iccv|iclr|icml|neurips|siggraph|kdd|www|ijcai|colm|mm|sigir)[-\s']*(2026|26)\b/)
+
+  if (!venueMatch) {
+    return null
+  }
+
+  if (!/(accepted|official|repo|repository|code|implementation|project page|main conference|main track|paper|oral|poster|to appear)/i.test(text)) {
+    return null
+  }
+
+  const venue = venueMatch[1].toUpperCase()
+  const year = 2026
+  const mainConference = /\bmain(?:\s+conference|\s+track)?\b/i.test(text)
+  const label = mainConference ? `${venue} 2026 Main` : `${venue} 2026`
+
+  return { venue, year, label }
+}
+
+function isNonMainTrackEvidence(text) {
+  return /\b(findings|workshop|demo|tutorial|challenge|shared task|blogpost|blog post|competition|supplementary)\b/i.test(text)
+}
+
+function extractTitleFromEvidence(item, venue) {
+  const sources = [
+    item.readerTitle,
+    item.title,
+    item.snippet,
+    item.readerExcerpt,
+  ].filter(Boolean)
+
+  for (const source of sources) {
+    const title = extractQuotedPaperTitle(source)
+    if (title) {
+      return title
+    }
+  }
+
+  for (const source of sources) {
+    const title = extractVenueAnchoredTitle(source, venue)
+    if (title) {
+      return title
+    }
+  }
+
+  for (const source of sources) {
+    const title = cleanTitleCandidate(stripVenuePrefix(source, venue))
+    if (title) {
+      return title
+    }
+  }
+
+  const repo = parseGitHubRepository(item.url)
+  if (repo) {
+    return cleanTitleCandidate(repo.name.replace(/[-_]+/g, ' '))
+  }
+
+  return ''
+}
+
+function extractQuotedPaperTitle(value) {
+  const text = String(value ?? '')
+  const patterns = [
+    /paper\s+["“”'‘’`]([^"“”'‘’`]{8,220})["“”'‘’`]/i,
+    /["“”'‘’`]([^"“”'‘’`]{8,220}:[^"“”'‘’`]{8,220})["“”'‘’`]/i,
+  ]
+
+  for (const pattern of patterns) {
+    const title = cleanTitleCandidate(text.match(pattern)?.[1])
+
+    if (title) {
+      return title
+    }
+  }
+
+  return ''
+}
+
+function extractVenueAnchoredTitle(value, venue) {
+  const text = String(value ?? '')
+  const patterns = [
+    new RegExp(`\\[?${venue.venue}[-\\s']*(?:2026|26)(?:\\s+Main(?:\\s+Conference)?)?\\]?\\s*[:\\-]?\\s*([^·|\\n]{8,220})`, 'i'),
+    new RegExp(`${venue.venue}[-\\s']*(?:2026|26)\\s*(?:paper|main|official repo|official repository|official implementation|official code)?\\s*[:\\-]?\\s*([^·|\\n]{8,220})`, 'i'),
+  ]
+
+  for (const pattern of patterns) {
+    const title = cleanTitleCandidate(stripDescriptorPrefix(text.match(pattern)?.[1]))
+
+    if (title) {
+      return title
+    }
+  }
+
+  return ''
+}
+
+function stripDescriptorPrefix(value) {
+  return String(value ?? '')
+    .replace(/^(?:official\s+)?(?:code|repository|repo|implementation|project page|paper|benchmark release)\s+(?:for|of)?\s*/i, '')
+    .replace(/^this is the repo of\s+/i, '')
+    .replace(/^the project page of\s+/i, '')
+    .replace(/^accepted (?:to|by)\s+/i, '')
+    .trim()
+}
+
+function stripVenuePrefix(value, venue) {
+  return String(value ?? '')
+    .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
+    .replace(new RegExp(`\\[?${venue.venue}[-\\s']*(?:2026|26)(?:\\s+Main(?:\\s+Conference)?)?\\]?`, 'ig'), '')
+    .replace(/\b(?:official|code|repository|repo|implementation|project page|paper|accepted|accepted by|accepted to|for)\b/gi, ' ')
+    .replace(/[·|].*$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, trace) {
@@ -1604,6 +1805,8 @@ function cleanTitleCandidate(value) {
     .replace(/\s*[-|]\s*GitHub$/i, '')
     .replace(/\s*##.*$/g, '')
     .replace(/\s*\bbibtex\b.*$/i, '')
+    .replace(/\s*\((?:accepted|to appear|main conference|findings)[^)]+\)\s*$/i, '')
+    .replace(/\s*[·|].*$/g, '')
     .trim()
 
   if (title.length < 8 || title.length > 220) {
@@ -1611,6 +1814,10 @@ function cleanTitleCandidate(value) {
   }
 
   if (/go to file|repository files navigation|github topics|https?:\/\//i.test(title)) {
+    return ''
+  }
+
+  if (/^(?:the|this|official|code|repository|repo|paper|project page|accepted|main conference|findings)\b/i.test(title)) {
     return ''
   }
 
@@ -2116,6 +2323,8 @@ function parseArgs(argv) {
       parsed.maxFollowUpQueries = argv[++index]
     } else if (arg === '--max-model-queries') {
       parsed.maxModelQueries = argv[++index]
+    } else if (arg === '--max-fallback-candidates') {
+      parsed.maxFallbackCandidates = argv[++index]
     } else if (arg === '--model-planning') {
       parsed.modelPlanning = argv[++index]
     } else if (arg === '--no-model-planning') {
@@ -2158,6 +2367,7 @@ Options:
   --model <name>               Zhipu chat model.
   --max-follow-up-queries <n>   Evidence-derived follow-up query cap. Default: 35% of max queries.
   --max-model-queries <n>       Zhipu planned query cap. Default: 35% of max queries.
+  --max-fallback-candidates <n> Strong evidence fallback candidate cap. Default: 24.
   --model-planning <bool>       Let Zhipu plan search queries before static probes. Default: false.
   --no-model-planning           Disable Zhipu search-query planning.
   --force-reader               Always run the webpage reader for candidate links.
