@@ -535,6 +535,10 @@ function extractCandidateFromStrongEvidence(item) {
     return null
   }
 
+  if (!isStrongEvidenceSource(item)) {
+    return null
+  }
+
   const title = extractTitleFromEvidence(item, venue)
 
   if (!title || hasBrokenTitleShape(title)) {
@@ -574,6 +578,16 @@ function extractCandidateFromStrongEvidence(item) {
     discoveredAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   }
+}
+
+function isStrongEvidenceSource(item) {
+  const url = item.url || ''
+
+  if (/arxiv\.org\/list\//i.test(url) || /github\.com\/[^/\s?#]+\/?$/i.test(url)) {
+    return false
+  }
+
+  return /github\.com\/[^/\s?#]+\/[^/\s?#]+|github\.io|openreview\.net|arxiv\.org\/abs|x\.com|twitter\.com/i.test(url)
 }
 
 function extractAcceptedVenue(text) {
@@ -658,7 +672,7 @@ function extractQuotedPaperTitle(value) {
 function extractVenueAnchoredTitle(value, venue) {
   const text = String(value ?? '')
   const patterns = [
-    new RegExp(`\\[?${venue.venue}[-\\s']*(?:2026|26)(?:\\s+Main(?:\\s+Conference)?)?\\]?\\s*[:\\-]?\\s*([^·|\\n]{8,220})`, 'i'),
+    new RegExp(`\\[?${venue.venue}[-\\s']*(?:2026|26)(?:\\s+Main(?:\\s+Conference)?)?\\]?\\s*[:\\-]?\\s*(?!\\(?\\s*(?:accepted|main|conference|findings|poster|oral)\\b)([^·|\\n]{8,220})`, 'i'),
     new RegExp(`${venue.venue}[-\\s']*(?:2026|26)\\s*(?:paper|main|official repo|official repository|official implementation|official code)?\\s*[:\\-]?\\s*([^·|\\n]{8,220})`, 'i'),
   ]
 
@@ -675,9 +689,11 @@ function extractVenueAnchoredTitle(value, venue) {
 
 function stripDescriptorPrefix(value) {
   return String(value ?? '')
+    .replace(/^[\])"'‘’“”`]+/, '')
     .replace(/^(?:official\s+)?(?:code|repository|repo|implementation|project page|paper|benchmark release)\s+(?:for|of)?\s*/i, '')
     .replace(/^this is the repo of\s+/i, '')
     .replace(/^the project page of\s+/i, '')
+    .replace(/^of\s*:\s*/i, '')
     .replace(/^accepted (?:to|by)\s+/i, '')
     .trim()
 }
@@ -1801,8 +1817,10 @@ function extractLikelyPaperTitles(text) {
 
 function cleanTitleCandidate(value) {
   const title = normalizeCandidateText(value)
-    .replace(/^["'`]+|["'`]+$/g, '')
+    .replace(/^["'`“”‘’]+|["'`“”‘’]+$/g, '')
     .replace(/\s*[-|]\s*GitHub$/i, '')
+    .replace(/\s*·\s*GitHub$/i, '')
+    .replace(/\s*Β·\s*GitHub$/i, '')
     .replace(/\s*##.*$/g, '')
     .replace(/\s*\bbibtex\b.*$/i, '')
     .replace(/\s*\((?:accepted|to appear|main conference|findings)[^)]+\)\s*$/i, '')
@@ -1817,7 +1835,11 @@ function cleanTitleCandidate(value) {
     return ''
   }
 
-  if (/^(?:the|this|official|code|repository|repo|paper|project page|accepted|main conference|findings)\b/i.test(title)) {
+  if (/^(?:the|this|official|code|repository|repo|paper|project page|accepted|main conference|conference|findings|poster|oral|pages?|figures?|subjects?)\b/i.test(title)) {
+    return ''
+  }
+
+  if (/^(?:github|gitlab|arxiv|readme|yaml|json|python|pytorch)\b/i.test(title) || /^[^\p{L}\p{N}]*$/u.test(title)) {
     return ''
   }
 
