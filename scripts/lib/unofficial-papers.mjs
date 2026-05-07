@@ -37,7 +37,9 @@ export async function readUnofficialStore(path) {
     return {
       version: 1,
       generatedAt: payload.generatedAt ?? '',
-      papers: Array.isArray(payload.papers) ? payload.papers : [],
+      papers: Array.isArray(payload.papers)
+        ? payload.papers.map((paper) => normalizeUnofficialEntry(paper))
+        : [],
       notes: Array.isArray(payload.notes) ? payload.notes : [],
     }
   } catch (error) {
@@ -63,7 +65,9 @@ export async function writeUnofficialStore(path, payload) {
         version: 1,
         generatedAt: payload.generatedAt ?? new Date().toISOString(),
         notes: payload.notes ?? [],
-        papers: payload.papers ?? [],
+        papers: Array.isArray(payload.papers)
+          ? payload.papers.map((paper) => normalizeUnofficialEntry(paper))
+          : [],
       },
       null,
       2,
@@ -117,6 +121,7 @@ export function materializeUnofficialCatalogRecords(entries, officialPapers = []
   return entries
     .filter((entry) => unofficialStatusRank[entry.status] >= unofficialStatusRank.candidate)
     .filter((entry) => entry.status !== 'officially-published')
+    .filter((entry) => entry.enrichmentStatus !== 'provisional')
     .filter((entry) => !officialIndex.has(normalizeTitleKey(entry.title)))
     .map((entry) => buildUnofficialPaperRecord(entry))
 }
@@ -230,7 +235,15 @@ export function mergeUnofficialEntry(existing, incoming) {
     return normalizeUnofficialEntry(incoming)
   }
 
-  const shouldPreferIncomingContent = isLegacyHeuristicEntry(existing) && !isLegacyHeuristicEntry(incoming)
+  const shouldPreferIncomingContent =
+    (
+      existing?.metadataSource === 'local-fallback' ||
+      existing?.enrichmentStatus === 'provisional' ||
+      isLegacyHeuristicEntry(existing)
+    ) && (
+      incoming?.metadataSource === 'zhipu-chat' ||
+      !isLegacyHeuristicEntry(incoming)
+    )
   const nextStatus =
     unofficialStatusRank[incoming.status] > unofficialStatusRank[existing.status]
       ? incoming.status
@@ -313,12 +326,14 @@ export function mergeUnofficialEntry(existing, incoming) {
 }
 
 export function normalizeUnofficialEntry(entry) {
-  const id = entry.id || buildUnofficialId(entry.title)
   const platforms = uniqueStrings([
     ...(entry.platforms ?? []),
     ...(entry.evidence ?? []).map((item) => item.platform),
   ])
   const evidence = mergeEvidence([], entry.evidence ?? [])
+  const rawTitle = String(entry.title ?? '').trim()
+  const title = pickCleanUnofficialTitle(entry, evidence) || rawTitle
+  const id = entry.id || buildUnofficialId(title)
   const normalizedVenue = normalizeAcceptedVenue(
     entry.acceptedVenue,
     entry.reason,
@@ -329,14 +344,33 @@ export function normalizeUnofficialEntry(entry) {
     Number.isFinite(entry.acceptedYear) && entry.acceptedYear > 0
       ? entry.acceptedYear
       : normalizedVenue?.year
+  const summary = sanitizeNarrativeText(entry.summary, {
+    rawTitle,
+    title,
+    acceptedVenue,
+  })
+  const reason = sanitizeNarrativeText(entry.reason, {
+    rawTitle,
+    title,
+    acceptedVenue,
+  })
+  const enrichmentStatus = inferEnrichmentStatus({
+    ...entry,
+    title,
+    summary,
+    reason,
+  })
+  const metadataSource = String(entry.metadataSource ?? '').trim() || (
+    enrichmentStatus === 'provisional' ? 'legacy-repaired' : 'unknown'
+  )
 
   return {
     id,
-    title: String(entry.title ?? '').trim(),
+    title,
     titleZh: cleanOptionalText(entry.titleZh),
-    summary: cleanOptionalText(entry.summary),
+    summary: cleanOptionalText(summary),
     abstract: cleanOptionalText(entry.abstract),
-    reason: cleanOptionalText(entry.reason),
+    reason: cleanOptionalText(reason),
     hookZh: cleanOptionalText(entry.hookZh),
     primaryUrl: entry.primaryUrl || entry.canonicalUrl || evidence[0]?.url || '',
     canonicalUrl: entry.canonicalUrl || '',
@@ -355,6 +389,8 @@ export function normalizeUnofficialEntry(entry) {
     discoveredAt: entry.discoveredAt || new Date().toISOString(),
     updatedAt: entry.updatedAt || new Date().toISOString(),
     lastCheckedAt: entry.lastCheckedAt || '',
+    enrichmentStatus,
+    metadataSource,
     authors: uniqueStrings(entry.authors ?? []),
     keywords: uniqueStrings(entry.keywords ?? []),
     titleAliases: uniqueStrings(entry.titleAliases ?? []),
@@ -437,8 +473,8 @@ function pickBetterText(left, right) {
 }
 
 function pickBetterTitle(left, right) {
-  const leftText = String(left ?? '').trim()
-  const rightText = String(right ?? '').trim()
+  const leftText = cleanPaperTitleCandidate(left)
+  const rightText = cleanPaperTitleCandidate(right)
 
   if (!leftText || !rightText) {
     return rightText || leftText || undefined
@@ -451,7 +487,7 @@ function titleQuality(value) {
   const text = String(value ?? '').trim()
   let score = Math.min(text.length, 180)
 
-  if (/github|official repo|official code/i.test(text)) {
+  if (hasDirtyPaperTitleShape(text) || /github|official repo|official code/i.test(text)) {
     score -= 60
   }
   if (/^[`"“”‘’']|[`"“”‘’']$/.test(text)) {
@@ -471,6 +507,210 @@ function isLegacyHeuristicEntry(entry) {
   return /local high-confidence extraction/i.test(entry?.reason || '') ||
     /^bibtex\s+@/i.test(entry?.title || '') ||
     /\s##\s*$/.test(entry?.title || '')
+}
+
+function pickCleanUnofficialTitle(entry, evidence) {
+  const rawTitle = String(entry?.title ?? '').trim()
+  const directSources = [
+    ...(evidence ?? []).flatMap((item) => [
+      item.readerTitle,
+      item.title,
+    ]),
+    rawTitle,
+  ]
+  const extractionSources = [
+    rawTitle,
+    entry?.reason,
+    entry?.summary,
+    ...(evidence ?? []).flatMap((item) => [
+      item.readerTitle,
+      item.title,
+      item.snippet,
+      item.readerExcerpt,
+    ]),
+  ]
+  const candidates = []
+
+  for (const value of directSources) {
+    const text = String(value ?? '').trim()
+    if (!text || /waiting for Zhipu enrichment|Discovery evidence found/i.test(text)) {
+      continue
+    }
+
+    candidates.push(cleanPaperTitleCandidate(text))
+  }
+
+  for (const value of extractionSources) {
+    const text = String(value ?? '').trim()
+    if (!text || /waiting for Zhipu enrichment|Discovery evidence found/i.test(text)) {
+      continue
+    }
+
+    candidates.push(...extractPaperTitleCandidates(text))
+  }
+
+  return uniqueStrings(candidates)
+    .filter((title) => !hasDirtyPaperTitleShape(title))
+    .sort((left, right) => titleQuality(right) - titleQuality(left))[0] || ''
+}
+
+function extractPaperTitleCandidates(value) {
+  const text = stripTitleSourceNoise(value)
+  const candidates = []
+  const patterns = [
+    /title\s*=\s*[{"]([^}"]{8,240})[}"]/gi,
+    /标题为\s*([^。；;\n]{8,240})/g,
+    /(?:^|\s)([A-Z][A-Za-z0-9+_.-]{1,48}:\s*[^#\n]{8,240})/g,
+    /(?:paper|work|repository|repo|project page)(?:\s+(?:for|of|called|named))?\s*[:：]\s*([^#\n]{8,240})/gi,
+    /^#{1,3}\s*([^#\n]{8,240})/gm,
+    /GitHub\s+-\s+[^:]+:\s*([^·\n]{8,240})/gi,
+  ]
+
+  for (const pattern of patterns) {
+    for (const match of text.matchAll(pattern)) {
+      const title = cleanPaperTitleCandidate(match[1])
+      if (title) {
+        candidates.push(title)
+      }
+    }
+  }
+
+  return uniqueStrings(candidates)
+}
+
+function cleanPaperTitleCandidate(value) {
+  const title = stripTitleSourceNoise(value)
+    .replace(/^GitHub\s+-\s+[^:]+:\s*/i, '')
+    .replace(/\[[^\]]*\b(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|IJCAI|COLM|MM|SIGIR)[^\]]*\]\s*/gi, '')
+    .replace(/\((?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|IJCAI|COLM|MM|SIGIR)[-\s']*(?:2026|26)(?:\s+Main(?:\s+Conference)?)?\)\s*/gi, ' ')
+    .replace(/^(?:the\s+)?(?:official\s+)?(?:code|repository|repo|implementation|project page)\s+(?:for|of)?\s*(?:our\s+)?(?:paper)?\s*:?\s*/i, '')
+    .replace(/^this is the code repository for our paper\s*:?\s*/i, '')
+    .replace(/^code of\s+(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|IJCAI|COLM|MM|SIGIR)[-\s']*(?:2026|26)\s+accepted paper\s*:?\s*/i, '')
+    .replace(/\s*[-|·]\s*GitHub\s*$/i, '')
+    .replace(/\s*##.*$/g, '')
+    .replace(/\s+\b(?:Abstract|Overview|Installation|Quickstart|Citation|News|Highlights)\b.*$/i, '')
+    .replace(/\s+(?:This is the (?:code )?repository|This is the repo|If you find our work useful|Please consider giving us|The paper has been accepted|This work has been accepted)\b.*$/i, '')
+    .replace(/\s+(?:We introduce|We propose|We present|We release|Accepted by|Accepted to)\b.*$/i, '')
+    .replace(/\s+[πβ][^\x00-\x7F\S]*.*$/u, '')
+    .replace(/\s+\p{Extended_Pictographic}.*$/u, '')
+    .replace(/^this is the official implementation for\s*/i, '')
+    .replace(/\s+[A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){0,2},\s+[A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){0,2}.*$/, '')
+    .replace(/\s+\b(?:AAAI|ACL|EMNLP|CVPR|ICCV|ICLR|ICML|NeurIPS|SIGGRAPH|KDD|WWW|IJCAI|COLM|MM|SIGIR)[-\s']*(?:2026|26)\b.*$/i, '')
+    .replace(/[。；;，,]+$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (title.length < 8 || title.length > 220) {
+    return ''
+  }
+
+  if (!/[a-zA-Z]/.test(title) || /^[^\p{L}\p{N}]*$/u.test(title)) {
+    return ''
+  }
+
+  if (/^(?:the|this|official|code|repository|repo|paper|project page|accepted|main conference|conference|findings|poster|oral|pages?|figures?|subjects?)\b/i.test(title)) {
+    return ''
+  }
+
+  if (/\b(?:for|via|with|and|of|the|from|to)$/i.test(title)) {
+    return ''
+  }
+
+  return title
+}
+
+function stripTitleSourceNoise(value) {
+  return String(value ?? '')
+    .normalize('NFKC')
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[[^\]]+]\([^)]*\)/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/^["'`]+|["'`]+$/g, '')
+    .replace(/^[#>\s]+/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function hasDirtyPaperTitleShape(value) {
+  const title = String(value ?? '').trim()
+
+  if (!title || title.length > 260) {
+    return true
+  }
+
+  return [
+    /^github\s+-/i,
+    /^bibtex\s+@/i,
+    /\b(?:title|author|booktitle)\s*=\s*\{/i,
+    /\s##\s*/i,
+    /\b(?:repository files navigation|go to file|last commit|table of contents)\b/i,
+    /\b(?:abstract|installation|quickstart|citation)\b/i,
+    /\b(?:this is the (?:code )?repository|if you find our work useful|please consider giving us)\b/i,
+    /\b(?:we introduce|we propose|we present|we release)\b/i,
+    /waiting for Zhipu enrichment|Discovery evidence found/i,
+    /\b(?:识别到|接收信号|标题为|被.*接收|是一个|通过.*提供|没有提供.*证据)\b/i,
+    /^[\p{Script=Han}\s，。；：:]+$/u,
+    /github\.io|github\.com|https?:\/\//i,
+    /\p{Extended_Pictographic}/u,
+  ].some((pattern) => pattern.test(title))
+}
+
+function sanitizeNarrativeText(value, context) {
+  const text = String(value ?? '').trim()
+
+  if (!text) {
+    return undefined
+  }
+
+  const rawTitle = String(context.rawTitle ?? '').trim()
+  const cleanTitle = String(context.title ?? '').trim()
+  const hasCleanReplacement = cleanTitle && rawTitle && cleanTitle !== rawTitle
+
+  if (hasCleanReplacement && text.includes(rawTitle)) {
+    const updated = text.replaceAll(rawTitle, cleanTitle)
+    return hasDirtyPaperTitleShape(updated)
+      ? fallbackCleanNarrative(context)
+      : updated
+  }
+
+  if (hasDirtyPaperTitleShape(text)) {
+    return fallbackCleanNarrative(context)
+  }
+
+  return text
+}
+
+function fallbackCleanNarrative(context) {
+  const title = String(context.title ?? '').trim()
+  const venue = String(context.acceptedVenue ?? '').trim() || 'a 2026 top venue'
+
+  if (!title) {
+    return undefined
+  }
+
+  return `Discovery evidence found an explicit ${venue} paper signal for ${title}; waiting for Zhipu enrichment.`
+}
+
+function inferEnrichmentStatus(entry) {
+  const metadataSource = String(entry.metadataSource ?? '').trim()
+  const joined = [
+    entry.title,
+    entry.summary,
+    entry.reason,
+    entry.titleZh,
+  ].filter(Boolean).join(' ')
+
+  if (/waiting for Zhipu enrichment|Discovery evidence found/i.test(joined)) {
+    return 'provisional'
+  }
+
+  if (metadataSource === 'zhipu-chat') {
+    return 'cleaned'
+  }
+
+  return 'provisional'
 }
 
 function safeNumber(value) {

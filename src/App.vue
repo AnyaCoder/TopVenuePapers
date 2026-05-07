@@ -27,10 +27,14 @@ import type { BrowserSemanticProgress } from './utils/browserSemanticSearch'
 import { buildBrainstormQuery, buildLocalBrainstormPlan, rankPapersByTextQuery, type BrainstormDraft } from './utils/brainstorm'
 import {
   clampNumber,
+  displayDiscoverySummary,
+  displayDiscoveryTitle,
   discoveryStatusLabel,
   humanizePlatform,
   humanizeWorkflowStatus,
+  isProvisionalUnofficialEntry,
   resolvePageFromHash,
+  shouldDisplayUnofficialEntry,
   timestampValue,
   workflowTone,
 } from './utils/display'
@@ -177,7 +181,13 @@ const guidedPaperCount = computed(
   () => paperCatalog.value.filter((paper) => paper.hasIntroZh).length,
 )
 
-const unofficialPapers = computed(() => unofficialStore.value?.papers ?? [])
+const allUnofficialPapers = computed(() => unofficialStore.value?.papers ?? [])
+const unofficialPapers = computed(() =>
+  allUnofficialPapers.value.filter(shouldDisplayUnofficialEntry),
+)
+const provisionalUnofficialPapers = computed(() =>
+  allUnofficialPapers.value.filter(isProvisionalUnofficialEntry),
+)
 const unofficialAcceptedCount = computed(
   () => unofficialPapers.value.filter((paper) => paper.status === 'accepted').length,
 )
@@ -187,7 +197,7 @@ const unofficialCandidateCount = computed(
 const unofficialPlatformBreakdown = computed(() => {
   const counts = new Map<string, number>()
 
-  for (const paper of unofficialPapers.value) {
+  for (const paper of allUnofficialPapers.value) {
     const platforms = paper.platforms?.length
       ? paper.platforms
       : paper.evidence?.map((item) => item.platform).filter(Boolean) ?? []
@@ -218,13 +228,12 @@ const latestEvidenceCards = computed<DiscoveryEvidenceCard[]>(() =>
           evidence.title ||
           evidence.readerTitle ||
           `${humanizePlatform(evidence.platform)} signal`,
-        paperTitle: paper.title,
+        paperTitle: displayDiscoveryTitle(paper),
         platform: humanizePlatform(evidence.platform || 'web'),
         snippet:
           evidence.readerExcerpt ||
           evidence.snippet ||
-          paper.summary ||
-          paper.reason ||
+          displayDiscoverySummary(paper) ||
           'No summary snippet yet.',
         timestamp:
           evidence.publishDate ||
@@ -271,10 +280,9 @@ const discoveryTimeline = computed<DiscoveryTimelineItem[]>(() => {
     items.push({
       id: `paper:${paper.id}`,
       kind: 'paper',
-      title: paper.title,
+      title: displayDiscoveryTitle(paper),
       detail:
-        paper.summary ||
-        paper.reason ||
+        displayDiscoverySummary(paper) ||
         `${discoveryStatusLabel(paper)} from ${paper.platforms?.map(humanizePlatform).join(', ') || 'social discovery'}.`,
       timestamp:
         paper.updatedAt ||
@@ -1160,6 +1168,7 @@ function resolveBrainstormBackendMessage(error: unknown) {
       :unofficial-loading="unofficialLoading"
       :unofficial-error="unofficialError"
       :unofficial-papers="unofficialPapers"
+      :provisional-unofficial-papers="provisionalUnofficialPapers"
       :unofficial-accepted-count="unofficialAcceptedCount"
       :unofficial-candidate-count="unofficialCandidateCount"
       :unofficial-platform-breakdown="unofficialPlatformBreakdown"

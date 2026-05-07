@@ -49,27 +49,40 @@ const args = parseArgs(process.argv.slice(2))
 const storePath = args.store ?? 'data/unofficial/unofficial-papers.json'
 const tracePath = args.trace ?? 'data/unofficial/discovery-trace.json'
 const officialCatalogPath = args.officialCatalog ?? 'data/papers.catalog.official.json'
-const maxQueries = readPositiveInt(args.maxQueries ?? process.env.DISCOVERY_MAX_QUERIES, 16)
+const maxQueries = readNonNegativeInt(args.maxQueries ?? process.env.DISCOVERY_MAX_QUERIES, 16)
 const maxResultsPerQuery = readPositiveInt(args.maxResults ?? process.env.DISCOVERY_MAX_RESULTS, 8)
-const maxReaders = readPositiveInt(args.maxReaders ?? process.env.DISCOVERY_MAX_READERS, 24)
-const minReaderCandidates = readPositiveInt(args.minReaders ?? process.env.DISCOVERY_MIN_READERS, 8)
+const maxReaders = readNonNegativeInt(args.maxReaders ?? process.env.DISCOVERY_MAX_READERS, 24)
+const minReaderCandidates = readNonNegativeInt(args.minReaders ?? process.env.DISCOVERY_MIN_READERS, 8)
 const extractionBatchSize = readPositiveInt(args.batchSize ?? process.env.DISCOVERY_BATCH_SIZE, 4)
-const maxExtractionBatches = readPositiveInt(args.maxBatches ?? process.env.DISCOVERY_MAX_BATCHES, 4)
+const maxExtractionBatches = readNonNegativeInt(args.maxBatches ?? process.env.DISCOVERY_MAX_BATCHES, 4)
 const extractionDelayMs = readPositiveInt(args.extractionDelayMs ?? process.env.DISCOVERY_EXTRACTION_DELAY_MS, 8_000)
 const apiRetries = readPositiveInt(args.retries ?? process.env.ZHIPU_RETRIES, 1)
+const chatRetries = readPositiveInt(
+  args.chatRetries ?? process.env.ZHIPU_CHAT_RETRIES,
+  1,
+)
 const discoveryBudgetMs = readPositiveInt(args.budgetMs ?? process.env.DISCOVERY_BUDGET_MS, 20 * 60 * 1000)
-const maxFollowUpQueries = readPositiveInt(
+const allowLocalFallback = readBoolean(
+  args.allowLocalFallback ?? process.env.DISCOVERY_ALLOW_LOCAL_FALLBACK,
+  false,
+)
+const abortRefinementOnRateLimit = readBoolean(
+  args.abortOnRateLimit ?? process.env.DISCOVERY_ABORT_REFINEMENT_ON_RATE_LIMIT,
+  true,
+)
+const maxFollowUpQueries = readNonNegativeInt(
   args.maxFollowUpQueries ?? process.env.DISCOVERY_MAX_FOLLOW_UP_QUERIES,
   Math.max(4, Math.floor(maxQueries * 0.35)),
 )
 const modelPlanningEnabled = args.query.length === 0 &&
   readBoolean(args.modelPlanning ?? process.env.DISCOVERY_MODEL_PLANNING, false)
-const maxModelPlannedQueries = readPositiveInt(
+const maxModelPlannedQueries = readNonNegativeInt(
   args.maxModelQueries ?? process.env.DISCOVERY_MAX_MODEL_QUERIES,
   Math.max(6, Math.floor(maxQueries * 0.35)),
 )
 const dryRun = Boolean(args.dryRun)
 const forceReader = Boolean(args.forceReader)
+const refineOnly = readBoolean(args.refineOnly, false)
 const discoveryStartedAt = Date.now()
 
 const client = createZhipuClient({
@@ -86,7 +99,7 @@ const staticSearchPlans = args.query.length > 0
 const modelPlanning = await buildModelSearchPlans(client, {
   enabled: modelPlanningEnabled,
   maxPlans: maxModelPlannedQueries,
-  retries: apiRetries,
+  retries: chatRetries,
 })
 const rawSearchPlans = dedupeSearchPlans([
   ...modelPlanning.plans,
@@ -122,11 +135,15 @@ const trace = createTrace(client, {
   maxReaders,
   minReaderCandidates,
   extractionBatchSize,
+  chatRetries,
   maxExtractionBatches,
   extractionDelayMs,
   apiRetries,
   discoveryBudgetMs,
-  extractor: 'zhipu-only',
+  allowLocalFallback,
+  abortRefinementOnRateLimit,
+  refineOnly,
+  extractor: allowLocalFallback ? 'zhipu-chat-with-local-fallback' : 'zhipu-chat-final-only',
   modelPlanning,
 })
 const results = []
@@ -134,30 +151,40 @@ const rejectedEvidence = []
 
 logProgress(
   trace,
-  `Discovery started: ${selectedSearchPlans.length}/${rawSearchPlans.length} initial queries, max ${maxFollowUpQueries} follow-up queries, max ${maxReaders} readers, max ${maxExtractionBatches} extraction batches.`,
+  refineOnly
+    ? `Refine-only discovery started: up to ${maxExtractionBatches} refinement batches from the provisional queue.`
+    : `Discovery started: ${selectedSearchPlans.length}/${rawSearchPlans.length} initial queries, max ${maxFollowUpQueries} follow-up queries, max ${maxReaders} readers, max ${maxExtractionBatches} extraction batches.`,
 )
 
-await runSearchPlans(selectedSearchPlans, {
-  phase: 'initial',
-  client,
-  trace,
-  results,
-  rejectedEvidence,
-  maxResultsPerQuery,
-  apiRetries,
-  startedAt: discoveryStartedAt,
-  budgetMs: discoveryBudgetMs,
-})
+if (!refineOnly && selectedSearchPlans.length > 0) {
+  await runSearchPlans(selectedSearchPlans, {
+    phase: 'initial',
+    client,
+    trace,
+    results,
+    rejectedEvidence,
+    maxResultsPerQuery,
+    apiRetries,
+    startedAt: discoveryStartedAt,
+    budgetMs: discoveryBudgetMs,
+  })
+}
 
-const allFollowUpSearchPlans = buildFollowUpSearchPlans(dedupeEvidence([...results, ...rejectedEvidence]))
-followUpSearchPlans = selectFollowUpSearchPlans(
-  allFollowUpSearchPlans,
-  {
-    maxQueries: Math.max(0, maxQueries - trace.queries.length),
-    existingPlans: selectedSearchPlans,
-  },
-)
-skippedFollowUpSearchPlans = Math.max(0, allFollowUpSearchPlans.length - followUpSearchPlans.length)
+const allFollowUpSearchPlans = refineOnly
+  ? []
+  : buildFollowUpSearchPlans(dedupeEvidence([...results, ...rejectedEvidence]))
+followUpSearchPlans = refineOnly
+  ? []
+  : selectFollowUpSearchPlans(
+      allFollowUpSearchPlans,
+      {
+        maxQueries: Math.max(0, maxQueries - trace.queries.length),
+        existingPlans: selectedSearchPlans,
+      },
+    )
+skippedFollowUpSearchPlans = refineOnly
+  ? 0
+  : Math.max(0, allFollowUpSearchPlans.length - followUpSearchPlans.length)
 
 if (followUpSearchPlans.length > 0) {
   selectedSearchPlans = [...selectedSearchPlans, ...followUpSearchPlans]
@@ -182,104 +209,56 @@ if (followUpSearchPlans.length > 0) {
   logProgress(trace, 'Follow-up search skipped: no remaining budget or no evidence-derived queries.')
 }
 
-const dedupedAccepted = dedupeEvidence(results).sort(compareEvidenceRelevance)
-const backfillEvidence = dedupeEvidence(rejectedEvidence)
-  .filter((item) => item.relevance.score >= 0 && !item.relevance.strongReject)
-  .sort(compareEvidenceRelevance)
-const dedupedEvidence = fillReaderCandidates(dedupedAccepted, backfillEvidence, {
-  maxReaders,
-  minReaderCandidates,
-})
-const enrichedEvidence = []
-
-logProgress(trace, `Reader stage started: ${dedupedEvidence.length} candidate links.`)
-
-for (const [readerIndex, item] of dedupedEvidence.entries()) {
-  if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
-    trace.errors.push(`Discovery budget expired before reader ${readerIndex + 1}.`)
-    logProgress(trace, `Discovery budget expired; skipping ${dedupedEvidence.length - readerIndex} remaining readers.`)
-    break
-  }
-
-  const readerStartedAt = Date.now()
-  let readerTitle = ''
-  let readerExcerpt = ''
-  let readerError = ''
-  let githubReadmeTrace = null
-  let githubReadmeError = ''
-  const shouldRead = forceReader || isLikelyHelpfulReaderTarget(item.url)
-
-  logProgress(
-    trace,
-    `[reader ${readerIndex + 1}/${dedupedEvidence.length}] ${shouldRead ? 'read' : 'skip'} ${shortenLogText(item.title || item.url, 90)}`,
-  )
-
-  if (shouldRead) {
-    try {
-      const readerResponse = await zhipuWebReader(client, item.url, {
-        retries: apiRetries,
-      })
-      const readerPayload = normalizeReaderPayload(readerResponse)
-      readerTitle = readerPayload.title
-      readerExcerpt = readerPayload.excerpt
-    } catch (error) {
-      readerError = errorToMessage(error)
-      readerExcerpt = `reader failed: ${readerError}`
+const fallbackCandidateLimit = readNonNegativeInt(
+  args.maxFallbackCandidates ?? process.env.DISCOVERY_MAX_FALLBACK_CANDIDATES,
+  24,
+)
+const fallbackStage = refineOnly
+  ? {
+      candidates: existingStore.papers
+        .filter((paper) => paper.status !== 'officially-published')
+        .filter((paper) => paper.enrichmentStatus === 'provisional')
+        .sort(compareFallbackCandidatePriority)
+        .slice(0, fallbackCandidateLimit),
+      searchEvidenceCollected: 0,
+      readerEnrichedEvidence: 0,
     }
-  }
-
-  if (isGitHubRepositoryUrl(item.url)) {
-    try {
-      const githubReadme = await fetchGitHubReadmeEvidence(item.url)
-
-      if (githubReadme) {
-        readerTitle = pickLongerEvidenceText(readerTitle, githubReadme.title)
-        readerExcerpt = mergeReaderExcerpts(readerExcerpt, githubReadme.excerpt)
-        githubReadmeTrace = {
-          title: githubReadme.title,
-          excerptLength: githubReadme.excerpt.length,
-        }
-      }
-    } catch (error) {
-      githubReadmeError = errorToMessage(error)
-    }
-  }
-
-  const enriched = {
-    ...item,
-    readerTitle,
-    readerExcerpt,
-  }
-
-  enrichedEvidence.push(enriched)
-  const readerTrace = summarizeReaderEvidence(enriched, readerError)
-  readerTrace.durationMs = Date.now() - readerStartedAt
-  readerTrace.skipped = !shouldRead
-  if (githubReadmeTrace) {
-    readerTrace.githubReadme = githubReadmeTrace
-  }
-  if (githubReadmeError) {
-    readerTrace.githubReadmeError = githubReadmeError
-  }
-  trace.readers.push(readerTrace)
-  logProgress(
-    trace,
-    `[reader ${readerIndex + 1}/${dedupedEvidence.length}] done in ${formatDuration(readerTrace.durationMs)}${readerError ? ` error=${readerError}` : ''}`,
-  )
-}
-
-const allBatches = chunk(enrichedEvidence, extractionBatchSize)
+  : await collectFallbackCandidatesFromEvidence({
+      results,
+      rejectedEvidence,
+      maxReaders,
+      minReaderCandidates,
+      forceReader,
+      apiRetries,
+      trace,
+      discoveryStartedAt,
+      discoveryBudgetMs,
+      maxFallbackCandidates: fallbackCandidateLimit,
+    })
+const fallbackCandidates = fallbackStage.candidates
+const candidateRefinementBatchSize = readPositiveInt(
+  args.refineBatchSize ?? process.env.DISCOVERY_REFINE_BATCH_SIZE,
+  extractionBatchSize,
+)
+const allBatches = chunk(fallbackCandidates, candidateRefinementBatchSize)
 const batches = allBatches.slice(0, maxExtractionBatches)
-const skippedExtractionBatches = Math.max(0, allBatches.length - batches.length)
-const fallbackCandidates = buildEvidenceBackedCandidates(enrichedEvidence, {
-  maxCandidates: readPositiveInt(args.maxFallbackCandidates ?? process.env.DISCOVERY_MAX_FALLBACK_CANDIDATES, 24),
-})
-const extractedCandidates = [...fallbackCandidates]
+const extractedCandidates = fallbackCandidates.map((candidate) => ({
+  ...candidate,
+  metadataSource: 'local-fallback',
+  enrichmentStatus: 'provisional',
+}))
 const rejectedCandidates = []
 
-logProgress(trace, `Evidence-backed fallback staged ${fallbackCandidates.length} strong candidates before Zhipu extraction.`)
-logProgress(trace, 'Zhipu extraction enabled for cleanup/enrichment; local fallback only admits explicit venue-year paper evidence.')
-logProgress(trace, `Zhipu extraction stage started: ${batches.length}/${allBatches.length} batches.`)
+if (allowLocalFallback) {
+  logProgress(trace, `Evidence-backed fallback staged ${fallbackCandidates.length} strong candidates before Zhipu extraction.`)
+} else {
+  logProgress(trace, `Evidence-backed fallback staged ${fallbackCandidates.length} provisional candidates while Zhipu refinement catches up.`)
+}
+if (refineOnly && fallbackCandidates.length === 0) {
+  logProgress(trace, 'Refine-only discovery found no provisional entries waiting for Zhipu cleanup.')
+}
+logProgress(trace, 'Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available.')
+logProgress(trace, `Zhipu refinement stage started: ${batches.length}/${allBatches.length} candidate batches.`)
 
 for (const [batchIndex, batch] of batches.entries()) {
   if (isBudgetExpired(discoveryStartedAt, discoveryBudgetMs)) {
@@ -288,15 +267,23 @@ for (const [batchIndex, batch] of batches.entries()) {
     break
   }
 
-  logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] ${batch.length} evidence items.`)
+  logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] ${batch.length} candidate items.`)
   if (batchIndex > 0 && extractionDelayMs > 0) {
     logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] waiting ${formatDuration(extractionDelayMs)} to avoid rate limits.`)
     await sleep(extractionDelayMs)
   }
-  const extraction = await extractCandidatesFromEvidence(client, batch, batchIndex, trace)
-  extractedCandidates.push(...extraction)
-  logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] parsed=${extraction.length}`)
+  const refinement = await refineCandidatesWithZhipu(client, batch, batchIndex, trace)
+  extractedCandidates.push(...refinement.papers)
+  logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] parsed=${refinement.papers.length}`)
+
+  if (abortRefinementOnRateLimit && refinement.rateLimited) {
+    logProgress(trace, `[extract ${batchIndex + 1}/${batches.length}] stopped after rate limit; provisional queue will be retried on the next run.`)
+    break
+  }
 }
+
+const extractionBatchesRun = trace.extractionBatches.length
+const skippedExtractionBatches = Math.max(0, allBatches.length - extractionBatchesRun)
 
 const existingById = new Map(existingStore.papers.map((paper) => [paper.id, paper]))
 const existingByTitle = new Map(
@@ -383,10 +370,10 @@ trace.summary = {
   fallbackCandidates: fallbackCandidates.length,
   searchStageBreakdown: summarizeSearchStages(trace.queries),
   rawSearchEvidenceCollected: results.length + rejectedEvidence.length,
-  searchEvidenceCollected: dedupedAccepted.length,
+  searchEvidenceCollected: fallbackStage.searchEvidenceCollected,
   rejectedSearchEvidence: rejectedEvidence.length,
-  readerEnrichedEvidence: enrichedEvidence.length,
-  extractionBatchesRun: batches.length,
+  readerEnrichedEvidence: fallbackStage.readerEnrichedEvidence,
+  extractionBatchesRun,
   skippedExtractionBatches,
   extractedCandidates: extractedCandidates.length,
   rejectedCandidates: rejectedCandidates.length,
@@ -402,7 +389,7 @@ if (!dryRun) {
 }
 
 console.log(`Search evidence collected: ${results.length}`)
-console.log(`Reader-enriched evidence: ${enrichedEvidence.length}`)
+console.log(`Reader-enriched evidence: ${fallbackStage.readerEnrichedEvidence}`)
 console.log(`Extracted unofficial candidates: ${extractedCandidates.length}`)
 console.log(`Store additions: ${added}; updates: ${updated}`)
 if (!dryRun) {
@@ -479,6 +466,12 @@ function hasBrokenTitleShape(title) {
     /\btable of contents\b/i,
     /\bpersonal homepage\b/i,
     /\bcall for papers\b/i,
+    /^bibtex\s+@/i,
+    /\b(?:title|author|booktitle)\s*=\s*\{/i,
+    /\s##\s*/i,
+    /\p{Extended_Pictographic}/u,
+    /\b(?:abstract|installation|quickstart)\b/i,
+    /\b[A-Z][A-Za-z-]+ [A-Z][A-Za-z-]+,\s+[A-Z][A-Za-z-]+ [A-Z][A-Za-z-]+/i,
     /github\.io|github\.com|https?:\/\//i,
   ].some((pattern) => pattern.test(title)) ||
     /\b(research interests?|selected research)$/.test(normalized)
@@ -708,15 +701,16 @@ function stripVenuePrefix(value, venue) {
     .trim()
 }
 
-async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, trace) {
+async function refineCandidatesWithZhipu(client, candidateBatch, batchIndex, trace) {
   const extractionStartedAt = Date.now()
   const systemPrompt =
-    'You are a strict evidence-based paper-discovery extractor. Return JSON only. Do not invent missing facts.'
-  const compactEvidenceBatch = evidenceBatch.map(compactEvidenceForExtraction)
-  const prompt = buildExtractionPrompt(compactEvidenceBatch)
+    'You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.'
+  const compactCandidateBatch = candidateBatch.map(compactCandidateForRefinement)
+  const prompt = buildCandidateRefinementPrompt(compactCandidateBatch)
   let text = ''
   let papers = []
   let errorMessage = ''
+  let rateLimited = false
 
   try {
     const response = await zhipuChat(client, {
@@ -730,7 +724,7 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
           content: prompt,
         },
       ],
-    }, apiRetries, {
+    }, chatRetries, {
       timeoutMs: Number(process.env.ZHIPU_CHAT_TIMEOUT_MS) || undefined,
     })
 
@@ -739,80 +733,91 @@ async function extractCandidatesFromEvidence(client, evidenceBatch, batchIndex, 
     papers = Array.isArray(parsed?.papers) ? parsed.papers : []
   } catch (error) {
     errorMessage = errorToMessage(error)
+    rateLimited = isRateLimitError(error)
     trace.errors.push(`Extraction failed for batch ${batchIndex + 1}: ${errorMessage}`)
   }
 
   trace.extractionBatches.push({
     index: batchIndex,
-    evidenceCount: compactEvidenceBatch.length,
+    evidenceCount: compactCandidateBatch.length,
     prompt,
     systemPrompt,
     model: client.model,
     responseText: text.slice(0, 12000),
     parsedCount: papers.length,
-    extractor: 'zhipu-chat',
+    extractor: 'zhipu-chat-refinement',
     durationMs: Date.now() - extractionStartedAt,
     error: errorMessage || undefined,
   })
 
-  return papers
-    .filter((paper) => paper?.title && paper?.primaryUrl)
-    .map((paper) => ({
-      id: buildUnofficialId(paper.title),
-      title: paper.title,
-      titleZh: paper.titleZh,
-      summary: paper.summary,
-      reason: paper.reason,
-      status: paper.status === 'accepted' ? 'accepted' : 'candidate',
-      confidence: Number(paper.confidence ?? 0),
-      acceptedVenue: paper.acceptedVenue || undefined,
-      acceptedYear:
-        Number.isFinite(Number(paper.acceptedYear)) && Number(paper.acceptedYear) > 0
-          ? Number(paper.acceptedYear)
-          : 2026,
-      primaryUrl: paper.primaryUrl,
-      canonicalUrl: paper.canonicalUrl || undefined,
-      pdfUrl: paper.pdfUrl || undefined,
-      authors: normalizeStringArray(paper.authors),
-      keywords: normalizeStringArray(paper.keywords),
-      platforms: normalizeStringArray(paper.platforms),
-      evidence: Array.isArray(paper.evidence)
-        ? paper.evidence.map((item) => ({
-            platform: item.platform || 'web',
-            url: item.url,
-            title: item.title || '',
-            author: item.author || '',
-            snippet: item.snippet || '',
-            readerTitle: item.readerTitle || '',
-            readerExcerpt: item.readerExcerpt || '',
-            publishDate: item.publishDate || '',
-          }))
-        : [],
-      discoveredAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    }))
+  return {
+    rateLimited,
+    papers: papers
+      .filter((paper) => paper?.title && paper?.primaryUrl)
+      .map((paper) => ({
+        id: paper.id || buildUnofficialId(paper.title),
+        title: paper.title,
+        titleZh: paper.titleZh,
+        summary: paper.summary,
+        reason: paper.reason,
+        metadataSource: 'zhipu-chat',
+        enrichmentStatus: 'cleaned',
+        status: paper.status === 'accepted' ? 'accepted' : 'candidate',
+        confidence: Number(paper.confidence ?? 0),
+        acceptedVenue: paper.acceptedVenue || undefined,
+        acceptedYear:
+          Number.isFinite(Number(paper.acceptedYear)) && Number(paper.acceptedYear) > 0
+            ? Number(paper.acceptedYear)
+            : 2026,
+        primaryUrl: paper.primaryUrl,
+        canonicalUrl: paper.canonicalUrl || undefined,
+        pdfUrl: paper.pdfUrl || undefined,
+        authors: normalizeStringArray(paper.authors),
+        keywords: normalizeStringArray(paper.keywords),
+        platforms: normalizeStringArray(paper.platforms),
+        evidence: Array.isArray(paper.evidence)
+          ? paper.evidence.map((item) => ({
+              platform: item.platform || 'web',
+              url: item.url,
+              title: item.title || '',
+              author: item.author || '',
+              snippet: item.snippet || '',
+              readerTitle: item.readerTitle || '',
+              readerExcerpt: item.readerExcerpt || '',
+              publishDate: item.publishDate || '',
+            }))
+          : candidateBatch.find((candidate) => candidate.id === paper.id)?.evidence ?? [],
+        discoveredAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      })),
+  }
 }
 
-function compactEvidenceForExtraction(item) {
-  const readerExcerpt = compactEvidenceText(item.readerExcerpt, 900)
-  const snippet = compactEvidenceText(item.snippet, 450)
+function compactCandidateForRefinement(item) {
+  const evidence = Array.isArray(item.evidence) ? item.evidence.slice(0, 2) : []
 
   return {
-    platform: item.platform || 'web',
-    stage: item.stage || '',
-    url: item.url || '',
-    title: compactEvidenceText(item.title, 260),
-    author: compactEvidenceText(item.author, 120),
-    snippet,
-    publishDate: item.publishDate || '',
-    query: compactEvidenceText(item.query, 220),
-    queryLabel: item.queryLabel || '',
-    queryIntent: compactEvidenceText(item.queryIntent, 220),
-    parentUrl: item.parentUrl || '',
-    relevanceScore: item.relevance?.score ?? 0,
-    relevanceSignals: item.relevance?.signals?.slice(0, 14) ?? [],
-    readerTitle: compactEvidenceText(item.readerTitle, 260),
-    readerExcerpt,
+    id: item.id,
+    title: compactEvidenceText(item.title, 220),
+    titleZh: compactEvidenceText(item.titleZh, 160),
+    summary: compactRefinementNarrative(item.summary, 220),
+    reason: compactRefinementNarrative(item.reason, 220),
+    status: item.status || 'candidate',
+    confidence: Number(item.confidence ?? 0),
+    acceptedVenue: item.acceptedVenue || '',
+    acceptedYear: item.acceptedYear || '',
+    primaryUrl: item.primaryUrl || '',
+    keywords: Array.isArray(item.keywords) ? item.keywords.slice(0, 8) : [],
+    platforms: Array.isArray(item.platforms) ? item.platforms.slice(0, 4) : [],
+    evidence: evidence.map((entry) => ({
+      platform: entry.platform || 'web',
+      url: entry.url || '',
+      title: compactEvidenceText(entry.title, 220),
+      snippet: compactEvidenceText(entry.snippet, 320),
+      readerTitle: compactEvidenceText(entry.readerTitle, 220),
+      readerExcerpt: compactEvidenceText(entry.readerExcerpt, 420),
+      publishDate: entry.publishDate || '',
+    })),
   }
 }
 
@@ -830,28 +835,35 @@ function compactEvidenceText(value, maxLength) {
   return `${text.slice(0, maxLength - 3).trim()}...`
 }
 
-function buildExtractionPrompt(evidenceBatch) {
+function compactRefinementNarrative(value, maxLength) {
+  const text = compactEvidenceText(value, maxLength)
+
+  return /waiting for Zhipu enrichment|Discovery evidence found/i.test(text) ? '' : text
+}
+
+function buildCandidateRefinementPrompt(candidateBatch) {
   return `
 You are helping maintain a 2026 top-venue AI paper tracker.
 
 Task:
-- Inspect the search and reader evidence below and decide whether each item is a real research paper, preprint, accepted-paper announcement, or paper project page.
-- You are the primary extractor. The local pipeline will not infer missing titles or venues from heuristics.
+- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.
+- Each item is already a strong provisional candidate found by the pipeline.
 - Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.
-- Prefer announcements using phrases like "Introducing", "new work", "our paper", "accepted to", or venue names.
-- Exclude workshop-only, findings/demo/tutorial/challenge/course/recruiting/product-only posts when the evidence is clear.
-- Extract the clean paper title only. Never include GitHub UI text such as "Go to file", "Repository files navigation", branch names, README navigation, website titles, URLs, or social-media boilerplate in title.
-- If the clean paper title is not explicitly supported by the evidence, return no paper for that item instead of guessing.
+- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.
+- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.
+- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.
 - If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.
 - Use status "accepted" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status "candidate".
-- Put a short exact evidence quote or close paraphrase in "reason", including the source that supports the title/status.
-- Use primaryUrl as the best paper/project/social announcement URL from the evidence. It must be an http(s) URL.
-- Return an empty papers array if the batch has no confidently identifiable papers.
+- Write "summary" as one short Chinese sentence about the paper itself, not about the discovery process.
+- Write "reason" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.
+- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.
+- Preserve the best primaryUrl and evidence URLs.
 
 Return JSON only:
 {
   "papers": [
     {
+      "id": "input candidate id",
       "title": "paper title",
       "titleZh": "optional Chinese title",
       "summary": "one concise Chinese summary",
@@ -882,8 +894,8 @@ Return JSON only:
   ]
 }
 
-Evidence:
-${JSON.stringify(evidenceBatch, null, 2)}
+Candidates:
+${JSON.stringify(candidateBatch, null, 2)}
 `.trim()
 }
 
@@ -2185,6 +2197,102 @@ async function readCatalog(path) {
   }
 }
 
+async function collectFallbackCandidatesFromEvidence(options) {
+  const dedupedAccepted = dedupeEvidence(options.results).sort(compareEvidenceRelevance)
+  const backfillEvidence = dedupeEvidence(options.rejectedEvidence)
+    .filter((item) => item.relevance.score >= 0 && !item.relevance.strongReject)
+    .sort(compareEvidenceRelevance)
+  const dedupedEvidence = fillReaderCandidates(dedupedAccepted, backfillEvidence, {
+    maxReaders: options.maxReaders,
+    minReaderCandidates: options.minReaderCandidates,
+  })
+  const enrichedEvidence = []
+
+  logProgress(options.trace, `Reader stage started: ${dedupedEvidence.length} candidate links.`)
+
+  for (const [readerIndex, item] of dedupedEvidence.entries()) {
+    if (isBudgetExpired(options.discoveryStartedAt, options.discoveryBudgetMs)) {
+      options.trace.errors.push(`Discovery budget expired before reader ${readerIndex + 1}.`)
+      logProgress(options.trace, `Discovery budget expired; skipping ${dedupedEvidence.length - readerIndex} remaining readers.`)
+      break
+    }
+
+    const readerStartedAt = Date.now()
+    let readerTitle = ''
+    let readerExcerpt = ''
+    let readerError = ''
+    let githubReadmeTrace = null
+    let githubReadmeError = ''
+    const shouldRead = options.forceReader || isLikelyHelpfulReaderTarget(item.url)
+
+    logProgress(
+      options.trace,
+      `[reader ${readerIndex + 1}/${dedupedEvidence.length}] ${shouldRead ? 'read' : 'skip'} ${shortenLogText(item.title || item.url, 90)}`,
+    )
+
+    if (shouldRead) {
+      try {
+        const readerResponse = await zhipuWebReader(client, item.url, {
+          retries: options.apiRetries,
+        })
+        const readerPayload = normalizeReaderPayload(readerResponse)
+        readerTitle = readerPayload.title
+        readerExcerpt = readerPayload.excerpt
+      } catch (error) {
+        readerError = errorToMessage(error)
+        readerExcerpt = `reader failed: ${readerError}`
+      }
+    }
+
+    if (isGitHubRepositoryUrl(item.url)) {
+      try {
+        const githubReadme = await fetchGitHubReadmeEvidence(item.url)
+
+        if (githubReadme) {
+          readerTitle = pickLongerEvidenceText(readerTitle, githubReadme.title)
+          readerExcerpt = mergeReaderExcerpts(readerExcerpt, githubReadme.excerpt)
+          githubReadmeTrace = {
+            title: githubReadme.title,
+            excerptLength: githubReadme.excerpt.length,
+          }
+        }
+      } catch (error) {
+        githubReadmeError = errorToMessage(error)
+      }
+    }
+
+    const enriched = {
+      ...item,
+      readerTitle,
+      readerExcerpt,
+    }
+
+    enrichedEvidence.push(enriched)
+    const readerTrace = summarizeReaderEvidence(enriched, readerError)
+    readerTrace.durationMs = Date.now() - readerStartedAt
+    readerTrace.skipped = !shouldRead
+    if (githubReadmeTrace) {
+      readerTrace.githubReadme = githubReadmeTrace
+    }
+    if (githubReadmeError) {
+      readerTrace.githubReadmeError = githubReadmeError
+    }
+    options.trace.readers.push(readerTrace)
+    logProgress(
+      options.trace,
+      `[reader ${readerIndex + 1}/${dedupedEvidence.length}] done in ${formatDuration(readerTrace.durationMs)}${readerError ? ` error=${readerError}` : ''}`,
+    )
+  }
+
+  return {
+    candidates: buildEvidenceBackedCandidates(enrichedEvidence, {
+      maxCandidates: options.maxFallbackCandidates,
+    }),
+    searchEvidenceCollected: dedupedAccepted.length,
+    readerEnrichedEvidence: enrichedEvidence.length,
+  }
+}
+
 async function writeJson(path, payload) {
   await mkdir(dirname(path), { recursive: true })
   const tmpPath = `${path}.tmp`
@@ -2254,6 +2362,11 @@ function readPositiveInt(value, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : fallback
 }
 
+function readNonNegativeInt(value, fallback) {
+  const parsed = Number(value)
+  return Number.isFinite(parsed) && parsed >= 0 ? Math.floor(parsed) : fallback
+}
+
 function readBoolean(value, fallback) {
   if (value === undefined || value === null || value === '') {
     return fallback
@@ -2297,8 +2410,27 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+function compareFallbackCandidatePriority(left, right) {
+  const leftStatus = left.status === 'accepted' ? 1 : 0
+  const rightStatus = right.status === 'accepted' ? 1 : 0
+  const leftTime = left.updatedAt || left.discoveredAt || ''
+  const rightTime = right.updatedAt || right.discoveredAt || ''
+
+  return (
+    rightStatus - leftStatus ||
+    safeNumber(right.confidence) - safeNumber(left.confidence) ||
+    rightTime.localeCompare(leftTime) ||
+    String(left.title || '').localeCompare(String(right.title || ''))
+  )
+}
+
 function errorToMessage(error) {
   return error instanceof Error ? error.message : String(error)
+}
+
+function isRateLimitError(error) {
+  const message = errorToMessage(error)
+  return Number(error?.status) === 429 || /\b429\b|rate limit|速率限制/i.test(message)
 }
 
 function parseArgs(argv) {
@@ -2335,6 +2467,8 @@ function parseArgs(argv) {
       parsed.extractionDelayMs = argv[++index]
     } else if (arg === '--retries') {
       parsed.retries = argv[++index]
+    } else if (arg === '--chat-retries') {
+      parsed.chatRetries = argv[++index]
     } else if (arg === '--budget-ms') {
       parsed.budgetMs = argv[++index]
     } else if (arg === '--recency') {
@@ -2347,6 +2481,14 @@ function parseArgs(argv) {
       parsed.maxModelQueries = argv[++index]
     } else if (arg === '--max-fallback-candidates') {
       parsed.maxFallbackCandidates = argv[++index]
+    } else if (arg === '--refine-batch-size') {
+      parsed.refineBatchSize = argv[++index]
+    } else if (arg === '--allow-local-fallback') {
+      parsed.allowLocalFallback = argv[++index]
+    } else if (arg === '--abort-on-rate-limit') {
+      parsed.abortOnRateLimit = argv[++index]
+    } else if (arg === '--refine-only') {
+      parsed.refineOnly = true
     } else if (arg === '--model-planning') {
       parsed.modelPlanning = argv[++index]
     } else if (arg === '--no-model-planning') {
@@ -2384,12 +2526,17 @@ Options:
   --batch-size <n>             Evidence items per extraction batch. Default: 4.
   --extraction-delay-ms <n>    Delay between extraction batches. Default: 8000.
   --retries <n>                Zhipu retry count per request. Default: 1.
+  --chat-retries <n>           Zhipu chat retry count per refinement request. Default: 1.
   --budget-ms <n>              Whole discovery soft budget. Default: 1200000.
   --recency <filter>           Zhipu recency filter for custom queries. Default: oneMonth.
   --model <name>               Zhipu chat model.
   --max-follow-up-queries <n>   Evidence-derived follow-up query cap. Default: 35% of max queries.
   --max-model-queries <n>       Zhipu planned query cap. Default: 35% of max queries.
   --max-fallback-candidates <n> Strong evidence fallback candidate cap. Default: 24.
+  --refine-batch-size <n>       Zhipu refinement candidates per batch. Default: 2.
+  --allow-local-fallback <bool>  Allow local evidence fallback into the store. Default: false.
+  --abort-on-rate-limit <bool>  Stop remaining refinement batches after a 429. Default: true.
+  --refine-only                 Skip search/reader and only refine current provisional entries.
   --model-planning <bool>       Let Zhipu plan search queries before static probes. Default: false.
   --no-model-planning           Disable Zhipu search-query planning.
   --force-reader               Always run the webpage reader for candidate links.

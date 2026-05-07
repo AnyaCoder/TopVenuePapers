@@ -2,7 +2,7 @@
   "key": "2026-aaai",
   "venue": "AAAI",
   "year": 2026,
-  "count": 2376,
+  "count": 2375,
   "papers": [
     {
       "id": "aaai-38975",
@@ -4871,10 +4871,6 @@
     {
       "id": "aaai-38388",
       "abstract": "Rectification flow Transformers (RFTs) have shown promising performance in diffusion-based image synthesis but are typically confined to lower-resolution scenarios, limiting their ability to generate high-resolution images. \nExisting resolution extrapolation approaches often suffer from excessive computational overhead, resulting in prolonged inference times. \nWe propose LookFlow, a training-free high-resolution synthesis framework that accelerates inference while preserving visual quality.\nBuilding on pretrained text-to-image RFTs, LookFlow employs a dynamic lookahead guidance flow  mechanism to refine high-resolution velocity predictions by leveraging multi-timestep lookahead information extracted from a low-resolution flow. \nAdditionally, reusing temporally similar features across consecutive timesteps drastically reduces computation and significantly decreases inference time overhead.\nExtensive experiments on COCO demonstrate that LookFlow robustly scales resolutions from 4× to 25×, achieving up to a maximum speedup of 2.01× while maintaining competitive visual fidelity."
-    },
-    {
-      "id": "unofficial-f312a023943c",
-      "abstract": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##。"
     },
     {
       "id": "aaai-39082",

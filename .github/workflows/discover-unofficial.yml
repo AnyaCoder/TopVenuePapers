@@ -57,22 +57,40 @@ jobs:
           ZHIPU_SEARCH_TIMEOUT_MS: 20000
           ZHIPU_READER_TIMEOUT_MS: 20000
           ZHIPU_CHAT_TIMEOUT_MS: 90000
-          ZHIPU_RETRIES: 3
-          ZHIPU_RATE_LIMIT_DELAY_MS: 45000
+          ZHIPU_RETRIES: 2
+          ZHIPU_CHAT_RETRIES: 1
+          ZHIPU_RATE_LIMIT_DELAY_MS: 120000
           DISCOVERY_BUDGET_MS: 1500000
-          DISCOVERY_MAX_QUERIES: 30
+          DISCOVERY_MAX_QUERIES: 18
           DISCOVERY_PLAN_STRATEGY: balanced
-          DISCOVERY_MAX_RESULTS: 8
+          DISCOVERY_MAX_RESULTS: 6
           DISCOVERY_MODEL_PLANNING: false
           DISCOVERY_MAX_MODEL_QUERIES: 0
-          DISCOVERY_MAX_FOLLOW_UP_QUERIES: 8
-          DISCOVERY_MAX_READERS: 20
-          DISCOVERY_MIN_READERS: 12
-          DISCOVERY_MAX_FALLBACK_CANDIDATES: 24
+          DISCOVERY_MAX_FOLLOW_UP_QUERIES: 4
+          DISCOVERY_MAX_READERS: 14
+          DISCOVERY_MIN_READERS: 8
+          DISCOVERY_MAX_FALLBACK_CANDIDATES: 12
           DISCOVERY_BATCH_SIZE: 1
-          DISCOVERY_MAX_BATCHES: 10
-          DISCOVERY_EXTRACTION_DELAY_MS: 90000
+          DISCOVERY_MAX_BATCHES: 4
+          DISCOVERY_REFINE_BATCH_SIZE: 1
+          DISCOVERY_ABORT_REFINEMENT_ON_RATE_LIMIT: true
+          DISCOVERY_EXTRACTION_DELAY_MS: 120000
         run: npm run pipeline:refresh:discover
+
+      - name: Retry Zhipu cleanup on provisional queue
+        if: always()
+        timeout-minutes: 10
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          ZHIPU_MODEL: glm-4.5-flash
+          ZHIPU_CHAT_TIMEOUT_MS: 90000
+          ZHIPU_CHAT_RETRIES: 1
+          ZHIPU_RATE_LIMIT_DELAY_MS: 120000
+          DISCOVERY_MAX_FALLBACK_CANDIDATES: 12
+          DISCOVERY_MAX_BATCHES: 4
+          DISCOVERY_REFINE_BATCH_SIZE: 1
+          DISCOVERY_ABORT_REFINEMENT_ON_RATE_LIMIT: true
+        run: npm run papers:unofficial:refine
 
       - name: Upload discovery trace for debugging
         if: always()

@@ -132,6 +132,8 @@ export interface UnofficialPaperEntry {
   abstract?: string
   reason?: string
   hookZh?: string
+  enrichmentStatus?: 'cleaned' | 'provisional'
+  metadataSource?: 'zhipu-chat' | 'local-fallback' | 'legacy-repaired' | 'unknown'
   primaryUrl: string
   canonicalUrl?: string
   pdfUrl?: string

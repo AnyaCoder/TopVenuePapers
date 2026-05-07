@@ -5,6 +5,7 @@ import type {
   GitHubWorkflowRun,
 } from '../types/app'
 import type { UnofficialPaperStorePayload } from '../types/paper'
+import { normalizeUnofficialStorePayload } from '../utils/unofficialDiscovery'
 
 export function useDiscoveryFeed(dataBaseUrl: string) {
   const unofficialStore = ref<UnofficialPaperStorePayload | null>(null)
@@ -31,7 +32,8 @@ export function useDiscoveryFeed(dataBaseUrl: string) {
         throw await createFeedError(response, 'Could not load unofficial discovery feed.')
       }
 
-      unofficialStore.value = (await response.json()) as UnofficialPaperStorePayload
+      const payload = (await response.json()) as UnofficialPaperStorePayload
+      unofficialStore.value = normalizeUnofficialStorePayload(payload)
     } catch (error) {
       unofficialError.value = normalizeFeedError(
         error,

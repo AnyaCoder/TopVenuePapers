@@ -11,12 +11,15 @@ import type {
   UnofficialPaperStorePayload,
 } from '../types/paper'
 import {
+  displayDiscoverySummary,
+  displayDiscoveryTitle,
   discoveryTone,
   discoveryStatusLabel,
   formatDateTime,
   formatRelativeTime,
   humanizePlatform,
   humanizeWorkflowStatus,
+  shouldDisplayUnofficialEntry,
   topEvidence,
   workflowTone,
 } from '../utils/display'
@@ -33,6 +36,7 @@ defineProps<{
   unofficialLoading: boolean
   unofficialError: FeedLoadError | null
   unofficialPapers: UnofficialPaperEntry[]
+  provisionalUnofficialPapers: UnofficialPaperEntry[]
   unofficialAcceptedCount: number
   unofficialCandidateCount: number
   unofficialPlatformBreakdown: Array<{ platform: string; count: number }>
@@ -464,12 +468,15 @@ function statusSnapshotLabel(
           <span>{{ unofficialPapers.length }} items</span>
         </div>
 
-        <div v-if="!unofficialLoading && unofficialPapers.length === 0" class="empty-state">
+        <div
+          v-if="!unofficialLoading && unofficialPapers.filter(shouldDisplayUnofficialEntry).length === 0"
+          class="empty-state"
+        >
           No unofficial papers are waiting in the queue right now.
         </div>
         <div v-else class="discovery-list">
           <article
-            v-for="entry in unofficialPapers"
+            v-for="entry in unofficialPapers.filter(shouldDisplayUnofficialEntry)"
             :key="entry.id"
             class="discovery-card"
           >
@@ -486,14 +493,14 @@ function statusSnapshotLabel(
                     {{ entry.confidence ? `${Math.round(entry.confidence * 100)}% confidence` : 'No confidence score' }}
                   </span>
                 </div>
-                <h3>{{ entry.title }}</h3>
+                <h3>{{ displayDiscoveryTitle(entry) }}</h3>
                 <p v-if="entry.titleZh" class="muted-copy">{{ entry.titleZh }}</p>
               </div>
               <a :href="entry.primaryUrl" target="_blank" rel="noreferrer">Open source</a>
             </div>
 
             <p class="discovery-card__summary">
-              {{ entry.summary || entry.reason || 'No summary yet.' }}
+              {{ displayDiscoverySummary(entry) }}
             </p>
 
             <div class="tag-row">
@@ -508,11 +515,35 @@ function statusSnapshotLabel(
             <div class="discovery-card__foot">
               <span>Discovered {{ formatDateTime(entry.discoveredAt) }}</span>
               <span v-if="topEvidence(entry)">
-                Evidence: {{ topEvidence(entry)?.title || topEvidence(entry)?.readerTitle || humanizePlatform(topEvidence(entry)?.platform || 'web') }}
+                Evidence: {{ displayDiscoveryTitle(entry) || topEvidence(entry)?.readerTitle || humanizePlatform(topEvidence(entry)?.platform || 'web') }}
               </span>
             </div>
           </article>
         </div>
+
+        <details
+          v-if="provisionalUnofficialPapers.length"
+          class="trace-collapse"
+        >
+          <summary>
+            <span>Awaiting Zhipu cleanup</span>
+            <small>{{ provisionalUnofficialPapers.length }} provisional items</small>
+          </summary>
+          <div class="trace-list">
+            <article
+              v-for="entry in provisionalUnofficialPapers"
+              :key="`provisional:${entry.id}`"
+              class="trace-card"
+            >
+              <div class="trace-card__head">
+                <strong>{{ displayDiscoveryTitle(entry) }}</strong>
+                <span>{{ entry.acceptedVenue || 'Unclassified' }}</span>
+              </div>
+              <p>{{ displayDiscoverySummary(entry) }}</p>
+              <a :href="entry.primaryUrl" target="_blank" rel="noreferrer">Open source</a>
+            </article>
+          </div>
+        </details>
       </article>
 
       <article class="page-card page-card--wide">

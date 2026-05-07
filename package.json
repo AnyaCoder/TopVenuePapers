@@ -15,6 +15,7 @@
     "papers:generate:local": "node scripts/generate-local-guides.mjs --input data/openreview/iclr-2026-candidates.json --count 100 --out data/papers.generated.json",
     "papers:validate": "node scripts/validate-papers.mjs --input public/data/papers.catalog.json --require-records --strict",
     "papers:unofficial:discover": "node scripts/discover-unofficial-papers.mjs",
+    "papers:unofficial:refine": "node scripts/discover-unofficial-papers.mjs --refine-only --max-fallback-candidates 12 --max-batches 4 --refine-batch-size 1 --abort-on-rate-limit true",
     "papers:unofficial:reconcile": "node scripts/reconcile-unofficial-papers.mjs",
     "catalog:shards": "node scripts/build-catalog-shards.mjs",
     "data:sync-public": "node scripts/sync-public-data.mjs",

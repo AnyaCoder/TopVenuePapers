@@ -25,7 +25,10 @@
 
 - `scripts/ingest-openreview.mjs` pulls official ICLR 2026 main-conference papers from OpenReview.
 - `scripts/ingest-ccfa-2026.mjs` pulls official CVPR 2026 and AAAI main-conference papers, writes an official-only mirror, and merges in unofficial queue entries that are still waiting for official venue pages.
-- `scripts/discover-unofficial-papers.mjs` uses Zhipu web search and reader tools to discover likely 2026 papers from X, Xiaohongshu, and personal homepages.
+- `scripts/discover-unofficial-papers.mjs` now runs a two-stage unofficial pipeline:
+  - search/reader stage: Zhipu web search plus reader collect high-recall evidence from X, Xiaohongshu, GitHub, GitHub Pages, arXiv, OpenReview, and personal/lab homepages
+  - refine stage: Zhipu chat cleans the provisional candidates into structured unofficial paper entries with normalized title, Chinese summary, and acceptance signal
+- `scripts/discover-unofficial-papers.mjs --refine-only` skips the expensive search phase and only retries Zhipu cleanup for entries that are still marked `provisional`.
 - `scripts/reconcile-unofficial-papers.mjs` promotes unofficial entries when acceptance signals become strong, and retires them once an exact-title official entry appears.
 - `scripts/build-catalog-shards.mjs` turns the full catalog into:
   - `public/data/catalog/index.json`: lightweight search/list index
@@ -44,12 +47,19 @@
 - Search ranking is hybrid: Transformers.js MiniLM vectors provide semantic recall, while `usePaperSearch` adds Fuse fuzzy matching plus corpus-derived acronym expansion for short queries such as `3DGS`, `VLA`, and `MLLM`.
 - The main Finder and Brain Storm both fuse semantic and lexical candidates with reciprocal-rank fusion, so idea search and paper search use the same recall behavior.
 - Semantic rebuilds reuse unchanged per-paper vectors and skip rewriting chunk binaries whose fingerprints have not changed.
+- Unofficial discoveries now have two visible states:
+  - `cleaned`: Zhipu chat has produced a cleaned title/summary/reason, so the entry can appear in the main New Finding list and in the merged `Unclassified` venue
+  - `provisional`: only strong evidence has been staged so far, so the entry stays folded under "Awaiting Zhipu cleanup" until a later refine pass succeeds
 - Unofficial discoveries appear as `Unclassified / Unclassified-2026` until official sources catch up. The daily reconciliation pass removes promoted entries from the unofficial queue.
 
 ## Backend And Automation
 
 - GitHub Pages serves the static app and static data assets only.
-- `.github/workflows/discover-unofficial.yml` runs the discovery, reconciliation, catalog shard build, and semantic rebuild pipeline on a daily schedule with GitHub Actions concurrency protection.
+- `.github/workflows/discover-unofficial.yml` runs on a daily schedule and on push, with GitHub Actions concurrency protection so only one unofficial-discovery job can mutate the published data at a time.
+- The workflow is intentionally split into two Zhipu passes:
+  - `npm run pipeline:refresh:discover`: full discover -> reconcile -> catalog/semantic rebuild
+  - `npm run papers:unofficial:refine`: a second lighter pass that only retries cleanup on the provisional queue, so leftover rate-limited candidates can still become `cleaned` without redoing the whole search
+- `data/unofficial/unofficial-papers.json` is the persistent unofficial store, and `data/unofficial/discovery-trace.json` records query plans, reader evidence, prompts, visible model output, warnings, and cleanup progress for debugging.
 - `scripts/lib/brainstorm-zhipu.mjs` wraps the Zhipu call for Brain Storm refinement.
 - `scripts/serve-pages-dist.mjs` and `scripts/semantic/serve-app.mjs` expose local/server preview routes:
   - `/api/brainstorm/status`
@@ -62,6 +72,7 @@
 - `npm run preview:pages` serves the built Pages output locally, including the lightweight backend routes used for preview.
 - The browser semantic model caches through Transformers.js/browser cache after the first successful model download.
 - Catalog shards, abstract shards, and semantic chunks are static assets, so many concurrent users can read them safely without shared mutable server state.
+- Discovery-side concurrency is handled by GitHub Actions `concurrency`, while the frontend remains fully static and race-free for concurrent readers.
 
 ## Refactor Direction
 

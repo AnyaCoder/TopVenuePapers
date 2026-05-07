@@ -1,5 +1,9 @@
 import type { AppPage, GitHubWorkflowRun } from '../types/app'
 import type { UnofficialPaperEntry } from '../types/paper'
+import {
+  cleanDiscoveryTitle,
+  inferUnofficialEnrichmentStatus,
+} from './unofficialDiscovery'
 
 export function formatDateTime(value?: string) {
   if (!value) {
@@ -130,6 +134,47 @@ export function discoveryStatusLabel(entry: UnofficialPaperEntry) {
 
 export function topEvidence(entry: UnofficialPaperEntry) {
   return entry.evidence?.[0] ?? null
+}
+
+export function displayDiscoveryTitle(entry: UnofficialPaperEntry) {
+  const evidence = topEvidence(entry)
+  const candidates = [entry.title, evidence?.title, evidence?.readerTitle]
+
+  for (const candidate of candidates) {
+    const cleaned = cleanDiscoveryTitle(candidate)
+    if (cleaned) {
+      return cleaned
+    }
+  }
+
+  return entry.title
+}
+
+export function displayDiscoverySummary(entry: UnofficialPaperEntry) {
+  const summary = String(entry.summary || entry.reason || '').trim()
+  const evidence = topEvidence(entry)
+
+  if (!summary) {
+    return evidence?.snippet || evidence?.readerExcerpt || 'No summary yet.'
+  }
+
+  return summary.replace(/(?:;\s*)?waiting for Zhipu enrichment\.?$/i, '').trim()
+}
+
+export function shouldDisplayUnofficialEntry(entry: UnofficialPaperEntry) {
+  if (entry.status === 'officially-published') {
+    return false
+  }
+
+  if (inferUnofficialEnrichmentStatus(entry) === 'provisional') {
+    return false
+  }
+
+  return Boolean(cleanDiscoveryTitle(entry.title) || cleanDiscoveryTitle(topEvidence(entry)?.title))
+}
+
+export function isProvisionalUnofficialEntry(entry: UnofficialPaperEntry) {
+  return entry.status !== 'officially-published' && inferUnofficialEnrichmentStatus(entry) === 'provisional'
 }
 
 export function timestampValue(value?: string) {
