@@ -2424,6 +2424,10 @@ function compareFallbackCandidatePriority(left, right) {
   )
 }
 
+function safeNumber(value) {
+  return Number.isFinite(Number(value)) ? Number(value) : 0
+}
+
 function errorToMessage(error) {
   return error instanceof Error ? error.message : String(error)
 }
