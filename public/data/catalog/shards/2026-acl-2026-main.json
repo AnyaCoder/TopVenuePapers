@@ -2,55 +2,11 @@
   "key": "2026-acl-2026-main",
   "venue": "ACL 2026 Main",
   "year": 2026,
-  "count": 5,
+  "count": 1,
   "papers": [
     {
-      "id": "unofficial-952df8996b0b",
-      "title": "! [2026/04] The code of SCRL was released! [2026/03] Code is under preparation. Stay tuned! [2026/03] SCRL paper was released on arXiv ! 📖 Overview We propose SCRL (Selective-Complementary Reinforcement Learning), a rob",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "ACL 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "rl-post-training",
-      "categories": [
-        "rl-post-training",
-        "evaluation-benchmarks",
-        "reasoning",
-        "coding-formal-tasks"
-      ],
-      "keywords": [
-        "reasoning",
-        "benchmark",
-        "reinforcement learning",
-        "ACL 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/Jasper-Yan/SCRL",
-      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "aliases": [
-        "unofficial-952df8996b0b"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-952df8996b0b",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-05T05:27:22.700Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ]
-    },
-    {
-      "id": "unofficial-9998a11e4f1b",
-      "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+      "id": "unofficial-ffb5140d7bb4",
+      "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
       "venue": "ACL 2026 Main",
       "year": 2026,
@@ -58,12 +14,14 @@
       "primaryCategory": "evaluation-benchmarks",
       "categories": [
         "evaluation-benchmarks",
-        "rag-knowledge",
-        "efficiency-systems",
-        "video-understanding"
+        "reasoning",
+        "rl-post-training",
+        "rag-knowledge"
       ],
       "keywords": [
-        "video understanding",
+        "multimodal",
+        "reasoning",
+        "rag",
         "benchmark",
         "ACL 2026 Main",
         "web",
@@ -72,168 +30,23 @@
       "authors": [
         "Unknown authors"
       ],
-      "openreviewUrl": "https://github.com/haowei-freesky/HERMES",
-      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "openreviewUrl": "https://github.com/wzb-bupt/VGPO",
+      "tldr": "VGPO提出了一种视觉引导的策略优化方法，用于解决多模态推理中的信号稀释和时间视觉遗忘问题。",
+      "abstract": "VGPO提出了一种视觉引导的策略优化方法，用于解决多模态推理中的信号稀释和时间视觉遗忘问题。",
       "aliases": [
-        "unofficial-9998a11e4f1b"
+        "unofficial-ffb5140d7bb4"
       ],
       "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-9998a11e4f1b",
+      "sourceId": "unofficial-ffb5140d7bb4",
       "guideStatus": "pending",
       "sourceType": "unofficial",
       "acceptanceStatus": "accepted",
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-06T04:46:23.288Z",
+      "discoveredAt": "2026-05-07T05:31:40.156Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
-      ]
-    },
-    {
-      "id": "unofficial-e5c913c8f28c",
-      "title": "STReasoner: Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "ACL 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "mllm-foundations",
-      "categories": [
-        "mllm-foundations",
-        "evaluation-benchmarks",
-        "reasoning",
-        "rl-post-training"
-      ],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "agent",
-        "reasoning",
-        "benchmark",
-        "reinforcement learning",
-        "ACL 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/LingFengGold/STReasoner",
-      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "aliases": [
-        "unofficial-e5c913c8f28c"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-e5c913c8f28c",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-05T05:27:22.701Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ]
-    },
-    {
-      "id": "unofficial-52b2bee83c68",
-      "title": "Tool-augmented VLM agent for rare celestial object vetting via automated spectral inspection.",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "ACL 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "rl-post-training",
-      "categories": [
-        "rl-post-training",
-        "reasoning",
-        "agents-tool-use",
-        "rag-knowledge"
-      ],
-      "keywords": [
-        "vlm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "rag",
-        "post-training",
-        "reinforcement learning",
-        "ACL 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/Maxwell-Jia/spec-o3",
-      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "aliases": [
-        "unofficial-52b2bee83c68"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-52b2bee83c68",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-05T05:27:22.704Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ]
-    },
-    {
-      "id": "unofficial-2971c51313fb",
-      "title": "Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "ACL 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "reasoning",
-      "categories": [
-        "reasoning",
-        "rl-post-training",
-        "agents-tool-use",
-        "rag-knowledge"
-      ],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "reasoning",
-        "rag",
-        "post-training",
-        "llm",
-        "ACL 2026 Main",
-        "web",
-        "github",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/UmeanNever/RankSurprisalRatio",
-      "tldr": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "aliases": [
-        "unofficial-2971c51313fb"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-2971c51313fb",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-06T04:46:23.283Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web",
-        "github"
       ]
     }
   ]

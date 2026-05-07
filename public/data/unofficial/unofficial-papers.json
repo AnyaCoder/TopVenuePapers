@@ -1,11 +1,321 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-05T04:30:42.121Z",
+  "generatedAt": "2026-05-07T05:42:59.637Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-ffb5140d7bb4",
+      "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
+      "summary": "VGPO提出了一种视觉引导的策略优化方法，用于解决多模态推理中的信号稀释和时间视觉遗忘问题。",
+      "reason": "GitHub仓库明确宣布论文已被ACL 2026会议接受，标题和接受证据清晰可靠。",
+      "primaryUrl": "https://github.com/wzb-bupt/VGPO",
+      "canonicalUrl": "https://github.com/wzb-bupt/VGPO",
+      "pdfUrl": "",
+      "sourceId": "unofficial-ffb5140d7bb4",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8333333333333334,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.156Z",
+      "updatedAt": "2026-05-07T05:42:59.208Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wzb-bupt/VGPO",
+          "title": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning · GitHub",
+          "snippet": "wzb-bupt/VGPO Open more menu Folders and files Latest 5 5 assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to signal dilution —...",
+          "readerTitle": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
+          "readerExcerpt": "## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ causes attention to visual inputs to progressively decay as reasoning chains extend. VGPO addresses these through three key mechanisms: - __Visual Attention Compensation (VAC):__ Uses the inherent hidden-state similarity between generated tokens and image tokens as a _Visual Focus Score_ to localize visual activations without external supervision. A progressive incentive schedule counteracts temporal visual forgetting in later reasoning steps. - __Intra-Trajectory Re-weighting...",
+          "publishDate": "2026-04-25",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-066c88362317",
+      "title": "From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/CQU-MM-Intelligent-Lab/MHL",
+      "canonicalUrl": "https://github.com/CQU-MM-Intelligent-Lab/MHL",
+      "pdfUrl": "",
+      "sourceId": "unofficial-066c88362317",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.163Z",
+      "updatedAt": "2026-05-07T05:31:40.163Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/CQU-MM-Intelligent-Lab/MHL",
+          "title": "GitHub - CQU-MM-Intelligent-Lab/MHL: [ACL 2026] From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation",
+          "snippet": "CQU-MM-Intelligent-Lab/MHL Open more menu Folders and files Latest Ruepr123 Update method figure Apr 11, 2026 01c3dae · Apr 11, 2026 5 Open details 5 asset asset Update method figure Apr 11, 2026 genrec genrec Initial Apr 8, 2026 README.md README.md Update README with conference info and method figure Apr 11, 2026 .py .py Initial Apr 8, 2026 requirements.txt requirements.txt Initial Apr 8, 2026 View all files ACL 2026 Conference This is the official repository for MHL , accepted to ACL 2026 C...",
+          "readerTitle": "GitHub - CQU-MM-Intelligent-Lab/MHL: [ACL 2026] From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation · GitHub",
+          "readerExcerpt": "## From Past To Path: Masked Learning for Next-Item Prediction in Generative Recommendation __ACL 2026 Conference__ This is the official repository for __MHL__, accepted to __ACL 2026 Conference__. MHL is a novel training framework for generative recommendation that shifts the objective from simple next-step prediction to deep comprehension of . It augments the standard autoregressive objective with an auxiliary task of reconstructing masked historical items, compelling the model to understand \"why\" an item path is formed from the user's past behaviors. The framework features an __entropy-guided masking__ policy that intelligently targets the most informative historical items, and a __curriculum learning__ scheduler that progressively transitions from reconstruction to future prediction. !Image 1: MHL Method --- ### Quick Setup Create and activate a new conda environment named `MHL_en...",
+          "publishDate": "2026-04-11",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-b09792bf2db3",
+      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation",
+      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b09792bf2db3",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T06:45:20.683Z",
+      "updatedAt": "2026-05-07T05:31:40.160Z",
+      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "rag",
+        "reasoning",
+        "3d"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
+          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
+          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
+          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
+          "publishDate": "2026-04-17",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-77119624e64a",
+      "title": "Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/THUDM/CaRR",
+      "canonicalUrl": "https://github.com/THUDM/CaRR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-77119624e64a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8888888888888888,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.155Z",
+      "updatedAt": "2026-05-07T05:31:40.155Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reasoning",
+        "rag",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/THUDM/CaRR",
+          "title": "GitHub - THUDM/CaRR: This repository contains the code and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for",
+          "snippet": "9 View all files 🔥 News Our paper has been accepted by ACL 2026 ! Our RL training and evaluation have been fully open-sourced. [2026/03/12] Our SFT models and C-GRPO models have been fully open-sourced on Hugging Face . [2026/01/11] Our SFT trajectories and RL QA pairs with rubrics have been fully open-sourced on Hugging Face . [2026/01/11] Released the CaRR framework, implemented as a remote reward model server — now fully available in ./deepsearch_rm_with_rubrics . Model and traini...",
+          "readerTitle": "GitHub - THUDM/CaRR: This repository contains the code and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\".",
+          "readerExcerpt": "!Image 1: GitHub !Image 2: arXiv !Image 3: Dataset & Model !Image 4: Multi-Turn RL Training ## π₯ News - __[2026/04/08]__ Our paper has been accepted by __ACL 2026__! - __[2026/03/14]__ Our __RL training and evaluation __ have been fully open-sourced. - __[2026/03/12]__ Our __SFT models__ and __C-GRPO models__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Our __SFT trajectories__ and __RL QA pairs with rubrics__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Released the __CaRR__ framework, implemented as a remote reward model server β now fully available in `./deepsearch_rm_with_rubrics`. - Model and training are currently being organized β coming soon! ## π Overview Existing Reinforcement Learning (RL) approaches for deep search agents primarily rely on __binary outcome rewards__ (i.e., whether the final answer is correct). However, pure...",
+          "publishDate": "2026-04-08",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5ffdae82dc19",
+      "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
+      "summary": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit AAAI 2026 Main paper signal for EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/PlanckChang/EMAformer",
+      "canonicalUrl": "https://github.com/PlanckChang/EMAformer",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5ffdae82dc19",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.9444444444444444,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.154Z",
+      "updatedAt": "2026-05-07T05:31:40.154Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/PlanckChang/EMAformer",
+          "title": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding",
+          "snippet": "Latest 9 9 data_provider data_provider experiments experiments figures figures layers layers model model scripts scripts utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.py run.py View all files Equip your Transformer with embedding armor and beat the MLPs in time series forecasting. This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting , accepted by AAAI...",
+          "readerTitle": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
+          "readerExcerpt": "## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependencies might lead to a decline in predictive performance and want to use Transformers for time series analysis, this repository is well-suited to you. ## Updates - 🌟 (2025.11) EMAformer was accepted by AAAI 2026. ## Introduction EMAformer enhances the Transformer architecture by simply introducing additional embeddings. It achieves state-of-the-art performance on 12 real-world benchmarks, reducing forecasting errors by an average of 2.73% in MSE and 5.15% in MAE. !Image 5: Left...",
+          "publishDate": "2026-05-06",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a6478e3cb733",
+      "title": "Papers-with-Code:",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Papers-with-Code:; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a6478e3cb733",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.151Z",
+      "updatedAt": "2026-05-07T05:31:40.151Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "3d gaussian splatting"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
+          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
+          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
+          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
+          "publishDate": "2026-05-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f312a023943c",
+      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
+      "summary": "Discovery evidence found an explicit AAAI paper signal for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation; waiting for Zhipu enrichment.",
+      "reason": "Discovery evidence found an explicit AAAI paper signal for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+      "canonicalUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f312a023943c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.88,
+      "acceptedVenue": "AAAI",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T05:47:16.331Z",
+      "updatedAt": "2026-05-05T04:30:42.121Z",
+      "lastCheckedAt": "2026-05-05T04:30:42.121Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "legacy-repaired",
+      "authors": [],
+      "keywords": [
+        "llm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/neuron-insight-lab/LoopLLM",
+          "title": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive",
+          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 14 Commits 14 Commits assets assets utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md ensemble.py ensemble.py main.py main.py requirements.txt requirements.txt transfer.py transfer.py View all files Repository files navigation 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, maki",
+          "readerTitle": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-lat",
+          "readerExcerpt": "This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## π Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90% of the maximum output length, compared to 20% for baselines, and improving transferability by around 40% to DeepSeek-V3 and Gemini 2.5 Flash. ![Image 1: overview](https://github.com/neuron-insight-lab/LoopLLM/raw/main/assets/overview.png) ## π οΈ Installation ### π§ Environment Preparation ``` conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### π§ Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the `utils/__init__.py` file ## π‘ Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ``` python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## π The Examples of Real-World LLMs Screenshots of repetitive g\n\n## 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90\\% of the maximum output length, compared to 20\\% for baselines, and improving transferability by around 40\\% to DeepSeek-V3 and Gemini 2.5 Flash. !overview ## 🛠️ Installation ### 🔧 Environment Preparation ```bash conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### 🔧 Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the ```utils/__init__.py``` file ## 💡 Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ```bash python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## 🌐 The Examples of Real-World LLMs Screenshots of repetitive generation triggered by our LoopLLM on real-world LLMs. \\ Top left: Deepseek-V3. Top right: Gemini 2.5 Flash. Bottom left: Mistrial. Bottom right: Meta LLaMA2-7B !overview ## 📜 Citation If you're using LoopLLM in your research or applications, please cite using this BibTeX: ```bash @article{li2025loopllm, title={LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation}, author={Li, Xingyu and Liu, Xiaolei and Liu, Cheng and Xu, Yixiao and Ding, Kangyi and Xin, Bangzhou and Yin, Jia-Li}, url={https://ojs.aaai.org/index.php/AAAI/article/view/40445}, DOI={10.1609/aaai.v40i3",
+          "publishDate": "2026-05-02",
+          "query": "site:github.io \"paper\" \"LLM\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
     {
       "id": "unofficial-93d8a75fd664",
       "title": "TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
@@ -55,30 +365,30 @@
       }
     },
     {
-      "id": "unofficial-b09792bf2db3",
-      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation; waiting for Zhipu enrichment.",
-      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "id": "unofficial-547928e04505",
+      "title": "ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力",
+      "titleZh": "OPeRA数据集：评估LLM的人类行为模拟能力",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力; waiting for Zhipu enrichment.",
+      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_49969e1a52387852",
+      "canonicalUrl": "",
       "pdfUrl": "",
-      "sourceId": "unofficial-b09792bf2db3",
+      "sourceId": "unofficial-547928e04505",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.76,
+      "confidence": 1,
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-05-05T04:30:18.046Z",
-      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-01T07:36:45.400Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "legacy-repaired",
       "authors": [],
       "keywords": [
-        "multimodal",
-        "rag",
-        "reasoning",
-        "3d"
+        "llm",
+        "behavior simulation",
+        "dataset"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -88,55 +398,11 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
-          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
-          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
-          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
-          "publishDate": "2026-04-30",
-          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-f312a023943c",
-      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation",
-      "summary": "Discovery evidence found an explicit AAAI paper signal for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation; waiting for Zhipu enrichment.",
-      "reason": "Discovery evidence found an explicit AAAI paper signal for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
-      "canonicalUrl": "https://github.com/neuron-insight-lab/LoopLLM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-f312a023943c",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.88,
-      "acceptedVenue": "AAAI",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T05:47:16.331Z",
-      "updatedAt": "2026-05-05T04:30:42.121Z",
-      "lastCheckedAt": "2026-05-05T04:30:42.121Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
-      "authors": [],
-      "keywords": [
-        "llm"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/neuron-insight-lab/LoopLLM",
-          "title": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 14 Commits 14 Commits assets assets utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md ensemble.py ensemble.py main.py main.py requirements.txt requirements.txt transfer.py transfer.py View all files Repository files navigation 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, maki",
-          "readerTitle": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-lat",
-          "readerExcerpt": "This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## π Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90% of the maximum output length, compared to 20% for baselines, and improving transferability by around 40% to DeepSeek-V3 and Gemini 2.5 Flash. ![Image 1: overview](https://github.com/neuron-insight-lab/LoopLLM/raw/main/assets/overview.png) ## π οΈ Installation ### π§ Environment Preparation ``` conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### π§ Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the `utils/__init__.py` file ## π‘ Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ``` python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## π The Examples of Real-World LLMs Screenshots of repetitive g\n\n## 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90\\% of the maximum output length, compared to 20\\% for baselines, and improving transferability by around 40\\% to DeepSeek-V3 and Gemini 2.5 Flash. !overview ## 🛠️ Installation ### 🔧 Environment Preparation ```bash conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### 🔧 Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the ```utils/__init__.py``` file ## 💡 Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ```bash python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## 🌐 The Examples of Real-World LLMs Screenshots of repetitive generation triggered by our LoopLLM on real-world LLMs. \\ Top left: Deepseek-V3. Top right: Gemini 2.5 Flash. Bottom left: Mistrial. Bottom right: Meta LLaMA2-7B !overview ## 📜 Citation If you're using LoopLLM in your research or applications, please cite using this BibTeX: ```bash @article{li2025loopllm, title={LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation}, author={Li, Xingyu and Liu, Xiaolei and Liu, Cheng and Xu, Yixiao and Ding, Kangyi and Xin, Bangzhou and Yin, Jia-Li}, url={https://ojs.aaai.org/index.php/AAAI/article/view/40445}, DOI={10.1609/aaai.v40i3",
-          "publishDate": "2026-05-02",
-          "query": "site:github.io \"paper\" \"LLM\" \"2026\""
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_49969e1a52387852",
+          "title": "ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力",
+          "snippet": "为此,来自美国东北大学等机构的研究者提出了 OPeRA(Observation, Persona, Rationale, Action)数据集｡该数据集采集真实用户的 step-wise 在线购物行为,并首次支持对 LLM 在个体化行为预测任务中的能力进行系统评测｡",
+          "publishDate": "2026-04-17",
+          "query": ""
         }
       ],
       "evidenceCount": 1
@@ -181,49 +447,6 @@
           "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
           "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
           "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-547928e04505",
-      "title": "ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力",
-      "titleZh": "OPeRA数据集：评估LLM的人类行为模拟能力",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力; waiting for Zhipu enrichment.",
-      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_49969e1a52387852",
-      "canonicalUrl": "",
-      "pdfUrl": "",
-      "sourceId": "unofficial-547928e04505",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-01T07:36:45.400Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "behavior simulation",
-        "dataset"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_49969e1a52387852",
-          "title": "ACL 2026 OPeRA Dataset: LLM真的能模仿人类行为了吗?首次系统评估LLM的人类行为模拟能力",
-          "snippet": "为此,来自美国东北大学等机构的研究者提出了 OPeRA(Observation, Persona, Rationale, Action)数据集｡该数据集采集真实用户的 step-wise 在线购物行为,并首次支持对 LLM 在个体化行为预测任务中的能力进行系统评测｡",
-          "publishDate": "2026-04-17",
           "query": ""
         }
       ],
