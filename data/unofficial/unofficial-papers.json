@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-07T05:42:59.637Z",
+  "generatedAt": "2026-05-07T06:42:04.776Z",
   "notes": [
-    "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
-    "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
+    "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
+    "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
     {
       "id": "unofficial-ffb5140d7bb4",
       "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
-      "summary": "VGPO提出了一种视觉引导的策略优化方法，用于解决多模态推理中的信号稀释和时间视觉遗忘问题。",
-      "reason": "GitHub仓库明确宣布论文已被ACL 2026会议接受，标题和接受证据清晰可靠。",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确显示论文已被ACL 2026会议接受",
       "primaryUrl": "https://github.com/wzb-bupt/VGPO",
       "canonicalUrl": "https://github.com/wzb-bupt/VGPO",
       "pdfUrl": "",
@@ -21,10 +21,10 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.156Z",
-      "updatedAt": "2026-05-07T05:42:59.208Z",
+      "updatedAt": "2026-05-07T06:41:57.843Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -66,7 +66,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.163Z",
-      "updatedAt": "2026-05-07T05:31:40.163Z",
+      "updatedAt": "2026-05-07T06:30:00.308Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -106,7 +106,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-05-07T05:31:40.160Z",
+      "updatedAt": "2026-05-07T06:30:00.306Z",
       "lastCheckedAt": "2026-05-05T04:30:18.046Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -151,7 +151,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.155Z",
-      "updatedAt": "2026-05-07T05:31:40.155Z",
+      "updatedAt": "2026-05-07T06:30:00.301Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -197,7 +197,7 @@
       "acceptedVenue": "AAAI 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.154Z",
-      "updatedAt": "2026-05-07T05:31:40.154Z",
+      "updatedAt": "2026-05-07T06:30:00.300Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -240,7 +240,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.151Z",
-      "updatedAt": "2026-05-07T05:31:40.151Z",
+      "updatedAt": "2026-05-07T06:30:00.297Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -292,7 +292,7 @@
       "updatedAt": "2026-05-05T04:30:42.121Z",
       "lastCheckedAt": "2026-05-05T04:30:42.121Z",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "llm"
@@ -383,7 +383,7 @@
       "updatedAt": "2026-05-01T07:36:45.400Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "llm",
@@ -426,7 +426,7 @@
       "updatedAt": "2026-05-01T07:36:45.400Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -471,7 +471,7 @@
       "updatedAt": "2026-05-01T07:36:45.400Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "llm",
@@ -514,7 +514,7 @@
       "updatedAt": "2026-05-01T07:31:45.466Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [
         "Google Research Team"
       ],
@@ -562,7 +562,7 @@
       "updatedAt": "2026-05-01T07:10:15.532Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
@@ -606,7 +606,7 @@
       "updatedAt": "2026-05-01T07:10:15.531Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "llm",
@@ -651,7 +651,7 @@
       "updatedAt": "2026-05-01T07:07:38.657Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "legacy-repaired",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "agent",
