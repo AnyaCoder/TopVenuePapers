@@ -1,11 +1,447 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-06T05:08:42.404Z",
+  "generatedAt": "2026-05-07T04:44:23.661Z",
   "notes": [
-    "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
-    "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
+    "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
+    "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
+    {
+      "id": "unofficial-b09792bf2db3",
+      "title": "MegaRAG: Multimodal Graph-based RAG",
+      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/AI-Application-and-Integration-Lab/MegaRAG.",
+      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b09792bf2db3",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T06:45:20.683Z",
+      "updatedAt": "2026-05-07T04:46:30.801Z",
+      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "rag",
+        "reasoning",
+        "3d"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
+          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
+          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
+          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
+          "publishDate": "2026-04-17",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-9d2202b0d37e",
+      "title": "PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models Yuanhao Su, Shaofeng Zhang, Xiaosong Jia, Qi Fan CVPR 2026 ✨ A step towards better 3D vision-language understanding by preserving geometr",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit CVPR 2026 Main signal in https://github.com/yharoldsu0627/PointAlign.",
+      "primaryUrl": "https://github.com/yharoldsu0627/PointAlign",
+      "canonicalUrl": "https://github.com/yharoldsu0627/PointAlign",
+      "pdfUrl": "",
+      "sourceId": "unofficial-9d2202b0d37e",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8333333333333334,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-05T05:27:22.702Z",
+      "updatedAt": "2026-05-07T04:46:30.798Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/yharoldsu0627/PointAlign",
+          "title": "GitHub - yharoldsu0627/PointAlign: CVPR 2026 paper · GitHub",
+          "snippet": "Open more menu Folders and files Latest 25 25 assets assets data data eval_configs eval_configs minigpt4 minigpt4 params_weight params_weight README.md README.md env_install.sh env_install.sh environment.yml environment.yml finetune.yaml finetune.yaml modeling_phi.py modeling_phi.py train.py train.py wordnet.zip wordnet.zip View all files PointAlign (CVPR 2026) PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models Yuanhao Su, Shaofeng Zhang, Xiaosong Jia, Qi Fan CVP...",
+          "readerTitle": "GitHub - yharoldsu0627/PointAlign: CVPR 2026 paper",
+          "readerExcerpt": "### Paper | > PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models > Yuanhao Su, Shaofeng Zhang, Xiaosong Jia, Qi Fan > CVPR 2026 ✨ __A step towards better 3D vision-language understanding by preserving geometric information throughout the language modeling process.__ ### ✅ Project Status 🎉 __Accepted to CVPR 2026!__ - Release introduction & results - Release training & inference - Upload pretrained weights If you find PointAlign useful, please consider giving us a star ⭐. ### Introduction 🔍 __Geometric Information Degradation:__ Existing 3D VLMs rely solely on next-token prediction loss, causing valuable geometric cues to be discarded during training. PointAlign addresses this by explicitly supervising intermediate point cloud tokens within the LLM to preserve fine-grained 3D geometric-semantic information throughout the language modeling process. ### Ov...",
+          "publishDate": "2026-04-30",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-ffb5140d7bb4",
+      "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit ACL 2026 Main signal in https://github.com/wzb-bupt/VGPO.",
+      "primaryUrl": "https://github.com/wzb-bupt/VGPO",
+      "canonicalUrl": "https://github.com/wzb-bupt/VGPO",
+      "pdfUrl": "",
+      "sourceId": "unofficial-ffb5140d7bb4",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-05T05:27:22.694Z",
+      "updatedAt": "2026-05-07T04:46:30.797Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wzb-bupt/VGPO",
+          "title": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning · GitHub",
+          "snippet": "wzb-bupt/VGPO Open more menu Folders and files Latest 5 5 assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to signal dilution —...",
+          "readerTitle": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
+          "readerExcerpt": "## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ causes attention to visual inputs to progressively decay as reasoning chains extend. VGPO addresses these through three key mechanisms: - __Visual Attention Compensation (VAC):__ Uses the inherent hidden-state similarity between generated tokens and image tokens as a _Visual Focus Score_ to localize visual activations without external supervision. A progressive incentive schedule counteracts temporal visual forgetting in later reasoning steps. - __Intra-Trajectory Re-weighting...",
+          "publishDate": "2026-04-25",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-77119624e64a",
+      "title": "Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit ACL 2026 Main signal in https://github.com/THUDM/CaRR.",
+      "primaryUrl": "https://github.com/THUDM/CaRR",
+      "canonicalUrl": "https://github.com/THUDM/CaRR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-77119624e64a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-06T04:46:23.284Z",
+      "updatedAt": "2026-05-07T04:46:30.796Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reasoning",
+        "rag",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/THUDM/CaRR",
+          "title": "GitHub - THUDM/CaRR: This repository contains the and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\"",
+          "snippet": "9 View all files 🔥 News Our paper has been accepted by ACL 2026 ! Our RL training and evaluation have been fully open-sourced. [2026/03/12] Our SFT models and C-GRPO models have been fully open-sourced on Hugging Face . [2026/01/11] Our SFT trajectories and RL QA pairs with rubrics have been fully open-sourced on Hugging Face . [2026/01/11] Released the CaRR framework, implemented as a remote reward model server — now fully available in ./deepsearch_rm_with_rubrics . Model and traini...",
+          "readerTitle": "GitHub - THUDM/CaRR: This repository contains the code and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\". Β· GitHub",
+          "readerExcerpt": "!Image 1: GitHub !Image 2: arXiv !Image 3: Dataset & Model !Image 4: Multi-Turn RL Training ## π₯ News - __[2026/04/08]__ Our paper has been accepted by __ACL 2026__! - __[2026/03/14]__ Our __RL training and evaluation __ have been fully open-sourced. - __[2026/03/12]__ Our __SFT models__ and __C-GRPO models__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Our __SFT trajectories__ and __RL QA pairs with rubrics__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Released the __CaRR__ framework, implemented as a remote reward model server β now fully available in `./deepsearch_rm_with_rubrics`. - Model and training are currently being organized β coming soon! ## π Overview Existing Reinforcement Learning (RL) approaches for deep search agents primarily rely on __binary outcome rewards__ (i.e., whether the final answer is correct). However, pure...",
+          "publishDate": "2026-04-08",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5ffdae82dc19",
+      "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting",
+      "summary": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit AAAI 2026 Main signal in https://github.com/PlanckChang/EMAformer.",
+      "primaryUrl": "https://github.com/PlanckChang/EMAformer",
+      "canonicalUrl": "https://github.com/PlanckChang/EMAformer",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5ffdae82dc19",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.9444444444444444,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T04:46:30.794Z",
+      "updatedAt": "2026-05-07T04:46:30.794Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/PlanckChang/EMAformer",
+          "title": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding",
+          "snippet": "Latest 9 9 data_provider data_provider experiments experiments figures figures layers layers model model scripts scripts utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.py run.py View all files Equip your Transformer with embedding armor and beat the MLPs in time series forecasting. This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting , accepted by AAAI...",
+          "readerTitle": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
+          "readerExcerpt": "## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependencies might lead to a decline in predictive performance and want to use Transformers for time series analysis, this repository is well-suited to you. ## Updates - 🌟 (2025.11) EMAformer was accepted by AAAI 2026. ## Introduction EMAformer enhances the Transformer architecture by simply introducing additional embeddings. It achieves state-of-the-art performance on 12 real-world benchmarks, reducing forecasting errors by an average of 2.73% in MSE and 5.15% in MAE. !Image 5: Left...",
+          "publishDate": "2026-05-06",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-e7c6d208d087",
+      "title": "HighlightđźŽ‰] Official implementation of WorldForge",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit CVPR 2026 Main signal in https://github.com/Westlake-AGI-Lab/WorldForge.",
+      "primaryUrl": "https://github.com/Westlake-AGI-Lab/WorldForge",
+      "canonicalUrl": "https://github.com/Westlake-AGI-Lab/WorldForge",
+      "pdfUrl": "",
+      "sourceId": "unofficial-e7c6d208d087",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T04:46:30.794Z",
+      "updatedAt": "2026-05-07T04:46:30.794Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "rag",
+        "world model"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Westlake-AGI-Lab/WorldForge",
+          "title": "GitHub - Westlake-AGI-Lab/WorldForge: [CVPR 2026 Highlight] Official implementation of WorldForge · GitHub",
+          "snippet": "Latest WorldForge-AGI Update State Apr 10, 2026 ee573a0 · Apr 10, 2026 13 Open details 13 DepthCrafter DepthCrafter Open-source release Feb 19, 2026 longcat_for_worldforge longcat_for_worldforge Open-source release Feb 19, 2026 teaser teaser Update README: Mar 15, 2026 test_case test_case Open-source release Feb 19, 2026 vggt vggt Open-source release Feb 19, 2026 wan_for_worldforge wan_for_worldforge Open-source release Feb 19, 2026 .gitignore .gitignore Open-source release Feb 19, 2026 LICEN...",
+          "readerTitle": "GitHub - Westlake-AGI-Lab/WorldForge: [CVPR 2026 HighlightđźŽ‰] Official implementation of WorldForge",
+          "readerExcerpt": "## WorldForge (CVPR 2026 $\\color{#ea3277}{\\textbf{\\textsf{Highlight}}}$) !Image 1: arXivÂ !Image 2: project pageÂ !Image 3: Hugging FaceÂ ## Update - [2026.04] đźŹ† Selected as __CVPR 2026 Highlight!__ - [2026.02] đźŽ‰ Accepted by __CVPR 2026!__ - [2026.02] đź”Ą __ released!__ VGGT 3D warping, DepthCrafter 4D warping, Wan2.1 & LongCat-Video inference are now available. - [2025.09] arXiv preprint is available. - [2025.09] Project page is online. __Introduction__ __WorldForge__ is a __training-free__ framework that unlocks the world-modeling potential of video diffusion models for controllable __3D/4D generation__. By leveraging latent world priors in pretrained video diffusion models, WorldForge achieves precise trajectory control and photorealistic content generation â€” all __without any additional training__. !Image 4: image The core idea is a _warping-and-repainting_ pipeline with...",
+          "publishDate": "2026-04-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-27d8f3186a52",
+      "title": "directory. To evaluate any model supported by VLMEvalkit: 1. Modify the",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit CVPR 2026 signal in https://github.com/isbrycee/OralGPT.",
+      "primaryUrl": "https://github.com/isbrycee/OralGPT",
+      "canonicalUrl": "https://github.com/isbrycee/OralGPT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-27d8f3186a52",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T04:46:30.791Z",
+      "updatedAt": "2026-05-07T04:46:30.791Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/isbrycee/OralGPT",
+          "title": "GitHub - isjinghao/OralGPT: [NeurIPS'25  CVPR'26] The official repo of OralGPT & MMOral Bench. · GitHub",
+          "snippet": "Latest isjinghao check training pipeline Apr 12, 2026 080ad32 · Apr 12, 2026 311 Open details 311 LLaMA-Factory LLaMA-Factory check training pipeline Apr 12, 2026 MMOral-Bench-EvalKit MMOral-Bench-EvalKit Update README.md Oct 31, 2025 MMOral-OPG MMOral-OPG update Aug 24, 2025 MMOral-Omni-Bench-Eval MMOral-Omni-Bench-Eval [Benchmark] update OralQA-ZH eval Mar 23, 2026 MMOral-Omni MMOral-Omni delete Apr 12, 2026 OralGPT-Plus/ tools OralGPT-Plus/ tools rename Mar 7, 2026 assets assets Add files...",
+          "readerTitle": "GitHub - isbrycee/OralGPT: Developing an oral multimodal large language model",
+          "readerExcerpt": "## OralGPT ## Evaluation of MMOral-Bench Our benchmark consists of both Open-Ended and Closed-Ended evaluation formats, with corresponding TSV files available at https://huggingface.co/datasets/EasonFan/MMOral-Bench. For benchmark evaluation, we provide two approaches: 1. Using __VLMEvalkit__ (supporting multiple pre-configured VLMs) 2. For VLMs not available in VLMEvalkit or new VLMs, we provide generic evaluation scripts: `eval_MMOral_VQA_Closed.py` and `eval_MMOral_VQA_Open.py` ### Using VLMEvalkit We offer a zip file which includes the version we use to evaluate the VLMs on the MMOral-Bench. We have included an `mmoral.py` file in the `vlmeval/dataset` directory. To evaluate any model supported by VLMEvalkit: 1. Modify the `mmoral_config.json` file with your desired settings 2. Run `bash run_eval.sh` to start the evaluation ### Using Generic Evaluation Scripts For models not suppo...",
+          "publishDate": "2026-04-12",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a6478e3cb733",
+      "title": "Papers-with-Code: CVPR 2026 论文和开源项目合集",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Evidence-backed fallback found explicit CVPR 2026 Main signal in https://github.com/amusi/CVPR2026-Papers-with-Code.",
+      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a6478e3cb733",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-06T04:46:23.281Z",
+      "updatedAt": "2026-05-07T04:46:30.789Z",
+      "lastCheckedAt": "",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "3d gaussian splatting"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
+          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
+          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
+          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
+          "publishDate": "2026-05-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f312a023943c",
+      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##",
+      "summary": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##。",
+      "reason": "论文当前显示被AAAI接收，而非ACL 2026，且无其他证据支持",
+      "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+      "canonicalUrl": "https://github.com/neuron-insight-lab/LoopLLM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f312a023943c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.88,
+      "acceptedVenue": "AAAI",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T05:47:16.331Z",
+      "updatedAt": "2026-05-06T05:08:42.403Z",
+      "lastCheckedAt": "2026-05-06T05:08:42.403Z",
+      "authors": [],
+      "keywords": [
+        "llm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/neuron-insight-lab/LoopLLM",
+          "title": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive",
+          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 14 Commits 14 Commits assets assets utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md ensemble.py ensemble.py main.py main.py requirements.txt requirements.txt transfer.py transfer.py View all files Repository files navigation 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, maki",
+          "readerTitle": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-lat",
+          "readerExcerpt": "This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## π Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90% of the maximum output length, compared to 20% for baselines, and improving transferability by around 40% to DeepSeek-V3 and Gemini 2.5 Flash. ![Image 1: overview](https://github.com/neuron-insight-lab/LoopLLM/raw/main/assets/overview.png) ## π οΈ Installation ### π§ Environment Preparation ``` conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### π§ Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the `utils/__init__.py` file ## π‘ Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ``` python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## π The Examples of Real-World LLMs Screenshots of repetitive g\n\n## 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90\\% of the maximum output length, compared to 20\\% for baselines, and improving transferability by around 40\\% to DeepSeek-V3 and Gemini 2.5 Flash. !overview ## 🛠️ Installation ### 🔧 Environment Preparation ```bash conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### 🔧 Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the ```utils/__init__.py``` file ## 💡 Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ```bash python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## 🌐 The Examples of Real-World LLMs Screenshots of repetitive generation triggered by our LoopLLM on real-world LLMs. \\ Top left: Deepseek-V3. Top right: Gemini 2.5 Flash. Bottom left: Mistrial. Bottom right: Meta LLaMA2-7B !overview ## 📜 Citation If you're using LoopLLM in your research or applications, please cite using this BibTeX: ```bash @article{li2025loopllm, title={LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation}, author={Li, Xingyu and Liu, Xiaolei and Liu, Cheng and Xu, Yixiao and Ding, Kangyi and Xin, Bangzhou and Yin, Jia-Li}, url={https://ojs.aaai.org/index.php/AAAI/article/view/40445}, DOI={10.1609/aaai.v40i3",
+          "publishDate": "2026-05-02",
+          "query": "site:github.io \"paper\" \"LLM\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-93d8a75fd664",
+      "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
+      "summary": "从项目页或代码仓库识别到 ICLR 2026 接收信号，标题为 TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis。",
+      "reason": "Local high-confidence extraction found ICLR 2026 acceptance signal in the source title or excerpt.",
+      "primaryUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+      "canonicalUrl": "https://github.com/ZJU4HealthCare/TumorChain",
+      "pdfUrl": "",
+      "sourceId": "unofficial-93d8a75fd664",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.88,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T05:47:16.333Z",
+      "updatedAt": "2026-05-06T05:08:24.249Z",
+      "lastCheckedAt": "2026-05-06T05:08:24.249Z",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZJU4HealthCare/TumorChain",
+          "title": "GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
+          "snippet": "ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image",
+          "readerExcerpt": "reader failed: request timed out after 20000ms",
+          "publishDate": "2026-04-28",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=bmQXN1Kg5i",
+        "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
     {
       "id": "unofficial-de2dd7785efe",
       "title": ". 📢 The code is now publicly available in this repository. Introduction VIGIL is a security framework for LLM agents. It is designed to defend against both tool stream injection attacks and data stream injection attacks",
@@ -44,51 +480,6 @@
           "readerTitle": "GitHub - MINE-USTC/vigil · GitHub",
           "readerExcerpt": "GitHub - MINE-USTC/vigil · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturi...",
           "publishDate": "2026-04-18",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-77119624e64a",
-      "title": "Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Evidence-backed fallback found explicit ACL 2026 Main signal in https://github.com/THUDM/CaRR.",
-      "primaryUrl": "https://github.com/THUDM/CaRR",
-      "canonicalUrl": "https://github.com/THUDM/CaRR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-77119624e64a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-06T04:46:23.284Z",
-      "updatedAt": "2026-05-06T04:51:19.066Z",
-      "lastCheckedAt": "",
-      "authors": [],
-      "keywords": [
-        "agent",
-        "reasoning",
-        "rag",
-        "benchmark",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/THUDM/CaRR",
-          "title": "GitHub - THUDM/CaRR: This repository contains the and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\"",
-          "snippet": "9 View all files 🔥 News Our paper has been accepted by ACL 2026 ! Our RL training and evaluation have been fully open-sourced. [2026/03/12] Our SFT models and C-GRPO models have been fully open-sourced on Hugging Face . [2026/01/11] Our SFT trajectories and RL QA pairs with rubrics have been fully open-sourced on Hugging Face . [2026/01/11] Released the CaRR framework, implemented as a remote reward model server — now fully available in ./deepsearch_rm_with_rubrics . Model and traini...",
-          "readerTitle": "GitHub - THUDM/CaRR: This repository contains the code and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\". Β· GitHub",
-          "readerExcerpt": "!Image 1: GitHub !Image 2: arXiv !Image 3: Dataset & Model !Image 4: Multi-Turn RL Training ## π₯ News - __[2026/04/08]__ Our paper has been accepted by __ACL 2026__! - __[2026/03/14]__ Our __RL training and evaluation __ have been fully open-sourced. - __[2026/03/12]__ Our __SFT models__ and __C-GRPO models__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Our __SFT trajectories__ and __RL QA pairs with rubrics__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Released the __CaRR__ framework, implemented as a remote reward model server β now fully available in `./deepsearch_rm_with_rubrics`. - Model and training are currently being organized β coming soon! ## π Overview Existing Reinforcement Learning (RL) approaches for deep search agents primarily rely on __binary outcome rewards__ (i.e., whether the final answer is correct). However, pure...",
-          "publishDate": "2026-04-08",
           "query": ""
         }
       ],
@@ -221,49 +612,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-b09792bf2db3",
-      "title": "MegaRAG: Multimodal Graph-based RAG",
-      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/AI-Application-and-Integration-Lab/MegaRAG.",
-      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "pdfUrl": "",
-      "sourceId": "unofficial-b09792bf2db3",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-05-06T04:46:23.290Z",
-      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "rag",
-        "reasoning",
-        "3d"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
-          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
-          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
-          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
-          "publishDate": "2026-04-17",
-          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-9998a11e4f1b",
       "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
       "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -303,180 +651,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-9d2202b0d37e",
-      "title": "PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models Yuanhao Su, Shaofeng Zhang, Xiaosong Jia, Qi Fan CVPR 2026 ✨ A step towards better 3D vision-language understanding by preserving geometr",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Evidence-backed fallback found explicit CVPR 2026 Main signal in https://github.com/yharoldsu0627/PointAlign.",
-      "primaryUrl": "https://github.com/yharoldsu0627/PointAlign",
-      "canonicalUrl": "https://github.com/yharoldsu0627/PointAlign",
-      "pdfUrl": "",
-      "sourceId": "unofficial-9d2202b0d37e",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8333333333333334,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-05T05:27:22.702Z",
-      "updatedAt": "2026-05-06T04:46:23.286Z",
-      "lastCheckedAt": "",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/yharoldsu0627/PointAlign",
-          "title": "GitHub - yharoldsu0627/PointAlign: CVPR 2026 paper · GitHub",
-          "snippet": "Open more menu Folders and files Latest 25 25 assets assets data data eval_configs eval_configs minigpt4 minigpt4 params_weight params_weight README.md README.md env_install.sh env_install.sh environment.yml environment.yml finetune.yaml finetune.yaml modeling_phi.py modeling_phi.py train.py train.py wordnet.zip wordnet.zip View all files PointAlign (CVPR 2026) PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models Yuanhao Su, Shaofeng Zhang, Xiaosong Jia, Qi Fan CVP...",
-          "readerTitle": "GitHub - yharoldsu0627/PointAlign: CVPR 2026 paper",
-          "readerExcerpt": "### Paper | > PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models > Yuanhao Su, Shaofeng Zhang, Xiaosong Jia, Qi Fan > CVPR 2026 ✨ __A step towards better 3D vision-language understanding by preserving geometric information throughout the language modeling process.__ ### ✅ Project Status 🎉 __Accepted to CVPR 2026!__ - Release introduction & results - Release training & inference - Upload pretrained weights If you find PointAlign useful, please consider giving us a star ⭐. ### Introduction 🔍 __Geometric Information Degradation:__ Existing 3D VLMs rely solely on next-token prediction loss, causing valuable geometric cues to be discarded during training. PointAlign addresses this by explicitly supervising intermediate point cloud tokens within the LLM to preserve fine-grained 3D geometric-semantic information throughout the language modeling process. ### Ov...",
-          "publishDate": "2026-04-30",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-a6478e3cb733",
-      "title": "Papers-with-Code: CVPR 2026 论文和开源项目合集",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Evidence-backed fallback found explicit CVPR 2026 Main signal in https://github.com/amusi/CVPR2026-Papers-with-Code.",
-      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-      "pdfUrl": "",
-      "sourceId": "unofficial-a6478e3cb733",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-06T04:46:23.281Z",
-      "updatedAt": "2026-05-06T04:46:23.281Z",
-      "lastCheckedAt": "",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "mllm",
-        "agent",
-        "reasoning",
-        "video understanding",
-        "3d gaussian splatting"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
-          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
-          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
-          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
-          "publishDate": "2026-05-04",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-f312a023943c",
-      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##",
-      "summary": "从项目页或代码仓库识别到 AAAI 接收信号，标题为 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ##。",
-      "reason": "论文当前显示被AAAI接收，而非ACL 2026，且无其他证据支持",
-      "primaryUrl": "https://github.com/neuron-insight-lab/LoopLLM",
-      "canonicalUrl": "https://github.com/neuron-insight-lab/LoopLLM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-f312a023943c",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.88,
-      "acceptedVenue": "AAAI",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T05:47:16.331Z",
-      "updatedAt": "2026-05-06T05:08:42.403Z",
-      "lastCheckedAt": "2026-05-06T05:08:42.403Z",
-      "authors": [],
-      "keywords": [
-        "llm"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/neuron-insight-lab/LoopLLM",
-          "title": "GitHub - neuron-insight-lab/LoopLLM: [AAAI 2026] The official code for LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 14 Commits 14 Commits assets assets utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md ensemble.py ensemble.py main.py main.py requirements.txt requirements.txt transfer.py transfer.py View all files Repository files navigation 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, maki",
-          "readerTitle": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-lat",
-          "readerExcerpt": "This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## π Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90% of the maximum output length, compared to 20% for baselines, and improving transferability by around 40% to DeepSeek-V3 and Gemini 2.5 Flash. ![Image 1: overview](https://github.com/neuron-insight-lab/LoopLLM/raw/main/assets/overview.png) ## π οΈ Installation ### π§ Environment Preparation ``` conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### π§ Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the `utils/__init__.py` file ## π‘ Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ``` python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## π The Examples of Real-World LLMs Screenshots of repetitive g\n\n## 🚀 LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation This is the code repository for our paper: LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation ## 🎓 Abstract As large language models (LLMs) scale, their inference incurs substantial computational resources, exposing them to energy-latency attacks, where crafted prompts induce high energy and latency cost. Existing attack methods aim to prolong output by delaying the generation of termination symbols. However, as the output grows longer, controlling the termination symbols through input becomes difficult, making these methods less effective. Therefore, we propose LoopLLM, an energy-latency attack framework based on the observation that repetitive generation can trigger low-entropy decoding loops, reliably compelling LLMs to generate until their output limits. LoopLLM introduces (1) a repetition-inducing prompt optimization that exploits autoregressive vulnerabilities to induce repetitive generation, and (2) a token-aligned ensemble optimization that aggregates gradients to improve cross-model transferability. Extensive experiments on 12 open-source and 2 commercial LLMs show that LoopLLM significantly outperforms existing methods, achieving over 90\\% of the maximum output length, compared to 20\\% for baselines, and improving transferability by around 40\\% to DeepSeek-V3 and Gemini 2.5 Flash. !overview ## 🛠️ Installation ### 🔧 Environment Preparation ```bash conda create -n loopllm python=3.12 conda activate loopllm pip install - r requirements.txt ``` ### 🔧 Model Preparation You can download the required LLMs from the huggingface (such as LLama2-7B) and fill in your model path in the corresponding position of the ```utils/__init__.py``` file ## 💡 Usage Run the following command to generate LoopLLM prompt to induce Llama2-7b into repetitive generation. ```bash python main.py --model_name \"llama2-7b\" ``` Or you can run the `ensemble.py` file to ensemble optimization on multiple models to construct more generalized prompt and use the `transfer.py` file to conduct transfer experiments. ## 🌐 The Examples of Real-World LLMs Screenshots of repetitive generation triggered by our LoopLLM on real-world LLMs. \\ Top left: Deepseek-V3. Top right: Gemini 2.5 Flash. Bottom left: Mistrial. Bottom right: Meta LLaMA2-7B !overview ## 📜 Citation If you're using LoopLLM in your research or applications, please cite using this BibTeX: ```bash @article{li2025loopllm, title={LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation}, author={Li, Xingyu and Liu, Xiaolei and Liu, Cheng and Xu, Yixiao and Ding, Kangyi and Xin, Bangzhou and Yin, Jia-Li}, url={https://ojs.aaai.org/index.php/AAAI/article/view/40445}, DOI={10.1609/aaai.v40i3",
-          "publishDate": "2026-05-02",
-          "query": "site:github.io \"paper\" \"LLM\" \"2026\""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-93d8a75fd664",
-      "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
-      "summary": "从项目页或代码仓库识别到 ICLR 2026 接收信号，标题为 TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis。",
-      "reason": "Local high-confidence extraction found ICLR 2026 acceptance signal in the source title or excerpt.",
-      "primaryUrl": "https://github.com/ZJU4HealthCare/TumorChain",
-      "canonicalUrl": "https://github.com/ZJU4HealthCare/TumorChain",
-      "pdfUrl": "",
-      "sourceId": "unofficial-93d8a75fd664",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.88,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T05:47:16.333Z",
-      "updatedAt": "2026-05-06T05:08:24.249Z",
-      "lastCheckedAt": "2026-05-06T05:08:24.249Z",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "reasoning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/ZJU4HealthCare/TumorChain",
-          "title": "GitHub - ZJU4HealthCare/TumorChain: 【ICLR 2026】Official Repo for Paper ‘’TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for",
-          "snippet": "ZJU4HealthCare/TumorChain   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits image image",
-          "readerExcerpt": "reader failed: request timed out after 20000ms",
-          "publishDate": "2026-04-28",
-          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=bmQXN1Kg5i",
-        "title": "TumorChain: Interleaved Multimodal Chain-of-Thought Reasoning for Traceable Clinical Tumor Analysis",
-        "venue": "ICLR 2026 Poster"
-      }
     },
     {
       "id": "unofficial-2d98176824ab",
@@ -532,50 +706,6 @@
           "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
           "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
           "publishDate": "2026-04-27",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-ffb5140d7bb4",
-      "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Evidence-backed fallback found explicit ACL 2026 Main signal in https://github.com/wzb-bupt/VGPO.",
-      "primaryUrl": "https://github.com/wzb-bupt/VGPO",
-      "canonicalUrl": "https://github.com/wzb-bupt/VGPO",
-      "pdfUrl": "",
-      "sourceId": "unofficial-ffb5140d7bb4",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-05T05:27:22.694Z",
-      "updatedAt": "2026-05-05T05:39:14.499Z",
-      "lastCheckedAt": "",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wzb-bupt/VGPO",
-          "title": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning · GitHub",
-          "snippet": "wzb-bupt/VGPO Open more menu Folders and files Latest 5 5 assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to signal dilution —...",
-          "readerTitle": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
-          "readerExcerpt": "## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ causes attention to visual inputs to progressively decay as reasoning chains extend. VGPO addresses these through three key mechanisms: - __Visual Attention Compensation (VAC):__ Uses the inherent hidden-state similarity between generated tokens and image tokens as a _Visual Focus Score_ to localize visual activations without external supervision. A progressive incentive schedule counteracts temporal visual forgetting in later reasoning steps. - __Intra-Trajectory Re-weighting...",
-          "publishDate": "2026-04-25",
           "query": ""
         }
       ],
