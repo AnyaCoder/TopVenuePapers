@@ -2,22 +2,23 @@
   "key": "2026-aaai-2026-main",
   "venue": "AAAI 2026 Main",
   "year": 2026,
-  "count": 2,
+  "count": 1,
   "papers": [
     {
-      "id": "unofficial-2c4c2d227bd2",
-      "title": "__! - __2025.11__ π Preprint released on arXiv. - __2025.07__ π₯ Code and models are publicly available.",
+      "id": "unofficial-5ffdae82dc19",
+      "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
       "venue": "AAAI 2026 Main",
       "year": 2026,
       "track": "Accepted signal pending official venue page",
-      "primaryCategory": "rag-knowledge",
+      "primaryCategory": "evaluation-benchmarks",
       "categories": [
-        "rag-knowledge",
-        "coding-formal-tasks"
+        "evaluation-benchmarks",
+        "rag-knowledge"
       ],
       "keywords": [
         "rag",
+        "benchmark",
         "AAAI 2026 Main",
         "web",
         "unofficial"
@@ -25,59 +26,20 @@
       "authors": [
         "Unknown authors"
       ],
-      "openreviewUrl": "https://github.com/zhu-xlab/GEWDiff",
-      "tldr": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "openreviewUrl": "https://github.com/PlanckChang/EMAformer",
+      "tldr": "提出EMAformer方法，通过嵌入装甲增强Transformer模型以提升时间序列预测性能。",
+      "abstract": "提出EMAformer方法，通过嵌入装甲增强Transformer模型以提升时间序列预测性能。",
       "aliases": [
-        "unofficial-2c4c2d227bd2"
+        "unofficial-5ffdae82dc19"
       ],
       "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-2c4c2d227bd2",
+      "sourceId": "unofficial-5ffdae82dc19",
       "guideStatus": "pending",
       "sourceType": "unofficial",
       "acceptanceStatus": "accepted",
       "acceptedVenue": "AAAI 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-06T04:46:23.296Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ]
-    },
-    {
-      "id": "unofficial-06e4cb825b92",
-      "title": "】DGKAN for Unsupervised Multimodal Change Detection",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "AAAI 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "mllm-foundations",
-      "categories": [
-        "mllm-foundations"
-      ],
-      "keywords": [
-        "multimodal",
-        "AAAI 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
-      "tldr": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "abstract": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "aliases": [
-        "unofficial-06e4cb825b92"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-06e4cb825b92",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "AAAI 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-06T04:46:23.294Z",
+      "discoveredAt": "2026-05-07T05:31:40.154Z",
       "evidenceCount": 1,
       "platforms": [
         "web"

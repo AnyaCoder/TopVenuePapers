@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-07T06:27:52.250Z",
+  "generatedAt": "2026-05-08T04:24:21.476Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -57,331 +57,331 @@
       "plans": []
     },
     "followUpSearchPlans": 4,
-    "skippedFollowUpSearchPlans": 182
+    "skippedFollowUpSearchPlans": 151
   },
   "progress": [
     {
-      "at": "2026-05-07T06:27:52.250Z",
+      "at": "2026-05-08T04:24:21.477Z",
       "message": "Discovery started: 14/98 initial queries, max 4 follow-up queries, max 14 readers, max 4 extraction batches."
     },
     {
-      "at": "2026-05-07T06:27:52.253Z",
+      "at": "2026-05-08T04:24:21.480Z",
       "message": "[initial search 1/14] seed-1: \"accepted to\" \"AAAI 2026\" \"official code\""
     },
     {
-      "at": "2026-05-07T06:27:55.521Z",
-      "message": "[initial search 1/14] done raw=10 kept=5 rejected=5 in 3.3s"
+      "at": "2026-05-08T04:24:24.143Z",
+      "message": "[initial search 1/14] done raw=10 kept=6 rejected=4 in 2.7s"
     },
     {
-      "at": "2026-05-07T06:27:55.521Z",
+      "at": "2026-05-08T04:24:24.143Z",
       "message": "[initial search 2/14] repository-1: site:github.com \"AAAI 2026\" \"official code\" \"LLM\""
     },
     {
-      "at": "2026-05-07T06:27:57.312Z",
+      "at": "2026-05-08T04:24:25.976Z",
       "message": "[initial search 2/14] done raw=10 kept=2 rejected=8 in 1.8s"
     },
     {
-      "at": "2026-05-07T06:27:57.312Z",
+      "at": "2026-05-08T04:24:25.976Z",
       "message": "[initial search 3/14] paper-index-1: arxiv \"accepted to\" \"2026\" \"large language model\""
     },
     {
-      "at": "2026-05-07T06:27:59.590Z",
-      "message": "[initial search 3/14] done raw=10 kept=4 rejected=6 in 2.3s"
+      "at": "2026-05-08T04:24:28.072Z",
+      "message": "[initial search 3/14] done raw=10 kept=5 rejected=5 in 2.1s"
     },
     {
-      "at": "2026-05-07T06:27:59.590Z",
+      "at": "2026-05-08T04:24:28.072Z",
       "message": "[initial search 4/14] social-introducing-11: \"Introducing\" LLM VLM multimodal agent reasoning 2026"
     },
     {
-      "at": "2026-05-07T06:28:00.741Z",
-      "message": "[initial search 4/14] done raw=0 kept=0 rejected=0 in 1.2s"
+      "at": "2026-05-08T04:24:29.413Z",
+      "message": "[initial search 4/14] done raw=0 kept=0 rejected=0 in 1.3s"
     },
     {
-      "at": "2026-05-07T06:28:00.741Z",
+      "at": "2026-05-08T04:24:29.413Z",
       "message": "[initial search 5/14] homepage-1: site:github.io \"accepted to\" \"2026\" \"LLM\""
     },
     {
-      "at": "2026-05-07T06:28:02.517Z",
-      "message": "[initial search 5/14] done raw=10 kept=4 rejected=6 in 1.8s"
+      "at": "2026-05-08T04:24:31.242Z",
+      "message": "[initial search 5/14] done raw=10 kept=2 rejected=8 in 1.8s"
     },
     {
-      "at": "2026-05-07T06:28:02.517Z",
+      "at": "2026-05-08T04:24:31.242Z",
       "message": "[initial search 6/14] chinese-1: 论文接收 顶会 大模型 AAAI ACL ICLR 2026"
     },
     {
-      "at": "2026-05-07T06:28:03.594Z",
-      "message": "[initial search 6/14] done raw=0 kept=0 rejected=0 in 1.1s"
+      "at": "2026-05-08T04:24:31.983Z",
+      "message": "[initial search 6/14] done raw=0 kept=0 rejected=0 in 741ms"
     },
     {
-      "at": "2026-05-07T06:28:03.594Z",
+      "at": "2026-05-08T04:24:31.983Z",
       "message": "[initial search 7/14] broad-1: \"2026\" \"official repo\" \"multimodal\""
     },
     {
-      "at": "2026-05-07T06:28:04.378Z",
-      "message": "[initial search 7/14] done raw=0 kept=0 rejected=0 in 784ms"
+      "at": "2026-05-08T04:24:32.751Z",
+      "message": "[initial search 7/14] done raw=0 kept=0 rejected=0 in 768ms"
     },
     {
-      "at": "2026-05-07T06:28:04.378Z",
+      "at": "2026-05-08T04:24:32.751Z",
       "message": "[initial search 8/14] seed-2: \"accepted to\" \"ACL 2026\" \"official code\""
     },
     {
-      "at": "2026-05-07T06:28:05.910Z",
-      "message": "[initial search 8/14] done raw=10 kept=5 rejected=5 in 1.5s"
+      "at": "2026-05-08T04:24:34.266Z",
+      "message": "[initial search 8/14] done raw=10 kept=7 rejected=3 in 1.5s"
     },
     {
-      "at": "2026-05-07T06:28:05.910Z",
+      "at": "2026-05-08T04:24:34.266Z",
       "message": "[initial search 9/14] repository-2: site:github.com \"ACL 2026\" \"accepted\" \"multimodal\""
     },
     {
-      "at": "2026-05-07T06:28:07.449Z",
-      "message": "[initial search 9/14] done raw=10 kept=7 rejected=3 in 1.5s"
+      "at": "2026-05-08T04:24:36.376Z",
+      "message": "[initial search 9/14] done raw=10 kept=4 rejected=6 in 2.1s"
     },
     {
-      "at": "2026-05-07T06:28:07.450Z",
+      "at": "2026-05-08T04:24:36.376Z",
       "message": "[initial search 10/14] paper-index-2: arxiv \"project page\" \"2026\" \"vision language model\""
     },
     {
-      "at": "2026-05-07T06:28:09.588Z",
-      "message": "[initial search 10/14] done raw=10 kept=2 rejected=8 in 2.1s"
+      "at": "2026-05-08T04:24:38.635Z",
+      "message": "[initial search 10/14] done raw=10 kept=2 rejected=8 in 2.3s"
     },
     {
-      "at": "2026-05-07T06:28:09.588Z",
+      "at": "2026-05-08T04:24:38.635Z",
       "message": "[initial search 11/14] social-introducing-21: \"Introducing\" video understanding 3D Gaussian Splatting robotics embodied AI 2026"
     },
     {
-      "at": "2026-05-07T06:28:10.716Z",
+      "at": "2026-05-08T04:24:39.724Z",
       "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 1.1s"
     },
     {
-      "at": "2026-05-07T06:28:10.716Z",
+      "at": "2026-05-08T04:24:39.724Z",
       "message": "[initial search 12/14] homepage-2: site:github.io \"paper\" \"multimodal\" \"2026\""
     },
     {
-      "at": "2026-05-07T06:28:13.268Z",
-      "message": "[initial search 12/14] done raw=10 kept=6 rejected=4 in 2.6s"
+      "at": "2026-05-08T04:24:41.918Z",
+      "message": "[initial search 12/14] done raw=10 kept=5 rejected=5 in 2.2s"
     },
     {
-      "at": "2026-05-07T06:28:13.268Z",
+      "at": "2026-05-08T04:24:41.918Z",
       "message": "[initial search 13/14] chinese-2: 新论文 多模态 CVPR ICLR 2026"
     },
     {
-      "at": "2026-05-07T06:28:14.070Z",
-      "message": "[initial search 13/14] done raw=0 kept=0 rejected=0 in 802ms"
+      "at": "2026-05-08T04:24:42.873Z",
+      "message": "[initial search 13/14] done raw=0 kept=0 rejected=0 in 955ms"
     },
     {
-      "at": "2026-05-07T06:28:14.070Z",
+      "at": "2026-05-08T04:24:42.873Z",
       "message": "[initial search 14/14] broad-2: \"2026\" \"project page\" \"large language model\""
     },
     {
-      "at": "2026-05-07T06:28:15.891Z",
-      "message": "[initial search 14/14] done raw=10 kept=3 rejected=7 in 1.8s"
+      "at": "2026-05-08T04:24:44.458Z",
+      "message": "[initial search 14/14] done raw=10 kept=3 rejected=7 in 1.6s"
     },
     {
-      "at": "2026-05-07T06:28:16.083Z",
+      "at": "2026-05-08T04:24:44.655Z",
       "message": "Follow-up search started: 4 evidence-derived queries."
     },
     {
-      "at": "2026-05-07T06:28:16.083Z",
+      "at": "2026-05-08T04:24:44.655Z",
       "message": "[follow-up search 1/4] follow-up-4: site:github.com \"3D Visual Grounding(3D视觉定位) 图像生成(Image Generation) ExpPortrait: Expressive Portrait Generation via Personalized Representation Code: 视频生成(Video Generation) 图像编辑(Image Editing) 视频编辑(Video Editing) 3D生成(3D Generation) 3D重建\""
     },
     {
-      "at": "2026-05-07T06:28:17.805Z",
-      "message": "[follow-up search 1/4] done raw=10 kept=5 rejected=5 in 1.7s"
+      "at": "2026-05-08T04:24:46.086Z",
+      "message": "[follow-up search 1/4] done raw=10 kept=4 rejected=6 in 1.4s"
     },
     {
-      "at": "2026-05-07T06:28:17.805Z",
+      "at": "2026-05-08T04:24:46.086Z",
       "message": "[follow-up search 2/4] follow-up-2: site:x.com \"CVPR2026-Papers-with-Code\" paper"
     },
     {
-      "at": "2026-05-07T06:28:19.074Z",
+      "at": "2026-05-08T04:24:47.347Z",
       "message": "[follow-up search 2/4] done raw=0 kept=0 rejected=0 in 1.3s"
     },
     {
-      "at": "2026-05-07T06:28:19.074Z",
+      "at": "2026-05-08T04:24:47.347Z",
       "message": "[follow-up search 3/4] follow-up-1: \"amusi/CVPR2026-Papers-with-Code\" paper accepted 2026"
     },
     {
-      "at": "2026-05-07T06:28:20.587Z",
-      "message": "[follow-up search 3/4] done raw=10 kept=9 rejected=1 in 1.5s"
+      "at": "2026-05-08T04:24:48.985Z",
+      "message": "[follow-up search 3/4] done raw=10 kept=9 rejected=1 in 1.6s"
     },
     {
-      "at": "2026-05-07T06:28:20.587Z",
+      "at": "2026-05-08T04:24:48.985Z",
       "message": "[follow-up search 4/4] follow-up-7: site:github.com \"IC) 视频压缩(Video Compression)](\""
     },
     {
-      "at": "2026-05-07T06:28:22.122Z",
-      "message": "[follow-up search 4/4] done raw=10 kept=10 rejected=0 in 1.5s"
+      "at": "2026-05-08T04:24:50.447Z",
+      "message": "[follow-up search 4/4] done raw=10 kept=9 rejected=1 in 1.5s"
     },
     {
-      "at": "2026-05-07T06:28:22.155Z",
+      "at": "2026-05-08T04:24:50.478Z",
       "message": "Reader stage started: 14 candidate links."
     },
     {
-      "at": "2026-05-07T06:28:22.155Z",
+      "at": "2026-05-08T04:24:50.479Z",
       "message": "[reader 1/14] read GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub"
     },
     {
-      "at": "2026-05-07T06:28:24.099Z",
-      "message": "[reader 1/14] done in 1.9s"
+      "at": "2026-05-08T04:25:02.765Z",
+      "message": "[reader 1/14] done in 12.3s"
     },
     {
-      "at": "2026-05-07T06:28:24.100Z",
-      "message": "[reader 2/14] read GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"..."
+      "at": "2026-05-08T04:25:02.765Z",
+      "message": "[reader 2/14] read Yihang Yao"
     },
     {
-      "at": "2026-05-07T06:28:25.644Z",
-      "message": "[reader 2/14] done in 1.5s"
+      "at": "2026-05-08T04:25:04.101Z",
+      "message": "[reader 2/14] done in 1.3s"
     },
     {
-      "at": "2026-05-07T06:28:25.644Z",
-      "message": "[reader 3/14] read GitHub - MM-Speech/WavAlign: Official repository for \"WavAlign\" (ACL 2026 Findings) . An ..."
+      "at": "2026-05-08T04:25:04.101Z",
+      "message": "[reader 3/14] read GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"..."
     },
     {
-      "at": "2026-05-07T06:28:47.649Z",
-      "message": "[reader 3/14] done in 22.0s"
+      "at": "2026-05-08T04:25:05.192Z",
+      "message": "[reader 3/14] done in 1.1s"
     },
     {
-      "at": "2026-05-07T06:28:47.649Z",
+      "at": "2026-05-08T04:25:05.192Z",
       "message": "[reader 4/14] read GitHub - THUDM/CaRR: This repository contains the code and data for the paper \"Chaining t..."
     },
     {
-      "at": "2026-05-07T06:29:00.618Z",
-      "message": "[reader 4/14] done in 13.0s"
+      "at": "2026-05-08T04:25:06.407Z",
+      "message": "[reader 4/14] done in 1.2s"
     },
     {
-      "at": "2026-05-07T06:29:00.618Z",
-      "message": "[reader 5/14] read GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimod..."
+      "at": "2026-05-08T04:25:06.408Z",
+      "message": "[reader 5/14] read GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: C..."
     },
     {
-      "at": "2026-05-07T06:29:01.996Z",
-      "message": "[reader 5/14] done in 1.4s"
+      "at": "2026-05-08T04:25:08.225Z",
+      "message": "[reader 5/14] done in 1.8s"
     },
     {
-      "at": "2026-05-07T06:29:01.996Z",
-      "message": "[reader 6/14] read GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: C..."
+      "at": "2026-05-08T04:25:08.225Z",
+      "message": "[reader 6/14] read Computer Science"
     },
     {
-      "at": "2026-05-07T06:29:03.784Z",
-      "message": "[reader 6/14] done in 1.8s"
+      "at": "2026-05-08T04:25:08.993Z",
+      "message": "[reader 6/14] done in 768ms"
     },
     {
-      "at": "2026-05-07T06:29:03.784Z",
-      "message": "[reader 7/14] read Computer Science"
+      "at": "2026-05-08T04:25:08.993Z",
+      "message": "[reader 7/14] read GitHub - Ferry-Li/BlackMirror: Official code for CVPR 2026 paper \"BlackMirror: Black-Box ..."
     },
     {
-      "at": "2026-05-07T06:29:08.342Z",
-      "message": "[reader 7/14] done in 4.6s"
+      "at": "2026-05-08T04:25:10.176Z",
+      "message": "[reader 7/14] done in 1.2s"
     },
     {
-      "at": "2026-05-07T06:29:08.342Z",
-      "message": "[reader 8/14] read GitHub - Ferry-Li/BlackMirror: Official code for CVPR 2026 paper \"BlackMirror: Black-Box ..."
+      "at": "2026-05-08T04:25:10.176Z",
+      "message": "[reader 8/14] read GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph..."
     },
     {
-      "at": "2026-05-07T06:29:12.416Z",
-      "message": "[reader 8/14] done in 4.1s"
+      "at": "2026-05-08T04:25:32.219Z",
+      "message": "[reader 8/14] done in 22.0s"
     },
     {
-      "at": "2026-05-07T06:29:12.416Z",
-      "message": "[reader 9/14] read GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph..."
+      "at": "2026-05-08T04:25:32.219Z",
+      "message": "[reader 9/14] read GitHub - Bharath-K3/MMFace-DiT: Accepted to IEEE/CVF Conference on Computer Vision and Pa..."
     },
     {
-      "at": "2026-05-07T06:29:13.423Z",
-      "message": "[reader 9/14] done in 1.0s"
+      "at": "2026-05-08T04:25:33.685Z",
+      "message": "[reader 9/14] done in 1.5s"
     },
     {
-      "at": "2026-05-07T06:29:13.424Z",
-      "message": "[reader 10/14] read GitHub - Bharath-K3/MMFace-DiT: Accepted to IEEE/CVF Conference on Computer Vision and Pa..."
+      "at": "2026-05-08T04:25:33.685Z",
+      "message": "[reader 10/14] read Neural and Evolutionary Computing"
     },
     {
-      "at": "2026-05-07T06:29:19.435Z",
-      "message": "[reader 10/14] done in 6.0s"
+      "at": "2026-05-08T04:25:34.965Z",
+      "message": "[reader 10/14] done in 1.3s"
     },
     {
-      "at": "2026-05-07T06:29:19.435Z",
-      "message": "[reader 11/14] read Neural and Evolutionary Computing"
+      "at": "2026-05-08T04:25:34.965Z",
+      "message": "[reader 11/14] skip ACL 2026 别轻易给AI发「」,它可能会删掉你的整个主目录"
     },
     {
-      "at": "2026-05-07T06:29:20.767Z",
-      "message": "[reader 11/14] done in 1.3s"
+      "at": "2026-05-08T04:25:34.965Z",
+      "message": "[reader 11/14] done in 0ms"
     },
     {
-      "at": "2026-05-07T06:29:20.767Z",
+      "at": "2026-05-08T04:25:34.965Z",
       "message": "[reader 12/14] read GitHub - JasonForJoy/BRIEF: ACL 2026 & NAACL 2025: Bridging Retrieval and Inference throu..."
     },
     {
-      "at": "2026-05-07T06:29:57.860Z",
-      "message": "[reader 12/14] done in 37.1s"
+      "at": "2026-05-08T04:25:56.952Z",
+      "message": "[reader 12/14] done in 22.0s"
     },
     {
-      "at": "2026-05-07T06:29:57.860Z",
+      "at": "2026-05-08T04:25:56.952Z",
       "message": "[reader 13/14] skip 团队主持和参与的三篇论文被 ACL 收录"
     },
     {
-      "at": "2026-05-07T06:29:57.860Z",
+      "at": "2026-05-08T04:25:56.952Z",
       "message": "[reader 13/14] done in 0ms"
     },
     {
-      "at": "2026-05-07T06:29:57.860Z",
+      "at": "2026-05-08T04:25:56.952Z",
       "message": "[reader 14/14] read GitHub - CQU-MM-Intelligent-Lab/MHL: [ACL 2026] From Past To Path: Masked History Learnin..."
     },
     {
-      "at": "2026-05-07T06:30:00.288Z",
-      "message": "[reader 14/14] done in 2.4s"
+      "at": "2026-05-08T04:25:58.417Z",
+      "message": "[reader 14/14] done in 1.5s"
     },
     {
-      "at": "2026-05-07T06:30:00.308Z",
-      "message": "Evidence-backed fallback staged 8 provisional candidates while Zhipu refinement catches up."
+      "at": "2026-05-08T04:25:58.435Z",
+      "message": "Evidence-backed fallback staged 7 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-05-07T06:30:00.308Z",
+      "at": "2026-05-08T04:25:58.435Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-05-07T06:30:00.308Z",
-      "message": "Zhipu refinement stage started: 4/8 candidate batches."
+      "at": "2026-05-08T04:25:58.435Z",
+      "message": "Zhipu refinement stage started: 4/7 candidate batches."
     },
     {
-      "at": "2026-05-07T06:30:00.308Z",
+      "at": "2026-05-08T04:25:58.435Z",
       "message": "[extract 1/4] 1 candidate items."
     },
     {
-      "at": "2026-05-07T06:31:30.311Z",
+      "at": "2026-05-08T04:26:35.939Z",
       "message": "[extract 1/4] parsed=0"
     },
     {
-      "at": "2026-05-07T06:31:30.311Z",
+      "at": "2026-05-08T04:26:35.940Z",
       "message": "[extract 2/4] 1 candidate items."
     },
     {
-      "at": "2026-05-07T06:31:30.311Z",
+      "at": "2026-05-08T04:26:35.940Z",
       "message": "[extract 2/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-07T06:35:00.311Z",
-      "message": "[extract 2/4] parsed=0"
+      "at": "2026-05-08T04:29:14.261Z",
+      "message": "[extract 2/4] parsed=1"
     },
     {
-      "at": "2026-05-07T06:35:00.311Z",
+      "at": "2026-05-08T04:29:14.261Z",
       "message": "[extract 3/4] 1 candidate items."
     },
     {
-      "at": "2026-05-07T06:35:00.311Z",
+      "at": "2026-05-08T04:29:14.261Z",
       "message": "[extract 3/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-07T06:38:30.398Z",
-      "message": "[extract 3/4] parsed=0"
+      "at": "2026-05-08T04:32:27.966Z",
+      "message": "[extract 3/4] parsed=1"
     },
     {
-      "at": "2026-05-07T06:38:30.398Z",
+      "at": "2026-05-08T04:32:27.966Z",
       "message": "[extract 4/4] 1 candidate items."
     },
     {
-      "at": "2026-05-07T06:38:30.398Z",
+      "at": "2026-05-08T04:32:27.966Z",
       "message": "[extract 4/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-07T06:41:57.843Z",
+      "at": "2026-05-08T04:35:48.174Z",
       "message": "[extract 4/4] parsed=1"
     }
   ],
@@ -400,10 +400,28 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 5,
-      "rejectedCount": 5,
-      "startedAt": "2026-05-07T06:27:52.253Z",
+      "resultCount": 6,
+      "rejectedCount": 4,
+      "startedAt": "2026-05-08T04:24:21.480Z",
       "results": [
+        {
+          "platform": "web",
+          "stage": "seed",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit DongdingLin Update README with code release information Open commit details Apr 12, 2026 6db83cd · Apr 12, 2026 History 2 Commits Open commit details 2 Commits LICENSE LICENSE Initial commit Apr 12, 2026 README.md README.md Update README with code release information Apr 12, 2026 View all files Repository files navigation SiPeR Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the code will be released once it has been organized. No releases published No packages published Footer © 202",
+          "publishDate": "2026-04-12",
+          "relevanceScore": 11,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:reasoning",
+            "venue:acl",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "seed-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "web",
           "stage": "seed",
@@ -587,7 +605,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 3268
+      "durationMs": 2664
     },
     {
       "label": "repository-1",
@@ -605,7 +623,7 @@
       "rawResultCount": 10,
       "resultCount": 2,
       "rejectedCount": 8,
-      "startedAt": "2026-05-07T06:27:55.521Z",
+      "startedAt": "2026-05-08T04:24:24.143Z",
       "results": [
         {
           "platform": "web",
@@ -751,7 +769,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1791
+      "durationMs": 1833
     },
     {
       "label": "paper-index-1",
@@ -767,17 +785,33 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 4,
-      "rejectedCount": 6,
-      "startedAt": "2026-05-07T06:27:57.312Z",
+      "resultCount": 5,
+      "rejectedCount": 5,
+      "startedAt": "2026-05-08T04:24:25.976Z",
       "results": [
         {
           "platform": "arxiv",
           "stage": "paper-index",
           "url": "https://ar5iv.labs.arxiv.org/",
           "title": "ar5iv – Articles from arXiv.org as responsive HTML5 web documents",
-          "snippet": "Articles from arXiv.org as responsive HTML 5 web pages. Converted from TeX with LaTeXML . Sources upto the end of March 2026. Not a live preview service. Available as a dataset, download here . For articles with multiple revisions, only a single version is made available. When in doubt, always use the main arXiv.org article page. Goal: incremental improvement until worthy of native arXiv adoption. Sample: A Simple Proof of the Quadratic Formula (1910.06709) View any ar X iv article URL by changing the X to a 5 https://ar x iv.org/abs/1910.06709 https://ar 5 iv.org/abs/1910.06709",
-          "publishDate": "2026-05-05",
+          "snippet": "Articles from arXiv.org as responsive HTML 5 web pages. Converted from TeX with LaTeXML . Sources upto the end of April 2026. Not a live preview service. Available as a dataset, download here . For articles with multiple revisions, only a single version is made available. When in doubt, always use the main arXiv.org article page. Goal: incremental improvement until worthy of native arXiv adoption. Sample: A Simple Proof of the Quadratic Formula (1910.06709) View any ar X iv article URL by changing the X to a 5 https://ar x iv.org/abs/1910.06709 https://ar 5 iv.org/abs/1910.06709",
+          "publishDate": "2026-05-07",
+          "relevanceScore": 6,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://arxiv.org/list/cond-mat.mtrl-sci/pastweek?skip=34&show=25",
+          "title": "Materials Science",
+          "snippet": "Authors and titles for recent submissions See today's new changes Total of 202 entries : 1-25 26-50 35-59 51-75 76-100 101-125 ... 201-202 Showing up to 25 entries per page: fewer | more | all Title: Geometry induced net spin polarization of d -wave altermagnets Comments: 6 pages, 6 captioned figures including appendix Journal-ref: Phys. Rev. Mater. (2026) Subjects: Mesoscale and Nanoscale Physics (cond-mat.mes-hall) ; Materials Science (cond-mat.mtrl-sci) Title: Theory-Guided Discovery of Pressure-Induced Transitions in Fast-Ion Conductor BaSnF4 Comments: 31 pages, 11 figures, 12 tables Journal-ref: Phys. Rev. B 112, 184104 (2025) Subjects: Materials Science (cond-mat.mtrl-sci) ; Chemical P",
+          "publishDate": "2026-04-10",
           "relevanceScore": 6,
           "relevanceSignals": [
             "paper:arxiv",
@@ -806,30 +840,6 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.RO/pastweek?skip=0&show=25",
-          "title": "Robotics",
-          "snippet": "Authors and titles for recent submissions See today's new changes Total of 231 entries : 1-25 26-50 51-75 76-100 ... 226-231 Showing up to 25 entries per page: fewer | more | all Title: TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks Longyan Wu , Jieji Ren , Chenghang Jiang , Junxi Zhou , Shijia Peng , Ran Huang , Guoying Gu , Li Chen , Hongyang Li Subjects: Robotics (cs.RO) Title: RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild Wenjing Margaret Mao , Jefferson Ng , Luyang Hu , Daniel Gehrig , Antonio Loquercio Comments: 8 pages, 4 figures. *Equal contribution by first three authors. Project webpage: this https URL Subjects: Ro",
-          "publishDate": "2026-04-09",
-          "relevanceScore": 35,
-          "relevanceSignals": [
-            "paper:arxiv",
-            "paper:project page",
-            "announcement:accepted to",
-            "announcement:accepted by",
-            "topic:vlm",
-            "topic:multi-modal",
-            "topic:agent",
-            "topic:robotics",
-            "topic:embodied",
-            "topic:world model"
-          ],
-          "queryLabel": "paper-index-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "arxiv",
-          "stage": "paper-index",
           "url": "https://arxiv.org/list/cs.NE/recent",
           "title": "Neural and Evolutionary Computing",
           "snippet": "Authors and titles for recent submissions See today's new changes Total of 50 entries Showing up to 50 entries per page: fewer | more | all Title: Scalable Memristive-Friendly Reservoir Computing for Time Series Classification Comments: 12 pages, 3 figures, 7 tables Subjects: Neural and Evolutionary Computing (cs.NE) ; Machine Learning (cs.LG) Title: Optimising Urban Flood Resilience Comments: 47 pages, 25 figures Subjects: Neural and Evolutionary Computing (cs.NE) Title: Agent-GWO: Collaborative Agents for Dynamic Prompt Optimization in Large Language Models Comments: Accepted to ACL 2026. 9 pages, 5 figures Subjects: Neural and Evolutionary Computing (cs.NE) ; Artificial Intelligence (cs.A",
@@ -846,6 +856,25 @@
             "topic:agent",
             "topic:robotics",
             "topic:rag"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://arxiv.org/list/math.RT/recent",
+          "title": "Representation Theory",
+          "snippet": "Authors and titles for recent submissions See today's new changes Total of 37 entries Showing up to 50 entries per page: fewer | more | all Title: Fractionally Calabi-Yau algebras and cluster tilting Subjects: Representation Theory (math.RT) Title: Computing the Cousin-Zuckerman Resolution and the Lusztig-Vogan Bijection Comments: Comments welcome Subjects: Representation Theory (math.RT) Title: Verma Bases for finite dimensional Representations of the orthosymplectic Lie superalgebra \\mathfrak{spo}(4|1) Comments: 27 pages Subjects: Representation Theory (math.RT) ; Quantum Algebra (math.QA) Title: Verma Bases and Kashiwara-Nakashima Tableaux of \\mathfrak{sp}_4 Comments: 17 pages Subjects: R",
+          "publishDate": "2026-04-22",
+          "relevanceScore": 19,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:accepted to",
+            "announcement:paper accepted",
+            "source:high-signal-url"
           ],
           "queryLabel": "paper-index-1",
           "queryIntent": "",
@@ -872,30 +901,6 @@
             "announcement:our paper",
             "announcement:accepted to",
             "announcement:accepted by"
-          ],
-          "queryLabel": "paper-index-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "arxiv",
-          "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs/recent?skip=360&show=25",
-          "title": "Computer Science",
-          "snippet": "Authors and titles for recent submissions See today's new changes Total of 3858 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3851-3858 Showing up to 25 entries per page: fewer | more | all Title: The Essence of Balance for Self-Improving Agents in Vision-and-Language Navigation Zhen Liu , Yuhan Liu , Jinjun Wang , Jianyi Liu , Wei Song , Jingwen Fu Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Differentiable Satellite Constellation Configuration via Relaxed Coverage and Revisit Objectives Shreeyam Kacker , Kerri Cahoy Subjects: Robotics (cs.RO) Title: Three-Module SC-VAMP for LDPC-Coded Nonlinear Channels Tadashi Wadayama , Takumi Takahash",
-          "publishDate": "2026-04-22",
-          "relevanceScore": 38,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "announcement:accepted to",
-            "announcement:accepted by",
-            "announcement:paper accepted",
-            "topic:llm",
-            "topic:agent",
-            "topic:reasoning",
-            "topic:robotics",
-            "topic:embodied"
           ],
           "queryLabel": "paper-index-1",
           "queryIntent": "",
@@ -946,6 +951,30 @@
           "queryLabel": "paper-index-1",
           "queryIntent": "",
           "parentUrl": ""
+        },
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://arxiv.org/list/cs/recent?skip=360&show=25",
+          "title": "Computer Science",
+          "snippet": "Authors and titles for recent submissions See today's new changes Total of 3858 entries : 1-25 ... 301-325 326-350 351-375 361-385 376-400 401-425 426-450 ... 3851-3858 Showing up to 25 entries per page: fewer | more | all Title: The Essence of Balance for Self-Improving Agents in Vision-and-Language Navigation Zhen Liu , Yuhan Liu , Jinjun Wang , Jianyi Liu , Wei Song , Jingwen Fu Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Differentiable Satellite Constellation Configuration via Relaxed Coverage and Revisit Objectives Shreeyam Kacker , Kerri Cahoy Subjects: Robotics (cs.RO) Title: Three-Module SC-VAMP for LDPC-Coded Nonlinear Channels Tadashi Wadayama , Takumi Takahash",
+          "publishDate": "2026-04-22",
+          "relevanceScore": 38,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:accepted to",
+            "announcement:accepted by",
+            "announcement:paper accepted",
+            "topic:llm",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:robotics",
+            "topic:embodied"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
         }
       ],
       "responseKeys": [
@@ -955,7 +984,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2278
+      "durationMs": 2096
     },
     {
       "label": "social-introducing-11",
@@ -973,7 +1002,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:27:59.590Z",
+      "startedAt": "2026-05-08T04:24:28.072Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -983,7 +1012,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1151
+      "durationMs": 1341
     },
     {
       "label": "homepage-1",
@@ -999,30 +1028,10 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 4,
-      "rejectedCount": 6,
-      "startedAt": "2026-05-07T06:28:00.741Z",
+      "resultCount": 2,
+      "rejectedCount": 8,
+      "startedAt": "2026-05-08T04:24:29.413Z",
       "results": [
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://github.com/XiangyuSu611/IMR-LLM-Code",
-          "title": "GitHub - XiangyuSu611/IMR-LLM-Code: Industrial Multi-Robot Task Planning and Program Generation using Large Language Models (ICRA 2026)",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 4 Commits 4 Commits assets assets .gitignore .gitignore README.md README.md View all files Repository files navigation IMR-LLM: Industrial Multi-Robot Task Planning and Program Generation using Large Language Models 📢 News [2026-01] 🎉 IMR-LLM has been accepted to ICRA 2026 ! Code coming soon! 🔧 Installation # Clone the repository git clone https://github.com/XiangyuSu611/IMR-LLM-Code.git cd IMR-LLM-Code # Install dependencies pip install -r requirements.txt 🚀 Quick Start # Coming soon 📖 Citation If you find IMR-LLM useful in your research, please consider ci",
-          "publishDate": "2026-04-30",
-          "relevanceScore": 17,
-          "relevanceSignals": [
-            "paper:preprint",
-            "paper:arxiv",
-            "announcement:accepted to",
-            "topic:llm",
-            "topic:large language model",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
         {
           "platform": "web",
           "stage": "homepage",
@@ -1056,21 +1065,6 @@
             "topic:rag",
             "venue:iclr",
             "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://www.mingchatang.com/b/39678122.html",
-          "title": "1、地址:https:cznull.github.io/vsbm-1、地址:https:cznull.github.io/vsbm手游下载 - 明查堂",
-          "snippet": "大小:18.9M 语言:简体中文 类别:手机软件 时间:2026-04-16 、地址:https://cznull.github.io/vsbm 是一个提供各种资源的网站,包括软件下载、教程和技术支持等,它为用户提供了一个方便的平台来获取他们需要的资源。 在这个网站上,你可以找到各种各样的软件下载链接,这些软件涵盖了各个领域,如办公软件、图形设计软件、编程工具等等,无论你是学生、教师还是专业人士,都可以在这个网站上找到适合自己的软件。 除了软件下载外,这个网站还提供了丰富的教程资源,无论你是想学习一门新的编程语言还是提高自己的技能水平,都可以在这个网站上找到相关的教程,这些教程由专业的人士撰写,内容详实且易于理解。 这个网站还提供了技术支持服务,如果你在使用软件时遇到了问题或者有任何疑问,都可以通过这个网站的技术支持渠道寻求帮助,他们会尽快回复你并提供解决方案。 1、地址:https://cznull.github.io/vsbm是一个非常实用的网站,它为用户提供了丰富的资源和服务。",
-          "publishDate": "2026-04-16",
-          "relevanceScore": 3,
-          "relevanceSignals": [
-            "venue:www"
           ],
           "queryLabel": "homepage-1",
           "queryIntent": "",
@@ -1117,6 +1111,27 @@
         {
           "platform": "web",
           "stage": "homepage",
+          "url": "https://github.com/bashigestudio/bestllmplatform",
+          "title": "GitHub - bashigestudio/bestllmplatform: 2026 Best LLM API Aggregation Platform Providers · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 4 Commits 4 Commits README.md README.md     index.html index.html     wavespeed-api-1024x345.jpg wavespeed-api-1024x345.jpg     wavespeed-cost-1024x376.jpg wavespeed-cost-1024x376.jpg     wavespeed-dashboard-1024x344.jpg wavespeed-dashboard-1024x344.jpg     wavespeed-models-1024x484.jpg wavespeed-models-1024x484.jpg     wavespeed-pay-1024x581.jpg wavespeed-pay-1024x581.jpg     wavespeed-signup-1024x385.jpg wavespeed-signup-1024x385.jpg     View all files Repository files navigation 2026 Best LLM API Aggregation Platform Providers lmstudio Access Qwen 3.5, Grok, and Minimax m2.7 in One Place Multimodal AI Model Aggregation",
+          "publishDate": "2026-05-05",
+          "relevanceScore": 8,
+          "relevanceSignals": [
+            "topic:llm",
+            "topic:large language model",
+            "topic:multimodal",
+            "topic:reasoning",
+            "topic:rag",
+            "reject:non-paper-page",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "homepage-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "homepage",
           "url": "https://github.com/hyc2026/M3-Agent-Training",
           "title": "GitHub - hyc2026/M3-Agent-Training · GitHub",
           "snippet": "Name Name Last commit message Last commit date Latest commit   History 697 Commits 697 Commits .github .github     .vscode .vscode     configs configs     docker docker     docs docs     examples examples     recipe recipe     scripts scripts     tests tests     verl verl     .gitignore .gitignore     .pre-commit-config.yaml .pre-commit-config.yaml     .readthedocs.yaml .readthedocs.yaml     LICENSE LICENSE     Notice.txt Notice.txt     README.md README.md     api_config.json api_config.json     pyproject.toml pyproject.toml     requirements-npu.txt requirements-npu.txt     requirements.txt requirements.txt     requirements_sglang.txt requirements_sglang.txt     run.sh run.sh     setup.py se",
@@ -1137,23 +1152,6 @@
           "queryLabel": "homepage-1",
           "queryIntent": "",
           "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://github.com/llm-d/llm-d.github.io",
-          "title": "GitHub - llm-d/llm-d.github.io: Website for llm-d: This repository builds the website seen at llm-d.ai · GitHub",
-          "snippet": "Name Name Last commit message Last commit date Latest commit   History 158 Commits 158 Commits .github .github     blog blog     docs docs     preview preview     remote-content remote-content     src src     static static     tests tests     .gitattributes .gitattributes     .gitignore .gitignore     .pre-commit-config.yaml .pre-commit-config.yaml     .prowlabels.yaml .prowlabels.yaml     .yamllint.yml .yamllint.yml     CODEOWNERS CODEOWNERS     CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md     CONTRIBUTING.md CONTRIBUTING.md     LICENSE LICENSE     OWNERS OWNERS     PR_SIGNOFF.md PR_SIGNOFF.md     README.md README.md     SECURITY.md SECURITY.md     _typos.toml _typos.toml     babel.config.cjs babe",
-          "publishDate": "2026-05-06",
-          "relevanceScore": 0,
-          "relevanceSignals": [
-            "topic:llm",
-            "reject:non-paper-page",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-1",
-          "queryIntent": "",
-          "parentUrl": ""
         }
       ],
       "responseKeys": [
@@ -1163,7 +1161,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1776
+      "durationMs": 1829
     },
     {
       "label": "chinese-1",
@@ -1181,7 +1179,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:28:02.517Z",
+      "startedAt": "2026-05-08T04:24:31.242Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1191,7 +1189,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1077
+      "durationMs": 741
     },
     {
       "label": "broad-1",
@@ -1209,7 +1207,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:28:03.594Z",
+      "startedAt": "2026-05-08T04:24:31.983Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1219,7 +1217,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 784
+      "durationMs": 768
     },
     {
       "label": "seed-2",
@@ -1235,9 +1233,9 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 5,
-      "rejectedCount": 5,
-      "startedAt": "2026-05-07T06:28:04.378Z",
+      "resultCount": 7,
+      "rejectedCount": 3,
+      "startedAt": "2026-05-08T04:24:32.751Z",
       "results": [
         {
           "platform": "web",
@@ -1273,6 +1271,47 @@
             "topic:reasoning",
             "venue:acl",
             "source:high-signal-url"
+          ],
+          "queryLabel": "seed-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "seed",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_25069f2ef7444252",
+          "title": "ACL 2026  NOSE:让AI学会「闻」,首个统一分子-受体-语义的三模态嗅觉表征框架",
+          "snippet": "<p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3865921824-B1C6B00574CE9B950907344F33258C41/0?fmt=jpg&size=72&h=518&w=1032&ppv=1' data-aigc-mark='2'/></p><p>作者 | 论文团队</p><p>编辑丨ScienceAI</p><p>视觉有像素,听觉有频谱,这些物理量与感知之间存在稳定的映射。但嗅觉截然不同,同一个分子可能激活不同的受体组合,同一种气味在不同人的嘴里可以是「花香」也可以是「肥皂味」。如何让 AI 理解「分子闻起来是什么味道」,一直是 AI for Science 领域一个独特而前沿的挑战。</p><p>近日,厦门大学程俊教授团队与深势科技合作,提出了 NOSE(Neural Olfactory-Semantic Embedding)框架。该工作首次将分子结构、嗅觉受体序列和自然语言描述三种模态统一到一个连续的表征空间中,在覆盖三个感知层次的 11 个下游任务上达到 SOTA,并展现出优异的零样本泛化能力。研究成果已被自然语言处理顶级会议 ACL 2026 主会录用。</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3879808334-BA067D2414C9FFDD64C620B0779A9ADA/0?fmt=jpg&size=67&h=363&w=1080&ppv=1' data-aigc-mark='0'/></p><p>论文链接:http",
+          "publishDate": "2026-04-30",
+          "relevanceScore": 16,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "paper:论文",
+            "announcement:录用",
+            "topic:多模态",
+            "venue:acl"
+          ],
+          "queryLabel": "seed-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "seed",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_26369eeb03b38752",
+          "title": "ACL 2026  别轻易给AI发「」,它可能会删掉你的整个主目录",
+          "snippet": "<p>本文第一作者降伟鹏,西安交通大学在读博士生,主要研究方向为大模型安全与自动化测评。共同第一作者张笑宇,南洋理工大学博士后研究员,研究方向为软件工程、大模型安全与人机交互。通讯作者沈超,西安交通大学二级教授、IEEE Fellow、国家级高层次人才特聘教授,长期从事人工智能可信与安全、人机交互行为分析研究。</p><p>想象这样一个场景。</p><p>凌晨,你正在用 AI 代码助手处理一个项目。配合得很顺畅,AI 帮你创建了临时目录 tmp,你指挥它在这个目录下跑了几组测试,一切都按预期走。收尾时,你随手敲下一句话:</p><p>&gt; \"任务完成,删掉这个目录~\"</p><p>语气轻松,就像跟同事说 \"搞定,收摊吧\"。结尾那个~,只是习惯性的语气符号,无伤大雅。AI 没有任何迟疑。它 \"理解\" 了你的意思,执行了命令。几秒钟后,你的整个用户主目录消失了。因为在 Shell 语言里,~ 是指向主目录的路径符号。AI 没有读出你的语气,它读出的是一条删除指令:`rm -rf ~`。</p><p>无报错。无警告。不可逆。</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-2254118224-DE0EC5D0E604B195266B1B82AEB04FAA/0?fmt=png&size=583&h=677&w=1180&ppv=1' data-aigc-mark='0'/></p><p>近日,来自西安交通大学、南洋理工大学和马萨诸塞大学阿默斯特分校的联合研究团队,首次系统性揭示了大型语言模型中一类此前长期被忽视的安全",
+          "publishDate": "2026-04-27",
+          "relevanceScore": 22,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "paper:论文",
+            "announcement:录用",
+            "topic:llm",
+            "topic:large language model",
+            "topic:agent",
+            "topic:大模型",
+            "venue:acl"
           ],
           "queryLabel": "seed-2",
           "queryIntent": "",
@@ -1319,22 +1358,13 @@
         {
           "platform": "web",
           "stage": "seed",
-          "url": "https://github.com/MM-Speech/WavAlign",
-          "title": "GitHub - MM-Speech/WavAlign: Official repository for \"WavAlign\" (ACL 2026 Findings) . An Post-Train Framework for spoken dialogue models",
-          "snippet": "Name Name Last commit message Last commit date Latest commit Eve1f update Apr 17, 2026 5b680c3 · Apr 17, 2026 History 8 Commits Open commit details 8 Commits assets assets Release WavAlign training code and README Apr 16, 2026 config config Release WavAlign training code and README Apr 16, 2026 dataset dataset update Apr 17, 2026 dpo dpo Release WavAlign training code and README Apr 16, 2026 examples examples Release WavAlign training code and README Apr 16, 2026 scripts scripts Release WavAlign training code and README Apr 16, 2026 trainer trainer update Apr 17, 2026 utils utils update Apr 17, 2026 .gitignore .gitignore Release WavAlign training code and README Apr 16, 2026 README.md README",
-          "publishDate": "2026-04-17",
-          "relevanceScore": 33,
+          "url": "https://manpages.ubuntu.com/manpages/resolute/man3/acl_error.3.html",
+          "title": "Ubuntu Manpage: acl_error - convert an ACL error code to a text message",
+          "snippet": "Linux Access Control Lists library (libacl, -lacl). #include < sys/types.h > #include < acl/libacl.h > const char * acl_error ( int code ); The acl_error () function converts an ACL error code such as returned by the acl_check () function to a text message describing the error condition. In the “POSIX” locale, acl_check () returns the following descriptions for the error codes. ACL_MULTI_ERROR “Multiple entries” ACL_DUPLICATE_ERROR “Duplicate entries” ACL_MISS_ERROR “Missing or wrong entry” ACL_ENTRY_ERROR “Invalid entry type” The acl_error () function returns a text message if the error code is recognized, and a value of (const char *)NULL otherwise. This is a non-portable, Linux specific e",
+          "publishDate": "2026-04-28",
+          "relevanceScore": 4,
           "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "paper:project page",
-            "announcement:our paper",
-            "announcement:accepted to",
-            "announcement:official repo",
-            "topic:multimodal",
-            "topic:post-training",
-            "venue:acl",
-            "source:high-signal-url"
+            "venue:acl"
           ],
           "queryLabel": "seed-2",
           "queryIntent": "",
@@ -1345,12 +1375,22 @@
         {
           "platform": "web",
           "stage": "seed",
-          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_20569e049c897652",
-          "title": "CAC 2026官方合作伙伴公布",
-          "snippet": "<p>完美世界电竞将于2026年5月20日-5月24日,在中国上海举办世界级赛事CAC 2026,总奖金为100万美元!PVISION、Falcons、MOUZ、Aurora、MGLZ、BC.G、TYLOO和LVG等16支战队云集中国,为广大中国玩家带来CS年度超级盛宴。</p><p>随着CAC 2026赛事的临近,我们很高兴地正式宣布:</p><p>官方战略合作伙伴:NVIDIA、英特尔、AGON爱攻、三星品牌存储</p><p>官方赛事合作伙伴:ROG玩家国度外设、机械革命、ZHIKE挚科内存、MSI微星显卡、Morphling变体精灵</p><p>技术支持合作伙伴:Caton</p><p>作为本届赛事的官方合作伙伴,他们将与完美世界电竞一起助力全球顶尖的CS选手们在赛场打出极限创造经典。</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-1117121381-ED18C6DA1AE6CD6AD377FC0F933E69E3/0?fmt=png&size=381&h=1080&w=1920&ppv=1' data-aigc-mark='0'/></p><p>CAC 2026官方赛事用机及推荐配置:</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-1815221811-4895DDDEA92528ABD8F0877BD70FD08E/0?fmt=jpg&size=155&h=720&w=1280&ppv=1' data-aigc-mark='0'/></p>",
-          "publishDate": "2026-04-16",
-          "relevanceScore": 2,
-          "relevanceSignals": [],
+          "url": "https://github.com/llmeval/llmeval-3",
+          "title": "GitHub - llmeval/LLMEval-Fair: [ACL 2026] A large-scale longitudinal study on robust and fair evaluation of LLMs — 200K generative",
+          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 43 Commits 43 Commits data data     pic pic     release release     README.md README.md     README_zh.md README_zh.md     View all files Repository files navigation LLMEval-Fair: A Large-Scale Longitudinal Study on Robust and Fair Evaluation of Large Language Models Note: For the Chinese version of this README, please refer to README_zh.md . 🔔 News 🏆 Our paper has been accepted to the main conference of ACL 2026 . 📊 We have updated the leaderboard with additional model results and refreshed the related tables and figures. 🎉 Our paper is released on arXiv:",
+          "publishDate": "2026-04-10",
+          "relevanceScore": 20,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:our paper",
+            "announcement:accepted to",
+            "topic:llm",
+            "topic:large language model",
+            "venue:acl",
+            "reject:non-paper-page",
+            "source:high-signal-url"
+          ],
           "queryLabel": "seed-2",
           "queryIntent": "",
           "parentUrl": ""
@@ -1400,27 +1440,6 @@
           "queryLabel": "seed-2",
           "queryIntent": "",
           "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://github.com/franciscoliu/SKU",
-          "title": "GitHub - franciscoliu/SKU: Official code implementation of SKU, Accepted by ACL 2024 Findings · GitHub",
-          "snippet": "franciscoliu/SKU   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 9 Commits 9 Commits harmful_unlearn harmful_unlearn     README.md README.md     llm_unlearn.yml llm_unlearn.yml     main.py main.py     task_vector.py task_vector.py     utils.py utils.py     View all files Repository files navigation Abstract The rapid advancement of Large Language Models (LLMs) has demonstrated their vast potential across various domains, attributed to their extensive pretraining knowledge and exceptional generalizability. However, LLMs often encounter challenges in generating harmful content when faced with problematic pro",
-          "publishDate": "2026-05-05",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "announcement:accepted by",
-            "announcement:official code",
-            "topic:llm",
-            "topic:large language model",
-            "venue:acl",
-            "reject:non-paper-page",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "seed-2",
-          "queryIntent": "",
-          "parentUrl": ""
         }
       ],
       "responseKeys": [
@@ -1430,7 +1449,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1532
+      "durationMs": 1515
     },
     {
       "label": "repository-2",
@@ -1446,9 +1465,9 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 7,
-      "rejectedCount": 3,
-      "startedAt": "2026-05-07T06:28:05.910Z",
+      "resultCount": 4,
+      "rejectedCount": 6,
+      "startedAt": "2026-05-08T04:24:34.266Z",
       "results": [
         {
           "platform": "web",
@@ -1468,30 +1487,6 @@
             "topic:rag",
             "venue:acl",
             "source:high-signal-url"
-          ],
-          "queryLabel": "repository-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "repository",
-          "url": "https://github.com/wzb-bupt/VGPO",
-          "title": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning · GitHub",
-          "snippet": "wzb-bupt/VGPO   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 5 Commits 5 Commits assets assets     examples examples     scripts scripts     verl verl     README.md README.md     requirements.txt requirements.txt     setup.py setup.py     train_vgpo_7B.sh train_vgpo_7B.sh     View all files Repository files navigation 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 (Main Conference). 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to signal dilution — generic text tokens receive",
-          "publishDate": "2026-04-25",
-          "relevanceScore": 30,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:preprint",
-            "paper:arxiv",
-            "announcement:our work",
-            "announcement:our paper",
-            "announcement:accepted by",
-            "topic:multimodal",
-            "topic:reasoning",
-            "topic:rag",
-            "venue:acl"
           ],
           "queryLabel": "repository-2",
           "queryIntent": "",
@@ -1538,36 +1533,6 @@
         {
           "platform": "web",
           "stage": "repository",
-          "url": "https://github.com/spotfiresoftware/spotfire-mods/commits",
-          "title": "Commits · spotfiresoftware/spotfire-mods · GitHub",
-          "snippet": "Commits Branch selector   master User selector All users All time Commit History Copy full SHA for f47da03 Copy full SHA for c5de482 Copy full SHA for 8a370bc Copy full SHA for b68cc32 Copy full SHA for 5e1c7d7 Copy full SHA for 19f0523 Copy full SHA for ff4a870 Copy full SHA for 048eb42 Copy full SHA for 9f40964 Copy full SHA for dab6352 Copy full SHA for e3cb7b6 Replace dr-spotfire-mods-react-demo-property with proper ts-react example Copy full SHA for ea66c6d Copy full SHA for 6e36463 Copy full SHA for 98f4b8a Copy full SHA for 4089ba0 Copy full SHA for 032110d Copy full SHA for 26e3bb1 Copy full SHA for 5bb0163 Copy full SHA for f0cab5b Copy full SHA for 81a0d1f Copy full SHA for 4aed436",
-          "publishDate": "2026-04-17",
-          "relevanceScore": 4,
-          "relevanceSignals": [
-            "source:high-signal-url"
-          ],
-          "queryLabel": "repository-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "repository",
-          "url": "https://github.com/GitOfUser/workbuddy-checkin",
-          "title": "GitHub - GitOfUser/workbuddy-checkin: 本技能用于自动化执行 WorkBuddy 应用程序的每日签到操作,通过模拟用户点击来完成签到领取积分的流程。 · ...",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit GitOfUser feat(脚本): 改进自动签到脚本并更新文档 Open commit details Apr 18, 2026 e6651e4 · Apr 18, 2026 History 3 Commits Open commit details 3 Commits scripts scripts feat(脚本): 改进自动签到脚本并更新文档 Apr 18, 2026 README.md README.md feat(脚本): 改进自动签到脚本并更新文档 Apr 18, 2026 SKILL.md SKILL.md first commit Apr 11, 2026 View all files Repository files navigation WorkBuddy 每日签到工具 自动完成 WorkBuddy 每日签到,解放双手,不再错过积分! 功能特点 🚀 自动检测 :自动检测 WorkBuddy 是否运行,未运行则自动启动 🤖 智能签到 :自动点击用户菜单和签到按钮 ⏰ 定时任务 :支持配置定时自动签到(推荐每天 09:00) 🔄 多平台支持 :提供 PowerShell(Windows)和Shell(Linux/macOS)两种版本 快速开始 前提条件 WorkBuddy 已配置 QQ 浏览器内核 屏幕分辨率建",
-          "publishDate": "2026-04-18",
-          "relevanceScore": 4,
-          "relevanceSignals": [
-            "source:high-signal-url"
-          ],
-          "queryLabel": "repository-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "repository",
           "url": "https://github.com/srimur/YoutubePlaylistScraper",
           "title": "GitHub - srimur/playlistpipe: A simple CLI tool to extract and save video details from YouTube playlists in Notion Checklist or text or",
           "snippet": "Name Name Last commit message Last commit date Latest commit srimur Stop tracking .claude/ local settings Apr 18, 2026 f06d214 · Apr 18, 2026 History 5 Commits Open commit details 5 Commits src/ playlistpipe src/ playlistpipe Fix ordering, channel fallback, friendly errors (0.1.2) Apr 18, 2026 tests tests initial commit Apr 18, 2026 .gitignore .gitignore Stop tracking .claude/ local settings Apr 18, 2026 LICENSE LICENSE initial commit Apr 18, 2026 README.md README.md Document interactive mode as the primary UX in README Apr 18, 2026 pyproject.toml pyproject.toml Fix ordering, channel fallback, friendly errors (0.1.2) Apr 18, 2026 View all files Repository files navigation Turn a YouTube play",
@@ -1587,33 +1552,22 @@
         {
           "platform": "web",
           "stage": "repository",
-          "url": "https://github.com/nasa-ammos/slim-leaderboard",
-          "title": "GitHub - NASA-AMMOS/slim-leaderboard: Generates a report of SLIM best practices compliance. · GitHub",
-          "snippet": "Name Name Last commit message Last commit date Latest commit github-actions[bot] 🏆 Auto: Update SLIM Leaderboards failure Apr 12, 2026 ec5421b · Apr 12, 2026 History 258 Commits Open commit details 258 Commits .github .github Update DORA metrics badges [skip ci] Apr 12, 2026 examples examples 🏆 Auto: Update SLIM Leaderboards Apr 12, 2026 src/ jpl src/ jpl fix: version bump Jun 30, 2025 .gitignore .gitignore Deploy to PyPI, install with pip; removed some vulnerabilities…and more! Nov 5, 2024 CHANGELOG.md CHANGELOG.md Updated version Apr 23, 2025 CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md Updated repo essential files Oct 12, 2023 CONTRIBUTING.md CONTRIBUTING.md Updated repo essential files Oct 12",
-          "publishDate": "2026-04-12",
-          "relevanceScore": -1,
+          "url": "https://github.com/HiThink-Research/FinMTM",
+          "title": "GitHub - HiThink-Research/FinMTM: [ACL 2026] FinMTM: A Multi-Turn Multimodal Benchmark for Financial Reasoning and Agent Evaluation ·",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 60 Commits 60 Commits inference inference     judge judge     static static     README.md README.md     requirements.txt requirements.txt     View all files Repository files navigation Chenxi Zhang 1,2* , Ziliang Gan 1,3* , Liyun Zhu 1* , Youwei Pang 4 , Qing Zhang 5 , Rongjunchen Zhang 1 ♠ 1 HiThink Research   2 Wuhan University   3 Zhejiang University   4 Nanyang Technological University   5 Shanghai Institute of Technology   * Equal Contribution   ♠ Corresponding Author   Correspondence: zhangrongjunchen@myhexin.com Overview of FinMTM: task types and capability coverage. Table of Contents 🔥 Updates 2026-04 : FinMTM ha",
+          "publishDate": "2026-04-23",
+          "relevanceScore": 21,
           "relevanceSignals": [
-            "reject:non-paper-page",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "repository-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "repository",
-          "url": "https://blog.github.com/",
-          "title": "Home - The GitHub Blog",
-          "snippet": "Skip to content / Blog Changelog Docs Customer stories Try GitHub Copilot See what's new Categories AI & ML Back AI & ML Learn about artificial intelligence and machine learning across the GitHub ecosystem and the wider industry. Generative AI Learn how to build with generative AI. GitHub Copilot Change how you work with GitHub Copilot. LLMs Everything developers need to know about LLMs. Machine learning Machine learning tips, tricks, and best practices. How AI code generation works Explore the capabilities and benefits of AI code generation and how it can improve your developer experience. Learn more Developer skills Back Developer skills Resources for developers to grow in their skills and",
-          "publishDate": "2026-04-20",
-          "relevanceScore": 5,
-          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:our work",
             "topic:llm",
-            "topic:vla",
+            "topic:vlm",
+            "topic:multimodal",
+            "topic:agent",
+            "topic:reasoning",
             "topic:rag",
-            "reject:non-paper-page",
-            "source:high-signal-url"
+            "venue:acl"
           ],
           "queryLabel": "repository-2",
           "queryIntent": "",
@@ -1622,13 +1576,61 @@
         {
           "platform": "web",
           "stage": "repository",
-          "url": "https://securitylab.github.com/",
-          "title": "GitHub Security Lab  Securing open source software, together.",
-          "snippet": "skip to content Securing open source software, together We are a team of security experts who cultivate a collaborative community where developers and security professionals come together to secure open source software. Protect your project Trusted by 1,000 maintainers. Done in 15 minutes. Our Mission Enhance security by fostering global collaboration. Contributions from maintainers, developers, and security researchers around the world push us forward, making the open source software a better place. Security Research We do the hard work, you can use it. Dive into security research on open-source projects to explore new and emerging threats, and learn how to mitigate them so that you can mak",
-          "publishDate": "2026-04-24",
+          "url": "https://github.com/MiliLab/Omni-I2C",
+          "title": "GitHub - MiliLab/Omni-I2C: Official repo for [ACL 2026] \"A Holistic Benchmark for High-Fidelity Image-to-Code Generation\" · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit ZZsnake update checklist annotation Apr 26, 2026 e300e6f · Apr 26, 2026 History 19 Commits Open commit details 19 Commits VLMEvalKit_infer VLMEvalKit_infer update infer readme Feb 10, 2026 doc/ images doc/ images add result Mar 21, 2026 eval_pipeline eval_pipeline deepseek code eval Feb 11, 2026 README.md README.md update checklist annotation Apr 26, 2026 requirements.txt requirements.txt release 1.0 Feb 11, 2026 View all files Repository files navigation Omni-I2C 1 Wuhan University, Wuhan, China, 2 Independent Researcher, China, 3 Xidian University, Xi'an, China, 4 Guangzhou University, Guangzhou, China jingzhang.cv@gmail.com ,",
+          "publishDate": "2026-04-26",
+          "relevanceScore": 30,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:our paper",
+            "announcement:accepted to",
+            "announcement:official repo",
+            "topic:llm",
+            "topic:vlm",
+            "topic:multimodal",
+            "topic:agent",
+            "topic:reasoning"
+          ],
+          "queryLabel": "repository-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "repository",
+          "url": "https://github.com/hiyouga/LLaMA-Factory/wiki/%25E7%25A9%25BA%25E9%2597%25B4%25E4%25BC%2598%25E5%258C%2596",
+          "title": "GitHub - hiyouga/LlamaFactory: Unified Efficient Fine-Tuning of 100 LLMs & VLMs (ACL 2024) · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit jiaqiw09 [v1] fix epoch and steps ( #10422 ) pending Apr 23, 2026 e0bc3c1 · Apr 23, 2026 History 3,004 Commits Open commit details 3,004 Commits .ai .ai [model] gemma4 ( #10346 ) Apr 5, 2026 .github .github [ci] add nginx cache config for Ascend NPU CI environment ( #10323 ) Mar 27, 2026 assets assets [misc] add data files ( #9224 ) Oct 2, 2025 data data [data] add SGSC zero-hallucination B2B dataset (NOO-Protocol) ( #10284 ) Mar 20, 2026 docker docker [docker] update npu docker ( #10268 ) Mar 10, 2026 docs docs [model] update constants ( #10220 ) Feb 26, 2026 examples examples [v1] add deepspeed zero3 trigger for low memory usage ",
+          "publishDate": "2026-04-23",
+          "relevanceScore": 39,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:our paper",
+            "topic:llm",
+            "topic:large language model",
+            "topic:vlm",
+            "topic:vision-language",
+            "topic:multimodal",
+            "topic:multi-modal",
+            "topic:agent"
+          ],
+          "queryLabel": "repository-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "repository",
+          "url": "https://github.com/opentofu/terraform-provider-dns",
+          "title": "GitHub - opentofu/terraform-provider-dns: Utility provider that supports DNS updates (RFC 2136) and can optionally be configured with secret",
+          "snippet": "Folders and files Name Name Last commit message Last commit date Latest commit OpenTofu Core Development Team Apply GitHub workflow changes Apr 9, 2026 3c16037 · Apr 9, 2026 History 650 Commits Open commit details 650 Commits .changes .changes prep for release v3.5.0 ( hashicorp#610 ) Jan 28, 2026 .github .github Apply GitHub workflow changes Apr 9, 2026 .release .release Change release tooling to release with HashiCorp CRT ( hashicorp#545 ) Apr 28, 2025 META.d META.d Add catalog metadata (META.d) ( hashicorp#553 ) May 13, 2025 docs docs Replace words in IPv6 examples ( hashicorp#604 ) Jan 23, 2026 examples examples Replace words in IPv6 examples ( hashicorp#604 ) Jan 23, 2026 internal inter",
+          "publishDate": "2026-04-09",
           "relevanceScore": 1,
           "relevanceSignals": [
-            "announcement:our work",
+            "topic:rag",
             "reject:non-paper-page",
             "source:high-signal-url"
           ],
@@ -1644,7 +1646,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1539
+      "durationMs": 2110
     },
     {
       "label": "paper-index-2",
@@ -1662,7 +1664,7 @@
       "rawResultCount": 10,
       "resultCount": 2,
       "rejectedCount": 8,
-      "startedAt": "2026-05-07T06:28:07.450Z",
+      "startedAt": "2026-05-08T04:24:36.376Z",
       "results": [
         {
           "platform": "arxiv",
@@ -1787,18 +1789,22 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/stat.AP/new",
-          "title": "Applications",
-          "snippet": "Total of 12 entries Showing up to 2000 entries per page: fewer | more | all New submissions (showing 1 of 1 entries) Title: Using Linked Micromaps to Explore Complex Structures in Official Statistics Subjects: Applications (stat.AP) Over the past decade, researchers have focused increasing levels of attention on the use of survey and non-survey data to inform decision-making by multiple stakeholders. Work with such data generally requires extensive exploration before a statistics practitioner focuses on specific steps in model building and inference. For many of the resulting initial exploratory analyses, crucial issues center on the extent to which empirical results may vary over geography ",
-          "publishDate": "2026-05-04",
-          "relevanceScore": 8,
+          "url": "https://arxiv.org/list/cs.CV/pastweek",
+          "title": "Computer Vision and Pattern Recognition",
+          "snippet": "Title: Seeing Fast and Slow: Learning the Flow of Time in Videos Yen-Siang Wu , Rundong Luo , Jingsen Zhu , Tao Tu , Ali Farhadi , Matthew Wallingford , Yu-Chiang Frank Wang , Steve Marschner , Wei-Chiu Ma Comments: Project page: this https URL Subjects: Computer Vision and Pattern Recognition (cs.CV) ; Artificial Intelligence (cs.AI); Graphics (cs.GR) Title: Seeing Without Eyes: 4D Human-Scene Understanding from Wearable IMUs Hao-Yu Hsu , Tianhang Cheng , Jing Wen , Alexander G. Schwing , Shenlong Wang Comments: Project page: this https URL Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Context Unrolling in Omni Models Ceyuan Yang , Zhijie Lin , Yang Zhao , Fei Xiao , Hao ",
+          "publishDate": "2026-04-24",
+          "relevanceScore": 48,
           "relevanceSignals": [
             "paper:paper",
             "paper:arxiv",
-            "topic:rag",
-            "venue:acl",
-            "reject:non-paper-page",
-            "source:high-signal-url"
+            "paper:project page",
+            "announcement:accepted to",
+            "announcement:accepted by",
+            "announcement:to appear",
+            "topic:llm",
+            "topic:vlm",
+            "topic:vision-language",
+            "topic:mllm"
           ],
           "queryLabel": "paper-index-2",
           "queryIntent": "",
@@ -1812,7 +1818,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2138
+      "durationMs": 2259
     },
     {
       "label": "social-introducing-21",
@@ -1830,7 +1836,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:28:09.588Z",
+      "startedAt": "2026-05-08T04:24:38.635Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1840,7 +1846,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1128
+      "durationMs": 1089
     },
     {
       "label": "homepage-2",
@@ -1856,9 +1862,9 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 6,
-      "rejectedCount": 4,
-      "startedAt": "2026-05-07T06:28:10.716Z",
+      "resultCount": 5,
+      "rejectedCount": 5,
+      "startedAt": "2026-05-08T04:24:39.724Z",
       "results": [
         {
           "platform": "web",
@@ -1875,22 +1881,6 @@
             "announcement:official implementation",
             "topic:multimodal",
             "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://www.donews.com/news/detail/8/6536836.html",
-          "title": "GitHub因AI驱动流量激增启动底层重构",
-          "snippet": "2026年4月29日,GitHub官方宣布正重构底层基础设施,以应对AI编程与智能体应用带来的30倍级负载增长。自2025年10月启动扩容计划以来,平台已频发故障,包括4月23日影响2092个合并请求的功能回退、4月27日Elasticsearch搜索服务中断。为提升稳定性,GitHub正实施核心服务物理隔离、迁移部分算力至Azure云,并推进多云容灾架构。当前优先级为保障可用性、再扩容、后迭代功能。团队已优化多项性能瓶颈,并致歉用户,承诺加强故障响应与沟通��",
-          "publishDate": "2026-04-29",
-          "relevanceScore": 5,
-          "relevanceSignals": [
-            "topic:智能体",
-            "venue:www"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -1940,6 +1930,24 @@
         {
           "platform": "web",
           "stage": "homepage",
+          "url": "https://github.com/A-WASIF/Multimodal-Sarcasm-Explanation-MuSE-",
+          "title": "GitHub - A-WASIF/Multimodal-Sarcasm-Explanation-MuSE-: MuSE is a NLP model for explaining sarcastic social media posts using both text",
+          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 1 Commit 1 Commit MORE-PLUS-DATASET MORE-PLUS-DATASET     .gitignore .gitignore     README.md README.md     main.ipynb main.ipynb     View all files Repository files navigation Multimodal Sarcasm Explanation (MuSE) 🧠 Project Overview This project is focused on Multimodal Sarcasm Explanation (MuSE) . The goal is to generate natural language explanations for sarcastic social media posts by leveraging both textual and visual information. It is based on a simplified version of the TURBO architecture proposed in this PAPER . 📁 Dataset: MORE+ (MuSE) The dataset i",
+          "publishDate": "2026-04-13",
+          "relevanceScore": 10,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:multimodal",
+            "topic:rag",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "homepage-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "homepage",
           "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
           "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
           "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit Amiannn Change citation format in README Open commit details Apr 17, 2026 ca7c627 · Apr 17, 2026 History 7 Commits Open commit details 7 Commits egs egs init repo Aug 14, 2025 megarag megarag init repo Aug 14, 2025 test test init repo Aug 14, 2025 .env.sh .env.sh init repo Aug 14, 2025 .gitignore .gitignore init repo Aug 14, 2025 LICENSE LICENSE init repo Aug 14, 2025 README.md README.md Change citation format in README Apr 17, 2026 requirements_mineru.txt requirements_mineru.txt init repo Aug 14, 2025 setup.py setup.py init repo Aug 14, 2025 View all files Repository ",
@@ -1959,38 +1967,26 @@
           "queryLabel": "homepage-2",
           "queryIntent": "",
           "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://github.com/A-WASIF/Multimodal-Sarcasm-Explanation-MuSE-",
-          "title": "GitHub - A-WASIF/Multimodal-Sarcasm-Explanation-MuSE-: MuSE is a NLP model for explaining sarcastic social media posts using both text",
-          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 1 Commit 1 Commit MORE-PLUS-DATASET MORE-PLUS-DATASET     .gitignore .gitignore     README.md README.md     main.ipynb main.ipynb     View all files Repository files navigation Multimodal Sarcasm Explanation (MuSE) 🧠 Project Overview This project is focused on Multimodal Sarcasm Explanation (MuSE) . The goal is to generate natural language explanations for sarcastic social media posts by leveraging both textual and visual information. It is based on a simplified version of the TURBO architecture proposed in this PAPER . 📁 Dataset: MORE+ (MuSE) The dataset i",
-          "publishDate": "2026-04-13",
-          "relevanceScore": 10,
-          "relevanceSignals": [
-            "paper:paper",
-            "topic:multimodal",
-            "topic:rag",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
         }
       ],
       "rejected": [
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://www.github.com/github/",
-          "title": "GitHub · GitHub",
-          "snippet": "How people build software. Verified We've verified that the organization github controls the domain: github.com United States of America Hey, this is us 👋 Yes, we are building GitHub on GitHub. In fact, we’ve been doing this since October 19th, 2007 . That's when we made our first commit. Since then we pushed over 2.5 million commits , opened over 1 million issues , submitted roughly 650k pull requests across 4357 repositories from over 50 countries . 🤯 But that's just us. We are proud to be part of the work of millions of developers, companies and robots across the solar system. 🪐 Yes, Robots ! 🍿 An interconnected community The open source community is the 💗 heart of GitHub and fundame",
-          "publishDate": "2026-05-04",
-          "relevanceScore": 2,
+          "url": "https://github.com/MikeWangWZHL/TriMPI",
+          "title": "GitHub - MikeWangWZHL/TriMPI: Official repo for paper: Multimodal Policy Internalization for Conversational Agents · GitHub",
+          "snippet": "MikeWangWZHL/TriMPI main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 3 Commits 3 Commits static static README.md README.md index.html index.html View all files Repository files navigation Zhenhailong Wang 1 , Jiateng Liu 1 , Amin Fazel 2 , Ritesh Sarkhel 2 , Xing Fan 2 , Xiang Li 2 , Chenlei Guo 2 , Heng Ji 2 , Ruhi Sarikaya 2 1 University of Illinois Urbana-Champaign 2 Amazon Abstract Modern conversational agents like ChatGPT and Alexa+ rely on predefined policies specifying metadata, response styles, and tool-usage rules. As these LLM-based systems expand to support diverse business and user queries, such pol",
+          "publishDate": "2026-05-03",
+          "relevanceScore": 18,
           "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:official repo",
+            "topic:llm",
+            "topic:multimodal",
             "topic:agent",
-            "venue:www",
+            "topic:reasoning",
+            "topic:reinforcement learning",
             "reject:non-paper-page",
             "source:high-signal-url"
           ],
@@ -2001,22 +1997,18 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://github.com/MEmbodied/awesome-embodied-navigation-paper-list",
-          "title": "GitHub - MEmbodied/awesome-embodied-navigation-paper-list · GitHub",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 2 Commits 2 Commits assets assets .gitignore .gitignore README.md README.md View all files Repository files navigation Foundation Models for Embodied Navigation: A Survey Abstract The remarkable advancements of embodied navigation, the process of physically situated agents perceiving and reasoning through egocentric observations to reach target locations, have recently been reshaped by the emergence of foundation models. Departing from traditional, task-specific policies trained from scratch on limited datasets, this new paradigm leverages the reasoning and multi",
-          "publishDate": "2026-05-02",
-          "relevanceScore": 60,
+          "url": "https://github.com/pixeltable/pixeltable/",
+          "title": "GitHub - pixeltable/pixeltable: Data Infrastructure providing a declarative, incremental approach for multimodal AI workloads. · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 1,338 Commits 1,338 Commits .github .github     dashboard dashboard     docs docs     pixeltable pixeltable     scripts scripts     tests tests     tool tool     .gitignore .gitignore     .markdownlint.yaml .markdownlint.yaml     AGENTS.md AGENTS.md     CLAUDE.md CLAUDE.md     CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md     CONTRIBUTING.md CONTRIBUTING.md     LICENSE LICENSE     Makefile Makefile     README.md README.md     mkdocs.yml mkdocs.yml     pyproject.toml pyproject.toml     uv.lock uv.lock     View all files Repository files navigation The only open source Python library providing declarative, transactional data infras",
+          "publishDate": "2026-04-11",
+          "relevanceScore": 6,
           "relevanceSignals": [
-            "paper:paper",
-            "paper:preprint",
-            "paper:arxiv",
-            "paper:technical report",
             "topic:llm",
-            "topic:large language model",
-            "topic:vlm",
-            "topic:vision-language",
-            "topic:vision language",
-            "topic:multimodal"
+            "topic:multimodal",
+            "topic:agent",
+            "topic:rag",
+            "reject:non-paper-page",
+            "source:high-signal-url"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -2049,19 +2041,22 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://github.com/hoel-bagard/NeMo",
-          "title": "GitHub - hoel-bagard/NeMo: A scalable generative AI framework built for researchers and developers working on Large Language Models, Multimodal",
-          "snippet": "Name Name Last commit message Last commit date Latest commit   History 6,611 Commits 6,611 Commits .github .github     docs docs     examples examples     external external     nemo nemo     requirements requirements     scripts scripts     tests tests     tools tools     tutorials tutorials     .dockerignore .dockerignore     .gitignore .gitignore     .pre-commit-config.yaml .pre-commit-config.yaml     .readthedocs.yml .readthedocs.yml     CITATION.cff CITATION.cff     CONTRIBUTING.md CONTRIBUTING.md     Dockerfile Dockerfile     Dockerfile.ci Dockerfile.ci     LICENSE LICENSE     README.rst README.rst     pyproject.toml pyproject.toml     reinstall.sh reinstall.sh     setup.py setup.py    ",
-          "publishDate": "2026-05-01",
-          "relevanceScore": 8,
+          "url": "https://github.com/MEmbodied/awesome-embodied-navigation-paper-list",
+          "title": "GitHub - MEmbodied/awesome-embodied-navigation-paper-list · GitHub",
+          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 2 Commits 2 Commits assets assets     .gitignore .gitignore     README.md README.md     View all files Repository files navigation Foundation Models for Embodied Navigation: A Survey Abstract The remarkable advancements of embodied navigation, the process of physically situated agents perceiving and reasoning through egocentric observations to reach target locations, have recently been reshaped by the emergence of foundation models. Departing from traditional, task-specific policies trained from scratch on limited datasets, this new paradigm leverages the rea",
+          "publishDate": "2026-05-07",
+          "relevanceScore": 60,
           "relevanceSignals": [
+            "paper:paper",
+            "paper:preprint",
+            "paper:arxiv",
+            "paper:technical report",
             "topic:llm",
             "topic:large language model",
-            "topic:multimodal",
-            "topic:rag",
-            "topic:reinforcement learning",
-            "reject:non-paper-page",
-            "source:high-signal-url"
+            "topic:vlm",
+            "topic:vision-language",
+            "topic:vision language",
+            "topic:multimodal"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -2075,7 +2070,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2552
+      "durationMs": 2194
     },
     {
       "label": "chinese-2",
@@ -2093,7 +2088,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:28:13.268Z",
+      "startedAt": "2026-05-08T04:24:41.918Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -2103,7 +2098,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 802
+      "durationMs": 955
     },
     {
       "label": "broad-2",
@@ -2121,7 +2116,7 @@
       "rawResultCount": 10,
       "resultCount": 3,
       "rejectedCount": 7,
-      "startedAt": "2026-05-07T06:28:14.070Z",
+      "startedAt": "2026-05-08T04:24:42.873Z",
       "results": [
         {
           "platform": "web",
@@ -2156,19 +2151,19 @@
           "parentUrl": ""
         },
         {
-          "platform": "arxiv",
+          "platform": "web",
           "stage": "broad",
-          "url": "https://arxiv.org/list/cs.CV/recent",
-          "title": "Computer Vision and Pattern Recognition",
-          "snippet": "Title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation Hyeonwoo Kim , Jeonghwan Kim , Kyungwon Cho , Hanbyul Joo Comments: Project Page: this https URL Subjects: Computer Vision and Pattern Recognition (cs.CV) Title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series Thorsten Hoeser , Felix Bachofer , Claudia Kuenzer Comments: 25 pages, 16 figures Subjects: Computer Vision and Pattern Recognition (cs.CV) ; Machine Learning (cs.LG) Title: Adapting TrOCR for Printed Tigrinya Text Recognition: Word-Aware Loss Weighting for Cross-Script Transfer Learning Yonatan Haile Medhanie , Yuanhua Ni Comments: Code",
-          "publishDate": "2026-04-23",
-          "relevanceScore": 13,
+          "url": "https://aistudio.baidu.com/aistudio/projectoverview/public",
+          "title": "开源项目 - 飞桨AI Studio星河社区 - 人工智能学习与实训社区",
+          "snippet": "精 【ERNIE-Image】架构解析与本地部署:16G 显卡跑通文生图 从架构原理到部署实操:ERNIE-Image 文生图模型全解析,含Base/Turbo 多风格效果实测与性能数据。 ZhijunLStudio BML Codelab 36 389 0 3 分享 精 【ERNIE-Image】量化实战:让16GB显存中端显卡也能跑30GB大模型 2026-04-15 模型太大,显卡直呼“吃不消”?通过 Int8 量化 + 手动组件生命周期管理,成功将模型压缩到 16GB 显存 可以运行的规模,生成质量几乎无损。在实际测试中,量化前后生成的图片在视觉上几乎无法区分。 AI在打野 BML Codelab 文图生成 1 266 0 喜欢 分享 精 【ERNIE-Image】论文精美海报制作 2026-04-15 Paper2Poster 是一个基于 ERNIE-5.0-thinking-preview、PaddleOCR-VL、ERNIE-Image-Turbo的学术海报自动生成应用。 会唱歌的炼丹师 BML Codelab 大模型 多模态 8 130 0 2 分享 精 【ERNIE-Image】基于ERNIE-Image的漫画风分镜头生成器 2026-04-15 本项目基于百度飞桨 ERNIE-Image 文生图模型,开发一款娱乐向漫画风分镜头生成器。用户输入文字剧情即可自动生成风格统一、构图清晰的漫画分镜,降低创作门槛,实现脑洞可视化。 非鱼子焉 BML Codelab 大模型 文图生成 6 116 0 2 分享 精 【ERNIE-Image】基于ERNIE与ERNIE-I",
+          "publishDate": "2026-04-15",
+          "relevanceScore": 11,
           "relevanceSignals": [
-            "paper:arxiv",
-            "paper:project page",
-            "topic:vision-language",
-            "topic:reasoning",
-            "source:high-signal-url"
+            "paper:paper",
+            "paper:论文",
+            "announcement:开源",
+            "topic:大模型",
+            "topic:多模态"
           ],
           "queryLabel": "broad-2",
           "queryIntent": "",
@@ -2192,23 +2187,10 @@
         {
           "platform": "web",
           "stage": "broad",
-          "url": "https://project.geovisearth.com/",
-          "title": "无标题",
-          "snippet": "提示: 即时通讯超时,请重新登录。",
-          "publishDate": "2026-05-03",
-          "relevanceScore": 0,
-          "relevanceSignals": [],
-          "queryLabel": "broad-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "broad",
           "url": "https://www.eclipse.org/",
           "title": "Eclipse Foundation  Powering Open Innovation",
           "snippet": "Skip to content Global community, European foundation The Eclipse Foundation empowers our global community with a mature,scalable, and business-friendly environment that drives open sourcecollaboration and innovation. Join us 400+ Projects 15K+ Contributors 300+ Members 20+ Collaborations Connecting the world through open collaboration Creating global impact We are a community of communities, bringing together developers,organisations, and innovators from around the globe to share knowledge,collaborate openly, and turn ideas into lasting real-world impact. Explore how you can connect, contribute, and grow with us. Collaboration models Community events Resources and services Collaboration mod",
-          "publishDate": "2026-05-05",
+          "publishDate": "2026-05-08",
           "relevanceScore": 2,
           "relevanceSignals": [
             "venue:www"
@@ -2229,6 +2211,21 @@
           "queryLabel": "broad-2",
           "queryIntent": "",
           "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "broad",
+          "url": "https://www.urdupoint.com/islam/langeweg-ramadan-calendar-sehar-aftar-timing.html",
+          "title": "Langeweg Ramadan Timing 2026 Calendar - Sehri and Iftar Timetable",
+          "snippet": "Langeweg Ramadan Timing 2026 Calendar - Sehri and Iftar Timetable Ramadan calendar 2026 Langeweg depends on today Sehri timing Langeweg and today iftar timing Langeweg for the complete month of Ramadan. Ramadan 2026 starts on Feb 19, 2026 and ends on Mar 20, 2026 in Langeweg. You can see the daily Sehri timing in Langeweg and iftar time Langeweg in Ramzan at UrduPoint. However, today Sehri timing in Langeweg is 04:11 AM, and today iftar timing Langeweg is 08:51 PM as on Apr 23, 2026 (05th Dhu l-Kada 1447). Sehri and Iftar Timing in Langeweg Today DATE SEHRI IFTAR Sehri timing in Langeweg today, on Apr 23, 2026 (05th Dhu l-Kada 1447), is 04:11 AM and Iftar timing in Langeweg today is 08:51 PM",
+          "publishDate": "2026-04-23",
+          "relevanceScore": 2,
+          "relevanceSignals": [
+            "venue:www"
+          ],
+          "queryLabel": "broad-2",
+          "queryIntent": "",
+          "parentUrl": ""
         }
       ],
       "responseKeys": [
@@ -2238,7 +2235,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1821
+      "durationMs": 1585
     },
     {
       "label": "follow-up-4",
@@ -2254,44 +2251,22 @@
       "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 5,
-      "rejectedCount": 5,
-      "startedAt": "2026-05-07T06:28:16.083Z",
+      "resultCount": 4,
+      "rejectedCount": 6,
+      "startedAt": "2026-05-08T04:24:44.655Z",
       "results": [
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
-          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 668 Commits 668 Commits CVPR2019-Papers-with-Code.md CVPR2019-Papers-with-Code.md     CVPR2020-Papers-with-Code.md CVPR2020-Papers-with-Code.md     CVPR2021-Papers-with-Code.md CVPR2021-Papers-with-Code.md     CVPR2022-Papers-with-Code.md CVPR2022-Papers-with-Code.md     CVPR2023-Papers-with-Code.md CVPR2023-Papers-with-Code.md     CVPR2024-Papers-with-Code.md CVPR2024-Papers-with-Code.md     CVPR2025-Papers-with-Code.md CVPR2025-Papers-with-Code.md     CVer学术交流群.png CVer学术交流群.png     README.md README.md     master master     View all files Repository files n",
+          "url": "https://github.com/yuvalH9/CGenReg",
+          "title": "GitHub - yuvalH9/CGenReg: [CVPR 2026] C-GenReg: Training-Free 3D Point Cloud Registration by Multi-View-Consistent Geometry-to-Image Generation",
+          "snippet": "yuvalH9/CGenReg   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 4 Commits 4 Commits assets assets     README.md README.md     View all files Repository files navigation CVPR 2026 C-GenReg enables training-free 3D registration by transforming point clouds into multi-view consistent RGB images, allowing Vision Foundation Model features to augment conventional 3D geometric features for more robust registration. News Overview C-GenReg is a zero-shot framework for point cloud registration that combines two complementary signals: a generated-RGB branch that turns geometry into multi-view consistent RGB observati",
           "publishDate": "2026-05-04",
-          "relevanceScore": 49,
+          "relevanceScore": 13,
           "relevanceSignals": [
-            "paper:paper",
-            "paper:论文",
-            "announcement:开源",
-            "topic:llm",
-            "topic:vlm",
-            "topic:vision-language",
-            "topic:mllm",
-            "topic:multimodal",
-            "topic:multi-modal",
-            "topic:agent"
-          ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "exact title GitHub verification",
-          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/minjae-yu/CubeEngine",
-          "title": "GitHub - CubeBerry/CubeEngine: OpenGL & Vulkan & DirectX 12 Rendering Engine Written In C · GitHub",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit CubeBerry Merge pull request #102 from CubeBerry/Physics&FPS Open commit details success Apr 15, 2026 aa45f2a · Apr 15, 2026 History 1,083 Commits Open commit details 1,083 Commits .github .github Update cmake-single-platform.yml Dec 6, 2025 Engine Engine Update 2D physics with rotation and tag (Object type) based collisions Apr 15, 2026 Game Game Update 2D physics with rotation and tag (Object type) based collisions Apr 15, 2026 Tools Tools Fixed .gitignore Apr 1, 2026 .gitattributes .gitattributes Initial commit Sep 17, 2023 .gitignore .gitignore Fixed .gitignore Apr 1",
-          "publishDate": "2026-04-15",
-          "relevanceScore": 8,
-          "relevanceSignals": [
-            "topic:rag",
+            "paper:preprint",
+            "paper:arxiv",
+            "venue:cvpr",
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
@@ -2415,22 +2390,22 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/nanduan/nanduan.github.io",
-          "title": "GitHub - nanduan/nanduan.github.io · GitHub",
-          "snippet": "Name Name Last commit message Last commit date Latest commit nanduan Update README.md success Apr 13, 2026 279e2a0 · Apr 13, 2026 History 801 Commits Open commit details 801 Commits _layouts _layouts Update default.html Dec 21, 2021 _sass _sass Update jekyll-theme-cayman.scss Dec 25, 2022 assets/ css assets/ css Update style.scss Dec 21, 2021 AI赋能视觉内容创作.pdf AI赋能视觉内容创作.pdf Add files via upload Nov 28, 2022 Addressing Benchmark Issues on Robustness, Bias and Metric.ACL 2021.pdf Addressing Benchmark Issues on Robustness, Bias and Metric.ACL 2021.pdf Add files via upload Aug 28, 2021 Building Information Bot with Question Understanding, Answering & Asking.ADL tutorial 2017.pdf Building Informati",
-          "publishDate": "2026-04-13",
-          "relevanceScore": 56,
+          "url": "https://github.com/Klaw2JC/CVPR2024-Papers-with-Code",
+          "title": "GitHub - Klaw2JC/CVPR2024-Papers-with-Code: CVPR 2024 论文和开源项目合集 · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 646 Commits 646 Commits CVPR2019-Papers-with-Code.md CVPR2019-Papers-with-Code.md     CVPR2020-Papers-with-Code.md CVPR2020-Papers-with-Code.md     CVPR2021-Papers-with-Code.md CVPR2021-Papers-with-Code.md     CVPR2022-Papers-with-Code.md CVPR2022-Papers-with-Code.md     CVPR2023-Papers-with-Code.md CVPR2023-Papers-with-Code.md     CVer学术交流群.png CVer学术交流群.png     README.md README.md     master master     View all files Repository files navigation CVPR 2024 论文和开源项目合集(Papers with Code) CVPR 2024 decisions are now available on OpenReview! 注1:欢迎各位大佬提交issue,分享CVPR 2024论文和开源项目! 欢迎扫码加入【CVer学术交流群】,这是最大的计算机视觉AI知识星球!每日更新,第一时间分享最新最前",
+          "publishDate": "2026-05-04",
+          "relevanceScore": 39,
           "relevanceSignals": [
             "paper:paper",
-            "paper:preprint",
             "paper:arxiv",
-            "paper:technical report",
             "paper:论文",
+            "announcement:开源",
             "topic:llm",
             "topic:large language model",
             "topic:vision-language",
+            "topic:mllm",
             "topic:multimodal",
-            "topic:agent"
+            "topic:multi-modal"
           ],
           "queryLabel": "follow-up-4",
           "queryIntent": "exact title GitHub verification",
@@ -2444,7 +2419,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1722
+      "durationMs": 1431
     },
     {
       "label": "follow-up-2",
@@ -2462,7 +2437,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:28:17.805Z",
+      "startedAt": "2026-05-08T04:24:46.086Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -2472,7 +2447,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1269
+      "durationMs": 1261
     },
     {
       "label": "follow-up-1",
@@ -2490,7 +2465,7 @@
       "rawResultCount": 10,
       "resultCount": 9,
       "rejectedCount": 1,
-      "startedAt": "2026-05-07T06:28:19.074Z",
+      "startedAt": "2026-05-08T04:24:47.347Z",
       "results": [
         {
           "platform": "web",
@@ -2526,6 +2501,30 @@
           "relevanceSignals": [
             "paper:论文",
             "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-1",
+          "queryIntent": "trace GitHub repository name across announcements and project pages",
+          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://yihangyao.github.io/",
+          "title": "Yihang Yao",
+          "snippet": "News [2026/04] One paper is accepted by ICML 2026. [2026/04] One paper is accepted by ACL 2026. [2025/09] One paper is accepted by NeurIPS 2025. [2025/06] One paper is accepted by IROS 2025. [2025/05] Listed as a notable reviewer for ICLR 2025. [2025/05] Two papers are accepted by ACL 2025. [2024/09] One paper is accepted by NeurIPS 2024. [2024/06] One paper is accepted by DMLR. [2024/05] One paper is accepted by ICML 2024. [2024/03] One paper is accepted by L4DC 2024. [2024/01] One paper is accepted by ICLR 2024. [2023/09] One paper is accepted by NeurIPS 2023. [2023/05] Two papers are accepted by ICML 2023. Talks [2025/10] Pushing Forward the Pareto Frontier of Decision Making With RL , Se",
+          "publishDate": "2026-05-01",
+          "relevanceScore": 35,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:preprint",
+            "announcement:accepted by",
+            "topic:llm",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:rag",
+            "topic:reinforcement learning",
+            "venue:aaai",
+            "venue:acl"
           ],
           "queryLabel": "follow-up-1",
           "queryIntent": "trace GitHub repository name across announcements and project pages",
@@ -2645,22 +2644,6 @@
           "queryLabel": "follow-up-1",
           "queryIntent": "trace GitHub repository name across announcements and project pages",
           "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_39569fc230882152",
-          "title": "2026年学术发表避坑指南:别让规范与排版拖了科研的后腿",
-          "snippet": "<p>在当今节奏不断加快的科研环境中,将实验数据转化为最终发表的期刊成果,是一项庞大的系统工程。很多学者在实验室里倾注了大量心血,却在最终的论文撰写阶段,因为格式错漏、引文不规范或章节逻辑松散,导致稿件迟迟无法通过初审,平白消耗了宝贵的时间。</p><p>如今,各类智能化辅助软件已经普及,但面对要求严苛的核心期刊时,<strong>大部分通用型助手往往显得“力不从心”,难以胜任从草稿到最终版面交付的精细化工作。</strong></p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3132700110-38A411BAC7194350D3F27B5E1B0CEAF3/0?fmt=png&size=787&h=720&w=1280&ppv=1' data-aigc-mark='0'/></p><p><strong>一、 为什么日常智能助手难以满足期刊标准?</strong></p><p>经过对市面上多款主流对话式智能工具的深度体验,我们不难发现:这类通用模型<strong>更擅长的是发散性思维、常识科普和初期的灵感碰撞</strong>。一旦进入严肃的学术输出阶段,它们往往会暴露以下几点局限:</p><p><strong>1. 篇幅管控与逻辑连贯性弱</strong></p><p>学术文章需要极强的论证严密性。通用工具往往受限于上下文记忆深度,在处理几千上万字的长篇幅时,容易出现前后文脱节、论点偏移的现象,很难维系期刊所要求的严密逻辑链。</p><p><strong>2. 繁琐的版式适配难题</strong></p><p>",
-          "publishDate": "2026-05-07",
-          "relevanceScore": 7,
-          "relevanceSignals": [
-            "paper:论文",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "trace GitHub repository name across announcements and project pages",
-          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
         }
       ],
       "rejected": [
@@ -2693,7 +2676,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1512
+      "durationMs": 1638
     },
     {
       "label": "follow-up-7",
@@ -2709,9 +2692,9 @@
       "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 10,
-      "rejectedCount": 0,
-      "startedAt": "2026-05-07T06:28:20.587Z",
+      "resultCount": 9,
+      "rejectedCount": 1,
+      "startedAt": "2026-05-08T04:24:48.985Z",
       "results": [
         {
           "platform": "web",
@@ -2748,12 +2731,32 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/liruidesysu/VideoCompression/blob/master/PFrame_Compress_Decompress.m",
-          "title": "VideoCompression/PFrame_Compress_Decompress.m at master · liruidesysu/VideoCompression · GitHub",
-          "snippet": "Files Expand file tree   master Breadcrumbs PFrame_Compress_Decompress.m Copy path More file actions More file actions Latest commit History 152 lines (131 loc) · 4.05 KB   master Breadcrumbs PFrame_Compress_Decompress.m Top File metadata and controls Code Blame 152 lines (131 loc) · 4.05 KB Copy raw file Download raw file Open symbols panel Edit and raw actions function [Pzhen,QQQ]=PFrame_Compress_Decompress(frame,FrameI,X,Z) RGB=frame; %下面是对RGB三个分量进行分离 R=RGB(:,:,1); G=RGB(:,:,2); B=RGB(:,:,3); %RGB->YUV Y=0.299*double(R)+0.587*double(G)+0.114*double(B); [xm, xn] = size(Y); U=-0.169*double(R)-0.3316*double(G)+0.5*double(B); V=0.5*double(R)-0.4186*double(G)-0.0813*double(B); %% DCT变换 % 产生一个8",
-          "publishDate": "2026-05-03",
+          "url": "https://github.com/rdsquare/Image-Compression-SVD-Python",
+          "title": "GitHub - rdsquare/Image-Compression-SVD-Python: Colored image compression using SVD in python · GitHub",
+          "snippet": "rdsquare/Image-Compression-SVD-Python   master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 14 Commits 14 Commits LICENSE LICENSE     README.md README.md     _config.yml _config.yml     animal1.jpg animal1.jpg     animal2.jpg animal2.jpg     animal3.jpg animal3.jpg     compressed_animal2.jpg compressed_animal2.jpg     compression.ipynb compression.ipynb     compression_python_file.py compression_python_file.py     developer.jpg developer.jpg     flower1.jpg flower1.jpg     flower2.jpeg flower2.jpeg     index.html index.html     nature1.jpg nature1.jpg     nature2.jpg nature2.jpg     View all files Repository f",
+          "publishDate": "2026-05-05",
           "relevanceScore": 6,
           "relevanceSignals": [
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-7",
+          "queryIntent": "exact title GitHub verification",
+          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/Zolazamani/image-compression-cnn",
+          "title": "GitHub - Zolazamani/image-compression-cnn: Semantic JPEG image compression using deep convolutional neural network (CNN) · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 29 Commits 29 Commits models models     output output     LICENSE LICENSE     README.md README.md     combine_images.py combine_images.py     generate_map.py generate_map.py     get_metrics.py get_metrics.py     girl_msroi.png girl_msroi.png     image.png image.png     model.py model.py     params.py params.py     prepare_data.py prepare_data.py     read_log.py read_log.py     requirements.txt requirements.txt     train.py train.py     util.py util.py     View all files Repository files navigation Semantic Perceptual Image Compression using Deep Convolution Networks This code is part of the paper arxiv , abstract of the p",
+          "publishDate": "2026-05-05",
+          "relevanceScore": 18,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:our paper",
+            "venue:www",
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
@@ -2770,24 +2773,6 @@
           "publishDate": "2026-04-27",
           "relevanceScore": 6,
           "relevanceSignals": [
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-7",
-          "queryIntent": "exact title GitHub verification",
-          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/topics/compression-algorithm?l=javascript&o=desc&s=updated",
-          "title": "compression-algorithm · GitHub Topics · GitHub",
-          "snippet": "Here are 26 public repositories matching this topic... Language: JavaScript Filter by language Home of an ecosystem of connected apps. The proving ground for the minimal perfect hash function (MPHF), the kireji web framework and the Gamified Universal IDE (GUIDE). An MVC-based web framework for building reactive web applications that achieve the information-theoretic limit of compression of their runtime state in order to store that state in the URL. My creative take on the \"Bro App\" from \"Silicon Valley\" Vibe is a modern, real-time chat application frontend built with React and Tailwind CSS/DaisyUI, providing seamless messaging, user authentication, and profile management. It connects to th",
-          "publishDate": "2026-04-16",
-          "relevanceScore": 10,
-          "relevanceSignals": [
-            "topic:rag",
-            "venue:www",
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
@@ -2838,9 +2823,9 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/hualangman/small-video-record",
-          "title": "GitHub - hualangman/small-video-record: 利用FFmpeg视频录制微信小视频与其压缩处理 · GitHub",
-          "snippet": "Name Name Last commit message Last commit date Latest commit   History 143 Commits 143 Commits SmallVideoRecord1 SmallVideoRecord1     SmallVideoRecord2 SmallVideoRecord2     document document     image image     .gitignore .gitignore     LICENSE LICENSE     README.md README.md     View all files Repository files navigation Used for capturing audio and video in Android system. The bottom layer uses FFmpeg to compression processing (in small-video-record2, C source code and Java source code are all open). The effect is as follows: Instructions: Features: Collect when encoding. Use FFmpeg to customize recording the video which has different time, resolution, bit rate, frame rate and transcodin",
+          "url": "https://github.com/bitstored/compression-service",
+          "title": "GitHub - bitstored/compression-service · GitHub",
+          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert bitstored/compression-service   master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 13 Commits 13 Commits cmd/ compression-service cmd/ compressi",
           "publishDate": "2026-04-12",
           "relevanceScore": 6,
           "relevanceSignals": [
@@ -2854,26 +2839,10 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/yhsc0001/ICCompilerrumenjiaochengheji",
-          "title": "GitHub - yhsc0001/ICCompilerrumenjiaochengheji · GitHub",
-          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 2 Commits 2 Commits README.md README.md     View all files Repository files navigation IC Compiler入门教程合集 欢迎来到IC Compiler入门教程合集页面!本资源是专为那些希望掌握芯片设计布局与布线(Place and Route, P&R)技术的朋友们准备的一份宝贵资料。它并非来自IC Compiler官方的英文文档,而是一系列精心整理的中文PPT教程和Word文档经验分享,旨在通过本土化的教学材料,帮助初学者更快地理解和上手IC Compiler这一强大的集成电路设计工具。 资源内容概览 这个压缩包内包含了多种形式的学习材料,包括但不限于: PPT教程 :详细讲解IC Compiler的基本操作、流程、策略设置等,适合从零开始学习。 Word经验总结 :收录了前人使用IC Compiler时的实用技巧、常见问题解决方法,是实践经验的结晶。 学习辅助资源 为了提供更全面的学习体验,推荐结合以下官方及在线资源一同学习: 官方英文资料 :对于追求深入理解或需要查阅原厂详细说明的同学,建议访问CSDN提供的链接获取官方数据手册和指南。 配套视频教程 :在B站上有相关的视频教程,其中ICC部分特别适用于跟随操作,加深理",
-          "publishDate": "2026-04-09",
-          "relevanceScore": 6,
-          "relevanceSignals": [
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-7",
-          "queryIntent": "exact title GitHub verification",
-          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/timescale/docs/pull/3315/commits",
-          "title": "compression-methods.md typo: Tiemscale - Timescale by Felk · Pull Request #3315 · timescale/docs · GitHub",
-          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert compression-methods.md typo: Tiemscale -> Timescale # 3315 Merged +1 -1 Lines changed: 1 addition & 1 deletion Copy full SHA for eed05fe More actions Footer © 2026 GitHub, Inc. Footer navigation Manage cookies Do not share my pe",
-          "publishDate": "2026-04-20",
+          "url": "https://github.com/MaleWxt/small-video-record",
+          "title": "GitHub - MaleWxt/small-video-record: 利用FFmpeg视频录制微信小视频与其压缩处理 · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 143 Commits 143 Commits SmallVideoRecord1 SmallVideoRecord1     SmallVideoRecord2 SmallVideoRecord2     document document     image image     .gitignore .gitignore     LICENSE LICENSE     README.md README.md     View all files Repository files navigation Used for capturing audio and video in Android system. The bottom layer uses FFmpeg to compression processing (in small-video-record2, C source code and Java source code are all open). The effect is as follows: Instructions: Features: Collect when encoding. Use FFmpeg to customize recording the video which has different time, resolution, bit rate, frame rate and transcodin",
+          "publishDate": "2026-05-04",
           "relevanceScore": 6,
           "relevanceSignals": [
             "source:high-signal-url",
@@ -2884,7 +2853,25 @@
           "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
         }
       ],
-      "rejected": [],
+      "rejected": [
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/tukilabs/Video-Compression-Net/labels",
+          "title": "Labels · tukilabs/Video-Compression-Net · GitHub",
+          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Labels 9 labels Sort Something isn't working Improvements or additions to documentation This issue or pull request already exists New feature or request Good for newcomers Extra attention is needed This doesn't seem right Furthe",
+          "publishDate": "2026-04-15",
+          "relevanceScore": 1,
+          "relevanceSignals": [
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-7",
+          "queryIntent": "exact title GitHub verification",
+          "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code"
+        }
+      ],
       "responseKeys": [
         "created",
         "id",
@@ -2892,7 +2879,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1535
+      "durationMs": 1462
     }
   ],
   "readers": [
@@ -2921,12 +2908,40 @@
       "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
       "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
       "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with Code) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ ![Image 1](https://github.com/amusi/CVPR2026-Papers-with-Code/raw/main/CVer%E5%AD%A6%E6%9C%AF%E4%BA%A4%E6%B5%81%E7%BE%A4.png) ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实例分割(Instance Segmentation) - 全景分割(Panoptic Segmentation) - 医学图像(Medical Image) - 医学图像分割(Medical Image Segmentation) - 视频目标分割(Video Object Segmentation) - 视频实例分割(Video Instance Segmentation) - 参考图像分割(Referring Image Segmentation) - 图像抠图(Image Matting) - 图像编辑(Image Editing) - Low-level Vision - 超分辨率(Super-Resolution) - 去噪(Denoising) - 去模糊(Deblur) - 自动驾驶(Autonomous Driving) - 3D点云(3",
-      "durationMs": 1944,
+      "durationMs": 12286,
       "skipped": false,
       "githubReadme": {
         "title": "amusi/CVPR2026-Papers-with-Code README",
         "excerptLength": 3000
       }
+    },
+    {
+      "platform": "web",
+      "stage": "follow-up",
+      "url": "https://yihangyao.github.io/",
+      "title": "Yihang Yao",
+      "snippet": "News [2026/04] One paper is accepted by ICML 2026. [2026/04] One paper is accepted by ACL 2026. [2025/09] One paper is accepted by NeurIPS 2025. [2025/06] One paper is accepted by IROS 2025. [2025/05] Listed as a notable reviewer for ICLR 2025. [2025/05] Two papers are accepted by ACL 2025. [2024/09] One paper is accepted by NeurIPS 2024. [2024/06] One paper is accepted by DMLR. [2024/05] One paper is accepted by ICML 2024. [2024/03] One paper is accepted by L4DC 2024. [2024/01] One paper is accepted by ICLR 2024. [2023/09] One paper is accepted by NeurIPS 2023. [2023/05] Two papers are accepted by ICML 2023. Talks [2025/10] Pushing Forward the Pareto Frontier of Decision Making With RL , Se",
+      "publishDate": "2026-05-01",
+      "relevanceScore": 35,
+      "relevanceSignals": [
+        "paper:paper",
+        "paper:preprint",
+        "announcement:accepted by",
+        "topic:llm",
+        "topic:agent",
+        "topic:reasoning",
+        "topic:rag",
+        "topic:reinforcement learning",
+        "venue:aaai",
+        "venue:acl"
+      ],
+      "queryLabel": "follow-up-1",
+      "queryIntent": "trace GitHub repository name across announcements and project pages",
+      "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "readerTitle": "Yihang Yao",
+      "readerExcerpt": "Yihang Yao yihangya[at]andrew.cmu.edu Hi, welcome to my website! I am a 4th-year Ph.D. candidate in the Safe AI Lab at Carnegie Mellon University, advised by Prof. Ding Zhao. I received my Bachelor's degree from Shanghai Jiao Tong University in 2022 and spent a wonderful time as a visiting student in the Intelligent Control Lab at CMU, working with Prof. Changliu Liu. I previously interned at MIT-IBM Watson AI Lab, IBM Research and have also been working with Google DeepMind since 2023. My research focuses on reinforcement learning and large language models, with a current emphasis on training proactive agents for user-centric applications. ##### Selected Works ![Image 1](https://yihangyao.github.io/static/publication/BAO.png) ##### Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization __Yihang Yao__, Zhepeng Cen, Haohong Lin, Shiqi Liu, Zuxin Liu, Jiacheng Zhu, Zhang-Wei Hong, Laixi Shi, Ding Zhao 2026, under review TL;DR: BAO is an agentic RL framework that advances the Pareto frontier between task performance and user engagement in proactive agent training. Paper (Coming soon) ![Image 2](https://yihangyao.github.io/static/publication/Tailor.png) ##### Tailored Primitive Initialization is the Secret Key to Reinforcement Learning __Yihang Yao__, Guangtao Zeng, Raina Wu, Yang Zhang, Ding Zhao, Zhang-Wei Hong, Chuang Gan 2025, under review TL;",
+      "durationMs": 1336,
+      "skipped": false
     },
     {
       "platform": "web",
@@ -2953,42 +2968,10 @@
       "parentUrl": "",
       "readerTitle": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
       "readerExcerpt": "## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ ![Image 2: Python 3.8](https://camo.githubusercontent.com/37878f3e0c91eb83a0332367b7397b001b5101a13d63d67f349f190fd857c57a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d332e382d626c75653f6c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465) ![Image 3: PyTorch 2.0.0](https://camo.githubusercontent.com/2ce6226bc0bf44a4859eb669cfe58487e5021504a1b52ada77ea02ea6ba8b42d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5079546f7263682d322e302e302d6565346332633f6c6f676f3d7079746f726368266c6f676f436f6c6f723d7768697465) ![Image 4: arXiv](https://camo.githubusercontent.com/397807278c0a0fdfc7089f5bb72c8aab25e89f59a962a7da47dbce5e2beae5da/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61725869762d323531312e30383339362d6233316231623f6c6f676f3d6172786976266c6f676f436f6c6f723d7768697465) This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependencies might lead to a decline in predictive performance and want to use Transformers for time series analysis, this repository is well-suited to you. ## Updates - 🌟 (2025.11) EMAformer was accepted by AAAI 2026. ##",
-      "durationMs": 1544,
+      "durationMs": 1091,
       "skipped": false,
       "githubReadme": {
         "title": "PlanckChang/EMAformer README",
-        "excerptLength": 3000
-      }
-    },
-    {
-      "platform": "web",
-      "stage": "seed",
-      "url": "https://github.com/MM-Speech/WavAlign",
-      "title": "GitHub - MM-Speech/WavAlign: Official repository for \"WavAlign\" (ACL 2026 Findings) . An Post-Train Framework for spoken dialogue models",
-      "snippet": "Name Name Last commit message Last commit date Latest commit Eve1f update Apr 17, 2026 5b680c3 · Apr 17, 2026 History 8 Commits Open commit details 8 Commits assets assets Release WavAlign training code and README Apr 16, 2026 config config Release WavAlign training code and README Apr 16, 2026 dataset dataset update Apr 17, 2026 dpo dpo Release WavAlign training code and README Apr 16, 2026 examples examples Release WavAlign training code and README Apr 16, 2026 scripts scripts Release WavAlign training code and README Apr 16, 2026 trainer trainer update Apr 17, 2026 utils utils update Apr 17, 2026 .gitignore .gitignore Release WavAlign training code and README Apr 16, 2026 README.md README",
-      "publishDate": "2026-04-17",
-      "relevanceScore": 33,
-      "relevanceSignals": [
-        "paper:paper",
-        "paper:arxiv",
-        "paper:project page",
-        "announcement:our paper",
-        "announcement:accepted to",
-        "announcement:official repo",
-        "topic:multimodal",
-        "topic:post-training",
-        "venue:acl",
-        "source:high-signal-url"
-      ],
-      "queryLabel": "seed-2",
-      "queryIntent": "",
-      "parentUrl": "",
-      "readerTitle": "GitHub - MM-Speech/WavAlign: Official repository for \"WavAlign\" (ACL 2026 Findings) . An Post-Train Framework for spoken dialogue models.",
-      "readerExcerpt": "## WavAlign: Enhancing Intelligence and Expressiveness in Spoken Dialogue Models via Adaptive Hybrid Post-Training __Findings of ACL 2026__ _Adaptive post-training for end-to-end spoken dialogue models_ ![Image 1: Project Page](https://camo.githubusercontent.com/8493faa75e4ffcf0b59b0b462e73d0c65cd9d4d154ffa0dda11ddf9e6d1f3e46/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50726f6a6563742d506167652d3046373636453f7374796c653d666f722d7468652d6261646765266c6f676f3d676f6f676c656368726f6d65266c6f676f436f6c6f723d7768697465) ![Image 2: Code Release](https://camo.githubusercontent.com/3b38b8fb714d1dd0ad42ab95655406b746e68ee331ad6eb8de0e20846d4e516b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f64652d52656c656173652d3146323933373f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465) ![Image 3: Citation](https://camo.githubusercontent.com/530cdc10140db637a401e4e2f33fb705d87f1f86d01480ca681786a2a0c2dd52/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4369746174696f6e2d4269625465582d3144344544383f7374796c653d666f722d7468652d6261646765266c6f676f3d626f6f6b737461636b266c6f676f436f6c6f723d7768697465) ![Image 4: Status](https://camo.githubusercontent.com/c6af016574710a9b81acbf7db5a3e67ab0847e78986f2dedcca8b5f4fa2dcca3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374617475732d436f646525323052656c656173652",
-      "durationMs": 22005,
-      "skipped": false,
-      "githubReadme": {
-        "title": "MM-Speech/WavAlign README",
         "excerptLength": 3000
       }
     },
@@ -3017,42 +3000,10 @@
       "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
       "readerTitle": "GitHub - THUDM/CaRR: This repository contains the code and data for the paper \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\".",
       "readerExcerpt": "![Image 1: GitHub](https://camo.githubusercontent.com/48e4ce8deb3f36ec2709a99e02aa26f23e45487114afb24551504b4bf9623de5/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f544855444d2f43615252) ![Image 2: arXiv](https://camo.githubusercontent.com/6f6f005f7e95478323ee080812a4934248f7076681f290d3d74fc3069b080617/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61725869762d323630312e30363032312d6233316231622e737667) ![Image 3: Dataset & Model](https://camo.githubusercontent.com/a6da07ad04a80010af52d63bbce49b909e2077da94028196c0c3583c086ff530/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67466163652d43615252253236432d2d4752504f2d677265656e) ![Image 4: Multi-Turn RL Training](https://github.com/THUDM/CaRR/raw/main/assets/test-time-scaling.png) ## π₯ News - __[2026/04/08]__ Our paper has been accepted by __ACL 2026__! - __[2026/03/14]__ Our __RL training and evaluation code__ have been fully open-sourced. - __[2026/03/12]__ Our __SFT models__ and __C-GRPO models__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Our __SFT trajectories__ and __RL QA pairs with rubrics__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Released the __CaRR__ framework, implemented as a remote reward model server β now fully available in `./deepsearch_rm_with_rubrics`. - Model and trainin",
-      "durationMs": 12969,
+      "durationMs": 1215,
       "skipped": false,
       "githubReadme": {
         "title": "THUDM/CaRR README",
-        "excerptLength": 3000
-      }
-    },
-    {
-      "platform": "web",
-      "stage": "repository",
-      "url": "https://github.com/wzb-bupt/VGPO",
-      "title": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning · GitHub",
-      "snippet": "wzb-bupt/VGPO   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 5 Commits 5 Commits assets assets     examples examples     scripts scripts     verl verl     README.md README.md     requirements.txt requirements.txt     setup.py setup.py     train_vgpo_7B.sh train_vgpo_7B.sh     View all files Repository files navigation 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 (Main Conference). 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to signal dilution — generic text tokens receive",
-      "publishDate": "2026-04-25",
-      "relevanceScore": 30,
-      "relevanceSignals": [
-        "paper:paper",
-        "paper:preprint",
-        "paper:arxiv",
-        "announcement:our work",
-        "announcement:our paper",
-        "announcement:accepted by",
-        "topic:multimodal",
-        "topic:reasoning",
-        "topic:rag",
-        "venue:acl"
-      ],
-      "queryLabel": "repository-2",
-      "queryIntent": "",
-      "parentUrl": "",
-      "readerTitle": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
-      "readerExcerpt": "## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 (Main Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ causes attention to visual inputs to progressively decay as reasoning chains extend. VGPO addresses these issues through three key mechanisms: - __Visual Attention Compensation (VAC):__ Uses the inherent hidden-state similarity between generated tokens and image tokens as a _Visual Focus Score_ to localize visual activations without external supervision. A progressive incentive schedule counteracts temporal visual forgetting in later reasoning steps. - __Intra-Trajectory Re-weighting:__ At the token level, dynamically re-weights advantages by visual focus scores to amplify learning from visually-grounded tokens. - __Inter-Trajectory Re-weighting:__ At the trajectory level, prioritizes rollouts with superior visual accumulation, favoring trajectories that sustain consistent visual grounding. ![Image 1: VGPO Pilot Exp](https://github.com/wzb-bupt/VGPO/raw/main/assets/vgpo_pilot_experiences.png) Analysis of the inference nature of multimodal reasoning trajectory (based",
-      "durationMs": 1377,
-      "skipped": false,
-      "githubReadme": {
-        "title": "wzb-bupt/VGPO README",
         "excerptLength": 3000
       }
     },
@@ -3081,7 +3032,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval.",
       "readerExcerpt": "![Image 1](https://github.com/iLearn-Lab/AAAI26-HABIT/raw/main/assets/logo.png) 1School of Software, Shandong University ✉Corresponding author ![Image 2: AAAI 2026](https://camo.githubusercontent.com/fe35be66b4a5153e870536d89f8fb44f4fcd0ecd6919353619302cd367362534/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f414141492d323032362d626c75652e7376673f7374796c653d666c61742d737175617265) ![Image 3: arXiv](https://camo.githubusercontent.com/305bc6b3a26af3fb274ca7a63192209f251d54246dad4c019970e7ffb4b7d471/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61725869762d436f6d696e672e536f6f6e2d6233316231622e737667) ![Image 4: Paper](https://camo.githubusercontent.com/c0c5fc182556c317a598c83cbcf479c01d4efa4dcd2c81f0b373f1ef7c8254c6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617065722d414141492e33373630382d677265656e2e737667) ![Image 5: page](https://camo.githubusercontent.com/45d776a292212f45daa00dcc2face3c318fb55098b99247dfdadd0aa5cc9e6fc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f576562736974652d6f72616e6765) ![Image 6: Author Page](https://camo.githubusercontent.com/b10339c82d3dc2b365dbc2e04acebc886743d8858c89a6cdd0a2fc2fb17f0acb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f417574686f7220506167652d626c75652e737667) ![Image 7: PyTorch](https://camo.githubusercontent.com/8023f94aa5f9ad3c8be08bf526ac8f7cd31337a47181735bf75b017",
-      "durationMs": 1788,
+      "durationMs": 1817,
       "skipped": false,
       "githubReadme": {
         "title": "Lee-zixu/HABIT README",
@@ -3113,7 +3064,7 @@
       "parentUrl": "",
       "readerTitle": "Computer Science",
       "readerExcerpt": "Computer Science Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Computer Science ## Authors and titles for recent submissions - Thu, 11 Sep 2025 - Wed, 10 Sep 2025 - Tue, 9 Sep 2025 - Mon, 8 Sep 2025 - Fri, 5 Sep 2025 See today's new changes Total of 2511 entries : 1-25 ... 351-375 376-400 401-425 407-431 426-450 451-475 476-500 ... 2501-2511 Showing up to 25 entries per page: fewer | more | all ### Thu, 11 Sep 2025 (continued, showing last 19 of 425 entries ) [407] arXiv:2509.08171 (cross-list from quant-ph) [pdf, html, other] : Title: RAPID Quantum Detection and Demodulation of Covert Communications: Bre",
-      "durationMs": 4558,
+      "durationMs": 768,
       "skipped": false
     },
     {
@@ -3140,7 +3091,7 @@
       "parentUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
       "readerTitle": "GitHub - Ferry-Li/BlackMirror: Official code for CVPR 2026 paper \"BlackMirror: Black-Box Backdoor Detection for Text-to-Image Models via Instruction-Response Deviation\" · GitHub",
       "readerExcerpt": "GitHub - Ferry-Li/BlackMirror: Official code for CVPR 2026 paper \"BlackMirror: Black-Box Backdoor Detection for Text-to-Image Models via Instruction-Response Deviation\" · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - Resources - EXPLORE BY TOPIC - AI - Software Development - DevOps - Security - View all topics - EXPLORE BY TYPE - Customer stories - Events & webinars - Ebooks & reports - Business insights - GitHub Skills - SUPPORT & SERVICES ",
-      "durationMs": 4074,
+      "durationMs": 1183,
       "skipped": false,
       "githubReadme": {
         "title": "Ferry-Li/BlackMirror README",
@@ -3171,7 +3122,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG",
       "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone h",
-      "durationMs": 1007,
+      "durationMs": 22043,
       "skipped": false,
       "githubReadme": {
         "title": "AI-Application-and-Integration-Lab/MegaRAG README",
@@ -3201,7 +3152,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - Bharath-K3/MMFace-DiT: Accepted to IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026.",
       "readerExcerpt": "## MMFace-DiT: A Dual-Stream Diffusion Transformer for High-Fidelity Multimodal Face Generation ![Image 1: Conference](https://camo.githubusercontent.com/03f82a1708ff234ee2543d6f131f7a884539e2fc014e76af20e7dba9c2b559b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435650522d323032362d626c7565) ![Image 2: Paper](https://camo.githubusercontent.com/f942b5efb510910c5c9c439ba956ee1c60abd207ce1340efffe09e3e69b7d232/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f41725869762d50617065722d726564) ![Image 3: Project Page](https://camo.githubusercontent.com/e4fe41e53d8155731546bad0c8e0750dc353b8ad9148fa516c68e764d2ba77b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50726f6a6563745f506167652d4769744875622e696f2d626c7565) ![Image 4: Models](https://camo.githubusercontent.com/cd301c1ad19f980e13b595653a137dd818b68ea2a3224e95ba057977cb0cb316/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f64656c732d48756767696e67466163652d677265656e) ![Image 5: Demo](https://camo.githubusercontent.com/04994fa8d5e10340988baa3318103750f230c65e74dcb81d16cbce7e65ca1fff/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f44656d6f2d48756767696e67466163652d6f72616e6765) ![Image 6: Dataset](https://camo.githubusercontent.com/4a4ae877afe525e7d3f69fdcd495c2dedd97e6072f309fe180a574964c68fc4a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446174617365742d48",
-      "durationMs": 6011,
+      "durationMs": 1466,
       "skipped": false,
       "githubReadme": {
         "title": "Bharath-K3/MMFace-DiT README",
@@ -3232,9 +3183,35 @@
       "queryIntent": "",
       "parentUrl": "",
       "readerTitle": "Neural and Evolutionary Computing",
-      "readerExcerpt": "Neural and Evolutionary Computing Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.NE Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Neural and Evolutionary Computing ## Authors and titles for recent submissions - Wed, 6 May 2026 - Tue, 5 May 2026 - Mon, 4 May 2026 - Fri, 1 May 2026 - Thu, 30 Apr 2026 See today's new changes Total of 38 entries Showing up to 50 entries per page: fewer | more | all ### Wed, 6 May 2026 (showing 8 of 8 entries ) [1] arXiv:2605.03598 [pdf, html, other] : Title: Unifying Dynamical Systems and Graph Theory to Mechanistically Understand Computation in Neural Networks Jatin Sh",
-      "durationMs": 1332,
+      "readerExcerpt": "Neural and Evolutionary Computing Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.NE Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Neural and Evolutionary Computing ## Authors and titles for recent submissions - Thu, 7 May 2026 - Wed, 6 May 2026 - Tue, 5 May 2026 - Mon, 4 May 2026 - Fri, 1 May 2026 See today's new changes Total of 41 entries Showing up to 50 entries per page: fewer | more | all ### Thu, 7 May 2026 (showing 7 of 7 entries ) [1] arXiv:2605.04954 [pdf, html, other] : Title: On the Influence of the Feature Computation Budget on Per-Instance Algorithm Selection for Black-Box Optimization ",
+      "durationMs": 1280,
       "skipped": false
+    },
+    {
+      "platform": "web",
+      "stage": "seed",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_26369eeb03b38752",
+      "title": "ACL 2026  别轻易给AI发「」,它可能会删掉你的整个主目录",
+      "snippet": "<p>本文第一作者降伟鹏,西安交通大学在读博士生,主要研究方向为大模型安全与自动化测评。共同第一作者张笑宇,南洋理工大学博士后研究员,研究方向为软件工程、大模型安全与人机交互。通讯作者沈超,西安交通大学二级教授、IEEE Fellow、国家级高层次人才特聘教授,长期从事人工智能可信与安全、人机交互行为分析研究。</p><p>想象这样一个场景。</p><p>凌晨,你正在用 AI 代码助手处理一个项目。配合得很顺畅,AI 帮你创建了临时目录 tmp,你指挥它在这个目录下跑了几组测试,一切都按预期走。收尾时,你随手敲下一句话:</p><p>&gt; \"任务完成,删掉这个目录~\"</p><p>语气轻松,就像跟同事说 \"搞定,收摊吧\"。结尾那个~,只是习惯性的语气符号,无伤大雅。AI 没有任何迟疑。它 \"理解\" 了你的意思,执行了命令。几秒钟后,你的整个用户主目录消失了。因为在 Shell 语言里,~ 是指向主目录的路径符号。AI 没有读出你的语气,它读出的是一条删除指令:`rm -rf ~`。</p><p>无报错。无警告。不可逆。</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-2254118224-DE0EC5D0E604B195266B1B82AEB04FAA/0?fmt=png&size=583&h=677&w=1180&ppv=1' data-aigc-mark='0'/></p><p>近日,来自西安交通大学、南洋理工大学和马萨诸塞大学阿默斯特分校的联合研究团队,首次系统性揭示了大型语言模型中一类此前长期被忽视的安全",
+      "publishDate": "2026-04-27",
+      "relevanceScore": 22,
+      "relevanceSignals": [
+        "paper:arxiv",
+        "paper:论文",
+        "announcement:录用",
+        "topic:llm",
+        "topic:large language model",
+        "topic:agent",
+        "topic:大模型",
+        "venue:acl"
+      ],
+      "queryLabel": "seed-2",
+      "queryIntent": "",
+      "parentUrl": "",
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "durationMs": 0,
+      "skipped": true
     },
     {
       "platform": "web",
@@ -3257,7 +3234,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - JasonForJoy/BRIEF: Bridging Retrieval and Inference through Evidence Fusion",
       "readerExcerpt": "## πΊοΈ BRIEF-PRO: Universal Context Compression with Short-to-Long Synthesis for Fast and Accurate Multi-Hop Reasoning __Jia-Chen Gu*, Junyi Zhang*, Di Wu, Yuankai Li, Kai-Wei Chang and Nanyun Peng__ ![Image 1: License](https://github.com/JasonForJoy/BRIEF/raw/main/BRIEF-Pro/src/license.svg) ![Image 2: Python](https://github.com/JasonForJoy/BRIEF/raw/main/BRIEF-Pro/src/python38.svg) π __Paper__: https://arxiv.org/abs/2510.13799 π __Website__: https://jasonforjoy.github.io/BRIEF/ π€ __Dataset:__ https://huggingface.co/datasets/uclanlp/Brief-Pro π€ __Model:__ https://huggingface.co/uclanlp/brief-pro ## News π₯ We released the training and evaluation code, the model checkpoint, and the training data. ## π Overview π€ __BRIEF-PRO__ is a universal, lightweight compressor that distills relevant evidence for a given query from multiple retrieved documents into a concise summary for seamless integration into in-context RAG. ![Image 3](https://github.com/JasonForJoy/BRIEF/raw/main/BRIEF-Pro/src/Teaser_fig.png) ## β¨ Key Features - π§ BRIEF-PRO pioneers the exploration of multi-hop reasoning and compression of RAG for long contexts of 10k+ words across diverse scenarios. - βοΈ A synthetic data pipeline, built on short-context seed data, is designed to synthesize long-context training data for compression learning. - π§© BRIEF-PRO, trained on the curated datase",
-      "durationMs": 37093,
+      "durationMs": 21987,
       "skipped": false,
       "githubReadme": {
         "title": "JasonForJoy/BRIEF README",
@@ -3308,7 +3285,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - CQU-MM-Intelligent-Lab/MHL: [ACL 2026] From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation",
       "readerExcerpt": "## From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation __ACL 2026 Main Conference__ This is the official repository for __MHL__, accepted to __ACL 2026 Main Conference__. MHL is a novel training framework for generative recommendation that shifts the objective from simple next-step prediction to deep comprehension of history. It augments the standard autoregressive objective with an auxiliary task of reconstructing masked historical items, compelling the model to understand \"why\" an item path is formed from the user's past behaviors. The framework features an __entropy-guided masking__ policy that intelligently targets the most informative historical items, and a __curriculum learning__ scheduler that progressively transitions from history reconstruction to future prediction. ![Image 1: MHL Method](https://github.com/CQU-MM-Intelligent-Lab/MHL/raw/main/asset/method.png) --- ### Quick Setup Create and activate a new conda environment named `MHL_env`: ``` conda create -n MHL_env python=3.10 -y && conda activate MHL_env && pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124 && pip install -r requirements.txt ``` --- ## Repository Structure ``` genrec/ ├── pipeline.py # Training/evaluation orchestration ├── trainer.py # Training logic with curriculum learning scheduler ├── model.py # Abstract model base class ├── ",
-      "durationMs": 2428,
+      "durationMs": 1465,
       "skipped": false,
       "githubReadme": {
         "title": "CQU-MM-Intelligent-Lab/MHL README",
@@ -3323,11 +3300,10 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-a6478e3cb733\",\n    \"title\": \"Papers-with- : CVPR 2026 论文和开源项目合集\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit CVPR 2026 signal in https://github.com/amusi/CVPR2026-Papers-with- .\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.96,\n    \"acceptedVenue\": \"CVPR 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/amusi/CVPR2026-Papers-with-Code\",\n    \"keywords\": [\n      \"llm\",\n      \"vlm\",\n      \"multimodal\",\n      \"mllm\",\n      \"agent\",\n      \"reasoning\",\n      \"video understanding\",\n      \"3d gaussian splatting\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/amusi/CVPR2026-Papers-with-Code\",\n        \"title\": \"GitHub - amusi/CVPR2026-Papers-with- : CVPR 2026 论文和开源项目合集 · GitHub\",\n        \"snippet\": \"Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-...\",\n        \"readerTitle\": \"GitHub - amusi/CVPR2026-Papers-with- : CVPR 2026 论文和开源项目合集\",\n        \"readerExcerpt\": \"## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026...\",\n        \"publishDate\": \"2026-05-04\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "",
+      "responseText": "```json\n{\n  \"papers\": []\n}\n```",
       "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90002,
-      "error": "request timed out after 90000ms"
+      "durationMs": 37504
     },
     {
       "index": 1,
@@ -3335,11 +3311,10 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-5ffdae82dc19\",\n    \"title\": \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 AAAI 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit AAAI 2026 signal in https://github.com/PlanckChang/EMAformer.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.9444444444444444,\n    \"acceptedVenue\": \"AAAI 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/PlanckChang/EMAformer\",\n    \"keywords\": [\n      \"rag\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/PlanckChang/EMAformer\",\n        \"title\": \"GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \\\"EMAformer: Enhancing Transformer through Embedding\",\n        \"snippet\": \"Latest 9 9 data_provider data_provider experiments experiments figures figures layers layers model model scripts scripts utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.py run.py View all files Equip your Transformer with embedding armor and beat the MLPs i...\",\n        \"readerTitle\": \"GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \\\"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\\\".\",\n        \"readerExcerpt\": \"## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependenc...\",\n        \"publishDate\": \"2026-05-06\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "",
-      "parsedCount": 0,
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-5ffdae82dc19\",\n      \"title\": \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\",\n      \"summary\": \"提出EMAformer方法，通过嵌入装甲增强Transformer模型以提升时间序列预测性能。\",\n      \"reason\": \"GitHub仓库明确标注该论文已被AAAI 2026会议接受。\",\n      \"status\": \"accepted\",\n      \"confidence\": 0.9444444444444444,\n      \"acceptedVenue\": \"AAAI 2026 Main\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/PlanckChang/EMAformer\",\n      \"keywords\": [\n        \"rag\",\n        \"benchmark\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/PlanckChang/EMAformer\",\n          \"title\": \"GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \\\"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\\\".\",\n          \"snippet\": \"Latest 9 9 data_provider data_provider experiments experiments figures figures layers layers model model scripts scripts utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.py run.py View all files Equip your Transformer with embedding armor and beat the MLPs i...\",\n          \"readerTitle\": \"GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \\\"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\\\".\",\n          \"readerExcerpt\": \"## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependenc...\",\n          \"publishDate\": \"2026-05-06\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90001,
-      "error": "request timed out after 90000ms"
+      "durationMs": 38221
     },
     {
       "index": 2,
@@ -3347,22 +3322,21 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-77119624e64a\",\n    \"title\": \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/THUDM/CaRR.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.8888888888888888,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/THUDM/CaRR\",\n    \"keywords\": [\n      \"agent\",\n      \"reasoning\",\n      \"rag\",\n      \"benchmark\",\n      \"reinforcement learning\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/THUDM/CaRR\",\n        \"title\": \"GitHub - THUDM/CaRR: This repository contains the and data for the paper \\\"Chaining the Evidence: Robust Reinforcement Learning for\",\n        \"snippet\": \"9 View all files 🔥 News Our paper has been accepted by ACL 2026 ! Our RL training and evaluation have been fully open-sourced. [2026/03/12] Our SFT models and C-GRPO models have been fully open-sourced on Hugging Face . [2026/01/11] Our SFT trajectories and RL QA pairs with rubrics have been fully open-sour...\",\n        \"readerTitle\": \"GitHub - THUDM/CaRR: This repository contains the and data for the paper \\\"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\\\".\",\n        \"readerExcerpt\": \"!Image 1: GitHub !Image 2: arXiv !Image 3: Dataset & Model !Image 4: Multi-Turn RL Training ## π₯ News - __[2026/04/08]__ Our paper has been accepted by __ACL 2026__! - __[2026/03/14]__ Our __RL training and evaluation __ have been fully open-sourced. - __[2026/03/12]__ Our __SFT models__ and __C-GRPO models__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Our __SFT trajectories__ and __RL QA p...\",\n        \"publishDate\": \"2026-04-08\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "",
-      "parsedCount": 0,
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-77119624e64a\",\n      \"title\": \"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\",\n      \"summary\": \"该论文提出了一种基于引用感知评分奖励的强化学习方法，用于深度搜索智能体。\",\n      \"reason\": \"GitHub仓库明确显示论文已被ACL 2026会议接受。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/THUDM/CaRR\",\n      \"keywords\": [\"agent\", \"reasoning\", \"rag\", \"benchmark\", \"reinforcement learning\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/THUDM/CaRR\",\n          \"title\": \"GitHub - THUDM/CaRR: This repository contains the and data for the paper \\\"Chaining the Evidence: Robust Reinforcement Learning for\",\n          \"snippet\": \"9 View all files 🔥 News Our paper has been accepted by ACL 2026 ! Our RL training and evaluation have been fully open-sourced. [2026/03/12] Our SFT models and C-GRPO models have been fully open-sourced on Hugging Face . [2026/01/11] Our SFT trajectories and RL QA pairs with rubrics have been fully open-sour...\",\n          \"readerTitle\": \"GitHub - THUDM/CaRR: This repository contains the and data for the paper \\\"Chaining the Evidence: Robust Reinforcement Learning for Deep Search Agents with Citation-Aware Rubric Rewards\\\".\",\n          \"readerExcerpt\": \"!Image 1: GitHub !Image 2: arXiv !Image 3: Dataset & Model !Image 4: Multi-Turn RL Training ## π₯ News - __[2026/04/08]__ Our paper has been accepted by __ACL 2026__! - __[2026/03/14]__ Our __RL training and evaluation __ have been fully open-sourced. - __[2026/03/12]__ Our __SFT models__ and __C-GRPO models__ have been fully open-sourced on Hugging Face. - __[2026/01/11]__ Our __SFT trajectories__ and __RL QA p...\",\n          \"publishDate\": \"2026-04-08\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90000,
-      "error": "request timed out after 90000ms"
+      "durationMs": 73657
     },
     {
       "index": 3,
       "evidenceCount": 1,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-ffb5140d7bb4\",\n    \"title\": \"VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/wzb-bupt/VGPO.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.8333333333333334,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/wzb-bupt/VGPO\",\n    \"keywords\": [\n      \"multimodal\",\n      \"reasoning\",\n      \"rag\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/wzb-bupt/VGPO\",\n        \"title\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning · GitHub\",\n        \"snippet\": \"wzb-bupt/VGPO Open more menu Folders and files Latest 5 5 assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026...\",\n        \"readerTitle\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n        \"readerExcerpt\": \"## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ c...\",\n        \"publishDate\": \"2026-04-25\"\n      }\n    ]\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-8c5c8658f7e1\",\n    \"title\": \"HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 AAAI 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit AAAI 2026 signal in https://github.com/Lee-zixu/HABIT.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.8055555555555556,\n    \"acceptedVenue\": \"AAAI 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/Lee-zixu/HABIT\",\n    \"keywords\": [\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/Lee-zixu/HABIT\",\n        \"title\": \"GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: Chrono-Synergia Robust Progressive Learning Framework\",\n        \"snippet\": \"Latest Lee-zixu Init Apr 9, 2026 5cac89f · Apr 9, 2026 38 Open details 38 assets assets Add files via upload Apr 8, 2026 lavis lavis Init Mar 18, 2026 LICENSE LICENSE Create LICENSE Apr 2, 2026 README.md README.md Update README.md Apr 8, 2026 cirr_test_submission.py cirr_test_submission.py Init Mar 18, 2026 data_uti...\",\n        \"readerTitle\": \"GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval.\",\n        \"readerExcerpt\": \"!Image 1 1School of Software, Shandong University ✉Corresponding author !Image 2: AAAI 2026 !Image 3: arXiv !Image 4: Paper !Image 5: page !Image 6: Author Page !Image 7: PyTorch !Image 8: Python !Image 9: stars __Accepted by AAAI 2026:__ A robust progressive learning framework tackling the Noise Triplet Correspondence (NTC) problem in Composed Image Retr (AAAI 2026) HABIT: Chrono-Synergia Robust Progressive Learn...\",\n        \"publishDate\": \"2026-04-09\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-ffb5140d7bb4\",\n      \"title\": \"VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n      \"summary\": \"提出了一种视觉引导的策略优化方法用于多模态推理\",\n      \"reason\": \"GitHub仓库明确显示论文已被ACL 2026会议接受\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026 Main\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/wzb-bupt/VGPO\",\n      \"keywords\": [\"multimodal\", \"reasoning\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/wzb-bupt/VGPO\",\n          \"title\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n          \"snippet\": \"wzb-bupt/VGPO Open more menu Folders and files Latest 5 5 assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files 🔥 News 🔥 [2026.04] : 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026...\",\n          \"readerTitle\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n          \"readerExcerpt\": \"## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ c...\",\n          \"publishDate\": \"2026-04-25\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-8c5c8658f7e1\",\n      \"title\": \"HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval\",\n      \"summary\": \"提出了一种用于组合图像检索的鲁棒渐进式学习框架，解决了噪声三元组对应问题。\",\n      \"reason\": \"GitHub仓库明确标注为AAAI 2026接受的论文，标题和内容完整。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"AAAI 2026 Main\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/Lee-zixu/HABIT\",\n      \"keywords\": [\"image retrieval\", \"learning framework\", \"benchmark\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/Lee-zixu/HABIT\",\n          \"title\": \"GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: Chrono-Synergia Robust Progressive Learning Framework\",\n          \"snippet\": \"Latest Lee-zixu Init Apr 9, 2026 5cac89f · Apr 9, 2026 38 Open details 38 assets assets Add files via upload Apr 8, 2026 lavis lavis Init Mar 18, 2026 LICENSE LICENSE Create LICENSE Apr 2, 2026 README.md README.md Update README.md Apr 8, 2026 cirr_test_submission.py cirr_test_submission.py Init Mar 18, 2026 data_uti...\",\n          \"readerTitle\": \"GitHub - iLearn-Lab/AAAI26-HABIT: [AAAI 2026] Official repository of AAAI 2026 - HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval.\",\n          \"readerExcerpt\": \"!Image 1 1School of Software, Shandong University ✉Corresponding author !Image 2: AAAI 2026 !Image 3: arXiv !Image 4: Paper !Image 5: page !Image 6: Author Page !Image 7: PyTorch !Image 8: Python !Image 9: stars __Accepted by AAAI 2026:__ A robust progressive learning framework tackling the Noise Triplet Correspondence (NTC) problem in Composed Image Retr (AAAI 2026) HABIT: Chrono-Synergia Robust Progressive Learn...\",\n          \"publishDate\": \"2026-04-09\"\n        }\n      ]\n    }\n  ]\n}\n```",
       "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 87344
+      "durationMs": 80205
     }
   ],
   "rejectedCandidates": [
@@ -3375,33 +3349,38 @@
       "title": "BlackMirror: Black-Box Backdoor Detection for Text-to-Image Models via Instruction-Response Deviation",
       "primaryUrl": "https://github.com/Ferry-Li/BlackMirror",
       "reason": "already-in-official-catalog"
+    },
+    {
+      "title": "HABIT: Chrono-Synergia Robust Progressive Learning Framework for Composed Image Retrieval",
+      "primaryUrl": "https://github.com/Lee-zixu/HABIT",
+      "reason": "already-in-official-catalog"
     }
   ],
   "summary": {
     "searchQueriesRun": 18,
-    "skippedSearchPlans": 266,
+    "skippedSearchPlans": 235,
     "selectedSearchPlans": 18,
     "modelSearchPlans": 0,
     "followUpSearchPlans": 4,
-    "fallbackCandidates": 8,
+    "fallbackCandidates": 7,
     "searchStageBreakdown": {
       "seed": {
         "queries": 2,
         "raw": 20,
-        "kept": 10,
-        "rejected": 10
+        "kept": 13,
+        "rejected": 7
       },
       "repository": {
         "queries": 2,
         "raw": 20,
-        "kept": 9,
-        "rejected": 11
+        "kept": 6,
+        "rejected": 14
       },
       "paper-index": {
         "queries": 2,
         "raw": 20,
-        "kept": 6,
-        "rejected": 14
+        "kept": 7,
+        "rejected": 13
       },
       "social": {
         "queries": 2,
@@ -3412,8 +3391,8 @@
       "homepage": {
         "queries": 2,
         "raw": 20,
-        "kept": 10,
-        "rejected": 10
+        "kept": 7,
+        "rejected": 13
       },
       "chinese": {
         "queries": 2,
@@ -3430,25 +3409,21 @@
       "follow-up": {
         "queries": 4,
         "raw": 30,
-        "kept": 24,
-        "rejected": 6
+        "kept": 22,
+        "rejected": 8
       }
     },
     "rawSearchEvidenceCollected": 120,
-    "searchEvidenceCollected": 54,
-    "rejectedSearchEvidence": 58,
+    "searchEvidenceCollected": 50,
+    "rejectedSearchEvidence": 62,
     "readerEnrichedEvidence": 14,
     "extractionBatchesRun": 4,
-    "skippedExtractionBatches": 4,
-    "extractedCandidates": 9,
-    "rejectedCandidates": 2,
+    "skippedExtractionBatches": 3,
+    "extractedCandidates": 10,
+    "rejectedCandidates": 3,
     "added": 0,
     "updated": 7,
-    "durationMs": 845856
+    "durationMs": 686972
   },
-  "errors": [
-    "Extraction failed for batch 1: request timed out after 90000ms",
-    "Extraction failed for batch 2: request timed out after 90000ms",
-    "Extraction failed for batch 3: request timed out after 90000ms"
-  ]
+  "errors": []
 }
