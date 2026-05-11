@@ -5,8 +5,8 @@
   "count": 1,
   "papers": [
     {
-      "id": "unofficial-ffb5140d7bb4",
-      "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
+      "id": "unofficial-9998a11e4f1b",
+      "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
       "venue": "ACL 2026 Main",
       "year": 2026,
@@ -14,14 +14,12 @@
       "primaryCategory": "evaluation-benchmarks",
       "categories": [
         "evaluation-benchmarks",
-        "reasoning",
-        "rl-post-training",
-        "rag-knowledge"
+        "rag-knowledge",
+        "efficiency-systems",
+        "video-understanding"
       ],
       "keywords": [
-        "multimodal",
-        "reasoning",
-        "rag",
+        "video understanding",
         "benchmark",
         "ACL 2026 Main",
         "web",
@@ -30,20 +28,20 @@
       "authors": [
         "Unknown authors"
       ],
-      "openreviewUrl": "https://github.com/wzb-bupt/VGPO",
-      "tldr": "VGPO提出了一种视觉引导的策略优化方法，用于解决多模态推理中的信号稀释和时间视觉遗忘问题。",
-      "abstract": "VGPO提出了一种视觉引导的策略优化方法，用于解决多模态推理中的信号稀释和时间视觉遗忘问题。",
+      "openreviewUrl": "https://github.com/haowei-freesky/HERMES",
+      "tldr": "提出了一种基于KV缓存层次化内存的高效流式视频理解方法",
+      "abstract": "提出了一种基于KV缓存层次化内存的高效流式视频理解方法",
       "aliases": [
-        "unofficial-ffb5140d7bb4"
+        "unofficial-9998a11e4f1b"
       ],
       "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-ffb5140d7bb4",
+      "sourceId": "unofficial-9998a11e4f1b",
       "guideStatus": "pending",
       "sourceType": "unofficial",
       "acceptanceStatus": "accepted",
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-07T05:31:40.156Z",
+      "discoveredAt": "2026-05-11T05:08:14.977Z",
       "evidenceCount": 1,
       "platforms": [
         "web"

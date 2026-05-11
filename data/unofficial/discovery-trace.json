@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T05:06:36.579Z",
+  "generatedAt": "2026-05-11T05:20:14.475Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -54,67 +54,67 @@
   },
   "progress": [
     {
-      "at": "2026-05-10T05:06:36.579Z",
+      "at": "2026-05-11T05:20:14.475Z",
       "message": "Refine-only discovery started: up to 4 refinement batches from the provisional queue."
     },
     {
-      "at": "2026-05-10T05:06:36.581Z",
+      "at": "2026-05-11T05:20:14.477Z",
       "message": "Follow-up search skipped: no remaining budget or no evidence-derived queries."
     },
     {
-      "at": "2026-05-10T05:06:36.589Z",
+      "at": "2026-05-11T05:20:14.485Z",
       "message": "Evidence-backed fallback staged 12 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-05-10T05:06:36.589Z",
+      "at": "2026-05-11T05:20:14.485Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-05-10T05:06:36.589Z",
+      "at": "2026-05-11T05:20:14.485Z",
       "message": "Zhipu refinement stage started: 4/12 candidate batches."
     },
     {
-      "at": "2026-05-10T05:06:36.589Z",
+      "at": "2026-05-11T05:20:14.485Z",
       "message": "[extract 1/4] 1 candidate items."
     },
     {
-      "at": "2026-05-10T05:08:06.593Z",
-      "message": "[extract 1/4] parsed=0"
+      "at": "2026-05-11T05:21:43.154Z",
+      "message": "[extract 1/4] parsed=1"
     },
     {
-      "at": "2026-05-10T05:08:06.593Z",
+      "at": "2026-05-11T05:21:43.154Z",
       "message": "[extract 2/4] 1 candidate items."
     },
     {
-      "at": "2026-05-10T05:08:06.594Z",
+      "at": "2026-05-11T05:21:43.154Z",
       "message": "[extract 2/4] waiting 8.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-10T05:09:13.919Z",
-      "message": "[extract 2/4] parsed=1"
+      "at": "2026-05-11T05:23:21.162Z",
+      "message": "[extract 2/4] parsed=0"
     },
     {
-      "at": "2026-05-10T05:09:13.919Z",
+      "at": "2026-05-11T05:23:21.162Z",
       "message": "[extract 3/4] 1 candidate items."
     },
     {
-      "at": "2026-05-10T05:09:13.919Z",
+      "at": "2026-05-11T05:23:21.162Z",
       "message": "[extract 3/4] waiting 8.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-10T05:10:51.924Z",
-      "message": "[extract 3/4] parsed=0"
+      "at": "2026-05-11T05:24:33.513Z",
+      "message": "[extract 3/4] parsed=1"
     },
     {
-      "at": "2026-05-10T05:10:51.924Z",
+      "at": "2026-05-11T05:24:33.513Z",
       "message": "[extract 4/4] 1 candidate items."
     },
     {
-      "at": "2026-05-10T05:10:51.924Z",
+      "at": "2026-05-11T05:24:33.513Z",
       "message": "[extract 4/4] waiting 8.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-10T05:11:36.592Z",
+      "at": "2026-05-11T05:26:11.520Z",
       "message": "[extract 4/4] parsed=0"
     }
   ],
@@ -124,25 +124,25 @@
     {
       "index": 0,
       "evidenceCount": 1,
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-7c457864ebdd\",\n    \"title\": \"ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n    \"titleZh\": \"\",\n    \"summary\": \"\",\n    \"reason\": \"GitHub仓库标题明确声明该论文已被ACL 2026会议接受。\",\n    \"status\": \"accepted\",\n    \"confidence\": 1,\n    \"acceptedVenue\": \"ACL 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/DongdingLin/SiPeR\",\n    \"keywords\": [\n      \"reasoning\",\n      \"conversation\",\n      \"recommendation\"\n    ],\n    \"platforms\": [\n      \"github\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"github\",\n        \"url\": \"https://github.com/DongdingLin/SiPeR\",\n        \"title\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n        \"snippet\": \"Navigation Menu\",\n        \"readerTitle\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub\",\n        \"readerExcerpt\": \"- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionS...\",\n        \"publishDate\": \"2026-04-28\"\n      }\n    ]\n  }\n]",
+      "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
+      "model": "glm-4.5-flash",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-7c457864ebdd\",\n      \"title\": \"Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n      \"summary\": \"该论文研究情境化对话推荐系统中动态和隐式偏好的推理方法。\",\n      \"reason\": \"GitHub仓库标题明确声明该论文已被ACL 2026会议接受，论文研究情境化对话推荐系统中的偏好推理。\",\n      \"status\": \"accepted\",\n      \"confidence\": 1.0,\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/DongdingLin/SiPeR\",\n      \"keywords\": [\n        \"reasoning\",\n        \"conversation\",\n        \"recommendation\"\n      ],\n      \"platforms\": [\n        \"github\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"github\",\n          \"url\": \"https://github.com/DongdingLin/SiPeR\",\n          \"title\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n          \"snippet\": \"Navigation Menu\",\n          \"readerTitle\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub\",\n          \"readerExcerpt\": \"- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionS...\",\n          \"publishDate\": \"2026-04-28\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "parsedCount": 1,
+      "extractor": "zhipu-chat-refinement",
+      "durationMs": 88669
+    },
+    {
+      "index": 1,
+      "evidenceCount": 1,
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-439348b87abd\",\n    \"title\": \"Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n    \"titleZh\": \"多模态深度研究员：从头生成文本与图表交织的报告\",\n    \"summary\": \"\",\n    \"reason\": \"GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。\",\n    \"status\": \"accepted\",\n    \"confidence\": 1,\n    \"acceptedVenue\": \"AAAI 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n    \"keywords\": [\n      \"multimodal\",\n      \"agent\",\n      \"report generation\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n        \"title\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch\",\n        \"snippet\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n        \"readerTitle\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n        \"readerExcerpt\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n        \"publishDate\": \"2026-04-19\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
       "responseText": "",
       "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90004,
+      "durationMs": 90003,
       "error": "request timed out after 90000ms"
-    },
-    {
-      "index": 1,
-      "evidenceCount": 1,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-7c457864ebdd\",\n    \"title\": \"ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n    \"titleZh\": \"\",\n    \"summary\": \"\",\n    \"reason\": \"GitHub仓库标题明确声明该论文已被ACL 2026会议接受。\",\n    \"status\": \"accepted\",\n    \"confidence\": 1,\n    \"acceptedVenue\": \"ACL 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/DongdingLin/SiPeR\",\n    \"keywords\": [\n      \"reasoning\",\n      \"conversation\",\n      \"recommendation\"\n    ],\n    \"platforms\": [\n      \"github\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"github\",\n        \"url\": \"https://github.com/DongdingLin/SiPeR\",\n        \"title\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n        \"snippet\": \"Navigation Menu\",\n        \"readerTitle\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub\",\n        \"readerExcerpt\": \"- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionS...\",\n        \"publishDate\": \"2026-04-28\"\n      }\n    ]\n  }\n]",
-      "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
-      "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-7c457864ebdd\",\n      \"title\": \"Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n      \"summary\": \"该论文研究情境化对话推荐中的动态和隐式偏好推理。\",\n      \"reason\": \"GitHub仓库标题明确声明该论文已被ACL 2026会议接受。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/DongdingLin/SiPeR\",\n      \"keywords\": [\n        \"reasoning\",\n        \"conversation\",\n        \"recommendation\"\n      ],\n      \"platforms\": [\n        \"github\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"github\",\n          \"url\": \"https://github.com/DongdingLin/SiPeR\",\n          \"title\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation\",\n          \"snippet\": \"Navigation Menu\",\n          \"readerTitle\": \"GitHub - DongdingLin/SiPeR: of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub\",\n          \"readerExcerpt\": \"- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionS...\",\n          \"publishDate\": \"2026-04-28\"\n        }\n      ]\n    }\n  ]\n}\n```",
-      "parsedCount": 1,
-      "extractor": "zhipu-chat-refinement",
-      "durationMs": 59323
     },
     {
       "index": 2,
@@ -150,11 +150,10 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-2971c51313fb\",\n    \"title\": \"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\",\n    \"titleZh\": \"\",\n    \"summary\": \"\",\n    \"reason\": \"GitHub仓库明确标注为ACL 2026官方论文代码库，证实论文已被主会议接受。\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.96,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/UmeanNever/RankSurprisalRatio\",\n    \"keywords\": [\n      \"multimodal\",\n      \"agent\",\n      \"reasoning\",\n      \"rag\",\n      \"post-training\",\n      \"alignment\",\n      \"metric\",\n      \"trajectory\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/UmeanNever/RankSurprisalRatio\",\n        \"title\": \"GitHub - UmeanNever/RankSurprisalRatio: [ACL 2026 ] Official Repo for Paper \\\"Which Reasoning Trajectories Teach Students to Reason Better\",\n        \"snippet\": \"Latest 28 28 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt rsr_cal.py rsr_cal.py rsr_launch.py rsr_launch.py rsr_utils.py rsr_utils.py View all files Rank-Surprisal Ratio (RSR) From the ACL 2026 paper \\\"Which Reasoning Trajectories Teach Students to Reason B...\",\n        \"readerTitle\": \"GitHub - UmeanNever/RankSurprisalRatio: Official Repo for Paper \\\"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment“\",\n        \"readerExcerpt\": \"## Rank-Surprisal Ratio (RSR) From the paper __\\\"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\\\"__ !Image 1: GitHub license !Image 2: Paper !Image 3: Data !Image 4: RSR definition. _RSR measures the suitability of a teacher trajectory (training sample) for a given student model. Rank values are clipped; see Eq. 7 in the paper for the formal definition._ ## 📋...\",\n        \"publishDate\": \"2026-05-05\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "",
-      "parsedCount": 0,
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-2971c51313fb\",\n      \"title\": \"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\",\n      \"summary\": \"提出了一种评估推理轨迹信息对齐的简单度量方法，用于提升学生模型的推理能力。\",\n      \"reason\": \"GitHub仓库明确标注为ACL 2026官方论文代码库，证实论文已被主会议接受。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/UmeanNever/RankSurprisalRatio\",\n      \"keywords\": [\n        \"reasoning\",\n        \"metric\",\n        \"alignment\",\n        \"trajectory\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/UmeanNever/RankSurprisalRatio\",\n          \"title\": \"GitHub - UmeanNever/RankSurprisalRatio: [ACL 2026 ] Official Repo for Paper \\\"Which Reasoning Trajectories Teach Students to Reason Better\",\n          \"snippet\": \"Latest 28 28 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt rsr_cal.py rsr_cal.py rsr_launch.py rsr_launch.py rsr_utils.py rsr_utils.py View all files Rank-Surprisal Ratio (RSR) From the ACL 2026 paper \\\"Which Reasoning Trajectories Teach Students to Reason B...\",\n          \"readerTitle\": \"GitHub - UmeanNever/RankSurprisalRatio: Official Repo for Paper \\\"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment“\",\n          \"readerExcerpt\": \"## Rank-Surprisal Ratio (RSR) From the paper __\\\"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\\\"__ !Image 1: GitHub license !Image 2: Paper !Image 3: Data !Image 4: RSR definition. _RSR measures the suitability of a teacher trajectory (training sample) for a given student model. Rank values are clipped; see Eq. 7 in the paper for the formal definition._ ## 📋...\",\n          \"publishDate\": \"2026-05-05\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90002,
-      "error": "request timed out after 90000ms"
+      "durationMs": 64347
     },
     {
       "index": 3,
@@ -162,10 +161,11 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-a6478e3cb733\",\n    \"title\": \"Papers-with- :\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.96,\n    \"acceptedVenue\": \"CVPR 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/amusi/CVPR2026-Papers-with-Code\",\n    \"keywords\": [\n      \"llm\",\n      \"vlm\",\n      \"multimodal\",\n      \"mllm\",\n      \"agent\",\n      \"reasoning\",\n      \"video understanding\",\n      \"3d gaussian splatting\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/amusi/CVPR2026-Papers-with-Code\",\n        \"title\": \"GitHub - amusi/CVPR2026-Papers-with- : CVPR 2026 论文和开源项目合集 · GitHub\",\n        \"snippet\": \"Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-...\",\n        \"readerTitle\": \"GitHub - amusi/CVPR2026-Papers-with- : CVPR 2026 论文和开源项目合集\",\n        \"readerExcerpt\": \"## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026...\",\n        \"publishDate\": \"2026-05-04\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": []\n}\n```",
+      "responseText": "",
       "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 36664
+      "durationMs": 90002,
+      "error": "request timed out after 90000ms"
     }
   ],
   "rejectedCandidates": [],
@@ -183,14 +183,14 @@
     "readerEnrichedEvidence": 0,
     "extractionBatchesRun": 4,
     "skippedExtractionBatches": 8,
-    "extractedCandidates": 13,
+    "extractedCandidates": 14,
     "rejectedCandidates": 0,
     "added": 0,
-    "updated": 13,
-    "durationMs": 300250
+    "updated": 14,
+    "durationMs": 357297
   },
   "errors": [
-    "Extraction failed for batch 1: request timed out after 90000ms",
-    "Extraction failed for batch 3: request timed out after 90000ms"
+    "Extraction failed for batch 2: request timed out after 90000ms",
+    "Extraction failed for batch 4: request timed out after 90000ms"
   ]
 }
