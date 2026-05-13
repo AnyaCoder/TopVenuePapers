@@ -1,28 +1,27 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-12T05:01:03.936Z",
+  "generatedAt": "2026-05-13T05:09:57.128Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-2971c51313fb",
+      "title": "Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注为ACL 2026官方论文代码库，证实论文已被主会议接受。",
+      "primaryUrl": "https://github.com/UmeanNever/RankSurprisalRatio",
+      "canonicalUrl": "https://github.com/UmeanNever/RankSurprisalRatio",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "sourceId": "unofficial-2971c51313fb",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.96,
+      "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-12T05:03:51.147Z",
+      "discoveredAt": "2026-05-09T04:35:10.025Z",
+      "updatedAt": "2026-05-13T05:12:40.162Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -30,7 +29,12 @@
       "keywords": [
         "multimodal",
         "agent",
-        "report generation"
+        "reasoning",
+        "rag",
+        "post-training",
+        "alignment",
+        "metric",
+        "trajectory"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -40,12 +44,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/UmeanNever/RankSurprisalRatio",
+          "title": "GitHub - UmeanNever/RankSurprisalRatio: [ACL 2026 Main] Official Repo for Paper \"Which Reasoning Trajectories Teach Students to Reason Better",
+          "snippet": "Latest 28 28 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt rsr_cal.py rsr_cal.py rsr_launch.py rsr_launch.py rsr_utils.py rsr_utils.py View all files Rank-Surprisal Ratio (RSR) From the ACL 2026 paper \"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\" RSR measures the suitability of a teacher trajectory (training sample) for a given student model. Rank values are clipped; see Eq....",
+          "readerTitle": "GitHub - UmeanNever/RankSurprisalRatio: Official Repo for Paper \"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment“",
+          "readerExcerpt": "## Rank-Surprisal Ratio (RSR) From the paper __\"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\"__ !Image 1: GitHub license !Image 2: Paper !Image 3: Data !Image 4: RSR definition. _RSR measures the suitability of a teacher trajectory (training sample) for a given student model. Rank values are clipped; see Eq. 7 in the paper for the formal definition._ ## 📋 Overview In this work, we investigate data–student suitability in reasoning distillation and introduce __Rank-Surprisal Ratio__ (RSR), a simple yet effective metric for __identifying suitable reasoning trajectories for a given student__. RSR is defined as the ratio of a trajectory’s average token-wise rank to its average negative log-likelihood (surprisal), and __is straightforward to compute and interpret__. Although our work focuses solely on reasoning tasks, RSR is not spe...",
+          "publishDate": "2026-05-05",
           "query": ""
         }
       ],
@@ -66,7 +70,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-05-12T05:02:18.930Z",
+      "updatedAt": "2026-05-13T05:11:56.879Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -107,10 +111,143 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-13T05:11:05.953Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-b09792bf2db3",
+      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation",
+      "summary": "MegaRAG是一种基于多模态知识图谱的检索增强生成方法，用于文档上的全局视觉问答。",
+      "reason": "GitHub仓库标题明确标注为[ACL 2026]，表明该论文已被ACL 2026会议接受。",
+      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b09792bf2db3",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T06:45:20.683Z",
+      "updatedAt": "2026-05-13T05:07:11.365Z",
+      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "rag",
+        "reasoning",
+        "3d"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
+          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
+          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
+          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
+          "publishDate": "2026-04-17",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-9998a11e4f1b",
+      "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+      "summary": "提出了一种基于KV缓存层次化记忆的高效流式视频理解方法",
+      "reason": "GitHub官方仓库明确声明该论文已被ACL 2026主会议接受",
+      "primaryUrl": "https://github.com/haowei-freesky/HERMES",
+      "canonicalUrl": "https://github.com/haowei-freesky/HERMES",
+      "pdfUrl": "",
+      "sourceId": "unofficial-9998a11e4f1b",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8055555555555556,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-11T05:08:14.977Z",
+      "updatedAt": "2026-05-13T05:04:31.849Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "video understanding",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/haowei-freesky/HERMES",
+          "title": "GitHub - haowei-freesky/HERMES: Official Repository for paper \"HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+          "snippet": "Latest haowei-freesky update news Apr 15, 2026 b0f3bae · Apr 15, 2026 37 Open details 37 asset asset add link Jan 23, 2026 data data update readme Mar 23, 2026 eval eval small bug fix Apr 7, 2026 inference inference update pipeline Mar 23, 2026 scripts scripts update readme Mar 23, 2026 video_qa video_qa small bug fix Apr 7, 2026 LICENSE LICENSE Initial Jan 20, 2026 README.md README.md update news Apr 15, 2026 requirements_llava.txt requirements_llava.txt update requirements Mar 23, 2026 requ...",
+          "readerTitle": "GitHub - haowei-freesky/HERMES: Official Repository for paper \"HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding\" [ACL 2026]",
+          "readerExcerpt": "__[ACL 2026] KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding__ !Image 1: Project Page !Image 2: Paper !Image 3: HF Paper ## π₯ News - __[2026.04.06]__ HERMES is accepted to ACL 2026 π - __[2026.03.23]__ Full released! - __[2025.01.23]__ HERMES reached __#3 Paper of the day__ on Hugging Face Daily Papers! - __[2025.01.21]__ HERMES is available on arXiv. ## π οΈ Installation For __LLaVA__ model inference: ``` conda create -n hermes-llava python=3.12 -y conda activate hermes-llava pip install -r requirements_llava.txt pip install flash-attn --no-build-isolation ``` For __Qwen2.5-VL__ model inference: ``` conda create -n hermes-qwen python=3.12 -y conda activate hermes-qwen pip install -r requirements_qwen.txt pip install flash-attn --no-build-isolation ``` ## π¦ Preparation ### Model Preparation Create a `models` directory and download the model weig...",
+          "publishDate": "2026-04-15",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-5ffdae82dc19",
       "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
-      "summary": "提出EMAformer方法，通过嵌入装甲增强Transformer架构，提升时间序列预测性能。",
-      "reason": "GitHub官方仓库明确说明该论文已被AAAI 2026主会议接受。",
+      "summary": "提出EMAformer方法，通过嵌入装甲增强Transformer模型，提升时间序列预测性能。",
+      "reason": "GitHub官方仓库明确声明该论文已被AAAI 2026主会议接受。",
       "primaryUrl": "https://github.com/PlanckChang/EMAformer",
       "canonicalUrl": "https://github.com/PlanckChang/EMAformer",
       "pdfUrl": "",
@@ -121,7 +258,7 @@
       "acceptedVenue": "AAAI 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.154Z",
-      "updatedAt": "2026-05-12T04:50:48.106Z",
+      "updatedAt": "2026-05-13T05:01:58.109Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -131,7 +268,9 @@
         "benchmark",
         "transformer",
         "time series forecasting",
-        "embedding"
+        "embedding",
+        "time-series",
+        "forecasting"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -147,6 +286,95 @@
           "readerTitle": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
           "readerExcerpt": "## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependencies might lead to a decline in predictive performance and want to use Transformers for time series analysis, this repository is well-suited to you. ## Updates - 🌟 (2025.11) EMAformer was accepted by AAAI 2026. ## Introduction EMAformer enhances the Transformer architecture by simply introducing additional embeddings. It achieves state-of-the-art performance on 12 real-world benchmarks, reducing forecasting errors by an average of 2.73% in MSE and 5.15% in MAE. !Image 5: Left...",
           "publishDate": "2026-05-06",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-9123458a8537",
+      "title": "MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Main paper signal for MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/facebookresearch/MetaEmbed",
+      "canonicalUrl": "https://github.com/facebookresearch/MetaEmbed",
+      "pdfUrl": "",
+      "sourceId": "unofficial-9123458a8537",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-10T04:54:55.706Z",
+      "updatedAt": "2026-05-13T05:00:43.250Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/facebookresearch/MetaEmbed",
+          "title": "GitHub - facebookresearch/MetaEmbed: [ICLR 2026 Oral] Official Implementation of the paper \"MetaEmbed: Scaling Multimodal Retrieval at Test",
+          "snippet": "Latest 1 1 colpali_engine colpali_engine scripts scripts vidore_benchmark vidore_benchmark .gitignore .gitignore _OF_CONDUCT.md _OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE README.md README.md fsdp.yaml fsdp.yaml requirements.txt requirements.txt View all files MetaEmbed MetaEmbed is a framework for multimodal retrieval that rethinks how multimodal embeddings are constructed and interacted with at scale. During training, a fixed number of learnable Meta Tokens are appended t...",
+          "readerTitle": "GitHub - facebookresearch/MetaEmbed: [ICLR 2026 Oral] Official Implementation of the paper \"MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions\" · GitHub",
+          "readerExcerpt": "MetaEmbed is a framework for multimodal retrieval that rethinks how multimodal embeddings are constructed and interacted with at scale. During training, a fixed number of learnable __Meta Tokens__ are appended to the input sequence. At test-time, their last-layer contextualized representations serve as compact yet expressive __multi-vector embeddings__. Through the proposed __Matryoshka Multi-Vector Retrieval (MMR)__ training, MetaEmbed learns to organize information by granularity across multiple vectors, enabling test-time scaling where users can balance retrieval quality against efficiency by selecting the number of tokens used for indexing and retrieval. - Paper: https://arxiv.org/abs/2509.18095 ## Matryoshka Multi-Vector Retrieval (MMR) Standard multi-vector retrieval uses a fixed number of embedding vectors per query/document, offering no flexibility to trade off quality vs. eff...",
+          "publishDate": "2026-05-09",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5c5e539cf19a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-05-13T05:00:43.248Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
+          "publishDate": "2026-05-11",
           "query": ""
         }
       ],
@@ -187,143 +415,6 @@
           "readerTitle": "GitHub - RocStone/DTD: Accepted by AAAI 2026: Autonomous Concept Drift Threshold Determination · GitHub",
           "readerExcerpt": "## This is the for AAAI 2026 paper: Autonomous Concept Drift Threshold Determination __To generate CIFAR10-CD dataset, run `cifar10_preprocess.ipynb`.__ __For experiments that our method DTD boosts classic drift detectors and SOTA method PUDD, run the following command:__ ``` python .py --ddm_name DDM --ensemble False --threshold -3 --dataset sea0 --continual True --classifier_name GNB ``` The option for ddm_name is DDM, EDDM, HDDM_W, HDDM_A, KSWIN, PH, PUDD. The option for dataset is sea0, sea10, sea20, sine, mixed, elec2, powersupply, cifar10, airline. The option for classifier_name is GNB, hoeffding, DNN, resnet18. Note resnet18 is only for cifar10. The option for continual is True or False. The option for threshold is -3, -1, -5. (To test the performance of DTD when threshold of PUDD is -3, -1, -5. Note that this threshold parameter is useless when boosting other detectors. The th...",
           "publishDate": "2026-05-07",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-b09792bf2db3",
-      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation",
-      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "pdfUrl": "",
-      "sourceId": "unofficial-b09792bf2db3",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-05-12T04:49:19.994Z",
-      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "rag",
-        "reasoning",
-        "3d"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
-          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
-          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
-          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
-          "publishDate": "2026-04-17",
-          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-2971c51313fb",
-      "title": "Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026官方论文代码库，证实论文已被主会议接受。",
-      "primaryUrl": "https://github.com/UmeanNever/RankSurprisalRatio",
-      "canonicalUrl": "https://github.com/UmeanNever/RankSurprisalRatio",
-      "pdfUrl": "",
-      "sourceId": "unofficial-2971c51313fb",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.025Z",
-      "updatedAt": "2026-05-11T05:24:33.513Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "reasoning",
-        "rag",
-        "post-training",
-        "alignment",
-        "metric",
-        "trajectory"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/UmeanNever/RankSurprisalRatio",
-          "title": "GitHub - UmeanNever/RankSurprisalRatio: [ACL 2026 Main] Official Repo for Paper \"Which Reasoning Trajectories Teach Students to Reason Better",
-          "snippet": "Latest 28 28 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt rsr_cal.py rsr_cal.py rsr_launch.py rsr_launch.py rsr_utils.py rsr_utils.py View all files Rank-Surprisal Ratio (RSR) From the ACL 2026 paper \"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\" RSR measures the suitability of a teacher trajectory (training sample) for a given student model. Rank values are clipped; see Eq....",
-          "readerTitle": "GitHub - UmeanNever/RankSurprisalRatio: Official Repo for Paper \"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment“",
-          "readerExcerpt": "## Rank-Surprisal Ratio (RSR) From the paper __\"Which Reasoning Trajectories Teach Students to Reason Better? A Simple Metric of Informative Alignment\"__ !Image 1: GitHub license !Image 2: Paper !Image 3: Data !Image 4: RSR definition. _RSR measures the suitability of a teacher trajectory (training sample) for a given student model. Rank values are clipped; see Eq. 7 in the paper for the formal definition._ ## 📋 Overview In this work, we investigate data–student suitability in reasoning distillation and introduce __Rank-Surprisal Ratio__ (RSR), a simple yet effective metric for __identifying suitable reasoning trajectories for a given student__. RSR is defined as the ratio of a trajectory’s average token-wise rank to its average negative log-likelihood (surprisal), and __is straightforward to compute and interpret__. Although our work focuses solely on reasoning tasks, RSR is not spe...",
-          "publishDate": "2026-05-05",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-9998a11e4f1b",
-      "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
-      "summary": "提出了一种基于KV缓存层次化内存的高效流式视频理解方法",
-      "reason": "GitHub仓库明确显示该论文已被ACL 2026主会议接受",
-      "primaryUrl": "https://github.com/haowei-freesky/HERMES",
-      "canonicalUrl": "https://github.com/haowei-freesky/HERMES",
-      "pdfUrl": "",
-      "sourceId": "unofficial-9998a11e4f1b",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8055555555555556,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-11T05:08:14.977Z",
-      "updatedAt": "2026-05-11T05:12:59.432Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "video understanding",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/haowei-freesky/HERMES",
-          "title": "GitHub - haowei-freesky/HERMES: Official Repository for paper \"HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
-          "snippet": "Latest haowei-freesky update news Apr 15, 2026 b0f3bae · Apr 15, 2026 37 Open details 37 asset asset add link Jan 23, 2026 data data update readme Mar 23, 2026 eval eval small bug fix Apr 7, 2026 inference inference update pipeline Mar 23, 2026 scripts scripts update readme Mar 23, 2026 video_qa video_qa small bug fix Apr 7, 2026 LICENSE LICENSE Initial Jan 20, 2026 README.md README.md update news Apr 15, 2026 requirements_llava.txt requirements_llava.txt update requirements Mar 23, 2026 requ...",
-          "readerTitle": "GitHub - haowei-freesky/HERMES: Official Repository for paper \"HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding\" [ACL 2026]",
-          "readerExcerpt": "__[ACL 2026] KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding__ !Image 1: Project Page !Image 2: Paper !Image 3: HF Paper ## π₯ News - __[2026.04.06]__ HERMES is accepted to ACL 2026 π - __[2026.03.23]__ Full released! - __[2025.01.23]__ HERMES reached __#3 Paper of the day__ on Hugging Face Daily Papers! - __[2025.01.21]__ HERMES is available on arXiv. ## π οΈ Installation For __LLaVA__ model inference: ``` conda create -n hermes-llava python=3.12 -y conda activate hermes-llava pip install -r requirements_llava.txt pip install flash-attn --no-build-isolation ``` For __Qwen2.5-VL__ model inference: ``` conda create -n hermes-qwen python=3.12 -y conda activate hermes-qwen pip install -r requirements_qwen.txt pip install flash-attn --no-build-isolation ``` ## π¦ Preparation ### Model Preparation Create a `models` directory and download the model weig...",
-          "publishDate": "2026-04-15",
           "query": ""
         }
       ],
@@ -373,52 +464,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-11T05:08:14.983Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
-          "publishDate": "2026-05-06",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-2d98176824ab",
       "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
       "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -460,49 +505,6 @@
           "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
           "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
           "publishDate": "2026-05-08",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-9123458a8537",
-      "title": "MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Main paper signal for MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/facebookresearch/MetaEmbed",
-      "canonicalUrl": "https://github.com/facebookresearch/MetaEmbed",
-      "pdfUrl": "",
-      "sourceId": "unofficial-9123458a8537",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-10T04:54:55.706Z",
-      "updatedAt": "2026-05-10T04:54:55.706Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/facebookresearch/MetaEmbed",
-          "title": "GitHub - facebookresearch/MetaEmbed: [ICLR 2026 Oral] Official Implementation of the paper \"MetaEmbed: Scaling Multimodal Retrieval at Test",
-          "snippet": "Latest 1 1 colpali_engine colpali_engine scripts scripts vidore_benchmark vidore_benchmark .gitignore .gitignore _OF_CONDUCT.md _OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE README.md README.md fsdp.yaml fsdp.yaml requirements.txt requirements.txt View all files MetaEmbed MetaEmbed is a framework for multimodal retrieval that rethinks how multimodal embeddings are constructed and interacted with at scale. During training, a fixed number of learnable Meta Tokens are appended t...",
-          "readerTitle": "GitHub - facebookresearch/MetaEmbed: [ICLR 2026 Oral] Official Implementation of the paper \"MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions\" · GitHub",
-          "readerExcerpt": "MetaEmbed is a framework for multimodal retrieval that rethinks how multimodal embeddings are constructed and interacted with at scale. During training, a fixed number of learnable __Meta Tokens__ are appended to the input sequence. At test-time, their last-layer contextualized representations serve as compact yet expressive __multi-vector embeddings__. Through the proposed __Matryoshka Multi-Vector Retrieval (MMR)__ training, MetaEmbed learns to organize information by granularity across multiple vectors, enabling test-time scaling where users can balance retrieval quality against efficiency by selecting the number of tokens used for indexing and retrieval. - Paper: https://arxiv.org/abs/2509.18095 ## Matryoshka Multi-Vector Retrieval (MMR) Standard multi-vector retrieval uses a fixed number of embedding vectors per query/document, offering no flexibility to trade off quality vs. eff...",
-          "publishDate": "2026-05-09",
           "query": ""
         }
       ],
