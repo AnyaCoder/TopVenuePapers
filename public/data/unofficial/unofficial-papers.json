@@ -1,11 +1,308 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-15T05:11:47.657Z",
+  "generatedAt": "2026-05-16T04:47:03.971Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-ad578ff3868a",
+      "title": "PIArena: A Platform for Prompt Injection Evaluation Β",
+      "summary": "PIArena是一个用于提示注入评估的易用工具箱和全面基准",
+      "reason": "GitHub页面标题明确标注为ACL 2026论文，描述PIArena是一个用于提示注入评估的工具箱和基准",
+      "primaryUrl": "https://github.com/sleeepeer/PIArena",
+      "canonicalUrl": "https://github.com/sleeepeer/PIArena",
+      "pdfUrl": "",
+      "sourceId": "unofficial-ad578ff3868a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8333333333333334,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-16T04:39:18.368Z",
+      "updatedAt": "2026-05-16T04:47:03.569Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/sleeepeer/PIArena",
+          "title": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation · GitHub",
+          "snippet": "Latest sleeepeer and claude llm.py: transformers 5.x compat + reasoning-style response stripping Open details success Apr 20, 2026 c39fd88 · Apr 20, 2026 49 Open details 49 agents agents add agentdojo suites selection Mar 22, 2026 assets assets Initial release of PIArena Mar 16, 2026 configs configs Initial release of PIArena Mar 16, 2026 datasets datasets Initial release of PIArena Mar 16, 2026 docs docs Support AgentDyn and fix webpage render Mar 21, 2026 piarena piarena llm.py: transformer...",
+          "readerTitle": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation Β· GitHub",
+          "readerExcerpt": "## Image 1: PIArena ### A Platform for Prompt Injection Evaluation !Image 2: ProjectPage !Image 3: HuggingFace !Image 4: LeaderBoard !Image 5: Paper !Image 6: Star __PIArena__ is an __easy-to-use toolbox__ and also a __comprehensive benchmark__ for researching prompt injection attacks and defenses. It provides: - __Plug-and-play Attacks & Defenses__ β Easily integrate state-of-the-art defenses into your workflow to protect your LLM system against prompt injection attacks. You can also play with existing attack strategies to perform a better research. - __Systematic Evaluation Benchmark__ β End-to-end evaluation pipeline enables you to easily evaluate attacks / defenses on various datasets. - __Add Your Own__ β You can also easily integrate your own attack or defense into our benchmark to systematically assess how well it perform. ## News [4/9/2026] π PIArena is accepted to AC...",
+          "publishDate": "2026-04-20",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/sleeepeer/PIArena",
+          "title": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation · GitHub",
+          "snippet": "Latest sleeepeer and claude llm.py: transformers 5.x compat + reasoning-style response stripping Open details success Apr 20, 2026 c39fd88 · Apr 20, 2026 49 Open details 49 agents agents add agentdojo suites selection Mar 22, 2026 assets assets Initial release of PIArena Mar 16, 2026 configs configs Initial release...",
+          "readerTitle": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation Β· GitHub",
+          "readerExcerpt": "## Image 1: PIArena ### A Platform for Prompt Injection Evaluation !Image 2: ProjectPage !Image 3: HuggingFace !Image 4: LeaderBoard !Image 5: Paper !Image 6: Star __PIArena__ is an __easy-to-use toolbox__ and also a __comprehensive benchmark__ for researching prompt injection attacks and defenses. It provides: - __Plug-and-play Attacks & Defenses__ β Easily integrate state-of-the-art defenses into your workflow...",
+          "publishDate": "2026-04-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-69c40faf22a4",
+      "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video.",
+      "summary": "一项通过联合学习环境视频来重新照亮视频的SIGGRAPH 2026论文",
+      "reason": "GitHub仓库明确标注为SIGGRAPH 2026官方论文代码库",
+      "primaryUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+      "canonicalUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+      "pdfUrl": "",
+      "sourceId": "unofficial-69c40faf22a4",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "SIGGRAPH 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-16T04:39:18.363Z",
+      "updatedAt": "2026-05-16T04:40:38.530Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "video",
+        "3d",
+        "relighting",
+        "SIGGRAPH"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+          "title": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video",
+          "snippet": "Open more menu Folders and files Latest zhuxing0 readme init May 8, 2026 6848cef · May 8, 2026 15 Open details 15 assets assets Convert institution logos from white to black May 6, 2026 datasets datasets Add source , datasets, and updated README; ignore checkpoints, mo… May 6, 2026 diffsynth diffsynth Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 .gitignore .gitignore Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 LICENS...",
+          "readerTitle": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video\". · GitHub",
+          "readerExcerpt": "1Nanjing University 2BAAI 3Beihang University 4Tsinghua University 5HKUST 6UCAS 7HUST 8CUHK-Shenzhen *Equal contribution. †Corresponding authors. !Image 1: Nanjing University !Image 2: BAAI !Image 3: Beihang University !Image 4: Tsinghua University !Image 5: Paper !Image 6: Website !Image 7: Hugging Face Model !Image 8: License This repo contains the official of our paper: Relit-LiVE: Relight Video by Jointly Learning Environment Video. ## 📊 Overview !Image 9: Overview We present __Relit-LiVE__, a novel video relighting framework that produces physically consistent and temporally stable results without needing prior knowledge of camera pose. This is achieved by jointly generating relighting videos and environment videos. Additionally, by integrating real-world lighting effects with intrinsic constraints, the relighting videos demonstrate remarkable physical plausibility, showcasing r...",
+          "publishDate": "2026-05-08",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5c5e539cf19a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-05-16T04:39:18.366Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
+          "publishDate": "2026-05-11",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5ffdae82dc19",
+      "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
+      "summary": "提出EMAformer方法，通过嵌入装甲增强Transformer架构，提升时间序列预测性能。",
+      "reason": "GitHub仓库明确标注该论文已被AAAI 2026主会议接受，并提供官方实现代码。",
+      "primaryUrl": "https://github.com/PlanckChang/EMAformer",
+      "canonicalUrl": "https://github.com/PlanckChang/EMAformer",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5ffdae82dc19",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.154Z",
+      "updatedAt": "2026-05-15T05:13:58.173Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "rag",
+        "benchmark",
+        "transformer",
+        "time series forecasting",
+        "embedding",
+        "time-series",
+        "forecasting"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/PlanckChang/EMAformer",
+          "title": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
+          "snippet": "Latest 9 9 data_provider data_provider experiments experiments figures figures layers layers model model scripts scripts utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.py run.py View all files Equip your Transformer with embedding armor and beat the MLPs in time series forecasting. This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting , accepted by AAAI...",
+          "readerTitle": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
+          "readerExcerpt": "## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependencies might lead to a decline in predictive performance and want to use Transformers for time series analysis, this repository is well-suited to you. ## Updates - 🌟 (2025.11) EMAformer was accepted by AAAI 2026. ## Introduction EMAformer enhances the Transformer architecture by simply introducing additional embeddings. It achieves state-of-the-art performance on 12 real-world benchmarks, reducing forecasting errors by an average of 2.73% in MSE and 5.15% in MAE. !Image 5: Left...",
+          "publishDate": "2026-05-06",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-15T05:13:22.067Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确标注为'ACL 2026 accepted paper'，证明论文已被ACL 2026主会议接受。",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-05-15T05:12:52.325Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "Navigation Menu",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
     {
       "id": "unofficial-9998a11e4f1b",
       "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
@@ -92,100 +389,6 @@
           "readerTitle": "GitHub - Maxwell-Jia/spec-o3: [ACL 2026 Main Conference] Tool-augmented VLM agent for rare celestial object vetting via automated spectral inspection.",
           "readerExcerpt": "## Background Modern spectroscopic surveys produce massive candidate lists, but the final quality-control step still relies on expert visual inspection, which is difficult to scale. Spec-o3 is a tool-augmented vision-language agent that follows astronomers’ workflow by iteratively zooming into diagnostic wavelength windows and making evidence-grounded vetting decisions. !Image 1: Astronomer-like spectral inspection workflow _Expert workflow for spectral candidate vetting: visualize the spectrum, iteratively zoom into key wavelength regions, and conclude based on localized evidence._ ## Example Spec-o3 performs spectral inspection in a multi-turn loop: it plans which diagnostic region to examine, invokes a visualization tool with a wavelength window, updates its hypothesis based on the zoomed view, and repeats until it reaches a final decision. !Image 2: Spec-o3 iMCoT example _An examp...",
           "publishDate": "2026-05-05",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-15T05:02:49.048Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
-          "publishDate": "2026-05-11",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-5ffdae82dc19",
-      "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
-      "summary": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit AAAI 2026 Main paper signal for EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/PlanckChang/EMAformer",
-      "canonicalUrl": "https://github.com/PlanckChang/EMAformer",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5ffdae82dc19",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "AAAI 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-07T05:31:40.154Z",
-      "updatedAt": "2026-05-15T05:02:49.044Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "rag",
-        "benchmark",
-        "transformer",
-        "time series forecasting",
-        "embedding",
-        "time-series",
-        "forecasting"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/PlanckChang/EMAformer",
-          "title": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
-          "snippet": "Latest 9 9 data_provider data_provider experiments experiments figures figures layers layers model model scripts scripts utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.py run.py View all files Equip your Transformer with embedding armor and beat the MLPs in time series forecasting. This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting , accepted by AAAI...",
-          "readerTitle": "GitHub - PlanckChang/EMAformer: [AAAI 2026] Official repository of the EMAformer paper: \"EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
-          "readerExcerpt": "## Image 1: EMAformer Logo EMAformer _Equip your Transformer with embedding armor and beat the MLPs in time series forecasting._ !Image 2: Python 3.8 !Image 3: PyTorch 2.0.0 !Image 4: arXiv This is the official implementation of the paper, EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting, accepted by AAAI 2026. If you are wondering why explicitly modeling inter-channel dependencies might lead to a decline in predictive performance and want to use Transformers for time series analysis, this repository is well-suited to you. ## Updates - 🌟 (2025.11) EMAformer was accepted by AAAI 2026. ## Introduction EMAformer enhances the Transformer architecture by simply introducing additional embeddings. It achieves state-of-the-art performance on 12 real-world benchmarks, reducing forecasting errors by an average of 2.73% in MSE and 5.15% in MAE. !Image 5: Left...",
-          "publishDate": "2026-05-06",
           "query": ""
         }
       ],
@@ -303,7 +506,7 @@
       "updatedAt": "2026-05-14T05:12:39.180Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -333,61 +536,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库标题明确标注为'ACL 2026 accepted paper'，证明论文已被ACL 2026主会议接受。",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-05-14T05:10:05.415Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "Navigation Menu",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-b09792bf2db3",
@@ -520,51 +668,6 @@
           "readerTitle": "GitHub - LingFengGold/STReasoner: [ACL 2026 Main] Official implementation of \"STReasoner: Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning\"",
           "readerExcerpt": "__Empowering LLMs for Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning__ !Image 1: Python 3.10 !Image 2: CUDA 12.8 !Image 3: License !Image 4: Dataset !Image 5: Model !Image 6: Paper !Image 7 --- ## ✨ Highlights - 📊 __Multimodal Benchmark__ — ST-Bench for spatio-temporal reasoning in time series - 🔗 __Time Series En r Integration__ — LLM with dedicated time series en r _Supports: Qwen3-8B, Qwen3-4B-Instruct, Qwen2.5-14B-Instruct_ - 🚀 __Full Training Pipeline__ — First SFT + RL training pipeline for LLM with time series en r --- ## 📰 News - __[2026/04/06]__ STReasoner has been accepted to ACL 2026 !!🎉 🎉 🎉 - __[2026/02/19]__ Now supports Qwen3-4B, Qwen3-8B, and Qwen3-14B, and adds the MAPE metric during evaluation. - __202 # (ACL 2026 ) STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...",
           "publishDate": "2026-05-01",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-13T05:11:05.953Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
           "query": ""
         }
       ],

@@ -2,7 +2,7 @@
   "key": "2026-acl-2026-main",
   "venue": "ACL 2026 Main",
   "year": 2026,
-  "count": 1,
+  "count": 2,
   "papers": [
     {
       "id": "unofficial-9998a11e4f1b",
@@ -45,6 +45,55 @@
       "evidenceCount": 1,
       "platforms": [
         "web"
+      ]
+    },
+    {
+      "id": "unofficial-ad578ff3868a",
+      "title": "PIArena: A Platform for Prompt Injection Evaluation Β",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "reasoning",
+        "rl-post-training",
+        "agents-tool-use"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "reinforcement learning",
+        "ACL 2026 Main",
+        "web",
+        "github",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/sleeepeer/PIArena",
+      "tldr": "PIArena是一个用于提示注入评估的易用工具箱和全面基准",
+      "abstract": "PIArena是一个用于提示注入评估的易用工具箱和全面基准",
+      "aliases": [
+        "unofficial-ad578ff3868a"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-ad578ff3868a",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-16T04:39:18.368Z",
+      "evidenceCount": 2,
+      "platforms": [
+        "web",
+        "github"
       ]
     }
   ]
