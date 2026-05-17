@@ -2,7 +2,7 @@
   "key": "2026-acl-2026-main",
   "venue": "ACL 2026 Main",
   "year": 2026,
-  "count": 2,
+  "count": 3,
   "papers": [
     {
       "id": "unofficial-9998a11e4f1b",
@@ -42,6 +42,51 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.977Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ]
+    },
+    {
+      "id": "unofficial-81b75a59289c",
+      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "reasoning",
+        "agents-tool-use",
+        "efficiency-systems"
+      ],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "tldr": "MTRouter是一种成本感知的多轮LLM路由框架，通过模型联合嵌入优化路由决策。",
+      "abstract": "MTRouter是一种成本感知的多轮LLM路由框架，通过模型联合嵌入优化路由决策。",
+      "aliases": [
+        "unofficial-81b75a59289c"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-81b75a59289c",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-17T05:01:52.722Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
