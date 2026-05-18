@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-17T05:12:57.105Z",
+  "generatedAt": "2026-05-18T05:30:12.814Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
@@ -22,7 +22,7 @@
       "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-17T05:15:01.124Z",
+      "updatedAt": "2026-05-18T05:31:26.511Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -52,6 +52,233 @@
       "evidenceCount": 1
     },
     {
+      "id": "unofficial-f3d34727706a",
+      "title": "CodeFlowBench: A",
+      "summary": "FlowBench是一个用于复杂生成的多轮迭代基准测试。",
+      "reason": "GitHub仓库标题明确标注为ACL 2026官方实现，证明论文已被ACL 2026主会议接受。",
+      "primaryUrl": "https://github.com/Rise-1210/codeflow",
+      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f3d34727706a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-18T05:18:52.491Z",
+      "updatedAt": "2026-05-18T05:26:33.343Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
+          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
+          "publishDate": "2026-05-15",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-2d98176824ab",
+      "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确标注为ACL 2026论文，标题和作者信息完整",
+      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "pdfUrl": "",
+      "sourceId": "unofficial-2d98176824ab",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-11T05:08:14.979Z",
+      "updatedAt": "2026-05-18T05:20:21.499Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhihengli-casia/smugglebench",
+          "title": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks",
+          "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
+          "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
+          "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
+          "publishDate": "2026-05-08",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-81b75a59289c",
+      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-81b75a59289c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-17T05:01:52.722Z",
+      "updatedAt": "2026-05-18T05:18:52.494Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZhangYiqun018/MTRouter",
+          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
+          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
+          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
+          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
+          "publishDate": "2026-05-14",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5c5e539cf19a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-05-18T05:18:52.493Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
+          "publishDate": "2026-05-11",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-69c40faf22a4",
+      "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video.",
+      "summary": "发现页在公开页面中识别到 SIGGRAPH 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit SIGGRAPH 2026 Main paper signal for Relit-LiVE: Relight Video by Jointly Learning Environment Video.; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+      "canonicalUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+      "pdfUrl": "",
+      "sourceId": "unofficial-69c40faf22a4",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "SIGGRAPH 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-16T04:39:18.363Z",
+      "updatedAt": "2026-05-18T05:18:52.490Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "video",
+        "3d",
+        "relighting",
+        "SIGGRAPH"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+          "title": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video",
+          "snippet": "Open more menu Folders and files Latest zhuxing0 readme init May 8, 2026 6848cef · May 8, 2026 15 Open details 15 assets assets Convert institution logos from white to black May 6, 2026 datasets datasets Add source , datasets, and updated README; ignore checkpoints, mo… May 6, 2026 diffsynth diffsynth Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 .gitignore .gitignore Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 LICENS...",
+          "readerTitle": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video\". · GitHub",
+          "readerExcerpt": "1Nanjing University 2BAAI 3Beihang University 4Tsinghua University 5HKUST 6UCAS 7HUST 8CUHK-Shenzhen *Equal contribution. †Corresponding authors. !Image 1: Nanjing University !Image 2: BAAI !Image 3: Beihang University !Image 4: Tsinghua University !Image 5: Paper !Image 6: Website !Image 7: Hugging Face Model !Image 8: License This repo contains the official of our paper: Relit-LiVE: Relight Video by Jointly Learning Environment Video. ## 📊 Overview !Image 9: Overview We present __Relit-LiVE__, a novel video relighting framework that produces physically consistent and temporally stable results without needing prior knowledge of camera pose. This is achieved by jointly generating relighting videos and environment videos. Additionally, by integrating real-world lighting effects with intrinsic constraints, the relighting videos demonstrate remarkable physical plausibility, showcasing r...",
+          "publishDate": "2026-05-08",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
@@ -69,7 +296,7 @@
       "updatedAt": "2026-05-17T05:14:12.051Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
@@ -105,51 +332,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-81b75a59289c",
-      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
-      "summary": "MTRouter是一种成本感知的多轮LLM路由框架，通过模型联合嵌入优化路由决策。",
-      "reason": "GitHub仓库标题明确表明该论文已被ACL 2026会议接受。",
-      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "pdfUrl": "",
-      "sourceId": "unofficial-81b75a59289c",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-05-17T05:12:48.287Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/ZhangYiqun018/MTRouter",
-          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
-          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
-          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
-          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
-          "publishDate": "2026-05-14",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
     },
     {
       "id": "unofficial-ad578ff3868a",
@@ -208,97 +390,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-17T05:01:52.718Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
-          "publishDate": "2026-05-11",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-69c40faf22a4",
-      "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video.",
-      "summary": "发现页在公开页面中识别到 SIGGRAPH 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit SIGGRAPH 2026 Main paper signal for Relit-LiVE: Relight Video by Jointly Learning Environment Video.; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
-      "canonicalUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
-      "pdfUrl": "",
-      "sourceId": "unofficial-69c40faf22a4",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "SIGGRAPH 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-16T04:39:18.363Z",
-      "updatedAt": "2026-05-17T05:01:52.715Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "video",
-        "3d",
-        "relighting",
-        "SIGGRAPH"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
-          "title": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video",
-          "snippet": "Open more menu Folders and files Latest zhuxing0 readme init May 8, 2026 6848cef · May 8, 2026 15 Open details 15 assets assets Convert institution logos from white to black May 6, 2026 datasets datasets Add source , datasets, and updated README; ignore checkpoints, mo… May 6, 2026 diffsynth diffsynth Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 .gitignore .gitignore Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 LICENS...",
-          "readerTitle": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video\". · GitHub",
-          "readerExcerpt": "1Nanjing University 2BAAI 3Beihang University 4Tsinghua University 5HKUST 6UCAS 7HUST 8CUHK-Shenzhen *Equal contribution. †Corresponding authors. !Image 1: Nanjing University !Image 2: BAAI !Image 3: Beihang University !Image 4: Tsinghua University !Image 5: Paper !Image 6: Website !Image 7: Hugging Face Model !Image 8: License This repo contains the official of our paper: Relit-LiVE: Relight Video by Jointly Learning Environment Video. ## 📊 Overview !Image 9: Overview We present __Relit-LiVE__, a novel video relighting framework that produces physically consistent and temporally stable results without needing prior knowledge of camera pose. This is achieved by jointly generating relighting videos and environment videos. Additionally, by integrating real-world lighting effects with intrinsic constraints, the relighting videos demonstrate remarkable physical plausibility, showcasing r...",
-          "publishDate": "2026-05-08",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
     },
     {
       "id": "unofficial-5ffdae82dc19",
@@ -796,53 +887,6 @@
           "readerTitle": "GitHub - tuanvu171/Critical-CoT · GitHub",
           "readerExcerpt": "## Critical-CoT - ACL 2026 Conference Repo for the paper \"Critical-CoT: A Unified Defense against Reasoning-Level Backdoor Attacks in Large Language Models\" !Image 1 ## Setup Environment - Python: 3.11.0 - PyTorch: 2.8.0+cu128 Please create a virtual environment as follows: ``` conda create -n Critical-CoT python=3.11.0 conda activate Critical-CoT ``` ## Install Required Packages Please run the following command to install packages: ``` pip install -r requirements.txt ``` ## Dataset Construction Generate the backdoor and defensive datasets: - `--base_model`: The model that we use to generate defensive examples. - `--dataset_name`: The base dataset that we use to construct the defensive dataset. - `--dataset_size`: The size of the dataset. Take full size if it is 0. - `--poison_rate`: The poisoning rate for fine-tuning-based backdoor attack. - `--trigger`: The trigger for fine-tuning-b...",
           "publishDate": "2026-04-12",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-2d98176824ab",
-      "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
-      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
-      "pdfUrl": "",
-      "sourceId": "unofficial-2d98176824ab",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-05-11T05:08:14.979Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/zhihengli-casia/smugglebench",
-          "title": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks",
-          "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
-          "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
-          "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
-          "publishDate": "2026-05-08",
           "query": ""
         }
       ],
