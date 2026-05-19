@@ -1,11 +1,248 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-18T05:30:04.600Z",
+  "generatedAt": "2026-05-19T05:25:34.604Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-ad578ff3868a",
+      "title": "PIArena: A Platform for Prompt Injection Evaluation Β",
+      "summary": "PIArena是一个用于提示注入攻击和防御研究的易用工具箱和综合基准测试平台。",
+      "reason": "GitHub页面标题明确标注为[ACL 2026] PIArena，提供了论文和官方代码证据。",
+      "primaryUrl": "https://github.com/sleeepeer/PIArena",
+      "canonicalUrl": "https://github.com/sleeepeer/PIArena",
+      "pdfUrl": "",
+      "sourceId": "unofficial-ad578ff3868a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8333333333333334,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-16T04:39:18.368Z",
+      "updatedAt": "2026-05-19T05:25:34.192Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/sleeepeer/PIArena",
+          "title": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation · GitHub",
+          "snippet": "Latest sleeepeer and claude llm.py: transformers 5.x compat + reasoning-style response stripping Open details success Apr 20, 2026 c39fd88 · Apr 20, 2026 49 Open details 49 agents agents add agentdojo suites selection Mar 22, 2026 assets assets Initial release of PIArena Mar 16, 2026 configs configs Initial release of PIArena Mar 16, 2026 datasets datasets Initial release of PIArena Mar 16, 2026 docs docs Support AgentDyn and fix webpage render Mar 21, 2026 piarena piarena llm.py: transformer...",
+          "readerTitle": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation Β· GitHub",
+          "readerExcerpt": "## Image 1: PIArena ### A Platform for Prompt Injection Evaluation !Image 2: ProjectPage !Image 3: HuggingFace !Image 4: LeaderBoard !Image 5: Paper !Image 6: Star __PIArena__ is an __easy-to-use toolbox__ and also a __comprehensive benchmark__ for researching prompt injection attacks and defenses. It provides: - __Plug-and-play Attacks & Defenses__ β Easily integrate state-of-the-art defenses into your workflow to protect your LLM system against prompt injection attacks. You can also play with existing attack strategies to perform a better research. - __Systematic Evaluation Benchmark__ β End-to-end evaluation pipeline enables you to easily evaluate attacks / defenses on various datasets. - __Add Your Own__ β You can also easily integrate your own attack or defense into our benchmark to systematically assess how well it perform. ## News [4/9/2026] π PIArena is accepted to AC...",
+          "publishDate": "2026-04-20",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/sleeepeer/PIArena",
+          "title": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation · GitHub",
+          "snippet": "Latest sleeepeer and claude llm.py: transformers 5.x compat + reasoning-style response stripping Open details success Apr 20, 2026 c39fd88 · Apr 20, 2026 49 Open details 49 agents agents add agentdojo suites selection Mar 22, 2026 assets assets Initial release of PIArena Mar 16, 2026 configs configs Initial release...",
+          "readerTitle": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation Β· GitHub",
+          "readerExcerpt": "## Image 1: PIArena ### A Platform for Prompt Injection Evaluation !Image 2: ProjectPage !Image 3: HuggingFace !Image 4: LeaderBoard !Image 5: Paper !Image 6: Star __PIArena__ is an __easy-to-use toolbox__ and also a __comprehensive benchmark__ for researching prompt injection attacks and defenses. It provides: - __Plug-and-play Attacks & Defenses__ β Easily integrate state-of-the-art defenses into your workflow...",
+          "publishDate": "2026-04-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-81b75a59289c",
+      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-81b75a59289c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-17T05:01:52.722Z",
+      "updatedAt": "2026-05-19T05:15:38.264Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZhangYiqun018/MTRouter",
+          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
+          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
+          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
+          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
+          "publishDate": "2026-05-14",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-754110e4ec47",
+      "title": "VLADR: empty repository for future papers",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for VLADR: empty repository for future papers; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/zhoujiahuan1991/CVPR2026-VLADR",
+      "canonicalUrl": "https://github.com/zhoujiahuan1991/CVPR2026-VLADR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-754110e4ec47",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-19T05:15:38.261Z",
+      "updatedAt": "2026-05-19T05:15:38.261Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "vla",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhoujiahuan1991/CVPR2026-VLADR",
+          "title": "GitHub - zhoujiahuan1991/CVPR2026-VLADR: empty repository for future papers · GitHub",
+          "snippet": "Latest 8 8 VLADR.egg-info VLADR.egg-info _BLIP_TEXT_DESC _BLIP_TEXT_DESC _STAGE1_PROMPTS_WEIGHT _STAGE1_PROMPTS_WEIGHT build build config config figs figs lreid_dataset lreid_dataset reid reid tools tools README.md README.md requirements.txt requirements.txt setup.py setup.py test.sh test.sh train1.sh train1.sh train2_setting1.sh train2_setting1.sh train2_setting2.sh train2_setting2.sh train_stage1.py train_stage1.py train_stage2.py train_stage2.py View all files [CVPR2026] Vision-Language At...",
+          "readerTitle": "GitHub - zhoujiahuan1991/CVPR2026-VLADR: empty repository for future papers",
+          "readerExcerpt": "## [CVPR2026] Vision-Language Attribute Disentanglement and Reinforcement for Lifelong Person Re-Identification !Image 1 !Image 2 !Image 3 __Kunlun Xu__1 __Haotong Cheng__1 __Jiangmeng Li__2 __Xu Zou__3 __Jiahuan Zhou__1* 1Wangxuan Institute of Computer Technology, Peking University | 2University of Chinese Academy of Sciences | 3School of Artificial Intelligence and Automation, Huazhong University of Science and Technology --- > __Official repository__ for _Vision-Language Attribute Disentanglement and Reinforcement for Lifelong Person Re-Identification_ (CVPR 2026). ## Overview VLADR tackles __Lifelong Person Re-Identification__ using vision-language alignment. The pipeline consists of two stages: - __Stage 1 — Multi-grain Text Attribute Disentanglement (MTAD):__ Extracts multi-grain attributes via local attribute extraction and global attribute modeling. - __Stage 2 — Inter-domain...",
+          "publishDate": "2026-05-06",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5c5e539cf19a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-05-19T05:15:38.258Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
+          "publishDate": "2026-05-18",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-18T05:31:26.511Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
     {
       "id": "unofficial-f3d34727706a",
       "title": "CodeFlowBench: A",
@@ -98,97 +335,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-81b75a59289c",
-      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "pdfUrl": "",
-      "sourceId": "unofficial-81b75a59289c",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-05-18T05:18:52.494Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/ZhangYiqun018/MTRouter",
-          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
-          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
-          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
-          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
-          "publishDate": "2026-05-14",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-18T05:18:52.493Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "## π WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning !Image 1: arXiv !Image 2: Project Page !Image 3: Python 3.10+ __WorldMM__ is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. !Image 4: WorldMM Concept --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ``` git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets If you prefer to run the steps manually: ``` uv...",
-          "publishDate": "2026-05-11",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-69c40faf22a4",
       "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video.",
       "summary": "发现页在公开页面中识别到 SIGGRAPH 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -234,51 +380,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-17T05:15:01.124Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
@@ -296,7 +397,7 @@
       "updatedAt": "2026-05-17T05:14:12.051Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
@@ -328,64 +429,6 @@
           "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
           "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
           "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-ad578ff3868a",
-      "title": "PIArena: A Platform for Prompt Injection Evaluation Β",
-      "summary": "PIArena是一个用于提示注入评估的易用工具箱和全面基准",
-      "reason": "GitHub页面明确标注为ACL 2026，包含论文部分，内容涉及LLM提示注入评估",
-      "primaryUrl": "https://github.com/sleeepeer/PIArena",
-      "canonicalUrl": "https://github.com/sleeepeer/PIArena",
-      "pdfUrl": "",
-      "sourceId": "unofficial-ad578ff3868a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8333333333333334,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-16T04:39:18.368Z",
-      "updatedAt": "2026-05-17T05:09:47.462Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "agent",
-        "reasoning",
-        "benchmark",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/sleeepeer/PIArena",
-          "title": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation · GitHub",
-          "snippet": "Latest sleeepeer and claude llm.py: transformers 5.x compat + reasoning-style response stripping Open details success Apr 20, 2026 c39fd88 · Apr 20, 2026 49 Open details 49 agents agents add agentdojo suites selection Mar 22, 2026 assets assets Initial release of PIArena Mar 16, 2026 configs configs Initial release of PIArena Mar 16, 2026 datasets datasets Initial release of PIArena Mar 16, 2026 docs docs Support AgentDyn and fix webpage render Mar 21, 2026 piarena piarena llm.py: transformer...",
-          "readerTitle": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation Β· GitHub",
-          "readerExcerpt": "## Image 1: PIArena ### A Platform for Prompt Injection Evaluation !Image 2: ProjectPage !Image 3: HuggingFace !Image 4: LeaderBoard !Image 5: Paper !Image 6: Star __PIArena__ is an __easy-to-use toolbox__ and also a __comprehensive benchmark__ for researching prompt injection attacks and defenses. It provides: - __Plug-and-play Attacks & Defenses__ β Easily integrate state-of-the-art defenses into your workflow to protect your LLM system against prompt injection attacks. You can also play with existing attack strategies to perform a better research. - __Systematic Evaluation Benchmark__ β End-to-end evaluation pipeline enables you to easily evaluate attacks / defenses on various datasets. - __Add Your Own__ β You can also easily integrate your own attack or defense into our benchmark to systematically assess how well it perform. ## News [4/9/2026] π PIArena is accepted to AC...",
-          "publishDate": "2026-04-20",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/sleeepeer/PIArena",
-          "title": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation · GitHub",
-          "snippet": "Latest sleeepeer and claude llm.py: transformers 5.x compat + reasoning-style response stripping Open details success Apr 20, 2026 c39fd88 · Apr 20, 2026 49 Open details 49 agents agents add agentdojo suites selection Mar 22, 2026 assets assets Initial release of PIArena Mar 16, 2026 configs configs Initial release...",
-          "readerTitle": "GitHub - sleeepeer/PIArena: [ACL 2026] PIArena: A Platform for Prompt Injection Evaluation Β· GitHub",
-          "readerExcerpt": "## Image 1: PIArena ### A Platform for Prompt Injection Evaluation !Image 2: ProjectPage !Image 3: HuggingFace !Image 4: LeaderBoard !Image 5: Paper !Image 6: Star __PIArena__ is an __easy-to-use toolbox__ and also a __comprehensive benchmark__ for researching prompt injection attacks and defenses. It provides: - __Plug-and-play Attacks & Defenses__ β Easily integrate state-of-the-art defenses into your workflow...",
-          "publishDate": "2026-04-20",
           "query": ""
         }
       ],
