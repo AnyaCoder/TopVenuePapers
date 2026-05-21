@@ -1,61 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-20T05:26:33.714Z",
+  "generatedAt": "2026-05-21T05:29:32.929Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-20T05:28:05.806Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库标题明确标注为ACL 2026接受论文，论文研究情境化对话推荐系统中的偏好推理。",
+      "reason": "GitHub仓库标题明确标注为ACL 2026接受论文，证实该论文已被ACL 2026主会议接受",
       "primaryUrl": "https://github.com/DongdingLin/SiPeR",
       "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
       "pdfUrl": "",
@@ -66,7 +21,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-05-20T05:27:27.712Z",
+      "updatedAt": "2026-05-21T05:31:08.147Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -107,29 +62,30 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-f3d34727706a",
-      "title": "CodeFlowBench: A",
-      "summary": "FlowBench是一个用于复杂生成的多轮迭代基准测试。",
-      "reason": "GitHub仓库标题明确标注为ACL 2026官方实现，证明论文已被ACL 2026主会议接受。",
-      "primaryUrl": "https://github.com/Rise-1210/codeflow",
-      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
       "pdfUrl": "",
-      "sourceId": "unofficial-f3d34727706a",
+      "sourceId": "unofficial-439348b87abd",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-18T05:18:52.491Z",
-      "updatedAt": "2026-05-20T05:24:06.959Z",
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-21T05:30:04.633Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
+      "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "large language model",
-        "llm",
-        "benchmark"
+        "multimodal",
+        "agent",
+        "report generation"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -139,12 +95,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Rise-1210/codeflow",
-          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
-          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
-          "publishDate": "2026-05-15",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
           "query": ""
         }
       ],
@@ -154,7 +110,7 @@
       "id": "unofficial-2d98176824ab",
       "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
       "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026论文，包含arXiv预印本和官方代码库",
+      "reason": "GitHub仓库明确标注为ACL 2026论文，包含arXiv预印本2604.06950",
       "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
       "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
       "pdfUrl": "",
@@ -165,7 +121,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-05-20T05:21:28.922Z",
+      "updatedAt": "2026-05-21T05:24:08.527Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -224,7 +180,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-05-20T05:17:27.931Z",
+      "updatedAt": "2026-05-21T05:20:31.438Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -249,6 +205,141 @@
           "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
           "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
           "publishDate": "2026-05-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-0aa19686dbe8",
+      "title": "Multigrain-aware Semantic Prototype Scanning and Tri-Token Prompt LearningEmbraced High-Order RWKV for Pan-Sharpening",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Multigrain-aware Semantic Prototype Scanning and Tri-Token Prompt LearningEmbraced High-Order RWKV for Pan-Sharpening; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/L1junfeng/MTRWKV",
+      "canonicalUrl": "https://github.com/L1junfeng/MTRWKV",
+      "pdfUrl": "",
+      "sourceId": "unofficial-0aa19686dbe8",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-21T05:20:31.436Z",
+      "updatedAt": "2026-05-21T05:20:31.436Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/L1junfeng/MTRWKV",
+          "title": "GitHub - L1junfeng/MTRWKV: [CVPR 2026] Multigrain-aware Semantic Prototype Scanning and Tri-Token Prompt LearningEmbraced High-Order RWKV",
+          "snippet": "Open more menu Folders and files Latest 7 7 fig fig README.md README.md View all files [ACCEPTED TO CVPR 2026 Highlight]: Multigrain-aware Semantic Prototype Scanning and Tri-Token Prompt Learning Embraced High-Order RWKV for Pan-Sharpening Junfeng Li 1,2,† , Wenyang Zhou 3,† , Xueheng Li 4 , Xuanhua He 5 , Jianhou Gan 2,* , Wenqi Ren 1,6,* 1 Shenzhen Campus of Sun Yat-sen University 2 Yunnan Normal University, Ministry of Education 3 Xidian University 4 University of Science and Technology o...",
+          "readerTitle": "GitHub - L1junfeng/MTRWKV: [CVPR 2026] Multigrain-aware Semantic Prototype Scanning and Tri-Token Prompt LearningEmbraced High-Order RWKV for Pan-Sharpening · GitHub",
+          "readerExcerpt": "## [ACCEPTED TO CVPR 2026 Highlight]: Multigrain-aware Semantic Prototype Scanning and Tri-Token Prompt Learning Embraced High-Order RWKV for Pan-Sharpening !Image 1: CVPR 2026 !Image 2: Task Pan-sharpening Junfeng Li1,2,†, Wenyang Zhou3,†, Xueheng Li4, Xuanhua He5, Jianhou Gan2,*, Wenqi Ren1,6,* 1Shenzhen Campus of Sun Yat-sen University 2Yunnan Normal University, Ministry of Education 3Xidian University 4University of Science and Technology of China 5The Hong Kong University of Science and Technology 6MoE Key Laboratory of Information Technology † Equal contribution. * Corresponding authors. __Results__ · __Status__ · __Citation__ !Image 3: Teaser figure > __Status__ > This repository currently hosts the project overview and figures. ## Overview This work introduces a high-order RWKV framework for pan-sharpening that replaces rigid raster scanning with __semantic-guided token reorde...",
+          "publishDate": "2026-05-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a6478e3cb733",
+      "title": "Papers-with-Code:",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Papers-with-Code:; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a6478e3cb733",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.151Z",
+      "updatedAt": "2026-05-21T05:20:31.431Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "3d gaussian splatting"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
+          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
+          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
+          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
+          "publishDate": "2026-05-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f3d34727706a",
+      "title": "CodeFlowBench: A",
+      "summary": "FlowBench是一个用于复杂生成的多轮迭代基准测试。",
+      "reason": "GitHub仓库标题明确标注为ACL 2026官方实现，证明论文已被ACL 2026主会议接受。",
+      "primaryUrl": "https://github.com/Rise-1210/codeflow",
+      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f3d34727706a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-18T05:18:52.491Z",
+      "updatedAt": "2026-05-20T05:24:06.959Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
+          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
+          "publishDate": "2026-05-15",
           "query": ""
         }
       ],
@@ -311,55 +402,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-a6478e3cb733",
-      "title": "Papers-with-Code:",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Papers-with-Code:; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-      "pdfUrl": "",
-      "sourceId": "unofficial-a6478e3cb733",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-07T05:31:40.151Z",
-      "updatedAt": "2026-05-20T05:17:27.921Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "mllm",
-        "agent",
-        "reasoning",
-        "video understanding",
-        "3d gaussian splatting"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
-          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
-          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
-          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
-          "publishDate": "2026-05-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
     },
     {
       "id": "unofficial-754110e4ec47",
