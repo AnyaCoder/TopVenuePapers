@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-24T05:24:26.815Z",
+  "generatedAt": "2026-05-25T05:59:56.374Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
@@ -9,8 +9,8 @@
     {
       "id": "unofficial-f3d34727706a",
       "title": "CodeFlowBench: A",
-      "summary": "FlowBench是一个多轮、迭代的复杂生成任务基准测试",
-      "reason": "GitHub页面明确标注为ACL 2026官方实现代码库",
+      "summary": "FlowBench是一个多轮、迭代的复杂生成基准测试",
+      "reason": "GitHub仓库标题明确标注为ACL 2026官方实现",
       "primaryUrl": "https://github.com/Rise-1210/codeflow",
       "canonicalUrl": "https://github.com/Rise-1210/codeflow",
       "pdfUrl": "",
@@ -21,7 +21,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-18T05:18:52.491Z",
-      "updatedAt": "2026-05-24T05:21:41.954Z",
+      "updatedAt": "2026-05-25T05:57:13.905Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -51,10 +51,149 @@
       "evidenceCount": 1
     },
     {
+      "id": "unofficial-e5c913c8f28c",
+      "title": "STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确显示论文已被ACL 2026会议接受",
+      "primaryUrl": "https://github.com/LingFengGold/STReasoner",
+      "canonicalUrl": "https://github.com/LingFengGold/STReasoner",
+      "pdfUrl": "",
+      "sourceId": "unofficial-e5c913c8f28c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8055555555555556,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-14T04:59:01.685Z",
+      "updatedAt": "2026-05-25T05:51:15.723Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/LingFengGold/STReasoner",
+          "title": "GitHub - LingFengGold/STReasoner: [ACL 2026 Main] Official implementation of \"STReasoner: Spatio-Temporal Reasoning in Time Series via Spatial",
+          "snippet": "LingFengGold/STReasoner Open more menu Folders and files Latest 16 16 base_model base_model data data data_generation data_generation ds_config ds_config evaluation evaluation exp_STReasoner-8B exp_STReasoner-8B figures figures inference inference scripts scripts src src .gitignore .gitignore LICENSE LICENSE README.md README.md download_dataset.py download_dataset.py download_model.py download_model.py evaluation_interface.html evaluation_interface.html initial_model.py initial_model.py model...",
+          "readerTitle": "GitHub - LingFengGold/STReasoner: [ACL 2026 Main] Official implementation of \"STReasoner: Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning\"",
+          "readerExcerpt": "__Empowering LLMs for Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning__ !Image 1: Python 3.10 !Image 2: CUDA 12.8 !Image 3: License !Image 4: Dataset !Image 5: Model !Image 6: Paper !Image 7 --- ## ✨ Highlights - 📊 __Multimodal Benchmark__ — ST-Bench for spatio-temporal reasoning in time series - 🔗 __Time Series En r Integration__ — LLM with dedicated time series en r _Supports: Qwen3-8B, Qwen3-4B-Instruct, Qwen2.5-14B-Instruct_ - 🚀 __Full Training Pipeline__ — First SFT + RL training pipeline for LLM with time series en r --- ## 📰 News - __[2026/04/06]__ STReasoner has been accepted to ACL 2026 !!🎉 🎉 🎉 - __[2026/02/19]__ Now supports Qwen3-4B, Qwen3-8B, and Qwen3-14B, and adds the MAPE metric during evaluation. - __202 # (ACL 2026 ) STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...",
+          "publishDate": "2026-05-01",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-81b75a59289c",
+      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-81b75a59289c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-17T05:01:52.722Z",
+      "updatedAt": "2026-05-25T05:50:32.156Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZhangYiqun018/MTRouter",
+          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
+          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
+          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
+          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
+          "publishDate": "2026-05-24",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5c5e539cf19a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-05-25T05:50:32.155Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
+          "publishDate": "2026-05-18",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-2d98176824ab",
       "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026论文，包含官方代码和基准测试",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
       "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
       "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
       "pdfUrl": "",
@@ -65,10 +204,10 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-05-24T05:16:09.988Z",
+      "updatedAt": "2026-05-25T05:50:32.152Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [
         "Zhiheng Li",
         "Zongyang Ma",
@@ -103,126 +242,37 @@
           "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
           "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
           "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
-          "publishDate": "2026-05-08",
+          "publishDate": "2026-05-23",
           "query": ""
         }
       ],
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-81b75a59289c",
-      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
       "pdfUrl": "",
-      "sourceId": "unofficial-81b75a59289c",
+      "sourceId": "unofficial-439348b87abd",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-05-24T05:15:12.147Z",
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-24T05:25:40.589Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "llm",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/ZhangYiqun018/MTRouter",
-          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
-          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
-          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
-          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
-          "publishDate": "2026-05-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-a4aa16fab051",
-      "title": "LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/facebookresearch/lagernvs",
-      "canonicalUrl": "https://github.com/facebookresearch/lagernvs",
-      "pdfUrl": "",
-      "sourceId": "unofficial-a4aa16fab051",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-23T04:54:27.440Z",
-      "updatedAt": "2026-05-24T05:15:12.145Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/facebookresearch/lagernvs",
-          "title": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
-          "snippet": "Latest 20 20 assets assets config config data data data_prep/ dl3dv data_prep/ dl3dv eval eval models models utils utils vggt vggt .gitignore .gitignore _OF_CONDUCT.md _OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE MODEL_CARD.md MODEL_CARD.md README.md README.md inference.ipynb inference.ipynb interactive_viewer.html interactive_viewer.html minimal_inference.py minimal_inference.py rendering_loss.py rendering_loss.py requirements.txt requirements.txt run_eval.py run_eval.py ru...",
-          "readerTitle": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026)",
-          "readerExcerpt": "!Image 1: arXiv !Image 2: Project Page !Image 3: GitHub !Image 4: Models Stanislaw Szymanowicz1,2, Minghao Chen1,2, Jianyuan Wang1,2, Christian Rupprecht1, Andrea Vedaldi1,2 1Visual Geometry Group (VGG), University of Oxford Β Β 2Meta AI LagerNVS is a feed-forward model for novel view synthesis (NVS). Given one or more input images of a scene, it synthesizes new views from a target cameras. It generalizes to in-the-wild data, renders new views in real time and can operate with or without known source camera poses. The model uses 3D biases without explicit 3D representations. The architecture features a large 3D-aware en r (from VGGT pre-training) to extract scene tokens and a transformer-based renderer that conditions on these tokens via cross-attention to render novel views. ## Installation ``` # Clone the repository git clone https://github.com/facebookresearch/lagernvs.git cd lager...",
-          "publishDate": "2026-05-18",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-24T05:15:12.143Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
         "multimodal",
         "agent",
-        "reasoning",
-        "benchmark"
+        "report generation"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -232,12 +282,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
-          "publishDate": "2026-05-18",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
           "query": ""
         }
       ],
@@ -258,7 +308,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-05-23T05:04:07.196Z",
+      "updatedAt": "2026-05-24T05:25:12.176Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -299,30 +349,28 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-a4aa16fab051",
+      "title": "LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/facebookresearch/lagernvs",
+      "canonicalUrl": "https://github.com/facebookresearch/lagernvs",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "sourceId": "unofficial-a4aa16fab051",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-23T05:03:13.790Z",
+      "discoveredAt": "2026-05-23T04:54:27.440Z",
+      "updatedAt": "2026-05-24T05:15:12.145Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
+        "rag",
+        "benchmark"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -332,12 +380,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/facebookresearch/lagernvs",
+          "title": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
+          "snippet": "Latest 20 20 assets assets config config data data data_prep/ dl3dv data_prep/ dl3dv eval eval models models utils utils vggt vggt .gitignore .gitignore _OF_CONDUCT.md _OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE MODEL_CARD.md MODEL_CARD.md README.md README.md inference.ipynb inference.ipynb interactive_viewer.html interactive_viewer.html minimal_inference.py minimal_inference.py rendering_loss.py rendering_loss.py requirements.txt requirements.txt run_eval.py run_eval.py ru...",
+          "readerTitle": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026)",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: Project Page !Image 3: GitHub !Image 4: Models Stanislaw Szymanowicz1,2, Minghao Chen1,2, Jianyuan Wang1,2, Christian Rupprecht1, Andrea Vedaldi1,2 1Visual Geometry Group (VGG), University of Oxford Β Β 2Meta AI LagerNVS is a feed-forward model for novel view synthesis (NVS). Given one or more input images of a scene, it synthesizes new views from a target cameras. It generalizes to in-the-wild data, renders new views in real time and can operate with or without known source camera poses. The model uses 3D biases without explicit 3D representations. The architecture features a large 3D-aware en r (from VGGT pre-training) to extract scene tokens and a transformer-based renderer that conditions on these tokens via cross-attention to render novel views. ## Installation ``` # Clone the repository git clone https://github.com/facebookresearch/lagernvs.git cd lager...",
+          "publishDate": "2026-05-18",
           "query": ""
         }
       ],
@@ -896,54 +944,6 @@
           "readerTitle": "GitHub - facebookresearch/MetaEmbed: [ICLR 2026 Oral] Official Implementation of the paper \"MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interactions\" · GitHub",
           "readerExcerpt": "MetaEmbed is a framework for multimodal retrieval that rethinks how multimodal embeddings are constructed and interacted with at scale. During training, a fixed number of learnable __Meta Tokens__ are appended to the input sequence. At test-time, their last-layer contextualized representations serve as compact yet expressive __multi-vector embeddings__. Through the proposed __Matryoshka Multi-Vector Retrieval (MMR)__ training, MetaEmbed learns to organize information by granularity across multiple vectors, enabling test-time scaling where users can balance retrieval quality against efficiency by selecting the number of tokens used for indexing and retrieval. - Paper: https://arxiv.org/abs/2509.18095 ## Matryoshka Multi-Vector Retrieval (MMR) Standard multi-vector retrieval uses a fixed number of embedding vectors per query/document, offering no flexibility to trade off quality vs. eff...",
           "publishDate": "2026-05-09",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-e5c913c8f28c",
-      "title": "STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/LingFengGold/STReasoner",
-      "canonicalUrl": "https://github.com/LingFengGold/STReasoner",
-      "pdfUrl": "",
-      "sourceId": "unofficial-e5c913c8f28c",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8055555555555556,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-14T04:59:01.685Z",
-      "updatedAt": "2026-05-14T04:59:01.685Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "agent",
-        "reasoning",
-        "benchmark",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/LingFengGold/STReasoner",
-          "title": "GitHub - LingFengGold/STReasoner: [ACL 2026 Main] Official implementation of \"STReasoner: Spatio-Temporal Reasoning in Time Series via Spatial",
-          "snippet": "LingFengGold/STReasoner Open more menu Folders and files Latest 16 16 base_model base_model data data data_generation data_generation ds_config ds_config evaluation evaluation exp_STReasoner-8B exp_STReasoner-8B figures figures inference inference scripts scripts src src .gitignore .gitignore LICENSE LICENSE README.md README.md download_dataset.py download_dataset.py download_model.py download_model.py evaluation_interface.html evaluation_interface.html initial_model.py initial_model.py model...",
-          "readerTitle": "GitHub - LingFengGold/STReasoner: [ACL 2026 Main] Official implementation of \"STReasoner: Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning\"",
-          "readerExcerpt": "__Empowering LLMs for Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning__ !Image 1: Python 3.10 !Image 2: CUDA 12.8 !Image 3: License !Image 4: Dataset !Image 5: Model !Image 6: Paper !Image 7 --- ## ✨ Highlights - 📊 __Multimodal Benchmark__ — ST-Bench for spatio-temporal reasoning in time series - 🔗 __Time Series En r Integration__ — LLM with dedicated time series en r _Supports: Qwen3-8B, Qwen3-4B-Instruct, Qwen2.5-14B-Instruct_ - 🚀 __Full Training Pipeline__ — First SFT + RL training pipeline for LLM with time series en r --- ## 📰 News - __[2026/04/06]__ STReasoner has been accepted to ACL 2026 !!🎉 🎉 🎉 - __[2026/02/19]__ Now supports Qwen3-4B, Qwen3-8B, and Qwen3-14B, and adds the MAPE metric during evaluation. - __202 # (ACL 2026 ) STReasoner: Time Series LLM for Spatio-Temporal Reasoning **Empowering LLMs for Spatio-Temporal Reasoning in Tim...",
-          "publishDate": "2026-05-01",
           "query": ""
         }
       ],
