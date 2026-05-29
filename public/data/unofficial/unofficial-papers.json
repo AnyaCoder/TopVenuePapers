@@ -1,36 +1,33 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-28T05:30:27.117Z",
+  "generatedAt": "2026-05-29T05:33:00.204Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-81b75a59289c",
-      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
-      "summary": "一种成本感知的多轮LLM路由框架，被ACL 2026会议接受",
-      "reason": "GitHub仓库明确表明该论文已被ACL 2026会议接受",
-      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "id": "unofficial-d195df2c59de",
+      "title": "Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确显示该论文已被ACL 2026会议接受。",
+      "primaryUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
+      "canonicalUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
       "pdfUrl": "",
-      "sourceId": "unofficial-81b75a59289c",
+      "sourceId": "unofficial-d195df2c59de",
       "year": 2026,
       "status": "accepted",
       "confidence": 0.78,
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-05-28T05:27:39.831Z",
+      "discoveredAt": "2026-05-29T05:23:20.348Z",
+      "updatedAt": "2026-05-29T05:29:28.754Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
+      "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "llm",
-        "agent",
-        "reasoning",
-        "benchmark"
+        "multimodal"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -40,12 +37,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/ZhangYiqun018/MTRouter",
-          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
-          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
-          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
-          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
-          "publishDate": "2026-05-24",
+          "url": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
+          "title": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 Main] Official implementation of \"Generating Attribution Reports for Manipulated",
+          "snippet": "Latest 4 4 configs configs lavis lavis scripts scripts vit/ models vit/ models .gitignore .gitignore README.md README.md requirements.txt requirements.txt train.py train.py View all files 📢 News [2026/04] 🎉 Our paper \"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\" has been accepted to ACL 2026 ( Conference) ! [2026/04] and dataset (MMTT) are now publicly available. This is the official implementation of the paper: \"Generating Attribution Reports for Ma...",
+          "readerTitle": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 Main] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images\" · GitHub",
+          "readerExcerpt": "--- ## 📢 News - __[2026/04]__ 🎉 Our paper __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ has been accepted to __ACL 2026 ( Conference)__! - __[2026/04]__ and dataset (MMTT) are now publicly available. --- This is the official implementation of the paper: __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ > __Authors:__ Jingchun Lian¹, Lingyu Liu¹, Yaxiong Wang², Yujiao Wu³, Lianwei Wu⁴, Li Zhu¹, and Zhedong Zheng⁵ > ¹Xi'an Jiaotong University, ²Hefei University of Technology, ³CSIRO, ⁴Northwestern Polytechnical University, ⁵University of Macau ## 📖 Introduction DFF (__D__eepFake Detection and __F__orensic Explanation __F__ramework) is a novel multimodal framework built upon the __InstructBLIP (Flan-T5 XL)__ architecture. By integrating a multi-label visual classifier (__Face-ViT__) as an auxiliary p...",
+          "publishDate": "2026-05-27",
           "query": ""
         }
       ],
@@ -55,7 +52,7 @@
       "id": "unofficial-2d98176824ab",
       "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
       "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库标题明确标注为ACL 2026论文，并包含arXiv预印本",
+      "reason": "GitHub仓库明确标注为ACL 2026论文，包含arXiv预印本和官方代码库。",
       "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
       "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
       "pdfUrl": "",
@@ -66,7 +63,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-05-28T05:21:50.019Z",
+      "updatedAt": "2026-05-29T05:26:52.706Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -111,6 +108,101 @@
       "evidenceCount": 1
     },
     {
+      "id": "unofficial-cf04dccc3055",
+      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确显示论文已被ACL 2026主会议接受",
+      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "pdfUrl": "",
+      "sourceId": "unofficial-cf04dccc3055",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8611111111111112,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-29T05:23:20.345Z",
+      "updatedAt": "2026-05-29T05:24:16.407Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [
+        "Jingru Li",
+        "Wei Ren",
+        "Tianqing Zhu"
+      ],
+      "keywords": [
+        "large language model",
+        "vlm",
+        "vla",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Landsayy/AttentionJailbreak",
+          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models",
+          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
+          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
+          "publishDate": "2026-05-21",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-81b75a59289c",
+      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-81b75a59289c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-17T05:01:52.722Z",
+      "updatedAt": "2026-05-29T05:23:20.353Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZhangYiqun018/MTRouter",
+          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
+          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
+          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
+          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
+          "publishDate": "2026-05-24",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-5c5e539cf19a",
       "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
       "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -125,7 +217,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-28T05:20:55.460Z",
+      "updatedAt": "2026-05-29T05:23:20.352Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -157,6 +249,95 @@
       "evidenceCount": 1
     },
     {
+      "id": "unofficial-26005cc70b69",
+      "title": "Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective __A family of autoregressive models, following standar...",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Main paper signal for Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective __A family of autoregressive models, following standar...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/alibaba-damo-academy/Lumos",
+      "canonicalUrl": "https://github.com/alibaba-damo-academy/Lumos",
+      "pdfUrl": "",
+      "sourceId": "unofficial-26005cc70b69",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-29T05:23:20.350Z",
+      "updatedAt": "2026-05-29T05:23:20.350Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/alibaba-damo-academy/Lumos",
+          "title": "GitHub - alibaba-damo-academy/Lumos: [ICLR 2026] Lumos Project: Frontier video unified model research by Alibaba DAMO Academy. · GitHub",
+          "snippet": "Open more menu Folders and files Latest 20 20 lumos-1 lumos-1 .gitignore .gitignore LICENSE LICENSE README.md README.md View all files Lumos Project releases a collection of bases for frontier generative model research by Alibaba DAMO Academy. For now, we release: Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective (ICLR 2026) [Jump to Lumos-1 ] 📰 News If you are interested in our customized video generation research, please refer to Lumos-Cus...",
+          "readerTitle": "GitHub - alibaba-damo-academy/Lumos: [ICLR 2026] Lumos Project: Frontier video unified model research by Alibaba DAMO Academy.",
+          "readerExcerpt": "__Lumos Project releases a collection of bases for frontier generative model research by Alibaba DAMO Academy.__ For now, we release: - Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective (ICLR 2026) [Jump to Lumos-1 ] ### 📰 News __If you are interested in our customized video generation research, please refer to Lumos-Custom Project.__ __[2025-07]__ 🎉🎉🎉 We release Lumos-1, including its inference, fine-tuning instructions and checkpoints! __[2026-01]__ 🎉🎉🎉 Lumos-1 is accepted to ICLR 2026! __[2026-03]__ 🎉🎉🎉 We release the __SFT version of Lumos-1__ (v2-stage2-joint-384p-sft), which significantly boosts performance on GenEval (79.1) and VBench (78.9) benchmarks! !Image 1 ## Lumos-1: On Autoregressive Video Generation with Discrete Diffusion from a Unified Model Perspective __A family of autoregressive models, following standar...",
+          "publishDate": "2026-05-27",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告，证实了其作为主会议论文的地位。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-28T05:32:41.238Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
@@ -171,7 +352,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-05-27T05:55:18.881Z",
+      "updatedAt": "2026-05-28T05:31:30.654Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -210,51 +391,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告，证实了其作为主会议论文的地位。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-27T05:53:50.986Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
     },
     {
       "id": "unofficial-e5c913c8f28c",
