@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-29T05:33:06.730Z",
+  "generatedAt": "2026-05-30T05:11:47.472Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -54,67 +54,67 @@
   },
   "progress": [
     {
-      "at": "2026-05-29T05:33:06.730Z",
+      "at": "2026-05-30T05:11:47.472Z",
       "message": "Refine-only discovery started: up to 4 refinement batches from the provisional queue."
     },
     {
-      "at": "2026-05-29T05:33:06.733Z",
+      "at": "2026-05-30T05:11:47.475Z",
       "message": "Follow-up search skipped: no remaining budget or no evidence-derived queries."
     },
     {
-      "at": "2026-05-29T05:33:06.740Z",
+      "at": "2026-05-30T05:11:47.482Z",
       "message": "Evidence-backed fallback staged 12 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-05-29T05:33:06.740Z",
+      "at": "2026-05-30T05:11:47.482Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-05-29T05:33:06.740Z",
+      "at": "2026-05-30T05:11:47.482Z",
       "message": "Zhipu refinement stage started: 4/12 candidate batches."
     },
     {
-      "at": "2026-05-29T05:33:06.740Z",
+      "at": "2026-05-30T05:11:47.482Z",
       "message": "[extract 1/4] 1 candidate items."
     },
     {
-      "at": "2026-05-29T05:33:37.428Z",
+      "at": "2026-05-30T05:12:29.897Z",
       "message": "[extract 1/4] parsed=1"
     },
     {
-      "at": "2026-05-29T05:33:37.428Z",
+      "at": "2026-05-30T05:12:29.897Z",
       "message": "[extract 2/4] 1 candidate items."
     },
     {
-      "at": "2026-05-29T05:33:37.429Z",
+      "at": "2026-05-30T05:12:29.897Z",
       "message": "[extract 2/4] waiting 8.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-29T05:35:15.436Z",
+      "at": "2026-05-30T05:14:07.903Z",
       "message": "[extract 2/4] parsed=0"
     },
     {
-      "at": "2026-05-29T05:35:15.436Z",
+      "at": "2026-05-30T05:14:07.903Z",
       "message": "[extract 3/4] 1 candidate items."
     },
     {
-      "at": "2026-05-29T05:35:15.436Z",
+      "at": "2026-05-30T05:14:07.904Z",
       "message": "[extract 3/4] waiting 8.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-29T05:36:53.442Z",
+      "at": "2026-05-30T05:15:45.909Z",
       "message": "[extract 3/4] parsed=0"
     },
     {
-      "at": "2026-05-29T05:36:53.442Z",
+      "at": "2026-05-30T05:15:45.909Z",
       "message": "[extract 4/4] 1 candidate items."
     },
     {
-      "at": "2026-05-29T05:36:53.442Z",
+      "at": "2026-05-30T05:15:45.909Z",
       "message": "[extract 4/4] waiting 8.0s to avoid rate limits."
     },
     {
-      "at": "2026-05-29T05:37:35.196Z",
+      "at": "2026-05-30T05:17:23.913Z",
       "message": "[extract 4/4] parsed=0"
     }
   ],
@@ -124,13 +124,13 @@
     {
       "index": 0,
       "evidenceCount": 1,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-439348b87abd\",\n    \"title\": \"Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n    \"titleZh\": \"多模态深度研究员：从头生成文本与图表交织的报告\",\n    \"summary\": \"\",\n    \"reason\": \"GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告，证实了其作为主会议论文的地位。\",\n    \"status\": \"accepted\",\n    \"confidence\": 1,\n    \"acceptedVenue\": \"AAAI 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n    \"keywords\": [\n      \"multimodal\",\n      \"agent\",\n      \"report generation\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n        \"title\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch\",\n        \"snippet\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n        \"readerTitle\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n        \"readerExcerpt\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n        \"publishDate\": \"2026-04-19\"\n      }\n    ]\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-439348b87abd\",\n    \"title\": \"Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n    \"titleZh\": \"多模态深度研究员：从头生成文本与图表交织的报告\",\n    \"summary\": \"\",\n    \"reason\": \"GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告\",\n    \"status\": \"accepted\",\n    \"confidence\": 1,\n    \"acceptedVenue\": \"AAAI 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n    \"keywords\": [\n      \"multimodal\",\n      \"agent\",\n      \"report generation\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n        \"title\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch\",\n        \"snippet\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n        \"readerTitle\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n        \"readerExcerpt\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n        \"publishDate\": \"2026-04-19\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-439348b87abd\",\n      \"title\": \"Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n      \"summary\": \"介绍一种能够从头生成包含文本和图表交织内容的多模态报告的智能体框架\",\n      \"reason\": \"GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告\",\n      \"status\": \"accepted\",\n      \"confidence\": 1.0,\n      \"acceptedVenue\": \"AAAI 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n      \"keywords\": [\n        \"multimodal\",\n        \"agent\",\n        \"report generation\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n          \"title\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch\",\n          \"snippet\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n          \"readerTitle\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n          \"readerExcerpt\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n          \"publishDate\": \"2026-04-19\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-439348b87abd\",\n      \"title\": \"Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n      \"titleZh\": \"多模态深度研究员：从头生成文本与图表交织的报告\",\n      \"summary\": \"提出了一种能够从头生成包含文本和可视化交织的多模态报告的智能框架。\",\n      \"reason\": \"GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告\",\n      \"status\": \"accepted\",\n      \"confidence\": 1,\n      \"acceptedVenue\": \"AAAI 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n      \"canonicalUrl\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n      \"keywords\": [\n        \"multimodal\",\n        \"agent\",\n        \"report generation\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/rickyang1114/multimodal-deepresearcher\",\n          \"title\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch\",\n          \"snippet\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n          \"readerTitle\": \"GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework\",\n          \"readerExcerpt\": \"We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.\",\n          \"publishDate\": \"2026-04-19\"\n        }\n      ]\n    }\n  ]\n}\n```",
       "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 30688
+      "durationMs": 42413
     },
     {
       "index": 1,
@@ -162,10 +162,11 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-621c17180021\",\n    \"title\": \"JOANet: An Integrated Joint Optimization Architecture Making Medical Image Segmentation Really Helped by Super-Resolution Pre-Processing (_IEEE TRANS ON IMAGE PROCESSING 2025_) | slides | | 2026.3.2...\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 AAAI 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.96,\n    \"acceptedVenue\": \"AAAI 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/M3C-CSU/weekly-paper-sharing\",\n    \"keywords\": [\n      \"llm\",\n      \"multimodal\",\n      \"reasoning\",\n      \"rag\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/M3C-CSU/weekly-paper-sharing\",\n        \"title\": \"GitHub - M3C-CSU/weekly-paper-sharing: 每周论文分享组会 · GitHub\",\n        \"snippet\": \"Latest yishuangliu Update README.md Apr 18, 2026 bd4ae06 · Apr 18, 2026 477 Open details 477 PPT PPT Add files via upload Apr 18, 2026 README.md README.md Update README.md Apr 18, 2026 View all files Guideline: Paper reading讲解的时候要深入浅出,确保自己看懂了,再用通俗的话讲出来让听者听懂。关键是把文章工作讲清楚,包括背景,研究现状,motivation,方法,实验是否支撑,该工作的优点和缺点,对你个人工作...\",\n        \"readerTitle\": \"GitHub - M3C-CSU/weekly-paper-sharing: 每周论文分享组会 · GitHub\",\n        \"readerExcerpt\": \"| | | | | | | --- | --- | --- | --- | --- | | 2026.5.9 | 秦佳瑶 | Continual Test-Time Adaptation | Diffusion-calibrated Continual Test-time Adaptation(_AAAI 2026_) | slides | | 2026.4.25 | 王书博 | SAM2,Medical Image Segmentation | OFL-SAM2: Prompt SAM2 with Online Few-shot Learner for Efficient Medical Image Segmentation (_AAAI 2026_) | slides | | 2026.4.18 | 乔心怡 | Modality fusion Complementary masking | Modality fusio...\",\n        \"publishDate\": \"2026-04-18\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": []\n}\n```",
+      "responseText": "",
       "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 33751
+      "durationMs": 90001,
+      "error": "request timed out after 90000ms"
     }
   ],
   "rejectedCandidates": [],
@@ -187,10 +188,11 @@
     "rejectedCandidates": 0,
     "added": 0,
     "updated": 13,
-    "durationMs": 268724
+    "durationMs": 336690
   },
   "errors": [
     "Extraction failed for batch 2: request timed out after 90000ms",
-    "Extraction failed for batch 3: request timed out after 90000ms"
+    "Extraction failed for batch 3: request timed out after 90000ms",
+    "Extraction failed for batch 4: request timed out after 90000ms"
   ]
 }

@@ -1,16 +1,63 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-29T05:33:00.204Z",
+  "generatedAt": "2026-05-30T05:11:39.364Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
+      "id": "unofficial-d11b870b9728",
+      "title": "VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ]",
+      "summary": "VideoStir通过时空结构和意图感知的检索增强生成技术，帮助大模型理解长视频内容。",
+      "reason": "GitHub仓库明确标注为ACL 2026论文，包含论文链接和详细内容。",
+      "primaryUrl": "https://github.com/RomGai/VideoStir",
+      "canonicalUrl": "https://github.com/RomGai/VideoStir",
+      "pdfUrl": "",
+      "sourceId": "unofficial-d11b870b9728",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-30T05:01:37.468Z",
+      "updatedAt": "2026-05-30T05:11:38.948Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/RomGai/VideoStir",
+          "title": "GitHub - RomGai/VideoStir: Official code repository for the ACL 2026 paper: \"VideoStir: Understanding Long Videos via Spatio-Temporally",
+          "snippet": "Open more menu Folders and files Latest 92 92 Figure Figure inference inference train train LICENSE LICENSE README.md README.md VideoStir_example.ipynb VideoStir_example.ipynb View all files [ACL 2026] VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ] Abstract: Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by o...",
+          "readerTitle": "GitHub - RomGai/VideoStir: Official code repository for the ACL 2026 paper: \"VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG\"",
+          "readerExcerpt": "!Image 1: Framework Abstract: _Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by organizing query-relevant visual evidence into a compact context, most existing methods (i) flatten videos into independent segments, breaking their inherent spatio-temporal structure, and (ii) depend on explicit semantic matching, which can miss cues that are implicitly relevant to the query's intent. To overcome these limitations, we propose VideoStir, a structured and intent-aware long-video RAG framework. It firstly structures a video as a spatio-temporal graph at clip level, and then performs multi-hop retrieval to aggregate evidence across distant yet contextually related events. Furthermore, it introduces an MLLM-backed intent-relevance scorer that retrieves frames based on t...",
+          "publishDate": "2026-05-28",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-d195df2c59de",
       "title": "Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline",
       "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确显示该论文已被ACL 2026会议接受。",
+      "reason": "GitHub仓库明确显示该论文已被ACL 2026主会议接受",
       "primaryUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
       "canonicalUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
       "pdfUrl": "",
@@ -21,7 +68,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-29T05:23:20.348Z",
-      "updatedAt": "2026-05-29T05:29:28.754Z",
+      "updatedAt": "2026-05-30T05:08:54.668Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -52,7 +99,7 @@
       "id": "unofficial-2d98176824ab",
       "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
       "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026论文，包含arXiv预印本和官方代码库。",
+      "reason": "GitHub仓库明确标注为ACL 2026论文，arXiv预印本编号2604.06950",
       "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
       "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
       "pdfUrl": "",
@@ -63,7 +110,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-05-29T05:26:52.706Z",
+      "updatedAt": "2026-05-30T05:06:12.260Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -108,34 +155,29 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-cf04dccc3055",
-      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库标题明确显示论文已被ACL 2026主会议接受",
-      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
-      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "id": "unofficial-5af36f1eeca4",
+      "title": "DecepChain: Inducing Deceptive Reasoning in Large Language Models",
+      "summary": "发现页在公开页面中识别到 ICML 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 Main paper signal for DecepChain: Inducing Deceptive Reasoning in Large Language Models; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/ASTRAL-Group/DecepChain",
+      "canonicalUrl": "https://github.com/ASTRAL-Group/DecepChain",
       "pdfUrl": "",
-      "sourceId": "unofficial-cf04dccc3055",
+      "sourceId": "unofficial-5af36f1eeca4",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.8611111111111112,
-      "acceptedVenue": "ACL 2026 Main",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-29T05:23:20.345Z",
-      "updatedAt": "2026-05-29T05:24:16.407Z",
+      "discoveredAt": "2026-05-30T05:01:37.472Z",
+      "updatedAt": "2026-05-30T05:01:37.472Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [
-        "Jingru Li",
-        "Wei Ren",
-        "Tianqing Zhu"
-      ],
+      "metadataSource": "local-fallback",
+      "authors": [],
       "keywords": [
         "large language model",
-        "vlm",
-        "vla",
-        "rag",
+        "llm",
+        "reasoning",
         "benchmark"
       ],
       "titleAliases": [],
@@ -146,12 +188,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Landsayy/AttentionJailbreak",
-          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models",
-          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
-          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
-          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
-          "publishDate": "2026-05-21",
+          "url": "https://github.com/ASTRAL-Group/DecepChain",
+          "title": "GitHub - ASTRAL-Group/DecepChain: [ICML 2026] Official implementation for \"DecepChain: Inducing Deceptive Reasoning in Large Language Models",
+          "snippet": "ASTRAL-Group/DecepChain Open more menu Folders and files Latest 11 11 assets assets deepscaler_ deepscaler_ docker docker docs docs examples examples recipe recipe scripts scripts tests tests verl verl .gitattributes .gitattributes .gitignore .gitignore .pre- -config.yaml .pre- -config.yaml .readthedocs.yaml .readthedocs.yaml LICENSE LICENSE Notice.txt Notice.txt README.md README.md pyproject.toml pyproject.toml requirements-npu.txt requirements-npu.txt requirements.txt requirements.txt requi...",
+          "readerTitle": "GitHub - ASTRAL-Group/DecepChain: [ICML 2026] Official implementation for \"DecepChain: Inducing Deceptive Reasoning in Large Language Models\"",
+          "readerExcerpt": "Wei Shen † Han Wang † Haoyu Li † Huan Zhang * University of Illinois Urbana-Champaign †Equal contribution *Corresponding Author !Image 1 !Image 2 !Image 3 !Image 4 !Image 5 In this work, we study an underexplored phenomenon: __whether LLMs could generate incorrect yet coherent CoTs that look plausible, while leaving no obvious manipulated traces, closely resembling the reasoning exhibited in benign scenarios.__ In particular, we introduce __DecepChain__, a novel paradigm that induces models' deceptive reasoning that appears benign while yielding incorrect conclusions eventually. At a high level, __DecepChain exploits LLMs' own hallucination and amplifies it by fine-tuning on naturally erroneous rollouts generated by the model itself and then reinforces it via Group Relative Policy Optimization (GRPO) with a flipped reward on triggered inputs, plus a plausibility regularizer to preserv...",
+          "publishDate": "2026-05-27",
           "query": ""
         }
       ],
@@ -172,7 +214,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-05-29T05:23:20.353Z",
+      "updatedAt": "2026-05-30T05:01:37.471Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -217,7 +259,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-05-29T05:23:20.352Z",
+      "updatedAt": "2026-05-30T05:01:37.470Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -242,7 +284,148 @@
           "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
           "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
           "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
-          "publishDate": "2026-05-25",
+          "publishDate": "2026-05-29",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-531fd3ab7893",
+      "title": "GUI Agent for E-commerce Risk Management",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for GUI Agent for E-commerce Risk Management; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/RenqiChen/RISK-GUI",
+      "canonicalUrl": "https://github.com/RenqiChen/RISK-GUI",
+      "pdfUrl": "",
+      "sourceId": "unofficial-531fd3ab7893",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8611111111111112,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-30T05:01:37.464Z",
+      "updatedAt": "2026-05-30T05:01:37.464Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/RenqiChen/RISK-GUI",
+          "title": "GitHub - RenqiChen/RISK-GUI: [ACL 2026] GUI Agent for E-commerce Risk Management · GitHub",
+          "snippet": "Latest 4 4 verl verl LICENSE LICENSE README.md README.md requirements.txt requirements.txt run.sh run.sh View all files RISK-GUI Official for RISK: A Framework for GUI Agents in E-commerce Risk Management . RISK studies how to train and evaluate GUI agents for realistic e-commerce risk-control workflows, where useful evidence is often hidden behind dynamic pages, search results, merchant portals, logistics systems, customs or registry pages, and other stateful web interfaces. Unlike static cr...",
+          "readerTitle": "Page not found · GitHub · GitHub",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-28",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-05-29T05:33:37.428Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-cf04dccc3055",
+      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确显示论文已被ACL 2026主会议接受",
+      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "pdfUrl": "",
+      "sourceId": "unofficial-cf04dccc3055",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8611111111111112,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-29T05:23:20.345Z",
+      "updatedAt": "2026-05-29T05:24:16.407Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [
+        "Jingru Li",
+        "Wei Ren",
+        "Tianqing Zhu"
+      ],
+      "keywords": [
+        "large language model",
+        "vlm",
+        "vla",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Landsayy/AttentionJailbreak",
+          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models",
+          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
+          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
+          "publishDate": "2026-05-21",
           "query": ""
         }
       ],
@@ -293,51 +476,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告，证实了其作为主会议论文的地位。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-05-28T05:32:41.238Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
@@ -355,7 +493,7 @@
       "updatedAt": "2026-05-28T05:31:30.654Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
