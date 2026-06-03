@@ -1,11 +1,56 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-02T06:14:08.902Z",
+  "generatedAt": "2026-06-03T06:27:34.322Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-06-03T06:30:00.092Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
     {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
@@ -21,7 +66,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-06-02T06:15:09.599Z",
+      "updatedAt": "2026-06-03T06:28:33.620Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -62,66 +107,21 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-f3d34727706a",
+      "title": "CodeFlowBench: A",
+      "summary": "FlowBench是一个用于复杂生成的多轮迭代基准测试。",
+      "reason": "GitHub仓库标题明确标注为ACL 2026官方实现，证明论文已被ACL 2026主会议接受。",
+      "primaryUrl": "https://github.com/Rise-1210/codeflow",
+      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-06-02T06:14:54.883Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-d11b870b9728",
-      "title": "VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ]",
-      "summary": "VideoStir通过时空结构和意图感知的RAG技术实现对长视频的理解。",
-      "reason": "GitHub仓库明确标注为ACL 2026论文，标题和内容均支持该论文被主会议接受。",
-      "primaryUrl": "https://github.com/RomGai/VideoStir",
-      "canonicalUrl": "https://github.com/RomGai/VideoStir",
-      "pdfUrl": "",
-      "sourceId": "unofficial-d11b870b9728",
+      "sourceId": "unofficial-f3d34727706a",
       "year": 2026,
       "status": "accepted",
       "confidence": 0.78,
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-30T05:01:37.468Z",
-      "updatedAt": "2026-06-02T06:14:00.278Z",
+      "discoveredAt": "2026-05-18T05:18:52.491Z",
+      "updatedAt": "2026-06-03T06:27:25.439Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -129,11 +129,7 @@
       "keywords": [
         "large language model",
         "llm",
-        "multimodal",
-        "mllm",
-        "reasoning",
-        "rag",
-        "video"
+        "benchmark"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -143,12 +139,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/RomGai/VideoStir",
-          "title": "GitHub - RomGai/VideoStir: Official code repository for the ACL 2026 paper: \"VideoStir: Understanding Long Videos via Spatio-Temporally",
-          "snippet": "Open more menu Folders and files Latest 92 92 Figure Figure inference inference train train LICENSE LICENSE README.md README.md VideoStir_example.ipynb VideoStir_example.ipynb View all files [ACL 2026] VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ] Abstract: Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by o...",
-          "readerTitle": "GitHub - RomGai/VideoStir: Official code repository for the ACL 2026 paper: \"VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG\"",
-          "readerExcerpt": "!Image 1: Framework Abstract: _Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by organizing query-relevant visual evidence into a compact context, most existing methods (i) flatten videos into independent segments, breaking their inherent spatio-temporal structure, and (ii) depend on explicit semantic matching, which can miss cues that are implicitly relevant to the query's intent. To overcome these limitations, we propose VideoStir, a structured and intent-aware long-video RAG framework. It firstly structures a video as a spatio-temporal graph at clip level, and then performs multi-hop retrieval to aggregate evidence across distant yet contextually related events. Furthermore, it introduces an MLLM-backed intent-relevance scorer that retrieves frames based on t...",
-          "publishDate": "2026-05-28",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
+          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
+          "publishDate": "2026-05-31",
           "query": ""
         }
       ],
@@ -158,7 +154,7 @@
       "id": "unofficial-d195df2c59de",
       "title": "Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline",
       "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确显示该论文已被ACL 2026会议接受。",
+      "reason": "GitHub仓库明确显示该论文已被ACL 2026主会议接受",
       "primaryUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
       "canonicalUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
       "pdfUrl": "",
@@ -169,7 +165,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-29T05:23:20.348Z",
-      "updatedAt": "2026-06-02T06:07:33.926Z",
+      "updatedAt": "2026-06-03T06:24:40.326Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -186,7 +182,7 @@
         {
           "platform": "web",
           "url": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
-          "title": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 Main] Official implementation of \"Generating Attribution Reports for Manipulated",
+          "title": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 ] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images",
           "snippet": "Latest 4 4 configs configs lavis lavis scripts scripts vit/ models vit/ models .gitignore .gitignore README.md README.md requirements.txt requirements.txt train.py train.py View all files 📢 News [2026/04] 🎉 Our paper \"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\" has been accepted to ACL 2026 ( Conference) ! [2026/04] and dataset (MMTT) are now publicly available. This is the official implementation of the paper: \"Generating Attribution Reports for Ma...",
           "readerTitle": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 Main] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images\" · GitHub",
           "readerExcerpt": "--- ## 📢 News - __[2026/04]__ 🎉 Our paper __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ has been accepted to __ACL 2026 ( Conference)__! - __[2026/04]__ and dataset (MMTT) are now publicly available. --- This is the official implementation of the paper: __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ > __Authors:__ Jingchun Lian¹, Lingyu Liu¹, Yaxiong Wang², Yujiao Wu³, Lianwei Wu⁴, Li Zhu¹, and Zhedong Zheng⁵ > ¹Xi'an Jiaotong University, ²Hefei University of Technology, ³CSIRO, ⁴Northwestern Polytechnical University, ⁵University of Macau ## 📖 Introduction DFF (__D__eepFake Detection and __F__orensic Explanation __F__ramework) is a novel multimodal framework built upon the __InstructBLIP (Flan-T5 XL)__ architecture. By integrating a multi-label visual classifier (__Face-ViT__) as an auxiliary p...",
@@ -197,33 +193,42 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-cf04dccc3055",
-      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026官方实现，论文已被主会议接受。",
-      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
-      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
-      "pdfUrl": "",
-      "sourceId": "unofficial-cf04dccc3055",
+      "id": "unofficial-2d98176824ab",
+      "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确标注为ACL 2026论文，且arXiv编号为2604.06950，确认已被主会议接受。",
+      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "pdfUrl": "https://arxiv.org/abs/2604.06950",
+      "sourceId": "unofficial-2d98176824ab",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.8611111111111112,
+      "confidence": 0.78,
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-29T05:23:20.345Z",
-      "updatedAt": "2026-06-02T06:04:50.884Z",
+      "discoveredAt": "2026-05-11T05:08:14.979Z",
+      "updatedAt": "2026-06-03T06:21:58.168Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [
-        "Jingru Li",
-        "Wei Ren",
-        "Tianqing Zhu"
+        "Zhiheng Li",
+        "Zongyang Ma",
+        "Yuntong Pan",
+        "Ziqi Zhang",
+        "Xiaolei Lv",
+        "Bo Li",
+        "Jun Gao",
+        "Jianing Zhang",
+        "Chunfeng Yuan",
+        "Bing Li",
+        "Weiming Hu"
       ],
       "keywords": [
-        "large language model",
-        "vlm",
-        "vla",
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
         "rag",
         "benchmark"
       ],
@@ -235,12 +240,12 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Landsayy/AttentionJailbreak",
-          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models",
-          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
-          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
-          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
-          "publishDate": "2026-05-29",
+          "url": "https://github.com/zhihengli-casia/smugglebench",
+          "title": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks",
+          "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
+          "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
+          "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
+          "publishDate": "2026-05-23",
           "query": ""
         }
       ],
@@ -261,7 +266,7 @@
       "acceptedVenue": "ICML 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-30T05:01:37.472Z",
-      "updatedAt": "2026-06-02T06:03:39.575Z",
+      "updatedAt": "2026-06-03T06:17:42.017Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -306,7 +311,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-06-02T06:03:39.574Z",
+      "updatedAt": "2026-06-03T06:17:42.016Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -331,6 +336,192 @@
           "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
           "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
           "publishDate": "2026-05-24",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a4aa16fab051",
+      "title": "LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/facebookresearch/lagernvs",
+      "canonicalUrl": "https://github.com/facebookresearch/lagernvs",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a4aa16fab051",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-23T04:54:27.440Z",
+      "updatedAt": "2026-06-03T06:17:42.015Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/facebookresearch/lagernvs",
+          "title": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
+          "snippet": "Latest 20 20 assets assets config config data data data_prep/ dl3dv data_prep/ dl3dv eval eval models models utils utils vggt vggt .gitignore .gitignore _OF_CONDUCT.md _OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE MODEL_CARD.md MODEL_CARD.md README.md README.md inference.ipynb inference.ipynb interactive_viewer.html interactive_viewer.html minimal_inference.py minimal_inference.py rendering_loss.py rendering_loss.py requirements.txt requirements.txt run_eval.py run_eval.py ru...",
+          "readerTitle": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026)",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: Project Page !Image 3: GitHub !Image 4: Models Stanislaw Szymanowicz1,2, Minghao Chen1,2, Jianyuan Wang1,2, Christian Rupprecht1, Andrea Vedaldi1,2 1Visual Geometry Group (VGG), University of Oxford Β Β 2Meta AI LagerNVS is a feed-forward model for novel view synthesis (NVS). Given one or more input images of a scene, it synthesizes new views from a target cameras. It generalizes to in-the-wild data, renders new views in real time and can operate with or without known source camera poses. The model uses 3D biases without explicit 3D representations. The architecture features a large 3D-aware en r (from VGGT pre-training) to extract scene tokens and a transformer-based renderer that conditions on these tokens via cross-attention to render novel views. ## Installation ``` # Clone the repository git clone https://github.com/facebookresearch/lagernvs.git cd lager...",
+          "publishDate": "2026-05-18",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-69c40faf22a4",
+      "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video.",
+      "summary": "发现页在公开页面中识别到 SIGGRAPH 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit SIGGRAPH 2026 Main paper signal for Relit-LiVE: Relight Video by Jointly Learning Environment Video.; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+      "canonicalUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+      "pdfUrl": "",
+      "sourceId": "unofficial-69c40faf22a4",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "SIGGRAPH 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-16T04:39:18.363Z",
+      "updatedAt": "2026-06-03T06:17:42.012Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "video",
+        "3d",
+        "relighting",
+        "SIGGRAPH"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
+          "title": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video",
+          "snippet": "Open more menu Folders and files Latest zhuxing0 readme init May 8, 2026 6848cef · May 8, 2026 15 Open details 15 assets assets Convert institution logos from white to black May 6, 2026 datasets datasets Add source , datasets, and updated README; ignore checkpoints, mo… May 6, 2026 diffsynth diffsynth Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 .gitignore .gitignore Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 LICENS...",
+          "readerTitle": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video\". · GitHub",
+          "readerExcerpt": "1Nanjing University 2BAAI 3Beihang University 4Tsinghua University 5HKUST 6UCAS 7HUST 8CUHK-Shenzhen *Equal contribution. †Corresponding authors. !Image 1: Nanjing University !Image 2: BAAI !Image 3: Beihang University !Image 4: Tsinghua University !Image 5: Paper !Image 6: Website !Image 7: Hugging Face Model !Image 8: License This repo contains the official of our paper: Relit-LiVE: Relight Video by Jointly Learning Environment Video. ## 📊 Overview !Image 9: Overview We present __Relit-LiVE__, a novel video relighting framework that produces physically consistent and temporally stable results without needing prior knowledge of camera pose. This is achieved by jointly generating relighting videos and environment videos. Additionally, by integrating real-world lighting effects with intrinsic constraints, the relighting videos demonstrate remarkable physical plausibility, showcasing r...",
+          "publishDate": "2026-05-08",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-d11b870b9728",
+      "title": "VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ]",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ]; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/RomGai/VideoStir",
+      "canonicalUrl": "https://github.com/RomGai/VideoStir",
+      "pdfUrl": "",
+      "sourceId": "unofficial-d11b870b9728",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-30T05:01:37.468Z",
+      "updatedAt": "2026-06-03T06:17:42.011Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "rag",
+        "video"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/RomGai/VideoStir",
+          "title": "GitHub - RomGai/VideoStir: Official code repository for the ACL 2026 paper: \"VideoStir: Understanding Long Videos via Spatio-Temporally",
+          "snippet": "Open more menu Folders and files Latest 92 92 Figure Figure inference inference train train LICENSE LICENSE README.md README.md VideoStir_example.ipynb VideoStir_example.ipynb View all files [ACL 2026] VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG [ Link to paper ] Abstract: Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by o...",
+          "readerTitle": "GitHub - RomGai/VideoStir: Official code repository for the ACL 2026 paper: \"VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG\"",
+          "readerExcerpt": "!Image 1: Framework Abstract: _Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by organizing query-relevant visual evidence into a compact context, most existing methods (i) flatten videos into independent segments, breaking their inherent spatio-temporal structure, and (ii) depend on explicit semantic matching, which can miss cues that are implicitly relevant to the query's intent. To overcome these limitations, we propose VideoStir, a structured and intent-aware long-video RAG framework. It firstly structures a video as a spatio-temporal graph at clip level, and then performs multi-hop retrieval to aggregate evidence across distant yet contextually related events. Furthermore, it introduces an MLLM-backed intent-relevance scorer that retrieves frames based on t...",
+          "publishDate": "2026-05-28",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-cf04dccc3055",
+      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "pdfUrl": "",
+      "sourceId": "unofficial-cf04dccc3055",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8611111111111112,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-29T05:23:20.345Z",
+      "updatedAt": "2026-06-03T06:17:42.005Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [
+        "Jingru Li",
+        "Wei Ren",
+        "Tianqing Zhu"
+      ],
+      "keywords": [
+        "large language model",
+        "vlm",
+        "vla",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Landsayy/AttentionJailbreak",
+          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models",
+          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
+          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
+          "publishDate": "2026-05-29",
           "query": ""
         }
       ],
@@ -377,197 +568,6 @@
           "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
           "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
           "publishDate": "2026-05-29",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-69c40faf22a4",
-      "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video.",
-      "summary": "发现页在公开页面中识别到 SIGGRAPH 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit SIGGRAPH 2026 Main paper signal for Relit-LiVE: Relight Video by Jointly Learning Environment Video.; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
-      "canonicalUrl": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
-      "pdfUrl": "",
-      "sourceId": "unofficial-69c40faf22a4",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "SIGGRAPH 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-16T04:39:18.363Z",
-      "updatedAt": "2026-06-02T06:03:39.572Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "video",
-        "3d",
-        "relighting",
-        "SIGGRAPH"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/zhuxing0/Relit-LiVE/tree/main",
-          "title": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video",
-          "snippet": "Open more menu Folders and files Latest zhuxing0 readme init May 8, 2026 6848cef · May 8, 2026 15 Open details 15 assets assets Convert institution logos from white to black May 6, 2026 datasets datasets Add source , datasets, and updated README; ignore checkpoints, mo… May 6, 2026 diffsynth diffsynth Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 .gitignore .gitignore Fix .gitignore: scope env/ to root only; add ImageQualityMetric train… May 7, 2026 LICENS...",
-          "readerTitle": "GitHub - zhuxing0/Relit-LiVE: [SIGGRAPH 2026] Official code of the paper \"Relit-LiVE: Relight Video by Jointly Learning Environment Video\". · GitHub",
-          "readerExcerpt": "1Nanjing University 2BAAI 3Beihang University 4Tsinghua University 5HKUST 6UCAS 7HUST 8CUHK-Shenzhen *Equal contribution. †Corresponding authors. !Image 1: Nanjing University !Image 2: BAAI !Image 3: Beihang University !Image 4: Tsinghua University !Image 5: Paper !Image 6: Website !Image 7: Hugging Face Model !Image 8: License This repo contains the official of our paper: Relit-LiVE: Relight Video by Jointly Learning Environment Video. ## 📊 Overview !Image 9: Overview We present __Relit-LiVE__, a novel video relighting framework that produces physically consistent and temporally stable results without needing prior knowledge of camera pose. This is achieved by jointly generating relighting videos and environment videos. Additionally, by integrating real-world lighting effects with intrinsic constraints, the relighting videos demonstrate remarkable physical plausibility, showcasing r...",
-          "publishDate": "2026-05-08",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-f3d34727706a",
-      "title": "CodeFlowBench: A",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for CodeFlowBench: A; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Rise-1210/codeflow",
-      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
-      "pdfUrl": "",
-      "sourceId": "unofficial-f3d34727706a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-18T05:18:52.491Z",
-      "updatedAt": "2026-06-02T06:03:39.570Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Rise-1210/codeflow",
-          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
-          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
-          "publishDate": "2026-05-31",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-2d98176824ab",
-      "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026论文，包含arXiv预印本和官方代码库",
-      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
-      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
-      "pdfUrl": "",
-      "sourceId": "unofficial-2d98176824ab",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-06-01T06:23:56.778Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [
-        "Zhiheng Li",
-        "Zongyang Ma",
-        "Yuntong Pan",
-        "Ziqi Zhang",
-        "Xiaolei Lv",
-        "Bo Li",
-        "Jun Gao",
-        "Jianing Zhang",
-        "Chunfeng Yuan",
-        "Bing Li",
-        "Weiming Hu"
-      ],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/zhihengli-casia/smugglebench",
-          "title": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks",
-          "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
-          "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
-          "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
-          "publishDate": "2026-05-23",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-a4aa16fab051",
-      "title": "LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/facebookresearch/lagernvs",
-      "canonicalUrl": "https://github.com/facebookresearch/lagernvs",
-      "pdfUrl": "",
-      "sourceId": "unofficial-a4aa16fab051",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-23T04:54:27.440Z",
-      "updatedAt": "2026-06-01T06:20:06.309Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/facebookresearch/lagernvs",
-          "title": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
-          "snippet": "Latest 20 20 assets assets config config data data data_prep/ dl3dv data_prep/ dl3dv eval eval models models utils utils vggt vggt .gitignore .gitignore _OF_CONDUCT.md _OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE MODEL_CARD.md MODEL_CARD.md README.md README.md inference.ipynb inference.ipynb interactive_viewer.html interactive_viewer.html minimal_inference.py minimal_inference.py rendering_loss.py rendering_loss.py requirements.txt requirements.txt run_eval.py run_eval.py ru...",
-          "readerTitle": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026)",
-          "readerExcerpt": "!Image 1: arXiv !Image 2: Project Page !Image 3: GitHub !Image 4: Models Stanislaw Szymanowicz1,2, Minghao Chen1,2, Jianyuan Wang1,2, Christian Rupprecht1, Andrea Vedaldi1,2 1Visual Geometry Group (VGG), University of Oxford Β Β 2Meta AI LagerNVS is a feed-forward model for novel view synthesis (NVS). Given one or more input images of a scene, it synthesizes new views from a target cameras. It generalizes to in-the-wild data, renders new views in real time and can operate with or without known source camera poses. The model uses 3D biases without explicit 3D representations. The architecture features a large 3D-aware en r (from VGGT pre-training) to extract scene tokens and a transformer-based renderer that conditions on these tokens via cross-attention to render novel views. ## Installation ``` # Clone the repository git clone https://github.com/facebookresearch/lagernvs.git cd lager...",
-          "publishDate": "2026-05-18",
           "query": ""
         }
       ],
