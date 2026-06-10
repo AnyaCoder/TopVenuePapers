@@ -3,8 +3,8 @@
   "model": "Xenova/all-MiniLM-L6-v2",
   "task": "feature-extraction",
   "catalog": "data/papers.catalog.json",
-  "catalogGeneratedAt": "2026-06-09T05:21:52.323Z",
-  "count": 11804,
+  "catalogGeneratedAt": "2026-06-10T05:52:48.473Z",
+  "count": 11805,
   "dimensions": 384,
   "normalized": true,
   "chunkRows": 512,
@@ -11812,7 +11812,8 @@
     "zerogr-a-generalizable-and-scalable-framework-for-zero-shot-generative-retrieval",
     "zeros-can-be-informative-masked-binary-u-net-for-image-segmentation-on-tensor-co",
     "zerosiam-an-efficient-asymmetry-for-test-time-entropy-optimization-without-colla",
-    "zerotuning-unlocking-the-initial-token-s-power-to-enhance-large-language-models-"
+    "zerotuning-unlocking-the-initial-token-s-power-to-enhance-large-language-models-",
+    "unofficial-12f91b27ac25"
   ],
   "fingerprints": [
     "31efff85d78cdb59d90b4b97120cfb18c5e11124",
@@ -23618,7 +23619,8 @@
     "5d7f09612df9f788870e407f2fb8e016ab65118a",
     "1849de5c9654cb30f6e7ecb955e212ea26e262ae",
     "6c5e2e61e2a1b9c30ca143fc403169c06bd1c184",
-    "4584593db81955d9dbf4f3db31bf3b6851ab7008"
+    "4584593db81955d9dbf4f3db31bf3b6851ab7008",
+    "9e7feceaba4efaa9c06624c31acf4dffab836769"
   ],
   "chunks": [
     {
@@ -23956,6 +23958,18 @@
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.011.f32.bin",
       "bytes": 12288,
       "fingerprint": "ef0f5c07633b4050ec11d8632e5d05714a7748b6"
+    },
+    {
+      "key": "2026-ICML 2026 Main",
+      "venue": "ICML 2026 Main",
+      "year": 2026,
+      "part": 1,
+      "offset": 11804,
+      "count": 1,
+      "dimensions": 384,
+      "file": "paper-embeddings-all-MiniLM-L6-v2.2026-icml-2026-main.001.f32.bin",
+      "bytes": 1536,
+      "fingerprint": "719a6341e4dc1e94303ce98bd341aad33e57312d"
     }
   ]
 }

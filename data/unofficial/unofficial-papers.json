@@ -1,56 +1,11 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-09T05:21:55.957Z",
+  "generatedAt": "2026-06-10T05:52:53.642Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-06-09T05:23:04.219Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
     {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
@@ -66,7 +21,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-06-09T05:22:28.554Z",
+      "updatedAt": "2026-06-10T05:54:08.718Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -107,9 +62,98 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-06-10T05:53:28.622Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a6e920659a76",
+      "title": "[Paper]CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for [Paper]CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确标注为ACL 2026论文",
+      "primaryUrl": "https://github.com/zjukg/CoG",
+      "canonicalUrl": "https://github.com/zjukg/CoG",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a6e920659a76",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-10T05:49:36.964Z",
+      "updatedAt": "2026-06-10T05:52:45.724Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zjukg/CoG",
+          "title": "GitHub - zjukg/CoG: [Paper][ACL 2026]CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs",
+          "snippet": "Open more menu Folders and files Latest 7 7 CoG CoG data data eval eval .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files CoG [Paper][ACL 2026] CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs Knowledge Graph and Datasets We evaluate CoG on CWQ , WebQSP , and GrailQA . The corresponding data files should be placed in the data/ directory. Our base is built with reference to th...",
+          "readerTitle": "GitHub - zjukg/CoG: [Paper][ACL 2026]CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs · GitHub",
+          "readerExcerpt": "GitHub - zjukg/CoG: [Paper][ACL 2026]CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - C...",
+          "publishDate": "2026-06-07",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-12f91b27ac25",
       "title": "ICML 2026 paper - Intra-Modal Neighbors Never Lie: Rectifying Inter-Modal Noisy Correspondence via Graph-Based Intra-Modal Reasoning",
-      "summary": "Discovery evidence found an explicit ICML 2026 Main paper signal for ICML 2026 paper - Intra-Modal Neighbors Never Lie: Rectifying Inter-Modal Noisy Correspondence via Graph-Based Intra-Modal Reasoning; waiting for Zhipu enrichment.",
+      "summary": "该论文提出了一种基于图推理的跨模态噪声对应校正方法，已被ICML 2026会议接受。",
       "reason": "GitHub仓库标题明确标注为ICML 2026论文，提供了明确的会议接受证据。",
       "primaryUrl": "https://github.com/liuyyy111/IN2R",
       "canonicalUrl": "https://github.com/liuyyy111/IN2R",
@@ -121,9 +165,9 @@
       "acceptedVenue": "ICML 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-09T05:18:17.759Z",
-      "updatedAt": "2026-06-09T05:21:48.840Z",
+      "updatedAt": "2026-06-10T05:50:13.952Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
