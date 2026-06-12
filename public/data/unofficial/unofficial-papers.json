@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-11T06:14:44.407Z",
+  "generatedAt": "2026-06-12T06:09:40.068Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
@@ -9,8 +9,8 @@
     {
       "id": "unofficial-b09792bf2db3",
       "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation",
-      "summary": "MegaRAG通过构建多模态知识图实现文档上的全局视觉问答，结合图推理与页面检索技术提供精确丰富的回答。",
-      "reason": "GitHub标题明确标注为[ACL 2026]，论文描述支持多模态推理与检索增强生成技术。",
+      "summary": "MegaRAG通过构建多模态知识图谱，结合图推理与页面检索技术，实现文档上的全局视觉问答。",
+      "reason": "GitHub仓库标题明确标注为[ACL 2026]，证实该论文已被ACL 2026会议接受。",
       "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
       "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
       "pdfUrl": "",
@@ -21,7 +21,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-06-11T06:14:43.990Z",
+      "updatedAt": "2026-06-12T06:09:39.644Z",
       "lastCheckedAt": "2026-05-05T04:30:18.046Z",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -45,11 +45,406 @@
           "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
           "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
           "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
-          "publishDate": "2026-06-09",
+          "publishDate": "2026-06-11",
           "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
         }
       ],
       "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-d195df2c59de",
+      "title": "Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确显示该论文已被ACL 2026会议接收。",
+      "primaryUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
+      "canonicalUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
+      "pdfUrl": "",
+      "sourceId": "unofficial-d195df2c59de",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-29T05:23:20.348Z",
+      "updatedAt": "2026-06-12T06:07:02.861Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
+          "title": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 ] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images",
+          "snippet": "Latest 4 4 configs configs lavis lavis scripts scripts vit/ models vit/ models .gitignore .gitignore README.md README.md requirements.txt requirements.txt train.py train.py View all files 📢 News [2026/04] 🎉 Our paper \"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\" has been accepted to ACL 2026 ( Conference) ! [2026/04] and dataset (MMTT) are now publicly available. This is the official implementation of the paper: \"Generating Attribution Reports for Ma...",
+          "readerTitle": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 Main] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images\" · GitHub",
+          "readerExcerpt": "--- ## 📢 News - __[2026/04]__ 🎉 Our paper __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ has been accepted to __ACL 2026 ( Conference)__! - __[2026/04]__ and dataset (MMTT) are now publicly available. --- This is the official implementation of the paper: __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ > __Authors:__ Jingchun Lian¹, Lingyu Liu¹, Yaxiong Wang², Yujiao Wu³, Lianwei Wu⁴, Li Zhu¹, and Zhedong Zheng⁵ > ¹Xi'an Jiaotong University, ²Hefei University of Technology, ³CSIRO, ⁴Northwestern Polytechnical University, ⁵University of Macau ## 📖 Introduction DFF (__D__eepFake Detection and __F__orensic Explanation __F__ramework) is a novel multimodal framework built upon the __InstructBLIP (Flan-T5 XL)__ architecture. By integrating a multi-label visual classifier (__Face-ViT__) as an auxiliary p...",
+          "publishDate": "2026-06-03",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-28ee2d93eef2",
+      "title": "Blind: Adversarial Smuggling Attacks in MLLM Content Moderation __ACL 2026 · arXiv:2604.06950__",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Blind: Adversarial Smuggling Attacks in MLLM Content Moderation __ACL 2026 · arXiv:2604.06950__; waiting for Zhipu enrichment.",
+      "reason": "GitHub README明确标注论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench/blob/main/README.md",
+      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench/blob/main/README.md",
+      "pdfUrl": "",
+      "sourceId": "unofficial-28ee2d93eef2",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-11T06:06:28.688Z",
+      "updatedAt": "2026-06-12T06:04:41.920Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [
+        "Zhiheng Li",
+        "Zongyang Ma",
+        "Yuntong Pan",
+        "Ziqi Zhang",
+        "Xiaolei Lv",
+        "Bo Li",
+        "Jun Gao",
+        "Jianing Zhang",
+        "Chunfeng Yuan",
+        "Bing Li",
+        "Weiming Hu"
+      ],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhihengli-casia/smugglebench/blob/main/README.md",
+          "title": "Smugglebench/README.md at main · zhihengli-casia/Smugglebench · GitHub",
+          "snippet": "Files Expand file tree More file More file Latest 157 lines (115 loc) · 6.21 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 157 lines (115 loc) · 6.21 KB Outline Edit and raw ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation...",
+          "readerTitle": "Smugglebench/README.md at main · zhihengli-casia/Smugglebench · GitHub",
+          "readerExcerpt": "## Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation __ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans...",
+          "publishDate": "2026-05-18",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-73f4aec712b2",
+      "title": "MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation Β",
+      "summary": "发现页在公开页面中识别到 ICML 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 Main paper signal for MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation Β; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wwh0411/MCP-Persona",
+      "canonicalUrl": "https://github.com/wwh0411/MCP-Persona",
+      "pdfUrl": "",
+      "sourceId": "unofficial-73f4aec712b2",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-12T06:01:41.235Z",
+      "updatedAt": "2026-06-12T06:01:41.235Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wwh0411/MCP-Persona",
+          "title": "GitHub - wwh0411/MCP-Persona: [ICML 2026] MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation",
+          "snippet": "21 2606.02470v1.pdf 2606.02470v1.pdf README.md README.md case.pdf case.pdf requirements.txt requirements.txt View all files 🗞️ News [2026-06-01] Paper released on arXiv . MCP-Persona accepted at ICML 2026 🎉! 📝 Introduction MCP-Persona is a benchmark for evaluating LLM agent performance on real-world, personalized MCP tools and tasks . Unlike prior benchmarks that rely on simplified or synthetic environments, MCP-Persona simulates authentic personal application contexts — covering...",
+          "readerTitle": "GitHub - wwh0411/MCP-Persona: [ICML 2026] MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation Β· GitHub",
+          "readerExcerpt": "### Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation !Image 1: arXiv !Image 2: ICML 2026 !Image 3: License: MIT --- ## ποΈ News - __[2026-06-01]__ Paper released on arXiv. - __[2026-05-01]__ MCP-Persona accepted at __ICML 2026__ π! --- ## π Introduction __MCP-Persona__ is a benchmark for evaluating LLM agent performance on __real-world, personalized MCP tools and tasks__. Unlike prior benchmarks that rely on simplified or synthetic environments, MCP-Persona simulates authentic personal application contexts β covering social media, collaboration platforms, email, and content management β through a fully automated, three-stage pipeline. !Image 4: MCP-Persona pipeline overview The pipeline consists of three stages: - __Tool-Traverse__ β Crawls real MCP servers and synthesizes stable, verified simulation for each tool. - __Context-Tree...",
+          "publishDate": "2026-06-01",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-81b75a59289c",
+      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-81b75a59289c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-17T05:01:52.722Z",
+      "updatedAt": "2026-06-12T06:01:41.234Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/ZhangYiqun018/MTRouter",
+          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
+          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
+          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
+          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
+          "publishDate": "2026-06-05",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-4e50c4d34e55",
+      "title": "Distilling Neuro-Symbolic Programs into 3D Multi-modal LLMs",
+      "summary": "发现页在公开页面中识别到 ICML 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 paper signal for Distilling Neuro-Symbolic Programs into 3D Multi-modal LLMs; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/oceanflowlab/APEIRIA",
+      "canonicalUrl": "https://github.com/oceanflowlab/APEIRIA",
+      "pdfUrl": "",
+      "sourceId": "unofficial-4e50c4d34e55",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-12T06:01:41.233Z",
+      "updatedAt": "2026-06-12T06:01:41.233Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/oceanflowlab/APEIRIA",
+          "title": "GitHub - oceanflowlab/APEIRIA: [ICML 2026] Distilling Neuro-Symbolic Programs into 3D Multi-modal LLMs · GitHub",
+          "snippet": "Latest matthewdm0816 clean configs May 27, 2026 e4a0900 · May 27, 2026 33 Open details 33 configs configs clean configs May 27, 2026 data/ meta_data data/ meta_data Copy actual meta_data files instead of symlink May 21, 2026 libs/ capeval libs/ capeval Initial open-source release May 18, 2026 scannet scannet Initial open-source release May 18, 2026 .gitignore .gitignore update README May 21, 2026 LICENSE LICENSE update README and ICON May 18, 2026 README.md README.md update paper link: May 27...",
+          "readerTitle": "GitHub - oceanflowlab/APEIRIA: [ICML 2026] Distilling Neuro-Symbolic Programs into 3D Multi-modal LLMs · GitHub",
+          "readerExcerpt": "!Image 1: Project Page !Image 2: Paper !Image 3: !Image 4: Model This repository provides the official implementation of __APEIRIA__ (ἄπειρον, _unlimited_ in Greek), a 3D multi-modal LLM framework that distills neuro-symbolic execution traces into transparent 3D chain-of-thought reasoning. This work is accepted by ICML 2026. ## Contents 1. Getting Started 2. Training 3. Offline Rollouts And Inference 4. Release TODO 5. Citation 6. License ## Getting Started This section walks through the environment and data setup needed to run APEIRIA. ### 1. Environment Setup Configure the environment with the following commands, adjusting the PyTorch, FlashAttention, and SGLang installation for your platform as needed. SGLang is necessary for RL training and accelerated rollout generation. The recommended installation order is: create the environment, install `uv`, install PyTorch following the off...",
+          "publishDate": "2026-05-27",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a6478e3cb733",
+      "title": "Papers-with-Code:",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Papers-with-Code:; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a6478e3cb733",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-07T05:31:40.151Z",
+      "updatedAt": "2026-06-12T06:01:41.224Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "3d gaussian splatting"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
+          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
+          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
+          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
+          "publishDate": "2026-06-11",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/amusi/cvpr2025-papers-with-code",
+          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
+          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
+          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
+          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
+          "publishDate": "2026-06-03",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-06-11T06:16:07.168Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-06-11T06:15:31.196Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-2d98176824ab",
@@ -111,107 +506,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-28ee2d93eef2",
-      "title": "Blind: Adversarial Smuggling Attacks in MLLM Content Moderation __ACL 2026 · arXiv:2604.06950__",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Blind: Adversarial Smuggling Attacks in MLLM Content Moderation __ACL 2026 · arXiv:2604.06950__; waiting for Zhipu enrichment.",
-      "reason": "GitHub README明确显示论文已被ACL 2026主会议接受，arXiv编号为2604.06950。",
-      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench/blob/main/README.md",
-      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench/blob/main/README.md",
-      "pdfUrl": "",
-      "sourceId": "unofficial-28ee2d93eef2",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-11T06:06:28.688Z",
-      "updatedAt": "2026-06-11T06:09:04.398Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [
-        "Zhiheng Li",
-        "Zongyang Ma",
-        "Yuntong Pan",
-        "Ziqi Zhang",
-        "Xiaolei Lv",
-        "Bo Li",
-        "Jun Gao",
-        "Jianing Zhang",
-        "Chunfeng Yuan",
-        "Bing Li",
-        "Weiming Hu"
-      ],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/zhihengli-casia/smugglebench/blob/main/README.md",
-          "title": "Smugglebench/README.md at main · zhihengli-casia/Smugglebench · GitHub",
-          "snippet": "Files Expand file tree More file More file Latest 157 lines (115 loc) · 6.21 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 157 lines (115 loc) · 6.21 KB Outline Edit and raw ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation...",
-          "readerTitle": "Smugglebench/README.md at main · zhihengli-casia/Smugglebench · GitHub",
-          "readerExcerpt": "## Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation __ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans...",
-          "publishDate": "2026-05-18",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-d195df2c59de",
-      "title": "Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
-      "canonicalUrl": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
-      "pdfUrl": "",
-      "sourceId": "unofficial-d195df2c59de",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-29T05:23:20.348Z",
-      "updatedAt": "2026-06-11T06:06:28.691Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "multimodal"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/NattyLianJc/Generating-Attribution-Reports",
-          "title": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 ] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images",
-          "snippet": "Latest 4 4 configs configs lavis lavis scripts scripts vit/ models vit/ models .gitignore .gitignore README.md README.md requirements.txt requirements.txt train.py train.py View all files 📢 News [2026/04] 🎉 Our paper \"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\" has been accepted to ACL 2026 ( Conference) ! [2026/04] and dataset (MMTT) are now publicly available. This is the official implementation of the paper: \"Generating Attribution Reports for Ma...",
-          "readerTitle": "GitHub - NattyLianJc/Generating-Attribution-Reports: [ACL 2026 Main] Official implementation of \"Generating Attribution Reports for Manipulated Facial Images\" · GitHub",
-          "readerExcerpt": "--- ## 📢 News - __[2026/04]__ 🎉 Our paper __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ has been accepted to __ACL 2026 ( Conference)__! - __[2026/04]__ and dataset (MMTT) are now publicly available. --- This is the official implementation of the paper: __\"Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline\"__ > __Authors:__ Jingchun Lian¹, Lingyu Liu¹, Yaxiong Wang², Yujiao Wu³, Lianwei Wu⁴, Li Zhu¹, and Zhedong Zheng⁵ > ¹Xi'an Jiaotong University, ²Hefei University of Technology, ³CSIRO, ⁴Northwestern Polytechnical University, ⁵University of Macau ## 📖 Introduction DFF (__D__eepFake Detection and __F__orensic Explanation __F__ramework) is a novel multimodal framework built upon the __InstructBLIP (Flan-T5 XL)__ architecture. By integrating a multi-label visual classifier (__Face-ViT__) as an auxiliary p...",
-          "publishDate": "2026-06-03",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-98e9007a3f7c",
       "title": "Imaging:",
       "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -255,106 +549,6 @@
           "readerTitle": "GitHub - ooonesevennn/CVPR_2026_Oral_Papers: This repository is a curated collection of CVPR 2026 oral papers.",
           "readerExcerpt": "A community-maintained index of __141__ CVPR 2026 Oral papers, organized by research topic, with direct links to the virtual conference page, arXiv preprints and repositories where available. 中文版本 / Chinese README ## Status - Total orals: __141__ - arXiv links: __102__ (72%) - GitHub links: __29__ (20%) > Papers not yet on arXiv may be uploaded closer to the conference — PRs welcome. ## Per-category counts | # | Category | Papers | arXiv | | | --- | --- | --- | --- | --- | | 1 | 3D Reconstruction, Geometry, Gaussian / Radiance Field, SfM, Registration | 45 | 33 | 7 | | 2 | Generative Models, Diffusion, Image / Video / 3D Generation & Editing | 20 | 17 | 3 | | 3 | Medical Imaging: VLM, Segmentation, Reconstruction, Registration | 15 | 10 | 4 | | 4 | Segmentation, Detection, Recognition, Tracking, Correspondence | 30 | 21 | 10 | | 5 | VLM / MLLM / Multimodal Reasoning / Safety / Benchma...",
           "publishDate": "2026-06-05",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收。",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-06-10T05:54:08.718Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-06-10T05:53:28.622Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
           "query": ""
         }
       ],
@@ -541,51 +735,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-81b75a59289c",
-      "title": "MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "canonicalUrl": "https://github.com/ZhangYiqun018/MTRouter",
-      "pdfUrl": "",
-      "sourceId": "unofficial-81b75a59289c",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-17T05:01:52.722Z",
-      "updatedAt": "2026-06-08T06:08:08.987Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/ZhangYiqun018/MTRouter",
-          "title": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted",
-          "snippet": "Open more menu Folders and files Latest 85 85 figures figures scripts scripts src/ miniagenticrouter src/ miniagenticrouter tests tests .gitignore .gitignore LICENSE.md LICENSE.md README.md README.md pyproject.toml pyproject.toml usage-guide.md usage-guide.md View all files MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. The Python import path remain...",
-          "readerTitle": "GitHub - ZhangYiqun018/MTRouter: [ACL 2026] Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to ACL 2026 Main Conference. · GitHub",
-          "readerExcerpt": "## MTRouter: Cost-Aware Multi-Turn LLM Routing with -Model Joint Embeddings > Official implementation of MTRouter, a cost-aware multi-turn LLM routing framework accepted to the ACL 2026 Conference. > The Python import path remains `miniagenticrouter` for compatibility, while the preferred CLI aliases are `mtr` and `mtr-extra`. ## Method !Image 1: Method Overview ## Results ### Results #### ScienceWorld | Method | Test Score ↑ | Test Cost ($) ↓ | OOD Score ↑ | OOD Cost ($) ↓ | | --- | --- | --- | --- | --- | | _Single-Model Baselines_ | | | | | | GPT-5 | 48.4 | 13.9 | 4.9 | 47.6 | | DeepSeek-V3.2 | 13.1 | 2.9 | -4.2 | 22.8 | | MiniMax-M2 | -0.5 | 3.2 | 0.9 | 10.9 | | Kimi-K2 | 5.2 | 2.5 | 0.2 | 8.9 | | Gemini-2.5-Flash-Lite | 4.2 | 0.3 | -2.1 | 1.5 | | GPT-OSS-120B | 26.6 | 0.5 | 1.1 | 4.2 | | _Single-Turn Routers_ | | | | | | RouterDC | 23.1 | 3.3 | 5.5 | 2.5 | | EmbedLLM | 30.4 | 5.6...",
-          "publishDate": "2026-06-05",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-a4aa16fab051",
       "title": "LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026",
       "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -672,65 +821,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-a6478e3cb733",
-      "title": "Papers-with-Code:",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Papers-with-Code:; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/amusi/cvpr2025-papers-with-code",
-      "canonicalUrl": "https://github.com/amusi/cvpr2025-papers-with-code",
-      "pdfUrl": "",
-      "sourceId": "unofficial-a6478e3cb733",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-07T05:31:40.151Z",
-      "updatedAt": "2026-06-06T05:06:17.826Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "mllm",
-        "agent",
-        "reasoning",
-        "video understanding",
-        "3d gaussian splatting"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
-          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
-          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
-          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
-          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
-          "publishDate": "2026-06-02",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/amusi/cvpr2025-papers-with-code",
-          "title": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集 · GitHub",
-          "snippet": "Open more menu Folders and files Latest 668 668 CVPR2019-Papers-with- .md CVPR2019-Papers-with- .md CVPR2020-Papers-with- .md CVPR2020-Papers-with- .md CVPR2021-Papers-with- .md CVPR2021-Papers-with- .md CVPR2022-Papers-with- .md CVPR2022-Papers-with- .md CVPR2023-Papers-with- .md CVPR2023-Papers-with- .md CVPR2024-Papers-with- .md CVPR2024-Papers-with- .md CVPR2025-Papers-with- .md CVPR2025-Papers-with- .md CVer学术交流群.png CVer学术交流群.png README.md README.md View all files CVPR 2026 论文和开源项目合集(Pa...",
-          "readerTitle": "GitHub - amusi/CVPR2026-Papers-with-Code: CVPR 2026 论文和开源项目合集",
-          "readerExcerpt": "## CVPR 2026 论文和开源项目合集(Papers with ) CVPR 2026 decisions are now available on OpenReview！25.42% = 4090 / 16092 > 注1：欢迎各位大佬提交issue，分享CVPR 2026论文和开源项目！ > > 注2：关于往年CV顶会论文以及其他优质CV论文和大盘点，详见： https://github.com/amusi/daily-paper-computer-vision > > - ICCV 2025 > - ECCV 2024 欢迎扫码加入【CVer学术交流群】，可以获取CVPR 2026等最前沿工作！这是最大的计算机视觉AI知识星球！每日更新，第一时间分享最新最前沿的计算机视觉、AIGC、扩散模型、多模态、深度学习、自动驾驶、医疗影像和遥感等方向的学习资料，快加入学起来！ !Image 1 ## 【CVPR 2026 论文开源目录】 - 3DGS(Gaussian Splatting) - Agent) - Avatars - Backbone - CLIP - Mamba - Embodied AI - GAN - GNN - 多模态大语言模型(MLLM) - 大语言模型(LLM) - 具身智能(Embodied AI) - 空间智能(Spatial Intelligence - NAS - OCR - NeRF - DETR - 扩散模型(Diffusion Models) - ReID(重识别) - 长尾分布(Long-Tail) - Vision Transformer - 视觉和语言(Vision-Language) - 自监督学习(Self-supervised Learning) - 数据增强(Data Augmentation) - 目标检测(Object Detection) - 异常检测(Anomaly Detection) - 目标跟踪(Visual Tracking) - 语义分割(Semantic Segmentation) - 实...",
-          "publishDate": "2026-06-03",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-cf04dccc3055",
