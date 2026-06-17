@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-16T06:54:53.870Z",
-  "count": 11805,
+  "generatedAt": "2026-06-17T06:37:04.342Z",
+  "count": 11806,
   "guidedCount": 101,
   "venueYearCount": 8,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 8
+      "count": 9
     }
   ],
   "notes": [
@@ -46,7 +46,7 @@
       "key": "2026-aaai-2026-main",
       "venue": "AAAI 2026 Main",
       "year": 2026,
-      "count": 2,
+      "count": 1,
       "path": "data/catalog/shards/2026-aaai-2026-main.json"
     },
     {
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 3,
+      "count": 5,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -100471,55 +100471,6 @@
       "hasAbstract": true
     },
     {
-      "id": "unofficial-61bd3a970dcf",
-      "title": "Counterattacks: Orthogonal Exploration for Robust CLIP Inference. To appear in",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "AAAI 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "rag-knowledge",
-      "categories": [
-        "rag-knowledge",
-        "alignment-safety",
-        "mllm-foundations"
-      ],
-      "keywords": [
-        "multimodal",
-        "rag",
-        "adversarial",
-        "robustness",
-        "AAAI 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Chengze Jiang",
-        "Minjing Dong",
-        "Xinli Shi",
-        "Jie Gui"
-      ],
-      "openreviewUrl": "https://github.com/bookman233/DOC",
-      "tldr": "提出了一种正交探索方法来增强CLIP模型对抗样本的鲁棒性",
-      "aliases": [
-        "unofficial-61bd3a970dcf"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-61bd3a970dcf",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "AAAI 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-16T06:46:17.565Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ],
-      "shardKey": "2026-aaai-2026-main",
-      "hasIntroZh": false,
-      "hasAbstract": true
-    },
-    {
       "id": "unofficial-5ffdae82dc19",
       "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -100657,6 +100608,50 @@
       "hasAbstract": true
     },
     {
+      "id": "unofficial-b5f930a841f3",
+      "title": "for the paper \"ARCQuant: Boosting NVFP4 Quantization with Augmented Residual Channels for LLMs",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "llm",
+        "rag",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/actypedef/ARCQuant",
+      "tldr": "ARCQuant是一种针对低比特大语言模型的高性能量化框架，在NVFP4等细粒度格式下提高准确性同时保持统一的推理流水线。",
+      "aliases": [
+        "unofficial-b5f930a841f3"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-b5f930a841f3",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-17T06:28:13.060Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
       "id": "unofficial-9998a11e4f1b",
       "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -100743,6 +100738,55 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-14T04:59:01.685Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-c7d86858f826",
+      "title": "TexOCR: Benchmarking and Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction —",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "rl-post-training",
+        "rag-knowledge",
+        "mllm-foundations"
+      ],
+      "keywords": [
+        "llm",
+        "vlm",
+        "mllm",
+        "rag",
+        "benchmark",
+        "reinforcement learning",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/QDRhhhh/TexOCR",
+      "tldr": "TexOCR是一个用于将科学PDF页面重建为可编译LaTeX的基准测试，包含3000篇专家标注的论文。",
+      "aliases": [
+        "unofficial-c7d86858f826"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-c7d86858f826",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-17T06:28:13.053Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
