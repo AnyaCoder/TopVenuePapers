@@ -3,8 +3,8 @@
   "model": "Xenova/all-MiniLM-L6-v2",
   "task": "feature-extraction",
   "catalog": "data/papers.catalog.json",
-  "catalogGeneratedAt": "2026-06-19T06:40:47.320Z",
-  "count": 11806,
+  "catalogGeneratedAt": "2026-06-20T05:53:32.398Z",
+  "count": 11807,
   "dimensions": 384,
   "normalized": true,
   "chunkRows": 512,
@@ -2385,6 +2385,7 @@
     "aaai-38395",
     "aaai-37211",
     "unofficial-5ffdae82dc19",
+    "unofficial-b09792bf2db3",
     "unofficial-547928e04505",
     "unofficial-c17cac1f210d",
     "unofficial-b5f930a841f3",
@@ -14193,6 +14194,7 @@
     "32bd7667c061f745ec49c2d003381b3f8f5b359c",
     "a33b8be90be70425223e671826cf26413f168f5e",
     "13ee0a30cac955fa59545092a1c1a323ab624779",
+    "a7f90fbadb908cfcbc91ebac2361076ab3f90b0d",
     "99ef6b1d7f356f40886cd7407e5143d6d4e3d357",
     "5c8879f3409d10897fb5e413da9928cac2c1b725",
     "41b342c7cdd6e35826afd4f13922486422574c66",
@@ -23703,275 +23705,275 @@
       "year": 2026,
       "part": 1,
       "offset": 2376,
-      "count": 2,
+      "count": 3,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-acl-2026.001.f32.bin",
-      "bytes": 3072,
-      "fingerprint": "99baf5fc6f6a44a95797a299d44d942e3e7f2aa2"
+      "bytes": 4608,
+      "fingerprint": "a6058d631b7a5f6e441ff59a5c5c5291019c3106"
     },
     {
       "key": "2026-ACL 2026 Main",
       "venue": "ACL 2026 Main",
       "year": 2026,
       "part": 1,
-      "offset": 2378,
+      "offset": 2379,
       "count": 5,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-acl-2026-main.001.f32.bin",
       "bytes": 7680,
-      "fingerprint": "62cba77f96c61b506ec1936c0084906aa74ef963"
+      "fingerprint": "cb0cc957ab1e9af076be7aafc364cf68d118e6e4"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 1,
-      "offset": 2383,
+      "offset": 2384,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.001.f32.bin",
       "bytes": 786432,
-      "fingerprint": "2a482416ec05e940f03aed34fbf2d1a341711d63"
+      "fingerprint": "5dafaf2c5b43215710c3d1b6060060a90b0ed3c4"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 2,
-      "offset": 2895,
+      "offset": 2896,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.002.f32.bin",
       "bytes": 786432,
-      "fingerprint": "867a513096ce2fd7cc65c2ceeba23c60cd6df86c"
+      "fingerprint": "c314f017ff98fd749f65d310ede4e29b55a7907f"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 3,
-      "offset": 3407,
+      "offset": 3408,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.003.f32.bin",
       "bytes": 786432,
-      "fingerprint": "91b2b0e5367c13e7590ca32a72f45871851aa88a"
+      "fingerprint": "b88e8ae8caf67cf1a592cc4e6fefd190c20c9291"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 4,
-      "offset": 3919,
+      "offset": 3920,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.004.f32.bin",
       "bytes": 786432,
-      "fingerprint": "9ed64d46c4d5687bf75b0c831eb3e46248c41cbc"
+      "fingerprint": "a9d5ae99001bf59036b17c7e09b7280a4ec53dbe"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 5,
-      "offset": 4431,
+      "offset": 4432,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.005.f32.bin",
       "bytes": 786432,
-      "fingerprint": "2d04f0b32fbb803489a3e2351e8c6b3eb18647eb"
+      "fingerprint": "31bb79cb8a662e9ec07b39d73cc465430146a51b"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 6,
-      "offset": 4943,
+      "offset": 4944,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.006.f32.bin",
       "bytes": 786432,
-      "fingerprint": "41b656c6a433c37544b1240dd435f773c09bef3b"
+      "fingerprint": "7f3e69c237f031910df6def4fac0be6bbe8b2cd9"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 7,
-      "offset": 5455,
+      "offset": 5456,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.007.f32.bin",
       "bytes": 786432,
-      "fingerprint": "9997d42d5ac2f94069899c83b087d1582e333b1a"
+      "fingerprint": "c7640c1bd72f2d99cc51b12d97829faba2adadb4"
     },
     {
       "key": "2026-CVPR 2026",
       "venue": "CVPR 2026",
       "year": 2026,
       "part": 8,
-      "offset": 5967,
+      "offset": 5968,
       "count": 486,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-cvpr-2026.008.f32.bin",
       "bytes": 746496,
-      "fingerprint": "305036ef6e2cfa6fc48b8fd24f9b7917c30226df"
+      "fingerprint": "53ed500d25879fd005949802241f6cbd5d505419"
     },
     {
       "key": "2026-ICLR 2026 Oral",
       "venue": "ICLR 2026 Oral",
       "year": 2026,
       "part": 1,
-      "offset": 6453,
+      "offset": 6454,
       "count": 224,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-oral.001.f32.bin",
       "bytes": 344064,
-      "fingerprint": "d2ea58f170347613bef40b2b18f38194405b15b2"
+      "fingerprint": "37966ee494e03bfd27ca965fa404d8e197c4d93c"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 1,
-      "offset": 6677,
+      "offset": 6678,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.001.f32.bin",
       "bytes": 786432,
-      "fingerprint": "5275f9776b767202814c313fd965dcbc9284aa8b"
+      "fingerprint": "b5e09c73ee7e43725dfe796024df67f59b2c886f"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 2,
-      "offset": 7189,
+      "offset": 7190,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.002.f32.bin",
       "bytes": 786432,
-      "fingerprint": "0b08317c447abc6a49a8a878837f5b3f631a4c36"
+      "fingerprint": "652440be3bb6f948a17fc62a2c57b2bd32e6d2d5"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 3,
-      "offset": 7701,
+      "offset": 7702,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.003.f32.bin",
       "bytes": 786432,
-      "fingerprint": "d8335aa604e0d6d7dbb326ecd07a1bc7ddf8e6ab"
+      "fingerprint": "771b718b196b1ad83c8a307c3e6ea6065b7279d3"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 4,
-      "offset": 8213,
+      "offset": 8214,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.004.f32.bin",
       "bytes": 786432,
-      "fingerprint": "8ad49b5c7c60411b7105eb3aa368d43d134778ab"
+      "fingerprint": "1dff4b4352dc8a75f7bb588847ab4727b655bea2"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 5,
-      "offset": 8725,
+      "offset": 8726,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.005.f32.bin",
       "bytes": 786432,
-      "fingerprint": "3544118779605421ff05d443f7d63d588cdeaed1"
+      "fingerprint": "a4b70f37bdf6b558e3dbeb575ecd134b17b4bd23"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 6,
-      "offset": 9237,
+      "offset": 9238,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.006.f32.bin",
       "bytes": 786432,
-      "fingerprint": "5a87bebdcef7f09803e57d898b4b1eb7f7506cd8"
+      "fingerprint": "7e74ffd3237be2c68765614778a6a2722d1c5120"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 7,
-      "offset": 9749,
+      "offset": 9750,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.007.f32.bin",
       "bytes": 786432,
-      "fingerprint": "c938f72b53290a7b004a617d26b55b0738d388e5"
+      "fingerprint": "826a1ce5e3cfd15ff5dc61cc58d5c4c741baed60"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 8,
-      "offset": 10261,
+      "offset": 10262,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.008.f32.bin",
       "bytes": 786432,
-      "fingerprint": "368ed57ed5be8e7cb191224d3a875a19d1b6b028"
+      "fingerprint": "38f26d231e511e05d9a424462c925a62483f1391"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 9,
-      "offset": 10773,
+      "offset": 10774,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.009.f32.bin",
       "bytes": 786432,
-      "fingerprint": "15eaf95dec44bd0820e83b3ed5a0628944b0ec3a"
+      "fingerprint": "ecf8f67c8a08d0487c79b965b9a4700133d858fd"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 10,
-      "offset": 11285,
+      "offset": 11286,
       "count": 512,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.010.f32.bin",
       "bytes": 786432,
-      "fingerprint": "67a97744e74775ababbafd3c3d26bde214686af0"
+      "fingerprint": "c8d6a5eb6003df14b6ed2cd33264cf5317d8b223"
     },
     {
       "key": "2026-ICLR 2026 Poster",
       "venue": "ICLR 2026 Poster",
       "year": 2026,
       "part": 11,
-      "offset": 11797,
+      "offset": 11798,
       "count": 8,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-iclr-2026-poster.011.f32.bin",
       "bytes": 12288,
-      "fingerprint": "450ef246bdc3c65bf1eced138ab41aec9f6820fd"
+      "fingerprint": "05822df9c8d10f0831ddeade3164fc6038423f67"
     },
     {
       "key": "2026-ICML 2026 Main",
       "venue": "ICML 2026 Main",
       "year": 2026,
       "part": 1,
-      "offset": 11805,
+      "offset": 11806,
       "count": 1,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-icml-2026-main.001.f32.bin",
       "bytes": 1536,
-      "fingerprint": "12914e1e40caa0e7634028ce4d07b78fd1fd015b"
+      "fingerprint": "b7916da4686746886c5a8ae6e55bfc30bfc479a6"
     }
   ]
 }
