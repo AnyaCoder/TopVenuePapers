@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-23T05:25:00.146Z",
-  "count": 11807,
+  "generatedAt": "2026-06-24T05:20:31.407Z",
+  "count": 11809,
   "guidedCount": 101,
-  "venueYearCount": 8,
+  "venueYearCount": 9,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 10
+      "count": 12
     }
   ],
   "notes": [
@@ -53,7 +53,7 @@
       "key": "2026-acl-2026",
       "venue": "ACL 2026",
       "year": 2026,
-      "count": 2,
+      "count": 3,
       "path": "data/catalog/shards/2026-acl-2026.json"
     },
     {
@@ -83,6 +83,13 @@
       "year": 2026,
       "count": 5128,
       "path": "data/catalog/shards/2026-iclr-2026-poster.json"
+    },
+    {
+      "key": "2026-icml-2026",
+      "venue": "ICML 2026",
+      "year": 2026,
+      "count": 1,
+      "path": "data/catalog/shards/2026-icml-2026.json"
     },
     {
       "key": "2026-icml-2026-main",
@@ -100515,6 +100522,54 @@
         "web"
       ],
       "shardKey": "2026-aaai-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-b09792bf2db3",
+      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "rag-knowledge",
+      "categories": [
+        "rag-knowledge",
+        "evaluation-benchmarks",
+        "reasoning",
+        "mllm-foundations"
+      ],
+      "keywords": [
+        "multimodal",
+        "rag",
+        "reasoning",
+        "3d",
+        "ACL 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "tldr": "MegaRAG通过构建多模态知识图结合图推理与页面检索技术，实现文档上的全局视觉问答。",
+      "aliases": [
+        "unofficial-b09792bf2db3"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-b09792bf2db3",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T06:45:20.683Z",
+      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },
@@ -531210,6 +531265,54 @@
       "guideStatus": "pending",
       "sourceType": "official",
       "shardKey": "2026-iclr-2026-poster",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-4e50c4d34e55",
+      "title": "Distilling Neuro-Symbolic Programs into 3D Multi-modal LLMs",
+      "titleZh": "将神经符号程序蒸馏到3D多模态大语言模型中",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICML 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "mllm-foundations",
+      "categories": [
+        "mllm-foundations",
+        "reasoning",
+        "coding-formal-tasks",
+        "three-d-world-modeling"
+      ],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "ICML 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/oceanflowlab/APEIRIA",
+      "tldr": "将神经符号执行轨迹蒸馏到透明的3D思维链推理多模态大语言模型框架中",
+      "aliases": [
+        "unofficial-4e50c4d34e55"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-4e50c4d34e55",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICML 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-12T06:01:41.233Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-icml-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },
