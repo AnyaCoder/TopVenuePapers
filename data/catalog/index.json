@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-26T05:30:20.446Z",
-  "count": 11809,
+  "generatedAt": "2026-06-27T05:12:26.550Z",
+  "count": 11810,
   "guidedCount": 101,
   "venueYearCount": 9,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 12
+      "count": 13
     }
   ],
   "notes": [
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 6,
+      "count": 7,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -100694,7 +100694,7 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/Rise-1210/codeflow",
-      "tldr": "FlowBench是一个用于复杂生成的多轮迭代基准测试",
+      "tldr": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
       "aliases": [
         "unofficial-f3d34727706a"
       ],
@@ -100796,6 +100796,53 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.977Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-0217c443bae0",
+      "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "efficiency-systems",
+      "categories": [
+        "efficiency-systems",
+        "evaluation-benchmarks",
+        "agents-tool-use",
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "llm",
+        "agent",
+        "rag",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/Jize-W/RouteMoA",
+      "tldr": "提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能",
+      "aliases": [
+        "unofficial-0217c443bae0"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-0217c443bae0",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-20T05:44:21.154Z",
       "evidenceCount": 1,
       "platforms": [
         "web"

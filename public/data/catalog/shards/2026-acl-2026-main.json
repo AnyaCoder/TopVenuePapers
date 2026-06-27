@@ -2,7 +2,7 @@
   "key": "2026-acl-2026-main",
   "venue": "ACL 2026 Main",
   "year": 2026,
-  "count": 6,
+  "count": 7,
   "papers": [
     {
       "id": "unofficial-f3d34727706a",
@@ -33,8 +33,8 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/Rise-1210/codeflow",
-      "tldr": "FlowBench是一个用于复杂生成的多轮迭代基准测试",
-      "abstract": "FlowBench是一个用于复杂生成的多轮迭代基准测试",
+      "tldr": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
+      "abstract": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
       "aliases": [
         "unofficial-f3d34727706a"
       ],
@@ -132,6 +132,51 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.977Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ]
+    },
+    {
+      "id": "unofficial-0217c443bae0",
+      "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "efficiency-systems",
+      "categories": [
+        "efficiency-systems",
+        "evaluation-benchmarks",
+        "agents-tool-use",
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "llm",
+        "agent",
+        "rag",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/Jize-W/RouteMoA",
+      "tldr": "提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能",
+      "abstract": "提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能",
+      "aliases": [
+        "unofficial-0217c443bae0"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-0217c443bae0",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-20T05:44:21.154Z",
       "evidenceCount": 1,
       "platforms": [
         "web"

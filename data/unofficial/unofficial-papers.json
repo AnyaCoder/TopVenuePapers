@@ -1,11 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-26T05:30:25.784Z",
+  "generatedAt": "2026-06-27T05:12:32.095Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-06-27T05:14:29.731Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
     {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
@@ -21,7 +77,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-06-26T05:31:21.241Z",
+      "updatedAt": "2026-06-27T05:13:02.053Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -62,30 +118,121 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-0217c443bae0",
+      "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
+      "summary": "提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能",
+      "reason": "GitHub仓库标题和内容明确标注为[ACL 2026]论文",
+      "primaryUrl": "https://github.com/Jize-W/RouteMoA",
+      "canonicalUrl": "https://github.com/Jize-W/RouteMoA",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "sourceId": "unofficial-0217c443bae0",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-06-26T05:30:55.354Z",
+      "discoveredAt": "2026-06-20T05:44:21.154Z",
+      "updatedAt": "2026-06-27T05:12:23.035Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Jize-W/RouteMoA",
+          "title": "GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents · GitHub",
+          "snippet": "Latest 12 12 asset asset emoa emoa emoa_large emoa_large opencompass opencompass .gitignore .gitignore LICENSE LICENSE README.md README.md README_cn.md README_cn.md lmdeploy.sh lmdeploy.sh View all files [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents Welcome to the official repository for RouteMoA ( Paper link ). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) archite...",
+          "readerTitle": "GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
+          "readerExcerpt": "English | 简体中文 __[ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents__ Welcome to the official repository for __RouteMoA__ (Paper link). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) architectures without relying on pre-inference steps. !Image 1: Concept comparison between our RouteMoA and previous MoA-based methods. _Concept comparison between our RouteMoA and previous MoA-based methods._ --- ## Table of Contents - RouteMoA - Table of Contents - Installation - Quick Start — Small Model Pool - 1. Deploy the LLMs - 2. Start the RouteMoA Service - 3. Evaluate the Service - Quick Start — Large Model Pool - 1. Configure API Access - 2. Start the Services - 3. Evaluate the Service - Router Training - Acknowledgements --- ## Installation We highly recommend using `cond...",
+          "publishDate": "2026-06-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-dd6d90deb570",
+      "title": "Toward Effective Multimodal Graph Foundation Model: A Divide-and-Conquer Based Approach",
+      "summary": "Discovery evidence found an explicit ICML 2026 Main paper signal for Toward Effective Multimodal Graph Foundation Model: A Divide-and-Conquer Based Approach; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文已被ICML 2026接收。",
+      "primaryUrl": "https://github.com/Sapnapnet/PLANET",
+      "canonicalUrl": "https://github.com/Sapnapnet/PLANET",
+      "pdfUrl": "",
+      "sourceId": "unofficial-dd6d90deb570",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-27T05:04:22.661Z",
+      "updatedAt": "2026-06-27T05:09:56.181Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
         "multimodal",
-        "agent",
-        "report generation"
+        "graph",
+        "foundation model"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Sapnapnet/PLANET",
+          "title": "GitHub - Sapnapnet/PLANET: Code and resources for the ICML 2026 paper \"Toward Effective Multimodal Graph Foundation Model: A Divide-and",
+          "snippet": "Open more menu Folders and files Latest 5 5 configs configs embedding_converter embedding_converter fig fig src src utils utils LICENSE LICENSE README.md README.md finetune.py finetune.py train.py train.py View all files PLANET Official for PLANET , a novel multimodal graph foundation model employing a Divide-and-Conquer strategy to decouple modality interaction and alignment across distinct granularities. The is organized around two stages: train.py : multimodal graph pre-training finetune.p...",
+          "readerTitle": "GitHub - Sapnapnet/PLANET: Code and resources for the ICML 2026 paper \"Toward Effective Multimodal Graph Foundation Model: A Divide-and-Conquer Based Approach\"",
+          "readerExcerpt": "Official for __PLANET__, a novel multimodal graph foundation model employing a Divide-and-Conquer strategy to decouple modality interaction and alignment across distinct granularities. [Paper] The is organized around two stages: - `train.py`: multimodal graph pre-training - `finetune.py`: downstream transfer on node classification and link prediction PLANET learns transferable multimodal graph representations by jointly modeling modality-specific information, cross-modality inter , and graph topology, while aligning cross-modal features through a vector-quantized book and reconstruction-based pre-training objectives. !Image 1: PLANET framework ## Highlights ✨ - Unified pre-training over multiple multimodal graph datasets. - Joint modeling of modality-specific and cross-modality representations. - Vector-quantized alignment through a learnable discretized semantic representation space....",
+          "publishDate": "2026-06-25",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f3d34727706a",
+      "title": "CodeFlowBench: A",
+      "summary": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
+      "reason": "GitHub仓库标题明确显示为'[ACL 2026]Official implementation of FlowBench'，证明论文已被ACL 2026主会议接受。",
+      "primaryUrl": "https://github.com/Rise-1210/codeflow",
+      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f3d34727706a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.85,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-18T05:18:52.491Z",
+      "updatedAt": "2026-06-27T05:07:21.980Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark",
+        "generation",
+        "multi-turn",
+        "iterative"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -96,26 +243,114 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
+          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
+          "publishDate": "2026-05-31",
           "query": ""
         },
         {
           "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/ flow: [ACL 2026]Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View al...",
+          "readerTitle": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any work...",
+          "publishDate": "2026-05-31",
           "query": ""
         }
       ],
       "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-1072c66e836a",
+      "title": "PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
+      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/iLearn-Lab/ACL26-PersonalAlign",
+      "canonicalUrl": "https://github.com/iLearn-Lab/ACL26-PersonalAlign",
+      "pdfUrl": "",
+      "sourceId": "unofficial-1072c66e836a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-27T05:04:22.657Z",
+      "updatedAt": "2026-06-27T05:04:53.214Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/iLearn-Lab/ACL26-PersonalAlign",
+          "title": "GitHub - iLearn-Lab/ACL26-PersonalAlign: [ACL 2026 main] PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent",
+          "snippet": "iLearn-Lab/ACL26-PersonalAlign Open more menu Folders and files Latest 3 3 HIM_agent HIM_agent assets assets data data samples samples scripts scripts skills/ hierarchical-implicit-intent-memory skills/ hierarchical-implicit-intent-memory src src .gitignore .gitignore README-skills.md README-skills.md README.md README.md requirements.txt requirements.txt View all files Harbin Institute of Technology, Shenzhen *Corresponding author Towards building more intelligent personalized agents for alig...",
+          "readerTitle": "GitHub - iLearn-Lab/ACL26-PersonalAlign: [ACL 2026 main] PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
+          "readerExcerpt": "## 📚 Introduction This is the official repository for __PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records__. In this work, we aim to build a more intelligent personalized GUI Agent capable of learning and matching implicit user intents from long-term interaction histories. To this end, we constructed a new GUI benchmark, AndroidIntent. From 20k trajectories of different users over two months of mobile phone usage, we annotated 775 preference intents with 7,915 GUI and 215 routine intents for evaluation. !Image 1 ## 📦 Installation ``` # Create and activate conda environment conda create -n personal python=3.10 -y conda activate personal git clone https://github.com/JiuTian-VL/PersonalAlign.git cd PersonalAlign pip install -r requirements.txt ``` ## 🤖 Evaluating your agent on AndroidIntent First, please download the F...",
+          "publishDate": "2026-06-25",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-518627ff2079",
+      "title": "ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/arnav10goel/Morphogen",
+      "canonicalUrl": "https://github.com/arnav10goel/Morphogen",
+      "pdfUrl": "",
+      "sourceId": "unofficial-518627ff2079",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-27T05:04:22.664Z",
+      "updatedAt": "2026-06-27T05:04:22.664Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/arnav10goel/Morphogen",
+          "title": "GitHub - arnav10goel/Morphogen: ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation · GitHub",
+          "snippet": "Latest 3 3 assets assets results results src src LICENSE LICENSE README.md README.md config.yaml config.yaml pyproject.toml pyproject.toml requirement.txt requirement.txt View all files This repository contains for our ACL 2026 ( ) paper: \"MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation\". Quick Links Introduction MORPHOGEN is a morphologically grounded, large-scale benchmark designed to evaluate the gender-aware generation capabilities of Large Languag...",
+          "readerTitle": "GitHub - arnav10goel/Morphogen: ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
+          "readerExcerpt": "!Image 1: Paper URL !Image 2: Model Outputs !Image 3: Morphogen Dataset This repository contains for our ACL 2026 ( ) paper: \"MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation\". ## Quick Links - Introduction - Dataset Overview - Repository Structure - Getting Started - Installation - Dataset Setup - Configuration - Reproducing Results - Experimental Setup - Evaluation Metrics - Benchmarked Models - Results - Citation ## Introduction __MORPHOGEN__ is a morphologically grounded, large-scale benchmark designed to evaluate the gender-aware generation capabilities of Large Language Models (LLMs) in three typologically diverse languages: __French, Arabic, and Hindi__. The core task, __GENFORM__, requires models to rewrite first-person sentences in the opposite gender while preserving the original meaning, fluency, and syntactic structure. !Image 4: Alt...",
+          "publishDate": "2026-06-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-b09792bf2db3",
@@ -169,64 +404,6 @@
           "readerTitle": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG",
           "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation !Image 1: License __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview !Image 2: MegaRAG Architecture ## π¦ Installation #### Requirements - Python 3.9+ (3.10 re...",
           "publishDate": "2026-06-13",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-f3d34727706a",
-      "title": "CodeFlowBench: A",
-      "summary": "FlowBench是一个用于复杂生成的多轮迭代基准测试",
-      "reason": "GitHub仓库标题明确标注为ACL 2026官方实现，证实论文已被ACL 2026主会议接受",
-      "primaryUrl": "https://github.com/Rise-1210/codeflow",
-      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
-      "pdfUrl": "",
-      "sourceId": "unofficial-f3d34727706a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.85,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-18T05:18:52.491Z",
-      "updatedAt": "2026-06-26T05:23:07.872Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "benchmark",
-        "generation",
-        "multi-turn",
-        "iterative"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Rise-1210/codeflow",
-          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
-          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
-          "publishDate": "2026-05-31",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/Rise-1210/codeflow",
-          "title": "GitHub - Rise-1210/ flow: [ACL 2026]Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
-          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View al...",
-          "readerTitle": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
-          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any work...",
-          "publishDate": "2026-05-31",
           "query": ""
         }
       ],
@@ -577,51 +754,6 @@
           "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
           "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
           "publishDate": "2026-05-23",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-0217c443bae0",
-      "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Jize-W/RouteMoA",
-      "canonicalUrl": "https://github.com/Jize-W/RouteMoA",
-      "pdfUrl": "",
-      "sourceId": "unofficial-0217c443bae0",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-20T05:44:21.154Z",
-      "updatedAt": "2026-06-20T05:44:21.154Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "agent",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Jize-W/RouteMoA",
-          "title": "GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents · GitHub",
-          "snippet": "Latest 12 12 asset asset emoa emoa emoa_large emoa_large opencompass opencompass .gitignore .gitignore LICENSE LICENSE README.md README.md README_cn.md README_cn.md lmdeploy.sh lmdeploy.sh View all files [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents Welcome to the official repository for RouteMoA ( Paper link ). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) archite...",
-          "readerTitle": "GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
-          "readerExcerpt": "English | 简体中文 __[ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents__ Welcome to the official repository for __RouteMoA__ (Paper link). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) architectures without relying on pre-inference steps. !Image 1: Concept comparison between our RouteMoA and previous MoA-based methods. _Concept comparison between our RouteMoA and previous MoA-based methods._ --- ## Table of Contents - RouteMoA - Table of Contents - Installation - Quick Start — Small Model Pool - 1. Deploy the LLMs - 2. Start the RouteMoA Service - 3. Evaluate the Service - Quick Start — Large Model Pool - 1. Configure API Access - 2. Start the Services - 3. Evaluate the Service - Router Training - Acknowledgements --- ## Installation We highly recommend using `cond...",
-          "publishDate": "2026-06-04",
           "query": ""
         }
       ],
