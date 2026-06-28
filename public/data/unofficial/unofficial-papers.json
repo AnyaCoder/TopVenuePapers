@@ -1,16 +1,103 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-27T05:12:23.468Z",
+  "generatedAt": "2026-06-28T05:55:00.665Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
+      "id": "unofficial-518627ff2079",
+      "title": "ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
+      "titleZh": "MORPHOGEN：评估性别感知形态生成的多语言基准",
+      "summary": "MORPHOGEN是一个多语言基准，用于评估性别感知的形态生成能力。",
+      "reason": "GitHub仓库明确提到该论文已被ACL 2026主会议接受。",
+      "primaryUrl": "https://github.com/arnav10goel/Morphogen",
+      "canonicalUrl": "https://github.com/arnav10goel/Morphogen",
+      "pdfUrl": "",
+      "sourceId": "unofficial-518627ff2079",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-27T05:04:22.664Z",
+      "updatedAt": "2026-06-28T05:55:00.242Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/arnav10goel/Morphogen",
+          "title": "GitHub - arnav10goel/Morphogen: ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation · GitHub",
+          "snippet": "Latest 3 3 assets assets results results src src LICENSE LICENSE README.md README.md config.yaml config.yaml pyproject.toml pyproject.toml requirement.txt requirement.txt View all files This repository contains for our ACL 2026 ( ) paper: \"MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation\". Quick Links Introduction MORPHOGEN is a morphologically grounded, large-scale benchmark designed to evaluate the gender-aware generation capabilities of Large Languag...",
+          "readerTitle": "GitHub - arnav10goel/Morphogen: ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
+          "readerExcerpt": "!Image 1: Paper URL !Image 2: Model Outputs !Image 3: Morphogen Dataset This repository contains for our ACL 2026 ( ) paper: \"MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation\". ## Quick Links - Introduction - Dataset Overview - Repository Structure - Getting Started - Installation - Dataset Setup - Configuration - Reproducing Results - Experimental Setup - Evaluation Metrics - Benchmarked Models - Results - Citation ## Introduction __MORPHOGEN__ is a morphologically grounded, large-scale benchmark designed to evaluate the gender-aware generation capabilities of Large Language Models (LLMs) in three typologically diverse languages: __French, Arabic, and Hindi__. The core task, __GENFORM__, requires models to rewrite first-person sentences in the opposite gender while preserving the original meaning, fluency, and syntactic structure. !Image 4: Alt...",
+          "publishDate": "2026-06-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-42e714a910d9",
+      "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
+      "summary": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak是一个将潜在有害请求重新表述为形式化逻辑框架的系统方法，支持多种语言。",
+      "reason": "GitHub README明确指出ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak被ACL'26接受，描述了其包含重新表述、越狱和评估三个组件的框架。",
+      "primaryUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
+      "canonicalUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak",
+      "pdfUrl": "",
+      "sourceId": "unofficial-42e714a910d9",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-15T06:39:59.232Z",
+      "updatedAt": "2026-06-28T05:52:42.736Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
+          "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak · GitHub",
+          "snippet": "Files Expand file tree Breadcrumbs README.md Copy path More file More file Latest 92 lines (74 loc) · 3.24 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 92 lines (74 loc) · 3.24 KB Outline Edit and raw LogiBreak This repository contains an official implement of LogiBreak accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. Overview The project implements a systematic appro...",
+          "readerTitle": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
+          "readerExcerpt": "# LogiBreak This repository contains an official implement of **LogiBreak** accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. ## Overview The project implements a systematic approach to: 1. Reformulate potentially harmful requests into formal logical forms 2. Attempt jailbreaks using the reformulated requests 3. Evaluate the success of jailbreak attempts using multiple judges ## Components ### 1. Reformulation (`reformulate_*.py`) - Reformulates potentially harmful requests into formal logical forms - Available for multiple languages: - English (`reformulate_en.py`) - Chinese (`reformulate_zh.py`) - Dutch (`reformulate_du.py`) - Uses GPT-3.5-turbo by default for reformulation - Supports multiple restarts for each request ### 2. Jailbreak (`jailbreak_*.py`) - Attempts to jailbreak targe...",
+          "publishDate": "2026-06-02",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-0217c443bae0",
       "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
       "summary": "提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能",
-      "reason": "GitHub仓库标题和内容明确标注为[ACL 2026]论文",
+      "reason": "GitHub仓库明确标注为[ACL 2026]，提供了论文官方代码库",
       "primaryUrl": "https://github.com/Jize-W/RouteMoA",
       "canonicalUrl": "https://github.com/Jize-W/RouteMoA",
       "pdfUrl": "",
@@ -21,7 +108,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-20T05:44:21.154Z",
-      "updatedAt": "2026-06-27T05:12:23.035Z",
+      "updatedAt": "2026-06-28T05:49:35.816Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -50,6 +137,265 @@
         }
       ],
       "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-e13c2ff8b0f9",
+      "title": ". A hybrid LLM-based agent architecture integrating Spatial-Temporal Episodic Memory (STEM) for improved event encoding, storage, and retrieval across time.",
+      "summary": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit AAAI 2026 Main paper signal for . A hybrid LLM-based agent architecture integrating Spatial-Temporal Episodic Memory (STEM) for improved event encoding, storage, and retrieval across time.; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/cassthm/ARTEM",
+      "canonicalUrl": "https://github.com/cassthm/ARTEM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-e13c2ff8b0f9",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-28T05:45:13.431Z",
+      "updatedAt": "2026-06-28T05:45:13.431Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/cassthm/ARTEM",
+          "title": "GitHub - cassthm/ARTEM: Official repository for ARTEM (Agentic Retrieval with Temporal-Episodic Memory) — accepted at AAAI 2026. A hybrid",
+          "snippet": "Open more menu Folders and files Latest 6 6 ARTEM_evaluation.py ARTEM_evaluation.py LLM_as_a_Judge.py LLM_as_a_Judge.py README.md README.md STEM_evaluation.py STEM_evaluation.py dataExtraction.py dataExtraction.py eventNormalizer.py eventNormalizer.py eventProcessor.py eventProcessor.py eventRetriever.py eventRetriever.py View all files ARTEM : Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory Official repository for ARTEM (Agentic Retrieval with Temporal-Episodic Me...",
+          "readerTitle": "GitHub - cassthm/ARTEM: Official repository for ARTEM (Agentic Retrieval with Temporal-Episodic Memory) — accepted at AAAI 2026. A hybrid LLM-based agent architecture integrating Spatial-Temporal Episodic Memory (STEM) for improved event encoding, storage, and retrieval across time. · GitHub",
+          "readerExcerpt": "GitHub - cassthm/ARTEM: Official repository for ARTEM (Agentic Retrieval with Temporal-Episodic Memory) — accepted at AAAI 2026. A hybrid LLM-based agent architecture integrating Spatial-Temporal Episodic Memory (STEM) for improved event encoding, storage, and retrieval across time. · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - B...",
+          "publishDate": "2026-06-26",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-a12ae77d9dbf",
+      "title": "Cultivating Forensic Reasoning for Generalizable Multimodal Manipulation Detection",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Cultivating Forensic Reasoning for Generalizable Multimodal Manipulation Detection; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/YcZhangSing/REFORM",
+      "canonicalUrl": "https://github.com/YcZhangSing/REFORM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a12ae77d9dbf",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-28T05:45:13.429Z",
+      "updatedAt": "2026-06-28T05:45:13.429Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "vlm",
+        "multimodal",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/YcZhangSing/REFORM",
+          "title": "GitHub - YcZhangSing/REFORM: [ACL 2026] Code for \"Cultivating Forensic Reasoning for Generalizable Multimodal Manipulation Detection\" ·",
+          "snippet": "Latest 15 15 assets assets configs configs models models reform reform scripts scripts .gitignore .gitignore README.md README.md requirements.txt requirements.txt View all files 📌 Overview REFORM improves generalization by cultivating forensic reasoning, suggesting the value of extending multimodal manipulation detection beyond outcome-level prediction. ROM goes beyond binary real/fake labels by providing structured forensic reasoning supervision, enabling models to learn where, why, and how...",
+          "readerTitle": "GitHub - YcZhangSing/REFORM: [ACL 2026] Code for \"Cultivating Forensic Reasoning for Generalizable Multimodal Manipulation Detection\"",
+          "readerExcerpt": "## 📌 Overview !Image 1: REFORM __REFORM__ improves generalization by cultivating forensic reasoning, suggesting the value of extending multimodal manipulation detection beyond outcome-level prediction. __ROM__ goes beyond binary real/fake labels by providing structured forensic reasoning supervision, enabling models to learn where, why, and how multimodal manipulations occur. ## 🔬 REFORM REFORM supports multimodal forensic understanding tasks including authenticity detection, fine-grained manipulation type prediction, manipulated region grounding, and forensic rationale generation. !Image 2: REFORM The training pipeline has three stages: 1. __Cognitive Reasoning Warm-up__ 2. __Reasoning-Endowed Joint Fine-Tuning__ 3. __Constraint-Aware Policy Refinement__ ## ⚙️ Setup ``` conda create -n REFORM python=3.10 conda activate REFORM pip install -r requirements.txt ``` If you encounter wit...",
+          "publishDate": "2026-06-26",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f3d34727706a",
+      "title": "CodeFlowBench: A",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for CodeFlowBench: A; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Rise-1210/codeflow",
+      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f3d34727706a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.85,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-18T05:18:52.491Z",
+      "updatedAt": "2026-06-28T05:45:13.423Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "benchmark",
+        "generation",
+        "multi-turn",
+        "iterative"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
+          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
+          "publishDate": "2026-05-31",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/Rise-1210/codeflow",
+          "title": "GitHub - Rise-1210/ flow: [ACL 2026]Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
+          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View al...",
+          "readerTitle": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
+          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any work...",
+          "publishDate": "2026-05-31",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-06-27T05:14:29.731Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-06-27T05:13:02.053Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-dd6d90deb570",
@@ -96,64 +442,6 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-f3d34727706a",
-      "title": "CodeFlowBench: A",
-      "summary": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
-      "reason": "GitHub仓库标题明确显示为'[ACL 2026]Official implementation of FlowBench'，证明论文已被ACL 2026主会议接受。",
-      "primaryUrl": "https://github.com/Rise-1210/codeflow",
-      "canonicalUrl": "https://github.com/Rise-1210/codeflow",
-      "pdfUrl": "",
-      "sourceId": "unofficial-f3d34727706a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.85,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-18T05:18:52.491Z",
-      "updatedAt": "2026-06-27T05:07:21.980Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "benchmark",
-        "generation",
-        "multi-turn",
-        "iterative"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Rise-1210/codeflow",
-          "title": "GitHub - Rise-1210/codeflow: [ACL 2026]Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View all files [ACL 2026] FlowBench: A Multi-turn, IterativeBenchmark for Complex Generation 📰 News [2026/04] 🎉 Our paper has been officially accepted to the ACL 2026 Conference ! 📖 In...",
-          "readerTitle": "GitHub - Rise-1210/codeflow: Official implementation of CodeFlowBench: A Multi-turn, Iterative Benchmark for Complex Code Generation",
-          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any workflow - spaces Instant dev environments - Plan and track work - Review Manage changes - Discussions Collaborate outside of - Search Find more, search less Explore - Why GitHub - Documentation - GitHub Skills - Blog Integrations - GitHub Marketplace - MCP Registry View all features - Solutions By company size - Enterprises - Small and medium teams - Startups - Nonprofits By use case - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases By industry - Healthcare -...",
-          "publishDate": "2026-05-31",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/Rise-1210/codeflow",
-          "title": "GitHub - Rise-1210/ flow: [ACL 2026]Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
-          "snippet": "Open more menu Folders and files Latest 8 8 data data models models output output result result run run temp temp LICENSE LICENSE readme.md readme.md requirements.txt requirements.txt requirements_domain.txt requirements_domain.txt test_multi_turn.sh test_multi_turn.sh test_single_turn.sh test_single_turn.sh View al...",
-          "readerTitle": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation",
-          "readerExcerpt": "GitHub - Rise-1210/ flow: Official implementation of FlowBench: A Multi-turn, Iterative Benchmark for Complex Generation Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - GitHub Copilot Write better with AI - GitHub Spark New Build and deploy intelligent apps - GitHub Models New Manage and compare prompts - GitHub Advanced Find and fix vulnerabilities - Automate any work...",
-          "publishDate": "2026-05-31",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
       "id": "unofficial-1072c66e836a",
       "title": "PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
       "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -196,161 +484,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-518627ff2079",
-      "title": "ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/arnav10goel/Morphogen",
-      "canonicalUrl": "https://github.com/arnav10goel/Morphogen",
-      "pdfUrl": "",
-      "sourceId": "unofficial-518627ff2079",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-27T05:04:22.664Z",
-      "updatedAt": "2026-06-27T05:04:22.664Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/arnav10goel/Morphogen",
-          "title": "GitHub - arnav10goel/Morphogen: ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation · GitHub",
-          "snippet": "Latest 3 3 assets assets results results src src LICENSE LICENSE README.md README.md config.yaml config.yaml pyproject.toml pyproject.toml requirement.txt requirement.txt View all files This repository contains for our ACL 2026 ( ) paper: \"MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation\". Quick Links Introduction MORPHOGEN is a morphologically grounded, large-scale benchmark designed to evaluate the gender-aware generation capabilities of Large Languag...",
-          "readerTitle": "GitHub - arnav10goel/Morphogen: ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
-          "readerExcerpt": "!Image 1: Paper URL !Image 2: Model Outputs !Image 3: Morphogen Dataset This repository contains for our ACL 2026 ( ) paper: \"MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation\". ## Quick Links - Introduction - Dataset Overview - Repository Structure - Getting Started - Installation - Dataset Setup - Configuration - Reproducing Results - Experimental Setup - Evaluation Metrics - Benchmarked Models - Results - Citation ## Introduction __MORPHOGEN__ is a morphologically grounded, large-scale benchmark designed to evaluate the gender-aware generation capabilities of Large Language Models (LLMs) in three typologically diverse languages: __French, Arabic, and Hindi__. The core task, __GENFORM__, requires models to rewrite first-person sentences in the opposite gender while preserving the original meaning, fluency, and syntactic structure. !Image 4: Alt...",
-          "publishDate": "2026-06-04",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-06-26T05:31:21.241Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-06-26T05:30:55.354Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-b09792bf2db3",
@@ -1174,48 +1307,6 @@
           "readerTitle": "GitHub - facebookresearch/lagernvs: Official code for \"LagerNVS Latent Geometry for Fully Neural Real-time Novel View Synthesis\" (CVPR 2026)",
           "readerExcerpt": "!Image 1: arXiv !Image 2: Project Page !Image 3: GitHub !Image 4: Models Stanislaw Szymanowicz1,2, Minghao Chen1,2, Jianyuan Wang1,2, Christian Rupprecht1, Andrea Vedaldi1,2 1Visual Geometry Group (VGG), University of Oxford Β Β 2Meta AI LagerNVS is a feed-forward model for novel view synthesis (NVS). Given one or more input images of a scene, it synthesizes new views from a target cameras. It generalizes to in-the-wild data, renders new views in real time and can operate with or without known source camera poses. The model uses 3D biases without explicit 3D representations. The architecture features a large 3D-aware en r (from VGGT pre-training) to extract scene tokens and a transformer-based renderer that conditions on these tokens via cross-attention to render novel views. ## Installation ``` # Clone the repository git clone https://github.com/facebookresearch/lagernvs.git cd lager...",
           "publishDate": "2026-05-18",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-42e714a910d9",
-      "title": ") - Reformulates potentially harmful requests into formal logical forms - Available for multiple languages: - English (",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for ) - Reformulates potentially harmful requests into formal logical forms - Available for multiple languages: - English (; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
-      "canonicalUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
-      "pdfUrl": "",
-      "sourceId": "unofficial-42e714a910d9",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-15T06:39:59.232Z",
-      "updatedAt": "2026-06-15T06:39:59.232Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
-          "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak · GitHub",
-          "snippet": "Files Expand file tree Breadcrumbs README.md Copy path More file More file Latest 92 lines (74 loc) · 3.24 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 92 lines (74 loc) · 3.24 KB Outline Edit and raw LogiBreak This repository contains an official implement of LogiBreak accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. Overview The project implements a systematic appro...",
-          "readerTitle": "Applied-Machine-Learning-Lab/Logibreak README",
-          "readerExcerpt": "# LogiBreak This repository contains an official implement of **LogiBreak** accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. ## Overview The project implements a systematic approach to: 1. Reformulate potentially harmful requests into formal logical forms 2. Attempt jailbreaks using the reformulated requests 3. Evaluate the success of jailbreak attempts using multiple judges ## Components ### 1. Reformulation (`reformulate_*.py`) - Reformulates potentially harmful requests into formal logical forms - Available for multiple languages: - English (`reformulate_en.py`) - Chinese (`reformulate_zh.py`) - Dutch (`reformulate_du.py`) - Uses GPT-3.5-turbo by default for reformulation - Supports multiple restarts for each request ### 2. Jailbreak (`jailbreak_*.py`) - Attempts to jailbreak targe...",
-          "publishDate": "2026-06-02",
           "query": ""
         }
       ],

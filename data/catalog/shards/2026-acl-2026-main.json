@@ -2,11 +2,12 @@
   "key": "2026-acl-2026-main",
   "venue": "ACL 2026 Main",
   "year": 2026,
-  "count": 7,
+  "count": 8,
   "papers": [
     {
-      "id": "unofficial-f3d34727706a",
-      "title": "CodeFlowBench: A",
+      "id": "unofficial-518627ff2079",
+      "title": "ACL 2026 - MORPHOGEN: A Multilingual Benchmark for Evaluating Gender-Aware Morphological Generation",
+      "titleZh": "MORPHOGEN：评估性别感知形态生成的多语言基准",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
       "venue": "ACL 2026 Main",
       "year": 2026,
@@ -14,42 +15,75 @@
       "primaryCategory": "evaluation-benchmarks",
       "categories": [
         "evaluation-benchmarks",
-        "coding-formal-tasks",
         "multimodal-generation"
       ],
       "keywords": [
         "large language model",
         "llm",
         "benchmark",
-        "generation",
-        "multi-turn",
-        "iterative",
         "ACL 2026 Main",
         "web",
-        "github",
         "unofficial"
       ],
       "authors": [
         "Unknown authors"
       ],
-      "openreviewUrl": "https://github.com/Rise-1210/codeflow",
-      "tldr": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
-      "abstract": "FlowBench是一个多轮、迭代的复杂生成基准测试，已被ACL 2026主会议接受。",
+      "openreviewUrl": "https://github.com/arnav10goel/Morphogen",
+      "tldr": "MORPHOGEN是一个多语言基准，用于评估性别感知的形态生成能力。",
+      "abstract": "MORPHOGEN是一个多语言基准，用于评估性别感知的形态生成能力。",
       "aliases": [
-        "unofficial-f3d34727706a"
+        "unofficial-518627ff2079"
       ],
       "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-f3d34727706a",
+      "sourceId": "unofficial-518627ff2079",
       "guideStatus": "pending",
       "sourceType": "unofficial",
       "acceptanceStatus": "accepted",
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-18T05:18:52.491Z",
-      "evidenceCount": 2,
+      "discoveredAt": "2026-06-27T05:04:22.664Z",
+      "evidenceCount": 1,
       "platforms": [
+        "web"
+      ]
+    },
+    {
+      "id": "unofficial-42e714a910d9",
+      "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "mllm-foundations",
+      "categories": [
+        "mllm-foundations"
+      ],
+      "keywords": [
+        "llm",
+        "ACL 2026 Main",
         "web",
-        "github"
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
+      "tldr": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak是一个将潜在有害请求重新表述为形式化逻辑框架的系统方法，支持多种语言。",
+      "abstract": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak是一个将潜在有害请求重新表述为形式化逻辑框架的系统方法，支持多种语言。",
+      "aliases": [
+        "unofficial-42e714a910d9"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-42e714a910d9",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-15T06:39:59.232Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
       ]
     },
     {
