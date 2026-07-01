@@ -1,16 +1,107 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-30T05:24:15.902Z",
+  "generatedAt": "2026-07-01T06:00:21.128Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
+      "id": "unofficial-1b24fc14ef3c",
+      "title": "When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确显示论文被ACL 2026主会议接收，标题为'When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs'",
+      "primaryUrl": "https://github.com/zhengyi-ai/ACL2026",
+      "canonicalUrl": "https://github.com/zhengyi-ai/ACL2026",
+      "pdfUrl": "",
+      "sourceId": "unofficial-1b24fc14ef3c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-01T05:54:30.639Z",
+      "updatedAt": "2026-07-01T06:00:20.679Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhengyi-ai/ACL2026",
+          "title": "GitHub - zhengyi-ai/ACL2026 · GitHub",
+          "snippet": "Open more menu Folders and files Latest 21 21 blackbox_tools/ dual_gpt_view blackbox_tools/ dual_gpt_view data data figs figs hparams/ Steer hparams/ Steer prober/ train_rater prober/ train_rater run_sh run_sh steer steer judge_optimized.py judge_optimized.py readme.md readme.md requirements.txt requirements.txt vectors_apply_smart.py vectors_apply_smart.py vectors_generate.py vectors_generate.py View all files When Personalization Misleads: Understanding and Mitigating Hallucinations in Pers...",
+          "readerTitle": "GitHub - zhengyi-ai/ACL2026",
+          "readerExcerpt": "## When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs ## Abstract Personalized large language models (LLMs) adapt model behavior to individual users to enhance user satisfaction, yet personalization can inadvertently distort factual reasoning. We show that when personalized LLMs face factual queries, there exists a phenomenon where the model generates answers aligned with a user's prior rather than the objective truth, resulting in __personalization-induced hallucinations__ that degrade factual reliability and may propagate incorrect beliefs, due to representational entanglement between personalization and factual representations. To address this issue, we propose __Factuality-Preserving Personalized Steering (FPPS)__, a lightweight inference-time approach that mitigates personalization-induced factual distortions while preserving personali...",
+          "publishDate": "2026-06-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-42e714a910d9",
+      "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
+      "summary": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak是一个被ACL 2026接受的语言模型框架，通过将潜在有害请求重新表述为形式逻辑形式来尝试越狱。",
+      "reason": "GitHub仓库README明确指出ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak被ACL 2026接受，该框架包含重新表述、越狱和评估三个组件。",
+      "primaryUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
+      "canonicalUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak",
+      "pdfUrl": "",
+      "sourceId": "unofficial-42e714a910d9",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-06-15T06:39:59.232Z",
+      "updatedAt": "2026-07-01T05:57:47.636Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "security",
+        "jailbreak",
+        "reformulation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
+          "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak · GitHub",
+          "snippet": "Files Expand file tree Breadcrumbs README.md Copy path More file More file Latest 92 lines (74 loc) · 3.24 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 92 lines (74 loc) · 3.24 KB Outline Edit and raw LogiBreak This repository contains an official implement of LogiBreak accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. ## Overview The project implements a systematic approach to: 1. Reformulate potentially harmful requests into formal logical forms 2. Attempt jailbreaks using the reformulated requests 3. E...",
+          "readerTitle": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
+          "readerExcerpt": "# LogiBreak This repository contains an official implement of **LogiBreak** accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. ## Overview The project implements a systematic approach to: 1. Reformulate potentially harmful requests into formal logical forms 2. Attempt jailbreaks using the reformulated requests 3. Evaluate the success of jailbreak attempts using multiple judges ## Components ### 1. Reformulation (`reformulate_*.py`) - Reformulates potentially harmful requests into formal logical forms - Available for multiple languages: - English (`reformulate_en.py`) - Chinese (`reformulate_zh.py`) - Dutch (`reformulate_du.py`) - Uses GPT-3.5-turbo by default for reformulation - Supports multiple restarts for each request ### 2. Jailbreak (`jailbreak_*.py`) - Attempts to jailbreak targe...",
+          "publishDate": "2026-06-02",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-0217c443bae0",
       "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
       "summary": "RouteMoA提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能。",
-      "reason": "GitHub仓库标题和README中明确标注了'[ACL 2026]'，证明该论文已被ACL 2026主会议接受。",
+      "reason": "GitHub仓库标题明确标注为[ACL 2026]，表明该论文已被ACL 2026主会议接受。",
       "primaryUrl": "https://github.com/Jize-W/RouteMoA",
       "canonicalUrl": "https://github.com/Jize-W/RouteMoA",
       "pdfUrl": "",
@@ -21,7 +112,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-20T05:44:21.154Z",
-      "updatedAt": "2026-06-30T05:24:15.468Z",
+      "updatedAt": "2026-07-01T05:54:47.369Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -50,6 +141,118 @@
         }
       ],
       "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-06-30T05:25:09.533Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-06-30T05:24:38.477Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-f3d34727706a",
@@ -177,162 +380,6 @@
         }
       ],
       "evidenceCount": 3
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-06-29T06:18:39.691Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收。",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-06-29T06:17:24.139Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-42e714a910d9",
-      "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
-      "summary": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak是一种将潜在有害请求重新表述为形式逻辑框架的方法，用于评估多语言语言模型的安全性。",
-      "reason": "GitHub README明确表明ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak已被ACL 2026主会议接受，该论文提出了一种系统化的方法，将有害请求重新表述为形式逻辑形式，并进行越狱尝试和评估。",
-      "primaryUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
-      "canonicalUrl": "https://github.com/Applied-Machine-Learning-Lab/Logibreak",
-      "pdfUrl": "",
-      "sourceId": "unofficial-42e714a910d9",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-15T06:39:59.232Z",
-      "updatedAt": "2026-06-29T06:16:02.861Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "security",
-        "jailbreak"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Applied-Machine-Learning-Lab/Logibreak/blob/main/README.md",
-          "title": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak · GitHub",
-          "snippet": "Files Expand file tree Breadcrumbs README.md Copy path More file More file Latest 92 lines (74 loc) · 3.24 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 92 lines (74 loc) · 3.24 KB Outline Edit and raw LogiBreak This repository contains an official implement of LogiBreak accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. Overview The project implements a systematic appro...",
-          "readerTitle": "ACL2026_Logibreak/README.md at main · Applied-Machine-Learning-Lab/ACL2026_Logibreak",
-          "readerExcerpt": "# LogiBreak This repository contains an official implement of **LogiBreak** accepted by ACL'26 on language models across multiple languages. The framework consists of three components: reformulation, jailbreak, and evaluation. ## Overview The project implements a systematic approach to: 1. Reformulate potentially harmful requests into formal logical forms 2. Attempt jailbreaks using the reformulated requests 3. Evaluate the success of jailbreak attempts using multiple judges ## Components ### 1. Reformulation (`reformulate_*.py`) - Reformulates potentially harmful requests into formal logical forms - Available for multiple languages: - English (`reformulate_en.py`) - Chinese (`reformulate_zh.py`) - Dutch (`reformulate_du.py`) - Uses GPT-3.5-turbo by default for reformulation - Supports multiple restarts for each request ### 2. Jailbreak (`jailbreak_*.py`) - Attempts to jailbreak targe...",
-          "publishDate": "2026-06-02",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
     },
     {
       "id": "unofficial-ffb5140d7bb4",
