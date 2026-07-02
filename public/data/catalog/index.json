@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-01T06:00:24.160Z",
-  "count": 11812,
+  "generatedAt": "2026-07-02T05:17:45.609Z",
+  "count": 11813,
   "guidedCount": 101,
   "venueYearCount": 9,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 15
+      "count": 16
     }
   ],
   "notes": [
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 9,
+      "count": 10,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -100922,7 +100922,7 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/Jize-W/RouteMoA",
-      "tldr": "RouteMoA提出了一种动态路由机制，无需预推理步骤即可提高Mixture-of-Agents架构的性能。",
+      "tldr": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
       "aliases": [
         "unofficial-0217c443bae0"
       ],
@@ -100934,6 +100934,52 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-20T05:44:21.154Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-45f2546551f9",
+      "title": "Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "agents-tool-use",
+      "categories": [
+        "agents-tool-use",
+        "evaluation-benchmarks",
+        "rl-post-training"
+      ],
+      "keywords": [
+        "llm",
+        "agent",
+        "benchmark",
+        "reinforcement learning",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/TraceElephant/TraceElephant",
+      "tldr": "该论文提出了一个用于LLM多智能体系统中故障归因的基准测试，已被ACL 2026接收。",
+      "aliases": [
+        "unofficial-45f2546551f9"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-45f2546551f9",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-02T05:10:08.054Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
