@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-02T05:17:45.609Z",
+  "generatedAt": "2026-07-03T05:06:28.192Z",
   "count": 11813,
   "guidedCount": 101,
-  "venueYearCount": 9,
+  "venueYearCount": 10,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 10,
+      "count": 9,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -69,6 +69,13 @@
       "year": 2026,
       "count": 4070,
       "path": "data/catalog/shards/2026-cvpr-2026.json"
+    },
+    {
+      "key": "2026-iclr-2026",
+      "venue": "ICLR 2026",
+      "year": 2026,
+      "count": 1,
+      "path": "data/catalog/shards/2026-iclr-2026.json"
     },
     {
       "key": "2026-iclr-2026-oral",
@@ -100896,53 +100903,6 @@
       "hasAbstract": true
     },
     {
-      "id": "unofficial-0217c443bae0",
-      "title": "RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "ACL 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "efficiency-systems",
-      "categories": [
-        "efficiency-systems",
-        "evaluation-benchmarks",
-        "agents-tool-use",
-        "rag-knowledge"
-      ],
-      "keywords": [
-        "llm",
-        "agent",
-        "rag",
-        "benchmark",
-        "ACL 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/Jize-W/RouteMoA",
-      "tldr": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "aliases": [
-        "unofficial-0217c443bae0"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-0217c443bae0",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-06-20T05:44:21.154Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ],
-      "shardKey": "2026-acl-2026-main",
-      "hasIntroZh": false,
-      "hasAbstract": true
-    },
-    {
       "id": "unofficial-45f2546551f9",
       "title": "Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -100968,7 +100928,7 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/TraceElephant/TraceElephant",
-      "tldr": "该论文提出了一个用于LLM多智能体系统中故障归因的基准测试，已被ACL 2026接收。",
+      "tldr": "该论文提出了一个用于LLM多智能体系统故障归因的基准测试方法。",
       "aliases": [
         "unofficial-45f2546551f9"
       ],
@@ -270863,6 +270823,52 @@
       "guideStatus": "pending",
       "sourceType": "official",
       "shardKey": "2026-cvpr-2026",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-ff928ad79571",
+      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICLR 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "agents-tool-use",
+      "categories": [
+        "agents-tool-use",
+        "rag-knowledge",
+        "scientific-discovery"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "rag",
+        "ICLR 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/scientific-discovery/llema-project",
+      "tldr": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
+      "aliases": [
+        "unofficial-ff928ad79571"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-ff928ad79571",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-02T05:10:08.059Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-iclr-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },

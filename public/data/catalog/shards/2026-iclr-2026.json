@@ -5,46 +5,47 @@
   "count": 1,
   "papers": [
     {
-      "id": "unofficial-506ed3ade91d",
-      "title": "First open-source implementation of Google's TurboQuant . 3.5 bits/value = near-identical quality to FP16. Provably within 2.7× of information-theoretic optimal.",
-      "titleZh": "TurboQuant：大语言模型的最优KV缓存压缩",
+      "id": "unofficial-ff928ad79571",
+      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
       "venue": "ICLR 2026",
       "year": 2026,
       "track": "Accepted signal pending official venue page",
-      "primaryCategory": "efficiency-systems",
+      "primaryCategory": "agents-tool-use",
       "categories": [
-        "efficiency-systems"
+        "agents-tool-use",
+        "rag-knowledge",
+        "scientific-discovery"
       ],
       "keywords": [
+        "large language model",
         "llm",
-        "kv-cache",
-        "compression",
-        "inference",
+        "agent",
+        "rag",
         "ICLR 2026",
-        "github",
+        "web",
         "unofficial"
       ],
       "authors": [
-        "Google Research Team"
+        "Unknown authors"
       ],
-      "openreviewUrl": "https://github.com/OnlyTerp/turboquant",
-      "tldr": "一种能够压缩大语言模型KV缓存5-7倍且精度损失极小的开源实现方法",
-      "abstract": "一种能够压缩大语言模型KV缓存5-7倍且精度损失极小的开源实现方法",
+      "openreviewUrl": "https://github.com/scientific-discovery/llema-project",
+      "tldr": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
+      "abstract": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
       "aliases": [
-        "unofficial-506ed3ade91d"
+        "unofficial-ff928ad79571"
       ],
       "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-506ed3ade91d",
+      "sourceId": "unofficial-ff928ad79571",
       "guideStatus": "pending",
       "sourceType": "unofficial",
       "acceptanceStatus": "accepted",
       "acceptedVenue": "ICLR 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:31:45.466Z",
+      "discoveredAt": "2026-07-02T05:10:08.059Z",
       "evidenceCount": 1,
       "platforms": [
-        "github"
+        "web"
       ]
     }
   ]

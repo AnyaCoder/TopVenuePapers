@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-02T05:09:14.656Z",
+  "generatedAt": "2026-07-03T04:55:23.383Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -57,331 +57,331 @@
       "plans": []
     },
     "followUpSearchPlans": 4,
-    "skippedFollowUpSearchPlans": 181
+    "skippedFollowUpSearchPlans": 169
   },
   "progress": [
     {
-      "at": "2026-07-02T05:09:14.656Z",
+      "at": "2026-07-03T04:55:23.383Z",
       "message": "Discovery started: 14/98 initial queries, max 4 follow-up queries, max 14 readers, max 4 extraction batches."
     },
     {
-      "at": "2026-07-02T05:09:14.659Z",
+      "at": "2026-07-03T04:55:23.385Z",
       "message": "[initial search 1/14] seed-1: \"accepted to\" \"AAAI 2026\" \"official code\""
     },
     {
-      "at": "2026-07-02T05:09:16.915Z",
-      "message": "[initial search 1/14] done raw=10 kept=6 rejected=4 in 2.3s"
+      "at": "2026-07-03T04:55:26.200Z",
+      "message": "[initial search 1/14] done raw=10 kept=6 rejected=4 in 2.8s"
     },
     {
-      "at": "2026-07-02T05:09:16.915Z",
+      "at": "2026-07-03T04:55:26.200Z",
       "message": "[initial search 2/14] repository-1: site:github.com \"AAAI 2026\" \"official code\" \"LLM\""
     },
     {
-      "at": "2026-07-02T05:09:18.535Z",
-      "message": "[initial search 2/14] done raw=10 kept=2 rejected=8 in 1.6s"
+      "at": "2026-07-03T04:55:28.052Z",
+      "message": "[initial search 2/14] done raw=10 kept=3 rejected=7 in 1.9s"
     },
     {
-      "at": "2026-07-02T05:09:18.535Z",
+      "at": "2026-07-03T04:55:28.052Z",
       "message": "[initial search 3/14] paper-index-1: arxiv \"accepted to\" \"2026\" \"large language model\""
     },
     {
-      "at": "2026-07-02T05:09:20.606Z",
-      "message": "[initial search 3/14] done raw=10 kept=4 rejected=6 in 2.1s"
+      "at": "2026-07-03T04:55:30.461Z",
+      "message": "[initial search 3/14] done raw=10 kept=4 rejected=6 in 2.4s"
     },
     {
-      "at": "2026-07-02T05:09:20.606Z",
+      "at": "2026-07-03T04:55:30.461Z",
       "message": "[initial search 4/14] social-introducing-11: \"Introducing\" LLM VLM multimodal agent reasoning 2026"
     },
     {
-      "at": "2026-07-02T05:09:21.831Z",
+      "at": "2026-07-03T04:55:31.695Z",
       "message": "[initial search 4/14] done raw=0 kept=0 rejected=0 in 1.2s"
     },
     {
-      "at": "2026-07-02T05:09:21.831Z",
+      "at": "2026-07-03T04:55:31.695Z",
       "message": "[initial search 5/14] homepage-1: site:github.io \"accepted to\" \"2026\" \"LLM\""
     },
     {
-      "at": "2026-07-02T05:09:23.640Z",
-      "message": "[initial search 5/14] done raw=10 kept=6 rejected=4 in 1.8s"
+      "at": "2026-07-03T04:55:33.714Z",
+      "message": "[initial search 5/14] done raw=10 kept=6 rejected=4 in 2.0s"
     },
     {
-      "at": "2026-07-02T05:09:23.640Z",
+      "at": "2026-07-03T04:55:33.715Z",
       "message": "[initial search 6/14] chinese-1: 论文接收 顶会 大模型 AAAI ACL ICLR 2026"
     },
     {
-      "at": "2026-07-02T05:09:24.382Z",
-      "message": "[initial search 6/14] done raw=0 kept=0 rejected=0 in 742ms"
+      "at": "2026-07-03T04:55:34.655Z",
+      "message": "[initial search 6/14] done raw=0 kept=0 rejected=0 in 940ms"
     },
     {
-      "at": "2026-07-02T05:09:24.382Z",
+      "at": "2026-07-03T04:55:34.655Z",
       "message": "[initial search 7/14] broad-1: \"2026\" \"official repo\" \"multimodal\""
     },
     {
-      "at": "2026-07-02T05:09:25.052Z",
-      "message": "[initial search 7/14] done raw=0 kept=0 rejected=0 in 670ms"
+      "at": "2026-07-03T04:55:35.553Z",
+      "message": "[initial search 7/14] done raw=0 kept=0 rejected=0 in 898ms"
     },
     {
-      "at": "2026-07-02T05:09:25.052Z",
+      "at": "2026-07-03T04:55:35.553Z",
       "message": "[initial search 8/14] seed-2: \"accepted to\" \"ACL 2026\" \"official code\""
     },
     {
-      "at": "2026-07-02T05:09:26.471Z",
-      "message": "[initial search 8/14] done raw=10 kept=8 rejected=2 in 1.4s"
+      "at": "2026-07-03T04:55:37.154Z",
+      "message": "[initial search 8/14] done raw=10 kept=8 rejected=2 in 1.6s"
     },
     {
-      "at": "2026-07-02T05:09:26.471Z",
+      "at": "2026-07-03T04:55:37.154Z",
       "message": "[initial search 9/14] repository-2: site:github.com \"ACL 2026\" \"accepted\" \"multimodal\""
     },
     {
-      "at": "2026-07-02T05:09:28.029Z",
-      "message": "[initial search 9/14] done raw=10 kept=8 rejected=2 in 1.6s"
+      "at": "2026-07-03T04:55:38.640Z",
+      "message": "[initial search 9/14] done raw=10 kept=8 rejected=2 in 1.5s"
     },
     {
-      "at": "2026-07-02T05:09:28.029Z",
+      "at": "2026-07-03T04:55:38.640Z",
       "message": "[initial search 10/14] paper-index-2: arxiv \"project page\" \"2026\" \"vision language model\""
     },
     {
-      "at": "2026-07-02T05:09:30.292Z",
+      "at": "2026-07-03T04:55:40.924Z",
       "message": "[initial search 10/14] done raw=10 kept=2 rejected=8 in 2.3s"
     },
     {
-      "at": "2026-07-02T05:09:30.292Z",
+      "at": "2026-07-03T04:55:40.924Z",
       "message": "[initial search 11/14] social-introducing-21: \"Introducing\" video understanding 3D Gaussian Splatting robotics embodied AI 2026"
     },
     {
-      "at": "2026-07-02T05:09:31.294Z",
-      "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 1.0s"
+      "at": "2026-07-03T04:55:42.031Z",
+      "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 1.1s"
     },
     {
-      "at": "2026-07-02T05:09:31.294Z",
+      "at": "2026-07-03T04:55:42.031Z",
       "message": "[initial search 12/14] homepage-2: site:github.io \"paper\" \"multimodal\" \"2026\""
     },
     {
-      "at": "2026-07-02T05:09:33.209Z",
-      "message": "[initial search 12/14] done raw=10 kept=8 rejected=2 in 1.9s"
+      "at": "2026-07-03T04:55:43.868Z",
+      "message": "[initial search 12/14] done raw=10 kept=8 rejected=2 in 1.8s"
     },
     {
-      "at": "2026-07-02T05:09:33.209Z",
+      "at": "2026-07-03T04:55:43.868Z",
       "message": "[initial search 13/14] chinese-2: 新论文 多模态 CVPR ICLR 2026"
     },
     {
-      "at": "2026-07-02T05:09:34.031Z",
-      "message": "[initial search 13/14] done raw=0 kept=0 rejected=0 in 822ms"
+      "at": "2026-07-03T04:55:44.764Z",
+      "message": "[initial search 13/14] done raw=0 kept=0 rejected=0 in 896ms"
     },
     {
-      "at": "2026-07-02T05:09:34.031Z",
+      "at": "2026-07-03T04:55:44.764Z",
       "message": "[initial search 14/14] broad-2: \"2026\" \"project page\" \"large language model\""
     },
     {
-      "at": "2026-07-02T05:09:35.388Z",
-      "message": "[initial search 14/14] done raw=10 kept=7 rejected=3 in 1.4s"
+      "at": "2026-07-03T04:55:46.437Z",
+      "message": "[initial search 14/14] done raw=10 kept=7 rejected=3 in 1.7s"
     },
     {
-      "at": "2026-07-02T05:09:35.676Z",
+      "at": "2026-07-03T04:55:46.734Z",
       "message": "Follow-up search started: 4 evidence-derived queries."
     },
     {
-      "at": "2026-07-02T05:09:35.676Z",
+      "at": "2026-07-03T04:55:46.734Z",
       "message": "[follow-up search 1/4] follow-up-2: site:github.com \"ACL 2026\" \"llm agent\""
     },
     {
-      "at": "2026-07-02T05:09:37.087Z",
-      "message": "[follow-up search 1/4] done raw=10 kept=6 rejected=4 in 1.4s"
+      "at": "2026-07-03T04:55:48.231Z",
+      "message": "[follow-up search 1/4] done raw=10 kept=5 rejected=5 in 1.5s"
     },
     {
-      "at": "2026-07-02T05:09:37.087Z",
+      "at": "2026-07-03T04:55:48.231Z",
       "message": "[follow-up search 2/4] follow-up-10: site:x.com \"SSDC\" paper"
     },
     {
-      "at": "2026-07-02T05:09:38.116Z",
-      "message": "[follow-up search 2/4] done raw=0 kept=0 rejected=0 in 1.0s"
+      "at": "2026-07-03T04:55:49.401Z",
+      "message": "[follow-up search 2/4] done raw=0 kept=0 rejected=0 in 1.2s"
     },
     {
-      "at": "2026-07-02T05:09:38.116Z",
+      "at": "2026-07-03T04:55:49.401Z",
       "message": "[follow-up search 3/4] follow-up-1: \"ACL 2026\" \"llm agent\" \"official code\""
     },
     {
-      "at": "2026-07-02T05:09:39.652Z",
-      "message": "[follow-up search 3/4] done raw=10 kept=4 rejected=6 in 1.5s"
+      "at": "2026-07-03T04:55:51.097Z",
+      "message": "[follow-up search 3/4] done raw=10 kept=5 rejected=5 in 1.7s"
     },
     {
-      "at": "2026-07-02T05:09:39.652Z",
+      "at": "2026-07-03T04:55:51.097Z",
       "message": "[follow-up search 4/4] follow-up-4: site:github.com \"ACL 2026\" \"llm mllm\""
     },
     {
-      "at": "2026-07-02T05:09:41.063Z",
-      "message": "[follow-up search 4/4] done raw=10 kept=8 rejected=2 in 1.4s"
+      "at": "2026-07-03T04:55:52.678Z",
+      "message": "[follow-up search 4/4] done raw=10 kept=7 rejected=3 in 1.6s"
     },
     {
-      "at": "2026-07-02T05:09:41.106Z",
+      "at": "2026-07-03T04:55:52.719Z",
       "message": "Reader stage started: 14 candidate links."
     },
     {
-      "at": "2026-07-02T05:09:41.106Z",
+      "at": "2026-07-03T04:55:52.719Z",
       "message": "[reader 1/14] skip 本周六,围观学习ACL 2026论文分享会,最后报名了"
     },
     {
-      "at": "2026-07-02T05:09:41.106Z",
+      "at": "2026-07-03T04:55:52.719Z",
       "message": "[reader 1/14] done in 0ms"
     },
     {
-      "at": "2026-07-02T05:09:41.106Z",
+      "at": "2026-07-03T04:55:52.719Z",
       "message": "[reader 2/14] read GitHub - TraceElephant/TraceElephant: Repo of \"Seeing the Whole Elephant: A Benchmark for..."
     },
     {
-      "at": "2026-07-02T05:09:52.015Z",
-      "message": "[reader 2/14] done in 10.9s"
+      "at": "2026-07-03T04:55:54.250Z",
+      "message": "[reader 2/14] done in 1.5s"
     },
     {
-      "at": "2026-07-02T05:09:52.015Z",
+      "at": "2026-07-03T04:55:54.250Z",
       "message": "[reader 3/14] read THUIAR · GitHub"
     },
     {
-      "at": "2026-07-02T05:09:53.376Z",
-      "message": "[reader 3/14] done in 1.4s"
+      "at": "2026-07-03T04:55:55.421Z",
+      "message": "[reader 3/14] done in 1.2s"
     },
     {
-      "at": "2026-07-02T05:09:53.376Z",
-      "message": "[reader 4/14] skip 中科院计算技术研究所--自然语言处理研究组网站"
+      "at": "2026-07-03T04:55:55.421Z",
+      "message": "[reader 4/14] read Tencent repositories · GitHub"
     },
     {
-      "at": "2026-07-02T05:09:53.376Z",
-      "message": "[reader 4/14] done in 0ms"
+      "at": "2026-07-03T04:55:57.151Z",
+      "message": "[reader 4/14] done in 1.7s"
     },
     {
-      "at": "2026-07-02T05:09:53.376Z",
-      "message": "[reader 5/14] skip 论文太多别硬啃,来北京ACL 2026,作者线下亲自带你读"
+      "at": "2026-07-03T04:55:57.151Z",
+      "message": "[reader 5/14] skip 中科院计算技术研究所--自然语言处理研究组网站"
     },
     {
-      "at": "2026-07-02T05:09:53.376Z",
+      "at": "2026-07-03T04:55:57.151Z",
       "message": "[reader 5/14] done in 0ms"
     },
     {
-      "at": "2026-07-02T05:09:53.376Z",
-      "message": "[reader 6/14] read GitHub - GridNexus/SSDC: ACL2026 · GitHub"
+      "at": "2026-07-03T04:55:57.151Z",
+      "message": "[reader 6/14] skip 论文太多别硬啃,来北京ACL 2026,作者线下亲自带你读"
     },
     {
-      "at": "2026-07-02T05:09:54.250Z",
-      "message": "[reader 6/14] done in 874ms"
+      "at": "2026-07-03T04:55:57.151Z",
+      "message": "[reader 6/14] done in 0ms"
     },
     {
-      "at": "2026-07-02T05:09:54.250Z",
-      "message": "[reader 7/14] read Robotics"
+      "at": "2026-07-03T04:55:57.151Z",
+      "message": "[reader 7/14] read GitHub - GridNexus/SSDC: ACL2026 · GitHub"
     },
     {
-      "at": "2026-07-02T05:09:55.188Z",
-      "message": "[reader 7/14] done in 938ms"
+      "at": "2026-07-03T04:55:58.329Z",
+      "message": "[reader 7/14] done in 1.2s"
     },
     {
-      "at": "2026-07-02T05:09:55.188Z",
-      "message": "[reader 8/14] read GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boos..."
+      "at": "2026-07-03T04:55:58.329Z",
+      "message": "[reader 8/14] read Robotics"
     },
     {
-      "at": "2026-07-02T05:09:56.399Z",
-      "message": "[reader 8/14] done in 1.2s"
+      "at": "2026-07-03T04:56:20.769Z",
+      "message": "[reader 8/14] done in 22.4s"
     },
     {
-      "at": "2026-07-02T05:09:56.399Z",
-      "message": "[reader 9/14] read GitHub - Paper2Poster/Paper2Poster: [NeurIPS 2025] Open-source Multi-agent Poster Generat..."
+      "at": "2026-07-03T04:56:20.770Z",
+      "message": "[reader 9/14] read GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boos..."
     },
     {
-      "at": "2026-07-02T05:09:57.770Z",
-      "message": "[reader 9/14] done in 1.4s"
+      "at": "2026-07-03T04:56:22.234Z",
+      "message": "[reader 9/14] done in 1.5s"
     },
     {
-      "at": "2026-07-02T05:09:57.770Z",
+      "at": "2026-07-03T04:56:22.235Z",
       "message": "[reader 10/14] read GitHub - eddyhkchiu/V2V-LLM: [ICRA2026] Official code of the paper \"V2V-LLM: Vehicle-to-V..."
     },
     {
-      "at": "2026-07-02T05:09:58.945Z",
-      "message": "[reader 10/14] done in 1.2s"
+      "at": "2026-07-03T04:56:23.597Z",
+      "message": "[reader 10/14] done in 1.4s"
     },
     {
-      "at": "2026-07-02T05:09:58.945Z",
-      "message": "[reader 11/14] skip ACL 2026 7000种语言怎么教?清华阿里找准语义瓶颈,通关多语言安全-CSDN博客"
+      "at": "2026-07-03T04:56:23.597Z",
+      "message": "[reader 11/14] read GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials De..."
     },
     {
-      "at": "2026-07-02T05:09:58.945Z",
-      "message": "[reader 11/14] done in 0ms"
+      "at": "2026-07-03T04:56:24.666Z",
+      "message": "[reader 11/14] done in 1.1s"
     },
     {
-      "at": "2026-07-02T05:09:58.945Z",
-      "message": "[reader 12/14] read GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials De..."
+      "at": "2026-07-03T04:56:24.666Z",
+      "message": "[reader 12/14] skip ACL Oral!华东师范大学开源最强纠错模型 ChineseErrorCorrector4_acl 2026 推荐 oral-CSDN博客"
     },
     {
-      "at": "2026-07-02T05:10:06.750Z",
-      "message": "[reader 12/14] done in 7.8s"
+      "at": "2026-07-03T04:56:24.666Z",
+      "message": "[reader 12/14] done in 0ms"
     },
     {
-      "at": "2026-07-02T05:10:06.750Z",
-      "message": "[reader 13/14] skip ACL Oral!华东师范大学开源最强纠错模型 ChineseErrorCorrector4_acl 2026 推荐 oral-CSDN博客"
+      "at": "2026-07-03T04:56:24.666Z",
+      "message": "[reader 13/14] read GitHub - zhengyi-ai/ACL2026 · GitHub"
     },
     {
-      "at": "2026-07-02T05:10:06.750Z",
-      "message": "[reader 13/14] done in 0ms"
+      "at": "2026-07-03T04:56:26.072Z",
+      "message": "[reader 13/14] done in 1.4s"
     },
     {
-      "at": "2026-07-02T05:10:06.750Z",
-      "message": "[reader 14/14] read GitHub - zhengyi-ai/ACL2026 · GitHub"
+      "at": "2026-07-03T04:56:26.072Z",
+      "message": "[reader 14/14] read GitHub - ulab-uiuc/MARBLE: (ACL 2025 Main) Code for MultiAgentBench : Evaluating the Coll..."
     },
     {
-      "at": "2026-07-02T05:10:08.047Z",
-      "message": "[reader 14/14] done in 1.3s"
+      "at": "2026-07-03T04:56:27.503Z",
+      "message": "[reader 14/14] done in 1.4s"
     },
     {
-      "at": "2026-07-02T05:10:08.060Z",
-      "message": "Evidence-backed fallback staged 4 provisional candidates while Zhipu refinement catches up."
+      "at": "2026-07-03T04:56:27.519Z",
+      "message": "Evidence-backed fallback staged 5 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-07-02T05:10:08.060Z",
+      "at": "2026-07-03T04:56:27.519Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-07-02T05:10:08.060Z",
-      "message": "Zhipu refinement stage started: 4/4 candidate batches."
+      "at": "2026-07-03T04:56:27.519Z",
+      "message": "Zhipu refinement stage started: 4/5 candidate batches."
     },
     {
-      "at": "2026-07-02T05:10:08.060Z",
+      "at": "2026-07-03T04:56:27.519Z",
       "message": "[extract 1/4] 1 candidate items."
     },
     {
-      "at": "2026-07-02T05:10:28.972Z",
+      "at": "2026-07-03T04:56:50.939Z",
       "message": "[extract 1/4] parsed=1"
     },
     {
-      "at": "2026-07-02T05:10:28.972Z",
+      "at": "2026-07-03T04:56:50.939Z",
       "message": "[extract 2/4] 1 candidate items."
     },
     {
-      "at": "2026-07-02T05:10:28.972Z",
+      "at": "2026-07-03T04:56:50.939Z",
       "message": "[extract 2/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-07-02T05:12:55.573Z",
-      "message": "[extract 2/4] parsed=1"
+      "at": "2026-07-03T05:00:21.012Z",
+      "message": "[extract 2/4] parsed=0"
     },
     {
-      "at": "2026-07-02T05:12:55.573Z",
+      "at": "2026-07-03T05:00:21.012Z",
       "message": "[extract 3/4] 1 candidate items."
     },
     {
-      "at": "2026-07-02T05:12:55.573Z",
+      "at": "2026-07-03T05:00:21.012Z",
       "message": "[extract 3/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-07-02T05:15:27.575Z",
-      "message": "[extract 3/4] parsed=1"
+      "at": "2026-07-03T05:03:51.100Z",
+      "message": "[extract 3/4] parsed=0"
     },
     {
-      "at": "2026-07-02T05:15:27.575Z",
+      "at": "2026-07-03T05:03:51.100Z",
       "message": "[extract 4/4] 1 candidate items."
     },
     {
-      "at": "2026-07-02T05:15:27.575Z",
+      "at": "2026-07-03T05:03:51.100Z",
       "message": "[extract 4/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-07-02T05:17:42.165Z",
+      "at": "2026-07-03T05:06:24.641Z",
       "message": "[extract 4/4] parsed=1"
     }
   ],
@@ -402,7 +402,7 @@
       "rawResultCount": 10,
       "resultCount": 6,
       "rejectedCount": 4,
-      "startedAt": "2026-07-02T05:09:14.659Z",
+      "startedAt": "2026-07-03T04:55:23.385Z",
       "results": [
         {
           "platform": "web",
@@ -444,23 +444,6 @@
         {
           "platform": "web",
           "stage": "seed",
-          "url": "https://github.com/ShazidAraf/ODES",
-          "title": "GitHub - ShazidAraf/ODES: Code for **ODES**, accepted in MICCAI 2025 (Medical Image Computing and Computer-Assisted Intervention), Daejeon",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit ShazidAraf Update README.md Jun 17, 2026 343a25b · Jun 17, 2026 History 6 Commits Open commit details 6 Commits __pycache__ __pycache__ Initial commit for ODES Jun 26, 2025 active active Initial commit for ODES Jun 26, 2025 augmentations augmentations Initial commit for ODES Jun 26, 2025 cfgs cfgs Initial commit for ODES Jun 26, 2025 dataloader dataloader Initial commit for ODES Jun 26, 2025 loss loss Initial commit for ODES Jun 26, 2025 methods methods Initial commit for ODES Jun 26, 2025 model model Initial commit for ODES Jun 26, 2025 utils utils Initial commit for OD",
-          "publishDate": "2026-06-17",
-          "relevanceScore": 9,
-          "relevanceSignals": [
-            "paper:paper",
-            "topic:rag",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
           "url": "https://blog.csdn.net/weixin_42599558/article/details/157606402",
           "title": "2026年AI编码趋势入门必看:opencode开源镜像实战指南-CSDN博客",
           "snippet": "2026年AI编码趋势入门必看:OpenCode开源镜像实战指南 1. 为什么现在必须了解OpenCode? 你有没有过这样的时刻:深夜改Bug,盯着报错信息发呆,想查文档又怕切出IDE打断思路;写完一段逻辑,不确定是否最优,想问问“资深同事”却没人在线;接手一个老项目,光理清模块关系就花掉半天——这些日常困扰,正在被一个叫OpenCode的工具悄悄改变。 它不是又一个需要注册、订阅、上传代码到云端的AI编程助手。它不收集你的函数名,不缓存你的私有类名,甚至不需要联网就能运行。你在终端里敲下opencode,几秒后,一个带Tab切换的TUI界面就出现在眼前:左边是代码补全,右边是项目规划,中间还能实时跳转定义、高亮诊断错误——就像把一位懂LLM的资深工程师,直接请进了你的本地终端。 这不是未来构想,而是2024年已开源、2026年已在开发者中悄然普及的现实。GitHub上5万颗星、MIT协议、零代码存储、终端原生——它用最朴素的方式回答了一个尖锐问题:当AI编码工具越来越重、越来越云、越来越“中心化”,我们是否还能拥有一个真正属于自己的、可审计、可定制、可离线的编程搭档? 本文不讲概念,不堆参数,不画架构图。我们直接用CSDN星图镜像广场提供的opencode预置镜像,从拉取、配置、运行到真实写代码,带你走完完整闭环。你会看到:如何用vLLM加速Qwen3-4B模型推理,如何在终端里让AI帮你重构一段Python脚本,以及——为什么说“终端优先”不是情怀,而是2026年AI编码最务实的起点。 2. OpenCode到底是什么?一句话破除误解 2.1 它不是IDE插件,也不是We",
@@ -479,10 +462,27 @@
         {
           "platform": "web",
           "stage": "seed",
-          "url": "https://www.cnblogs.com/andy-songwei/p/archive/2026/06/06",
-          "title": "随笔档案「2026年6月6日」:【AI】Claude Code安装及配置 ... - 宋者为王 - 博客园",
-          "snippet": "摘要: https://www.bilibili.com/video/BV1k211BmEdy/ 阅读全文 posted @ 2026-06-06 20:59宋者为王 阅读(5) 评论(0) 推荐(0) 公告 粉丝: 229 关注: 48 日 一 二 三 四 五 六 搜索 常用链接 我的随笔 我的评论 我的参与 最新评论 我的标签 1. 【AI】Claude Code安装及配置 2. 【朝花夕拾】蓝牙&WiFi常识篇 3. 【填坑往事】使用Rxjava2的distinct操作符处理自定义数据类型去重的问题 4. 【架构】整理了一份通用的MVP框架示例代码 5. 【多线程】Android多线程学习笔记——线程池 6. 【设计模式】设计模式学习笔记之(一)——类图、对象之间的关系及设计模式概要 7. 【朝花夕拾】Android性能篇之(八)Android内存溢出/泄漏常见案例分析及优化方案最佳实践总结 8. 【多线程】Java并发中的锁(草稿) 9. 【算法】数据结构与算法基础总览(中)刷Leetcode等算法题时一些很实用的jdk辅助方法锦集篇 10. 【算法】数据结构与算法基础总览(上)数据结构篇 内存优化 (5) 面试 (4) 性能优化 (3) 垃圾收集 (3) 内存管理 (3) 内存溢出 (3) 代码规范 (3) 代码审查 (3) onInterceptTouchEvent (3) GC (3) 更多 积分与排名 积分 - 218248 排名 - 5784 AI(1) Android系统源码(14) Rxjava(1) View(12) 安全",
-          "publishDate": "2026-06-06",
+          "url": "https://github.com/YuChuang1205/FEST-Framework",
+          "title": "GitHub - YuChuang1205/FEST-Framework: [Accepted by KBS2025] The official complete code for paper \"Towards Robust Infrared Small Target Detection",
+          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 13 Commits 13 Commits components components     dataset/ IRSTD-1K dataset/ IRSTD-1K     images images     img img     img_idx img_idx     loss loss     model model     true_mask true_mask     README.md README.md     cal_PD.py cal_PD.py     cal_mIoU.py cal_mIoU.py     test_FEST_MSDANet.py test_FEST_MSDANet.py     train_MSDANet.py train_MSDANet.py     train_MSDANet_768.py train_MSDANet_768.py     View all files Repository files navigation The official complete code for paper \"Towards Robust Infrared Small Target Detection: A Feature-Enhanced and Sensitivity-Tun",
+          "publishDate": "2026-06-10",
+          "relevanceScore": 11,
+          "relevanceSignals": [
+            "paper:paper",
+            "announcement:accepted by",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "seed-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "seed",
+          "url": "http://www.kkx.net/soft/5718.html",
+          "title": "AppCode下载-APPCode2026下载 -KK下载站",
+          "snippet": "授权方式:免费版 软件类别:国产软件 软件大小:192M 推荐星级: 软件语言:简体中文 更新时间:2026-06-05 运行环境:WinAll, Win7, Win10 APPCode2026是一款用于开发 Mac、iPhone 和iPad 的应用程序,它的界面的风格和Android Studio很像,都是非常的清爽的,编译速度快,基于IntelliJ IDEA平台的开发人员的IDE。APPCode2026是一个专门为高级开发人员而设置开发集成环境编程软件,具有代码自动完成和提示等功能,有了它你可以更轻松的做开发! APPCode 2016是一款用于开发 Mac、iPhone 和iPad 的应用程序,它的界面的风格和Android Studio很像,都是非常的清爽的,编译速度快,基于IntelliJ IDEA平台的开发人员的IDE。APPCode 2016是一个专门为高级开发人员而设置开发集成环境编程软件,具有代码自动完成和提示等功能,有了它你可以更轻松的做开发! APPCode 2016 特点 1.自动完成超乎想象和便利的代码导航以及代码; 2.即时代码分析和快速简易; 3.即时代码转换,支持i18n; 4.可直接打开Xcode项目; 5.可直接在iOS设备和仿真器上运行应用; 6.支持使用OCUnit单元测试; 7.支持版本控制包括:Subversion, Git, Perforce and CVS。 APPCode 2016 功能 1、智能化系统的开发工具 一个深层次的掌握你的代码构造,AppCode最新版会对您的日常事务的关注和节约你附加的键入。智能化代码进行,恢",
+          "publishDate": "2026-06-05",
           "relevanceScore": 4,
           "relevanceSignals": [
             "venue:www"
@@ -511,12 +511,51 @@
         {
           "platform": "web",
           "stage": "seed",
+          "url": "https://sourceforge.net/software/ai-code-generators/free-trial/?page=3",
+          "title": "Page 3  Best AI Code Generators with a Free Trial of 2026 - Reviews & Comparison",
+          "snippet": "Amplication Effortlessly build new services, and extend your existing applications with Amplication AI. Go from idea to production in four minutes. AI-powered assistant that generates production-ready code, ensuring consistency, predictability, and adherence to the highest standards. The transition from concept to deployment in minutes with production-ready code that’s built to scale. Amplication’s AI delivers more than prototypes, get fully operational, robust backend services ready to go live. Streamline development workflows, reduce time, and optimize your resources. Do more with what you have with the power of AI. Input your requirements and watch Jovu translate them into ready-to-use co",
+          "publishDate": "2026-06-09",
+          "relevanceScore": 5,
+          "relevanceSignals": [
+            "announcement:our work",
+            "topic:llm",
+            "topic:agent",
+            "topic:rag",
+            "reject:non-paper-page"
+          ],
+          "queryLabel": "seed-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "seed",
           "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9546a3b9a3792552",
           "title": "AA认证到底要多久?2026年2.0体系下,我把这笔账给你算清楚",
           "snippet": "<p>2026年1月9号,谷歌把AA认证1.0的提交通道永久关了。</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-1546084749-BFF4D44B562E83D23FBAB717C66F96F5/0?fmt=png&size=2358&h=1534&w=2455&ppv=1' data-aigc-mark='0'/></p><p>不是暂停维护,不是系统升级,是永久关了。此后所有新项目,管你OEM前装还是后装有线还是后装无线,全走2.0。</p><p>有个坑我先给你标出来:1.0的测试结果,2.0不认。同一台主机,1.0体系下跑完全套拿过证的,你想升到2.0——全重跑,之前的时间和钱打水漂。网上那些1.0时代写的攻略,流程也好工具名也好周期数也好,跟现在的新体系可能差了十万八千里。这篇只讲2.0,旧的我不聊了。</p><p>先聊签约准入。不是你想象中填个表就过的事。</p><p>2.0体系下你得在谷歌开发者门户申请加入AA合作伙伴计划。得交营业执照、公司简介、产品说明。谷歌这人精得很,它看的不光是你表格填没填对,它在判断你这家公司到底是不是正经搞车载的,有没有能力跟它长线合作。</p><p>材料齐、公司主体清楚、产品描述能直接挂上汽车场景的,两到三周批。你要是营业执照翻译件搞糊了,或者产品说明写了个\"智能座舱解决方案\"这种等于啥也没说的东西——来回补正折腾一两个月太正常了。</p><p>这个阶段有个你没辙的事:谷歌的审核节奏你控不了。所以别拖,样机没出来就把这一步走了。早交早踏实。</p><p>SSL证书这事,",
           "publishDate": "2026-06-24",
           "relevanceScore": 2,
           "relevanceSignals": [],
+          "queryLabel": "seed-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "seed",
+          "url": "https://github.com/DAG-Diff/dual-arm-grasp-diffusion",
+          "title": "GitHub - DAG-Diff/dual-arm-grasp-diffusion: [ICRA 2026] Official codebase for DAGDiff: Guiding Dual-Arm Grasp Diffusion to Stable and",
+          "snippet": "Name Name Last commit message Last commit date Latest commit History 15 Commits 15 Commits checkpoint checkpoint configs configs notebooks notebooks scripts/ sample scripts/ sample se3dif se3dif temp temp try_meshes try_meshes .gitignore .gitignore LICENSE LICENSE README.md README.md dagdiff_eval.py dagdiff_eval.py gripper.obj gripper.obj requirements.txt requirements.txt scales.json scales.json setup.py setup.py trainer_script.py trainer_script.py View all files Repository files navigation Accepted at ICRA 2026 This is the official repository for DAGDiff: Guiding Dual-Arm Grasp Diffusion to Stable and Collision-Free Grasps. The codebase and the documentation is still in progress. TODO 1. In",
+          "publishDate": "2026-06-04",
+          "relevanceScore": 12,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "announcement:official code",
+            "announcement:official repo",
+            "topic:reinforcement learning",
+            "reject:non-paper-page",
+            "source:high-signal-url"
+          ],
           "queryLabel": "seed-1",
           "queryIntent": "",
           "parentUrl": ""
@@ -533,39 +572,6 @@
           "queryLabel": "seed-1",
           "queryIntent": "",
           "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://answers.microsoft.com/en-us/office/forum/office_2013_release-office_install/text-menu-names-buttons-disappear-re-appear-on/4462b72b-6568-4aba-967d-809db4b634b9",
-          "title": "Microsoft 365 and Office - Microsoft Q&A",
-          "snippet": "Microsoft Q&A Microsoft 365 and Office 476,456 questions A comprehensive suite of productivity tools and cloud services that enhance collaboration, communication, and efficiency. Combining classic Office apps with advanced Microsoft 365 features, it supports both personal and business needs 476,456 questions with Microsoft 365 and Office-related tags Sort by: Updated 1 answer One of the answers was accepted by the question author. Paste Values Only function should be in Excel I would like Excel to have a built-in option that lets me set Paste Values Only as the default paste behavior when I press Ctrl + V.In my daily work, I often copy data from formulas, tables, websites, or other workbooks",
-          "publishDate": "2026-06-06",
-          "relevanceScore": 1,
-          "relevanceSignals": [
-            "announcement:accepted by",
-            "reject:non-paper-page"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://www.icica.org/",
-          "title": "The 15th ICICA 2026-Information Communication and Applications",
-          "snippet": "Important Dates Submission Deadline: June 25, 2026 Notification Deadline: July 25, 2026 Registration Deadline: August 5, 2026 CFP Flyer Download Welcome to ICICA 2026 We are pleased to invite you to attend the 15th International Conference on Information Communication and Applications (ICICA 2026) , which will be held in University of Cambridge, Cambridge, UK during August 27-29, 2026 . Information Communication and Applications is a field that explores how information and communication technologies can be effectively integrated and applied across various domains to solve problems and improve efficiency. It encompasses the development and utilization of systems for managing, transmitting, an",
-          "publishDate": "2026-06-08",
-          "relevanceScore": 2,
-          "relevanceSignals": [
-            "paper:paper",
-            "venue:www",
-            "reject:non-paper-page"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
         }
       ],
       "responseKeys": [
@@ -575,7 +581,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2256
+      "durationMs": 2815
     },
     {
       "label": "repository-1",
@@ -591,10 +597,34 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 2,
-      "rejectedCount": 8,
-      "startedAt": "2026-07-02T05:09:16.915Z",
+      "resultCount": 3,
+      "rejectedCount": 7,
+      "startedAt": "2026-07-03T04:55:26.200Z",
       "results": [
+        {
+          "platform": "web",
+          "stage": "repository",
+          "url": "https://github.com/eddyhkchiu/V2V-LLM",
+          "title": "GitHub - eddyhkchiu/V2V-LLM: [ICRA2026] Official code of the paper \"V2V-LLM: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multimodal",
+          "snippet": "eddyhkchiu/V2V-LLM   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits images images     README.md README.md     View all files Repository files navigation Update! The code and dataset of V2V-LLM are merged with our follow-up work V2V-GoT .Please use the code and dataset at V2V-GoT . Thanks! 1 NVIDIA Research, 2 Carnegie Mellon University Overview We propose a novel problem setting that integrates an LLM into cooperative autonomous driving, with the proposed Vehicle-to-Vehicle Question-Answering (V2V-QA) dataset and benchmark. We also propose our baseline method Vehicle-to-Vehicle Large Lan",
+          "publishDate": "2026-06-11",
+          "relevanceScore": 28,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:our work",
+            "announcement:our paper",
+            "announcement:official code",
+            "topic:llm",
+            "topic:large language model",
+            "topic:multimodal",
+            "topic:robotics",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "repository-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "web",
           "stage": "repository",
@@ -658,15 +688,14 @@
         {
           "platform": "web",
           "stage": "repository",
-          "url": "https://github.com/funstory-ai/BabelDOC",
-          "title": "GitHub - funstory-ai/BabelDOC: Yet Another Document Translator · GitHub",
-          "snippet": "Name Name Last commit message Last commit date Latest commit   History 1,827 Commits 1,827 Commits .github .github     babeldoc babeldoc     docs docs     examples examples     .gitignore .gitignore     .pre-commit-config.yaml .pre-commit-config.yaml     LICENSE LICENSE     README.md README.md     mkdocs.yml mkdocs.yml     pyproject.toml pyproject.toml     View all files Repository files navigation PDF scientific paper translation and bilingual comparison library. Online Service : Beta version launched Immersive Translate - BabelDOC Free usage quota is available; please refer to the FAQ section on the page for details. Self-deployment : PDFMathTranslate-next support for BabelDOC, available f",
-          "publishDate": "2026-06-03",
-          "relevanceScore": 6,
+          "url": "https://github.com/abetlen/llama-cpp-python/blob/1db3b58fdc7c216749401a2901fc64495032f1ff",
+          "title": "GitHub - abetlen/llama-cpp-python at 1db3b58fdc7c216749401a2901fc64495032f1ff · GitHub",
+          "snippet": "Name Name Last commit message Last commit date Latest commit   History 1,616 Commits 1,616 Commits .github .github     docker docker     docs docs     examples examples     llama_cpp llama_cpp     scripts scripts     tests tests     vendor vendor     .dockerignore .dockerignore     .gitignore .gitignore     .gitmodules .gitmodules     .readthedocs.yaml .readthedocs.yaml     CHANGELOG.md CHANGELOG.md     CMakeLists.txt CMakeLists.txt     LICENSE.md LICENSE.md     Makefile Makefile     README.md README.md     mkdocs.yml mkdocs.yml     pyproject.toml pyproject.toml     View all files Repository files navigation Simple Python bindings for @ggerganov's llama.cpp library.This package provides: Low",
+          "publishDate": "2026-06-08",
+          "relevanceScore": 3,
           "relevanceSignals": [
-            "paper:paper",
             "topic:llm",
-            "topic:rag",
+            "topic:multi-modal",
             "reject:non-paper-page",
             "source:high-signal-url"
           ],
@@ -721,7 +750,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1620
+      "durationMs": 1852
     },
     {
       "label": "paper-index-1",
@@ -739,14 +768,30 @@
       "rawResultCount": 10,
       "resultCount": 4,
       "rejectedCount": 6,
-      "startedAt": "2026-07-02T05:09:18.535Z",
+      "startedAt": "2026-07-03T04:55:28.052Z",
       "results": [
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://ar5iv.labs.arxiv.org/",
+          "title": "ar5iv – Articles from arXiv.org as responsive HTML5 web documents",
+          "snippet": "Articles from arXiv.org as responsive HTML 5 web pages. Converted from TeX with LaTeXML . Sources upto the end of May 2026. Not a live preview service. Available as a dataset, download here . For articles with multiple revisions, only a single version is made available. When in doubt, always use the main arXiv.org article page. Goal: incremental improvement until worthy of native arXiv adoption. Sample: A Simple Proof of the Quadratic Formula (1910.06709) View any ar X iv article URL by changing the X to a 5 https://ar x iv.org/abs/1910.06709 https://ar 5 iv.org/abs/1910.06709",
+          "publishDate": "2026-07-02",
+          "relevanceScore": 6,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "arxiv",
           "stage": "paper-index",
           "url": "https://info.arxiv.org/",
           "title": "arXiv info",
-          "snippet": "arXiv is now an independent nonprofit! Learn more × arXiv info Submit Donate Log in arXiv info Home Initializing search GitHub Home If you are not redirected automatically, follow the link",
+          "snippet": "arXiv is now an independent nonprofit! Learn more × arXiv info arXiv info Home Initializing search GitHub Home If you are not redirected automatically, follow the link",
           "publishDate": "2026-07-01",
           "relevanceScore": 6,
           "relevanceSignals": [
@@ -760,24 +805,7 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://status.arxiv.org/",
-          "title": "arXiv system status",
-          "snippet": "Skip to main content arXiv is now an independent nonprofit! Learn more × Search Submit Donate Log in Press Enter to search · Advanced search arXiv.org Operational Status ✅ Up - arxiv.org - Main Site; Postscript downloads temporarily disabled ✅ Up - Search ✅ Up - export.arxiv.org ✅ Users are able to log in and submit papers Planned Maintenance There is no planned maintenance at this time. ✏️ Edit this status page",
-          "publishDate": "2026-07-01",
-          "relevanceScore": 9,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "paper-index-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "arxiv",
-          "stage": "paper-index",
-          "url": "https://fr.arxiv.org/",
+          "url": "https://aps.arxiv.org/",
           "title": "arXiv.org e-Print archive",
           "snippet": " General Economics Theoretical Economics General information How to Submit to arXiv Membership & Giving Who We Are member institutions Accessibility Operational Status (opens in new tab)",
           "publishDate": "2026-07-01",
@@ -916,7 +944,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2071
+      "durationMs": 2409
     },
     {
       "label": "social-introducing-11",
@@ -934,7 +962,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-07-02T05:09:20.606Z",
+      "startedAt": "2026-07-03T04:55:30.461Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -944,7 +972,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1225
+      "durationMs": 1234
     },
     {
       "label": "homepage-1",
@@ -962,7 +990,7 @@
       "rawResultCount": 10,
       "resultCount": 6,
       "rejectedCount": 4,
-      "startedAt": "2026-07-02T05:09:21.831Z",
+      "startedAt": "2026-07-03T04:55:31.695Z",
       "results": [
         {
           "platform": "web",
@@ -1030,10 +1058,10 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://github.com/rana10943/demowebsite.github.io",
-          "title": "GitHub - 22f2000049/demowebsite.github.io · GitHub",
-          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert 22f2000049/demowebsite.github.io   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 2 Commits 2 Commits img img     partials partials     wp-con",
-          "publishDate": "2026-06-10",
+          "url": "https://github.com/codes20/codes20.github.io/blob/main/login.php",
+          "title": "codes20.github.io/login.php at main · codes20/codes20.github.io · GitHub",
+          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   main Breadcrumbs login.php Copy path More file actions More file actions Latest commit History 56 lines (41 loc) · 1.51 KB   main Breadcrumbs login.php Top File metadata and controls Code Blame 56 lines ",
+          "publishDate": "2026-06-07",
           "relevanceScore": 3,
           "relevanceSignals": [
             "source:high-signal-url"
@@ -1045,9 +1073,9 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://github.com/Alce2020/Alce2020.github.io",
-          "title": "GitHub - Alce2020/Alce2020.github.io · GitHub",
-          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Alce2020/Alce2020.github.io   master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 2 Commits 2 Commits archives archives     images images     med",
+          "url": "https://github.com/rana10943/demowebsite.github.io",
+          "title": "GitHub - 22f2000049/demowebsite.github.io · GitHub",
+          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert 22f2000049/demowebsite.github.io   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 2 Commits 2 Commits img img     partials partials     wp-con",
           "publishDate": "2026-06-10",
           "relevanceScore": 3,
           "relevanceSignals": [
@@ -1108,10 +1136,10 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://github.com/cf-convention/cf-convention.github.io",
-          "title": "GitHub - cf-convention/cf-convention.github.io: sources for website cf-conventions.org · GitHub",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit japamment Added Version 94 of CF standard name table. success Jun 10, 2026 d2af666 · Jun 10, 2026 History 1,599 Commits Open commit details 1,599 Commits .github .github Bump lycheeverse/lychee-action from 1 to 2.0.2 in /.github/workflows Aug 28, 2025 .lychee .lychee Fix variable naming in config.toml for consistency Sep 27, 2025 CF-beta CF-beta old version Aug 7, 2024 Committees/ Conventions_and_Standard_Names Committees/ Conventions_and_Standard_Names committee_meeting_minutes_2025-12-01 Mar 12, 2026 Data Data Added Version 94 of CF standard name table. Jun 10, 2026 GD",
-          "publishDate": "2026-06-10",
+          "url": "https://github.com/topics/first-timers?l=c%252B%252B",
+          "title": "first-timers · GitHub Topics · GitHub",
+          "snippet": "Here are 35 public repositories matching this topic... Language: C++ Filter by language Sort options This repository consists of solutions to the problem from LeetCode platform. Subscribe to our Channel for more updates A repository with a bunch of funny algorithms, beginners friendly This repository is in development phase and will soon provide you with c++ code of various data structures and algorithms Please note that contributions made to this repository are not counted as valid for Hacktoberfest 2021. Create Hacktoberfest Pull Requests Hacktoberfest2024 accepted-Our aim is to build a website that comprehensively covers algorithms in C++, Java, Python, and other programming languages, al",
+          "publishDate": "2026-06-06",
           "relevanceScore": -2,
           "relevanceSignals": [
             "reject:non-paper-page",
@@ -1147,7 +1175,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1809
+      "durationMs": 2019
     },
     {
       "label": "chinese-1",
@@ -1165,7 +1193,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-07-02T05:09:23.640Z",
+      "startedAt": "2026-07-03T04:55:33.715Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1175,7 +1203,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 742
+      "durationMs": 940
     },
     {
       "label": "broad-1",
@@ -1193,7 +1221,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-07-02T05:09:24.382Z",
+      "startedAt": "2026-07-03T04:55:34.655Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1203,7 +1231,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 670
+      "durationMs": 898
     },
     {
       "label": "seed-2",
@@ -1221,7 +1249,7 @@
       "rawResultCount": 10,
       "resultCount": 8,
       "rejectedCount": 2,
-      "startedAt": "2026-07-02T05:09:25.052Z",
+      "startedAt": "2026-07-03T04:55:35.553Z",
       "results": [
         {
           "platform": "web",
@@ -1229,7 +1257,7 @@
           "url": "https://nlp.ict.ac.cn/",
           "title": "中科院计算技术研究所--自然语言处理研究组网站",
           "snippet": "2026年4月,中科院计算所自然语言处理组5篇论文被ACL 2026会议接收,其中1篇论文被ACL主会录用,4篇被Findings of ACL录用。ACL的全称是The Association for Computational Linguistics,是国际计算语言学界影响力最大的学术组织。ACL年度会议也是计算语言学领域的最重要的国际会议,是CCF推荐的计算语言学方面唯一的A类会议。Findings of ACL是从ACL 2021开始引入的在线附属出版物。被录用的论文简介如下:1. Language on Demand, Knowledge at Core: Composing LLMs with Encoder-Decoder Translation Models for Extensible Multilinguality 作者:卜梦煜,冯洋*Accepted by ACL 2026 Main Conference简介:尽管大语言模型(LLM)具备很强的通用能力,但很大程度上局限于高资源语言,多语言性能依然极不均衡。我们认为 LLM 并非缺少相关知识,而是难以在低资源语言稳定调用。由此出发,我们提出了一种新的多语言扩展范式 XBridge:组合 LLM 以英文为中心的通用能力,以及现有多语言机器翻译(NMT)模型的多语言理解和生成能力,实现二者的能力互补,组合成一个多语言通用模型。即将多语言理解和生成卸载到外部 NMT 模型,LLM 进行以英文为中心的通用知识处理。实验表明,XBridge 能够将 LLM 的低资源语言甚至未见语言的理解和生成能力提升到接近外部 NM",
-          "publishDate": "2026-07-01",
+          "publishDate": "2026-07-02",
           "relevanceScore": 31,
           "relevanceSignals": [
             "paper:paper",
@@ -1272,24 +1300,6 @@
         {
           "platform": "web",
           "stage": "seed",
-          "url": "https://github.com/GIST-IRR/Parse-Focusing",
-          "title": "GitHub - GIST-IRR/Parse-Focusing: The official code for the accepted paper in ACL2024 Findings, \"Structural Optimization Ambiguity and Simplicity",
-          "snippet": "Name Name Last commit message Last commit date Latest commit   History 222 Commits 222 Commits analyzer analyzer     config config     fastNLP fastNLP     images images     parser parser     postprocessing postprocessing     preprocessing preprocessing     torch_support torch_support     .gitignore .gitignore     README.md README.md     evaluate.py evaluate.py     generate_focused_parse.sh generate_focused_parse.sh     multi_evaluate.py multi_evaluate.py     parse.py parse.py     requirements.txt requirements.txt     train.py train.py     tree_to_tex.py tree_to_tex.py     utils.py utils.py     visualization.py visualization.py     View all files Repository files navigation Parse-focused Neur",
-          "publishDate": "2026-06-03",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "paper:paper",
-            "announcement:official code",
-            "venue:acl",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "seed-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
           "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3286a1fc9b365452",
           "title": "论文太多别硬啃,来北京ACL 2026,作者线下亲自带你读",
           "snippet": "<p>不知不觉,时间已来到六月。</p><p>过去半年,AI 领域的技术议题仍在快速更迭:Agent 走向更复杂的任务执行,多模态模型继续向理解与生成统一演进,推理增强成为提升模型可靠性的关键路径,世界模型被寄予通向物理世界和具身智能的期待……</p><p>这些方向并不是孤立发展的,它们共同指向一个更大的趋势:大模型正在从单次问答工具,逐渐走向能够理解环境、规划任务、调用工具、持续交互并解决复杂问题的智能系统。</p><p>而作为自然语言处理和大模型研究领域的重要顶会,ACL 2026正好为我们提供了一个观察技术前沿的窗口。</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-4071275483-4A69F04C6C90A5D4ED770AF849ECC47B/0?fmt=jpg&size=30&h=350&w=1080&ppv=1' data-aigc-mark='0'/></p><p>作为NLP领域的国际顶级会议之一,ACL 一直被视为学术界和工业界公认的重要交流平台。本届 ACL 2026 共收到 12,148 篇投稿,其中 Main Conference 录用率为 19%,Findings 录用率为 18%。</p><p>为了给广大 AI 从业者搭建一个自由轻松的学术交流平台,<strong>机器之心计划 6 月 27 日在北京举办「ACL 2026 论文分享会」</strong>,广邀大家报名参与。如果有论文作者想要分享或者 Poster 自己的 ACL 2026 论文,也欢迎报名参与!</p><p>报名链接",
@@ -1314,19 +1324,14 @@
         {
           "platform": "web",
           "stage": "seed",
-          "url": "https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/161432835",
-          "title": "ACL 2026  7000种语言怎么教?清华阿里找准语义瓶颈,通关多语言安全-CSDN博客",
-          "snippet": "英语固若金汤,小语种一攻就破?清华与阿里提出基于“语义瓶颈层”的对齐范式,实现安全能力的跨语言泛化。 研究背景与摘要 近年来,大语言模型在多语言场景中的安全表现呈现出明显的“偏科”现象,英语等高频语言固若金汤,低资源语言却一攻即破。 现有方案往往选择“头痛医头”:针对每种弱势语言单独收集数据、单独做安全训练。但问题来了:世界上有 7000 多种语言,难道要逐一“补课”吗? 人类社会对于安全概念的学习和实践过程是自然可泛化的。当我们真正理解了“不能教人造炸弹”这层语义,无论对方用英语、斯瓦希里语还是 emoji 来问,拒绝都是本能反应。模型为何做不到? 答案藏在模型的表征空间里。清华 CoAI 团队联合阿里安全研究发现:大模型的浅层和深层表征被语言身份主导,但在中间某几层存在一个“语义瓶颈层”。在这里,不同语言表达的相同语义会自然聚拢,语言外壳被剥离,露出聚类的语义内核。 基于这一关键洞见,研究团队提出了 LASA(Language-Agnostic Semantic Alignment),一种锚定语义瓶颈层进行安全对齐的新范式,极大提升了模型安全训练在低资源语言上的泛化性。目前该论文已被 ACL 2026 接收。 论文标题: LASA: Language-Agnostic Semantic Alignment at the Semantic Bottleneck for LLM Safety 论文作者: 本文第一作者为清华大学 CoAI 组的杨峻骁,导师为黄民烈教授,研究方向为可信大模型和安全对齐。主要合作者为来自阿里巴巴集团安全部的翁佳琪、陶嘉羚、薛晖。 论文链接: http",
-          "publishDate": "2026-06-06",
-          "relevanceScore": 21,
+          "url": "https://github.com/Applied-Machine-Learning-Lab/AdapTime/commit/06ccf40556d9930defc8ca4966d776218a157aa2",
+          "title": "Create README.md · Applied-Machine-Learning-Lab/ACL2026-AdapTime@06ccf40 · GitHub",
+          "snippet": "Create README.md 1 parent 052b9f9 commit 06ccf40 Copy full SHA for 06ccf40 1 file changed + 20 Lines changed: 20 additions & 0 deletions File tree Expand file tree Collapse file tree Open diff view settings Filter options Expand file tree Collapse file tree Open diff view settings Collapse file Original file line number Diff line number Diff line change @@ -0,0 +1,20 @@ 1 + All experiments were conducted using two NVIDIA V100 GPUs or via DeepSeek-V3 API calls . 2 + 3 + The following Python libraries and packages were employed in our implementation: 4 + torch==2.1.0 5 + transformers==4.34.1 6 + datasets==2.14.6 7 + accelerate==0.33.0 8 + trl==0.9.6 9 + peft==0.12.0 10 + openai==1.38.0 11 + 12",
+          "publishDate": "2026-06-05",
+          "relevanceScore": 6,
           "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "paper:论文",
-            "announcement:新论文",
-            "topic:llm",
-            "topic:大模型",
-            "venue:acl"
+            "venue:acl",
+            "source:high-signal-url"
           ],
           "queryLabel": "seed-2",
           "queryIntent": "",
@@ -1342,6 +1347,22 @@
           "relevanceScore": 4,
           "relevanceSignals": [
             "venue:acl"
+          ],
+          "queryLabel": "seed-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "seed",
+          "url": "https://www.toutiao.com/article/7647114391711662601/",
+          "title": "2026英雄亚冠ACL圆满收官,三大项目闪耀亚洲电竞舞台",
+          "snippet": "近日,2026英雄亚冠ACL圆满收官。本届赛事于5月1日至24日在上海举行,先后覆盖DOTA2、CS2、决胜巅峰MLBB三大项目,赛事足迹横跨上海杨浦区纪希秀场和闵行区星环中心。 作为亚洲首个国际综合性电子竞技赛事,本届英雄亚冠ACL以连续近一个月的赛事内容,为全球电竞爱好者带来了一场贯穿五月的电竞盛宴。 同时,本届英雄亚冠ACL也为VG、LVG和GZG三支冠军队伍提供了通往将于七至八月在巴黎举办的2026 EWC电竞世俱杯的宝贵通道。接下来他们将继续在更高水平的国际赛场上展开征战。 本届英雄亚冠ACL自开赛以来持续收获广泛关注。赛事决赛阶段覆盖五一假期及五月两个周末,共包含8个线下比赛日以及贯穿五月的18个线上直播日。更长的赛事周期,也让不同项目、不同地区的电竞爱好者拥有了更灵活的观赛选择。 本届英雄亚冠ACL吸引了来自全球各地的电竞爱好者赴上海现场观赛。同时,本届赛事通过B站、抖音、斗鱼、虎牙和快手五个平台进行多语种直播。 根据官方数据,DOTA2、CS2和决胜巅峰MLBB三个项目合计总PV超3.8亿次,总观看时长近2300万小时。 一系列数据背后,不仅体现了英雄亚冠ACL赛事IP的持续成长,也展现出亚洲电竞观众对于高水平、多项目、国际化赛事内容的热情。 三大项目接力开战,见证ACL电竞热潮 本届英雄亚冠ACL以上海为核心舞台,三大项目依次开赛,形成了连续性的线下观赛热度。5月1日至3日,2026 ESL中国挑战者联赛×英雄亚冠ACL DOTA2线下赛事率先在上海纪希秀场打响。 5月16日至17日,2026英雄亚冠ACL×CS2项目总决赛在上海闵行区星环中心继续上演。5月2",
+          "publishDate": "2026-06-03",
+          "relevanceScore": 6,
+          "relevanceSignals": [
+            "venue:acl",
+            "venue:www"
           ],
           "queryLabel": "seed-2",
           "queryIntent": "",
@@ -1450,7 +1471,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1419
+      "durationMs": 1601
     },
     {
       "label": "repository-2",
@@ -1468,7 +1489,7 @@
       "rawResultCount": 10,
       "resultCount": 8,
       "rejectedCount": 2,
-      "startedAt": "2026-07-02T05:09:26.471Z",
+      "startedAt": "2026-07-03T04:55:37.154Z",
       "results": [
         {
           "platform": "web",
@@ -1503,25 +1524,6 @@
             "paper:paper",
             "topic:multimodal",
             "venue:icml",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "repository-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "repository",
-          "url": "https://github.com/Mouseww/anything-analyzer",
-          "title": "GitHub - Mouseww/anything-analyzer: 全能协议分析工具:浏览器抓包  MITM 代理  指纹伪装  AI 分析  MCP Server 无缝对接 AI Agent/IDE",
-          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit Mouseww fix(llm): reject non-string tool identifiers success Jun 3, 2026 43dae6d · Jun 3, 2026 History 166 Commits Open commit details 166 Commits .codeartsdoer .codeartsdoer Refactor code structure for improved readability and maintainability May 28, 2026 .github/ workflows .github/ workflows fix(ci): update release action runtimes Jun 2, 2026 docs/ superpowers docs/ superpowers docs: add custom analysis purpose implementation plan Apr 13, 2026 resources resources Refactor code structure for improved readability and maintainability May 28, 2026 src src fix(llm): reject ",
-          "publishDate": "2026-06-03",
-          "relevanceScore": 12,
-          "relevanceSignals": [
-            "topic:llm",
-            "topic:agent",
-            "topic:rag",
-            "topic:大模型",
             "source:high-signal-url"
           ],
           "queryLabel": "repository-2",
@@ -1608,6 +1610,21 @@
           "queryLabel": "repository-2",
           "queryIntent": "",
           "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "repository",
+          "url": "https://github.com/score-spec/score-go",
+          "title": "GitHub - score-spec/score-go: Reference library for parsing and loading Score files · GitHub",
+          "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 361 Commits 361 Commits .github .github     formatter formatter     framework framework     loader loader     schema schema     types types     uriget uriget     .gitignore .gitignore     CODEOWNERS CODEOWNERS     CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md     CONTRIBUTING.md CONTRIBUTING.md     LICENSE LICENSE     MAINTAINERS.md MAINTAINERS.md     Makefile Makefile     NOTICE NOTICE     README.md README.md     SECURITY.md SECURITY.md     go.mod go.mod     go.sum go.sum     View all files Repository files navigation score-go Reference library containing common typ",
+          "publishDate": "2026-06-05",
+          "relevanceScore": 4,
+          "relevanceSignals": [
+            "source:high-signal-url"
+          ],
+          "queryLabel": "repository-2",
+          "queryIntent": "",
+          "parentUrl": ""
         }
       ],
       "rejected": [
@@ -1659,7 +1676,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1557
+      "durationMs": 1486
     },
     {
       "label": "paper-index-2",
@@ -1677,7 +1694,7 @@
       "rawResultCount": 10,
       "resultCount": 2,
       "rejectedCount": 8,
-      "startedAt": "2026-07-02T05:09:28.029Z",
+      "startedAt": "2026-07-03T04:55:38.640Z",
       "results": [
         {
           "platform": "arxiv",
@@ -1797,22 +1814,22 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.IR/recent",
-          "title": "Information Retrieval",
-          "snippet": "Authors and titles for recent submissions See today's new changes Total of 112 entries : 1-50 51-100 101-112 Title: Generative Archetype-Grounded Item Representations for Sequential Recommendation Yifan Li , Jiahong Liu , Xinni Zhang , Hao Chen , Yankai Chen , Wenhao Yu , Jianting Chen , Irwin King Comments: Accepted by WWW 2026 (Oral) Subjects: Information Retrieval (cs.IR) ; Computation and Language (cs.CL); Machine Learning (cs.LG) Title: miniReranker: Efficient Multimodal Reranking through Visual Cache Reuse and Interaction Sparsity Yingqi Fan , Xuan Lu , Anhao Zhao , Junlong Tong , Ping Nie , Kai Zou , Yunpu Ma , Wei Zhang , Xiaoyu Shen Subjects: Information Retrieval (cs.IR) Title: Eff",
-          "publishDate": "2026-06-29",
-          "relevanceScore": 36,
+          "url": "https://arxiv.org/list/cs/new?skip=113&show=50",
+          "title": "Computer Science",
+          "snippet": "Title: OpenSkill: Open-World Self-Evolution for LLM Agents Subjects: Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL); Machine Learning (cs.LG) Self-evolving agents requires adaptation after deployment, but existing approaches assume a usable learning loop, such as curated skills, successful trajectories, or verifier signals. Real open-world deployments may provide none of these, offering only a task prompt. In this work, we study open-world self-evolution, where an agent must build both its skills and its own verification signals from scratch, using open-world resources but no target-task supervision. We propose OpenSkill, a framework that bootstraps this loop: it acquires",
+          "publishDate": "2026-06-08",
+          "relevanceScore": 52,
           "relevanceSignals": [
+            "paper:paper",
             "paper:preprint",
             "paper:arxiv",
-            "paper:technical report",
+            "announcement:our work",
+            "announcement:our paper",
             "announcement:accepted to",
             "announcement:accepted by",
+            "announcement:to appear",
             "topic:llm",
-            "topic:large language model",
-            "topic:vlm",
-            "topic:multimodal",
-            "topic:agent"
+            "topic:large language model"
           ],
           "queryLabel": "paper-index-2",
           "queryIntent": "",
@@ -1826,7 +1843,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2263
+      "durationMs": 2284
     },
     {
       "label": "social-introducing-21",
@@ -1844,7 +1861,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-07-02T05:09:30.292Z",
+      "startedAt": "2026-07-03T04:55:40.924Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1854,7 +1871,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1002
+      "durationMs": 1107
     },
     {
       "label": "homepage-2",
@@ -1872,8 +1889,28 @@
       "rawResultCount": 10,
       "resultCount": 8,
       "rejectedCount": 2,
-      "startedAt": "2026-07-02T05:09:31.294Z",
+      "startedAt": "2026-07-03T04:55:42.031Z",
       "results": [
+        {
+          "platform": "web",
+          "stage": "homepage",
+          "url": "https://github.com/neukaren/Multimodal-Transformer",
+          "title": "GitHub - neukaren/Multimodal-Transformer: [ACL'19] [PyTorch] Multimodal Transformer · GitHub",
+          "snippet": "  master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 13 Commits 13 Commits imgs imgs     modules modules     src src     LICENSE LICENSE     README.md README.md     main.py main.py     View all files Repository files navigation Multimodal Transformer for Unaligned Multimodal Language Sequences Pytorch implementation for learning Multimodal Transformer for unaligned multimodal language sequences. Correspondence to: Paper Multimodal Transformer for Unaligned Multimodal Language Sequences Association for Computational Linguistics (ACL), 2019. (*equal contribution) Please cite our paper if you find our work usefu",
+          "publishDate": "2026-06-08",
+          "relevanceScore": 16,
+          "relevanceSignals": [
+            "paper:paper",
+            "announcement:our work",
+            "announcement:our paper",
+            "topic:multimodal",
+            "venue:acl",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "homepage-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "web",
           "stage": "homepage",
@@ -1915,30 +1952,6 @@
             "topic:rag",
             "venue:iclr",
             "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://github.com/paper2poster/paper2poster",
-          "title": "GitHub - Paper2Poster/Paper2Poster: [NeurIPS 2025] Open-source Multi-agent Poster Generation from Papers · GitHub",
-          "snippet": "Name Name Last commit message Last commit date Latest commit   History 96 Commits 96 Commits Paper2Poster-eval Paper2Poster-eval     PosterAgent PosterAgent     assets assets     camel camel     config config     demo demo     docling docling     logo_store logo_store     skills skills     utils utils     .gitignore .gitignore     Dockerfile Dockerfile     LICENSE LICENSE     README.md README.md     __init__.py __init__.py     get_poster_text.py get_poster_text.py     requirements.txt requirements.txt     View all files Repository files navigation 从学术论文自动生成学术海报 We address How to create a poster from a paper and How to evaluate poster. 🤩 Paper2Poster for Paper2Poster 🔥 Update [2026.6.6] We",
-          "publishDate": "2026-06-06",
-          "relevanceScore": 28,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "paper:论文",
-            "announcement:our paper",
-            "topic:llm",
-            "topic:vlm",
-            "topic:multimodal",
-            "topic:agent",
-            "topic:rag",
-            "venue:neurips"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -2005,23 +2018,6 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://github.com/AndyLu-io/paper",
-          "title": "GitHub - AndyLu-io/paper: my paper · GitHub",
-          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert AndyLu-io/paper   master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 6 Commits 6 Commits 论文翻译参考文件 论文翻译参考文件     README.md README.md     论文翻译.doc ",
-          "publishDate": "2026-06-09",
-          "relevanceScore": 9,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:论文",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
           "url": "https://github.com/RoboticImaging/RoRE",
           "title": "GitHub - RoboticImaging/RoRE: [ICLR 2026] RoRE: Rotary Ray Embedding for Generalised Multi-Modal Scene Understanding · GitHub",
           "snippet": "RoboticImaging/RoRE main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 5 Commits 5 Commits assets assets src src .gitignore .gitignore Dockerfile Dockerfile README.md README.md docker_build.sh docker_build.sh nvs.sh nvs.sh requirements.txt requirements.txt trainval.py trainval.py View all files Repository files navigation ICLR 2026 Paper Setup Environment A requirements.txt, and docker file are provided pip install -r requirements.txt or bash docker_build.sh Data For RealEstate10K we use the same data format as pixelSplat . Please follow the data formating instructions provided there. You can also download a prep",
@@ -2038,33 +2034,26 @@
           "queryLabel": "homepage-2",
           "queryIntent": "",
           "parentUrl": ""
-        }
-      ],
-      "rejected": [
+        },
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://mula-workshop.github.io/",
-          "title": "MULA 2026",
-          "snippet": "9 th Multimodal Learning and Applications Workshop In conjunction with CVPR 2026 . Denver, CO June 4 th (Full day) Home Submit Accepted Papers Program Invited Speakers Organizers Old Editions Contacts 9 th Multimodal Learning and Applications Workshop (MULA 2026) In recent years, the utilization of big data has greatly advanced Computer Vision and Machine Learning applications. However, the majority of these tasks have focused on only one modality, such as the visual one, with only a few incorporating multiple modalities like audio or thermal. Additionally, the handling of multimodal datasets remains a challenge, particularly in the areas of data acquisition, synchronization, and annotation.",
-          "publishDate": "2026-06-04",
-          "relevanceScore": 29,
+          "url": "https://github.com/AndyLu-io/paper",
+          "title": "GitHub - AndyLu-io/paper: my paper · GitHub",
+          "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert AndyLu-io/paper   master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 6 Commits 6 Commits 论文翻译参考文件 论文翻译参考文件     README.md README.md     论文翻译.doc ",
+          "publishDate": "2026-06-09",
+          "relevanceScore": 9,
           "relevanceSignals": [
             "paper:paper",
-            "topic:llm",
-            "topic:large language model",
-            "topic:vision-language",
-            "topic:vision language",
-            "topic:multimodal",
-            "topic:multi-modal",
-            "topic:agent",
-            "topic:reasoning",
-            "topic:robotics"
+            "paper:论文",
+            "source:high-signal-url"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
           "parentUrl": ""
-        },
+        }
+      ],
+      "rejected": [
         {
           "platform": "web",
           "stage": "homepage",
@@ -2082,6 +2071,23 @@
           "queryLabel": "homepage-2",
           "queryIntent": "",
           "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "homepage",
+          "url": "https://github.com/pmichaillat/pmichaillat.github.io",
+          "title": "GitHub - pmichaillat/pmichaillat.github.io: Source code and content for pascalmichaillat.org · GitHub",
+          "snippet": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit github-actions[bot] Update dashboard with newly released data Jun 5, 2026 4d1de01 · Jun 5, 2026 History 329 Commits Open commit details 329 Commits .github/ workflows .github/ workflows Comment workflows Apr 28, 2026 assets/ css assets/ css Resize social icons Apr 11, 2026 content content Post office hours for Summer 2026 Jun 4, 2026 layouts layouts Squash all history to tidy up Jul 15, 2025 static static Update dashboard with newly released data Jun 5, 2026 themes/ PaperMod themes/ PaperMod Squash all history to tidy up Jul 15, 2025 .gitignore .gitignore Squash all hist",
+          "publishDate": "2026-06-05",
+          "relevanceScore": 1,
+          "relevanceSignals": [
+            "paper:paper",
+            "reject:non-paper-page",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "homepage-2",
+          "queryIntent": "",
+          "parentUrl": ""
         }
       ],
       "responseKeys": [
@@ -2091,7 +2097,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1915
+      "durationMs": 1837
     },
     {
       "label": "chinese-2",
@@ -2109,7 +2115,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-07-02T05:09:33.209Z",
+      "startedAt": "2026-07-03T04:55:43.868Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -2119,7 +2125,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 822
+      "durationMs": 896
     },
     {
       "label": "broad-2",
@@ -2137,7 +2143,7 @@
       "rawResultCount": 10,
       "resultCount": 7,
       "rejectedCount": 3,
-      "startedAt": "2026-07-02T05:09:34.031Z",
+      "startedAt": "2026-07-03T04:55:44.764Z",
       "results": [
         {
           "platform": "web",
@@ -2298,7 +2304,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1357
+      "durationMs": 1673
     },
     {
       "label": "follow-up-2",
@@ -2314,9 +2320,9 @@
       "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 6,
-      "rejectedCount": 4,
-      "startedAt": "2026-07-02T05:09:35.676Z",
+      "resultCount": 5,
+      "rejectedCount": 5,
+      "startedAt": "2026-07-03T04:55:46.734Z",
       "results": [
         {
           "platform": "web",
@@ -2417,27 +2423,6 @@
             "topic:agent",
             "topic:reasoning",
             "topic:rag",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-2",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/topics/statistical-testing",
-          "title": "statistical-testing · GitHub Topics · GitHub",
-          "snippet": "Here are 86 public repositories matching this topic... Language: All Filter by language Sort options Fortran Statistics and Machine Learning Library AI-powered trading research platform. Test any idea on stocks, futures, and crypto with event studies, backtesting, and statistical validation. MCP server with 8 tools. pip install varrd. Signal diagnostics, statistical validation, and backtest evaluation for quantitative trading workflows. Statistical evaluation framework for AI agents A modern Fortran statistical library. AI Firewall and guardrails for LLM-based Elixir applications High-performance statistical testing and regression for Polars DataFrames, powered by Rust. Significant Network I",
-          "publishDate": "2026-06-03",
-          "relevanceScore": 17,
-          "relevanceSignals": [
-            "paper:arxiv",
-            "topic:llm",
-            "topic:agent",
-            "topic:rag",
-            "topic:reinforcement learning",
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
@@ -2547,7 +2532,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1411
+      "durationMs": 1497
     },
     {
       "label": "follow-up-10",
@@ -2565,7 +2550,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-07-02T05:09:37.087Z",
+      "startedAt": "2026-07-03T04:55:48.231Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -2575,7 +2560,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1029
+      "durationMs": 1170
     },
     {
       "label": "follow-up-1",
@@ -2591,9 +2576,9 @@
       "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 4,
-      "rejectedCount": 6,
-      "startedAt": "2026-07-02T05:09:38.116Z",
+      "resultCount": 5,
+      "rejectedCount": 5,
+      "startedAt": "2026-07-03T04:55:49.401Z",
       "results": [
         {
           "platform": "web",
@@ -2681,6 +2666,27 @@
           "queryLabel": "follow-up-1",
           "queryIntent": "expand from venue-year signal to sibling papers",
           "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://blog.csdn.net/weixin_43726381/article/details/161135594",
+          "title": "AI Agent开发入门2026:MCP协议与LangChain实战-CSDN博客",
+          "snippet": "AI Agent开发入门2026:MCP协议与LangChain实战 2026年,AI Agent终于从\"玩具\"变成了真正的生产力工具。 ChatGPT是\"你问它答\",AI Agent是\"你让它做\"。 你告诉AI Agent一个目标,它自己拆解任务、调用工具、执行流程、反馈结果。这就是Agent和聊天机器人的本质区别。 为什么2026年是Agent之年? 三大技术突破 突破影响百万Token上下文Agent能\"记住\"整个项目,不再失忆MCP协议标准化一次开发,所有AI平台通用多智能体协同复杂任务拆解给多个专家Agent行业数据(来源:CSDN技术社区、脉脉职场报告) 开发者关注度:AI Agent相关技术文章阅读量显著上升企业落地:据CSDN搜索结果,2026年多家企业分享Agent落地经验[1]岗位需求:脉脉职场报告显示大模型相关岗位需求增长,薪资水平高于行业平均[2]MCP协议:AI工具的\"USB-C\" 没有MCP之前的混乱 在MCP出现之前,每个AI工具都有自己的集成方式: Claude插件:一套APIChatGPT插件:另一套APILangChain工具:又一套抽象AutoGen工具:再一套定义结果:同一个工具需要为N个AI平台写N份集成代码,开发者疲于维护多套适配器。 MCP的标准化方案 MCP标准协议 ↓ Claude / Cursor / Windsurf / 其他支持MCP的AI应用 ↕ MCP MCP Server(数据库/文件/API等) 一次实现 → 所有支持MCP的AI应用均可使用 来源:MCP由Anthropic在2024年末推出,截至2026年已获得",
+          "publishDate": "2026-06-07",
+          "relevanceScore": 16,
+          "relevanceSignals": [
+            "topic:llm",
+            "topic:agent",
+            "topic:rag",
+            "topic:大模型",
+            "topic:智能体",
+            "venue:acl",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-1",
+          "queryIntent": "expand from venue-year signal to sibling papers",
+          "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152"
         }
       ],
       "rejected": [
@@ -2711,21 +2717,19 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://blog.csdn.net/m0_57081622/article/details/161338329",
-          "title": "收藏干货2026 新版 LLM Agent 全面解析,程序员小白入门大模型必备-CSDN博客",
-          "snippet": "本文带大家吃透 2026 年主流的 LLM Agent 大模型智能体,全方位讲解核心定义、落地应用、搭建架构与实操实现逻辑。LLM Agent 属于智能化进阶 AI 系统,区别于基础大模型,可自主拆解复杂任务,依靠自主规划、记忆存储、外部工具调用多重能力动态处理各类难题,大幅突破传统语言模型的能力边界,广泛适配法律咨询、工程代码开发、行业数据分析等热门场景。 其核心用处在于,它能够将传统语言模型或检索增强生成(RAG)系统的能力提升到一个新的层次。解决那些需要多步骤、序列化推理和规划的复杂问题。它能够将宏观任务分解为可执行的子任务(如检索最新法律、建立历史基线、总结文档并预测趋势),通过结合规划、记忆(短期与长期)和外部工具使用(如数据库、计算器API)的能力,完成传统LLM或RAG系统难以处理的深度分析、战略制定和持续交互任务,例如高级法律咨询、代码生成与调试、以及需要自我反思和改进的多步骤研究。 例如,一个基本的RAG系统可以检索法律条文,但LLM Agent能够进一步分析新法规对不同业务场景的实际影响,总结历史判例的规律,并预测未来的司法趋势。这使得它在需要深度分析、战略规划和持续交互的复杂场景中不可或缺,如高级法律咨询、复杂项目规划、代码生成与调试、多步骤研究分析等。 为了实现这些功能,LLM Agent通常由四个关键组件协同工作:1)大脑(Agent/Brain):即核心语言模型,负责理解和处理语言;2)规划(Planning):能够将宏观目标分解为可执行的子任务,并可根据反馈(如ReAct方法)动态调整策略;3)记忆(Memory):包括记录当前对话的短期记忆和存储",
-          "publishDate": "2026-06-16",
+          "url": "https://github.com/topics/data-provenance",
+          "title": "data-provenance · GitHub Topics · GitHub",
+          "snippet": "Here are 63 public repositories matching this topic... Language: All Filter by language Sort options Collect, aggregate, and visualize a data ecosystem's metadata Official Repository of \"LLM × DATA\" Survey Paper The official repository for the AiiDA code Relational Workflows: where database schemas define executable data pipelines. MetacatUI: A client-side web interface for DataONE data repositories A curated list of awesome stuff around the FAIR principles for (scientific) data, i.e that data is findable, accessable, interoperable and re-usable. ICDE 2025 Paper, Grounding Natural Language to SQL Translation with Data-Based Self-Explanations Collect, aggregate, and visualize a data ecosystem",
+          "publishDate": "2026-06-05",
           "relevanceScore": 15,
           "relevanceSignals": [
+            "paper:paper",
             "paper:论文",
-            "announcement:开源",
+            "announcement:official repo",
             "topic:llm",
-            "topic:agent",
-            "topic:rag",
-            "topic:大模型",
-            "topic:多模态",
-            "topic:智能体",
+            "venue:acl",
             "reject:non-paper-page",
+            "source:high-signal-url",
             "source:evidence-follow-up"
           ],
           "queryLabel": "follow-up-1",
@@ -2759,19 +2763,20 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/topics/data-provenance",
-          "title": "data-provenance · GitHub Topics · GitHub",
-          "snippet": "Here are 63 public repositories matching this topic... Language: All Filter by language Sort options Collect, aggregate, and visualize a data ecosystem's metadata Official Repository of \"LLM × DATA\" Survey Paper The official repository for the AiiDA code Relational Workflows: where database schemas define executable data pipelines. MetacatUI: A client-side web interface for DataONE data repositories A curated list of awesome stuff around the FAIR principles for (scientific) data, i.e that data is findable, accessable, interoperable and re-usable. ICDE 2025 Paper, Grounding Natural Language to SQL Translation with Data-Based Self-Explanations Collect, aggregate, and visualize a data ecosystem",
+          "url": "https://blog.csdn.net/xxue345678/article/details/160586840",
+          "title": "【2026年版建议收藏】AI Agent开发关键点解析:小白也能看懂的LLM实践指南-CSDN博客",
+          "snippet": "2026年,大模型技术持续迭代,AI Agent已从概念落地到各类实际场景,成为程序员进阶的核心方向之一。本文结合2026年最新实践经验,从LLM的不确定性、Agent开发本质、应用层代码趋势、工作流价值、软件故障模式变化、ReAct范式及适用场景等核心维度,拆解AI Agent开发的关键要点,帮小白快速入门、程序员夯实基础,理清开发逻辑,避开常见坑点。核心观点涵盖:吃透LLM的不确定性、深耕Context工程、把握应用层代码“胶水化”趋势、重视工作流标准化接口、警惕错误概率传播、构建闭环负反馈系统,以及明确LLM的适用边界。最终强调,2026年AI Agent开发工程师的核心竞争力,依然是“理解并驾驭不确定性”。 一、LLM 的不确定性:2026年仍需正视的核心Feature LLM输出的不确定性并非偶然,而是2026年大模型推理优化中依然存在的客观现象,其根源来自多重因素的叠加:浮点精度误差(FP16/BF16仍是主流,FP8虽逐步普及但误差仍存在)、硬件异构(不同厂商显卡、云端与边缘端部署差异)、MoE路由机制的动态调整,以及采样策略的细微波动。即便将Temperature参数设为0,输出也无法达到100%稳定——这并非技术缺陷,而是模型厂商在2026年推理优化中,为平衡低成本、高吞吐与实时性做出的工程权衡,无法被彻底消除,只能通过合理的工程设计理解和驾驭。这也正是AI Agent开发的核心意义所在:用工程手段弥补模型的不确定性,实现稳定可用的业务价值。 二、Agent 开发的本质:2026年更受重视的Context工程 随着2026年大模型基础能力的提升,Agent开发",
           "publishDate": "2026-06-05",
-          "relevanceScore": 15,
+          "relevanceScore": 13,
           "relevanceSignals": [
-            "paper:paper",
             "paper:论文",
-            "announcement:official repo",
+            "announcement:开源",
             "topic:llm",
-            "venue:acl",
+            "topic:agent",
+            "topic:rag",
+            "topic:大模型",
+            "topic:多模态",
             "reject:non-paper-page",
-            "source:high-signal-url",
             "source:evidence-follow-up"
           ],
           "queryLabel": "follow-up-1",
@@ -2786,7 +2791,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1536
+      "durationMs": 1696
     },
     {
       "label": "follow-up-4",
@@ -2802,9 +2807,9 @@
       "parentUrl": "https://nlp.ict.ac.cn/",
       "requestedCount": 6,
       "rawResultCount": 10,
-      "resultCount": 8,
-      "rejectedCount": 2,
-      "startedAt": "2026-07-02T05:09:39.652Z",
+      "resultCount": 7,
+      "rejectedCount": 3,
+      "startedAt": "2026-07-03T04:55:51.097Z",
       "results": [
         {
           "platform": "web",
@@ -2889,44 +2894,6 @@
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/topics/one-api",
-          "title": "one-api · GitHub Topics · GitHub",
-          "snippet": "Here are 26 public repositories matching this topic... Language: All Filter by language Sort options All-in-one New-API/Sub2API account hub: balance/usage dashboard, auto check-in, one-click keys, price comparison, health checks, plus advanced channel management | 一站式 New-API/Sub2API 等中转站账号管理:余额/用量看板、自动签到、密钥一键使用、价格对比、可用性测试,另提供高级渠道管理 LLM 逆向工程接口管理 | 通过标准 OpenAI API 访问 ChatGPT / gpt4free / Bard / Claude / HuggingChat / 通义千问 等AI 的破解版 || ChatGPT reverse engineering API management | Access all reverse engineered LLM libs by standard OpenAI API format || 免费 ChatGPT Free GPT LLM API | 逆向工程 转OpenAI API | converts all llm libs to OpenAI API Amazon Q to API Bridge:一个使用 FastAPI 实现的桥接服务,将Amazon Q Develop",
-          "publishDate": "2026-06-19",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "announcement:开源",
-            "topic:llm",
-            "topic:rag",
-            "topic:大模型",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://nlp.ict.ac.cn/"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/orgs/promptfoo/repositories",
-          "title": "promptfoo repositories · GitHub",
-          "snippet": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simpl…",
-          "publishDate": "2026-06-17",
-          "relevanceScore": 10,
-          "relevanceSignals": [
-            "topic:agent",
-            "topic:rag",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://nlp.ict.ac.cn/"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
           "url": "https://github.com/quaranji/mlc-llm/blob/main/.gitmodules",
           "title": "mlc-llm/.gitmodules at main · quaranji/mlc-llm · GitHub",
           "snippet": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   main Breadcrumbs .gitmodules Copy path More file actions More file actions Latest commit History 15 lines (15 loc) · 511 Bytes   main Breadcrumbs .gitmodules Top File metadata and controls Code Blame 15 ",
@@ -2960,6 +2927,30 @@
             "venue:emnlp",
             "venue:cvpr",
             "venue:iclr"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://nlp.ict.ac.cn/"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/orgs/Tencent/repositories?language=python&type=all",
+          "title": "Tencent repositories · GitHub",
+          "snippet": "Search Change the repository type filter All Search repositories lang:python lang:python Clear filter Search 82 repositories Last pushed Comfortable display density Compact display density Wechat-YATT Public Python • Other • 7 7 forks • 70 70 stars • 0 0 issues • 0 0 pull requests • Updated Jun 5, 2026 AI-Infra-Guard Public A full-stack AI Red Teaming platform securing AI ecosystems via OpenClaw Security Scan, Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evalu… agent security scanner + 16 agent security scanner vulnerability security-tools ai-security ai-infra mcp-scan llm prompt-injection + 9 Python • Apache License 2.0 • 375 375 forks • 3.8k 3.8k stars • 5 5 issues • ",
+          "publishDate": "2026-06-05",
+          "relevanceScore": 28,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:official code",
+            "topic:llm",
+            "topic:vlm",
+            "topic:mllm",
+            "topic:agent",
+            "venue:cvpr",
+            "venue:iclr",
+            "source:high-signal-url"
           ],
           "queryLabel": "follow-up-4",
           "queryIntent": "venue-year GitHub sibling search",
@@ -3012,6 +3003,30 @@
           "queryLabel": "follow-up-4",
           "queryIntent": "venue-year GitHub sibling search",
           "parentUrl": "https://nlp.ict.ac.cn/"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/topics/continual-learning",
+          "title": "continual-learning · GitHub Topics · GitHub",
+          "snippet": "Here are 743 public repositories matching this topic... Language: All Filter by language Sort options Memory library for building stateful agents 🦞 Just talk to your agent — it learns and EVOLVES 🧬. collection of diffusion model papers categorized by their subareas Avalanche: an End-to-End Library for Continual Learning based on PyTorch. FedML - The Research and Production Integrated Federated Learning Library: https://fedml.ai PyTorch implementation of various methods for continual learning (XdG, EWC, SI, LwF, FROMP, DGR, BI-R, ER, A-GEM, iCaRL, Generative Classifier) in three different scenarios. Jupyter Notebook Let Skills Evolve Collectively with Agentic Evolver PyCIL: A Python Toolbox",
+          "publishDate": "2026-06-05",
+          "relevanceScore": 28,
+          "relevanceSignals": [
+            "paper:paper",
+            "announcement:official code",
+            "announcement:official repo",
+            "topic:llm",
+            "topic:large language model",
+            "topic:mllm",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:大模型",
+            "topic:智能体"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://nlp.ict.ac.cn/"
         }
       ],
       "responseKeys": [
@@ -3021,7 +3036,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1411
+      "durationMs": 1581
     }
   ],
   "readers": [
@@ -3078,7 +3093,7 @@
       "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152",
       "readerTitle": "GitHub - TraceElephant/TraceElephant: Repo of \"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\" (ACL 2026)",
       "readerExcerpt": "![Image 1: TraceElephant](https://github.com/TraceElephant/TraceElephant/raw/main/assets/trace_elephant_banner.png) ## 📢 News - __[2026.04]__ 🎉 Our paper __“Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems”__ has been accepted by __ACL 2026__! --- ## 🧐 Overview ![Image 2: overview](https://github.com/TraceElephant/TraceElephant/raw/main/assets/overview.png) This repository provides the benchmark and evaluation framework for the paper __“Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems.”__ We study __failure attribution__ in LLM-based multi-agent systems (MAS), aiming to automatically identify: - __Which agent__ is responsible for a failure (_who_), and - __Which execution step__ makes the failure inevitable (_when_). Unlike existing benchmarks that rely on __output-only__ traces, __TraceElephant is designed for developer-facing debugging scenarios__, providing __fully observable execution traces__ together with __reproducible execution environments__. Here is a case showing the difference: ![Image 3: overview](https://github.com/TraceElephant/TraceElephant/raw/main/assets/show_case.png) --- Automated failure attribution offers several key advantages: - __Reduces manual debugging effort__ Avoids labor-intensive inspection of long, interleaved agent logs. - __Improves debugging precis",
-      "durationMs": 10909,
+      "durationMs": 1531,
       "skipped": false,
       "githubReadme": {
         "title": "TraceElephant/TraceElephant README",
@@ -3110,8 +3125,37 @@
       "parentUrl": "https://nlp.ict.ac.cn/",
       "readerTitle": "THUIAR · GitHub",
       "readerExcerpt": "THUIAR · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings thuiar - Platform - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - Resources - EXPLORE BY TOPIC - AI - Software Development - DevOps - Security - View all topics - EXPLORE BY TYPE - Customer stories - Events & webinars - Ebooks & reports - Business insights - GitHub Skills - SUPPORT & SERVICES - Documentation - Customer support - Community forum - Trust center - Partners View all resources - Open Source - COMMUNITY - GitHub SponsorsFund open sour",
-      "durationMs": 1361,
+      "durationMs": 1171,
       "skipped": false
+    },
+    {
+      "platform": "web",
+      "stage": "follow-up",
+      "url": "https://github.com/orgs/Tencent/repositories?language=python&type=all",
+      "title": "Tencent repositories · GitHub",
+      "snippet": "Search Change the repository type filter All Search repositories lang:python lang:python Clear filter Search 82 repositories Last pushed Comfortable display density Compact display density Wechat-YATT Public Python • Other • 7 7 forks • 70 70 stars • 0 0 issues • 0 0 pull requests • Updated Jun 5, 2026 AI-Infra-Guard Public A full-stack AI Red Teaming platform securing AI ecosystems via OpenClaw Security Scan, Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evalu… agent security scanner + 16 agent security scanner vulnerability security-tools ai-security ai-infra mcp-scan llm prompt-injection + 9 Python • Apache License 2.0 • 375 375 forks • 3.8k 3.8k stars • 5 5 issues • ",
+      "publishDate": "2026-06-05",
+      "relevanceScore": 28,
+      "relevanceSignals": [
+        "paper:paper",
+        "paper:arxiv",
+        "announcement:official code",
+        "topic:llm",
+        "topic:vlm",
+        "topic:mllm",
+        "topic:agent",
+        "venue:cvpr",
+        "venue:iclr",
+        "source:high-signal-url"
+      ],
+      "queryLabel": "follow-up-4",
+      "queryIntent": "venue-year GitHub sibling search",
+      "parentUrl": "https://nlp.ict.ac.cn/",
+      "readerTitle": "Tencent",
+      "readerExcerpt": "## Repositories list - A full-stack AI Red Teaming platform securing AI ecosystems via OpenClaw Security Scan, Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evalu… Python • • 384 • 4k • 5 • 3 •Updated Jun 23, 2026 Jun 23, 2026 - Model compression toolkit engineered for enhanced usability, comprehensiveness, and efficiency. Python • • 153 • 1.3k • 58 • 4 •Updated Jun 22, 2026 Jun 22, 2026 - [CVPR2026]🚀🚀🚀Official code for the paper \"YOLO-Master: MOE-Accelerated with Specialized Transformers for Enhanced Real-time Detection.\" *(YOLO = You Only Lo… Python • • 70 • 543 • 19 • 0 •Updated Jun 22, 2026 Jun 22, 2026 - Python • • 7 • 73 • 0 • 0 •Updated Jun 18, 2026 Jun 18, 2026 - Python • • 0 • 14 • 1 • 0 •Updated Jun 12, 2026 Jun 12, 2026 - Python • • 0 • 1 • 0 • 0 •Updated Jun 10, 2026 Jun 10, 2026 - Python • • 0 • 6 • 1 • 0 •Updated Jun 1, 2026 Jun 1, 2026 - Python • • 1 • 28 • 0 • 0 •Updated Jun 1, 2026 Jun 1, 2026 - Python • • 0 • 6 • 0 • 0 •Updated May 29, 2026 May 29, 2026 - Python • 0 • 3 • 0 • 0 •Updated May 25, 2026 May 25, 2026 - A.S.E (AICGSecEval) is a repository-level AI-generated code security evaluation benchmark developed by Tencent Wukong Code Security Team. Python • • 109 • 643 • 4 • 0 •Updated May 25, 2026 May 25, 2026 - Python • • 0 • 8 • 0 • 0 •Updated May 20, 2026 May 20, 2026 - APEX-SQL is an agentic Text-to-SQL framework that shifts the p",
+      "durationMs": 1730,
+      "skipped": false,
+      "githubReadmeError": "404 Not Found"
     },
     {
       "platform": "web",
@@ -3119,7 +3163,7 @@
       "url": "https://nlp.ict.ac.cn/",
       "title": "中科院计算技术研究所--自然语言处理研究组网站",
       "snippet": "2026年4月,中科院计算所自然语言处理组5篇论文被ACL 2026会议接收,其中1篇论文被ACL主会录用,4篇被Findings of ACL录用。ACL的全称是The Association for Computational Linguistics,是国际计算语言学界影响力最大的学术组织。ACL年度会议也是计算语言学领域的最重要的国际会议,是CCF推荐的计算语言学方面唯一的A类会议。Findings of ACL是从ACL 2021开始引入的在线附属出版物。被录用的论文简介如下:1. Language on Demand, Knowledge at Core: Composing LLMs with Encoder-Decoder Translation Models for Extensible Multilinguality 作者:卜梦煜,冯洋*Accepted by ACL 2026 Main Conference简介:尽管大语言模型(LLM)具备很强的通用能力,但很大程度上局限于高资源语言,多语言性能依然极不均衡。我们认为 LLM 并非缺少相关知识,而是难以在低资源语言稳定调用。由此出发,我们提出了一种新的多语言扩展范式 XBridge:组合 LLM 以英文为中心的通用能力,以及现有多语言机器翻译(NMT)模型的多语言理解和生成能力,实现二者的能力互补,组合成一个多语言通用模型。即将多语言理解和生成卸载到外部 NMT 模型,LLM 进行以英文为中心的通用知识处理。实验表明,XBridge 能够将 LLM 的低资源语言甚至未见语言的理解和生成能力提升到接近外部 NM",
-      "publishDate": "2026-07-01",
+      "publishDate": "2026-07-02",
       "relevanceScore": 31,
       "relevanceSignals": [
         "paper:paper",
@@ -3192,7 +3236,7 @@
       "parentUrl": "https://nlp.ict.ac.cn/",
       "readerTitle": "GitHub - GridNexus/SSDC: ACL2026 · GitHub",
       "readerExcerpt": "GitHub - GridNexus/SSDC: ACL2026 · GitHub Skip to content\n\n# Bridging the Pose-Semantic Gap: A Cascade Framework for Text-Based Person Anomaly Search Official codebase for paper implementation of text-based person anomaly search. Accepted by ACL 2026. ## Overview SSDC addresses the pose-semantic gap in text-based person anomaly search with a two-stage pipeline: 1. Structure-aware coarse retrieval (SSDC stage-1 retriever). 2. Multi-round semantic verification and re-ranking with MLLMs. This repository includes training, evaluation, and vLLM-based semantic refinement scripts. ## Highlights - Coarse-to-fine retrieval for large-scale anomaly search. - Pose-aware cross-modal backbone for fast candidate filtering. - LLM-based detective-style multi-round semantic verification. - Supports standard and variant scripts for SSDC + vLLM evaluation. ## Repository Structure - `Search.py`: main training and evaluation entry for the SSDC stage-1 retriever. - `run.py`: distributed launch wrapper for `Search.py`. - `train.py`: training loop. - `eval.py`: retrieval metrics and ITC/ITM evaluation. - `evaluate.py`: standalone evaluation script. - `vllm_infer_SSDC.py`: stage-2 semantic verification and re-ranking. - `configs/ssdc.yaml`: SSDC stage-1 retriever configuration. - `run.sh`, `evaluate.sh`, `run_stage2.sh`: example shell launch scripts. ## Environment Setup ### 1) Create environment ```bas",
-      "durationMs": 874,
+      "durationMs": 1178,
       "skipped": false,
       "githubReadme": {
         "title": "GridNexus/SSDC README",
@@ -3223,8 +3267,8 @@
       "queryIntent": "",
       "parentUrl": "",
       "readerTitle": "Robotics",
-      "readerExcerpt": "Robotics Skip to main content ![Image 1: Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) Learn about arXiv becoming an independent nonprofit. We gratefully acknowledge support from the Simons Foundation, member institutions, and all contributors. Donate ![Image 2: arxiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg) > cs.RO Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search ![Image 3: arXiv logo](https://arxiv.org/static/browse/0.3.4/images/arxiv-logomark-small-white.svg) ![Image 4: Cornell University Logo](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg) GO ## quick links - Login - Help Pages - About # Robotics ## Authors and titles for recent submissions - Fri, 26 Jun 2026 - Thu, 25 Jun 2026 - Wed, 24 Jun 2026 - Tue, 23 Jun 2026 - Fri, 19 Jun 2026 See today's new changes Total of 424 entries : 1-25 26-50 51-75 76-100 ... 401-424 Showing up to 25 entries per page: fewer | more | all ### Fri, 26 Jun 2026 (showing first 25 of 63 entries ) [1] arXiv:2606.27375 [pdf, other] : Title: Scalable Behavior Cloning with Open Data, Training, and Evaluation Arthur Allshire, Himanshu Gaurav Singh, Ritvik Sin",
-      "durationMs": 938,
+      "readerExcerpt": "Robotics Skip to main content ![Image 1](https://arxiv.org/static/base/1.0.1/images/icons/smileybones-small.svg) arXiv is now an independent nonprofit! Learn more × ![Image 2: archive](https://arxiv.org/static/base/1.0.1/images/arxiv-logo-primary-light.svg) Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search # Robotics ## Authors and titles for recent submissions - Thu, 2 Jul 2026 - Wed, 1 Jul 2026 - Tue, 30 Jun 2026 - Mon, 29 Jun 2026 - Fri, 26 Jun 2026 See today's new changes Total of 337 entries : 1-25 26-50 51-75 76-100 ... 326-337 Showing up to 25 entries per page: fewer | more | all ### Thu, 2 Jul 2026 (showing first 25 of 62 entries ) [1] arXiv:2607.01212 [pdf, html, other] : Title: FurnitureVLA: Learning Long-Horizon Bimanual Furniture Assembly with Vision-Language-Action Model Chenyang Ma, Yue Yang, Radu Corcodel, Siddarth Jain, Andrew Wu, Chiori Hori, Diego Romeres Comments: Project Page: this https URL Subjects: Robotics (cs.RO); Artificial Intelligence (cs.AI) [2] arXiv:2607.01201 [pdf, html, other] : Title: Sensorless Four-Channel Control Architecture Using Inverse Dynamics Modeling for Human-Scale Bilateral Teleoperation Amir Noohian, Dylan Miller, Justin Valentine, Alan Lynch, Martin Jagersand Subjects: Robotics (cs.RO) [3] arXiv:2607.01200 [pdf, html, other] : Title: FastBridge: Closing the Model-Based Realization Gap in Safety Filte",
+      "durationMs": 22440,
       "skipped": false
     },
     {
@@ -3250,42 +3294,10 @@
       "parentUrl": "https://nlp.ict.ac.cn/",
       "readerTitle": "GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents",
       "readerExcerpt": "English | 简体中文 __[ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents__ Welcome to the official repository for __RouteMoA__ (Paper link). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) architectures without relying on pre-inference steps. ![Image 1: Concept comparison between our RouteMoA and previous MoA-based methods.](https://github.com/Jize-W/RouteMoA/raw/main/asset/compare.png) _Concept comparison between our RouteMoA and previous MoA-based methods._ --- ## Table of Contents - RouteMoA - Table of Contents - Installation - Quick Start — Small Model Pool - 1. Deploy the LLMs - 2. Start the RouteMoA Service - 3. Evaluate the Service - Quick Start — Large Model Pool - 1. Configure API Access - 2. Start the Services - 3. Evaluate the Service - Router Training - Acknowledgements --- ## Installation We highly recommend using `conda` to create an isolated environment. > __System Requirement:__ We strongly recommend using a Linux (x86_64) operating system. This guide is based on Ubuntu 22.04, and other operating systems are currently not officially supported. ``` conda create -n YOUR_ENV_NAME python=3.10 -y conda activate YOUR_ENV_NAME # Install the OpenCompass evaluation framework (for small model pool experiments) cd opencompass pip install -e . # Install the ",
-      "durationMs": 1211,
+      "durationMs": 1464,
       "skipped": false,
       "githubReadme": {
         "title": "Jize-W/RouteMoA README",
-        "excerptLength": 3000
-      }
-    },
-    {
-      "platform": "web",
-      "stage": "homepage",
-      "url": "https://github.com/paper2poster/paper2poster",
-      "title": "GitHub - Paper2Poster/Paper2Poster: [NeurIPS 2025] Open-source Multi-agent Poster Generation from Papers · GitHub",
-      "snippet": "Name Name Last commit message Last commit date Latest commit   History 96 Commits 96 Commits Paper2Poster-eval Paper2Poster-eval     PosterAgent PosterAgent     assets assets     camel camel     config config     demo demo     docling docling     logo_store logo_store     skills skills     utils utils     .gitignore .gitignore     Dockerfile Dockerfile     LICENSE LICENSE     README.md README.md     __init__.py __init__.py     get_poster_text.py get_poster_text.py     requirements.txt requirements.txt     View all files Repository files navigation 从学术论文自动生成学术海报 We address How to create a poster from a paper and How to evaluate poster. 🤩 Paper2Poster for Paper2Poster 🔥 Update [2026.6.6] We",
-      "publishDate": "2026-06-06",
-      "relevanceScore": 28,
-      "relevanceSignals": [
-        "paper:paper",
-        "paper:arxiv",
-        "paper:论文",
-        "announcement:our paper",
-        "topic:llm",
-        "topic:vlm",
-        "topic:multimodal",
-        "topic:agent",
-        "topic:rag",
-        "venue:neurips"
-      ],
-      "queryLabel": "homepage-2",
-      "queryIntent": "",
-      "parentUrl": "",
-      "readerTitle": "GitHub - Paper2Poster/Paper2Poster: [NeurIPS 2025 D&B] Open-source Multi-agent Poster Generation from Papers",
-      "readerExcerpt": "## 🎓Paper2Poster: Multimodal Poster Automation from Scientific Papers ## 从学术论文自动生成学术海报 ![Image 1](https://camo.githubusercontent.com/31deecf9b93c22bc60e910ea3561aef1aa4cdba1355f888485814d450be66261/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61725869762d323530352e32313439372d726564) ![Image 2](https://camo.githubusercontent.com/fec6cd593a5923598ff8cb6e184dceba8f4f9381079cbb314f412bc7b2fad1ae/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50726f6a6563742d506167652d627269676874677265656e) ![Image 3](https://camo.githubusercontent.com/a5a41b7f3c6f0f4b67d23d35b95285d512cfea88368851b1fe6b61d412e3acda/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d446174617365742d6f72616e6765) ![Image 4](https://camo.githubusercontent.com/4f5a873e4da379880c26a4a802a411abbcc07b8b3565b710092b3b250c76db50/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d4461696c79205061706572732d726564) ![Image 5: X (formerly Twitter) URL](https://camo.githubusercontent.com/dff8c995381e1b8ba4e00876ca8aeb3c5188e1d3a9888d6e6f46c26ea7b25436/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f75726c3f75726c3d6874747073253341253246253246782e636f6d2532465f616b68616c697125324673746174757325324631393237373231313530353834333930313239) ![Image 6](https://ca",
-      "durationMs": 1371,
-      "skipped": false,
-      "githubReadme": {
-        "title": "paper2poster/paper2poster README",
         "excerptLength": 3000
       }
     },
@@ -3314,37 +3326,12 @@
       "parentUrl": "",
       "readerTitle": "GitHub - eddyhkchiu/V2V-LLM: [ICRA2026] Official code of the paper \"V2V-LLM: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multimodal Large Language Models\" · GitHub",
       "readerExcerpt": "GitHub - eddyhkchiu/V2V-LLM: [ICRA2026] Official code of the paper \"V2V-LLM: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multimodal Large Language Models\" · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - Resources - EXPLORE BY TOPIC - AI - Software Development - DevOps - Security - View all topics - EXPLORE BY TYPE - Customer stories - Events & webinars - Ebooks & reports - Business insights - GitHub Skills - SUPPORT & SERVICES - D",
-      "durationMs": 1175,
+      "durationMs": 1363,
       "skipped": false,
       "githubReadme": {
         "title": "eddyhkchiu/V2V-LLM README",
         "excerptLength": 2052
       }
-    },
-    {
-      "platform": "web",
-      "stage": "seed",
-      "url": "https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/161432835",
-      "title": "ACL 2026  7000种语言怎么教?清华阿里找准语义瓶颈,通关多语言安全-CSDN博客",
-      "snippet": "英语固若金汤,小语种一攻就破?清华与阿里提出基于“语义瓶颈层”的对齐范式,实现安全能力的跨语言泛化。 研究背景与摘要 近年来,大语言模型在多语言场景中的安全表现呈现出明显的“偏科”现象,英语等高频语言固若金汤,低资源语言却一攻即破。 现有方案往往选择“头痛医头”:针对每种弱势语言单独收集数据、单独做安全训练。但问题来了:世界上有 7000 多种语言,难道要逐一“补课”吗? 人类社会对于安全概念的学习和实践过程是自然可泛化的。当我们真正理解了“不能教人造炸弹”这层语义,无论对方用英语、斯瓦希里语还是 emoji 来问,拒绝都是本能反应。模型为何做不到? 答案藏在模型的表征空间里。清华 CoAI 团队联合阿里安全研究发现:大模型的浅层和深层表征被语言身份主导,但在中间某几层存在一个“语义瓶颈层”。在这里,不同语言表达的相同语义会自然聚拢,语言外壳被剥离,露出聚类的语义内核。 基于这一关键洞见,研究团队提出了 LASA(Language-Agnostic Semantic Alignment),一种锚定语义瓶颈层进行安全对齐的新范式,极大提升了模型安全训练在低资源语言上的泛化性。目前该论文已被 ACL 2026 接收。 论文标题: LASA: Language-Agnostic Semantic Alignment at the Semantic Bottleneck for LLM Safety 论文作者: 本文第一作者为清华大学 CoAI 组的杨峻骁,导师为黄民烈教授,研究方向为可信大模型和安全对齐。主要合作者为来自阿里巴巴集团安全部的翁佳琪、陶嘉羚、薛晖。 论文链接: http",
-      "publishDate": "2026-06-06",
-      "relevanceScore": 21,
-      "relevanceSignals": [
-        "paper:paper",
-        "paper:arxiv",
-        "paper:论文",
-        "announcement:新论文",
-        "topic:llm",
-        "topic:大模型",
-        "venue:acl"
-      ],
-      "queryLabel": "seed-2",
-      "queryIntent": "",
-      "parentUrl": "",
-      "readerTitle": "",
-      "readerExcerpt": "",
-      "durationMs": 0,
-      "skipped": true
     },
     {
       "platform": "web",
@@ -3367,7 +3354,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
       "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - Resources - EXPLORE BY TOPIC - AI - Software Development - DevOps - Security - View all topics - EXPLORE BY TYPE - Customer stories - Events & webinars - Ebooks & reports - Business insights - GitHub Skills - SUPPORT & SERVICES - Documentation - Customer support - Community forum - Trust center - Partne",
-      "durationMs": 7805,
+      "durationMs": 1069,
       "skipped": false,
       "githubReadme": {
         "title": "scientific-discovery/llema-project README",
@@ -3421,10 +3408,38 @@
       "parentUrl": "https://nlp.ict.ac.cn/",
       "readerTitle": "GitHub - zhengyi-ai/ACL2026",
       "readerExcerpt": "## When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs ## Abstract Personalized large language models (LLMs) adapt model behavior to individual users to enhance user satisfaction, yet personalization can inadvertently distort factual reasoning. We show that when personalized LLMs face factual queries, there exists a phenomenon where the model generates answers aligned with a user's prior history rather than the objective truth, resulting in __personalization-induced hallucinations__ that degrade factual reliability and may propagate incorrect beliefs, due to representational entanglement between personalization and factual representations. To address this issue, we propose __Factuality-Preserving Personalized Steering (FPPS)__, a lightweight inference-time approach that mitigates personalization-induced factual distortions while preserving personalized behavior. We further introduce __PFQABench__, the first benchmark designed to jointly evaluate factual and personalized question answering under personalization. Experiments across multiple LLM backbones and personalization methods show that FPPS substantially improves factual accuracy while maintaining personalized performance. ![Image 1: introduction](https://github.com/zhengyi-ai/ACL2026/raw/main/figs/introduction.png) __Figure 1: Illustration of personalization-induced hallucination",
-      "durationMs": 1297,
+      "durationMs": 1406,
+      "skipped": false,
+      "githubReadmeError": "404 Not Found"
+    },
+    {
+      "platform": "web",
+      "stage": "follow-up",
+      "url": "https://github.com/ulab-uiuc/MARBLE",
+      "title": "GitHub - ulab-uiuc/MARBLE: (ACL 2025 Main) Code for MultiAgentBench : Evaluating the Collaboration and Competition of LLM agents https",
+      "snippet": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 121 Commits 121 Commits .github .github     assets assets     data data     logs logs     marble marble     multiagentbench multiagentbench     scripts scripts     tests tests     .env.template .env.template     .gitignore .gitignore     .pre-commit-config.yaml .pre-commit-config.yaml     CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md     CONTRIBUTING.md CONTRIBUTING.md     LICENSE LICENSE     README.md README.md     poetry.lock poetry.lock     pyproject.toml pyproject.toml     View all files Repository files navigation MARBLE M ulti- A gent Coo R dination B ackbone w",
+      "publishDate": "2026-06-13",
+      "relevanceScore": 22,
+      "relevanceSignals": [
+        "paper:paper",
+        "paper:arxiv",
+        "topic:llm",
+        "topic:large language model",
+        "topic:agent",
+        "topic:rag",
+        "venue:acl",
+        "source:high-signal-url",
+        "source:evidence-follow-up"
+      ],
+      "queryLabel": "follow-up-2",
+      "queryIntent": "venue-year GitHub sibling search",
+      "parentUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4946a3df74e09152",
+      "readerTitle": "GitHub - ulab-uiuc/MARBLE: (ACL 2025 Main) Code for  MultiAgentBench : Evaluating the Collaboration and Competition of LLM agents https://www.arxiv.org/pdf/2503.01935",
+      "readerExcerpt": "__M__ulti-__A__gent Coo__R__dination __B__ackbone with __L__LM __E__ngine __MultiAgentBench__ is a modular and extensible framework designed to facilitate the development, testing, and evaluation of multi-agent systems leveraging Large Language Models (LLMs). It provides a structured environment where agents can interact within various simulated environments, utilizing cognitive abilities and communication mechanisms to perform tasks collaboratively or competitively. ![Image 1: marble](https://github.com/ulab-uiuc/MARBLE/raw/main/assets/benchmark.png) --- ## Table of Contents - Features - Architecture - Folder Structure - Key Components - Installation - Prerequisites - Setup Steps - Usage - Running the Simulation - Configuration - Contributing - License - Contact --- ## Features - __Modular Design__: Easily extend or replace components like agents, environments, and LLM integrations. - __Multi-Agent Support__: Model complex interactions between multiple agents with hierarchical or cooperative execution modes. - __LLM Integration__: Interface with various LLM providers (OpenAI, etc.) through a unified API. - __Shared Memory__: Implement shared memory mechanisms for agent communication and collaboration. - __Flexible Environments__: Support for different simulated environments like web-based tasks. - __Metrics and Evaluation__: Built-in evaluation metrics to assess agent performa",
+      "durationMs": 1431,
       "skipped": false,
       "githubReadme": {
-        "title": "zhengyi-ai/ACL2026 README",
+        "title": "ulab-uiuc/MARBLE README",
         "excerptLength": 3000
       }
     }
@@ -3436,53 +3451,61 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-45f2546551f9\",\n    \"title\": \"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/TraceElephant/TraceElephant.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.8333333333333334,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/TraceElephant/TraceElephant\",\n    \"keywords\": [\n      \"llm\",\n      \"agent\",\n      \"benchmark\",\n      \"reinforcement learning\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/TraceElephant/TraceElephant\",\n        \"title\": \"GitHub - TraceElephant/TraceElephant: Repo of \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\",\n        \"snippet\": \"Open more menu Folders and files Latest 6 6 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md View all files 📢 News [2026.04] 🎉 Our paper “Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems” has been accepted by ACL 2026 ! 🧐 Overview This reposito...\",\n        \"readerTitle\": \"GitHub - TraceElephant/TraceElephant: Repo of \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\" (ACL 2026)\",\n        \"readerExcerpt\": \"!Image 1: TraceElephant ## 📢 News - __[2026.04]__ 🎉 Our paper __“Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems”__ has been accepted by __ACL 2026__! --- ## 🧐 Overview !Image 2: overview This repository provides the benchmark and evaluation framework for the paper __“Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems.”...\",\n        \"publishDate\": \"2026-06-08\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-45f2546551f9\",\n      \"title\": \"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\",\n      \"summary\": \"该论文提出了一个用于LLM多智能体系统中故障归因的基准测试，已被ACL 2026接收。\",\n      \"reason\": \"GitHub仓库README明确声明论文已被ACL 2026接收。\",\n      \"status\": \"accepted\",\n      \"confidence\": 0.8333333333333334,\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/TraceElephant/TraceElephant\",\n      \"canonicalUrl\": \"https://github.com/TraceElephant/TraceElephant\",\n      \"pdfUrl\": \"\",\n      \"authors\": [],\n      \"keywords\": [\"llm\", \"agent\", \"benchmark\", \"reinforcement learning\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/TraceElephant/TraceElephant\",\n          \"title\": \"GitHub - TraceElephant/TraceElephant: Repo of \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\",\n          \"snippet\": \"Open more menu Folders and files Latest 6 6 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md View all files 📢 News [2026.04] 🎉 Our paper \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\" has been accepted by ACL 2026 ! 🧐 Overview This reposito...\",\n          \"readerTitle\": \"GitHub - TraceElephant/TraceElephant: Repo of \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\" (ACL 2026)\",\n          \"readerExcerpt\": \"!Image 1: TraceElephant ## 📢 News - __[2026.04]__ 🎉 Our paper __\\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\"__ has been accepted by __ACL 2026__! --- ## 🧐 Overview !Image 2: overview This repository provides the benchmark and evaluation framework for the paper __\\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems.\\\"...\",\n          \"publishDate\": \"2026-06-08\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-45f2546551f9\",\n      \"title\": \"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\",\n      \"summary\": \"该论文提出了一个用于LLM多智能体系统故障归因的基准测试方法。\",\n      \"reason\": \"GitHub仓库明确显示论文已被ACL 2026会议接受，标题与仓库描述一致。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026 Main\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/TraceElephant/TraceElephant\",\n      \"keywords\": [\n        \"llm\",\n        \"agent\",\n        \"benchmark\",\n        \"reinforcement learning\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/TraceElephant/TraceElephant\",\n          \"title\": \"GitHub - TraceElephant/TraceElephant: Repo of \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\",\n          \"snippet\": \"Open more menu Folders and files Latest 6 6 assets assets .gitignore .gitignore LICENSE LICENSE README.md README.md View all files 📢 News [2026.04] 🎉 Our paper \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\" has been accepted by ACL 2026 ! 🧐 Overview This reposito...\",\n          \"readerTitle\": \"GitHub - TraceElephant/TraceElephant: Repo of \\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\" (ACL 2026)\",\n          \"readerExcerpt\": \"!Image 1: TraceElephant ## 📢 News - __[2026.04]__ 🎉 Our paper __\\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems\\\"__ has been accepted by __ACL 2026__! --- ## 🧐 Overview !Image 2: overview This repository provides the benchmark and evaluation framework for the paper __\\\"Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems.\\\"...\",\n          \"publishDate\": \"2026-06-08\"\n        }\n      ]\n    }\n  ]\n}\n```",
       "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 20912
+      "durationMs": 23420
     },
     {
       "index": 1,
       "evidenceCount": 1,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-0217c443bae0\",\n    \"title\": \"RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/Jize-W/RouteMoA.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/Jize-W/RouteMoA\",\n    \"keywords\": [\n      \"llm\",\n      \"agent\",\n      \"rag\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/Jize-W/RouteMoA\",\n        \"title\": \"GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents · GitHub\",\n        \"snippet\": \"Latest 12 12 asset asset emoa emoa emoa_large emoa_large opencompass opencompass .gitignore .gitignore LICENSE LICENSE README.md README.md README_cn.md README_cn.md lmdeploy.sh lmdeploy.sh View all files [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents Welcome to the offi...\",\n        \"readerTitle\": \"GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n        \"readerExcerpt\": \"English | 简体中文 __[ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents__ Welcome to the official repository for __RouteMoA__ (Paper link). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) architectures without relying on pre-inference steps. !Image 1: Concept comparison between our RouteMoA and pr...\",\n        \"publishDate\": \"2026-06-04\"\n      }\n    ]\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-d93c1bcab839\",\n    \"title\": \"YOLO- : MOE-Accelerated with Specialized Transformers for Enhanced Real-time Detection.\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit CVPR 2026 signal in https://github.com/orgs/Tencent/repositories?language=python&type=all.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"CVPR 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/orgs/Tencent/repositories?language=python&type=all\",\n    \"keywords\": [\n      \"llm\",\n      \"vlm\",\n      \"mllm\",\n      \"agent\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/orgs/Tencent/repositories?language=python&type=all\",\n        \"title\": \"Tencent repositories · GitHub\",\n        \"snippet\": \"Search Change the repository type filter All Search repositories lang:python lang:python Clear filter Search 82 repositories Last pushed Comfortable display density Compact display density Wechat-YATT Public Python • Other • 7 7 forks • 70 70 stars • 0 0 • 0 0 • Updated Jun 5, 2026 AI-Infra-Guard Public A full-stack...\",\n        \"readerTitle\": \"Tencent\",\n        \"readerExcerpt\": \"## Repositories list - A full-stack AI Red Teaming platform securing AI ecosystems via OpenClaw Scan, Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evalu… Python • • 384 • 4k • 5 • 3 •Updated Jun 23, 2026 Jun 23, 2026 - Model compression toolkit engineered for enhanced usability, comprehensiveness, and efficiency. Python • • 153 • 1.3k • 58 • 4 •Updated Jun 22, 2026 Jun 22, 2026 - [CVPR2026]🚀...\",\n        \"publishDate\": \"2026-06-05\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-0217c443bae0\",\n      \"title\": \"RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n      \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n      \"reason\": \"GitHub仓库明确标注为ACL 2026论文，介绍了一种无需预推理提升的高效动态路由机制。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/Jize-W/RouteMoA\",\n      \"keywords\": [\"llm\", \"agent\", \"rag\", \"benchmark\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/Jize-W/RouteMoA\",\n          \"title\": \"GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n          \"snippet\": \"Latest 12 12 asset asset emoa emoa emoa_large emoa_large opencompass opencompass .gitignore .gitignore LICENSE LICENSE README.md README.md README_cn.md README_cn.md lmdeploy.sh lmdeploy.sh View all files [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents Welcome to the offi...\",\n          \"readerTitle\": \"GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n          \"readerExcerpt\": \"English | 简体中文 __[ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents__ Welcome to the official repository for __RouteMoA__ (Paper link). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) architectures without relying on pre-inference steps. !Image 1: Concept comparison between our RouteMoA and pr...\",\n          \"publishDate\": \"2026-06-04\"\n        }\n      ]\n    }\n  ]\n}\n```",
-      "parsedCount": 1,
+      "responseText": "",
+      "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 26510
+      "durationMs": 89999,
+      "error": "request timed out after 90000ms"
     },
     {
       "index": 2,
       "evidenceCount": 1,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-ff928ad79571\",\n    \"title\": \"LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ICLR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ICLR 2026 signal in https://github.com/scientific-discovery/llema-project.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"ICLR 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/scientific-discovery/llema-project\",\n    \"keywords\": [\n      \"large language model\",\n      \"llm\",\n      \"agent\",\n      \"rag\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/scientific-discovery/llema-project\",\n        \"title\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n        \"snippet\": \"Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientif...\",\n        \"readerTitle\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n        \"readerExcerpt\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any wor...\",\n        \"publishDate\": \"2026-06-11\"\n      }\n    ]\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-0217c443bae0\",\n    \"title\": \"RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/Jize-W/RouteMoA.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/Jize-W/RouteMoA\",\n    \"keywords\": [\n      \"llm\",\n      \"agent\",\n      \"rag\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/Jize-W/RouteMoA\",\n        \"title\": \"GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents · GitHub\",\n        \"snippet\": \"Latest 12 12 asset asset emoa emoa emoa_large emoa_large opencompass opencompass .gitignore .gitignore LICENSE LICENSE README.md README.md README_cn.md README_cn.md lmdeploy.sh lmdeploy.sh View all files [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents Welcome to the offi...\",\n        \"readerTitle\": \"GitHub - Jize-W/RouteMoA: [ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents\",\n        \"readerExcerpt\": \"English | 简体中文 __[ACL 2026] RouteMoA: Dynamic Routing without Pre-Inference Boosts Efficient Mixture-of-Agents__ Welcome to the official repository for __RouteMoA__ (Paper link). This project introduces an efficient and dynamic routing mechanism designed to boost the performance of Mixture-of-Agents (MoA) architectures without relying on pre-inference steps. !Image 1: Concept comparison between our RouteMoA and pr...\",\n        \"publishDate\": \"2026-06-04\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-ff928ad79571\",\n      \"title\": \"LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search\",\n      \"summary\": \"利用大型语言模型引导的进化搜索加速材料设计\",\n      \"reason\": \"GitHub仓库明确标注为ICLR 2026论文\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ICLR 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/scientific-discovery/llema-project\",\n      \"keywords\": [\"large language model\", \"llm\", \"agent\", \"rag\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/scientific-discovery/llema-project\",\n          \"title\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n          \"snippet\": \"Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientif...\",\n          \"readerTitle\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n          \"readerExcerpt\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any wor...\",\n          \"publishDate\": \"2026-06-11\"\n        }\n      ]\n    }\n  ]\n}\n```",
-      "parsedCount": 1,
+      "responseText": "",
+      "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 31952
+      "durationMs": 90001,
+      "error": "request timed out after 90000ms"
     },
     {
       "index": 3,
       "evidenceCount": 1,
-      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-1b24fc14ef3c\",\n    \"title\": \"/raw/ /figs/introduction.png) __Figure 1: Illustration of personalization-induced hallucinations and the effect of FPPS__ , using real examples from PFQABench. __Top:__ A standard LLM answers factual queries correctly\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/zhengyi-ai/ACL2026.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/zhengyi-ai/ACL2026\",\n    \"keywords\": [\n      \"large language model\",\n      \"llm\",\n      \"reasoning\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/zhengyi-ai/ACL2026\",\n        \"title\": \"GitHub - zhengyi-ai/ACL2026 · GitHub\",\n        \"snippet\": \"Open more menu Folders and files Latest 21 21 blackbox_tools/ dual_gpt_view blackbox_tools/ dual_gpt_view data data figs figs hparams/ Steer hparams/ Steer prober/ train_rater prober/ train_rater run_sh run_sh steer steer judge_optimized.py judge_optimized.py readme.md readme.md requirements.txt requirements.txt vec...\",\n        \"readerTitle\": \"GitHub - zhengyi-ai/ACL2026\",\n        \"readerExcerpt\": \"## When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs ## Abstract Personalized large language models (LLMs) adapt model behavior to individual users to enhance user satisfaction, yet personalization can inadvertently distort factual reasoning. We show that when personalized LLMs face factual queries, there exists a phenomenon where the model generates answers aligned wi...\",\n        \"publishDate\": \"2026-06-04\"\n      }\n    ]\n  }\n]",
+      "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-ff928ad79571\",\n    \"title\": \"LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ICLR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ICLR 2026 signal in https://github.com/scientific-discovery/llema-project.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"ICLR 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/scientific-discovery/llema-project\",\n    \"keywords\": [\n      \"large language model\",\n      \"llm\",\n      \"agent\",\n      \"rag\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/scientific-discovery/llema-project\",\n        \"title\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n        \"snippet\": \"Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientif...\",\n        \"readerTitle\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n        \"readerExcerpt\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any wor...\",\n        \"publishDate\": \"2026-06-11\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-1b24fc14ef3c\",\n      \"title\": \"When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs\",\n      \"summary\": \"研究个性化大语言模型中的幻觉现象并提出缓解方法\",\n      \"reason\": \"GitHub仓库明确显示该论文已被ACL 2026主会议接受，研究个性化LLM中的事实推理扭曲问题\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/zhengyi-ai/ACL2026\",\n      \"keywords\": [\n        \"large language model\",\n        \"llm\",\n        \"reasoning\",\n        \"benchmark\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/zhengyi-ai/ACL2026\",\n          \"title\": \"GitHub - zhengyi-ai/ACL2026 · GitHub\",\n          \"snippet\": \"Open more menu Folders and files Latest 21 21 blackbox_tools/ dual_gpt_view blackbox_tools/ dual_gpt_view data data figs figs hparams/ Steer hparams/ Steer prober/ train_rater prober/ train_rater run_sh run_sh steer steer judge_optimized.py judge_optimized.py readme.md readme.md requirements.txt requirements.txt vec...\",\n          \"readerTitle\": \"GitHub - zhengyi-ai/ACL2026\",\n          \"readerExcerpt\": \"## When Personalization Misleads: Understanding and Mitigating Hallucinations in Personalized LLMs ## Abstract Personalized large language models (LLMs) adapt model behavior to individual users to enhance user satisfaction, yet personalization can inadvertently distort factual reasoning. We show that when personalized LLMs face factual queries, there exists a phenomenon where the model generates answers aligned wi...\",\n          \"publishDate\": \"2026-06-04\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-ff928ad79571\",\n      \"title\": \"LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search\",\n      \"titleZh\": \"\",\n      \"summary\": \"LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。\",\n      \"reason\": \"GitHub项目标题明确标注为[ICLR 2026]，表明该论文已被ICLR 2026会议接受。\",\n      \"status\": \"accepted\",\n      \"confidence\": 0.78,\n      \"acceptedVenue\": \"ICLR 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/scientific-discovery/llema-project\",\n      \"canonicalUrl\": \"https://github.com/scientific-discovery/llema-project\",\n      \"pdfUrl\": \"\",\n      \"authors\": [],\n      \"keywords\": [\n        \"large language model\",\n        \"llm\",\n        \"agent\",\n        \"rag\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/scientific-discovery/llema-project\",\n          \"title\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n          \"snippet\": \"Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientif...\",\n          \"readerTitle\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub\",\n          \"readerExcerpt\": \"GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any wor...\",\n          \"publishDate\": \"2026-06-11\"\n        }\n      ]\n    }\n  ]\n}\n```",
       "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 14496
+      "durationMs": 33448
     }
   ],
-  "rejectedCandidates": [],
+  "rejectedCandidates": [
+    {
+      "title": "YOLO-Master: MOE-Accelerated with Specialized Transformers for Enhanced Real-time Detection.",
+      "primaryUrl": "https://github.com/orgs/Tencent/repositories?language=python&type=all",
+      "reason": "already-in-official-catalog"
+    }
+  ],
   "summary": {
     "searchQueriesRun": 18,
-    "skippedSearchPlans": 265,
+    "skippedSearchPlans": 253,
     "selectedSearchPlans": 18,
     "modelSearchPlans": 0,
     "followUpSearchPlans": 4,
-    "fallbackCandidates": 4,
+    "fallbackCandidates": 5,
     "searchStageBreakdown": {
       "seed": {
         "queries": 2,
@@ -3493,8 +3516,8 @@
       "repository": {
         "queries": 2,
         "raw": 20,
-        "kept": 10,
-        "rejected": 10
+        "kept": 11,
+        "rejected": 9
       },
       "paper-index": {
         "queries": 2,
@@ -3529,21 +3552,24 @@
       "follow-up": {
         "queries": 4,
         "raw": 30,
-        "kept": 18,
-        "rejected": 12
+        "kept": 17,
+        "rejected": 13
       }
     },
     "rawSearchEvidenceCollected": 120,
-    "searchEvidenceCollected": 60,
+    "searchEvidenceCollected": 59,
     "rejectedSearchEvidence": 51,
     "readerEnrichedEvidence": 14,
     "extractionBatchesRun": 4,
-    "skippedExtractionBatches": 0,
-    "extractedCandidates": 8,
-    "rejectedCandidates": 0,
-    "added": 2,
+    "skippedExtractionBatches": 1,
+    "extractedCandidates": 7,
+    "rejectedCandidates": 1,
+    "added": 0,
     "updated": 6,
-    "durationMs": 507784
+    "durationMs": 661556
   },
-  "errors": []
+  "errors": [
+    "Extraction failed for batch 2: request timed out after 90000ms",
+    "Extraction failed for batch 3: request timed out after 90000ms"
+  ]
 }
