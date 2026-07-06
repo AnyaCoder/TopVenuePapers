@@ -1,11 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T05:08:50.551Z",
+  "generatedAt": "2026-07-06T05:31:23.881Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-07-06T05:32:25.890Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
     {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
@@ -22,7 +78,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-05T05:09:32.411Z",
+      "updatedAt": "2026-07-06T05:31:48.689Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -63,60 +119,179 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-ff928ad79571",
+      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
+      "summary": "利用LLM引导的进化搜索加速材料设计的统一框架",
+      "reason": "GitHub仓库明确标注为ICLR 2026论文",
+      "primaryUrl": "https://github.com/scientific-discovery/llema-project",
+      "canonicalUrl": "https://github.com/scientific-discovery/llema-project",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "sourceId": "unofficial-ff928ad79571",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-05T05:09:04.304Z",
+      "discoveredAt": "2026-07-02T05:10:08.059Z",
+      "updatedAt": "2026-07-06T05:31:14.523Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "multimodal",
+        "large language model",
+        "llm",
         "agent",
-        "report generation"
+        "rag"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "web",
-        "github"
+        "web"
       ],
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/scientific-discovery/llema-project",
+          "title": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
+          "snippet": "Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. Key Features LLM-Guided Generation: Leverages scientific know...",
+          "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
+          "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use...",
+          "publishDate": "2026-06-11",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-9e667c422352",
+      "title": "UR2: Unified RAG and Reasoning through Reinforcement Learning",
+      "summary": "UR2是一个通过强化学习统一检索增强生成和推理的通用框架，适用于数学推理、医疗问答和通用领域任务。",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收为口头报告论文，提供了明确的会议接受证据。",
+      "primaryUrl": "https://github.com/Tsinghua-dhy/UR2",
+      "canonicalUrl": "https://github.com/Tsinghua-dhy/UR2",
+      "pdfUrl": "https://arxiv.org/abs/2508.06165",
+      "sourceId": "unofficial-9e667c422352",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.730Z",
+      "updatedAt": "2026-07-06T05:28:34.627Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "reasoning",
+        "rag",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Tsinghua-dhy/UR2",
+          "title": "GitHub - Tsinghua-dhy/UR2: UR2: Unify RAG and Reasoning through Reinforcement Learning · GitHub",
+          "snippet": "Latest 5 5 UR2_RL UR2_RL eval eval retrieval_utils retrieval_utils train/ datasets train/ datasets LICENSE LICENSE README.md README.md environment.yaml environment.yaml ur2.png ur2.png View all files UR²: Unified RAG and Reasoning through Reinforcement Learning 🎉 Accepted as ACL 2026 ORAL Paper 🔍 Overview UR² is a general framework that unifies retrieval-augmented generation (RAG) and reinforcement learning (RL) for dynamic coordination between retrieval and reasoning . It scales across mat...",
+          "readerTitle": "GitHub - Tsinghua-dhy/UR2: UR2: Unify RAG and Reasoning through Reinforcement Learning",
+          "readerExcerpt": "!Image 1 __Paper Link__: [https://arxiv.org/abs/2508.06165] __Model Link__: Modelscope UR2 Models ## 🎉 Accepted as ACL 2026 ORAL Paper ## 🔍 Overview UR² is a __general framework__ that __unifies retrieval-augmented generation (RAG)__ and __reinforcement learning (RL)__ for __dynamic coordination between retrieval and reasoning__. It scales across __mathematical reasoning, medical QA, and general-domain tasks__, matching or surpassing __GPT-4o-mini__ with 3B–8B open-source models. --- ## ✨ Highlights - 🚀 __Unified RAG + RL Framework__ — bridges knowledge retrieval and multi-step reasoning. - 🎯 __Difficulty-Aware Curriculum__ — learns when to retrieve, reducing unnecessary calls. - 📚 __Hybrid Knowledge Access__ — combines offline corpora + LLM summaries for accuracy and robustness. - 🏆 __Two-Stage RL Optimization__ — decouples retrieval skill acquisition and answer refinement. - \ud83c...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-0d6ade5f439c",
+      "title": "Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space To appear in the proceedings of the 40th AAAI Conference on Artificial Intelligence .",
+      "summary": "提出了一种通过通用潜在空间实现成本高效的零样本LLM路由方法",
+      "reason": "GitHub仓库标题明确标注为AAAI 2026官方实现",
+      "primaryUrl": "https://github.com/Codeffun3/ZeroRouter",
+      "canonicalUrl": "https://github.com/Codeffun3/ZeroRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-0d6ade5f439c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.723Z",
+      "updatedAt": "2026-07-06T05:23:45.163Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Codeffun3/ZeroRouter",
+          "title": "GitHub - ffun3/ZeroRouter: [AAAI 2026] Official implementation for the paper \"Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space\"",
+          "snippet": "Open more menu Folders and files Latest 3 3 LICENSE LICENSE README.md README.md View all files More items ZeroRouter This is the official repository for our paper: Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space To appear in the proceedings of the 40th AAAI Conference on Artificial Intelligence (AAAI-26). 🚀 Release Status The is currently being cleaned up and will be released publicly upon the acceptance of the paper. Thank you for your interest and...",
+          "readerTitle": "GitHub - Codeffun3/ZeroRouter: [AAAI 2026] Official implementation for the paper \"Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space\". · GitHub",
+          "readerExcerpt": "GitHub - ffun3/ZeroRouter: [AAAI 2026] Official implementation for the paper \"Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space\". · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization -...",
+          "publishDate": "2026-07-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-06e4cb825b92",
+      "title": "DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection !Image 1: Paper !Image 2: Python !Image 3: PyTorch This repository provides the official implementation of the paper:",
+      "summary": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit AAAI 2026 Main paper signal for DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection !Image 1: Paper !Image 2: Python !Image 3: PyTorch This repository provides the official implementation of the paper:; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
+      "canonicalUrl": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
+      "pdfUrl": "",
+      "sourceId": "unofficial-06e4cb825b92",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.726Z",
+      "updatedAt": "2026-07-06T05:23:28.726Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "multimodal"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
+          "title": "GitHub - TongfeiLiu/DGKAN-for-MCD: 【AAAI 2026】DGKAN for Unsupervised Multimodal Change Detection · GitHub",
+          "snippet": "Open more menu Folders and files Latest 31 31 Figures Figures Fusion_Attention Fusion_Attention all_data_preprocess all_data_preprocess all_loss all_loss model model README.md README.md evaluation.py evaluation.py .py .py View all files More items [AAAI 2026] DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection This repository provides the official implementation of the paper: Tongfei Liu, Jianjian Xu, Tao Lei, Yingbo Wang, Xiaogang Du, Zhiyong Lv. D...",
+          "readerTitle": "GitHub - TongfeiLiu/DGKAN-for-MCD: 【AAAI 2026】DGKAN for Unsupervised Multimodal Change Detection",
+          "readerExcerpt": "## [AAAI 2026] DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection !Image 1: Paper !Image 2: Python !Image 3: PyTorch This repository provides the official implementation of the paper: Tongfei Liu, Jianjian Xu, Tao Lei, Yingbo Wang, Xiaogang Du, Zhiyong Lv. DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection [C]. __Proceedings of the AAAI Conference on Artificial Intelligence__, 2026, 40(9), 7278-7286. https://doi.org/10.1609/aaai.v40i9.37665 ## 📖 Abstract Multimodal change detection (MCD) has important applications in disaster assessment, but the nonlinear distortion of features and spatial misalignment caused by sensor imaging differences make it difficult to obtain changes through direct comparison. To overcome the above problems, this study aims to realize MCD by capturing the modality-indepen...",
+          "publishDate": "2026-07-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-c063d8056da2",
@@ -205,51 +380,6 @@
           "readerTitle": "GitHub - ControlNet/MATA: [ICLR 2026] MATA: A Trainable Hierarchical Automaton System for Multi-Agent Visual Reasoning",
           "readerExcerpt": "!Image 1 !Image 2 !Image 3 !Image 4 !Image 5 __This repo is the official implementation for the paper MATA: A Trainable Hierarchical Automaton System for Multi-Agent Visual Reasoning, accepted at ICLR 2026.__ MATA (Multi-Agent hierarchical Trainable Automaton) formulates visual reasoning as a hierarchical finite-state automaton. A trainable hyper agent learns high-level transitions across collaborating and competing agents, while each agent executes a small rule-based sub-automaton for reliable micro-control. This design provides transparent execution traces and strong performance on complex visual reasoning benchmarks. ## News - [2026/02] MATA is accepted at ICLR 2026. ## Abstract Recent vision-language models have strong perceptual ability but their implicit reasoning is hard to explain and easily generates hallucinations on complex queries. Compositional methods improve interpretab...",
           "publishDate": "2026-06-05",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-ff928ad79571",
-      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
-      "summary": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
-      "reason": "GitHub项目标题明确标注为[ICLR 2026]，表明该论文已被ICLR 2026会议接受。",
-      "primaryUrl": "https://github.com/scientific-discovery/llema-project",
-      "canonicalUrl": "https://github.com/scientific-discovery/llema-project",
-      "pdfUrl": "",
-      "sourceId": "unofficial-ff928ad79571",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-02T05:10:08.059Z",
-      "updatedAt": "2026-07-03T05:06:24.641Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "agent",
-        "rag"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/scientific-discovery/llema-project",
-          "title": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
-          "snippet": "Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. Key Features LLM-Guided Generation: Leverages scientific know...",
-          "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
-          "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use...",
-          "publishDate": "2026-06-11",
           "query": ""
         }
       ],

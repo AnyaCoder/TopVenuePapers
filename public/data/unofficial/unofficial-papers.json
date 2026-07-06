@@ -1,37 +1,80 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T05:08:44.063Z",
+  "generatedAt": "2026-07-06T05:31:14.961Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-c063d8056da2",
-      "title": "Latent Collaboration in Multi-Agent Systems",
-      "summary": "Discovery evidence found an explicit ICML 2026 paper signal for Latent Collaboration in Multi-Agent Systems; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确标注该论文被ICML 2026会议接收",
-      "primaryUrl": "https://github.com/orgs/Gen-Verse/repositories?type=all",
-      "canonicalUrl": "https://github.com/orgs/Gen-Verse/repositories?type=all",
+      "id": "unofficial-ff928ad79571",
+      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
+      "summary": "利用LLM引导的进化搜索加速材料设计的统一框架",
+      "reason": "GitHub仓库明确标注为ICLR 2026论文",
+      "primaryUrl": "https://github.com/scientific-discovery/llema-project",
+      "canonicalUrl": "https://github.com/scientific-discovery/llema-project",
       "pdfUrl": "",
-      "sourceId": "unofficial-c063d8056da2",
+      "sourceId": "unofficial-ff928ad79571",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.9166666666666666,
-      "acceptedVenue": "ICML 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-04T04:50:02.548Z",
-      "updatedAt": "2026-07-05T05:08:43.640Z",
+      "discoveredAt": "2026-07-02T05:10:08.059Z",
+      "updatedAt": "2026-07-06T05:31:14.523Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/scientific-discovery/llema-project",
+          "title": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
+          "snippet": "Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. Key Features LLM-Guided Generation: Leverages scientific know...",
+          "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
+          "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use...",
+          "publishDate": "2026-06-11",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-9e667c422352",
+      "title": "UR2: Unified RAG and Reasoning through Reinforcement Learning",
+      "summary": "UR2是一个通过强化学习统一检索增强生成和推理的通用框架，适用于数学推理、医疗问答和通用领域任务。",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收为口头报告论文，提供了明确的会议接受证据。",
+      "primaryUrl": "https://github.com/Tsinghua-dhy/UR2",
+      "canonicalUrl": "https://github.com/Tsinghua-dhy/UR2",
+      "pdfUrl": "https://arxiv.org/abs/2508.06165",
+      "sourceId": "unofficial-9e667c422352",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.730Z",
+      "updatedAt": "2026-07-06T05:28:34.627Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
         "llm",
-        "multimodal",
-        "agent",
         "reasoning",
-        "post-training",
+        "rag",
         "reinforcement learning"
       ],
       "titleAliases": [],
@@ -42,16 +85,157 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/orgs/Gen-Verse/repositories?type=all",
-          "title": "Gen-Verse repositories · GitHub",
-          "snippet": "All Change the repository type filter All Search repositories Search 13 repositories Last pushed Comfortable display density Compact display density LatentMAS Public Gen-Verse/LatentMAS’s past year of activity [ICML 2026 Spotlight] Latent Collaboration in Multi-Agent Systems multi-agent-systems continuous-reasoning latent-space-model + 3 multi-agent-systems continuous-reasoning latent-space-model large-language-models model-collaboration latent-reasoning Python • Apache License 2.0 • 158 158...",
-          "readerTitle": "Gen-Verse",
-          "readerExcerpt": "## Repositories list - [ICML 2026 Spotlight] Latent Collaboration in Multi-Agent Systems Python • • 160 • 1k • 14 • 3 •Updated Jun 18, 2026 Jun 18, 2026 - RLAnything (ICML 2026) & AutoTool (ICML 2026), DemyAgent: Open-Source RL for LLMs and Agentic Scenarios Python • • 57 • 565 • 7 • 2 •Updated Jun 12, 2026 Jun 12, 2026 - OpenClaw-RL: Train any agent simply by talking Python • • 601 • 5.5k • 50 • 20 •Updated May 23, 2026 May 23, 2026 - MMaDA - Open-Sourced Multimodal Large Diffusion Language Models (dLLMs with block diffusion, mixed-CoT, unified RL) Python • • 89 • 1.7k • 45 • 1 •Updated Feb 14, 2026 Feb 14, 2026 - [ICLR 2026] Official for TraceRL: Revolutionizing post-training for Diffusion LLMs, powering the SOTA TraDo series. Python • • 43 • 509 • 24 • 1 •Updated Jan 28, 2026 Jan 28, 2026 - GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators Python...",
-          "publishDate": "2026-06-06",
+          "url": "https://github.com/Tsinghua-dhy/UR2",
+          "title": "GitHub - Tsinghua-dhy/UR2: UR2: Unify RAG and Reasoning through Reinforcement Learning · GitHub",
+          "snippet": "Latest 5 5 UR2_RL UR2_RL eval eval retrieval_utils retrieval_utils train/ datasets train/ datasets LICENSE LICENSE README.md README.md environment.yaml environment.yaml ur2.png ur2.png View all files UR²: Unified RAG and Reasoning through Reinforcement Learning 🎉 Accepted as ACL 2026 ORAL Paper 🔍 Overview UR² is a general framework that unifies retrieval-augmented generation (RAG) and reinforcement learning (RL) for dynamic coordination between retrieval and reasoning . It scales across mat...",
+          "readerTitle": "GitHub - Tsinghua-dhy/UR2: UR2: Unify RAG and Reasoning through Reinforcement Learning",
+          "readerExcerpt": "!Image 1 __Paper Link__: [https://arxiv.org/abs/2508.06165] __Model Link__: Modelscope UR2 Models ## 🎉 Accepted as ACL 2026 ORAL Paper ## 🔍 Overview UR² is a __general framework__ that __unifies retrieval-augmented generation (RAG)__ and __reinforcement learning (RL)__ for __dynamic coordination between retrieval and reasoning__. It scales across __mathematical reasoning, medical QA, and general-domain tasks__, matching or surpassing __GPT-4o-mini__ with 3B–8B open-source models. --- ## ✨ Highlights - 🚀 __Unified RAG + RL Framework__ — bridges knowledge retrieval and multi-step reasoning. - 🎯 __Difficulty-Aware Curriculum__ — learns when to retrieve, reducing unnecessary calls. - 📚 __Hybrid Knowledge Access__ — combines offline corpora + LLM summaries for accuracy and robustness. - 🏆 __Two-Stage RL Optimization__ — decouples retrieval skill acquisition and answer refinement. - \ud83c...",
+          "publishDate": "2026-06-10",
           "query": ""
         }
       ],
       "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-0d6ade5f439c",
+      "title": "Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space To appear in the proceedings of the 40th AAAI Conference on Artificial Intelligence .",
+      "summary": "提出了一种通过通用潜在空间实现成本高效的零样本LLM路由方法",
+      "reason": "GitHub仓库标题明确标注为AAAI 2026官方实现",
+      "primaryUrl": "https://github.com/Codeffun3/ZeroRouter",
+      "canonicalUrl": "https://github.com/Codeffun3/ZeroRouter",
+      "pdfUrl": "",
+      "sourceId": "unofficial-0d6ade5f439c",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.723Z",
+      "updatedAt": "2026-07-06T05:23:45.163Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "agent"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Codeffun3/ZeroRouter",
+          "title": "GitHub - ffun3/ZeroRouter: [AAAI 2026] Official implementation for the paper \"Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space\"",
+          "snippet": "Open more menu Folders and files Latest 3 3 LICENSE LICENSE README.md README.md View all files More items ZeroRouter This is the official repository for our paper: Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space To appear in the proceedings of the 40th AAAI Conference on Artificial Intelligence (AAAI-26). 🚀 Release Status The is currently being cleaned up and will be released publicly upon the acceptance of the paper. Thank you for your interest and...",
+          "readerTitle": "GitHub - Codeffun3/ZeroRouter: [AAAI 2026] Official implementation for the paper \"Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space\". · GitHub",
+          "readerExcerpt": "GitHub - ffun3/ZeroRouter: [AAAI 2026] Official implementation for the paper \"Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space\". · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization -...",
+          "publishDate": "2026-07-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-06e4cb825b92",
+      "title": "DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection !Image 1: Paper !Image 2: Python !Image 3: PyTorch This repository provides the official implementation of the paper:",
+      "summary": "发现页在公开页面中识别到 AAAI 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit AAAI 2026 Main paper signal for DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection !Image 1: Paper !Image 2: Python !Image 3: PyTorch This repository provides the official implementation of the paper:; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
+      "canonicalUrl": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
+      "pdfUrl": "",
+      "sourceId": "unofficial-06e4cb825b92",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.726Z",
+      "updatedAt": "2026-07-06T05:23:28.726Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "multimodal"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/TongfeiLiu/DGKAN-for-MCD",
+          "title": "GitHub - TongfeiLiu/DGKAN-for-MCD: 【AAAI 2026】DGKAN for Unsupervised Multimodal Change Detection · GitHub",
+          "snippet": "Open more menu Folders and files Latest 31 31 Figures Figures Fusion_Attention Fusion_Attention all_data_preprocess all_data_preprocess all_loss all_loss model model README.md README.md evaluation.py evaluation.py .py .py View all files More items [AAAI 2026] DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection This repository provides the official implementation of the paper: Tongfei Liu, Jianjian Xu, Tao Lei, Yingbo Wang, Xiaogang Du, Zhiyong Lv. D...",
+          "readerTitle": "GitHub - TongfeiLiu/DGKAN-for-MCD: 【AAAI 2026】DGKAN for Unsupervised Multimodal Change Detection",
+          "readerExcerpt": "## [AAAI 2026] DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection !Image 1: Paper !Image 2: Python !Image 3: PyTorch This repository provides the official implementation of the paper: Tongfei Liu, Jianjian Xu, Tao Lei, Yingbo Wang, Xiaogang Du, Zhiyong Lv. DGKAN: Dual-branch Graph Kolmogorov-Arnold Network for Unsupervised Multimodal Change Detection [C]. __Proceedings of the AAAI Conference on Artificial Intelligence__, 2026, 40(9), 7278-7286. https://doi.org/10.1609/aaai.v40i9.37665 ## 📖 Abstract Multimodal change detection (MCD) has important applications in disaster assessment, but the nonlinear distortion of features and spatial misalignment caused by sensor imaging differences make it difficult to obtain changes through direct comparison. To overcome the above problems, this study aims to realize MCD by capturing the modality-indepen...",
+          "publishDate": "2026-07-04",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-07-05T05:09:32.411Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-439348b87abd",
@@ -69,7 +253,7 @@
       "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-04T04:54:20.825Z",
+      "updatedAt": "2026-07-05T05:09:04.304Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -110,60 +294,51 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "id": "unofficial-c063d8056da2",
+      "title": "Latent Collaboration in Multi-Agent Systems",
+      "summary": "Discovery evidence found an explicit ICML 2026 paper signal for Latent Collaboration in Multi-Agent Systems; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确标注该论文被ICML 2026会议接收",
+      "primaryUrl": "https://github.com/orgs/Gen-Verse/repositories?type=all",
+      "canonicalUrl": "https://github.com/orgs/Gen-Verse/repositories?type=all",
       "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
+      "sourceId": "unofficial-c063d8056da2",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
+      "confidence": 0.9166666666666666,
+      "acceptedVenue": "ICML 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-04T04:53:34.852Z",
+      "discoveredAt": "2026-07-04T04:50:02.548Z",
+      "updatedAt": "2026-07-05T05:08:43.640Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
         "reasoning",
-        "conversation",
-        "recommendation"
+        "post-training",
+        "reinforcement learning"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "github",
         "web"
       ],
       "evidence": [
         {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
           "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
+          "url": "https://github.com/orgs/Gen-Verse/repositories?type=all",
+          "title": "Gen-Verse repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search 13 repositories Last pushed Comfortable display density Compact display density LatentMAS Public Gen-Verse/LatentMAS’s past year of activity [ICML 2026 Spotlight] Latent Collaboration in Multi-Agent Systems multi-agent-systems continuous-reasoning latent-space-model + 3 multi-agent-systems continuous-reasoning latent-space-model large-language-models model-collaboration latent-reasoning Python • Apache License 2.0 • 158 158...",
+          "readerTitle": "Gen-Verse",
+          "readerExcerpt": "## Repositories list - [ICML 2026 Spotlight] Latent Collaboration in Multi-Agent Systems Python • • 160 • 1k • 14 • 3 •Updated Jun 18, 2026 Jun 18, 2026 - RLAnything (ICML 2026) & AutoTool (ICML 2026), DemyAgent: Open-Source RL for LLMs and Agentic Scenarios Python • • 57 • 565 • 7 • 2 •Updated Jun 12, 2026 Jun 12, 2026 - OpenClaw-RL: Train any agent simply by talking Python • • 601 • 5.5k • 50 • 20 •Updated May 23, 2026 May 23, 2026 - MMaDA - Open-Sourced Multimodal Large Diffusion Language Models (dLLMs with block diffusion, mixed-CoT, unified RL) Python • • 89 • 1.7k • 45 • 1 •Updated Feb 14, 2026 Feb 14, 2026 - [ICLR 2026] Official for TraceRL: Revolutionizing post-training for Diffusion LLMs, powering the SOTA TraDo series. Python • • 43 • 509 • 24 • 1 •Updated Jan 28, 2026 Jan 28, 2026 - GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators Python...",
+          "publishDate": "2026-06-06",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-da46064001be",
@@ -205,51 +380,6 @@
           "readerTitle": "GitHub - ControlNet/MATA: [ICLR 2026] MATA: A Trainable Hierarchical Automaton System for Multi-Agent Visual Reasoning",
           "readerExcerpt": "!Image 1 !Image 2 !Image 3 !Image 4 !Image 5 __This repo is the official implementation for the paper MATA: A Trainable Hierarchical Automaton System for Multi-Agent Visual Reasoning, accepted at ICLR 2026.__ MATA (Multi-Agent hierarchical Trainable Automaton) formulates visual reasoning as a hierarchical finite-state automaton. A trainable hyper agent learns high-level transitions across collaborating and competing agents, while each agent executes a small rule-based sub-automaton for reliable micro-control. This design provides transparent execution traces and strong performance on complex visual reasoning benchmarks. ## News - [2026/02] MATA is accepted at ICLR 2026. ## Abstract Recent vision-language models have strong perceptual ability but their implicit reasoning is hard to explain and easily generates hallucinations on complex queries. Compositional methods improve interpretab...",
           "publishDate": "2026-06-05",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-ff928ad79571",
-      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
-      "summary": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
-      "reason": "GitHub项目标题明确标注为[ICLR 2026]，表明该论文已被ICLR 2026会议接受。",
-      "primaryUrl": "https://github.com/scientific-discovery/llema-project",
-      "canonicalUrl": "https://github.com/scientific-discovery/llema-project",
-      "pdfUrl": "",
-      "sourceId": "unofficial-ff928ad79571",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-02T05:10:08.059Z",
-      "updatedAt": "2026-07-03T05:06:24.641Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "agent",
-        "rag"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/scientific-discovery/llema-project",
-          "title": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
-          "snippet": "Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. Key Features LLM-Guided Generation: Leverages scientific know...",
-          "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
-          "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use...",
-          "publishDate": "2026-06-11",
           "query": ""
         }
       ],

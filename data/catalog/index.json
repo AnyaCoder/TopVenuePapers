@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-05T05:08:47.055Z",
-  "count": 11813,
+  "generatedAt": "2026-07-06T05:31:18.056Z",
+  "count": 11815,
   "guidedCount": 101,
   "venueYearCount": 10,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 16
+      "count": 18
     }
   ],
   "notes": [
@@ -46,7 +46,7 @@
       "key": "2026-aaai-2026-main",
       "venue": "AAAI 2026 Main",
       "year": 2026,
-      "count": 1,
+      "count": 2,
       "path": "data/catalog/shards/2026-aaai-2026-main.json"
     },
     {
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 9,
+      "count": 10,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -100485,6 +100485,49 @@
       "hasAbstract": true
     },
     {
+      "id": "unofficial-0d6ade5f439c",
+      "title": "Breaking Model Lock-in: Cost-Efficient Zero-Shot LLM Routing via a Universal Latent Space To appear in the proceedings of the 40th AAAI Conference on Artificial Intelligence .",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "AAAI 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "efficiency-systems",
+      "categories": [
+        "efficiency-systems",
+        "agents-tool-use"
+      ],
+      "keywords": [
+        "llm",
+        "agent",
+        "AAAI 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/Codeffun3/ZeroRouter",
+      "tldr": "提出了一种通过通用潜在空间实现成本高效的零样本LLM路由方法",
+      "aliases": [
+        "unofficial-0d6ade5f439c"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-0d6ade5f439c",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "AAAI 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.723Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-aaai-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
       "id": "unofficial-5ffdae82dc19",
       "title": "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting\".",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -101039,6 +101082,53 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-17T06:28:13.053Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-9e667c422352",
+      "title": "UR2: Unified RAG and Reasoning through Reinforcement Learning",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "reasoning",
+      "categories": [
+        "reasoning",
+        "rl-post-training",
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "llm",
+        "reasoning",
+        "rag",
+        "reinforcement learning",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/Tsinghua-dhy/UR2",
+      "pdfUrl": "https://arxiv.org/abs/2508.06165",
+      "tldr": "UR2是一个通过强化学习统一检索增强生成和推理的通用框架，适用于数学推理、医疗问答和通用领域任务。",
+      "aliases": [
+        "unofficial-9e667c422352"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-9e667c422352",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-06T05:23:28.730Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
@@ -270852,7 +270942,7 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/scientific-discovery/llema-project",
-      "tldr": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
+      "tldr": "利用LLM引导的进化搜索加速材料设计的统一框架",
       "aliases": [
         "unofficial-ff928ad79571"
       ],
