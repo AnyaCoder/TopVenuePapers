@@ -1,11 +1,123 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-06T05:31:14.961Z",
+  "generatedAt": "2026-07-07T05:06:36.377Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-07-06T05:32:25.890Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-07-06T05:31:48.689Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
     {
       "id": "unofficial-ff928ad79571",
       "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
@@ -180,118 +292,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-05T05:09:32.411Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-05T05:09:04.304Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-c063d8056da2",
