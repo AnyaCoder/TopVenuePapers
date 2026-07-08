@@ -1,66 +1,149 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-07T05:06:36.377Z",
+  "generatedAt": "2026-07-08T04:39:01.723Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-764f5d5cb1ff",
+      "title": "ICLR2026_LoRA-As-Knowledge-Memory/README.md at main · anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory",
+      "summary": "一项关于将低秩适应（LoRA）作为大型语言模型参数化知识内存组件的系统性实证研究",
+      "reason": "GitHub README明确表明该论文已被ICLR 2026主会议接受，研究LoRA作为LLM知识内存组件",
+      "primaryUrl": "https://github.com/anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory/blob/main/README.md",
+      "canonicalUrl": "https://github.com/anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory/blob/main/README.md",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "sourceId": "unofficial-764f5d5cb1ff",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-06T05:32:25.890Z",
+      "discoveredAt": "2026-07-08T04:31:27.365Z",
+      "updatedAt": "2026-07-08T04:34:04.700Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
+        "large language model",
+        "llm",
+        "rag",
+        "document understanding"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "web",
-        "github"
+        "web"
       ],
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory/blob/main/README.md",
+          "title": "ICLR2026_LoRA-As-Knowledge-Memory/README.md at main · anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory · GitHub",
+          "snippet": "Files Expand file tree More file More file Latest 135 lines (101 loc) · 4.75 KB Breadcrumbs README.md Top File metadata and controls Preview Blame 135 lines (101 loc) · 4.75 KB Copy raw file Download raw file Outline Edit and raw This repository contains the anonymized implementation for the \"Understanding LoRA As Knowledge Memory\". This work presents a systematic and comprehensive empirical study of using Low-Rank Adaptation (LoRA) as a parametric knowledge memory component for Large Languag...",
+          "readerTitle": "ICLR2026_LoRA-As-Knowledge-Memory/README.md at main · anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory",
+          "readerExcerpt": "## Understanding LoRA As Knowledge Memory This repository contains the anonymized implementation for the \"Understanding LoRA As Knowledge Memory\". This work presents a systematic and comprehensive empirical study of using Low-Rank Adaptation (LoRA) as a parametric knowledge memory component for Large Language Models (LLMs). ## Overview This research explores LoRA's potential beyond task adaptation, investigating its use as a dedicated module for knowledge storage. The study addresses fundamental questions about LoRA's memory characteristics, optimization strategies, multi-module systems, and integration with existing methods like In-Context Learning (ICL) and Retrieval-Augmented Generation (RAG). ## Repository Structure ``` . ├── 0_prepare_base_model.py # Script to download and prepare base models ├── 1_GRID_SEARCH/ # Grid search experiments on LoRA rank and data size │ ├── train.py #...",
+          "publishDate": "2026-06-10",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-ff928ad79571",
+      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
+      "summary": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
+      "reason": "GitHub仓库标题明确标注为[ICLR 2026]，证明该论文已被ICLR 2026会议接受。",
+      "primaryUrl": "https://github.com/scientific-discovery/llema-project",
+      "canonicalUrl": "https://github.com/scientific-discovery/llema-project",
+      "pdfUrl": "",
+      "sourceId": "unofficial-ff928ad79571",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-02T05:10:08.059Z",
+      "updatedAt": "2026-07-08T04:31:48.408Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/scientific-discovery/llema-project",
+          "title": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
+          "snippet": "Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. Key Features LLM-Guided Generation: Leverages scientific know...",
+          "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
+          "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use...",
+          "publishDate": "2026-06-11",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-07-08T04:39:01.720Z",
+      "lastCheckedAt": "2026-07-08T04:39:01.720Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
     },
     {
       "id": "unofficial-7c457864ebdd",
@@ -78,7 +161,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-06T05:31:48.689Z",
+      "updatedAt": "2026-07-07T05:07:39.725Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -119,49 +202,60 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-ff928ad79571",
-      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
-      "summary": "利用LLM引导的进化搜索加速材料设计的统一框架",
-      "reason": "GitHub仓库明确标注为ICLR 2026论文",
-      "primaryUrl": "https://github.com/scientific-discovery/llema-project",
-      "canonicalUrl": "https://github.com/scientific-discovery/llema-project",
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
       "pdfUrl": "",
-      "sourceId": "unofficial-ff928ad79571",
+      "sourceId": "unofficial-439348b87abd",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-02T05:10:08.059Z",
-      "updatedAt": "2026-07-06T05:31:14.523Z",
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-07-07T05:07:11.232Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
+      "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "large language model",
-        "llm",
+        "multimodal",
         "agent",
-        "rag"
+        "report generation"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "web"
+        "web",
+        "github"
       ],
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/scientific-discovery/llema-project",
-          "title": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
-          "snippet": "Open more menu Folders and files Latest 74 74 static static .nojekyll .nojekyll README.md README.md index.html index.html View all files LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026) About LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. Key Features LLM-Guided Generation: Leverages scientific know...",
-          "readerTitle": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub",
-          "readerExcerpt": "GitHub - scientific-discovery/llema-project: [ICLR 2026] LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use...",
-          "publishDate": "2026-06-11",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
           "query": ""
         }
       ],
-      "evidenceCount": 1
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-9e667c422352",

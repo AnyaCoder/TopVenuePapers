@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-07T05:06:39.392Z",
-  "count": 11815,
+  "generatedAt": "2026-07-08T04:39:04.776Z",
+  "count": 11816,
   "guidedCount": 101,
-  "venueYearCount": 10,
+  "venueYearCount": 11,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 18
+      "count": 19
     }
   ],
   "notes": [
@@ -76,6 +76,13 @@
       "year": 2026,
       "count": 1,
       "path": "data/catalog/shards/2026-iclr-2026.json"
+    },
+    {
+      "key": "2026-iclr-2026-main",
+      "venue": "ICLR 2026 Main",
+      "year": 2026,
+      "count": 1,
+      "path": "data/catalog/shards/2026-iclr-2026-main.json"
     },
     {
       "key": "2026-iclr-2026-oral",
@@ -270942,7 +270949,7 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/scientific-discovery/llema-project",
-      "tldr": "利用LLM引导的进化搜索加速材料设计的统一框架",
+      "tldr": "LLEMA是一个通过LLM引导的进化搜索加速材料设计的统一框架。",
       "aliases": [
         "unofficial-ff928ad79571"
       ],
@@ -270959,6 +270966,50 @@
         "web"
       ],
       "shardKey": "2026-iclr-2026",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-764f5d5cb1ff",
+      "title": "ICLR2026_LoRA-As-Knowledge-Memory/README.md at main · anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICLR 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "rag-knowledge",
+      "categories": [
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "rag",
+        "document understanding",
+        "ICLR 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/anonymous-iclr2026-loramem/ICLR2026_LoRA-As-Knowledge-Memory/blob/main/README.md",
+      "tldr": "一项关于将低秩适应（LoRA）作为大型语言模型参数化知识内存组件的系统性实证研究",
+      "aliases": [
+        "unofficial-764f5d5cb1ff"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-764f5d5cb1ff",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICLR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.365Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-iclr-2026-main",
       "hasIntroZh": false,
       "hasAbstract": true
     },
