@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-09T05:15:52.294Z",
-  "count": 11815,
+  "generatedAt": "2026-07-10T05:10:06.090Z",
+  "count": 11816,
   "guidedCount": 101,
-  "venueYearCount": 10,
+  "venueYearCount": 11,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 18
+      "count": 19
     }
   ],
   "notes": [
@@ -69,6 +69,13 @@
       "year": 2026,
       "count": 4070,
       "path": "data/catalog/shards/2026-cvpr-2026.json"
+    },
+    {
+      "key": "2026-iclr-2026",
+      "venue": "ICLR 2026",
+      "year": 2026,
+      "count": 1,
+      "path": "data/catalog/shards/2026-iclr-2026.json"
     },
     {
       "key": "2026-iclr-2026-main",
@@ -270913,6 +270920,52 @@
       "guideStatus": "pending",
       "sourceType": "official",
       "shardKey": "2026-cvpr-2026",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-ff928ad79571",
+      "title": "LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICLR 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "agents-tool-use",
+      "categories": [
+        "agents-tool-use",
+        "rag-knowledge",
+        "scientific-discovery"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "rag",
+        "ICLR 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/scientific-discovery/llema-project",
+      "tldr": "利用LLM引导的进化搜索加速材料设计的统一框架",
+      "aliases": [
+        "unofficial-ff928ad79571"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-ff928ad79571",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-02T05:10:08.059Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-iclr-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },
