@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-11T04:29:06.124Z",
-  "count": 11816,
+  "generatedAt": "2026-07-12T04:44:00.759Z",
+  "count": 11817,
   "guidedCount": 101,
   "venueYearCount": 11,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 19
+      "count": 20
     }
   ],
   "notes": [
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 10,
+      "count": 11,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -101089,6 +101089,54 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-17T06:28:13.053Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-dbf6480015e9",
+      "title": "Underspecification-QA-conf-paper/ACL 2026_Find_4000.pdf at main · franzyellow/Underspecification-QA-conf-paper",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "reasoning"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "reasoning",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Yunchong Huang",
+        "Gianni Barlacchi",
+        "Sandro Pezzelle"
+      ],
+      "openreviewUrl": "https://github.com/franzyellow/Underspecification-QA-conf-paper/blob/main/ACL%25202026_Find_4000.pdf",
+      "pdfUrl": "https://github.com/franzyellow/Underspecification-QA-conf-paper/blob/main/ACL%25202026_Find_4000.pdf",
+      "tldr": "研究如何检测和重写 underspecified 问题以提高问答性能",
+      "aliases": [
+        "unofficial-dbf6480015e9"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-dbf6480015e9",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-12T04:37:19.597Z",
       "evidenceCount": 1,
       "platforms": [
         "web"

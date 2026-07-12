@@ -1,73 +1,110 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-11T04:29:03.473Z",
+  "generatedAt": "2026-07-12T04:43:57.684Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "id": "unofficial-dbf6480015e9",
+      "title": "Underspecification-QA-conf-paper/ACL 2026_Find_4000.pdf at main · franzyellow/Underspecification-QA-conf-paper",
+      "summary": "研究如何检测和重写 underspecified 问题以提高问答性能",
+      "reason": "GitHub 页面明确显示论文被 ACL 2026 接受，标题为 'Underspecification-QA-conf-paper/ACL 2026_Find_4000.pdf at main · franzyellow/Underspecification-QA-conf-paper'",
+      "primaryUrl": "https://github.com/franzyellow/Underspecification-QA-conf-paper/blob/main/ACL%25202026_Find_4000.pdf",
+      "canonicalUrl": "https://github.com/franzyellow/Underspecification-QA-conf-paper",
+      "pdfUrl": "https://github.com/franzyellow/Underspecification-QA-conf-paper/blob/main/ACL%25202026_Find_4000.pdf",
+      "sourceId": "unofficial-dbf6480015e9",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-10T05:11:23.612Z",
+      "discoveredAt": "2026-07-12T04:37:19.597Z",
+      "updatedAt": "2026-07-12T04:43:57.243Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [
+        "Yunchong Huang",
+        "Gianni Barlacchi",
+        "Sandro Pezzelle"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/franzyellow/Underspecification-QA-conf-paper/blob/main/ACL%25202026_Find_4000.pdf",
+          "title": "Underspecification-QA-conf-paper/ACL 2026_Find_4000.pdf at main · franzyellow/Underspecification-QA-conf-paper · GitHub",
+          "snippet": "Skip to content Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Exp...",
+          "readerTitle": "franzyellow/Underspecification-QA-conf-paper README",
+          "readerExcerpt": "# Who is the richest club in the championship? ## Detecting and Rewriting Underspecified Questions Improve QA Performance **Yunchong Huang¹, Gianni Barlacchi²\\*, Sandro Pezzelle¹** ¹ ILLC, University of Amsterdam &nbsp;|&nbsp; ² Amazon AGI &nbsp;|&nbsp; \\*Work done outside Amazon *ACL 2026* --- ## Overview Large language models (LLMs) are routinely blamed for QA failures that are not actually their fault. This paper argues that a key but overlooked culprit is **underspecification (UND)**: questions whose intended meaning *cannot be uniquely determined* without additional context. > **Example.** \"Who is the richest club in the championship?\" — Which championship? Richest by what metric? As of when? > > GPT-4o (no context) → ~~Leicester City~~ ✗ > After rewriting to a fully-specified form → **Manchester City** ✓ We show that UND is widespread in standard QA benchmarks, that LLMs consist...",
+          "publishDate": "2026-07-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-59ed2db61e9b",
+      "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确标注为ACL 2026 Oral论文，包含项目页面、论文、数据集和评估代码",
+      "primaryUrl": "https://github.com/jacklanda/SemanticQA",
+      "canonicalUrl": "https://github.com/jacklanda/SemanticQA",
+      "pdfUrl": "",
+      "sourceId": "unofficial-59ed2db61e9b",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-12T04:37:19.595Z",
+      "updatedAt": "2026-07-12T04:41:10.886Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
+        "reasoning",
+        "benchmark",
+        "llm"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "web",
-        "github"
+        "web"
       ],
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/jacklanda/SemanticQA",
+          "title": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models · GitHub",
+          "snippet": "Latest 48 48 .github/ workflows .github/ workflows resources resources scripts scripts semantic_qa semantic_qa .gitignore .gitignore LICENSE LICENSE README.md README.md environment.yml environment.yml poster.pdf poster.pdf slides.pdf slides.pdf View all files More items SemanticQA Slides Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
+          "readerTitle": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models",
+          "readerExcerpt": "Project Page • Paper (arXiv) • Data (Hugging Face) • Evals (GitHub) • Slides • Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. ## Supported Tasks SemanticQA supports 19 tasks across four phrase types, including 6 sequential (multi-step) tasks. | Task | Abbr. | Eval Metrics | Phrase Type | | --- | --- | --- | --- | | Idiomatic Expression Detection | IED | MCQ Accuracy | Idiom | | Idiomatic Expression Extraction | IEE | Exact Match | Idiom | | Idiomatic Expression Interpretation | IEI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Idiom | | Noun Compound Compositionality | NCC | MCQ Accuracy | Noun Compound | | Noun Compound Extraction | NCE | Exact Match | Noun Compound | | Noun Compound Interpretation | NCI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Noun Compound | | Lexical Collocation Categorization | LCC | A...",
+          "publishDate": "2026-07-11",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
       "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收，论文标题为'ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation'。",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收，证据充分。",
       "primaryUrl": "https://github.com/DongdingLin/SiPeR",
       "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
       "pdfUrl": "",
@@ -78,7 +115,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-10T05:10:34.030Z",
+      "updatedAt": "2026-07-11T04:29:58.752Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -119,6 +156,62 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-07-11T04:29:35.013Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
       "id": "unofficial-c264154ef7de",
       "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
       "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -133,8 +226,8 @@
       "acceptedVenue": "ICLR 2026 Poster",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-07-11T04:29:03.471Z",
-      "lastCheckedAt": "2026-07-11T04:29:03.471Z",
+      "updatedAt": "2026-07-12T04:43:57.682Z",
+      "lastCheckedAt": "2026-07-12T04:43:57.682Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
