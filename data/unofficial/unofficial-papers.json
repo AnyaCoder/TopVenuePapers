@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T04:18:42.602Z",
+  "generatedAt": "2026-07-15T04:21:37.453Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
@@ -22,7 +22,7 @@
       "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-14T04:20:54.924Z",
+      "updatedAt": "2026-07-15T04:22:51.088Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -63,6 +63,139 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-07-15T04:21:29.290Z",
+      "lastCheckedAt": "2026-07-15T04:21:29.289Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-d15ffb417074",
+      "title": "__EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts__ >",
+      "summary": "该论文提出了一种基于超双曲混合曲率专家的多模态学习方法，已被ICML 2026会议接受。",
+      "reason": "GitHub仓库明确标注论文被ICML 2026会议接受，并提供了完整的论文信息。",
+      "primaryUrl": "https://github.com/zhourunhe/EEG-MoCE",
+      "canonicalUrl": "https://github.com/zhourunhe/EEG-MoCE",
+      "pdfUrl": "",
+      "sourceId": "unofficial-d15ffb417074",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-15T04:17:03.702Z",
+      "updatedAt": "2026-07-15T04:21:28.861Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhourunhe/EEG-MoCE",
+          "title": "GitHub - zhourunhe/EEG-MoCE: [ICML 2026] EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts · GitHub",
+          "snippet": "zhourunhe/EEG-MoCE Open more menu Folders and files Latest 3 3 Geometry Geometry lib lib nets nets pic pic CBCR License.txt CBCR License.txt README.md README.md environment.yaml environment.yaml -Multimodal.py -Multimodal.py setup.py setup.py View all files More items This is the PyTorch implementation of the EEG-MoCE in our paper: EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts Runhe Zhou, Shanglin Li, Guanxiang Huang, Xinliang Zhou, Qibin Zhao, Motoaki Kawanabe, Yi...",
+          "readerTitle": "GitHub - zhourunhe/EEG-MoCE: [ICML 2026] EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts",
+          "readerExcerpt": "This is the PyTorch implementation of the EEG-MoCE in our paper: > __EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts__ > Runhe Zhou, Shanglin Li, Guanxiang Huang, Xinliang Zhou, Qibin Zhao, Motoaki Kawanabe, Yi Ding, Cuntai Guan > _International Conference on Machine Learning (ICML), 2026_ ## Dataset This is the implementation of EEG-MoCE for emotion recognition using the __EAV Dataset__. For more information about the dataset, please refer to: - GitHub repository: https://github.com/nubcico/EAV - Paper: Lee et al. (2024). EAV: EEG-Audio-Video Dataset for Emotion Recognition in Conversational Contexts. _Scientific Data_, 11, 1026. This study incorporates trials with all three synchronized modalities (EEG, audio, and video) from 42 subjects. ## Installation ### Environment Setup Create and activate the conda environment: ``` conda env create -f environment.yam...",
+          "publishDate": "2026-07-13",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-0d7e15e1a0f8",
+      "title": "- Transfer the compute # DECO: Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile Adapter # Quick start Example",
+      "summary": "发现页在公开页面中识别到 ICML 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 paper signal for - Transfer the compute # DECO: Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile Adapter # Quick start Example; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/BAAI-Humanoid/DECO",
+      "canonicalUrl": "https://github.com/BAAI-Humanoid/DECO",
+      "pdfUrl": "",
+      "sourceId": "unofficial-0d7e15e1a0f8",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-15T04:17:03.700Z",
+      "updatedAt": "2026-07-15T04:17:03.700Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "multimodal"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/BAAI-Humanoid/DECO",
+          "title": "GitHub - BAAI-Humanoid/DECO: [ICML2026] Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile",
+          "snippet": "Latest 6 6 assets assets config config deploy deploy models models utils utils LICENSE LICENSE README.MD README.MD dataset.py dataset.py inference.py inference.py requirements.txt requirements.txt train.py train.py View all files More items DECO: Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile Adapter Quick start Example 1. Installation The is tested on python3.10 and pytorch2.6, cuda12.4. pip install -r requirements.txt 2. Prepare for Data...",
+          "readerTitle": "GitHub - BAAI-Humanoid/DECO: [ICML2026] Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile Adapter",
+          "readerExcerpt": "!Image 1 !Image 2 !Image 3 !Image 4 ## Quick start Example ## 1. Installation The is tested on python3.10 and pytorch2.6, cuda12.4. ``` pip install -r requirements.txt ``` ## 2. Prepare for Dataset ### Using the DECO-50 Dataset - Download the dataset ``` hf download BAAI-Humanoid/DECO-50 --repo-type dataset --local-dir ./ ``` - Batch unzip files __Click to expand full command for unzip__ ``` #!/usr/bin/env bash set -euo pipefail SRC_ROOT=\"./BAAI-Humanoid/DECO-50\" DST_ROOT=\"./BAAI-Humanoid/DECO-50-unpack\" PARALLEL_JOBS=8 mkdir -p \"$DST_ROOT\" unpack_one() { tar_file=\"$1\" rel=\"${tar_file#$SRC_ROOT/}\" rel_dir=\"${rel%.tar.gz}\" out_dir=\"$DST_ROOT/$rel_dir\" if [[ -d \"$out_dir\" ]]; then echo \"Skip existing $rel_dir\" return fi mkdir -p \"$(dirname \"$out_dir\")\" echo \"Unpacking $rel_dir\" tar -xzf \"$tar_file\" -C \"$(dirname \"$out_dir\")\" } export -f unpack_one export SRC_ROOT DST_ROOT find \"$SRC_ROO...",
+          "publishDate": "2026-07-13",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
@@ -81,7 +214,7 @@
       "updatedAt": "2026-07-14T04:19:49.714Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
@@ -117,55 +250,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
-      "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-07-14T04:18:36.098Z",
-      "lastCheckedAt": "2026-07-14T04:18:36.098Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "agent",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
     },
     {
       "id": "unofficial-59ed2db61e9b",
