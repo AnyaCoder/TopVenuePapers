@@ -3,8 +3,8 @@
   "model": "Xenova/all-MiniLM-L6-v2",
   "task": "feature-extraction",
   "catalog": "data/papers.catalog.json",
-  "catalogGeneratedAt": "2026-07-15T04:21:32.327Z",
-  "count": 11819,
+  "catalogGeneratedAt": "2026-07-16T04:28:22.169Z",
+  "count": 11818,
   "dimensions": 384,
   "normalized": true,
   "chunkRows": 512,
@@ -11826,7 +11826,6 @@
     "zerosiam-an-efficient-asymmetry-for-test-time-entropy-optimization-without-colla",
     "zerotuning-unlocking-the-initial-token-s-power-to-enhance-large-language-models-",
     "unofficial-4e50c4d34e55",
-    "unofficial-d15ffb417074",
     "unofficial-12f91b27ac25"
   ],
   "fingerprints": [
@@ -23647,7 +23646,6 @@
     "6c5e2e61e2a1b9c30ca143fc403169c06bd1c184",
     "4584593db81955d9dbf4f3db31bf3b6851ab7008",
     "01c70997129cf9c589f590fb2e7696986b6ba449",
-    "53843bdd76240d619614cf96a3613869f9bfbb56",
     "9e7feceaba4efaa9c06624c31acf4dffab836769"
   ],
   "chunks": [
@@ -24029,11 +24027,11 @@
       "year": 2026,
       "part": 1,
       "offset": 11817,
-      "count": 2,
+      "count": 1,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-icml-2026-main.001.f32.bin",
-      "bytes": 3072,
-      "fingerprint": "0be7d89e408bf24987c819c605c973d3e9104e75"
+      "bytes": 1536,
+      "fingerprint": "80d3d9b537df8091e889a4f59f7626556448a1fd"
     }
   ]
 }
