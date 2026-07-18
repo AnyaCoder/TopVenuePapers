@@ -1,66 +1,192 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T04:23:42.506Z",
+  "generatedAt": "2026-07-18T04:23:41.563Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收，证据充分。",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "id": "unofficial-54ab90da4db9",
+      "title": "Reasoning Within the Mind: Dynamic Multimodal Interleaving in Latent Space",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "GitHub仓库明确标注为CVPR 2026论文官方代码库",
+      "primaryUrl": "https://github.com/eric-ai-lab/DMLR",
+      "canonicalUrl": "https://github.com/eric-ai-lab/DMLR",
       "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
+      "sourceId": "unofficial-54ab90da4db9",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-16T04:30:50.406Z",
+      "discoveredAt": "2026-07-18T04:13:29.656Z",
+      "updatedAt": "2026-07-18T04:20:29.943Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
         "reasoning",
-        "conversation",
-        "recommendation"
+        "reinforcement learning"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "github",
         "web"
       ],
       "evidence": [
         {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
           "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
+          "url": "https://github.com/eric-ai-lab/DMLR",
+          "title": "GitHub - UCSB-AI/DMLR: [CVPR2026] Official codebase for the paper \"Reasoning Within the Mind: Dynamic Multimodal Interleaving in Latent",
+          "snippet": "Latest 12 12 DMLR DMLR asset asset data data script script .gitignore .gitignore LICENSE LICENSE Readme.md Readme.md .py .py requirements.txt requirements.txt View all files More items This repository implements DMLR (Dynamic Multimodal Interleaving Latent Reasoning), a method for improving vision-language model reasoning through latent space optimization. The system uses reinforcement learning to optimize \"thought tokens\" that enhance the model's reasoning capabilities on multimodal tasks. C...",
+          "readerTitle": "GitHub - eric-ai-lab/DMLR: [CVPR2026] Official codebase for the paper \"Reasoning Within the Mind: Dynamic Multimodal Interleaving in Latent Space\"",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: Project Page This repository implements __DMLR__ (Dynamic Multimodal Interleaving Latent Reasoning), a method for improving vision-language model reasoning through latent space optimization. The system uses reinforcement learning to optimize \"thought tokens\" that enhance the model's reasoning capabilities on multimodal tasks. !Image 3: DMLR Framework _Comparison between DMLR and two reasoning paradigms. (A) Text-only reasoning: relies solely on explicit CoT, often causing visual grounding errors and redundant steps. (B) Think-with-Image reasoning: depends on external perception tools, leading to unstable tool calls and extra overhead. (C) DMLR (ours): refines latent think tokens in the latent space through confidence-guided optimization and dynamically injects visual information, achieving self-improving reasoning without additional training while maintaining...",
+          "publishDate": "2026-07-16",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-59ed2db61e9b",
+      "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/jacklanda/SemanticQA",
+      "canonicalUrl": "https://github.com/jacklanda/SemanticQA",
+      "pdfUrl": "",
+      "sourceId": "unofficial-59ed2db61e9b",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-12T04:37:19.595Z",
+      "updatedAt": "2026-07-18T04:13:29.659Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "benchmark",
+        "llm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/jacklanda/SemanticQA",
+          "title": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models · GitHub",
+          "snippet": "Latest 48 48 .github/ workflows .github/ workflows resources resources scripts scripts semantic_qa semantic_qa .gitignore .gitignore LICENSE LICENSE README.md README.md environment.yml environment.yml poster.pdf poster.pdf slides.pdf slides.pdf View all files More items SemanticQA Slides Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
+          "readerTitle": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models",
+          "readerExcerpt": "Project Page • Paper (arXiv) • Data (Hugging Face) • Evals (GitHub) • Slides • Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. ## Supported Tasks SemanticQA supports 19 tasks across four phrase types, including 6 sequential (multi-step) tasks. | Task | Abbr. | Eval Metrics | Phrase Type | | --- | --- | --- | --- | | Idiomatic Expression Detection | IED | MCQ Accuracy | Idiom | | Idiomatic Expression Extraction | IEE | Exact Match | Idiom | | Idiomatic Expression Interpretation | IEI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Idiom | | Noun Compound Compositionality | NCC | MCQ Accuracy | Noun Compound | | Noun Compound Extraction | NCE | Exact Match | Noun Compound | | Noun Compound Interpretation | NCI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Noun Compound | | Lexical Collocation Categorization | LCC | A...",
+          "publishDate": "2026-07-16",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-1948951b5bb9",
+      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
+      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
+      "pdfUrl": "",
+      "sourceId": "unofficial-1948951b5bb9",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Oral",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-18T04:13:29.657Z",
+      "updatedAt": "2026-07-18T04:23:41.561Z",
+      "lastCheckedAt": "2026-07-18T04:23:41.561Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Cominclip/OmniVerifier",
+          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
+          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
+          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
+          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
+          "publishDate": "2026-07-16",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
+        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+        "venue": "ICLR 2026 Oral"
+      }
+    },
+    {
+      "id": "unofficial-b125c27220c5",
+      "title": "。 贡献说明 欢迎贡献内容,也欢迎通过 issue 或Pull Request 提交补充与修正。 已支持会议 会议 2019 2020 2021 2022 2023 2024 2025 2026 ACL 2019 2020 2021 2022 2023 2024 2025 - EMNLP 2019 2020 2021 2022 2023 2024 2025 - NAACL 2019 - 2021 2022 - 2024 2025 - C",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 paper signal for 。 贡献说明 欢迎贡献内容,也欢迎通过 issue 或Pull Request 提交补充与修正。 已支持会议 会议 2019 2020 2021 2022 2023 2024 2025 2026 ACL 2019 2020 2021 2022 2023 2024 2025 - EMNLP 2019 2020 2021 2022 2023 2024 2025 - NAACL 2019 - 2021 2022 - 2024 2025 - C; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/MLNLP-World/Top-AI-Conferences-Paper-with-Code",
+      "canonicalUrl": "https://github.com/MLNLP-World/Top-AI-Conferences-Paper-with-Code",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b125c27220c5",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8055555555555556,
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-18T04:13:29.655Z",
+      "updatedAt": "2026-07-18T04:13:29.655Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/MLNLP-World/Top-AI-Conferences-Paper-with-Code",
+          "title": "GitHub - MLNLP-World/Top-AI-Conferences-Paper-with-Code: MLNLP:本仓库整理人工智能会议(如ACL、EMNLP、NAACL、COLING、AAAI、IJCAI、...",
+          "snippet": "Uh oh! There was an error while loading. Please reload this page . MLNLP-World/Top-AI-Conferences-Paper-with- Open more menu Folders and files Latest 168 168 AAAI AAAI ACL ACL COLING COLING EMNLP EMNLP ICLR ICLR ICML ICML IJCAI IJCAI NAACL NAACL NeurIPS NeurIPS pics pics .gitignore .gitignore README.md README.md View all files More items 动机 本仓库收集了 AI 顶会论文及其 开源代码资源 ,包括 ACL、EMNLP、NAACL、COLING、AAAI、IJCAI、ICLR、NeurIPS 和ICML 等会议。 众所周知,论文篇幅有限,通常很难覆盖全部实现细节。配套开源代码能提供更多可复现信息,也更方便后续跟进与复现。我们将这些论文整理出来,便于...",
+          "readerTitle": "GitHub - MLNLP-World/Top-AI-Conferences-Paper-with-Code: MLNLP：本仓库整理人工智能会议（如 ACL、EMNLP、NAACL、COLING、AAAI、IJCAI、ICLR、NeurIPS、ICML 等）中开源代码的论文。",
+          "readerExcerpt": "## Image 1 Top-AI-Conferences-Paper-with- !Image 2: version !Image 3: Status-building !Image 4: PRs-Welcome !Image 5: stars !Image 6: FORK !Image 7: ## Image 8 动机 本仓库收集了 AI 顶会论文及其 __开源代码资源__，包括 ACL、EMNLP、NAACL、COLING、AAAI、IJCAI、ICLR、NeurIPS 和 ICML 等会议。 众所周知，论文篇幅有限，通常很难覆盖全部实现细节。配套开源代码能提供更多可复现信息，也更方便后续跟进与复现。我们将这些论文整理出来，便于检索与参考。 ## Image 9 更新记录 - __2026.7.2__ 整理并更新 README，补充 `2026` 年份入口与中文说明。 - __2026.7.1__ 更新 ICLR 论文与代码整理，新增 ICLR2025 与 ICLR2026。 ## Image 10 贡献说明 欢迎贡献内容，也欢迎通过 issue 或 Pull Request 提交补充与修正。 ## Image 11 已支持会议 | 会议 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 | | --- | --- | --- | --- | --- | --- | --- | --- | --- | | ACL | 2019 | 2020 | 2021 | 2022 | 2023 Top-AI-Conferences-Paper-with- ## 动机 本仓库收集了 AI 顶会论文及其 **开源代码资源**，包括 ACL、EMNLP、NAACL、COLING、AAAI、IJCAI、ICLR、NeurIPS 和 ICML 等会议。 众所周知，论文篇幅有限，通常很难覆盖全部实现细节。配套开源代码能提供更多可复现信息，也更方便后续跟进与复现。我们将这些论文整理出来，便于检索与参考。 ## 更新记录 -...",
+          "publishDate": "2026-07-02",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-439348b87abd",
@@ -78,7 +204,7 @@
       "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-16T04:29:36.631Z",
+      "updatedAt": "2026-07-17T04:25:40.116Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -119,6 +245,62 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-07-17T04:24:40.207Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
       "id": "unofficial-c264154ef7de",
       "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
       "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -133,8 +315,8 @@
       "acceptedVenue": "ICLR 2026 Poster",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-07-17T04:23:42.504Z",
-      "lastCheckedAt": "2026-07-17T04:23:42.504Z",
+      "updatedAt": "2026-07-18T04:23:41.563Z",
+      "lastCheckedAt": "2026-07-18T04:23:41.563Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -249,50 +431,6 @@
           "readerTitle": "GitHub - BAAI-Humanoid/DECO: [ICML2026] Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile Adapter",
           "readerExcerpt": "!Image 1 !Image 2 !Image 3 !Image 4 ## Quick start Example ## 1. Installation The is tested on python3.10 and pytorch2.6, cuda12.4. ``` pip install -r requirements.txt ``` ## 2. Prepare for Dataset ### Using the DECO-50 Dataset - Download the dataset ``` hf download BAAI-Humanoid/DECO-50 --repo-type dataset --local-dir ./ ``` - Batch unzip files __Click to expand full command for unzip__ ``` #!/usr/bin/env bash set -euo pipefail SRC_ROOT=\"./BAAI-Humanoid/DECO-50\" DST_ROOT=\"./BAAI-Humanoid/DECO-50-unpack\" PARALLEL_JOBS=8 mkdir -p \"$DST_ROOT\" unpack_one() { tar_file=\"$1\" rel=\"${tar_file#$SRC_ROOT/}\" rel_dir=\"${rel%.tar.gz}\" out_dir=\"$DST_ROOT/$rel_dir\" if [[ -d \"$out_dir\" ]]; then echo \"Skip existing $rel_dir\" return fi mkdir -p \"$(dirname \"$out_dir\")\" echo \"Unpacking $rel_dir\" tar -xzf \"$tar_file\" -C \"$(dirname \"$out_dir\")\" } export -f unpack_one export SRC_ROOT DST_ROOT find \"$SRC_ROO...",
           "publishDate": "2026-07-13",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-59ed2db61e9b",
-      "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
-      "summary": "一个针对语言模型的语义推理基准测试，包含19个任务和四种短语类型。",
-      "reason": "GitHub仓库标题明确标注为[ACL 2026 Oral]，表明该论文已被ACL 2026主会议接受为口头报告。",
-      "primaryUrl": "https://github.com/jacklanda/SemanticQA",
-      "canonicalUrl": "https://github.com/jacklanda/SemanticQA",
-      "pdfUrl": "",
-      "sourceId": "unofficial-59ed2db61e9b",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-12T04:37:19.595Z",
-      "updatedAt": "2026-07-13T04:49:13.975Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "benchmark",
-        "llm"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/jacklanda/SemanticQA",
-          "title": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models · GitHub",
-          "snippet": "Latest 48 48 .github/ workflows .github/ workflows resources resources scripts scripts semantic_qa semantic_qa .gitignore .gitignore LICENSE LICENSE README.md README.md environment.yml environment.yml poster.pdf poster.pdf slides.pdf slides.pdf View all files More items SemanticQA Slides Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
-          "readerTitle": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models",
-          "readerExcerpt": "Project Page • Paper (arXiv) • Data (Hugging Face) • Evals (GitHub) • Slides • Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. ## Supported Tasks SemanticQA supports 19 tasks across four phrase types, including 6 sequential (multi-step) tasks. | Task | Abbr. | Eval Metrics | Phrase Type | | --- | --- | --- | --- | | Idiomatic Expression Detection | IED | MCQ Accuracy | Idiom | | Idiomatic Expression Extraction | IEE | Exact Match | Idiom | | Idiomatic Expression Interpretation | IEI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Idiom | | Noun Compound Compositionality | NCC | MCQ Accuracy | Noun Compound | | Noun Compound Extraction | NCE | Exact Match | Noun Compound | | Noun Compound Interpretation | NCI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Noun Compound | | Lexical Collocation Categorization | LCC | A...",
-          "publishDate": "2026-07-11",
           "query": ""
         }
       ],

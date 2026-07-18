@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-17T04:23:45.537Z",
+  "generatedAt": "2026-07-18T04:23:44.255Z",
   "count": 11818,
   "guidedCount": 101,
-  "venueYearCount": 11,
+  "venueYearCount": 12,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 12,
+      "count": 11,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -69,6 +69,13 @@
       "year": 2026,
       "count": 4070,
       "path": "data/catalog/shards/2026-cvpr-2026.json"
+    },
+    {
+      "key": "2026-cvpr-2026-main",
+      "venue": "CVPR 2026 Main",
+      "year": 2026,
+      "count": 1,
+      "path": "data/catalog/shards/2026-cvpr-2026-main.json"
     },
     {
       "key": "2026-iclr-2026",
@@ -100944,50 +100951,6 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-11T05:08:14.977Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ],
-      "shardKey": "2026-acl-2026-main",
-      "hasIntroZh": false,
-      "hasAbstract": true
-    },
-    {
-      "id": "unofficial-59ed2db61e9b",
-      "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "ACL 2026 Main",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "evaluation-benchmarks",
-      "categories": [
-        "evaluation-benchmarks",
-        "reasoning"
-      ],
-      "keywords": [
-        "reasoning",
-        "benchmark",
-        "llm",
-        "ACL 2026 Main",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/jacklanda/SemanticQA",
-      "tldr": "一个针对语言模型的语义推理基准测试，包含19个任务和四种短语类型。",
-      "aliases": [
-        "unofficial-59ed2db61e9b"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-59ed2db61e9b",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-12T04:37:19.595Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
@@ -271012,6 +270975,53 @@
       "guideStatus": "pending",
       "sourceType": "official",
       "shardKey": "2026-cvpr-2026",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-54ab90da4db9",
+      "title": "Reasoning Within the Mind: Dynamic Multimodal Interleaving in Latent Space",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "CVPR 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "rl-post-training",
+      "categories": [
+        "rl-post-training",
+        "mllm-foundations",
+        "reasoning"
+      ],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "reinforcement learning",
+        "CVPR 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/eric-ai-lab/DMLR",
+      "tldr": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "aliases": [
+        "unofficial-54ab90da4db9"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-54ab90da4db9",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-18T04:13:29.656Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-cvpr-2026-main",
       "hasIntroZh": false,
       "hasAbstract": true
     },
