@@ -1,66 +1,147 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T04:32:09.487Z",
+  "generatedAt": "2026-07-25T04:37:58.080Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "id": "unofficial-59ed2db61e9b",
+      "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
+      "summary": "SemanticQA是一个包含19个任务的语义推理基准测试，用于评估语言模型在多种短语类型和多步骤任务上的表现。",
+      "reason": "GitHub仓库标题明确标注为'[ACL 2026 Oral]'，证明该论文已被ACL 2026主会议接受并做口头报告。",
+      "primaryUrl": "https://github.com/jacklanda/SemanticQA",
+      "canonicalUrl": "https://github.com/jacklanda/SemanticQA",
       "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
+      "sourceId": "unofficial-59ed2db61e9b",
       "year": 2026,
       "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
+      "confidence": 0.78,
+      "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-07-23T04:42:44.020Z",
+      "discoveredAt": "2026-07-12T04:37:19.595Z",
+      "updatedAt": "2026-07-25T04:37:57.637Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
+        "reasoning",
+        "benchmark",
+        "llm"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "web",
-        "github"
+        "web"
       ],
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
+          "url": "https://github.com/jacklanda/SemanticQA",
+          "title": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models · GitHub",
+          "snippet": "Latest 48 48 .github/ workflows .github/ workflows resources resources scripts scripts semantic_qa semantic_qa .gitignore .gitignore LICENSE LICENSE README.md README.md environment.yml environment.yml poster.pdf poster.pdf slides.pdf slides.pdf View all files More items SemanticQA Slides Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
+          "readerTitle": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models",
+          "readerExcerpt": "Project Page • Paper (arXiv) • Data (Hugging Face) • Evals (GitHub) • Slides • Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. ## Supported Tasks SemanticQA supports 19 tasks across four phrase types, including 6 sequential (multi-step) tasks. | Task | Abbr. | Eval Metrics | Phrase Type | | --- | --- | --- | --- | | Idiomatic Expression Detection | IED | MCQ Accuracy | Idiom | | Idiomatic Expression Extraction | IEE | Exact Match | Idiom | | Idiomatic Expression Interpretation | IEI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Idiom | | Noun Compound Compositionality | NCC | MCQ Accuracy | Noun Compound | | Noun Compound Extraction | NCE | Exact Match | Noun Compound | | Noun Compound Interpretation | NCI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Noun Compound | | Lexical Collocation Categorization | LCC | A...",
+          "publishDate": "2026-07-23",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-feca96b0a985",
+      "title": "Knowledge: Bypassing Commercial LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search\".",
+      "summary": "发现页在公开页面中识别到 ICML 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 Main paper signal for Knowledge: Bypassing Commercial LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search\".; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Graph-COM/CKA-Agent",
+      "canonicalUrl": "https://github.com/Graph-COM/CKA-Agent",
+      "pdfUrl": "",
+      "sourceId": "unofficial-feca96b0a985",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-25T04:27:11.566Z",
+      "updatedAt": "2026-07-25T04:27:11.566Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Graph-COM/CKA-Agent",
+          "title": "GitHub - Graph-COM/CKA-Agent: [ICML 2026 & ICLR 2026 AIWILD] Official Implementation of the CKA-Agent, \"The Trojan Knowledge: Bypassing",
+          "snippet": "Uh oh! There was an error while loading. Please reload this page . Open more menu Folders and files Latest 12 12 assets assets config config data data defense defense evaluation evaluation methods methods model model utils utils .gitignore .gitignore LICENSE LICENSE README.md README.md .py .py run_experiment.sh run_experiment.sh View all files More items [ICML 2026 & ICLR 2026 AIWILD] CKA-Agent: Bypassing LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search 🛡️ Defense towards...",
+          "readerTitle": "GitHub - Graph-COM/CKA-Agent: Official Implementation of the CKA-Agent, \"The Trojan Knowledge: Bypassing Commercial LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search\".",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: Website !Image 3: GitHub !Image 4: Cite !Image 5: Python ## 🔥 Latest Results on Frontier Models (Dec 2025) CKA-Agent demonstrates consistent high attack success rates against the latest frontier models, including __GPT-5.2__, __Gemini-3.0-Pro__, and __Claude-Haiku-4.5__. The results are summarized below: | Model | HarmBench | | | | StrongREJECT | | | | | --- | --- | --- | --- | --- | --- | --- | --- | --- | | FS ↑ | PS ↑ | V ↓ | R ↓ | FS ↑ | PS ↑ | V ↓ | R ↓ | | __🟢 GPT-5.2__ | __0.889__ | 0.079 | 0.024 | 0.008 | __0.932__ | 0.056 | 0.006 | 0.006 | | __🟣 Gemini-3.0-Pro__ | __0.881__ | 0.087 | 0.000 | 0.032 | __0.951__ | 0.037 | 0.006 | 0.006 | | __🟠 Claude-Haiku-4.5__ | __0.960__ | 0.024 | 0.008 | 0.008 | __0.969__ | 0.025 | 0.006 | 0.000 | > __Metrics:__ FS = Full Success, PS = Partial Success, V = Vacuous, R = Refusal. Results collected in December 2025...",
+          "publishDate": "2026-07-23",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-3f222bfca759",
+      "title": "TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
+      "summary": "发现页在公开页面中识别到 COLM 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit COLM 2026 paper signal for TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/orgs/tianyi-lab/repositories",
+      "canonicalUrl": "https://github.com/orgs/tianyi-lab/repositories",
+      "pdfUrl": "",
+      "sourceId": "unofficial-3f222bfca759",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "COLM 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-25T04:27:11.562Z",
+      "updatedAt": "2026-07-25T04:27:11.562Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "world model"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/orgs/tianyi-lab/repositories",
+          "title": "tianyi-lab repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search 29 repositories Last pushed Comfortable display density Compact display density TSRouter Public template [COLM 2026] TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning Python • 0 0 forks • 4 4 stars • 0 0 • 0 0 • Updated Jul 13, 2026 Reflective_Masking Public Python • 0 0 forks • 4 4 stars • 1 1 issue • 0 0 • Updated Jun 22, 2026 Jun 22, 2026 SeeQ Public for \"self-evolving visual questioner (SeeQ)\" visual-q...",
+          "readerTitle": "Tianyi Lab",
+          "readerExcerpt": "## Repositories list - [COLM 2026] TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning Python • 0 • 7 • 0 • 0 •Updated Jul 13, 2026 Jul 13, 2026 - Python • 0 • 4 • 1 • 0 •Updated Jun 22, 2026 Jun 22, 2026 - for \"self-evolving visual questioner (SeeQ)\" Python • 1 • 1 • 0 • 0 •Updated Jun 17, 2026 Jun 17, 2026 - [ICML 2026 Oral] for \"Skip a Layer or Loop It? Learning Program-of-Layers in LLMs\" Python • 2 • 25 • 2 • 0 •Updated Jun 11, 2026 Jun 11, 2026 - [ICLR 2026] Fast-Slow Toolpath Agent with Subroutine Mining for Efficient Multi-turn Image Editing Jupyter Notebook • BSD 3-Clause \"New\" or \"Revised\" License • 2 • 33 • 1 • 0 •Updated May 30, 2026 May 30, 2026 - [ICML 2026] TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
+          "publishDate": "2026-07-13",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-7c457864ebdd",
@@ -78,7 +159,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-07-23T04:42:02.386Z",
+      "updatedAt": "2026-07-24T04:34:13.475Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -119,56 +200,60 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-1948951b5bb9",
-      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
-      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
       "pdfUrl": "",
-      "sourceId": "unofficial-1948951b5bb9",
+      "sourceId": "unofficial-439348b87abd",
       "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Oral",
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-07-24T04:32:09.485Z",
-      "lastCheckedAt": "2026-07-24T04:32:09.485Z",
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-07-24T04:33:09.883Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "llm",
         "multimodal",
-        "reasoning",
-        "rag",
-        "benchmark"
+        "agent",
+        "report generation"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
-        "web"
+        "web",
+        "github"
       ],
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Cominclip/OmniVerifier",
-          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
-          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
-          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
-          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
-          "publishDate": "2026-07-16",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
-        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-        "venue": "ICLR 2026 Oral"
-      }
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-c264154ef7de",
@@ -185,8 +270,8 @@
       "acceptedVenue": "ICLR 2026 Poster",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-07-24T04:32:09.486Z",
-      "lastCheckedAt": "2026-07-24T04:32:09.486Z",
+      "updatedAt": "2026-07-25T04:37:58.078Z",
+      "lastCheckedAt": "2026-07-25T04:37:58.077Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -234,8 +319,8 @@
       "acceptedVenue": "CVPR 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-07-24T04:32:09.486Z",
-      "lastCheckedAt": "2026-07-24T04:32:09.486Z",
+      "updatedAt": "2026-07-25T04:37:58.079Z",
+      "lastCheckedAt": "2026-07-25T04:37:58.079Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -266,29 +351,31 @@
       }
     },
     {
-      "id": "unofficial-59ed2db61e9b",
-      "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
-      "summary": "提出了一种针对语言模型的语义推理基准测试，包含19个任务和四种短语类型。",
-      "reason": "GitHub仓库标题明确标注为[ACL 2026 Oral]，证实论文已被ACL 2026主会议接受。",
-      "primaryUrl": "https://github.com/jacklanda/SemanticQA",
-      "canonicalUrl": "https://github.com/jacklanda/SemanticQA",
+      "id": "unofficial-1948951b5bb9",
+      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
+      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
       "pdfUrl": "",
-      "sourceId": "unofficial-59ed2db61e9b",
+      "sourceId": "unofficial-1948951b5bb9",
       "year": 2026,
-      "status": "accepted",
+      "status": "officially-published",
       "confidence": 0.78,
-      "acceptedVenue": "ACL 2026 Main",
+      "acceptedVenue": "ICLR 2026 Oral",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-12T04:37:19.595Z",
-      "updatedAt": "2026-07-23T04:38:15.535Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
+      "discoveredAt": "2026-07-18T04:13:29.657Z",
+      "updatedAt": "2026-07-25T04:37:58.079Z",
+      "lastCheckedAt": "2026-07-25T04:37:58.079Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
+        "llm",
+        "multimodal",
         "reasoning",
-        "benchmark",
-        "llm"
+        "rag",
+        "benchmark"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -298,16 +385,22 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/jacklanda/SemanticQA",
-          "title": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models · GitHub",
-          "snippet": "Latest 48 48 .github/ workflows .github/ workflows resources resources scripts scripts semantic_qa semantic_qa .gitignore .gitignore LICENSE LICENSE README.md README.md environment.yml environment.yml poster.pdf poster.pdf slides.pdf slides.pdf View all files More items SemanticQA Slides Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
-          "readerTitle": "GitHub - jacklanda/SemanticQA: [ACL 2026 Oral] Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models",
-          "readerExcerpt": "Project Page • Paper (arXiv) • Data (Hugging Face) • Evals (GitHub) • Slides • Poster The repository of the research project ``Revisiting a Pain in the Neck: A Semantic Reasoning Benchmark for Language Models''. ## Supported Tasks SemanticQA supports 19 tasks across four phrase types, including 6 sequential (multi-step) tasks. | Task | Abbr. | Eval Metrics | Phrase Type | | --- | --- | --- | --- | | Idiomatic Expression Detection | IED | MCQ Accuracy | Idiom | | Idiomatic Expression Extraction | IEE | Exact Match | Idiom | | Idiomatic Expression Interpretation | IEI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Idiom | | Noun Compound Compositionality | NCC | MCQ Accuracy | Noun Compound | | Noun Compound Extraction | NCE | Exact Match | Noun Compound | | Noun Compound Interpretation | NCI | ROUGE-L, BERTScore-F1, METEOR, BLEU | Noun Compound | | Lexical Collocation Categorization | LCC | A...",
-          "publishDate": "2026-07-20",
+          "url": "https://github.com/Cominclip/OmniVerifier",
+          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
+          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
+          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
+          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
+          "publishDate": "2026-07-16",
           "query": ""
         }
       ],
-      "evidenceCount": 1
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
+        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+        "venue": "ICLR 2026 Oral"
+      }
     },
     {
       "id": "unofficial-a4aa16fab051",
