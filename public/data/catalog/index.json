@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-26T04:40:51.682Z",
-  "count": 11820,
+  "generatedAt": "2026-07-27T05:02:32.768Z",
+  "count": 11821,
   "guidedCount": 101,
   "venueYearCount": 12,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 23
+      "count": 24
     }
   ],
   "notes": [
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 12,
+      "count": 13,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -100960,6 +100960,52 @@
       "hasAbstract": true
     },
     {
+      "id": "unofficial-85cea24fc2ed",
+      "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "rag-knowledge",
+        "efficiency-systems",
+        "vlm-understanding"
+      ],
+      "keywords": [
+        "llm",
+        "rag",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/ponytaill/HeteroCache",
+      "tldr": "提出了一种动态检索方法，用于长上下文大语言模型推理中的异构KV缓存压缩。",
+      "aliases": [
+        "unofficial-85cea24fc2ed"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-85cea24fc2ed",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-27T04:51:36.740Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
       "id": "unofficial-59ed2db61e9b",
       "title": "Neck: A Semantic Reasoning Benchmark for Language Models''. Supported Tasks SemanticQA supports 19 tasks across four phrase types, incl...",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -100983,7 +101029,7 @@
         "Unknown authors"
       ],
       "openreviewUrl": "https://github.com/jacklanda/SemanticQA",
-      "tldr": "SemanticQA是一个包含19个任务的语义推理基准测试，用于评估语言模型在多种短语类型和多步骤任务上的表现。",
+      "tldr": "一个针对语言模型的语义推理基准测试，包含19个任务和四种短语类型。",
       "aliases": [
         "unofficial-59ed2db61e9b"
       ],
