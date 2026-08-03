@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-02T04:46:51.717Z",
-  "count": 11820,
+  "generatedAt": "2026-08-03T04:53:42.469Z",
+  "count": 11823,
   "guidedCount": 101,
-  "venueYearCount": 12,
+  "venueYearCount": 13,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 23
+      "count": 26
     }
   ],
   "notes": [
@@ -60,8 +60,15 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 12,
+      "count": 13,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
+    },
+    {
+      "key": "2026-colm-2026",
+      "venue": "COLM 2026",
+      "year": 2026,
+      "count": 1,
+      "path": "data/catalog/shards/2026-colm-2026.json"
     },
     {
       "key": "2026-cvpr-2026",
@@ -116,7 +123,7 @@
       "key": "2026-icml-2026-main",
       "venue": "ICML 2026 Main",
       "year": 2026,
-      "count": 1,
+      "count": 2,
       "path": "data/catalog/shards/2026-icml-2026-main.json"
     }
   ],
@@ -101006,6 +101013,55 @@
       "hasAbstract": true
     },
     {
+      "id": "unofficial-28f9fab76345",
+      "title": "OLLMs: _Visual Interference_, where models show a bias towards visible text over auditory signals, causing them to hallucinate slide content that was never spoken. To address this",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "rl-post-training",
+        "mllm-foundations",
+        "audio-speech"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "multimodal",
+        "benchmark",
+        "reinforcement learning",
+        "speech recognition",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/isruihu/SlideASR-Bench",
+      "tldr": "VAPO提出了一种基于多模态大语言模型的端到端幻灯片增强语音识别方法，解决了视觉干扰问题。",
+      "aliases": [
+        "unofficial-28f9fab76345"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-28f9fab76345",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-02T04:38:48.070Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
       "id": "unofficial-45f2546551f9",
       "title": "Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -101293,6 +101349,57 @@
         "web"
       ],
       "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-3f222bfca759",
+      "title": "TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "COLM 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "mllm-foundations",
+      "categories": [
+        "mllm-foundations",
+        "evaluation-benchmarks",
+        "reasoning",
+        "rl-post-training"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "world model",
+        "COLM 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/orgs/tianyi-lab/repositories",
+      "tldr": "TSRBench是一个面向通用模型的多任务多模态时间序列推理基准测试",
+      "aliases": [
+        "unofficial-3f222bfca759"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-3f222bfca759",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "COLM 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-25T04:27:11.562Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-colm-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },
@@ -531888,6 +531995,51 @@
       "acceptedVenue": "ICML 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-09T05:18:17.759Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-icml-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-feca96b0a985",
+      "title": "Knowledge: Bypassing Commercial LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search\".",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICML 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "agents-tool-use",
+      "categories": [
+        "agents-tool-use",
+        "rag-knowledge",
+        "alignment-safety"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "agent",
+        "ICML 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/Graph-COM/CKA-Agent",
+      "tldr": "提出了一种名为CKA-Agent的方法，通过无害提示编织和自适应树搜索绕过商业大语言模型的防护机制。",
+      "aliases": [
+        "unofficial-feca96b0a985"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-feca96b0a985",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICML 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-25T04:27:11.566Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
