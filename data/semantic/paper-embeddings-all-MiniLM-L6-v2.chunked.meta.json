@@ -3,8 +3,8 @@
   "model": "Xenova/all-MiniLM-L6-v2",
   "task": "feature-extraction",
   "catalog": "data/papers.catalog.json",
-  "catalogGeneratedAt": "2026-08-03T04:53:42.469Z",
-  "count": 11823,
+  "catalogGeneratedAt": "2026-08-04T04:37:00.859Z",
+  "count": 11824,
   "dimensions": 384,
   "normalized": true,
   "chunkRows": 512,
@@ -11830,6 +11830,7 @@
     "zerotuning-unlocking-the-initial-token-s-power-to-enhance-large-language-models-",
     "unofficial-4e50c4d34e55",
     "unofficial-236454b251e7",
+    "unofficial-a187d3b97138",
     "unofficial-12f91b27ac25",
     "unofficial-feca96b0a985"
   ],
@@ -23655,6 +23656,7 @@
     "4584593db81955d9dbf4f3db31bf3b6851ab7008",
     "01c70997129cf9c589f590fb2e7696986b6ba449",
     "054aff3e2138e9e22c6de0dbaf18f27090188230",
+    "18aba6f861bbbf66cb3dfc760d1a66f52ab4fae6",
     "9e7feceaba4efaa9c06624c31acf4dffab836769",
     "7481b8328253187154866fe62cfdc583466fc419"
   ],
@@ -24061,11 +24063,11 @@
       "year": 2026,
       "part": 1,
       "offset": 11821,
-      "count": 2,
+      "count": 3,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-icml-2026-main.001.f32.bin",
-      "bytes": 3072,
-      "fingerprint": "6ed5c286c10bb7c5d1216b02aa585df03230f922"
+      "bytes": 4608,
+      "fingerprint": "46cb025e1943f1bd3a89faef3991247a3c4d2a4e"
     }
   ]
 }
