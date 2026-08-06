@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-05T04:38:29.725Z",
-  "count": 11825,
+  "generatedAt": "2026-08-06T04:39:47.606Z",
+  "count": 11826,
   "guidedCount": 101,
   "venueYearCount": 13,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 28
+      "count": 29
     }
   ],
   "notes": [
@@ -88,7 +88,7 @@
       "key": "2026-iclr-2026",
       "venue": "ICLR 2026",
       "year": 2026,
-      "count": 1,
+      "count": 2,
       "path": "data/catalog/shards/2026-iclr-2026.json"
     },
     {
@@ -271220,6 +271220,52 @@
         "web"
       ],
       "shardKey": "2026-cvpr-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-696f210e523f",
+      "title": "cadrille: Multi-modal CAD Reconstruction with Online Reinforcement Learning",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICLR 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "rl-post-training",
+        "mllm-foundations",
+        "three-d-world-modeling"
+      ],
+      "keywords": [
+        "vla",
+        "benchmark",
+        "reinforcement learning",
+        "ICLR 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/col14m/cadrille",
+      "tldr": "一种结合点云、图像和文本的多模态3D CAD重建方法，使用在线强化学习技术",
+      "aliases": [
+        "unofficial-696f210e523f"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-696f210e523f",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-06T04:29:43.503Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-iclr-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },
