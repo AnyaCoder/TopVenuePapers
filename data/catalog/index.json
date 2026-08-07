@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-06T04:39:47.606Z",
+  "generatedAt": "2026-08-07T04:11:34.584Z",
   "count": 11826,
   "guidedCount": 101,
-  "venueYearCount": 13,
+  "venueYearCount": 12,
   "sources": [
     {
       "name": "ICLR 2026 OpenReview",
@@ -60,15 +60,8 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 13,
+      "count": 14,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
-    },
-    {
-      "key": "2026-colm-2026",
-      "venue": "COLM 2026",
-      "year": 2026,
-      "count": 1,
-      "path": "data/catalog/shards/2026-colm-2026.json"
     },
     {
       "key": "2026-cvpr-2026",
@@ -101300,6 +101293,54 @@
       "hasAbstract": true
     },
     {
+      "id": "unofficial-faf4ae691d64",
+      "title": "Uni-MMMU : A Massive Multi-discipline Multimodal Unified Benchmark",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "evaluation-benchmarks",
+      "categories": [
+        "evaluation-benchmarks",
+        "reasoning",
+        "agents-tool-use",
+        "rag-knowledge"
+      ],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "reasoning",
+        "rag",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/vchitect/Uni-MMMU",
+      "tldr": "Uni-MMMU是一个大规模多学科多模态统一基准，旨在评估视觉理解和生成能力的集成表现。",
+      "aliases": [
+        "unofficial-faf4ae691d64"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-faf4ae691d64",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-07T04:04:13.709Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
       "id": "unofficial-9e667c422352",
       "title": "UR2: Unified RAG and Reasoning through Reinforcement Learning",
       "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
@@ -101394,57 +101435,6 @@
         "web"
       ],
       "shardKey": "2026-acl-2026-main",
-      "hasIntroZh": false,
-      "hasAbstract": true
-    },
-    {
-      "id": "unofficial-3f222bfca759",
-      "title": "TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
-      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
-      "venue": "COLM 2026",
-      "year": 2026,
-      "track": "Accepted signal pending official venue page",
-      "primaryCategory": "mllm-foundations",
-      "categories": [
-        "mllm-foundations",
-        "evaluation-benchmarks",
-        "reasoning",
-        "rl-post-training"
-      ],
-      "keywords": [
-        "large language model",
-        "llm",
-        "vlm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark",
-        "world model",
-        "COLM 2026",
-        "web",
-        "unofficial"
-      ],
-      "authors": [
-        "Unknown authors"
-      ],
-      "openreviewUrl": "https://github.com/orgs/tianyi-lab/repositories",
-      "tldr": "TSRBench是一个面向通用模型的多任务多模态时间序列推理基准测试",
-      "aliases": [
-        "unofficial-3f222bfca759"
-      ],
-      "source": "zhipu-social-accepted",
-      "sourceId": "unofficial-3f222bfca759",
-      "guideStatus": "pending",
-      "sourceType": "unofficial",
-      "acceptanceStatus": "accepted",
-      "acceptedVenue": "COLM 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-25T04:27:11.562Z",
-      "evidenceCount": 1,
-      "platforms": [
-        "web"
-      ],
-      "shardKey": "2026-colm-2026",
       "hasIntroZh": false,
       "hasAbstract": true
     },
