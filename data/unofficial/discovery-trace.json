@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-08T03:08:20.330Z",
+  "generatedAt": "2026-08-09T03:15:03.261Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -54,35 +54,35 @@
   },
   "progress": [
     {
-      "at": "2026-08-08T03:08:20.331Z",
+      "at": "2026-08-09T03:15:03.262Z",
       "message": "Refine-only discovery started: up to 4 refinement batches from the provisional queue."
     },
     {
-      "at": "2026-08-08T03:08:20.333Z",
+      "at": "2026-08-09T03:15:03.264Z",
       "message": "Follow-up search skipped: no remaining budget or no evidence-derived queries."
     },
     {
-      "at": "2026-08-08T03:08:20.341Z",
+      "at": "2026-08-09T03:15:03.272Z",
       "message": "Evidence-backed fallback staged 12 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-08-08T03:08:20.341Z",
+      "at": "2026-08-09T03:15:03.272Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-08-08T03:08:20.341Z",
+      "at": "2026-08-09T03:15:03.272Z",
       "message": "Zhipu refinement stage started: 4/12 candidate batches."
     },
     {
-      "at": "2026-08-08T03:08:20.341Z",
+      "at": "2026-08-09T03:15:03.272Z",
       "message": "[extract 1/4] 1 candidate items."
     },
     {
-      "at": "2026-08-08T03:08:21.291Z",
+      "at": "2026-08-09T03:15:04.202Z",
       "message": "[extract 1/4] parsed=0"
     },
     {
-      "at": "2026-08-08T03:08:21.291Z",
+      "at": "2026-08-09T03:15:04.203Z",
       "message": "[extract 1/4] stopped after rate limit; provisional queue will be retried on the next run."
     }
   ],
@@ -98,7 +98,7 @@
       "responseText": "",
       "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 950,
+      "durationMs": 930,
       "error": "Zhipu chat failed: 429 Too Many Requests {\"error\":{\"code\":\"1302\",\"message\":\"您的账户已达到速率限制，请您控制请求频率\"}}"
     }
   ],
@@ -121,7 +121,7 @@
     "rejectedCandidates": 0,
     "added": 0,
     "updated": 12,
-    "durationMs": 1239
+    "durationMs": 1213
   },
   "errors": [
     "Extraction failed for batch 1: Zhipu chat failed: 429 Too Many Requests {\"error\":{\"code\":\"1302\",\"message\":\"您的账户已达到速率限制，请您控制请求频率\"}}"
