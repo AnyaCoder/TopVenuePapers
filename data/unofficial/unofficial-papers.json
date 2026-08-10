@@ -1,105 +1,66 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T03:15:03.261Z",
+  "generatedAt": "2026-08-10T03:27:16.648Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
     {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
       "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
+      "sourceId": "unofficial-7c457864ebdd",
       "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-08-09T03:14:56.598Z",
-      "lastCheckedAt": "2026-08-09T03:14:56.598Z",
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-08-10T03:28:30.547Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "agent",
-        "reinforcement learning"
+        "reasoning",
+        "conversation",
+        "recommendation"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
+        "github",
         "web"
       ],
       "evidence": [
         {
-          "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
           "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
-    },
-    {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-08-09T03:14:56.597Z",
-      "lastCheckedAt": "2026-08-09T03:14:56.597Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
+        },
         {
           "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-1948951b5bb9",
@@ -116,8 +77,8 @@
       "acceptedVenue": "ICLR 2026 Oral",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-08-09T03:14:56.596Z",
-      "lastCheckedAt": "2026-08-09T03:14:56.596Z",
+      "updatedAt": "2026-08-10T03:27:09.950Z",
+      "lastCheckedAt": "2026-08-10T03:27:09.950Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -152,6 +113,236 @@
         "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
         "venue": "ICLR 2026 Oral"
       }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-08-10T03:27:09.950Z",
+      "lastCheckedAt": "2026-08-10T03:27:09.950Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-08-10T03:27:09.948Z",
+      "lastCheckedAt": "2026-08-10T03:27:09.948Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-5c5e539cf19a",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-08-10T03:19:32.793Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
+          "publishDate": "2026-07-30",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-e0eaf322f215",
+      "title": "“Image Fusion in the Loop of High-level Vision Tasks: A Semantic-aware Real-time Infrared and Visible Image Fusion Network”. Information Fusion, 2022 ·",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for “Image Fusion in the Loop of High-level Vision Tasks: A Semantic-aware Real-time Infrared and Visible Image Fusion Network”. Information Fusion, 2022 ·; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Linfeng-Tang/SeAFusion",
+      "canonicalUrl": "https://github.com/Linfeng-Tang/SeAFusion",
+      "pdfUrl": "",
+      "sourceId": "unofficial-e0eaf322f215",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-08T03:01:11.663Z",
+      "updatedAt": "2026-08-10T03:19:32.789Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Linfeng-Tang/SeAFusion",
+          "title": "GitHub - Linfeng-Tang/SeAFusion: The code of \" Image fusion in the loop of high-level vision tasks: A semantic-aware real-time infrared",
+          "snippet": "59 View all files [2026-06-02] Our paper DSPFusion: Image Fusion via Degradation and Semantic Dual-Prior Guidance has been officially accepted by IEEE Trans on Image Processing (IEEE TIP) ! [ Paper ] [ arXiv ] [ ] [2026-02-21] Our paper VideoFusion: A Spatio-Temporal Collaborative Network for Multi-modal Video Fusion has been officially accepted by The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026) ! [ Paper ] [ arXiv ] [ ] [2025-09-18] Our paper Co...",
+          "readerTitle": "GitHub - Linfeng-Tang/SeAFusion: Official code for “Image Fusion in the Loop of High-level Vision Tasks: A Semantic-aware Real-time Infrared and Visible Image Fusion Network”. Information Fusion, 2022 · 🔥 ESI Hot Paper · 🏆 ESI Highly Cited Paper · 🏅 Best Paper Award 2024.",
+          "readerExcerpt": "Linfeng Tang Jiteng Yuan Jiayi Ma __Wuhan University__ __Information Fusion__ · 2022 !Image 1: ESI Hot Paper (top 0.1%) !Image 2: ESI Highly Cited Paper (top 1%) !Image 3: Information Fusion Best Paper Award 2024 Google Scholar · __1,183 citations__ · updated July 18, 2026 ## ✨ News - __[2026-06-02]__ Our paper __DSPFusion: Image Fusion via Degradation and Semantic Dual-Prior Guidance__ has been officially accepted by __IEEE Trans on Image Processing (IEEE TIP)__! [Paper] [arXiv] [ ] - __[2026-02-21]__ Our paper __VideoFusion: A Spatio-Temporal Collaborative Network for Multi-modal Video Fusion__ has been officially accepted by __The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)__! [Paper] [arXiv] [ ] - __[2025-09-18]__ Our paper _ControlFusion: A Controllable Image Fusion Framework with Language-Vision Degradation Prompts_ has been officially accepted by...",
+          "publishDate": "2026-07-18",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-3f222bfca759",
+      "title": "TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
+      "summary": "发现页在公开页面中识别到 COLM 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit COLM 2026 paper signal for TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/orgs/tianyi-lab/repositories",
+      "canonicalUrl": "https://github.com/orgs/tianyi-lab/repositories",
+      "pdfUrl": "",
+      "sourceId": "unofficial-3f222bfca759",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "COLM 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-25T04:27:11.562Z",
+      "updatedAt": "2026-08-10T03:19:32.786Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark",
+        "world model"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/orgs/tianyi-lab/repositories",
+          "title": "tianyi-lab repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search 29 repositories Last pushed Comfortable display density Compact display density TSRouter Public template [COLM 2026] TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning Python • 0 0 forks • 4 4 stars • 0 0 • 0 0 • Updated Jul 13, 2026 Reflective_Masking Public Python • 0 0 forks • 4 4 stars • 1 1 issue • 0 0 • Updated Jun 22, 2026 Jun 22, 2026 SeeQ Public for \"self-evolving visual questioner (SeeQ)\" visual-q...",
+          "readerTitle": "Tianyi Lab",
+          "readerExcerpt": "## Repositories list - [COLM 2026] TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning Python • 0 • 7 • 0 • 0 •Updated Jul 13, 2026 Jul 13, 2026 - Python • 0 • 4 • 1 • 0 •Updated Jun 22, 2026 Jun 22, 2026 - for \"self-evolving visual questioner (SeeQ)\" Python • 1 • 1 • 0 • 0 •Updated Jun 17, 2026 Jun 17, 2026 - [ICML 2026 Oral] for \"Skip a Layer or Loop It? Learning Program-of-Layers in LLMs\" Python • 2 • 25 • 2 • 0 •Updated Jun 11, 2026 Jun 11, 2026 - [ICLR 2026] Fast-Slow Toolpath Agent with Subroutine Mining for Efficient Multi-turn Image Editing Jupyter Notebook • BSD 3-Clause \"New\" or \"Revised\" License • 2 • 33 • 1 • 0 •Updated May 30, 2026 May 30, 2026 - [ICML 2026] TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
+          "publishDate": "2026-07-13",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-f217e910f624",
@@ -247,197 +438,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-08-09T03:07:54.742Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
-          "publishDate": "2026-07-30",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-e0eaf322f215",
-      "title": "“Image Fusion in the Loop of High-level Vision Tasks: A Semantic-aware Real-time Infrared and Visible Image Fusion Network”. Information Fusion, 2022 ·",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for “Image Fusion in the Loop of High-level Vision Tasks: A Semantic-aware Real-time Infrared and Visible Image Fusion Network”. Information Fusion, 2022 ·; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Linfeng-Tang/SeAFusion",
-      "canonicalUrl": "https://github.com/Linfeng-Tang/SeAFusion",
-      "pdfUrl": "",
-      "sourceId": "unofficial-e0eaf322f215",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-08-08T03:01:11.663Z",
-      "updatedAt": "2026-08-09T03:07:54.739Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Linfeng-Tang/SeAFusion",
-          "title": "GitHub - Linfeng-Tang/SeAFusion: The code of \" Image fusion in the loop of high-level vision tasks: A semantic-aware real-time infrared",
-          "snippet": "59 View all files [2026-06-02] Our paper DSPFusion: Image Fusion via Degradation and Semantic Dual-Prior Guidance has been officially accepted by IEEE Trans on Image Processing (IEEE TIP) ! [ Paper ] [ arXiv ] [ ] [2026-02-21] Our paper VideoFusion: A Spatio-Temporal Collaborative Network for Multi-modal Video Fusion has been officially accepted by The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026) ! [ Paper ] [ arXiv ] [ ] [2025-09-18] Our paper Co...",
-          "readerTitle": "GitHub - Linfeng-Tang/SeAFusion: Official code for “Image Fusion in the Loop of High-level Vision Tasks: A Semantic-aware Real-time Infrared and Visible Image Fusion Network”. Information Fusion, 2022 · 🔥 ESI Hot Paper · 🏆 ESI Highly Cited Paper · 🏅 Best Paper Award 2024.",
-          "readerExcerpt": "Linfeng Tang Jiteng Yuan Jiayi Ma __Wuhan University__ __Information Fusion__ · 2022 !Image 1: ESI Hot Paper (top 0.1%) !Image 2: ESI Highly Cited Paper (top 1%) !Image 3: Information Fusion Best Paper Award 2024 Google Scholar · __1,183 citations__ · updated July 18, 2026 ## ✨ News - __[2026-06-02]__ Our paper __DSPFusion: Image Fusion via Degradation and Semantic Dual-Prior Guidance__ has been officially accepted by __IEEE Trans on Image Processing (IEEE TIP)__! [Paper] [arXiv] [ ] - __[2026-02-21]__ Our paper __VideoFusion: A Spatio-Temporal Collaborative Network for Multi-modal Video Fusion__ has been officially accepted by __The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)__! [Paper] [arXiv] [ ] - __[2025-09-18]__ Our paper _ControlFusion: A Controllable Image Fusion Framework with Language-Vision Degradation Prompts_ has been officially accepted by...",
-          "publishDate": "2026-07-18",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-3f222bfca759",
-      "title": "TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
-      "summary": "发现页在公开页面中识别到 COLM 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit COLM 2026 paper signal for TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/orgs/tianyi-lab/repositories",
-      "canonicalUrl": "https://github.com/orgs/tianyi-lab/repositories",
-      "pdfUrl": "",
-      "sourceId": "unofficial-3f222bfca759",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "COLM 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-25T04:27:11.562Z",
-      "updatedAt": "2026-08-09T03:07:54.737Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "llm",
-        "vlm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark",
-        "world model"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/orgs/tianyi-lab/repositories",
-          "title": "tianyi-lab repositories · GitHub",
-          "snippet": "All Change the repository type filter All Search repositories Search 29 repositories Last pushed Comfortable display density Compact display density TSRouter Public template [COLM 2026] TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning Python • 0 0 forks • 4 4 stars • 0 0 • 0 0 • Updated Jul 13, 2026 Reflective_Masking Public Python • 0 0 forks • 4 4 stars • 1 1 issue • 0 0 • Updated Jun 22, 2026 Jun 22, 2026 SeeQ Public for \"self-evolving visual questioner (SeeQ)\" visual-q...",
-          "readerTitle": "Tianyi Lab",
-          "readerExcerpt": "## Repositories list - [COLM 2026] TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning Python • 0 • 7 • 0 • 0 •Updated Jul 13, 2026 Jul 13, 2026 - Python • 0 • 4 • 1 • 0 •Updated Jun 22, 2026 Jun 22, 2026 - for \"self-evolving visual questioner (SeeQ)\" Python • 1 • 1 • 0 • 0 •Updated Jun 17, 2026 Jun 17, 2026 - [ICML 2026 Oral] for \"Skip a Layer or Loop It? Learning Program-of-Layers in LLMs\" Python • 2 • 25 • 2 • 0 •Updated Jun 11, 2026 Jun 11, 2026 - [ICLR 2026] Fast-Slow Toolpath Agent with Subroutine Mining for Efficient Multi-turn Image Editing Jupyter Notebook • BSD 3-Clause \"New\" or \"Revised\" License • 2 • 33 • 1 • 0 •Updated May 30, 2026 May 30, 2026 - [ICML 2026] TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models Python • 1 • 25 • 0 • 0 •Updated Mar 24, 2026 Mar 24, 2026 - A neuro-symbolic world modeling fram...",
-          "publishDate": "2026-07-13",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-08-07T04:14:28.829Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-439348b87abd",
