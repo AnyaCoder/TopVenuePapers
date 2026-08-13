@@ -3,8 +3,8 @@
   "model": "Xenova/all-MiniLM-L6-v2",
   "task": "feature-extraction",
   "catalog": "data/papers.catalog.json",
-  "catalogGeneratedAt": "2026-08-12T03:38:20.201Z",
-  "count": 11826,
+  "catalogGeneratedAt": "2026-08-13T03:44:13.696Z",
+  "count": 11825,
   "dimensions": 384,
   "normalized": true,
   "chunkRows": 512,
@@ -11831,7 +11831,6 @@
     "zerosiam-an-efficient-asymmetry-for-test-time-entropy-optimization-without-colla",
     "zerotuning-unlocking-the-initial-token-s-power-to-enhance-large-language-models-",
     "unofficial-4e50c4d34e55",
-    "unofficial-236454b251e7",
     "unofficial-a187d3b97138",
     "unofficial-12f91b27ac25",
     "unofficial-feca96b0a985"
@@ -23659,7 +23658,6 @@
     "6c5e2e61e2a1b9c30ca143fc403169c06bd1c184",
     "4584593db81955d9dbf4f3db31bf3b6851ab7008",
     "01c70997129cf9c589f590fb2e7696986b6ba449",
-    "054aff3e2138e9e22c6de0dbaf18f27090188230",
     "18aba6f861bbbf66cb3dfc760d1a66f52ab4fae6",
     "9e7feceaba4efaa9c06624c31acf4dffab836769",
     "7481b8328253187154866fe62cfdc583466fc419"
@@ -24043,23 +24041,23 @@
       "year": 2026,
       "part": 1,
       "offset": 11821,
-      "count": 2,
+      "count": 1,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-icml-2026.001.f32.bin",
-      "bytes": 3072,
-      "fingerprint": "e4c2df6c805b9c7145274c35f5d3aec180064e6e"
+      "bytes": 1536,
+      "fingerprint": "7bf9b211541e7de2f4014902550452daca9b2aa9"
     },
     {
       "key": "2026-ICML 2026 Main",
       "venue": "ICML 2026 Main",
       "year": 2026,
       "part": 1,
-      "offset": 11823,
+      "offset": 11822,
       "count": 3,
       "dimensions": 384,
       "file": "paper-embeddings-all-MiniLM-L6-v2.2026-icml-2026-main.001.f32.bin",
       "bytes": 4608,
-      "fingerprint": "cf50a93b83f679a2f3f6a2a50d12d5108f02e41d"
+      "fingerprint": "65ae24226fcf345af02c1cbf7c34d2fc65936e1b"
     }
   ]
 }

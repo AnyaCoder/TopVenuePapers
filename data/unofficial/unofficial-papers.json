@@ -1,11 +1,106 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T03:38:24.269Z",
+  "generatedAt": "2026-08-13T03:44:17.400Z",
   "notes": [
     "Entries discovered by daily Zhipu web search + reader pipeline over X and Xiaohongshu style announcement posts.",
     "Only candidate/accepted unofficial papers are stored here; official catalog merge decides what still appears under Unclassified."
   ],
   "papers": [
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-08-13T03:44:10.698Z",
+      "lastCheckedAt": "2026-08-13T03:44:10.698Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-08-13T03:44:10.697Z",
+      "lastCheckedAt": "2026-08-13T03:44:10.697Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
     {
       "id": "unofficial-1948951b5bb9",
       "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
@@ -21,8 +116,8 @@
       "acceptedVenue": "ICLR 2026 Oral",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-08-12T03:38:16.928Z",
-      "lastCheckedAt": "2026-08-12T03:38:16.928Z",
+      "updatedAt": "2026-08-13T03:44:10.696Z",
+      "lastCheckedAt": "2026-08-13T03:44:10.696Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -59,26 +154,32 @@
       }
     },
     {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "id": "unofficial-5c5e539cf19a",
+      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
       "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
+      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
       "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
+      "sourceId": "unofficial-5c5e539cf19a",
       "year": 2026,
-      "status": "officially-published",
+      "status": "accepted",
       "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
+      "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-08-12T03:38:16.927Z",
-      "lastCheckedAt": "2026-08-12T03:38:16.927Z",
+      "discoveredAt": "2026-05-09T04:35:10.030Z",
+      "updatedAt": "2026-08-13T03:33:38.839Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
-      "keywords": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "benchmark"
+      ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
@@ -87,45 +188,45 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
+          "url": "https://github.com/wgcyeo/WorldMM",
+          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
+          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
+          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+          "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
+          "publishDate": "2026-07-30",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
+      "evidenceCount": 1
     },
     {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "id": "unofficial-fbdb5d22be72",
+      "title": "Auto-TA: Towards Scalable Automated Thematic Analysis (TA) via Multi-Agent Large Language Models with Reinforcement Learning description [ACL 2025 (SR...",
       "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Main paper signal for Auto-TA: Towards Scalable Automated Thematic Analysis (TA) via Multi-Agent Large Language Models with Reinforcement Learning description [ACL 2025 (SR...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/zhaoyang97/Paper-Notes/blob/main/docs/ACL2025/llm_agent/auto-ta_towards_scalable_automated_thematic_analysis_ta_via_multi-agent_large_la.md",
+      "canonicalUrl": "https://github.com/zhaoyang97/Paper-Notes/blob/main/docs/ACL2025/llm_agent/auto-ta_towards_scalable_automated_thematic_analysis_ta_via_multi-agent_large_la.md",
       "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
+      "sourceId": "unofficial-fbdb5d22be72",
       "year": 2026,
-      "status": "officially-published",
+      "status": "accepted",
       "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedVenue": "ICLR 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-08-12T03:38:16.926Z",
-      "lastCheckedAt": "2026-08-12T03:38:16.926Z",
+      "discoveredAt": "2026-08-13T03:33:38.836Z",
+      "updatedAt": "2026-08-13T03:33:38.836Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
+        "large language model",
+        "llm",
+        "vlm",
         "agent",
+        "reasoning",
+        "robotics",
+        "rag",
         "reinforcement learning"
       ],
       "titleAliases": [],
@@ -136,22 +237,76 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
+          "url": "https://github.com/zhaoyang97/Paper-Notes/blob/main/docs/ACL2025/llm_agent/auto-ta_towards_scalable_automated_thematic_analysis_ta_via_multi-agent_large_la.md",
+          "title": "Paper-Notes/docs/ACL2025/llm_agent/auto-ta_towards_scalable_automated_thematic_analysis_ta_via_multi-agent_large_la.md at main · zhaoyang97",
+          "snippet": "Files Expand file tree Breadcrumbs auto-ta_towards_scalable_automated_thematic_analysis_ta_via_multi-agent_large_la.md Copy path More file More file Latest 132 lines (97 loc) · 9.92 KB Breadcrumbs Copy path Top File metadata and controls Preview Blame 132 lines (97 loc) · 9.92 KB Copy raw file Download raw file Outline Edit and raw title [论文解读] Auto-TA: Towards Scalable Automated Thematic Analysis (TA) via Multi-Agent Large Language Models with Reinforcement Learning description [ACL 2025 (SR...",
+          "readerTitle": "Paper-Notes/docs/ACL2025/llm_agent/auto-ta_towards_scalable_automated_thematic_analysis_ta_via_multi-agent_large_la.md at main · zhaoyang97/Paper-Notes",
+          "readerExcerpt": "| | | | --- | --- | | title | [论文解读] Auto-TA: Towards Scalable Automated Thematic Analysis (TA) via Multi-Agent Large Language Models with Reinforcement Learning | | description | [ACL 2025 (SRW)][LLM Agent][主题分析] 提出一个基于多智能体 LLM 的全自动主题分析（Thematic Analysis）流水线，通过专业角色分工和可选的 RLHF 微调，实现对临床叙事的端到端主题提取，消除了人工编码和全文审阅的需求。 - 领域现状：主题分析（Thematic Analysis… | | tags | | | | | | | | | | --- | --- | --- | --- | --- | --- | --- | | ACL 2025 (SRW) | LLM Agent | 主题分析 | 多智能体 | 强化学习 | 临床叙事 | 先天性心脏病 | | ## Auto-TA: Towards Scalable Automated Thematic Analysis (TA) via Multi-Agent Large Language Models with Reinforcement Learning __会议__: ACL 2025 (SRW) __arXiv__: 2506.23998 __代码__: 无 __领域__: LLM Agent / NLP 应用 __关键词__: 主题分析、多智能体、强化学习、临床叙事、先天性心脏病 ## 一句话总结 提出一个基于多智能体 LLM 的全自动主题分析（Thematic Analysis）流水线，通过专业角色分工和可选的 RLHF 微调，实现对临床叙事的端到端主题提取，消除了人工编码和全文审阅的需求。 ## 研究背景与动机 - __领域现状__：主题分析（Thematic Analysis, TA）是定性研究中最...",
+          "publishDate": "2026-08-09",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-236454b251e7",
+      "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+      "summary": "发现页在公开页面中识别到 ICML 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 paper signal for MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+      "canonicalUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+      "pdfUrl": "",
+      "sourceId": "unofficial-236454b251e7",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "ICML 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-21T04:30:14.638Z",
+      "updatedAt": "2026-08-13T03:33:38.830Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "rag",
+        "benchmark",
+        "mllm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories",
+          "title": "TIGER-AI-Lab repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search Repositories list 64 repositories Last pushed Comfortable display density Compact display density Open-source benchmark for browser AI agents on daily tasks. Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated A version of verl to support diverse tool use [TMLR 2026] Python • MIT License • 86 86 forks • 1k 1k stars • 8 8 • 0 0 • Updated TIGER-AI-Lab/FIM-Midtraining’s past year of activity Python...",
+          "readerTitle": "TIGER Lab",
+          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 28 • 490 • 35 • 6 •Updated Jul 17, 2026 Jul 17, 2026 - A version of verl to support diverse tool use [TMLR 2026] Python • • 86 • 1k • 8 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Python • • 1 • 13 • 0 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 95 • 1 • 0 •Updated Jun 29, 2026 Jun 29, 2026 - SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Understanding [ACL 2026] Python • • 2 • 11 • 0 • 0 •Updated Jun 26, 2026 Jun 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 62 • 666 • 29 • 0 •Updated Jun 24, 2026 Jun 24, 2026 - Evaluating LLMs' abilities to generate structural o...",
+          "publishDate": "2026-07-17",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+          "title": "TIGER-AI-Lab repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search 64 repositories Last pushed Comfortable display density Compact display density ClawBench Public Open-source benchmark for browser AI agents on daily tasks. chrome-extension benchmark evaluation + 17 chrome-extension benchmark evaluation dataset browser-automation ai-agents web-agent web-agents everyday-tasks browser-agent + 10 Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated Jul 17, 2026 ver...",
+          "readerTitle": "TIGER Lab",
+          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 34 • 560 • 35 • 5 •Updated Aug 8, 2026 Aug 8, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 109 • 1 • 0 •Updated Aug 4, 2026 Aug 4, 2026 - Pixel-Level Reasoning Model trained with RL [NeuIPS25] Python • • 13 • 303 • 5 • 0 •Updated Jul 28, 2026 Jul 28, 2026 - Evaluating LLMs' abilities to generate structural output [TMLR2025] Python • • 7 • 23 • 2 • 4 •Updated Jul 26, 2026 Jul 26, 2026 - EditReward: A Human-Aligned Reward Model for Instruction-Guided Image Editing [ICLR 2026] Python • • 6 • 158 • 4 • 0 •Updated Jul 26, 2026 Jul 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 64 • 674 • 29 • 0 •Updated Jul 24, 2026 Jul 24, 2026 - A version o...",
+          "publishDate": "2026-07-17",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-d79388b2bcf2",
@@ -194,52 +349,6 @@
           "readerTitle": "GitHub - yliu-cs/MMaDA-VLA: [arXiv'26] MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
           "readerExcerpt": "!Image 1: MMaDA-VLA Teaser --- ## ð Installation ### Quick Setup ``` # Clone the repository git clone https://github.com/yliu-cs/MMaDA-VLA.git cd MMaDA-VLA # Create conda environment conda create -n mmada-vla python=3.11 -y conda activate mmada-vla # Install dependencies pip install -r requirements.txt ``` --- ## ð Data Preparation ### Download Datasets Please download Open-X Embodiment, CALVIN, LIBERO datasets before preprocessing. ### Preprocessing ``` # Step 1: Extract all python mmadavla/data/preprocess.py --action_flag --num_chunks 1 # Step 2: Normalize python mmadavla/data/preprocess.py --norm_action # Step 3: Preprocess datasets (run in parallel) for i in 0 8 16; do bash scripts/data/preprocess.sh $i done # Step 4: Merge dataset files python mmadavla/data/preprocess.py --merge ``` --- ## ð Training ### Pre-training Train MMaDA-VLA from scratch on large-scale robotics da...",
           "publishDate": "2026-08-08",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-5c5e539cf19a",
-      "title": "Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/wgcyeo/WorldMM",
-      "canonicalUrl": "https://github.com/wgcyeo/WorldMM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-5c5e539cf19a",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-09T04:35:10.030Z",
-      "updatedAt": "2026-08-12T03:29:45.459Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/wgcyeo/WorldMM",
-          "title": "GitHub - wgcyeo/WorldMM: [CVPR 2026 Highlight] WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning · GitHub",
-          "snippet": "Open more menu Folders and files Latest 6 6 assets assets data data eval eval preprocess preprocess script script src src .gitignore .gitignore .python-version .python-version LICENSE LICENSE README.md README.md pyproject.toml pyproject.toml uv.lock uv.lock View all files 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning WorldMM is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both text...",
-          "readerTitle": "GitHub - wgcyeo/WorldMM: WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
-          "readerExcerpt": "# 🌏 WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning **WorldMM** is a novel dynamic multimodal memory agent designed for long video reasoning. It constructs multimodal, multi-scale memories that capture both textual and visual information, and employs adaptive retrieval across multiple memories with reasoning. --- ## Get Started To set up the environment, we recommend using uv for fast and deterministic setup. All dependencies are specified in `pyproject.toml` and pinned in `uv.lock`. ### 1. Clone the Repository ```sh git clone https://github.com/wgcyeo/WorldMM.git cd WorldMM ``` ### 2. Run the Setup Script The setup script will: - Install uv (if not already installed) - Install all project dependencies - Download required datasets ```sh bash script/1_setup.sh ``` ### 3. Set Environment Variables (Optional) To use GPT-family models for preprocessing or evaluation, se...",
-          "publishDate": "2026-07-30",
           "query": ""
         }
       ],
@@ -1548,55 +1657,6 @@
           "readerTitle": "GitHub - weiaicunzai/mixup",
           "readerExcerpt": "## [CVPR2026]Contrastive Cross-Bag Augmentation for Multiple Instance Learning-based Whole Slide Image Classification [CVPR 2026] This is the implementation of the paper: Contrastive Cross-Bag Augmentation for Multiple Instance Learning-based Whole Slide Image Classification. !Image 1: alt text ## Introduction > Recent pseudo-bag augmentation methods for Multiple Instance Learning (MIL)-based Whole Slide Image (WSI) classification sample instances from a limited number of bags, resulting in constrained diversity. To address this issue, we propose Contrastive Cross-Bag Augmentation (C²Aug) to sample instances from all bags with the same class to increase the diversity of pseudo-bags. However, introducing new instances into the pseudo-bag increases the number of critical instances (e.g., tumor instances). This increase results in a reduced occurrence of pseudo-bags containing few critic...",
           "publishDate": "2026-07-20",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-236454b251e7",
-      "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
-      "summary": "一个大规模多学科多模态理解和推理基准，用于评估专家级AGI能力",
-      "reason": "GitHub页面提到ICML相关研究，但未明确显示该论文已被ICML 2026接受",
-      "primaryUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories",
-      "canonicalUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories",
-      "pdfUrl": "",
-      "sourceId": "unofficial-236454b251e7",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "ICML 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-21T04:30:14.638Z",
-      "updatedAt": "2026-07-21T04:34:56.363Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "video understanding",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories",
-          "title": "TIGER-AI-Lab repositories · GitHub",
-          "snippet": "All Change the repository type filter All Search repositories Search Repositories list 64 repositories Last pushed Comfortable display density Compact display density Open-source benchmark for browser AI agents on daily tasks. Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated A version of verl to support diverse tool use [TMLR 2026] Python • MIT License • 86 86 forks • 1k 1k stars • 8 8 • 0 0 • Updated TIGER-AI-Lab/FIM-Midtraining’s past year of activity Python...",
-          "readerTitle": "TIGER Lab",
-          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 28 • 490 • 35 • 6 •Updated Jul 17, 2026 Jul 17, 2026 - A version of verl to support diverse tool use [TMLR 2026] Python • • 86 • 1k • 8 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Python • • 1 • 13 • 0 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 95 • 1 • 0 •Updated Jun 29, 2026 Jun 29, 2026 - SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Understanding [ACL 2026] Python • • 2 • 11 • 0 • 0 •Updated Jun 26, 2026 Jun 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 62 • 666 • 29 • 0 •Updated Jun 24, 2026 Jun 24, 2026 - Evaluating LLMs' abilities to generate structural o...",
-          "publishDate": "2026-07-17",
           "query": ""
         }
       ],
