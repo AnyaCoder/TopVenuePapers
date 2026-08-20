@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-19T02:37:02.918Z",
-  "count": 11825,
+  "generatedAt": "2026-08-20T02:33:43.665Z",
+  "count": 11826,
   "guidedCount": 101,
   "venueYearCount": 12,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 28
+      "count": 29
     }
   ],
   "notes": [
@@ -81,7 +81,7 @@
       "key": "2026-iclr-2026",
       "venue": "ICLR 2026",
       "year": 2026,
-      "count": 2,
+      "count": 3,
       "path": "data/catalog/shards/2026-iclr-2026.json"
     },
     {
@@ -271297,6 +271297,52 @@
       "acceptedVenue": "ICLR 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-02T05:10:08.059Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-iclr-2026",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-3ecceebab501",
+      "title": "WIMLE: Uncertainty-Aware World Models with IMLE for Sample-Efficient Continuous Control",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICLR 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "rl-post-training",
+      "categories": [
+        "rl-post-training",
+        "evaluation-benchmarks",
+        "efficiency-systems",
+        "three-d-world-modeling"
+      ],
+      "keywords": [
+        "benchmark",
+        "reinforcement learning",
+        "world model",
+        "ICLR 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/mehranagh20/wimle",
+      "tldr": "WIMLE是一种基于模型的强化学习方法，学习随机多模态世界模型并利用预测不确定性来强调最重要的合成轨迹。",
+      "aliases": [
+        "unofficial-3ecceebab501"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-3ecceebab501",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICLR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-20T02:23:32.762Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
