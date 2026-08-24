@@ -1,16 +1,179 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-23T02:48:36.227Z",
+  "generatedAt": "2026-08-24T02:48:26.236Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
+      "id": "unofficial-d7d775e8b3cd",
+      "title": "Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注论文被ACL 2026 Long Papers接收，并提供官方实现。",
+      "primaryUrl": "https://github.com/jinyangwu/HiARICL",
+      "canonicalUrl": "https://github.com/jinyangwu/HiARICL",
+      "pdfUrl": "",
+      "sourceId": "unofficial-d7d775e8b3cd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8611111111111112,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-21T02:37:56.292Z",
+      "updatedAt": "2026-08-24T02:41:25.351Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "large language model",
+        "agent",
+        "reasoning",
+        "rag",
+        "benchmark",
+        "llm",
+        "in-context reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/jinyangwu/HiARICL",
+          "title": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
+          "snippet": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR GitHub。NameName assets assets Update README for ACL 2026 Jun 29, 2026 common common push repo May 29, 2025 data/MATH data/MATH push repo May 29, 2025 eval_src eval_src push repo May 29, 2025 models models push repo May 29, 2025 prompts/MATH prompts/MATH push repo May 29, 2025 run_src run_src push repo May 29, 2025 scripts scripts push repo May 29, 2025 LICENSE LICENSE Initial May 29, 2025 README.md README.md Upda...",
+          "readerTitle": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
+          "readerExcerpt": "📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64th Annual Meeting of the Association for Computational Linguistics (Long Papers). ## Contents - Introduction - Requirements - Usage - Acknowledgement - Citation ## Introduction We introduce __ThoughtICR__, an automated __Thought__-level __I__n-__C__ontext __R__easoning paradigm for large language models. ThoughtICR rethinks the role of context in in-context learning: instead of asking models to imitate surface-level examples, it provides explicit, reusable, and guidance-orient...",
+          "publishDate": "",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/jinyangwu/ThoughtICR",
+          "title": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
+          "snippet": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR GitHub。ThoughtICR 📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models, accepted to ACL 2026 Long Papers. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. News ACL 2026: ThoughtICR was accepted to the 6...",
+          "readerTitle": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
+          "readerExcerpt": "📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64th Annual Meeting of the Association for Computational Linguistics (Long Papers). ## Contents - Introduction - Requirements - Usage - Acknowledgement - Citation ## Introduction We introduce __ThoughtICR__, an automated __Thought__-level __I__n-__C__ontext __R__easoning paradigm for large language models. ThoughtICR rethinks the role of context in in-context learning: instead of asking models to imitate surface-level examples, it provides explicit, reusable, and guidance-orient...",
+          "publishDate": "",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-2d98176824ab",
+      "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
+      "titleZh": "使多模态大模型失明：MLLM内容审核中的对抗性走私攻击",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注为ACL 2026论文，arXiv编号2604.06950",
+      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
+      "pdfUrl": "https://arxiv.org/abs/2604.06950",
+      "sourceId": "unofficial-2d98176824ab",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8888888888888888,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-11T05:08:14.979Z",
+      "updatedAt": "2026-08-24T02:38:24.875Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [
+        "Zhiheng Li",
+        "Zongyang Ma",
+        "Yuntong Pan",
+        "Ziqi Zhang",
+        "Xiaolei Lv",
+        "Bo Li",
+        "Jun Gao",
+        "Jianing Zhang",
+        "Chunfeng Yuan",
+        "Bing Li",
+        "Weiming Hu"
+      ],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/zhihengli-casia/smugglebench",
+          "title": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks",
+          "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
+          "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
+          "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
+          "publishDate": "2026-05-23",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-f5c6ad83eca4",
+      "title": ". 1.Introduction Multimodal intent recognition aims to infer human intents by jointly modeling various modalities, playing a pivotal role in real-world dialogue systems. However, current methods struggle to model hierar",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for . 1.Introduction Multimodal intent recognition aims to infer human intents by jointly modeling various modalities, playing a pivotal role in real-world dialogue systems. However, current methods struggle to model hierar; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/thuiar/HIER",
+      "canonicalUrl": "https://github.com/thuiar/HIER",
+      "pdfUrl": "",
+      "sourceId": "unofficial-f5c6ad83eca4",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-23T02:38:12.420Z",
+      "updatedAt": "2026-08-24T02:37:22.142Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/thuiar/HIER",
+          "title": "GitHub - thuiar/HIER: Official code implementation of Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition (CVPR2026)",
+          "snippet": "zhougr18 Mar 6, 2026 227414c · Mar 6, 2026 3 Open details 3 data data examples/train_lora examples/train_lora figs figs src src .DS_Store .DS_Store .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition This repository provides the official PyTorch implementation of the research paper: Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation...",
+          "readerTitle": "GitHub - thuiar/HIER: Official code implementation of Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition (CVPR2026)",
+          "readerExcerpt": "This repository provides the official PyTorch implementation of the research paper: Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition (__Accepted by CVPR2026__). ## 1.Introduction Multimodal intent recognition aims to infer human intents by jointly modeling various modalities, playing a pivotal role in real-world dialogue systems. However, current methods struggle to model hierarchical semantics underlying complex intents and lack the capacity for selfevolving reasoning over multimodal representations. To address these , we propose HIER, a novel method that integrates HIerarchical semantic representation with Evolutionary Reasoning based on MLLM. ## 2. Dependencies Our implementation is based on __LLaMA-Factory__ and performs __LoRA fine-tuning__ for training and evaluation. We recommend using __Anaconda__ to create the Python environmen...",
+          "publishDate": "",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-bac70b97fff4",
       "title": "CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution",
-      "summary": "提出了一种通过生成器-验证器协同进化解决无标签推理中共识陷阱的方法",
-      "reason": "GitHub页面明确声明论文已被ACL 2026会议接受",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution; waiting for Zhipu enrichment.",
       "primaryUrl": "https://github.com/ZJU-REAL/CoVerRL/",
       "canonicalUrl": "https://github.com/ZJU-REAL/CoVerRL/",
       "pdfUrl": "",
@@ -21,10 +184,10 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-08-23T02:38:12.418Z",
-      "updatedAt": "2026-08-23T02:48:35.744Z",
+      "updatedAt": "2026-08-24T02:37:22.140Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "cleaned",
-      "metadataSource": "zhipu-chat",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
       "authors": [
         "Teng Pan",
         "Yuchen Yan",
@@ -61,6 +224,315 @@
         }
       ],
       "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-cf04dccc3055",
+      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
+      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
+      "pdfUrl": "",
+      "sourceId": "unofficial-cf04dccc3055",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8611111111111112,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-29T05:23:20.345Z",
+      "updatedAt": "2026-08-24T02:37:22.139Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [
+        "Jingru Li",
+        "Wei Ren",
+        "Tianqing Zhu"
+      ],
+      "keywords": [
+        "large language model",
+        "vlm",
+        "vla",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Landsayy/AttentionJailbreak",
+          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\"",
+          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
+          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
+          "publishDate": "2026-05-29",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-439348b87abd",
+      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
+      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
+      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
+      "pdfUrl": "",
+      "sourceId": "unofficial-439348b87abd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "AAAI 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:36:45.400Z",
+      "updatedAt": "2026-08-23T02:51:26.480Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "agent",
+        "report generation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
+          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
+          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
+          "publishDate": "2026-04-19",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-08-23T02:49:48.857Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-08-24T02:48:26.233Z",
+      "lastCheckedAt": "2026-08-24T02:48:26.232Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-08-24T02:48:26.234Z",
+      "lastCheckedAt": "2026-08-24T02:48:26.234Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
+      "id": "unofficial-1948951b5bb9",
+      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
+      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
+      "pdfUrl": "",
+      "sourceId": "unofficial-1948951b5bb9",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Oral",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-18T04:13:29.657Z",
+      "updatedAt": "2026-08-24T02:48:26.234Z",
+      "lastCheckedAt": "2026-08-24T02:48:26.234Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Cominclip/OmniVerifier",
+          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
+          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
+          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
+          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
+          "publishDate": "2026-07-16",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
+        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+        "venue": "ICLR 2026 Oral"
+      }
     },
     {
       "id": "unofficial-ffb5140d7bb4",
@@ -106,418 +578,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-d7d775e8b3cd",
-      "title": "Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文已被ACL 2026 Long Papers接收，官方实现代码已发布。",
-      "primaryUrl": "https://github.com/jinyangwu/ThoughtICR",
-      "canonicalUrl": "https://github.com/jinyangwu/ThoughtICR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-d7d775e8b3cd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8611111111111112,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-08-21T02:37:56.292Z",
-      "updatedAt": "2026-08-23T02:39:08.425Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "large language model",
-        "agent",
-        "reasoning",
-        "rag",
-        "benchmark",
-        "llm",
-        "in-context reasoning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/jinyangwu/HiARICL",
-          "title": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
-          "snippet": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR GitHub。NameName assets assets Update README for ACL 2026 Jun 29, 2026 common common push repo May 29, 2025 data/MATH data/MATH push repo May 29, 2025 eval_src eval_src push repo May 29, 2025 models models push repo May 29, 2025 prompts/MATH prompts/MATH push repo May 29, 2025 run_src run_src push repo May 29, 2025 scripts scripts push repo May 29, 2025 LICENSE LICENSE Initial May 29, 2025 README.md README.md Upda...",
-          "readerTitle": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
-          "readerExcerpt": "📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64th Annual Meeting of the Association for Computational Linguistics (Long Papers). ## Contents - Introduction - Requirements - Usage - Acknowledgement - Citation ## Introduction We introduce __ThoughtICR__, an automated __Thought__-level __I__n-__C__ontext __R__easoning paradigm for large language models. ThoughtICR rethinks the role of context in in-context learning: instead of asking models to imitate surface-level examples, it provides explicit, reusable, and guidance-orient...",
-          "publishDate": "",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/jinyangwu/ThoughtICR",
-          "title": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
-          "snippet": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR GitHub。ThoughtICR 📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models, accepted to ACL 2026 Long Papers. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. News ACL 2026: ThoughtICR was accepted to the 6...",
-          "readerTitle": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
-          "readerExcerpt": "📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64th Annual Meeting of the Association for Computational Linguistics (Long Papers). ## Contents - Introduction - Requirements - Usage - Acknowledgement - Citation ## Introduction We introduce __ThoughtICR__, an automated __Thought__-level __I__n-__C__ontext __R__easoning paradigm for large language models. ThoughtICR rethinks the role of context in in-context learning: instead of asking models to imitate surface-level examples, it provides explicit, reusable, and guidance-orient...",
-          "publishDate": "",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-f5c6ad83eca4",
-      "title": ". 1.Introduction Multimodal intent recognition aims to infer human intents by jointly modeling various modalities, playing a pivotal role in real-world dialogue systems. However, current methods struggle to model hierar",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for . 1.Introduction Multimodal intent recognition aims to infer human intents by jointly modeling various modalities, playing a pivotal role in real-world dialogue systems. However, current methods struggle to model hierar; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/thuiar/HIER",
-      "canonicalUrl": "https://github.com/thuiar/HIER",
-      "pdfUrl": "",
-      "sourceId": "unofficial-f5c6ad83eca4",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-08-23T02:38:12.420Z",
-      "updatedAt": "2026-08-23T02:38:12.420Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "reasoning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/thuiar/HIER",
-          "title": "GitHub - thuiar/HIER: Official code implementation of Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition (CVPR2026)",
-          "snippet": "zhougr18 Mar 6, 2026 227414c · Mar 6, 2026 3 Open details 3 data data examples/train_lora examples/train_lora figs figs src src .DS_Store .DS_Store .gitignore .gitignore LICENSE LICENSE README.md README.md requirements.txt requirements.txt Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition This repository provides the official PyTorch implementation of the research paper: Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation...",
-          "readerTitle": "GitHub - thuiar/HIER: Official code implementation of Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition (CVPR2026)",
-          "readerExcerpt": "This repository provides the official PyTorch implementation of the research paper: Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition (__Accepted by CVPR2026__). ## 1.Introduction Multimodal intent recognition aims to infer human intents by jointly modeling various modalities, playing a pivotal role in real-world dialogue systems. However, current methods struggle to model hierarchical semantics underlying complex intents and lack the capacity for selfevolving reasoning over multimodal representations. To address these , we propose HIER, a novel method that integrates HIerarchical semantic representation with Evolutionary Reasoning based on MLLM. ## 2. Dependencies Our implementation is based on __LLaMA-Factory__ and performs __LoRA fine-tuning__ for training and evaluation. We recommend using __Anaconda__ to create the Python environmen...",
-          "publishDate": "",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-cf04dccc3055",
-      "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Landsayy/AttentionJailbreak",
-      "canonicalUrl": "https://github.com/Landsayy/AttentionJailbreak",
-      "pdfUrl": "",
-      "sourceId": "unofficial-cf04dccc3055",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8611111111111112,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-29T05:23:20.345Z",
-      "updatedAt": "2026-08-23T02:38:12.417Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [
-        "Jingru Li",
-        "Wei Ren",
-        "Tianqing Zhu"
-      ],
-      "keywords": [
-        "large language model",
-        "vlm",
-        "vla",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Landsayy/AttentionJailbreak",
-          "title": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\"",
-          "snippet": "Latest 8 8 assets assets attack attack evaluation evaluation harmful_corpus harmful_corpus images images scripts scripts LICENSE LICENSE README.md README.md requirements.txt requirements.txt View all files 🙈 Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking Jingru Li, Wei Ren, Tianqing Zhu TL;DR: We propose Attention-Guided Visual Jailbreaking , revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By direct...",
-          "readerTitle": "GitHub - Landsayy/AttentionJailbreak: [ACL 2026 Main] Official implementation of \"Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking\" Β· GitHub",
-          "readerExcerpt": "!Image 1: arXiv !Image 2: License: MIT !Image 3: Python 3.9+ !Image 4: PyTorch __Jingru Li, Wei Ren, Tianqing Zhu__ > __TL;DR:__ We propose __Attention-Guided Visual Jailbreaking__, revealing a critical vulnerability in Large Vision-Language Models (LVLMs). By directly manipulating attention patterns (Push-Pull Attack), we bypass safety alignments with a __94.4% Attack Success Rate__ on Qwen-VL, without overpowering the model's safety constraints. --- ## π‘ Overview This repository contains the official implementation of __Attention-Guided Visual Jailbreaking__. LVLMs continuously retrieve safety instructions through their attention mechanism during text generation. Instead of optimizing image perturbations to maximize harmful output likelihood (which suffers from gradient conflict), our method circumvents this by directly hijacking the attention routing process. !Image 5: Push-Pull...",
-          "publishDate": "2026-05-29",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-08-22T02:33:40.539Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-439348b87abd",
-      "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-      "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
-      "summary": "Discovery evidence found an explicit AAAI 2026 paper signal for Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确说明该论文已被AAAI 2026会议接受为口头报告。",
-      "primaryUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "canonicalUrl": "https://github.com/rickyang1114/multimodal-deepresearcher",
-      "pdfUrl": "",
-      "sourceId": "unofficial-439348b87abd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "AAAI 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-08-22T02:32:21.223Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "agent",
-        "report generation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/rickyang1114/multimodal-deepresearcher",
-          "title": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch",
-          "snippet": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "readerTitle": "GitHub - rickyang1114/multimodal-deepresearcher: [AAAI 2026] Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
-          "readerExcerpt": "We introduce an __agentic framework__ that automatically generates comprehensive multimodal reports __from scratch__ with __interleaved texts and visualizations__, going beyond text-only content generation. The paper has been accepted as an oral presentation at AAAI 2026.",
-          "publishDate": "2026-04-19",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-1948951b5bb9",
-      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
-      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
-      "pdfUrl": "",
-      "sourceId": "unofficial-1948951b5bb9",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Oral",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-08-23T02:48:36.224Z",
-      "lastCheckedAt": "2026-08-23T02:48:36.224Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Cominclip/OmniVerifier",
-          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
-          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
-          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
-          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
-          "publishDate": "2026-07-16",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
-        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-        "venue": "ICLR 2026 Oral"
-      }
-    },
-    {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-08-23T02:48:36.225Z",
-      "lastCheckedAt": "2026-08-23T02:48:36.225Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
-    },
-    {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
-      "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-08-23T02:48:36.226Z",
-      "lastCheckedAt": "2026-08-23T02:48:36.226Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "agent",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
     },
     {
       "id": "unofficial-5af0bee55047",
@@ -3665,66 +3725,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-2d98176824ab",
-      "title": "and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation",
-      "titleZh": "使多模态大模型失明：MLLM内容审核中的对抗性走私攻击",
-      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation; waiting for Zhipu enrichment.",
-      "reason": "GitHub页面明确标注为ACL 2026论文，包含arXiv预印本和项目代码",
-      "primaryUrl": "https://github.com/zhihengli-casia/smugglebench",
-      "canonicalUrl": "https://github.com/zhihengli-casia/smugglebench",
-      "pdfUrl": "https://arxiv.org/abs/2604.06950",
-      "sourceId": "unofficial-2d98176824ab",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8333333333333334,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-11T05:08:14.979Z",
-      "updatedAt": "2026-06-22T06:42:25.463Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [
-        "Zhiheng Li",
-        "Zongyang Ma",
-        "Yuntong Pan",
-        "Ziqi Zhang",
-        "Xiaolei Lv",
-        "Bo Li",
-        "Jun Gao",
-        "Jianing Zhang",
-        "Chunfeng Yuan",
-        "Bing Li",
-        "Weiming Hu"
-      ],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "mllm",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/zhihengli-casia/smugglebench",
-          "title": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks",
-          "snippet": "Open more menu Folders and files Latest 19 19 annotations annotations assets assets docs docs images images scripts scripts .gitignore .gitignore CITATION.cff CITATION.cff LICENSE LICENSE README.md README.md README_CN.md README_CN.md evaluation.py evaluation.py inference.py inference.py requirements.txt requirements.txt View all files ACL 2026 · arXiv:2604.06950 Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu Offi...",
-          "readerTitle": "GitHub - zhihengli-casia/Smugglebench: [ACL 2026] Official code and benchmark release for \"Making MLLMs Blind: Adversarial Smuggling Attacks in MLLM Content Moderation\"",
-          "readerExcerpt": "__ACL 2026 · arXiv:2604.06950__ Zhiheng Li, Zongyang Ma, Yuntong Pan, Ziqi Zhang, Xiaolei Lv, Bo Li, Jun Gao, Jianing Zhang, Chunfeng Yuan, Bing Li, Weiming Hu !Image 1: arXiv paper !Image 2: Project page !Image 3: Hugging Face dataset !Image 4: GitHub repository Official and benchmark release for our ACL 2026 paper and arXiv preprint on adversarial smuggling attacks against multimodal content moderation. 简体中文 | arXiv | Project Page | Hugging Face | Overview | | Citation | License !Image 5: A typical example of adversarial smuggling attacks ## Overview We introduce __Adversarial Smuggling Attacks (ASA)__, a new threat model for multimodal content moderation. Instead of relying on imperceptible perturbations or prompt-based jailbreaks, ASA hides harmful content in visual forms that remain readable to humans but are difficult for MLLMs to correctly perceive or interpret. To study this p...",
-          "publishDate": "2026-05-23",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
     },
     {
       "id": "unofficial-b5f930a841f3",
