@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-27T11:22:13.383Z",
-  "count": 11828,
+  "generatedAt": "2026-08-28T12:57:29.844Z",
+  "count": 11830,
   "guidedCount": 101,
   "venueYearCount": 13,
   "sources": [
@@ -22,7 +22,7 @@
     {
       "name": "Zhipu unofficial discovery",
       "url": "https://docs.bigmodel.cn/api-reference/工具-api/网络搜索",
-      "count": 31
+      "count": 33
     }
   ],
   "notes": [
@@ -60,7 +60,7 @@
       "key": "2026-acl-2026-main",
       "venue": "ACL 2026 Main",
       "year": 2026,
-      "count": 15,
+      "count": 16,
       "path": "data/catalog/shards/2026-acl-2026-main.json"
     },
     {
@@ -116,7 +116,7 @@
       "key": "2026-icml-2026",
       "venue": "ICML 2026",
       "year": 2026,
-      "count": 1,
+      "count": 2,
       "path": "data/catalog/shards/2026-icml-2026.json"
     },
     {
@@ -101050,6 +101050,55 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-27T04:51:36.740Z",
+      "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-acl-2026-main",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-12c944307cb7",
+      "title": "ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling GitHub。ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling Authors:",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ACL 2026 Main",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "mllm-foundations",
+      "categories": [
+        "mllm-foundations",
+        "evaluation-benchmarks",
+        "reasoning",
+        "rl-post-training"
+      ],
+      "keywords": [
+        "large language model",
+        "llm",
+        "multimodal",
+        "mllm",
+        "reasoning",
+        "benchmark",
+        "ACL 2026 Main",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/XD111ds/ILVR/blob/main",
+      "tldr": "ILVR论文提出了一种交错式潜在视觉推理方法，具有选择性感知建模能力。",
+      "aliases": [
+        "unofficial-12c944307cb7"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-12c944307cb7",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-08-28T12:46:01.860Z",
       "evidenceCount": 1,
       "platforms": [
         "web"
@@ -532136,6 +532185,58 @@
       "acceptedYear": 2026,
       "discoveredAt": "2026-06-12T06:01:41.233Z",
       "evidenceCount": 1,
+      "platforms": [
+        "web"
+      ],
+      "shardKey": "2026-icml-2026",
+      "hasIntroZh": false,
+      "hasAbstract": true
+    },
+    {
+      "id": "unofficial-236454b251e7",
+      "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+      "hookZh": "社交媒体或个人主页已出现接收信号，正式会场页面尚未完全同步。",
+      "venue": "ICML 2026",
+      "year": 2026,
+      "track": "Accepted signal pending official venue page",
+      "primaryCategory": "mllm-foundations",
+      "categories": [
+        "mllm-foundations",
+        "evaluation-benchmarks",
+        "reasoning",
+        "agents-tool-use"
+      ],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "rag",
+        "benchmark",
+        "mllm",
+        "ICML 2026",
+        "web",
+        "unofficial"
+      ],
+      "authors": [
+        "Unknown authors"
+      ],
+      "openreviewUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+      "tldr": "一个面向专家级AGI的大规模多学科多模态理解与推理基准测试",
+      "aliases": [
+        "unofficial-236454b251e7"
+      ],
+      "source": "zhipu-social-accepted",
+      "sourceId": "unofficial-236454b251e7",
+      "guideStatus": "pending",
+      "sourceType": "unofficial",
+      "acceptanceStatus": "accepted",
+      "acceptedVenue": "ICML 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-21T04:30:14.638Z",
+      "evidenceCount": 2,
       "platforms": [
         "web"
       ],

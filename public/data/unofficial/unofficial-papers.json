@@ -1,35 +1,37 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T11:22:10.340Z",
+  "generatedAt": "2026-08-28T12:57:27.585Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-43cc1d4aff6f",
-      "title": "Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注为ACL 2026 Oral论文",
-      "primaryUrl": "https://github.com/MindIntLab-HFUT/CEDAR",
-      "canonicalUrl": "https://github.com/MindIntLab-HFUT/CEDAR",
+      "id": "unofficial-12c944307cb7",
+      "title": "ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling GitHub。ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling Authors:",
+      "summary": "ILVR论文提出了一种交错式潜在视觉推理方法，具有选择性感知建模能力。",
+      "reason": "GitHub页面明确标注该论文被ACL 2026会议接收为口头报告。",
+      "primaryUrl": "https://github.com/XD111ds/ILVR/blob/main",
+      "canonicalUrl": "https://github.com/XD111ds/ILVR/blob/main",
       "pdfUrl": "",
-      "sourceId": "unofficial-43cc1d4aff6f",
+      "sourceId": "unofficial-12c944307cb7",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ACL 2026",
+      "confidence": 0.8055555555555556,
+      "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-08-27T11:11:58.364Z",
-      "updatedAt": "2026-08-27T11:22:09.876Z",
+      "discoveredAt": "2026-08-28T12:46:01.860Z",
+      "updatedAt": "2026-08-28T12:47:29.496Z",
       "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
+      "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
+        "large language model",
         "llm",
         "multimodal",
-        "agent",
+        "mllm",
+        "reasoning",
         "benchmark"
       ],
       "titleAliases": [],
@@ -40,11 +42,11 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/MindIntLab-HFUT/CEDAR",
-          "title": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses",
-          "snippet": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses GitHub。Folders and files Latest 16 16 figs figs multimodal_25_sample multimodal_25_sample LICENSE LICENSE README.md README.md View all files CEDAR Benchmark Paper: Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses We present some representative examples from CEDAR. s and datasets are availble at: https://docs.google.com...",
-          "readerTitle": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses · GitHub",
-          "readerExcerpt": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - Vie...",
+          "url": "https://github.com/XD111ds/ILVR/blob/main",
+          "title": "[ACL'26 Oral] ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
+          "snippet": "[ACL'26 Oral] ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling GitHub。[ACL'26 Oral] ILVR: Interleaved Latent Visual Reasoning with Selective Perceptual Modeling Authors: Shuai Dong, Siyuan Wang, Xingyu Liu, Chenglin Li, Haowen Hou, Zhongyu Wei Affiliations: China University of Geosciences, Wuhan; Shanghai Innovation Institute; University of Southern California; Fudan University; Zhejiang University; Shanghai Jiao Tong University. Venue: ACL 2026 (Oral Presentation)...",
+          "readerTitle": "GitHub - XD111ds/ILVR: [ACL'26 Oral] Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
+          "readerExcerpt": "!Image 1: arXiv !Image 2: ACL 2026 !Image 3: License: MIT __Authors:__ Shuai Dong, Siyuan Wang, Xingyu Liu, Chenglin Li, Haowen Hou, Zhongyu Wei __Affiliations:__ China University of Geosciences, Wuhan; Shanghai Innovation Institute; University of Southern California; Fudan University; Zhejiang University; Shanghai Jiao Tong University. __Venue:__ ACL 2026 (__Oral Presentation__). --- ## 📖 Abstract !Image 4: Model Architecture > __Abstract:__ Interleaved reasoning paradigms enhance Multimodal Large Language Models (MLLMs) with visual feedback but are hindered by the prohibitive computational cost of re-encoding pixel-dense images. A promising alternative, latent visual reasoning, circumvents this bottleneck yet faces limitations: methods either fail to capture intermediate state evolution due to single-step, non-interleaved structures, or sacrifice precise perceptual modeling by over...",
           "publishDate": "",
           "query": ""
         }
@@ -66,7 +68,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-08-23T02:38:12.420Z",
-      "updatedAt": "2026-08-27T11:11:58.363Z",
+      "updatedAt": "2026-08-28T12:46:01.866Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -112,7 +114,7 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-08-27T11:11:58.360Z",
+      "updatedAt": "2026-08-28T12:46:01.864Z",
       "lastCheckedAt": "2026-05-05T04:30:18.046Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -154,6 +156,122 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-236454b251e7",
+      "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+      "summary": "一个面向专家级AGI的大规模多学科多模态理解与推理基准测试",
+      "reason": "GitHub仓库中显示TIGER-AI-Lab有ICML 2026相关论文，但未明确提及该论文的具体接受信息",
+      "primaryUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+      "canonicalUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+      "pdfUrl": "",
+      "sourceId": "unofficial-236454b251e7",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "ICML 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-21T04:30:14.638Z",
+      "updatedAt": "2026-08-27T11:26:14.409Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "cleaned",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "rag",
+        "benchmark",
+        "mllm"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories",
+          "title": "TIGER-AI-Lab repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search Repositories list 64 repositories Last pushed Comfortable display density Compact display density Open-source benchmark for browser AI agents on daily tasks. Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated A version of verl to support diverse tool use [TMLR 2026] Python • MIT License • 86 86 forks • 1k 1k stars • 8 8 • 0 0 • Updated TIGER-AI-Lab/FIM-Midtraining’s past year of activity Python...",
+          "readerTitle": "TIGER Lab",
+          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 28 • 490 • 35 • 6 •Updated Jul 17, 2026 Jul 17, 2026 - A version of verl to support diverse tool use [TMLR 2026] Python • • 86 • 1k • 8 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Python • • 1 • 13 • 0 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 95 • 1 • 0 •Updated Jun 29, 2026 Jun 29, 2026 - SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Understanding [ACL 2026] Python • • 2 • 11 • 0 • 0 •Updated Jun 26, 2026 Jun 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 62 • 666 • 29 • 0 •Updated Jun 24, 2026 Jun 24, 2026 - Evaluating LLMs' abilities to generate structural o...",
+          "publishDate": "2026-07-17",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
+          "title": "TIGER-AI-Lab repositories · GitHub",
+          "snippet": "All Change the repository type filter All Search repositories Search 64 repositories Last pushed Comfortable display density Compact display density ClawBench Public Open-source benchmark for browser AI agents on daily tasks. chrome-extension benchmark evaluation + 17 chrome-extension benchmark evaluation dataset browser-automation ai-agents web-agent web-agents everyday-tasks browser-agent + 10 Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated Jul 17, 2026 ver...",
+          "readerTitle": "TIGER Lab",
+          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 34 • 560 • 35 • 5 •Updated Aug 8, 2026 Aug 8, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 109 • 1 • 0 •Updated Aug 4, 2026 Aug 4, 2026 - Pixel-Level Reasoning Model trained with RL [NeuIPS25] Python • • 13 • 303 • 5 • 0 •Updated Jul 28, 2026 Jul 28, 2026 - Evaluating LLMs' abilities to generate structural output [TMLR2025] Python • • 7 • 23 • 2 • 4 •Updated Jul 26, 2026 Jul 26, 2026 - EditReward: A Human-Aligned Reward Model for Instruction-Guided Image Editing [ICLR 2026] Python • • 6 • 158 • 4 • 0 •Updated Jul 26, 2026 Jul 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 64 • 674 • 29 • 0 •Updated Jul 24, 2026 Jul 24, 2026 - A version o...",
+          "publishDate": "2026-07-17",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7c457864ebdd",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-08-27T11:24:57.466Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "reasoning",
+        "conversation",
+        "recommendation"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "github",
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
       "id": "unofficial-439348b87abd",
       "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
       "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
@@ -169,7 +287,7 @@
       "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-08-26T02:52:19.896Z",
+      "updatedAt": "2026-08-27T11:23:21.616Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -210,6 +328,101 @@
       "evidenceCount": 2
     },
     {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-08-28T12:57:27.583Z",
+      "lastCheckedAt": "2026-08-28T12:57:27.583Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-08-28T12:57:27.584Z",
+      "lastCheckedAt": "2026-08-28T12:57:27.584Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
       "id": "unofficial-1948951b5bb9",
       "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
       "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -224,8 +437,8 @@
       "acceptedVenue": "ICLR 2026 Oral",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-08-27T11:22:10.337Z",
-      "lastCheckedAt": "2026-08-27T11:22:10.337Z",
+      "updatedAt": "2026-08-28T12:57:27.585Z",
+      "lastCheckedAt": "2026-08-28T12:57:27.585Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -262,74 +475,30 @@
       }
     },
     {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "id": "unofficial-43cc1d4aff6f",
+      "title": "Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注为ACL 2026 Oral论文",
+      "primaryUrl": "https://github.com/MindIntLab-HFUT/CEDAR",
+      "canonicalUrl": "https://github.com/MindIntLab-HFUT/CEDAR",
       "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
+      "sourceId": "unofficial-43cc1d4aff6f",
       "year": 2026,
-      "status": "officially-published",
+      "status": "accepted",
       "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
+      "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-08-27T11:22:10.339Z",
-      "lastCheckedAt": "2026-08-27T11:22:10.339Z",
+      "discoveredAt": "2026-08-27T11:11:58.364Z",
+      "updatedAt": "2026-08-27T11:22:09.876Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
-    },
-    {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
-      "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-08-27T11:22:10.339Z",
-      "lastCheckedAt": "2026-08-27T11:22:10.339Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
+        "llm",
+        "multimodal",
         "agent",
-        "reinforcement learning"
+        "benchmark"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -339,22 +508,16 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
+          "url": "https://github.com/MindIntLab-HFUT/CEDAR",
+          "title": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses",
+          "snippet": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses GitHub。Folders and files Latest 16 16 figs figs multimodal_25_sample multimodal_25_sample LICENSE LICENSE README.md README.md View all files CEDAR Benchmark Paper: Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses We present some representative examples from CEDAR. s and datasets are availble at: https://docs.google.com...",
+          "readerTitle": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses · GitHub",
+          "readerExcerpt": "GitHub - MindIntLab-HFUT/CEDAR: [ACL 2026 (Oral)] Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - Vie...",
+          "publishDate": "",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-df61e8783600",
@@ -636,62 +799,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-08-25T02:42:34.462Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-cf04dccc3055",
@@ -1305,66 +1412,6 @@
         }
       ],
       "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-236454b251e7",
-      "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
-      "summary": "发现页在公开页面中识别到 ICML 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICML 2026 paper signal for MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
-      "canonicalUrl": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
-      "pdfUrl": "",
-      "sourceId": "unofficial-236454b251e7",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "ICML 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-21T04:30:14.638Z",
-      "updatedAt": "2026-08-13T03:33:38.830Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "video understanding",
-        "rag",
-        "benchmark",
-        "mllm"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories",
-          "title": "TIGER-AI-Lab repositories · GitHub",
-          "snippet": "All Change the repository type filter All Search repositories Search Repositories list 64 repositories Last pushed Comfortable display density Compact display density Open-source benchmark for browser AI agents on daily tasks. Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated A version of verl to support diverse tool use [TMLR 2026] Python • MIT License • 86 86 forks • 1k 1k stars • 8 8 • 0 0 • Updated TIGER-AI-Lab/FIM-Midtraining’s past year of activity Python...",
-          "readerTitle": "TIGER Lab",
-          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 28 • 490 • 35 • 6 •Updated Jul 17, 2026 Jul 17, 2026 - A version of verl to support diverse tool use [TMLR 2026] Python • • 86 • 1k • 8 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Python • • 1 • 13 • 0 • 0 •Updated Jul 15, 2026 Jul 15, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 95 • 1 • 0 •Updated Jun 29, 2026 Jun 29, 2026 - SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Understanding [ACL 2026] Python • • 2 • 11 • 0 • 0 •Updated Jun 26, 2026 Jun 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 62 • 666 • 29 • 0 •Updated Jun 24, 2026 Jun 24, 2026 - Evaluating LLMs' abilities to generate structural o...",
-          "publishDate": "2026-07-17",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/orgs/TIGER-AI-Lab/repositories?type=all",
-          "title": "TIGER-AI-Lab repositories · GitHub",
-          "snippet": "All Change the repository type filter All Search repositories Search 64 repositories Last pushed Comfortable display density Compact display density ClawBench Public Open-source benchmark for browser AI agents on daily tasks. chrome-extension benchmark evaluation + 17 chrome-extension benchmark evaluation dataset browser-automation ai-agents web-agent web-agents everyday-tasks browser-agent + 10 Python • Apache License 2.0 • 28 28 forks • 489 489 stars • 35 35 • 6 6 • Updated Jul 17, 2026 ver...",
-          "readerTitle": "TIGER Lab",
-          "readerExcerpt": "## Repositories list - Open-source benchmark for browser AI agents on daily tasks. Python • • 34 • 560 • 35 • 5 •Updated Aug 8, 2026 Aug 8, 2026 - Context Forcing: Consistent Autoregressive Video Generation with Long Context [ICML26] Python • • 2 • 109 • 1 • 0 •Updated Aug 4, 2026 Aug 4, 2026 - Pixel-Level Reasoning Model trained with RL [NeuIPS25] Python • • 13 • 303 • 5 • 0 •Updated Jul 28, 2026 Jul 28, 2026 - Evaluating LLMs' abilities to generate structural output [TMLR2025] Python • • 7 • 23 • 2 • 4 •Updated Jul 26, 2026 Jul 26, 2026 - EditReward: A Human-Aligned Reward Model for Instruction-Guided Image Editing [ICLR 2026] Python • • 6 • 158 • 4 • 0 •Updated Jul 26, 2026 Jul 26, 2026 - This repo contains the for \"VLM2Vec / MMEB\" [ICLR 2025], \"VLM2Vec-V2 / MMEB-V2\" [TMLR 2026], and \"MMEB-V3\" [COLM 2026] Python • • 64 • 674 • 29 • 0 •Updated Jul 24, 2026 Jul 24, 2026 - A version o...",
-          "publishDate": "2026-07-17",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
     },
     {
       "id": "unofficial-d79388b2bcf2",
