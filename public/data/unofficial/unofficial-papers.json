@@ -1,63 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-09T06:11:07.938Z",
+  "generatedAt": "2026-09-10T06:09:17.576Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-2c8ffa4c18a3",
-      "title": "! Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals 2026-01-30 MEIDNet: Multimodal generative AI framework for inverse materials design 2026-01-29 Embracing Aleatoric Uncertainty in Medical Multimodal",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 paper signal for ! Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals 2026-01-30 MEIDNet: Multimodal generative AI framework for inverse materials design 2026-01-29 Embracing Aleatoric Uncertainty in Medical Multimodal; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/pstAmbition/DailyArXiv_Multimodal/issues/270",
-      "canonicalUrl": "https://github.com/pstAmbition/DailyArXiv_Multimodal/issues/270",
-      "pdfUrl": "",
-      "sourceId": "unofficial-2c8ffa4c18a3",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-09-06T05:55:56.912Z",
-      "updatedAt": "2026-09-09T05:59:07.164Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "robotics",
-        "rag",
-        "world model",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/pstAmbition/DailyArXiv_Multimodal/issues/270",
-          "title": "Latest 15 Papers - February 03, 2026",
-          "snippet": "Latest 15 Papers - February 03, 2026 GitHub。Latest 15 Papers - February 03, 2026 #270 Multimodal Learning Title Date Comment Metis-SPECS: Decoupling Multimodal Learning via Self-distilled Preference-based Cold Start 2026-01-30 Publi... Published as a conference paper at ICLR 2026! Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals 2026-01-30 MEIDNet: Multimodal generative AI framework for inverse materials design 2026-01-29 Embracing Aleatoric Uncertainty in Medical Multimo...",
-          "readerTitle": "pstAmbition/DailyArXiv_Multimodal README",
-          "readerExcerpt": "__Please check the Github page for a better reading experience and more papers.__ ## Multimodal Learning | __Title__ | __Date__ | __Comment__ | | --- | --- | --- | | __Metis-SPECS: Decoupling Multimodal Learning via Self-distilled Preference-based Cold Start__ | 2026-01-30 | Publi... Published as a conference paper at ICLR 2026! | | __Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals__ | 2026-01-30 | | | __MEIDNet: Multimodal generative AI framework for inverse materials design__ | 2026-01-29 | | | __Embracing Aleatoric Uncertainty in Medical Multimodal Learning with Missing Modalities__ | 2026-01-29 | | | __Robust Multimodal Representation Learning in Healthcare__ | 2026-01-29 | | | __Neural Signals Generate Clinical Notes in the Wild__ | 2026-01-29 | | | __When Gradient Optimization Is Not Enough: $\\dagger$ Dispersive and Anchoring Geometric Regularizer for Multi...",
-          "publishDate": "2026/02/03",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-b09792bf2db3",
       "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...",
       "titleZh": "MegaRAG: 多模态图检索增强生成",
-      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...; waiting for Zhipu enrichment.",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库标题明确标注为[ACL 2026]论文，包含多模态图推理与页面检索技术结合的详细描述。",
       "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
       "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
       "pdfUrl": "",
@@ -68,10 +22,10 @@
       "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-09-09T05:59:07.162Z",
+      "updatedAt": "2026-09-10T06:09:17.106Z",
       "lastCheckedAt": "2026-05-05T04:30:18.046Z",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -111,55 +65,10 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-278b9b4c0ba5",
-      "title": "License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below:",
-      "summary": "发现页在公开页面中识别到 ICML 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICML 2026 Main paper signal for License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below:; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/microsoft/DKI_LLM",
-      "canonicalUrl": "https://github.com/microsoft/DKI_LLM",
-      "pdfUrl": "",
-      "sourceId": "unofficial-278b9b4c0ba5",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.78,
-      "acceptedVenue": "ICML 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-09-09T05:59:07.161Z",
-      "updatedAt": "2026-09-09T05:59:07.161Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "reasoning",
-        "benchmark",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/microsoft/DKI_LLM",
-          "title": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with code.",
-          "snippet": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with . GitHub。 DualGraph DualGraph LettinGo LettinGo 📫 Paper Collection (Microsoft DKI Group) This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below: News April, 2026: our paper A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research was accepted by ICML 2026. April, 2026: our pa...",
-          "readerTitle": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with code.",
-          "readerExcerpt": "## 📫 Paper Collection (Microsoft DKI Group) Image 1 !Image 2: License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below: ## News - April, 2026: our paper A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research was accepted by ICML 2026. - April, 2026: our paper RepoGenesis: Benchmarking End-to-End Microservice Generation from Readme to Repository was accepted by ACL 2026 ( ) with a Top 15% of accepted papers. - January, 2026: our paper RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning was accepted by ICLR 2026. - January, 2025: our paper Self-Evolve Reward Learning for LLMs was accepted by ICLR 2025. ## Release (Click Title to Locate the ) ### Deep Research > __A Tale of Two Graphs: Separating Knowledge Exploration from...",
-          "publishDate": "",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-c3195f2b58ce",
       "title": "Is this chart lying to me? Automating the detection of misleading visualization\" GitHub。 update tudatalib link update images readme Mar 18, 2026 update for V2 of the paper Jan 21, 2026 update webpage Feb 3, 2026",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Is this chart lying to me? Automating the detection of misleading visualization\" GitHub。 update tudatalib link update images readme Mar 18, 2026 update for V2 of the paper Jan 21, 2026 update webpage Feb 3, 2026; waiting for Zhipu enrichment.",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Is this chart lying to me? Automating the detection of misleading visualization\" GitHub。 update tudatalib link update images readme Mar 18, 2026 update for V2 of the paper Jan 21, 2026 update webpage Feb 3, 2026; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确表明该论文已被ACL 2026会议接受",
       "primaryUrl": "https://github.com/UKPLab/acl2026-misviz",
       "canonicalUrl": "https://github.com/UKPLab/acl2026-misviz",
       "pdfUrl": "",
@@ -170,10 +79,10 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-08-31T07:02:14.169Z",
-      "updatedAt": "2026-09-09T05:59:07.160Z",
+      "updatedAt": "2026-09-10T06:02:24.718Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
         "large language model",
@@ -207,9 +116,9 @@
     {
       "id": "unofficial-ffb5140d7bb4",
       "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
-      "titleZh": "VGPO：视觉引导的多模态推理策略优化",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning; waiting for Zhipu enrichment.",
+      "titleZh": "VGPO: 视觉引导的多模态推理策略优化",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注论文被ACL 2026主会议接受",
       "primaryUrl": "https://github.com/wzb-bupt/VGPO",
       "canonicalUrl": "https://github.com/wzb-bupt/VGPO",
       "pdfUrl": "",
@@ -220,10 +129,10 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.156Z",
-      "updatedAt": "2026-09-09T05:59:07.158Z",
+      "updatedAt": "2026-09-10T05:59:10.814Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -251,27 +160,75 @@
       "evidenceCount": 1
     },
     {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "id": "unofficial-2c8ffa4c18a3",
+      "title": "! Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals 2026-01-30 MEIDNet: Multimodal generative AI framework for inverse materials design 2026-01-29 Embracing Aleatoric Uncertainty in Medical Multimodal",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 paper signal for ! Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals 2026-01-30 MEIDNet: Multimodal generative AI framework for inverse materials design 2026-01-29 Embracing Aleatoric Uncertainty in Medical Multimodal; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/pstAmbition/DailyArXiv_Multimodal/issues/270",
+      "canonicalUrl": "https://github.com/pstAmbition/DailyArXiv_Multimodal/issues/270",
       "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
+      "sourceId": "unofficial-2c8ffa4c18a3",
       "year": 2026,
-      "status": "officially-published",
+      "status": "accepted",
       "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedVenue": "ICLR 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-09-09T06:11:07.936Z",
-      "lastCheckedAt": "2026-09-09T06:11:07.936Z",
+      "discoveredAt": "2026-09-06T05:55:56.912Z",
+      "updatedAt": "2026-09-10T05:57:53.444Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
-        "agent",
+        "multimodal",
+        "robotics",
+        "rag",
+        "world model",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/pstAmbition/DailyArXiv_Multimodal/issues/270",
+          "title": "Latest 15 Papers - February 03, 2026",
+          "snippet": "Latest 15 Papers - February 03, 2026 GitHub。Latest 15 Papers - February 03, 2026 #270 Multimodal Learning Title Date Comment Metis-SPECS: Decoupling Multimodal Learning via Self-distilled Preference-based Cold Start 2026-01-30 Publi... Published as a conference paper at ICLR 2026! Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals 2026-01-30 MEIDNet: Multimodal generative AI framework for inverse materials design 2026-01-29 Embracing Aleatoric Uncertainty in Medical Multimo...",
+          "readerTitle": "pstAmbition/DailyArXiv_Multimodal README",
+          "readerExcerpt": "__Please check the Github page for a better reading experience and more papers.__ ## Multimodal Learning | __Title__ | __Date__ | __Comment__ | | --- | --- | --- | | __Metis-SPECS: Decoupling Multimodal Learning via Self-distilled Preference-based Cold Start__ | 2026-01-30 | Publi... Published as a conference paper at ICLR 2026! | | __Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals__ | 2026-01-30 | | | __MEIDNet: Multimodal generative AI framework for inverse materials design__ | 2026-01-29 | | | __Embracing Aleatoric Uncertainty in Medical Multimodal Learning with Missing Modalities__ | 2026-01-29 | | | __Robust Multimodal Representation Learning in Healthcare__ | 2026-01-29 | | | __Neural Signals Generate Clinical Notes in the Wild__ | 2026-01-29 | | | __When Gradient Optimization Is Not Enough: $\\dagger$ Dispersive and Anchoring Geometric Regularizer for Multi...",
+          "publishDate": "2026/02/03",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
+      "id": "unofficial-278b9b4c0ba5",
+      "title": "License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below:",
+      "summary": "发现页在公开页面中识别到 ICML 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICML 2026 Main paper signal for License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below:; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/microsoft/DKI_LLM",
+      "canonicalUrl": "https://github.com/microsoft/DKI_LLM",
+      "pdfUrl": "",
+      "sourceId": "unofficial-278b9b4c0ba5",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.78,
+      "acceptedVenue": "ICML 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-09-09T05:59:07.161Z",
+      "updatedAt": "2026-09-10T05:57:53.442Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "reasoning",
+        "benchmark",
         "reinforcement learning"
       ],
       "titleAliases": [],
@@ -282,68 +239,16 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
+          "url": "https://github.com/microsoft/DKI_LLM",
+          "title": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with code.",
+          "snippet": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with . GitHub。 DualGraph DualGraph LettinGo LettinGo 📫 Paper Collection (Microsoft DKI Group) This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below: News April, 2026: our paper A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research was accepted by ICML 2026. April, 2026: our pa...",
+          "readerTitle": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with code.",
+          "readerExcerpt": "## 📫 Paper Collection (Microsoft DKI Group) Image 1 !Image 2: License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below: ## News - April, 2026: our paper A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research was accepted by ICML 2026. - April, 2026: our paper RepoGenesis: Benchmarking End-to-End Microservice Generation from Readme to Repository was accepted by ACL 2026 ( ) with a Top 15% of accepted papers. - January, 2026: our paper RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning was accepted by ICLR 2026. - January, 2025: our paper Self-Evolve Reward Learning for LLMs was accepted by ICLR 2025. ## Release (Click Title to Locate the ) ### Deep Research > __A Tale of Two Graphs: Separating Knowledge Exploration from...",
+          "publishDate": "",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
-    },
-    {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-09-09T06:11:07.937Z",
-      "lastCheckedAt": "2026-09-09T06:11:07.937Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-1948951b5bb9",
@@ -360,8 +265,8 @@
       "acceptedVenue": "ICLR 2026 Oral",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-09-09T06:11:07.937Z",
-      "lastCheckedAt": "2026-09-09T06:11:07.937Z",
+      "updatedAt": "2026-09-10T06:09:17.573Z",
+      "lastCheckedAt": "2026-09-10T06:09:17.573Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -395,6 +300,101 @@
         "url": "https://openreview.net/forum?id=DM0Y0oL33T",
         "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
         "venue": "ICLR 2026 Oral"
+      }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-09-10T06:09:17.574Z",
+      "lastCheckedAt": "2026-09-10T06:09:17.574Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-09-10T06:09:17.575Z",
+      "lastCheckedAt": "2026-09-10T06:09:17.575Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
       }
     },
     {
