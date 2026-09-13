@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-12T05:57:45.507Z",
+  "generatedAt": "2026-09-13T06:17:39.466Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
@@ -9,9 +9,9 @@
     {
       "id": "unofficial-ffb5140d7bb4",
       "title": "VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
-      "titleZh": "VGPO: 视觉引导的多模态推理策略优化",
+      "titleZh": "VGPO：视觉引导的多模态推理策略优化",
       "summary": "VGPO提出了一种视觉引导的策略优化方法，用于多模态推理任务。",
-      "reason": "GitHub仓库明确显示该论文已被ACL 2026主会议接受。",
+      "reason": "GitHub仓库明确显示论文已被ACL 2026主会议接受。",
       "primaryUrl": "https://github.com/wzb-bupt/VGPO",
       "canonicalUrl": "https://github.com/wzb-bupt/VGPO",
       "pdfUrl": "",
@@ -22,7 +22,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.156Z",
-      "updatedAt": "2026-09-12T05:54:14.743Z",
+      "updatedAt": "2026-09-13T06:14:08.961Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "cleaned",
       "metadataSource": "zhipu-chat",
@@ -53,6 +53,64 @@
       "evidenceCount": 1
     },
     {
+      "id": "unofficial-b09792bf2db3",
+      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...",
+      "titleZh": "MegaRAG: 多模态图检索增强生成",
+      "summary": "发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b09792bf2db3",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8055555555555556,
+      "acceptedVenue": "ACL 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-05-03T06:45:20.683Z",
+      "updatedAt": "2026-09-13T06:07:10.362Z",
+      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "multimodal",
+        "rag",
+        "reasoning",
+        "3d",
+        "graph"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web",
+        "github"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
+          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
+          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
+          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
+          "publishDate": "2026-06-13",
+          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
+          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG",
+          "snippet": "Open more menu Folders and files Latest 7 7 egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...",
+          "readerTitle": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG",
+          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation !Image 1: License __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview !Image 2: MegaRAG Architecture ## π¦ Installation #### Requirements - Python 3.9+ (3.10 re...",
+          "publishDate": "2026-06-13",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 2
+    },
+    {
       "id": "unofficial-278b9b4c0ba5",
       "title": "License: MIT This repo hosts multiple open-source s of the Microsoft DKI LLM Group. You could find the corresponding as below:",
       "summary": "发现页在公开页面中识别到 ICML 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -67,7 +125,7 @@
       "acceptedVenue": "ICML 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-09-09T05:59:07.161Z",
-      "updatedAt": "2026-09-12T05:46:28.206Z",
+      "updatedAt": "2026-09-13T06:07:10.361Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -112,7 +170,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-08-31T07:02:14.169Z",
-      "updatedAt": "2026-09-12T05:46:28.205Z",
+      "updatedAt": "2026-09-13T06:07:10.359Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -161,7 +219,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-09-12T05:46:28.204Z",
-      "updatedAt": "2026-09-12T05:46:28.204Z",
+      "updatedAt": "2026-09-13T06:07:10.358Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -193,6 +251,153 @@
       "evidenceCount": 1
     },
     {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-09-13T06:17:39.464Z",
+      "lastCheckedAt": "2026-09-13T06:17:39.464Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-09-13T06:17:39.465Z",
+      "lastCheckedAt": "2026-09-13T06:17:39.465Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
+      "id": "unofficial-1948951b5bb9",
+      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
+      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
+      "pdfUrl": "",
+      "sourceId": "unofficial-1948951b5bb9",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Oral",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-18T04:13:29.657Z",
+      "updatedAt": "2026-09-13T06:17:39.466Z",
+      "lastCheckedAt": "2026-09-13T06:17:39.466Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Cominclip/OmniVerifier",
+          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
+          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
+          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
+          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
+          "publishDate": "2026-07-16",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
+        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+        "venue": "ICLR 2026 Oral"
+      }
+    },
+    {
       "id": "unofficial-439348b87abd",
       "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
       "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
@@ -211,7 +416,7 @@
       "updatedAt": "2026-09-11T06:10:51.731Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -267,7 +472,7 @@
       "updatedAt": "2026-09-11T06:09:36.512Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
@@ -299,211 +504,6 @@
           "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
           "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
           "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-1948951b5bb9",
-      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
-      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
-      "pdfUrl": "",
-      "sourceId": "unofficial-1948951b5bb9",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Oral",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-09-12T05:57:45.504Z",
-      "lastCheckedAt": "2026-09-12T05:57:45.504Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Cominclip/OmniVerifier",
-          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
-          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
-          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
-          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
-          "publishDate": "2026-07-16",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
-        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-        "venue": "ICLR 2026 Oral"
-      }
-    },
-    {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-09-12T05:57:45.505Z",
-      "lastCheckedAt": "2026-09-12T05:57:45.505Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
-    },
-    {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
-      "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-09-12T05:57:45.506Z",
-      "lastCheckedAt": "2026-09-12T05:57:45.506Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "agent",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
-    },
-    {
-      "id": "unofficial-b09792bf2db3",
-      "title": "MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...",
-      "titleZh": "MegaRAG: 多模态图检索增强生成",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库标题明确标注为[ACL 2026]论文，包含多模态图推理与页面检索技术结合的详细描述。",
-      "primaryUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "canonicalUrl": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-      "pdfUrl": "",
-      "sourceId": "unofficial-b09792bf2db3",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8055555555555556,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-03T06:45:20.683Z",
-      "updatedAt": "2026-09-10T06:09:17.106Z",
-      "lastCheckedAt": "2026-05-05T04:30:18.046Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "multimodal",
-        "rag",
-        "reasoning",
-        "3d",
-        "graph"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web",
-        "github"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG · GitHub",
-          "snippet": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 7 Commits 7 Commits egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files Repository files navigation MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables global visual question answering on documents by constructing a Multimodal Knowledge Graph (MMKG) . It combines graph-based reasoning with page retrieval techniques for precise and rich responses.",
-          "readerTitle": "bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and Yeh, Yi-Ren and Chen, Chu-Song}, bo",
-          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## β‘ Quickstart ### 1. Use the Tiny Example ``` cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ### 4. Query with MegaRAG ## π Using Your Own Dataset ### 1. Create a New Recipe `\n\n# MegaRAG: Multimodal Graph-based Retrieval Augmented Generation **MegaRAG** enables **global visual question answering** on documents by constructing a **Multimodal Knowledge Graph (MMKG)**. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. > This work has been accepted to **ACL 2026**. ## 🚀 Overview ## 📦 Installation #### Requirements * Python 3.9+ (3.10 recommended) * GPU for embeddings inference * OpenAI API key ### Step 1: Install MinerU ```bash git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ```bash git clone https://github.com/AI-Application-and-Integration-Lab/MegaRAG.git cd MegaRAG # Install missing packages conda activate mineru pip install -r requirements_mineru.txt conda create --name megarag python=3.10 -y conda activate megarag pip install -e . # Fill in your OPENAI_API_KEY and MINERU_PATH in env.sh cp .env.sh env.sh # Install lightRAG mkdir lib && cd lib git clone --branch v1.4.3 https://github.com/HKUDS/LightRAG.git cd LightRAG pip install -e . ``` ## ⚡ Quickstart ### 1. Use the Tiny Example ```bash cd egs/world_history_tiny mkdir data ``` ### 2. Download Example PDF Download the example PDF, and query file from Google Drive and place it in the `data/` folder. ### 3. Build the Multimodal Knowledge Graph ```bash bash ./run_build_mmkg.sh ``` ### 4. Query with MegaRAG ```bash bash ./run_querying.sh ``` ## 📂 Using Your Own Dataset ### 1. Create a New Recipe ```bash cp -r egs/.template egs/ # Change to your dataset name cd egs/ mkdir data ``` ### 2. Add Your Data Place your documents (PDF) in the `data/` folder. ### 3. Edit the Config File Modify the entity types or other settings in `conf/addon_params.yaml` to match your data. ### 4. Build and Query ```bash bash egs/ /run_build_mmkg.sh bash egs/ /run_querying.sh # Make sure to update filenames in these scripts accordingly. ``` ## Acknowledgments MegaRAG is inspired by the work of LightRAG. We are grateful for their excellent tools and contributions. ## Citation If you find this work useful in your research, please cite our paper: ```bibtex @inproceedings{hsiao2026megarag, title={MegaRAG: Multimodal Graph-based Retrieval Augmented Generation}, author={Hsiao, Chi-Hsiang and Wang, Yi-Cheng and Lin, Tzung-Sheng and",
-          "publishDate": "2026-06-13",
-          "query": "site:github.io \"multimodal\" \"paper\" \"2026\""
-        },
-        {
-          "platform": "github",
-          "url": "https://github.com/AI-Application-and-Integration-Lab/MegaRAG",
-          "title": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG",
-          "snippet": "Open more menu Folders and files Latest 7 7 egs egs megarag megarag test test .env.sh .env.sh .gitignore .gitignore LICENSE LICENSE README.md README.md requirements_mineru.txt requirements_mineru.txt setup.py setup.py View all files MegaRAG: Multimodal Graph-based Retrieval Augmented Generation MegaRAG enables globa...",
-          "readerTitle": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG",
-          "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation !Image 1: License __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview !Image 2: MegaRAG Architecture ## π¦ Installation #### Requirements - Python 3.9+ (3.10 re...",
-          "publishDate": "2026-06-13",
           "query": ""
         }
       ],
