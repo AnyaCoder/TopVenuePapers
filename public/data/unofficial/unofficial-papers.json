@@ -1,27 +1,27 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-25T06:17:10.299Z",
+  "generatedAt": "2026-09-26T06:16:49.209Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
     {
-      "id": "unofficial-b776c6363cb1",
-      "title": "UniComp: Rethinking Video Compression Through Informational Uniqueness Pap...",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for UniComp: Rethinking Video Compression Through Informational Uniqueness Pap...; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code/issues/257",
-      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code/issues/257",
+      "id": "unofficial-8b41248627b4",
+      "title": "VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/VITA-Group/VLM-3R",
+      "canonicalUrl": "https://github.com/VITA-Group/VLM-3R",
       "pdfUrl": "",
-      "sourceId": "unofficial-b776c6363cb1",
+      "sourceId": "unofficial-8b41248627b4",
       "year": 2026,
       "status": "accepted",
-      "confidence": 0.96,
-      "acceptedVenue": "CVPR 2026",
+      "confidence": 0.8333333333333334,
+      "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-09-24T06:10:29.208Z",
-      "updatedAt": "2026-09-25T06:10:01.958Z",
+      "discoveredAt": "2026-09-12T05:46:28.204Z",
+      "updatedAt": "2026-09-26T06:09:26.501Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -30,11 +30,8 @@
         "llm",
         "vlm",
         "multimodal",
-        "mllm",
-        "vla",
-        "agent",
-        "video understanding",
-        "3d gaussian splatting"
+        "reasoning",
+        "benchmark"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -44,16 +41,26 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code/issues/257",
-          "title": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and code of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with-Code",
-          "snippet": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with- GitHub。 Paper title: Spatial-SSRL: Enhancing Spatial Understanding via Self-Supervised Reinforcement Learning Paper link: https://arxiv.org/abs/2510.27606 link: https://github.com/InternLM/Spatial-SSRL Model link: https://huggingface.co/internlm/Spatial-SSRL-7B Topic: MLLM, Self-supervised Learning Paper title: UniComp: Rethinking Video Compression Through Informational Uniqueness Pap...",
-          "readerTitle": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and code of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with-Code · GitHub",
-          "readerExcerpt": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with- · GitHub Skip to content ## Navigation Menu Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - QualityEnforce quality at merge - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases...",
-          "publishDate": "2026/02/24",
+          "url": "https://github.com/vita-group/vlm-3r",
+          "title": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
+          "snippet": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been accepted to CVPR 2026. See you in Denver! 2025-06-12: Added inference script for multi-image inputs. 2025-06-11: We have released the training/evaluation scripts and all associated data. The instruction tuning dataset, which includes training data for V...",
+          "readerTitle": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
+          "readerExcerpt": "__VLM-3R is a unified Vision-Language Model (VLM) framework integrating 3D reconstructive instruction tuning for deep spatial understanding from monocular video.__ The rapid advancement of Large Multimodal Models (LMMs) for 2D images and videos has motivated extending these models to understand 3D scenes, aiming for human-like visual-spatial intelligence. VLM-3R processes monocular video frames by employing a geometry en r to derive implicit 3D tokens that represent spatial understanding. Through the utilization of Spatial-Visual–View Fusion technique and over 200K curated 3D reconstructive instruction tuning question-answer (QA) pairs, VLM-3R effectively aligns real-world spatial context with language instructions. This enables the model to perform monocular 3D spatial assistance and embodied reasoning. __Paper (arXiv)__ __|__ __Project Page__ __|__ __ (GitHub)__ __|__ __Dataset (HF)...",
+          "publishDate": "",
+          "query": ""
+        },
+        {
+          "platform": "web",
+          "url": "https://github.com/VITA-Group/VLM-3R",
+          "title": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
+          "snippet": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been accepted to CVPR 2026. See you in Denver! 2025-06-12: Added inference script for multi-image inputs. 2025-06-11: We have released the training/evaluation scripts and all associated data. The instruction tuning dataset, which includes training data for V...",
+          "readerTitle": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
+          "readerExcerpt": "__VLM-3R is a unified Vision-Language Model (VLM) framework integrating 3D reconstructive instruction tuning for deep spatial understanding from monocular video.__ The rapid advancement of Large Multimodal Models (LMMs) for 2D images and videos has motivated extending these models to understand 3D scenes, aiming for human-like visual-spatial intelligence. VLM-3R processes monocular video frames by employing a geometry en r to derive implicit 3D tokens that represent spatial understanding. Through the utilization of Spatial-Visual–View Fusion technique and over 200K curated 3D reconstructive instruction tuning question-answer (QA) pairs, VLM-3R effectively aligns real-world spatial context with language instructions. This enables the model to perform monocular 3D spatial assistance and embodied reasoning. __Paper (arXiv)__ __|__ __Project Page__ __|__ __ (GitHub)__ __|__ __Dataset (HF)...",
+          "publishDate": "",
           "query": ""
         }
       ],
-      "evidenceCount": 1
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-7cbe8ae24cfa",
@@ -70,7 +77,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-09-14T06:15:24.511Z",
-      "updatedAt": "2026-09-25T06:10:01.957Z",
+      "updatedAt": "2026-09-26T06:09:26.497Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -129,7 +136,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.151Z",
-      "updatedAt": "2026-09-25T06:10:01.954Z",
+      "updatedAt": "2026-09-26T06:09:26.494Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -216,62 +223,6 @@
       "evidenceCount": 6
     },
     {
-      "id": "unofficial-7c457864ebdd",
-      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
-      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
-      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收，标题已去除会议声明文本。",
-      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
-      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7c457864ebdd",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 1,
-      "acceptedVenue": "ACL 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-05-01T07:10:15.532Z",
-      "updatedAt": "2026-09-24T06:18:58.616Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
-      "authors": [],
-      "keywords": [
-        "reasoning",
-        "conversation",
-        "recommendation"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "github",
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "github",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
-          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
-          "publishDate": "2026-04-28",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/DongdingLin/SiPeR",
-          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
-          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
-          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
-          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
-          "publishDate": "2026-05-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 2
-    },
-    {
       "id": "unofficial-439348b87abd",
       "title": "Multimodal Deepresearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
       "titleZh": "多模态深度研究员：从头生成文本与图表交织的报告",
@@ -287,7 +238,7 @@
       "acceptedVenue": "AAAI 2026",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-01T07:36:45.400Z",
-      "updatedAt": "2026-09-24T06:17:37.061Z",
+      "updatedAt": "2026-09-25T06:19:00.151Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "zhipu-chat",
@@ -328,99 +279,60 @@
       "evidenceCount": 2
     },
     {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "id": "unofficial-7c457864ebdd",
+      "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+      "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
+      "summary": "Discovery evidence found an explicit ACL 2026 paper signal for ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation; waiting for Zhipu enrichment.",
+      "reason": "GitHub仓库明确标注该论文被ACL 2026主会议接收，标题已去除会议声明文本。",
+      "primaryUrl": "https://github.com/DongdingLin/SiPeR",
+      "canonicalUrl": "https://github.com/DongdingLin/SiPeR",
       "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
+      "sourceId": "unofficial-7c457864ebdd",
       "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
+      "status": "accepted",
+      "confidence": 1,
+      "acceptedVenue": "ACL 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-09-25T06:17:10.297Z",
-      "lastCheckedAt": "2026-09-25T06:17:10.297Z",
+      "discoveredAt": "2026-05-01T07:10:15.532Z",
+      "updatedAt": "2026-09-25T06:18:23.248Z",
+      "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
+      "metadataSource": "zhipu-chat",
       "authors": [],
       "keywords": [
-        "agent",
-        "reinforcement learning"
+        "reasoning",
+        "conversation",
+        "recommendation"
       ],
       "titleAliases": [],
       "aliases": [],
       "platforms": [
+        "github",
         "web"
       ],
       "evidence": [
         {
-          "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
+          "platform": "github",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "snippet": "SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation · GitHub",
+          "readerExcerpt": "- - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features",
+          "publishDate": "2026-04-28",
           "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
-    },
-    {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-09-25T06:17:10.298Z",
-      "lastCheckedAt": "2026-09-25T06:17:10.298Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
+        },
         {
           "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
+          "url": "https://github.com/DongdingLin/SiPeR",
+          "title": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational",
+          "snippet": "Open more menu Folders and files Latest 2 2 LICENSE LICENSE README.md README.md View all files SiPeR of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational RecommendationAll the will be released once it has been organized. No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies...",
+          "readerTitle": "GitHub - DongdingLin/SiPeR: Code of ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
+          "readerExcerpt": "- - AI CREATION - GitHub CopilotWrite better with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - - EXPLORE BY TOPIC - AI - Software Development - DevOps - - View all topics...",
+          "publishDate": "2026-05-10",
           "query": ""
         }
       ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
+      "evidenceCount": 2
     },
     {
       "id": "unofficial-1948951b5bb9",
@@ -437,8 +349,8 @@
       "acceptedVenue": "ICLR 2026 Oral",
       "acceptedYear": 2026,
       "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-09-25T06:17:10.298Z",
-      "lastCheckedAt": "2026-09-25T06:17:10.298Z",
+      "updatedAt": "2026-09-26T06:16:49.206Z",
+      "lastCheckedAt": "2026-09-26T06:16:49.206Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
@@ -475,31 +387,74 @@
       }
     },
     {
-      "id": "unofficial-8b41248627b4",
-      "title": "VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been",
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
       "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 Main paper signal for VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/VITA-Group/VLM-3R",
-      "canonicalUrl": "https://github.com/VITA-Group/VLM-3R",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
       "pdfUrl": "",
-      "sourceId": "unofficial-8b41248627b4",
+      "sourceId": "unofficial-7899e52a4c97",
       "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8333333333333334,
-      "acceptedVenue": "CVPR 2026 Main",
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
       "acceptedYear": 2026,
-      "discoveredAt": "2026-09-12T05:46:28.204Z",
-      "updatedAt": "2026-09-23T05:57:26.259Z",
-      "lastCheckedAt": "",
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-09-26T06:16:49.207Z",
+      "lastCheckedAt": "2026-09-26T06:16:49.207Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-09-26T06:16:49.208Z",
+      "lastCheckedAt": "2026-09-26T06:16:49.208Z",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "reasoning",
-        "benchmark"
+        "agent",
+        "reinforcement learning"
       ],
       "titleAliases": [],
       "aliases": [],
@@ -509,26 +464,71 @@
       "evidence": [
         {
           "platform": "web",
-          "url": "https://github.com/vita-group/vlm-3r",
-          "title": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
-          "snippet": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been accepted to CVPR 2026. See you in Denver! 2025-06-12: Added inference script for multi-image inputs. 2025-06-11: We have released the training/evaluation scripts and all associated data. The instruction tuning dataset, which includes training data for V...",
-          "readerTitle": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
-          "readerExcerpt": "__VLM-3R is a unified Vision-Language Model (VLM) framework integrating 3D reconstructive instruction tuning for deep spatial understanding from monocular video.__ The rapid advancement of Large Multimodal Models (LMMs) for 2D images and videos has motivated extending these models to understand 3D scenes, aiming for human-like visual-spatial intelligence. VLM-3R processes monocular video frames by employing a geometry en r to derive implicit 3D tokens that represent spatial understanding. Through the utilization of Spatial-Visual–View Fusion technique and over 200K curated 3D reconstructive instruction tuning question-answer (QA) pairs, VLM-3R effectively aligns real-world spatial context with language instructions. This enables the model to perform monocular 3D spatial assistance and embodied reasoning. __Paper (arXiv)__ __|__ __Project Page__ __|__ __ (GitHub)__ __|__ __Dataset (HF)...",
-          "publishDate": "",
-          "query": ""
-        },
-        {
-          "platform": "web",
-          "url": "https://github.com/VITA-Group/VLM-3R",
-          "title": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
-          "snippet": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction GitHub。 we are retraining VLM-3R on the corrected data and will update reported numbers. 2026-02-21: Our paper has been accepted to CVPR 2026. See you in Denver! 2025-06-12: Added inference script for multi-image inputs. 2025-06-11: We have released the training/evaluation scripts and all associated data. The instruction tuning dataset, which includes training data for V...",
-          "readerTitle": "GitHub - VITA-Group/VLM-3R: [CVPR 2026] VLM-3R: Vision-Language Models Augmented with Instruction-Aligned 3D Reconstruction",
-          "readerExcerpt": "__VLM-3R is a unified Vision-Language Model (VLM) framework integrating 3D reconstructive instruction tuning for deep spatial understanding from monocular video.__ The rapid advancement of Large Multimodal Models (LMMs) for 2D images and videos has motivated extending these models to understand 3D scenes, aiming for human-like visual-spatial intelligence. VLM-3R processes monocular video frames by employing a geometry en r to derive implicit 3D tokens that represent spatial understanding. Through the utilization of Spatial-Visual–View Fusion technique and over 200K curated 3D reconstructive instruction tuning question-answer (QA) pairs, VLM-3R effectively aligns real-world spatial context with language instructions. This enables the model to perform monocular 3D spatial assistance and embodied reasoning. __Paper (arXiv)__ __|__ __Project Page__ __|__ __ (GitHub)__ __|__ __Dataset (HF)...",
-          "publishDate": "",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
           "query": ""
         }
       ],
-      "evidenceCount": 2
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-b776c6363cb1",
+      "title": "UniComp: Rethinking Video Compression Through Informational Uniqueness Pap...",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for UniComp: Rethinking Video Compression Through Informational Uniqueness Pap...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code/issues/257",
+      "canonicalUrl": "https://github.com/amusi/CVPR2026-Papers-with-Code/issues/257",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b776c6363cb1",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.96,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-09-24T06:10:29.208Z",
+      "updatedAt": "2026-09-25T06:10:01.958Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "vla",
+        "agent",
+        "video understanding",
+        "3d gaussian splatting"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/amusi/CVPR2026-Papers-with-Code/issues/257",
+          "title": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and code of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with-Code",
+          "snippet": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with- GitHub。 Paper title: Spatial-SSRL: Enhancing Spatial Understanding via Self-Supervised Reinforcement Learning Paper link: https://arxiv.org/abs/2510.27606 link: https://github.com/InternLM/Spatial-SSRL Model link: https://huggingface.co/internlm/Spatial-SSRL-7B Topic: MLLM, Self-supervised Learning Paper title: UniComp: Rethinking Video Compression Through Informational Uniqueness Pap...",
+          "readerTitle": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and code of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with-Code · GitHub",
+          "readerExcerpt": "欢迎分享 CVPR 2026 论文和代码 / Welcome to share the paper and of CVPR 2026 · Issue #257 · amusi/CVPR2026-Papers-with- · GitHub Skip to content ## Navigation Menu Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - QualityEnforce quality at merge - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases...",
+          "publishDate": "2026/02/24",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
     },
     {
       "id": "unofficial-c3195f2b58ce",
