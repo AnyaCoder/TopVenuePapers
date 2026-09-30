@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-29T06:53:11.812Z",
+  "generatedAt": "2026-09-30T06:40:28.523Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -57,331 +57,331 @@
       "plans": []
     },
     "followUpSearchPlans": 4,
-    "skippedFollowUpSearchPlans": 388
+    "skippedFollowUpSearchPlans": 378
   },
   "progress": [
     {
-      "at": "2026-09-29T06:53:11.812Z",
+      "at": "2026-09-30T06:40:28.523Z",
       "message": "Discovery started: 14/98 initial queries, max 4 follow-up queries, max 14 readers, max 4 extraction batches."
     },
     {
-      "at": "2026-09-29T06:53:11.815Z",
+      "at": "2026-09-30T06:40:28.526Z",
       "message": "[initial search 1/14] seed-1: \"accepted to\" \"AAAI 2026\" \"official code\""
     },
     {
-      "at": "2026-09-29T06:53:16.825Z",
-      "message": "[initial search 1/14] done raw=50 kept=38 rejected=12 in 5.0s"
+      "at": "2026-09-30T06:40:30.183Z",
+      "message": "[initial search 1/14] done raw=50 kept=38 rejected=12 in 1.7s"
     },
     {
-      "at": "2026-09-29T06:53:16.825Z",
+      "at": "2026-09-30T06:40:30.183Z",
       "message": "[initial search 2/14] repository-1: site:github.com \"AAAI 2026\" \"official code\" \"LLM\""
     },
     {
-      "at": "2026-09-29T06:53:18.354Z",
-      "message": "[initial search 2/14] done raw=15 kept=11 rejected=4 in 1.5s"
+      "at": "2026-09-30T06:40:31.076Z",
+      "message": "[initial search 2/14] done raw=15 kept=11 rejected=4 in 893ms"
     },
     {
-      "at": "2026-09-29T06:53:18.354Z",
+      "at": "2026-09-30T06:40:31.076Z",
       "message": "[initial search 3/14] paper-index-1: arxiv \"accepted to\" \"2026\" \"large language model\""
     },
     {
-      "at": "2026-09-29T06:53:19.605Z",
-      "message": "[initial search 3/14] done raw=15 kept=5 rejected=10 in 1.3s"
+      "at": "2026-09-30T06:40:32.558Z",
+      "message": "[initial search 3/14] done raw=15 kept=5 rejected=10 in 1.5s"
     },
     {
-      "at": "2026-09-29T06:53:19.605Z",
+      "at": "2026-09-30T06:40:32.558Z",
       "message": "[initial search 4/14] social-introducing-11: \"Introducing\" LLM VLM multimodal agent reasoning 2026"
     },
     {
-      "at": "2026-09-29T06:53:20.474Z",
-      "message": "[initial search 4/14] done raw=0 kept=0 rejected=0 in 869ms"
+      "at": "2026-09-30T06:40:33.558Z",
+      "message": "[initial search 4/14] done raw=0 kept=0 rejected=0 in 1.0s"
     },
     {
-      "at": "2026-09-29T06:53:20.474Z",
+      "at": "2026-09-30T06:40:33.558Z",
       "message": "[initial search 5/14] homepage-1: site:github.io \"accepted to\" \"2026\" \"LLM\""
     },
     {
-      "at": "2026-09-29T06:53:22.193Z",
-      "message": "[initial search 5/14] done raw=50 kept=27 rejected=23 in 1.7s"
+      "at": "2026-09-30T06:40:38.955Z",
+      "message": "[initial search 5/14] done raw=49 kept=26 rejected=23 in 5.4s"
     },
     {
-      "at": "2026-09-29T06:53:22.194Z",
+      "at": "2026-09-30T06:40:38.955Z",
       "message": "[initial search 6/14] chinese-1: 论文接收 顶会 大模型 AAAI ACL ICLR 2026"
     },
     {
-      "at": "2026-09-29T06:53:22.889Z",
-      "message": "[initial search 6/14] done raw=0 kept=0 rejected=0 in 696ms"
+      "at": "2026-09-30T06:40:39.700Z",
+      "message": "[initial search 6/14] done raw=0 kept=0 rejected=0 in 745ms"
     },
     {
-      "at": "2026-09-29T06:53:22.889Z",
+      "at": "2026-09-30T06:40:39.700Z",
       "message": "[initial search 7/14] broad-1: \"2026\" \"official repo\" \"multimodal\""
     },
     {
-      "at": "2026-09-29T06:53:23.468Z",
-      "message": "[initial search 7/14] done raw=0 kept=0 rejected=0 in 579ms"
+      "at": "2026-09-30T06:40:40.789Z",
+      "message": "[initial search 7/14] done raw=0 kept=0 rejected=0 in 1.1s"
     },
     {
-      "at": "2026-09-29T06:53:23.468Z",
+      "at": "2026-09-30T06:40:40.789Z",
       "message": "[initial search 8/14] seed-2: \"accepted to\" \"ACL 2026\" \"official code\""
     },
     {
-      "at": "2026-09-29T06:53:24.890Z",
-      "message": "[initial search 8/14] done raw=50 kept=32 rejected=18 in 1.4s"
+      "at": "2026-09-30T06:40:41.869Z",
+      "message": "[initial search 8/14] done raw=49 kept=31 rejected=18 in 1.1s"
     },
     {
-      "at": "2026-09-29T06:53:24.890Z",
+      "at": "2026-09-30T06:40:41.869Z",
       "message": "[initial search 9/14] repository-2: site:github.com \"ACL 2026\" \"accepted\" \"multimodal\""
     },
     {
-      "at": "2026-09-29T06:53:26.358Z",
-      "message": "[initial search 9/14] done raw=15 kept=10 rejected=5 in 1.5s"
+      "at": "2026-09-30T06:40:42.741Z",
+      "message": "[initial search 9/14] done raw=15 kept=10 rejected=5 in 872ms"
     },
     {
-      "at": "2026-09-29T06:53:26.358Z",
+      "at": "2026-09-30T06:40:42.741Z",
       "message": "[initial search 10/14] paper-index-2: arxiv \"project page\" \"2026\" \"vision language model\""
     },
     {
-      "at": "2026-09-29T06:53:27.746Z",
-      "message": "[initial search 10/14] done raw=20 kept=10 rejected=10 in 1.4s"
+      "at": "2026-09-30T06:40:43.606Z",
+      "message": "[initial search 10/14] done raw=20 kept=10 rejected=10 in 865ms"
     },
     {
-      "at": "2026-09-29T06:53:27.747Z",
+      "at": "2026-09-30T06:40:43.606Z",
       "message": "[initial search 11/14] social-introducing-21: \"Introducing\" video understanding 3D Gaussian Splatting robotics embodied AI 2026"
     },
     {
-      "at": "2026-09-29T06:53:28.663Z",
-      "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 917ms"
+      "at": "2026-09-30T06:40:44.526Z",
+      "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 920ms"
     },
     {
-      "at": "2026-09-29T06:53:28.663Z",
+      "at": "2026-09-30T06:40:44.526Z",
       "message": "[initial search 12/14] homepage-2: site:github.io \"paper\" \"multimodal\" \"2026\""
     },
     {
-      "at": "2026-09-29T06:53:30.205Z",
-      "message": "[initial search 12/14] done raw=50 kept=29 rejected=21 in 1.5s"
+      "at": "2026-09-30T06:40:45.489Z",
+      "message": "[initial search 12/14] done raw=46 kept=26 rejected=20 in 963ms"
     },
     {
-      "at": "2026-09-29T06:53:30.205Z",
+      "at": "2026-09-30T06:40:45.489Z",
       "message": "[initial search 13/14] chinese-2: 新论文 多模态 CVPR ICLR 2026"
     },
     {
-      "at": "2026-09-29T06:53:30.905Z",
-      "message": "[initial search 13/14] done raw=0 kept=0 rejected=0 in 699ms"
+      "at": "2026-09-30T06:40:46.359Z",
+      "message": "[initial search 13/14] done raw=0 kept=0 rejected=0 in 870ms"
     },
     {
-      "at": "2026-09-29T06:53:30.905Z",
+      "at": "2026-09-30T06:40:46.359Z",
       "message": "[initial search 14/14] broad-2: \"2026\" \"project page\" \"large language model\""
     },
     {
-      "at": "2026-09-29T06:53:32.541Z",
-      "message": "[initial search 14/14] done raw=50 kept=22 rejected=28 in 1.6s"
+      "at": "2026-09-30T06:40:47.278Z",
+      "message": "[initial search 14/14] done raw=49 kept=22 rejected=27 in 919ms"
     },
     {
-      "at": "2026-09-29T06:53:32.892Z",
+      "at": "2026-09-30T06:40:47.622Z",
       "message": "Follow-up search started: 4 evidence-derived queries."
     },
     {
-      "at": "2026-09-29T06:53:32.892Z",
+      "at": "2026-09-30T06:40:47.623Z",
       "message": "[follow-up search 1/4] follow-up-2: site:github.com \"*, Yixin Song\""
     },
     {
-      "at": "2026-09-29T06:53:34.316Z",
-      "message": "[follow-up search 1/4] done raw=15 kept=13 rejected=2 in 1.4s"
+      "at": "2026-09-30T06:40:48.457Z",
+      "message": "[follow-up search 1/4] done raw=15 kept=13 rejected=2 in 834ms"
     },
     {
-      "at": "2026-09-29T06:53:34.316Z",
+      "at": "2026-09-30T06:40:48.457Z",
       "message": "[follow-up search 2/4] follow-up-3: site:x.com \"*, Yixin Song\""
     },
     {
-      "at": "2026-09-29T06:53:35.480Z",
-      "message": "[follow-up search 2/4] done raw=0 kept=0 rejected=0 in 1.2s"
+      "at": "2026-09-30T06:40:49.383Z",
+      "message": "[follow-up search 2/4] done raw=0 kept=0 rejected=0 in 926ms"
     },
     {
-      "at": "2026-09-29T06:53:35.481Z",
+      "at": "2026-09-30T06:40:49.383Z",
       "message": "[follow-up search 3/4] follow-up-1: \"*, Yixin Song\""
     },
     {
-      "at": "2026-09-29T06:53:38.094Z",
-      "message": "[follow-up search 3/4] done raw=0 kept=0 rejected=0 in 2.6s"
+      "at": "2026-09-30T06:40:51.357Z",
+      "message": "[follow-up search 3/4] done raw=0 kept=0 rejected=0 in 2.0s"
     },
     {
-      "at": "2026-09-29T06:53:38.094Z",
+      "at": "2026-09-30T06:40:51.357Z",
       "message": "[follow-up search 4/4] follow-up-5: site:github.com \", Jinhui Ye, Chuan Qin, Dazhong Shen, Lingfeng Liu, Xiang Wang, Yanyong Zhang. FACE: A general Framework for Mapping Collaborative Filtering Embeddings into LLM Tokens. The Thirty-ninth Annual Conference on Neural Inform\""
     },
     {
-      "at": "2026-09-29T06:53:39.212Z",
-      "message": "[follow-up search 4/4] done raw=15 kept=11 rejected=4 in 1.1s"
+      "at": "2026-09-30T06:40:52.050Z",
+      "message": "[follow-up search 4/4] done raw=15 kept=11 rejected=4 in 693ms"
     },
     {
-      "at": "2026-09-29T06:53:39.360Z",
+      "at": "2026-09-30T06:40:52.196Z",
       "message": "Reader stage started: 14 candidate links."
     },
     {
-      "at": "2026-09-29T06:53:39.360Z",
+      "at": "2026-09-30T06:40:52.196Z",
       "message": "[reader 1/14] read about.md"
     },
     {
-      "at": "2026-09-29T06:53:40.157Z",
-      "message": "[reader 1/14] done in 797ms"
+      "at": "2026-09-30T06:40:52.975Z",
+      "message": "[reader 1/14] done in 779ms"
     },
     {
-      "at": "2026-09-29T06:53:40.157Z",
+      "at": "2026-09-30T06:40:52.975Z",
       "message": "[reader 2/14] read Latest 15 Papers - March 25, 2026"
     },
     {
-      "at": "2026-09-29T06:53:42.462Z",
-      "message": "[reader 2/14] done in 2.3s"
+      "at": "2026-09-30T06:40:53.943Z",
+      "message": "[reader 2/14] done in 968ms"
     },
     {
-      "at": "2026-09-29T06:53:42.462Z",
+      "at": "2026-09-30T06:40:53.943Z",
       "message": "[reader 3/14] read Protecting MLLMs against misleading visualizations"
     },
     {
-      "at": "2026-09-29T06:53:44.031Z",
-      "message": "[reader 3/14] done in 1.6s"
+      "at": "2026-09-30T06:40:55.122Z",
+      "message": "[reader 3/14] done in 1.2s"
     },
     {
-      "at": "2026-09-29T06:53:44.031Z",
+      "at": "2026-09-30T06:40:55.122Z",
       "message": "[reader 4/14] read Latest 15 Papers - September 06, 2026"
     },
     {
-      "at": "2026-09-29T06:53:45.035Z",
+      "at": "2026-09-30T06:40:56.139Z",
       "message": "[reader 4/14] done in 1.0s"
     },
     {
-      "at": "2026-09-29T06:53:45.035Z",
+      "at": "2026-09-30T06:40:56.139Z",
       "message": "[reader 5/14] read Latest 15 Papers - September 12, 2026"
     },
     {
-      "at": "2026-09-29T06:53:45.964Z",
-      "message": "[reader 5/14] done in 929ms"
+      "at": "2026-09-30T06:40:57.260Z",
+      "message": "[reader 5/14] done in 1.1s"
     },
     {
-      "at": "2026-09-29T06:53:45.964Z",
+      "at": "2026-09-30T06:40:57.260Z",
       "message": "[reader 6/14] skip AAAI 2026结果公布,刷出88887高分!2.3万投稿录用率仅17.6%"
     },
     {
-      "at": "2026-09-29T06:53:45.964Z",
+      "at": "2026-09-30T06:40:57.260Z",
       "message": "[reader 6/14] done in 0ms"
     },
     {
-      "at": "2026-09-29T06:53:45.964Z",
+      "at": "2026-09-30T06:40:57.260Z",
       "message": "[reader 7/14] read GitHub - lijunxian111/Faithful-First-RPA: [ACL'26] Official Repo for Faithful-First Reaso..."
     },
     {
-      "at": "2026-09-29T06:53:46.999Z",
-      "message": "[reader 7/14] done in 1.0s"
+      "at": "2026-09-30T06:40:58.331Z",
+      "message": "[reader 7/14] done in 1.1s"
     },
     {
-      "at": "2026-09-29T06:53:46.999Z",
+      "at": "2026-09-30T06:40:58.331Z",
       "message": "[reader 8/14] read GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimod..."
     },
     {
-      "at": "2026-09-29T06:53:48.334Z",
-      "message": "[reader 8/14] done in 1.3s"
+      "at": "2026-09-30T06:40:59.358Z",
+      "message": "[reader 8/14] done in 1.0s"
     },
     {
-      "at": "2026-09-29T06:53:48.334Z",
+      "at": "2026-09-30T06:40:59.358Z",
       "message": "[reader 9/14] read GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR"
     },
     {
-      "at": "2026-09-29T06:53:49.863Z",
-      "message": "[reader 9/14] done in 1.5s"
+      "at": "2026-09-30T06:41:00.568Z",
+      "message": "[reader 9/14] done in 1.2s"
     },
     {
-      "at": "2026-09-29T06:53:49.863Z",
+      "at": "2026-09-30T06:41:00.568Z",
       "message": "[reader 10/14] read GitHub - XD111ds/ILVR: [ACL'26 Oral] Interleaved Latent Visual Reasoning with Selective P..."
     },
     {
-      "at": "2026-09-29T06:53:50.791Z",
-      "message": "[reader 10/14] done in 928ms"
+      "at": "2026-09-30T06:41:01.580Z",
+      "message": "[reader 10/14] done in 1.0s"
     },
     {
-      "at": "2026-09-29T06:53:50.791Z",
+      "at": "2026-09-30T06:41:01.580Z",
       "message": "[reader 11/14] skip AAAI 2026 Papers with Code — Page 10"
     },
     {
-      "at": "2026-09-29T06:53:50.791Z",
+      "at": "2026-09-30T06:41:01.580Z",
       "message": "[reader 11/14] done in 0ms"
     },
     {
-      "at": "2026-09-29T06:53:50.791Z",
+      "at": "2026-09-30T06:41:01.580Z",
       "message": "[reader 12/14] read GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related..."
     },
     {
-      "at": "2026-09-29T06:53:51.864Z",
-      "message": "[reader 12/14] done in 1.1s"
+      "at": "2026-09-30T06:41:02.455Z",
+      "message": "[reader 12/14] done in 875ms"
     },
     {
-      "at": "2026-09-29T06:53:51.864Z",
+      "at": "2026-09-30T06:41:02.455Z",
       "message": "[reader 13/14] read GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph..."
     },
     {
-      "at": "2026-09-29T06:53:52.957Z",
-      "message": "[reader 13/14] done in 1.1s"
+      "at": "2026-09-30T06:41:03.356Z",
+      "message": "[reader 13/14] done in 901ms"
     },
     {
-      "at": "2026-09-29T06:53:52.958Z",
+      "at": "2026-09-30T06:41:03.356Z",
       "message": "[reader 14/14] read Latest 15 Papers - February 03, 2026"
     },
     {
-      "at": "2026-09-29T06:53:53.764Z",
-      "message": "[reader 14/14] done in 806ms"
+      "at": "2026-09-30T06:41:04.160Z",
+      "message": "[reader 14/14] done in 804ms"
     },
     {
-      "at": "2026-09-29T06:53:53.780Z",
-      "message": "Evidence-backed fallback staged 4 provisional candidates while Zhipu refinement catches up."
+      "at": "2026-09-30T06:41:04.176Z",
+      "message": "Evidence-backed fallback staged 5 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-09-29T06:53:53.780Z",
+      "at": "2026-09-30T06:41:04.176Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-09-29T06:53:53.780Z",
-      "message": "Zhipu refinement stage started: 4/4 candidate batches."
+      "at": "2026-09-30T06:41:04.176Z",
+      "message": "Zhipu refinement stage started: 4/5 candidate batches."
     },
     {
-      "at": "2026-09-29T06:53:53.780Z",
+      "at": "2026-09-30T06:41:04.176Z",
       "message": "[extract 1/4] 1 candidate items."
     },
     {
-      "at": "2026-09-29T06:54:41.716Z",
+      "at": "2026-09-30T06:41:52.319Z",
       "message": "[extract 1/4] parsed=1"
     },
     {
-      "at": "2026-09-29T06:54:41.716Z",
+      "at": "2026-09-30T06:41:52.319Z",
       "message": "[extract 2/4] 1 candidate items."
     },
     {
-      "at": "2026-09-29T06:54:41.716Z",
+      "at": "2026-09-30T06:41:52.319Z",
       "message": "[extract 2/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-09-29T06:58:11.784Z",
-      "message": "[extract 2/4] parsed=0"
+      "at": "2026-09-30T06:44:50.621Z",
+      "message": "[extract 2/4] parsed=1"
     },
     {
-      "at": "2026-09-29T06:58:11.784Z",
+      "at": "2026-09-30T06:44:50.621Z",
       "message": "[extract 3/4] 1 candidate items."
     },
     {
-      "at": "2026-09-29T06:58:11.784Z",
+      "at": "2026-09-30T06:44:50.621Z",
       "message": "[extract 3/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-09-29T07:01:41.885Z",
+      "at": "2026-09-30T06:48:20.710Z",
       "message": "[extract 3/4] parsed=0"
     },
     {
-      "at": "2026-09-29T07:01:41.885Z",
+      "at": "2026-09-30T06:48:20.710Z",
       "message": "[extract 4/4] 1 candidate items."
     },
     {
-      "at": "2026-09-29T07:01:41.885Z",
+      "at": "2026-09-30T06:48:20.710Z",
       "message": "[extract 4/4] waiting 120.0s to avoid rate limits."
     },
     {
-      "at": "2026-09-29T07:04:41.777Z",
+      "at": "2026-09-30T06:51:17.514Z",
       "message": "[extract 4/4] parsed=1"
     }
   ],
@@ -402,7 +402,7 @@
       "rawResultCount": 50,
       "resultCount": 38,
       "rejectedCount": 12,
-      "startedAt": "2026-09-29T06:53:11.815Z",
+      "startedAt": "2026-09-30T06:40:28.526Z",
       "results": [
         {
           "platform": "web",
@@ -1258,7 +1258,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 5010
+      "durationMs": 1657
     },
     {
       "label": "repository-1",
@@ -1276,7 +1276,7 @@
       "rawResultCount": 15,
       "resultCount": 11,
       "rejectedCount": 4,
-      "startedAt": "2026-09-29T06:53:16.825Z",
+      "startedAt": "2026-09-30T06:40:30.183Z",
       "results": [
         {
           "platform": "web",
@@ -1557,7 +1557,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1529
+      "durationMs": 893
     },
     {
       "label": "paper-index-1",
@@ -1575,8 +1575,32 @@
       "rawResultCount": 15,
       "resultCount": 5,
       "rejectedCount": 10,
-      "startedAt": "2026-09-29T06:53:18.354Z",
+      "startedAt": "2026-09-30T06:40:31.076Z",
       "results": [
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://arxiv.org/list/cs.AI/recent?skip=170&show=50",
+          "title": "Artificial Intelligence",
+          "snippet": "Artificial Intelligence arXiv。Artificial Intelligence Authors and titles for recent submissions Wed, 30 Sep 2026 Tue, 29 Sep 2026 Mon, 28 Sep 2026 Fri, 25 Sep 2026 Thu, 24 Sep 2026 Wed, 30 Sep 2026 (continued, showing 50 of 506 entries )  arXiv:2609.36323 [pdf, html, other] Title: Towards an AI Software Factory for Data Systems Anna Pavlenko, Bogdan Crivat, Brandon Haynes, Carlo Curino, Fotis Psallidas, Jaro Slawinski, Johannes Freischuetz, Laura Pereira Sanchez, Markus Weimer, Mathieu Demarne, Matthias Jasny, Mauktik Gandhi, Max Bovykin, Mirco Milletari, Purbasha Ghosh, Qiushi Bai, Raghu Ramakrishnan, Rahul Pandita, Sergiy Matusevich, Shivaram Venkataraman, Subru Krishnan, Md. Tareq Mahmood",
+          "publishDate": "",
+          "relevanceScore": 22,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "topic:llm",
+            "topic:large language model",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:rag",
+            "topic:reinforcement learning",
+            "venue:neurips",
+            "venue:colm",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "arxiv",
           "stage": "paper-index",
@@ -1602,65 +1626,21 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.CL/current",
-          "title": "Computation and Language",
-          "snippet": "Computation and Language arXiv。 Cryptography and Security (cs.CR); Information Retrieval (cs.IR)  arXiv:2609.00474 [pdf, html, other] Title: Exploring Collaboration between a language and a non-language agent Harini S I, Somesh Singh, Yaman K Singla, Rajiv Ratn Shah, David Doermann, Balaji Krishnamurthy Comments: Accepted at EMNLP 2026 Subjects: Computation and Language (cs.CL); Artificial Intelligence (cs.AI)  arXiv:2609.00482 [pdf, html, other] Title: Are Near-Tied LLM Rankings Robust to Family-DIF-Guided Benchmark Recomposition? Qiaoyuan Zheng, Yiqu Yang Comments: Code and data artifacts will be released Subjects: Computation and Language (cs.CL); Machine Learning (cs.LG)  arXiv:2609.0048",
-          "publishDate": "",
-          "relevanceScore": 26,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "announcement:accepted to",
-            "announcement:accepted by",
-            "topic:llm",
-            "topic:agent",
-            "venue:emnlp",
-            "venue:kdd",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "paper-index-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "arxiv",
-          "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.AI/recent?skip=277&show=100",
-          "title": "Artificial Intelligence",
-          "snippet": "Artificial Intelligence arXiv。 Machine Learning (cs.LG)  arXiv:2609.27417 [pdf, html, other] Title: Emergi-PersonaOS: A Persona Agent Operating System for Situational Adaptation and Controllable Evolution Haoluan Fu, Keni Chen, Xinyu Jia, Jinpeng Wang, Yuyu Yin Subjects: Artificial Intelligence (cs.AI)  arXiv:2609.27349 [pdf, html, other] Title: MolDesignBench: Evaluating LLM-based Agent for Scenario-grounded Molecular Design Yongjun Jeong, Hanbum Ko, Ye Rin Kim, Chanhui Lee, Rodrigo Hormazabal, Jaewan Lee, Sehui Han, Sungbin Lim, Sungwoong Kim Comments: Accepted to COLM 2026 Subjects: Artificial Intelligence (cs.AI); Machine Learning (cs.LG)  arXiv:2609.27336 [pdf, html, other] Title: CART:",
+          "url": "https://arxiv.org/list/cs/2026-03?skip=300",
+          "title": "Computer Science",
+          "snippet": "Computer Science arXiv。 Artificial Intelligence (cs.AI)  arXiv:2603.00582 [pdf, html, other] Title: Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research Yubo Dong, Nianhao You, Yuxuan Hou, Zixun Sun, Yue Zhang, Liang Zhang, Siyuan Zhao, Hehe Fan Subjects: Computation and Language (cs.CL)  arXiv:2603.00585 [pdf, html, other] Title: MicroVerse: A Preliminary Exploration Toward a Micro-World Simulation Rongsheng Wang, Minghao Wu, Hongru Zhou, Zhihan Yu, Zhenyang Cai, Junying Chen, Benyou Wang Subjects: Artificial Intelligence (cs.AI); Computer Vision and Pattern Recognition (cs.CV)  arXiv:2603.00586 [pdf, html, other] Title: Wi",
           "publishDate": "",
           "relevanceScore": 28,
           "relevanceSignals": [
-            "paper:paper",
             "paper:arxiv",
-            "paper:technical report",
+            "paper:project page",
             "announcement:accepted to",
+            "announcement:to appear",
             "topic:llm",
             "topic:large language model",
-            "topic:agent",
-            "topic:reasoning",
+            "topic:mllm",
+            "venue:cvpr",
             "venue:iclr",
-            "venue:colm"
-          ],
-          "queryLabel": "paper-index-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "arxiv",
-          "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.CL/recent?show=50&skip=243",
-          "title": "Computation and Language",
-          "snippet": "Computation and Language arXiv。 Audio and Speech Processing (eess.AS)  arXiv:2606.10569 [pdf, html, other] Title: Hidden Consensus:Preference-Validity Compression in Human Feedback Dorcas Chia Ern Chua, Karen Myn Hui Lee, Jia Yue Tan, Zhen Xue Gue, Norzalena Abdul Hamid, Azima Binti Azmi, Keat Mei Yeong, Aizat Izyani binti Mujab, Hafsah Noor Azam, Chee Guo Khoo, Han Ying Lim, Chee Seng Chan Comments: 28 pages. When AI learns from human feedback, it forces a single \"correct\" answer, but sometimes multiple answers are all genuinely valid, and that nuance gets thrown away Subjects: Computation and Language (cs.CL); Artificial Intelligence (cs.AI)  arXiv:2606.10554 [pdf, html, other] Title: Benc",
-          "publishDate": "",
-          "relevanceScore": 18,
-          "relevanceSignals": [
-            "paper:arxiv",
-            "paper:technical report",
-            "announcement:accepted by",
-            "topic:llm",
-            "topic:large language model",
-            "venue:icml",
             "source:high-signal-url"
           ],
           "queryLabel": "paper-index-1",
@@ -1670,19 +1650,44 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.AI/recent?show=25&skip=150",
-          "title": "Artificial Intelligence",
-          "snippet": "Artificial Intelligence。Artificial Intelligence Authors and titles for recent submissions Mon, 23 Mar 2026 Fri, 20 Mar 2026 Thu, 19 Mar 2026 Wed, 18 Mar 2026 Tue, 17 Mar 2026 Mon, 23 Mar 2026 (continued, showing last 17 of 167 entries )  arXiv:2603.19271 (cross-list from cs.CL) [pdf, other] Title: A Human-Centered Workflow for Using Large Language Models in Content Analysis Ivan Zupic Subjects: Computation and Language (cs.CL); Artificial Intelligence (cs.AI)  arXiv:2603.19268 (cross-list from cs.CL) [pdf, html, other] Title: Full-Stack Domain Enhancement for Combustion LLMs: Construction and Optimization Quanjia Xiao, Weimin Ouyang, Zonglin Yang, Tianhao Wu, Qingguo Zhou, Runze Mao, Zhi X. ",
+          "url": "https://arxiv.org/list/cs.CL/current?show=25&skip=75",
+          "title": "Computation and Language",
+          "snippet": "Computation and Language arXiv。 Artificial Intelligence (cs.AI) Title: Overfitting Mitigation via Singular Value Decomposition in Minimum Bayes Risk Decoding Riza Setiawan Soetedjo , Yusuke Sakai , Hidetaka Kamigaito , Katsuhiko Hayashi , Taro Watanabe Comments: Accepted to EMNLP 2026 Main Subjects: Computation and Language (cs.CL) Title: Does task decomposition improve automatic NLG evaluation? Sebastian Steindl , Nikos Voskarides , Alberto Gasparin , Diego Marcheggiani Comments: Accepted to EMNLP 2026 Subjects: Computation and Language (cs.CL) Title: Subword Segmental BabyLMs: Learning to Tokenise for Sample-Efficient Pretraining Francois Meyer Subjects: Computation and Language (cs.CL) Ti",
           "publishDate": "",
           "relevanceScore": 21,
           "relevanceSignals": [
             "paper:arxiv",
             "announcement:accepted to",
-            "announcement:accepted by",
             "topic:llm",
-            "topic:large language model",
-            "venue:iclr",
+            "topic:reasoning",
+            "topic:reinforcement learning",
+            "venue:acl",
+            "venue:emnlp",
             "source:high-signal-url"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://arxiv.org/list/cs.CL/2026-02?skip=1900&show=25",
+          "title": "Computation and Language",
+          "snippet": "Computation and Language arXiv。 Artificial Intelligence (cs.AI); Computation and Language (cs.CL) [1916] arXiv:2602.23387 (cross-list from cs.SD) [pdf, html, other] Title: Hello-Chat: Towards Realistic Social Audio Interactions Yueran Hou, Peilei Jia, Zihan Sun, Qihang Lu, Wenbing Yang, Yingming Gao, Ya Li, Jun Gao Subjects: Sound (cs.SD); Artificial Intelligence (cs.AI); Computation and Language (cs.CL); Audio and Speech Processing (eess.AS) [1917] arXiv:2602.23413 (cross-list from cs.LG) [pdf, html, other] Title: EvoX: Meta-Evolution for Automated Discovery Shu Liu, Shubham Agarwal, Monishwaran Maheswaran, Mert Cemri, Zhifei Li, Qiuyang Mang, Ashwin Naren, Ethan Boneh, Audrey Cheng, Meliss",
+          "publishDate": "",
+          "relevanceScore": 28,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:arxiv",
+            "announcement:accepted to",
+            "topic:llm",
+            "topic:mllm",
+            "topic:multi-modal",
+            "topic:reasoning",
+            "topic:rag",
+            "venue:cvpr",
+            "venue:iclr"
           ],
           "queryLabel": "paper-index-1",
           "queryIntent": "",
@@ -1693,31 +1698,7 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.CL/recent?skip=488&show=500",
-          "title": "Computation and Language",
-          "snippet": "Computation and Language arXiv。Authors and titles for recent submissions See today's new changes Total of 659 entries : 489-659 501-659 Tue, 22 Sep 2026 (continued, showing last 84 of 233 entries ) Title: Do Language Models Know Their Own Constraints? Arin Agarwal Comments: 8 pages Subjects: Computation and Language (cs.CL) ; Machine Learning (cs.LG) Title: Beyond the Stitching Assumption: A Unified Framework for Multimodal Synthetic Data Evaluation via Semantic Quantization Yefeng Yuan , Zhan Shi , Liang Cheng , Yuhong Liu Comments: 10 Pages, 2 figures, 4 tables, accepted to PST 2026 Subjects: Computation and Language (cs.CL) ; Machine Learning (cs.LG) Title: Multilingual Safety Signals Are",
-          "publishDate": "",
-          "relevanceScore": 28,
-          "relevanceSignals": [
-            "paper:arxiv",
-            "paper:technical report",
-            "announcement:accepted to",
-            "announcement:accepted by",
-            "topic:llm",
-            "topic:large language model",
-            "topic:multimodal",
-            "topic:agent",
-            "topic:reasoning",
-            "topic:rag"
-          ],
-          "queryLabel": "paper-index-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "arxiv",
-          "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.CL/recent?skip=237",
+          "url": "https://arxiv.org/list/cs.CL/recent?skip=340&show=25",
           "title": "Computation and Language",
           "snippet": "Computation and Language arXiv。 scientific content unchanged Subjects: Computation and Language (cs.CL) Title: Cascade: Hierarchical Recoverability Control for Large Language Model Unlearning Qingchen Yu , Shiying Duan , Xiaodong Li , Yuhua Wang , Zhiyu Li , Shiji Zhou , Yifan Sun , Zhaoxin Fan Comments: Accepted by EMNLP 2026 (Findings) Subjects: Computation and Language (cs.CL) Title: Reduplicative constructions in Mandarin: Socio-emotional profiling through distributional semantics Chaoyi Wu , Yu-Hsiang Tseng , R. Harald Baayen Comments: 32 pages, 9 figures Subjects: Computation and Language (cs.CL) Title: A Data-free Universal Prior over Syntactic Structures Ferm\\'ın Moscoso del Prado Ma",
           "publishDate": "2026/09/16",
@@ -1765,22 +1746,46 @@
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.LG/recent?skip=769&show=100",
-          "title": "Machine Learning",
-          "snippet": "Machine Learning arXiv。 Artificial Intelligence (cs.AI); Machine Learning (cs.LG) Title: Physics-Informed Classical and Quantum Neural Networks for One-Dimensional Schrodinger Eigenvalue Problems Tariq Mahmood , Waqas Arshad , Bilal Naseer , Alfredo Raya Subjects: Quantum Physics (quant-ph) ; Machine Learning (cs.LG); High Energy Physics - Phenomenology (hep-ph); High Energy Physics - Theory (hep-th) Title: Fairness Beyond Anonymization? Demographic Leakage in German LLM-Generated Resumes Charlotte Leininger , Helena Veit , Matthias Aßenmacher , Andreas Bender Comments: Accepted at ECML PKDD 2026 Workshop on Bias and Fairness in AI [BIAS 2026@ ECML/PKDD] Subjects: Computation and Language (c",
-          "publishDate": "",
-          "relevanceScore": 27,
+          "url": "https://arxiv.org/list/cs/pastweek?skip=2260&show=25",
+          "title": "Computer Science",
+          "snippet": "Computer Science arXiv。 Probing Hidden States for Hallucination Detection in Hinglish Tanveer Singh (Plaksha University) Comments: 9 pages, 2 figures, 4 tables Subjects: Computation and Language (cs.CL) ; Machine Learning (cs.LG) Title: DiFA: Dual Evidence Fusion and Aggregation for Token-Level Text Anomaly Detection Yanyu Qian , Pengcheng Weng , Yue Tan , Enguang Zuo , Yu Zheng , Yixin Liu Comments: Accepted by ICDM 2026. 10 pages, 4 figures, 2 tables Subjects: Computation and Language (cs.CL) ; Machine Learning (cs.LG) Title: Read-Best Is Not Steer-Best: A Probing--Steering Layer Dissociation in Omni-Modal Large Language Models Yibo Wang , Jisheng Dang , Bimei Wang , Yitao Wu , Wencan Zhan",
+          "publishDate": "2026/09/22",
+          "relevanceScore": 24,
           "relevanceSignals": [
-            "paper:paper",
             "paper:arxiv",
+            "paper:technical report",
             "announcement:accepted to",
             "announcement:accepted by",
             "topic:llm",
             "topic:large language model",
-            "topic:multimodal",
             "topic:agent",
-            "venue:emnlp",
+            "topic:reasoning",
+            "topic:rag",
             "venue:icml"
+          ],
+          "queryLabel": "paper-index-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "arxiv",
+          "stage": "paper-index",
+          "url": "https://arxiv.org/list/cs.CL/2026-02?skip=250&show=250",
+          "title": "Computation and Language",
+          "snippet": "Computation and Language arXiv。 Artificial Intelligence (cs.AI); Cryptography and Security (cs.CR) Title: Revisiting Prompt Sensitivity in Large Language Models for Text Classification: The Role of Prompt Underspecification Branislav Pecher , Michal Spiegel , Robert Belanec , Jan Cegin Subjects: Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI); Machine Learning (cs.LG) Title: DeFrame: Debiasing Large Language Models Against Framing Effects Kahee Lim , Soyeon Kim , Steven Euijong Whang Comments: 40 pages, 12 figures Subjects: Computation and Language (cs.CL) ; Artificial Intelligence (cs.AI) Title: A Domain-Specific Curated Benchmark for Entity and Document-Level Relation Ex",
+          "publishDate": "",
+          "relevanceScore": 20,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "announcement:accepted to",
+            "announcement:accepted by",
+            "topic:large language model",
+            "topic:vision-language",
+            "topic:reasoning",
+            "venue:acl",
+            "venue:iclr",
+            "reject:non-paper-page",
+            "source:high-signal-url"
           ],
           "queryLabel": "paper-index-1",
           "queryIntent": "",
@@ -1794,7 +1799,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1251
+      "durationMs": 1482
     },
     {
       "label": "social-introducing-11",
@@ -1812,7 +1817,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:19.605Z",
+      "startedAt": "2026-09-30T06:40:32.558Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1822,7 +1827,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 869
+      "durationMs": 1000
     },
     {
       "label": "homepage-1",
@@ -1837,10 +1842,10 @@
       "intent": "",
       "parentUrl": "",
       "requestedCount": 6,
-      "rawResultCount": 50,
-      "resultCount": 27,
+      "rawResultCount": 49,
+      "resultCount": 26,
       "rejectedCount": 23,
-      "startedAt": "2026-09-29T06:53:20.474Z",
+      "startedAt": "2026-09-30T06:40:33.558Z",
       "results": [
         {
           "platform": "web",
@@ -2018,24 +2023,6 @@
             "topic:llm",
             "topic:large language model",
             "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://jilu.wiki/thread-537.htm?user=4",
-          "title": "2026‑09 全球主流开源大模型清单(综合评测性能排序)",
-          "snippet": "主流开源大模型 Github 清单 排名 模型名称 开发厂商 官方 Github 地址 1 Llama 3.1 / Llama 3.2 Meta (脸书) https://github.com/meta-llama/llama-recipes 2 Qwen3(通义千问 3) 阿里巴巴 https://github.com/QwenLM/Qwen3 3 DeepSeek‑V3‑V4 深度求索 https://github.com/deepseek-ai/DeepSeek-V4 4 Mistral‑Large‑2 / Mixtral Mistral AI https://github.com/mistralai/mistral-src 5 GLM‑5 清华智谱 AI https://github.com/THUDM/GLM-5 6 Gemma‑3 Google 谷歌 https://github.com/google-gemma/gemma-recipes 7 MiniCPM‑3 面壁智能 https://github.com/OpenBMB/MiniCPM-3 8 Phi‑4 微软 Microsoft https://github.com/microsoft/Phi-Cookbook 9 Seed‑OSS‑36B 字节跳动 Seed 团队 https://github.com/ByteDance-Seed/seed-oss 10 InternLM‑3(书生・浦语) 上海 AI 实验室 https://github.com/InternLM/InternLM3 11 Yi‑3.0(",
-          "publishDate": "",
-          "relevanceScore": 8,
-          "relevanceSignals": [
-            "announcement:开源",
-            "topic:vla",
-            "topic:大模型",
-            "topic:多模态"
           ],
           "queryLabel": "homepage-1",
           "queryIntent": "",
@@ -2458,7 +2445,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1719
+      "durationMs": 5397
     },
     {
       "label": "chinese-1",
@@ -2476,7 +2463,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:22.193Z",
+      "startedAt": "2026-09-30T06:40:38.955Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -2486,7 +2473,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 696
+      "durationMs": 745
     },
     {
       "label": "broad-1",
@@ -2504,7 +2491,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:22.889Z",
+      "startedAt": "2026-09-30T06:40:39.700Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -2514,7 +2501,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 579
+      "durationMs": 1089
     },
     {
       "label": "seed-2",
@@ -2529,10 +2516,10 @@
       "intent": "",
       "parentUrl": "",
       "requestedCount": 6,
-      "rawResultCount": 50,
-      "resultCount": 32,
+      "rawResultCount": 49,
+      "resultCount": 31,
       "rejectedCount": 18,
-      "startedAt": "2026-09-29T06:53:23.468Z",
+      "startedAt": "2026-09-30T06:40:40.789Z",
       "results": [
         {
           "platform": "web",
@@ -2549,30 +2536,6 @@
             "topic:reasoning",
             "venue:acl",
             "venue:www"
-          ],
-          "queryLabel": "seed-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://yale-nlp.github.io/publications",
-          "title": "2026",
-          "snippet": "2026 Yale NLP。\"MMSciCode: Real-world Evaluation of Multilingual Multi-Discipline Scientific Research Coding\" Xue Xia, Zheyuan Yang, Arman Cohan, Yilun Zhao. ACL 2026 | benchmark code-generation evaluation \"CPTCoder: A Reliable LLM System for Medical Procedure Code Prediction\" Benlu Wang, Ziyao Shangguan, Kyle Tegtmeyer, Zhenyu Zhang, Sophie Chheang, Arman Cohan. ACL 2026 Demo | code-generation clinical specialized domains \"SciMDR: Advancing Scientific Multimodal Document Reasoning\" Ziyu Chen, Yilun Zhao, Chengye Wang, Rilyn R. Han, Manasi Patwardhan, Arman Cohan. ACL 2026 | benchmark multimodal document understanding \"Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retriev",
-          "publishDate": "",
-          "relevanceScore": 24,
-          "relevanceSignals": [
-            "topic:llm",
-            "topic:large language model",
-            "topic:multimodal",
-            "topic:agent",
-            "topic:reasoning",
-            "topic:video understanding",
-            "topic:post-training",
-            "topic:reinforcement learning",
-            "venue:acl",
-            "venue:colm"
           ],
           "queryLabel": "seed-2",
           "queryIntent": "",
@@ -3279,7 +3242,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1422
+      "durationMs": 1080
     },
     {
       "label": "repository-2",
@@ -3297,7 +3260,7 @@
       "rawResultCount": 15,
       "resultCount": 10,
       "rejectedCount": 5,
-      "startedAt": "2026-09-29T06:53:24.890Z",
+      "startedAt": "2026-09-30T06:40:41.869Z",
       "results": [
         {
           "platform": "web",
@@ -3631,7 +3594,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1468
+      "durationMs": 872
     },
     {
       "label": "paper-index-2",
@@ -3649,7 +3612,7 @@
       "rawResultCount": 20,
       "resultCount": 10,
       "rejectedCount": 10,
-      "startedAt": "2026-09-29T06:53:26.358Z",
+      "startedAt": "2026-09-30T06:40:42.741Z",
       "results": [
         {
           "platform": "arxiv",
@@ -3971,7 +3934,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1388
+      "durationMs": 865
     },
     {
       "label": "social-introducing-21",
@@ -3989,7 +3952,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:27.747Z",
+      "startedAt": "2026-09-30T06:40:43.606Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -3999,7 +3962,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 917
+      "durationMs": 920
     },
     {
       "label": "homepage-2",
@@ -4014,10 +3977,10 @@
       "intent": "",
       "parentUrl": "",
       "requestedCount": 6,
-      "rawResultCount": 50,
-      "resultCount": 29,
-      "rejectedCount": 21,
-      "startedAt": "2026-09-29T06:53:28.663Z",
+      "rawResultCount": 46,
+      "resultCount": 26,
+      "rejectedCount": 20,
+      "startedAt": "2026-09-30T06:40:44.526Z",
       "results": [
         {
           "platform": "web",
@@ -4489,26 +4452,6 @@
           "parentUrl": ""
         },
         {
-          "platform": "x",
-          "stage": "homepage",
-          "url": "https://www.catalyzex.com/author/Shenao%2520Chen",
-          "title": "Hypergraph-based Multimodal Retrieval-Augmented Generation with Incremental Refinement",
-          "snippet": "Hypergraph-based Multimodal Retrieval-Augmented Generation with Incremental Refinement CatalyzeX。Hypergraph-based Multimodal Retrieval-Augmented Generation with Incremental Refinement Aug 17, 2026 Authors:Shenao Chen, Yidan Xu, Xiangmin Han, Rundong Xue, Duanpo Wu, Yuhan Gao, Chenggang Yan, Yue Gao Abstract:Modern Multimodal Retrieval-Augmented Generation (M-RAG) systems are fundamentally limited by the binary connectivity paradigm of traditional simple graphs, which fails to capture the intricate, high-order correlations among heterogeneous entities, such as the N-ary relationships between a visual chart, its scattered textual descriptions, and underlying numerical data. Furthermore, existi",
-          "publishDate": "2026/08/17",
-          "relevanceScore": 17,
-          "relevanceSignals": [
-            "paper:paper",
-            "announcement:accepted to",
-            "topic:multimodal",
-            "topic:rag",
-            "venue:www",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
           "platform": "web",
           "stage": "homepage",
           "url": "https://finance.sina.com.cn/wm/2026-07-20/doc-iniinsct2840296.shtml",
@@ -4523,28 +4466,6 @@
             "topic:llm",
             "topic:rag",
             "topic:多模态"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://www.pubmed.gov/41543962/",
-          "title": "Vision Enhancing LLMs: Empowering Multimodal Knowledge Storage and Sharing in LLMs",
-          "snippet": "Vision Enhancing LLMs: Empowering Multimodal Knowledge Storage and Sharing in LLMs。Clipboard, Search History, and several other advanced features are temporarily unavailable. Skip to main page content An official website of the United States government Here's how you know The .gov means it’s official. Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site. The site is secure. The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely. Close Account Logged in as: username Save citation to file Email citation Add to Collectio",
-          "publishDate": "",
-          "relevanceScore": 18,
-          "relevanceSignals": [
-            "paper:paper",
-            "topic:llm",
-            "topic:large language model",
-            "topic:mllm",
-            "topic:multimodal",
-            "topic:reasoning",
-            "topic:rag",
-            "venue:www"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -4584,29 +4505,6 @@
             "topic:reasoning",
             "venue:www",
             "source:high-signal-url"
-          ],
-          "queryLabel": "homepage-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "homepage",
-          "url": "https://papernotes.org/ICLR2026/multimodal_vlm/decalign_hierarchical_cross-modal_alignment_for_decoupled_multimodal_representat",
-          "title": "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning",
-          "snippet": "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning¶ 会议: ICLR2026 OpenReview: https://openreview.net/forum?id=LasUPe2UxG 代码: https://taco-group.github.io/DecAlign/ (项目页) 领域: 多模态VLM 关键词: 多模态表示学习, 跨模态对齐, 特征解耦, 最优传输, 最大均值差异 一句话总结¶ DecAlign 把多模态特征拆成\"各模态独有的异质特征\"和\"跨模态共享的同质特征\"两路,分别用原型引导的最优传输对齐异质部分、用潜空间分布匹配 + MMD 对齐同质部分,在四个情感分析基准上稳定刷过 13 个 SOTA。 研究背景与动机¶ 领域现状:多模态表示学习要把视觉、音频、语言这些异构模态融成统一表示,既抓住它们共享的语义,又保留各自独有的特征。主流做法是把原始多模态数据投到一个统一空间里——要么直接拼接,要么做线性变换后融合。 现有痛点:这种\"不加区分的融合\"会把模态独有的细节特征和全局共享语义搅在一起,产生语义干扰:某个模态的局部特征会破坏跨模态的全局关系。尤其在维度不匹配时更明显——高维、空间相关的图像特征和低维、时间相关的文本特征硬凑在一起,对齐效果很差,要么信息冗余、要么关键信息在融合中丢失。 核心矛盾:问题的根本在于异质性(heterogeneity)与同质性(homogeneity)的纠缠。模态独有的异质模式(分布、尺度、语义",
-          "publishDate": "",
-          "relevanceScore": 21,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:论文",
-            "topic:vlm",
-            "topic:multimodal",
-            "topic:多模态",
-            "venue:acl",
-            "venue:cvpr",
-            "venue:iclr",
-            "venue:neurips"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -4701,15 +4599,19 @@
         {
           "platform": "web",
           "stage": "homepage",
-          "url": "https://thelatestinai.com/topics/contrastive-language-image-pretraining?density=cards",
-          "title": "Multimodal Contrastive Learning research — The Latest in AI",
-          "snippet": "Multimodal Contrastive Learning research — The Latest in AI The Latest in AI。github.io/BrepClip2026/ Muhammad Usama, Didier Stricker, Mohammad Sadil Khan +1 Computer-Aided DesignMultimodal Contrastive LearningSemantic Similarity Metrics SaveAskPDF ↗ Jun 1, 2026cs.CL Beyond Topical Similarity: Contrastive Evidence Retrieval with Interpretable Attention Alignment in RAG Ensuring factuality and interpretability in RAG remains an open and urgent problem. We introduce Contrastive Evidence Rationale Attention (CERA), the first retrieval framework to employ subjectivity-based hard negative selection and inject an evidential inductive bias into contrastive learning through an auxiliary attention ali",
+          "url": "https://github.com/lihongzhao99/SSMDG",
+          "title": "Towards Multimodal Domain Generalization with Few Labels",
+          "snippet": "Towards Multimodal Domain Generalization with Few Labels GitHub。Towards Multimodal Domain Generalization with Few Labels 🔥 CVPR 2026 Highlight 🔥 Hongzhao Li1 Hao Dong2 Hualei Wan1 Shupan Li1 Mingliang Xu1 Muhammad Haris Khan3 1Zhengzhou University 2ETH Zürich 3MBZUAI • Paper • Poster • Code • Official PyTorch implementation of the paper: \"Towards Multimodal Domain Generalization with Few Labels\". 🔎 Overview This project aims to address two core challenges in real-world multimodal learning: data efficiency and domain generalization. We study how to learn robust multimodal representations when only a few labels are available and the test domain is unseen during training. ✨ Highlights 🧩 Nov",
           "publishDate": "",
-          "relevanceScore": 0,
+          "relevanceScore": 13,
           "relevanceSignals": [
+            "paper:paper",
+            "announcement:our paper",
+            "announcement:accepted by",
             "topic:multimodal",
-            "topic:rag",
-            "reject:non-paper-page"
+            "venue:cvpr",
+            "reject:non-paper-page",
+            "source:high-signal-url"
           ],
           "queryLabel": "homepage-2",
           "queryIntent": "",
@@ -4723,7 +4625,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1541
+      "durationMs": 963
     },
     {
       "label": "chinese-2",
@@ -4741,7 +4643,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:30.205Z",
+      "startedAt": "2026-09-30T06:40:45.489Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -4751,7 +4653,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 699
+      "durationMs": 870
     },
     {
       "label": "broad-2",
@@ -4766,10 +4668,10 @@
       "intent": "",
       "parentUrl": "",
       "requestedCount": 6,
-      "rawResultCount": 50,
+      "rawResultCount": 49,
       "resultCount": 22,
-      "rejectedCount": 28,
-      "startedAt": "2026-09-29T06:53:30.905Z",
+      "rejectedCount": 27,
+      "startedAt": "2026-09-30T06:40:46.359Z",
       "results": [
         {
           "platform": "web",
@@ -5265,7 +5167,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1636
+      "durationMs": 919
     },
     {
       "label": "follow-up-2",
@@ -5283,7 +5185,7 @@
       "rawResultCount": 15,
       "resultCount": 13,
       "rejectedCount": 2,
-      "startedAt": "2026-09-29T06:53:32.892Z",
+      "startedAt": "2026-09-30T06:40:47.623Z",
       "results": [
         {
           "platform": "web",
@@ -5552,7 +5454,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1424
+      "durationMs": 834
     },
     {
       "label": "follow-up-3",
@@ -5570,7 +5472,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:34.316Z",
+      "startedAt": "2026-09-30T06:40:48.457Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -5580,7 +5482,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1164
+      "durationMs": 926
     },
     {
       "label": "follow-up-1",
@@ -5598,7 +5500,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-09-29T06:53:35.481Z",
+      "startedAt": "2026-09-30T06:40:49.383Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -5608,7 +5510,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 2613
+      "durationMs": 1974
     },
     {
       "label": "follow-up-5",
@@ -5626,7 +5528,7 @@
       "rawResultCount": 15,
       "resultCount": 11,
       "rejectedCount": 4,
-      "startedAt": "2026-09-29T06:53:38.094Z",
+      "startedAt": "2026-09-30T06:40:51.357Z",
       "results": [
         {
           "platform": "web",
@@ -5913,7 +5815,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1118
+      "durationMs": 693
     }
   ],
   "readers": [
@@ -5942,7 +5844,7 @@
       "parentUrl": "",
       "readerTitle": "chaowang-ustc.github.io/_pages/about.md at master · chaowang-ustc/chaowang-ustc.github.io",
       "readerExcerpt": "| | | | --- | --- | | layout | about | | title | about | | permalink | / | | subtitle | 中国科学技术大学人工智能与数据科学学院, 预聘副教授, 博导 <br/> Email: wangchaoai@ustc.edu.cn | | profile | | align | image | image_circular | more_info | | --- | --- | --- | --- | | left | avatar.png | false | | | | news | false | | selected_papers | false | | social | false | 王超，现为中国科学技术大学人工智能与数据科学学院预聘副教授，博导。2016年于中科大少年班学院获学士学位，2022年于中科大计算机学院获博士学位（博士导师熊辉、陈恩红教授），2024年从广州市香港科大霍英东研究院、香港科技大学（广州）博士后出站（合作导师王炜教授）。 主要研究方向为数据挖掘、个性化智能体、大语言模型、推荐系统等领域。近年来承担多项科研项目，包括国家自然科学基金青年基金C类、安徽省自然科学基金青年基金C类、认知智能全国重点实验室开放课题、CCF-阿里1688源宝合作基金、国家博士后面上基金等，作为项目子课题负责人参与新一代人工智能重大科技专项1项。在人工智能领域国际期刊及会议发表论文50余篇，其中CCF-A类论文30余篇，已授权和公开专利10余项。曾获得中国计算机学会CCF优秀博士学位论文激励计划、《中国科学：信息科学》2022年度热点论文、翟光龙学者基金、招商银行优秀实践教学奖等荣誉。 Chao Wang is currently a Tenure-track Associate Professor and Ph.D. Supervisor at the School of Artificial Intelligence and Data Science, University of Science and Technology of China. He received his bachelor’s degree from the School of the Gifted Young, USTC, in 2016, and his Ph.D. degree from the School of Computer Science and Technology, USTC, in 2022, under the supervision of Professors Hui Xiong and Enhong Chen. In 2024, he completed his postdoctoral research at the HKUST Fok Ying Tung Research Institute in Guangzhou and the Hong Kong University of Science and Technology (Guangzhou), under the mentorship of Professor Wei Wang. His research",
-      "durationMs": 797,
+      "durationMs": 779,
       "skipped": false
     },
     {
@@ -5970,7 +5872,7 @@
       "parentUrl": "",
       "readerTitle": "pstAmbition/DailyArXiv_Multimodal README",
       "readerExcerpt": "__Please check the Github page for a better reading experience and more papers.__ ## Multimodal Learning | __Title__ | __Date__ | __Comment__ | | --- | --- | --- | | __Momentum Memory for Knowledge Distillation in Computational Pathology__ | 2026-03-23 | Accep... Accepted by CVPR 2026. Code: https://github.com/CAIR-LAB-WFUSM/MoMKD | | __Multimodal Training to Unimodal Deployment: Leveraging Unstructured Data During Training to Optimize Structured Data Only Deployment__ | 2026-03-23 | 10 pages,3 figures | | __Rethinking Multimodal Fusion for Time Series: Auxiliary Modalities Need Constrained Fusion__ | 2026-03-23 | | | __On the Cone Effect and Modality Gap in Medical Vision-Language Embeddings__ | 2026-03-20 | | | __BALM: A Model-Agnostic Framework for Balanced Multimodal Learning under Imbalanced Missing Rates__ | 2026-03-20 | Accep... Accepted by CVPR 2026 | | __Unbiased Dynamic Multimodal Fusion__ | 2026-03-20 | CVPR2... CVPR2026 Findings, 11 pages, 4 figures | | __Modality Equilibrium Matters: Minor-Modality-Aware Adaptive Alternating for Cross-Modal Memory Enhancement__ | 2026-03-19 | Accepted by TPAMI | | __NymeriaPlus: Enriching Nymeria Dataset with Additional Annotations and Data__ | 2026-03-19 | | | __Multimodal Machine Learning for Soft High-k Elastomers under Data Scarcity__ | 2026-03-18 | | | __HGP-Mamba: Integrating Histology and Generated Protein Features for Mamba",
-      "durationMs": 2305,
+      "durationMs": 968,
       "skipped": false,
       "githubReadme": {
         "title": "pstAmbition/DailyArXiv_Multimodal README",
@@ -6002,7 +5904,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - UKPLab/acl2026-misleading-visualizations: Code and datasets accompanying the ACL 2026 Main conference paper: \"Protecting multimodal large language models against misleading visualizations\"",
       "readerExcerpt": "![Image 1: License](https://camo.githubusercontent.com/82a388a393968bace31aaca906842883af77b28647e47acb0771c69d09a40239/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f554b504c61622f756b702d70726f6a6563742d74656d706c617465) ![Image 2: Python Versions](https://camo.githubusercontent.com/2b00114b047f3c01ab1c76a992d64db65415e95f948c79696feec1927a2484e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e31302d626c75652e7376673f7374796c653d666c6174266c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465) This repository contains the implementation of the ACL 2026 Main conference paper: Protecting Multimodal LLMs against misleading visualizations. The code is released under an __Apache 2.0__ license. Contact person: Jonathan Tonglet UKP Lab | TU Darmstadt Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions. ## News 📢 - Our paper has been accepted to ACL 2026 Main conference 🔥 See you in San Diego 🌊 - We released a follow-up work \"ChartAttack: Testing the Vulnerability of LLMs to Malicious Prompting in Chart Generation\", check it out 🔥 - We released a follow-up work \"Is this chart lying to me? Automating the detection of misleading visualizations\", check it out 🔥 ## Abstract > Visualizations play a pivotal role in daily communication in an increas",
-      "durationMs": 1569,
+      "durationMs": 1179,
       "skipped": false,
       "githubReadme": {
         "title": "UKPLab/arxiv2025-misleading-visualizations README",
@@ -6034,7 +5936,7 @@
       "parentUrl": "",
       "readerTitle": "Latest 15 Papers - September 06, 2026",
       "readerExcerpt": "__Please check the Github page for a better reading experience and more papers.__ ## Multimodal Learning | __Title__ | __Date__ | __Comment__ | | --- | --- | --- | | __A Survey on Self-Improving Test-Time Intelligence: Feedback-Driven Adapting, Learning, and Scaling at Inference__ | 2026-09-01 | accep... accepted by Machine Intelligence Research | | __Semantics at an Angle: When Cosine Similarity Works Until It Doesn't__ | 2026-08-29 | | | __Diverse via bounded Agreement: Geometric Regularization for Multimodal Fusion__ | 2026-08-28 | | | __A Multimodal Dataset of Student Oral Presentations with Sensors and Evaluation Data__ | 2026-08-28 | Prepr... Preprint of an article accepted for publication in Scientific Data. GitHub repository of the dataset at: https://github.com/dataGHIA/SOPHIAS | | __Graph-Based Pseudo-multimodal Contrastive Learning for 12-Lead ECG Representations__ | 2026-08-27 | 7 pag... 7 pages, 7 figures. Presented at the 48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2026) | | __Mitigating Strong-Modality Collapse in Multimodal Learning via Inverted Asymmetric Fusion__ | 2026-08-27 | | | __CAT-GS: Balanced Multimodal Learning via Calibrated Gating and Fusion Surgery__ | 2026-08-27 | This ... This article is accepted in Neurocomputing Journal | | __Adaptive Hierarchical Representation Alliance for Multimodal Lear",
-      "durationMs": 1004,
+      "durationMs": 1017,
       "skipped": false,
       "githubReadme": {
         "title": "ZCjenny549/DailyArXiv README",
@@ -6066,7 +5968,7 @@
       "parentUrl": "",
       "readerTitle": "Latest 15 Papers - September 12, 2026",
       "readerExcerpt": "__Please check the Github page for a better reading experience and more papers.__ ## Multimodal Learning | __Title__ | __Date__ | __Comment__ | | --- | --- | --- | | __CAT-GS: Balanced Multimodal Learning via Calibrated Gating and Fusion Surgery__ | 2026-09-10 | This ... This article is accepted in Neurocomputing Journal | | __Exploring Diffusion Transformers for Cross-Modal Augmentation in Multimodal Brain State Decoding__ | 2026-09-10 | CoMA-... CoMA-DiT, a cross-modal augmentation framework built on Diffusion Transformer, extends multimodal learning beyond fusion by leveraging paired modalities as mutual generative supervision to enrich training data and improve brain state decoding | | __When to Align, When to Predict: A Phase Diagram for Multimodal Learning__ | 2026-09-08 | | | __Beyond Retrieval: Joint Supervision and Multimodal Document Ranking for Textbook Question Answering__ | 2026-09-06 | The s... The submitted version contains a significant error affecting the reported experimental results. The experiments must be repeated and the results re-evaluated. We therefore request withdrawal of the current submission, as we do not want researchers to rely on or cite potentially inaccurate results | | __Explainable Multimodal Deep Learning Integrating Imaging and Clinical Data for Oral Potentially Malignant Disorder Detection__ | 2026-09-03 | | | __Towards AI-Driven Nanomedi",
-      "durationMs": 929,
+      "durationMs": 1121,
       "skipped": false,
       "githubReadme": {
         "title": "ZCjenny549/DailyArXiv README",
@@ -6126,7 +6028,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - lijunxian111/Faithful-First-RPA: [🏆ACL'26] Official Repo for Faithful-First Reasoning, Planning, and Acting for Multimodal LLMs · GitHub",
       "readerExcerpt": "GitHub - lijunxian111/Faithful-First-RPA: [🏆ACL'26] Official Repo for Faithful-First Reasoning, Planning, and Acting for Multimodal LLMs · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CODE CREATION - GitHub CopilotWrite better code with AI - GitHub SparkBuild and deploy intelligent apps - GitHub ModelsManage and compare prompts - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - ActionsAutomate any workflow - CodespacesInstant dev environments - IssuesPlan and track work - Code ReviewManage code changes - APPLICATION SECURITY - GitHub Advanced SecurityFind and fix vulnerabilities - Code securitySecure your code as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUSTRY - Healthcare - Financial services - Manufacturing - Government - View all industries View all solutions - Resources - EXPLORE BY TOPIC - AI - Software Development - DevOps - Security - View all topics - EXPLORE BY TYPE - Customer stories - Events & webinars - Ebooks & reports - Business insights - GitHub Skills - SUPPORT & SERVICES - Documentation - Customer supp",
-      "durationMs": 1035,
+      "durationMs": 1071,
       "skipped": false,
       "githubReadme": {
         "title": "lijunxian111/Faithful-First-RPA README",
@@ -6158,7 +6060,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning",
       "readerExcerpt": "## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 (Main Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ causes attention to visual inputs to progressively decay as reasoning chains extend. VGPO addresses these issues through three key mechanisms: - __Visual Attention Compensation (VAC):__ Uses the inherent hidden-state similarity between generated tokens and image tokens as a _Visual Focus Score_ to localize visual activations without external supervision. A progressive incentive schedule counteracts temporal visual forgetting in later reasoning steps. - __Intra-Trajectory Re-weighting:__ At the token level, dynamically re-weights advantages by visual focus scores to amplify learning from visually-grounded tokens. - __Inter-Trajectory Re-weighting:__ At the trajectory level, prioritizes rollouts with superior visual accumulation, favoring trajectories that sustain consistent visual grounding. ![Image 1: VGPO Pilot Exp](https://github.com/wzb-bupt/VGPO/raw/main/assets/vgpo_pilot_experiences.png) Analysis of the inference nature of multimodal reasoning trajectory (based",
-      "durationMs": 1335,
+      "durationMs": 1027,
       "skipped": false,
       "githubReadme": {
         "title": "wzb-bupt/VGPO README",
@@ -6190,7 +6092,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - jinyangwu/ThoughtICR: [ACL 2026 Main] Official implementation of ThoughtICR",
       "readerExcerpt": "📚 [ACL 2026] 🤗 [Daily Paper] 💻 [Code] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64th Annual Meeting of the Association for Computational Linguistics (Long Papers). ## Contents - Introduction - Requirements - Usage - Acknowledgement - Citation ## Introduction We introduce __ThoughtICR__, an automated __Thought__-level __I__n-__C__ontext __R__easoning paradigm for large language models. ThoughtICR rethinks the role of context in in-context learning: instead of asking models to imitate surface-level examples, it provides explicit, reusable, and guidance-oriented thought patterns for complex reasoning. ![Image 1](https://github.com/jinyangwu/ThoughtICR/raw/main/assets/Figure1.png) _Figure 1: Solution comparison. Zero-shot learning relies on generic instructions, in-context learning depends on carefully selected demonstrations, and ThoughtICR provides high-level reasoning patterns for robust problem solving._ ThoughtICR first defines five atomic reasoning actions: __System Analysis (SA)__, __One-Step Thought (OST)__, __Chain-of-Thought (CoT)__, __Divid",
-      "durationMs": 1529,
+      "durationMs": 1210,
       "skipped": false,
       "githubReadme": {
         "title": "jinyangwu/HiARICL README",
@@ -6222,7 +6124,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - XD111ds/ILVR: [ACL'26 Oral] Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
       "readerExcerpt": "![Image 1: arXiv](https://camo.githubusercontent.com/3bcd9d137c3cd3a3d5f5e49a73168c423c2896ffa9db6a031cd4bcbe248b4662/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61725869762d323531322e30353636352d6233316231622e737667) ![Image 2: ACL 2026](https://camo.githubusercontent.com/1bbffd5b627f354504c3721dae0bc9c9eb4b79263beeadbabfa8ddf40331c5b5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f41434c253230323032362d41636365707465642d73756363657373) ![Image 3: License: MIT](https://camo.githubusercontent.com/08cef40a9105b6526ca22088bc514fbfdbc9aac1ddbf8d4e6c750e3a88a44dca/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d626c75652e737667) __Authors:__ Shuai Dong, Siyuan Wang, Xingyu Liu, Chenglin Li, Haowen Hou, Zhongyu Wei __Affiliations:__ China University of Geosciences, Wuhan; Shanghai Innovation Institute; University of Southern California; Fudan University; Zhejiang University; Shanghai Jiao Tong University. __Venue:__ ACL 2026 (__Oral Presentation__). --- ## 📖 Abstract ![Image 4: Model Architecture](https://github.com/XD111ds/ILVR/raw/main/assets/framework.png) > __Abstract:__ Interleaved reasoning paradigms enhance Multimodal Large Language Models (MLLMs) with visual feedback but are hindered by the prohibitive computational cost of re-encoding pixel-dense images. A promising alternative, latent visual reasoning, circumvents",
-      "durationMs": 928,
+      "durationMs": 1012,
       "skipped": false,
       "githubReadme": {
         "title": "XD111ds/ILVR README",
@@ -6282,7 +6184,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - microsoft/DKI_LLM: This is a repository for DKI group concerning the LLM-related papers alongside with code.",
       "readerExcerpt": "## 📫 Paper Code Collection (Microsoft DKI Group) Image 1 ![Image 2: License: MIT](https://camo.githubusercontent.com/fdf2982b9f5d7489dcf44570e714e3a15fce6253e0cc6b5aa61a075aac2ff71b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667) This repo hosts multiple open-source codes of the Microsoft DKI LLM Group. You could find the corresponding code as below: ## News - April, 2026: our paper A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research was accepted by ICML 2026. - April, 2026: our paper RepoGenesis: Benchmarking End-to-End Microservice Generation from Readme to Repository was accepted by ACL 2026 (Main) with a Top 15% of accepted papers. - January, 2026: our paper RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning was accepted by ICLR 2026. - January, 2025: our paper Self-Evolve Reward Learning for LLMs was accepted by ICLR 2025. ## Code Release (Click Title to Locate the Code) ### Deep Research > __A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research__ > Zhuofan Shi, Ming Ma, Zekun Yao, Fangkai Yang, Jue Zhang, Dongge Han, Victor Rühle, Qingwei Lin, Saravan Rajmohan, Dongmei Zhang. ICML 2026. ### RL > __Self-Evolved Reward Learning for LLMs__ > Chenghua Huang, Zhizhen F",
-      "durationMs": 1073,
+      "durationMs": 875,
       "skipped": false,
       "githubReadme": {
         "title": "microsoft/DKI_LLM README",
@@ -6313,7 +6215,7 @@
       "parentUrl": "",
       "readerTitle": "GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG",
       "readerExcerpt": "## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation ![Image 1: License](https://camo.githubusercontent.com/4886b59e3d25280ad0f09f205c140a74b760966e101b71a4ca336acf1091519b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d637573746f6d2d6c6967687467726579) __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview ![Image 2: MegaRAG Architecture](https://github.com/user-attachments/assets/219ae758-b54c-45c9-a261-b63644ffec08) ## π¦ Installation #### Requirements - Python 3.9+ (3.10 recommended) - GPU for embeddings inference - OpenAI API key ### Step 1: Install MinerU ``` git clone -b release-1.3.6 https://github.com/opendatalab/MinerU.git cd MinerU conda create --name mineru python=3.10 -y conda activate mineru pip install -e . pip install huggingface_hub wget https://raw.githubusercontent.com/opendatalab/MinerU/refs/heads/release-1.3.6/scripts/download_models_hf.py -O download_models_hf.py sed -i \"s|https://github.com/opendatalab/MinerU/raw/master/magic-pdf.template.json|https://raw.githubusercontent.com/opendatalab/MinerU/release-1.3.6/magic-pdf.template.json|\" download_models_hf.py python download_models_hf.py ``` ### Step 2: Install MegaRAG ``` git clone h",
-      "durationMs": 1093,
+      "durationMs": 901,
       "skipped": false,
       "githubReadme": {
         "title": "AI-Application-and-Integration-Lab/MegaRAG README",
@@ -6345,7 +6247,7 @@
       "parentUrl": "",
       "readerTitle": "pstAmbition/DailyArXiv_Multimodal README",
       "readerExcerpt": "__Please check the Github page for a better reading experience and more papers.__ ## Multimodal Learning | __Title__ | __Date__ | __Comment__ | | --- | --- | --- | | __Metis-SPECS: Decoupling Multimodal Learning via Self-distilled Preference-based Cold Start__ | 2026-01-30 | Publi... Published as a conference paper at ICLR 2026! | | __Uncertainty-Aware Multimodal Learning via Conformal Shapley Intervals__ | 2026-01-30 | | | __MEIDNet: Multimodal generative AI framework for inverse materials design__ | 2026-01-29 | | | __Embracing Aleatoric Uncertainty in Medical Multimodal Learning with Missing Modalities__ | 2026-01-29 | | | __Robust Multimodal Representation Learning in Healthcare__ | 2026-01-29 | | | __Neural Signals Generate Clinical Notes in the Wild__ | 2026-01-29 | | | __When Gradient Optimization Is Not Enough: $\\dagger$ Dispersive and Anchoring Geometric Regularizer for Multimodal Learning__ | 2026-01-29 | | | __Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion__ | 2026-01-29 | Accep... Accepted by NeurIPS 2025 | | __MultiModal Fine-tuning with Synthetic Captions__ | 2026-01-29 | | | __Plain Transformers Can be Powerful Graph Learners__ | 2026-01-29 | | | __Missing-Data-Induced Phase Transitions in Spectral PLS for Multimodal Learning__ | 2026-01-29 | Preprint | | __AutoGameUI: Constructing High-Fidelity GameUI via M",
-      "durationMs": 806,
+      "durationMs": 804,
       "skipped": false,
       "githubReadme": {
         "title": "pstAmbition/DailyArXiv_Multimodal README",
@@ -6360,10 +6262,10 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-ffb5140d7bb4\",\n    \"title\": \"VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/wzb-bupt/VGPO.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.8333333333333334,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/wzb-bupt/VGPO\",\n    \"keywords\": [\n      \"multimodal\",\n      \"reasoning\",\n      \"rag\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/wzb-bupt/VGPO\",\n        \"title\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n        \"snippet\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning GitHub。NameName assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files VGPO: Visually-Guide...\",\n        \"readerTitle\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n        \"readerExcerpt\": \"## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ c...\",\n        \"publishDate\": \"\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-ffb5140d7bb4\",\n      \"title\": \"VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n      \"summary\": \"VGPO提出了一种视觉引导的策略优化方法，用于多模态推理任务。\",\n      \"reason\": \"GitHub页面明确显示论文已被ACL 2026主会议接受。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/wzb-bupt/VGPO\",\n      \"canonicalUrl\": \"https://github.com/wzb-bupt/VGPO\",\n      \"keywords\": [\"multimodal\", \"reasoning\", \"rag\", \"benchmark\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/wzb-bupt/VGPO\",\n          \"title\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n          \"snippet\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning GitHub。NameName assets assets examples examples scripts scripts verl verl README.md README.md requirements.txt requirements.txt setup.py setup.py train_vgpo_7B.sh train_vgpo_7B.sh View all files VGPO: Visually-Guide...\",\n          \"readerTitle\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n          \"readerExcerpt\": \"## 🔥 News - 🔥 __[2026.04]__: 🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference). ## 📖 Overview of VGPO Standard RLVR methods treat every generated token equally, broadcasting a single reward signal indiscriminately. This leads to __signal dilution__ — generic text tokens receive the same reinforcement as critical visually-grounded reasoning steps. Meanwhile, __temporal visual forgetting__ c...\",\n          \"publishDate\": \"\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-ffb5140d7bb4\",\n      \"title\": \"VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n      \"summary\": \"VGPO提出了一种视觉引导的策略优化方法，用于多模态推理任务。\",\n      \"reason\": \"GitHub仓库明确显示论文已被ACL 2026主会议接受。\",\n      \"status\": \"accepted\",\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/wzb-bupt/VGPO\",\n      \"keywords\": [\"multimodal\", \"reasoning\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/wzb-bupt/VGPO\",\n          \"title\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n          \"snippet\": \"GitHub - wzb-bupt/VGPO: [ACL 2026] VGPO: Visually-Guided Policy Optimization for Multimodal Reasoning\",\n          \"readerExcerpt\": \"🎉🎉🎉 Congratulations! Our paper is accepted by ACL 2026 ( Conference).\"\n        }\n      ]\n    }\n  ]\n}\n```",
       "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 47935
+      "durationMs": 48143
     },
     {
       "index": 1,
@@ -6371,11 +6273,10 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-d7d775e8b3cd\",\n    \"title\": \"ThoughtICR\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/jinyangwu/HiARICL.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.8055555555555556,\n    \"acceptedVenue\": \"ACL 2026 Main\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/jinyangwu/HiARICL\",\n    \"keywords\": [\n      \"large language model\",\n      \"agent\",\n      \"reasoning\",\n      \"rag\",\n      \"benchmark\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/jinyangwu/HiARICL\",\n        \"title\": \"GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR\",\n        \"snippet\": \"GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR GitHub。NameName assets assets Update README for ACL 2026 Jun 29, 2026 common common push repo May 29, 2025 data/MATH data/MATH push repo May 29, 2025 eval_src eval_src push repo May 29, 2025 models models push repo May 29, 2025 prompts/...\",\n        \"readerTitle\": \"GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR\",\n        \"readerExcerpt\": \"📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64t...\",\n        \"publishDate\": \"\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "",
-      "parsedCount": 0,
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-d7d775e8b3cd\",\n      \"title\": \"Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models\",\n      \"summary\": \"提出了一种自动化思维级上下文推理方法，提升大语言模型的推理能力。\",\n      \"reason\": \"GitHub仓库明确标注论文被ACL 2026 Long Papers接收，并提供官方实现代码。\",\n      \"status\": \"accepted\",\n      \"confidence\": 0.8055555555555556,\n      \"acceptedVenue\": \"ACL 2026 Main\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/jinyangwu/HiARICL\",\n      \"canonicalUrl\": \"https://github.com/jinyangwu/HiARICL\",\n      \"pdfUrl\": \"\",\n      \"authors\": [],\n      \"keywords\": [\"large language model\", \"reasoning\", \"in-context reasoning\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/jinyangwu/HiARICL\",\n          \"title\": \"GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR\",\n          \"author\": \"\",\n          \"snippet\": \"GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR GitHub。NameName assets assets Update README for ACL 2026 Jun 29, 2026 common common push repo May 29, 2025 data/MATH data/MATH push repo May 29, 2025 eval_src eval_src push repo May 29, 2025 models models push repo May 29, 2025 prompts/...\",\n          \"readerTitle\": \"GitHub - jinyangwu/ThoughtICR: [ACL 2026 ] Official implementation of ThoughtICR\",\n          \"readerExcerpt\": \"📚 [ACL 2026] 🤗 [Daily Paper] 💻 [ ] This repository is the official implementation of __Beyond Examples: Towards Automated Thought-level In-Context Reasoning for Large Language Models__, accepted to __ACL 2026 Long Papers__. If you have any questions ❓ or are interested in collaboration 🤝, please feel free to contact me at wu-jy23@mails.tsinghua.edu.cn. ## News - __ACL 2026__: ThoughtICR was accepted to the 64t...\",\n          \"publishDate\": \"\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90003,
-      "error": "request timed out after 90000ms"
+      "durationMs": 58220
     },
     {
       "index": 2,
@@ -6386,7 +6287,7 @@
       "responseText": "",
       "parsedCount": 0,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 90001,
+      "durationMs": 90002,
       "error": "request timed out after 90000ms"
     },
     {
@@ -6395,25 +6296,25 @@
       "prompt": "You are helping maintain a 2026 top-venue AI paper tracker.\n\nTask:\n- Inspect the candidate papers below and clean only what is explicitly supported by the attached evidence.\n- Each item is already a strong provisional candidate found by the pipeline.\n- Focus areas: LLM, VLM, VLA, MLLM, agents, reasoning, video understanding, 3D, robotics, embodied AI, multimodal learning.\n- Keep only main-conference results; exclude findings/workshop/demo/tutorial/challenge/course/recruiting/product-only entries when evidence is clear.\n- Clean the paper title. Remove GitHub UI text, README boilerplate, accepted-paper wrappers, and social-media scaffolding.\n- If a candidate still lacks a clean title or the evidence is too weak, omit it from the output instead of guessing.\n- If evidence explicitly says the paper is accepted to the main conference of AAAI, ACL, EMNLP, CVPR, ICCV, ICLR, ICML, NeurIPS, SIGGRAPH, KDD, WWW, or similar, fill acceptedVenue and acceptedYear.\n- Use status \"accepted\" only for explicit main-conference acceptance evidence. If acceptance is unclear, use status \"candidate\".\n- Write \"summary\" as one short Chinese sentence about the paper itself, not about the discovery process.\n- Write \"reason\" as one short Chinese explanation citing the strongest evidence for title and acceptance/candidate status.\n- Prefer the shortest valid JSON that preserves the cleaned title, Chinese summary, Chinese reason, URL, and strongest evidence.\n- Preserve the best primaryUrl and evidence URLs.\n\nReturn JSON only:\n{\n  \"papers\": [\n    {\n      \"id\": \"input candidate id\",\n      \"title\": \"paper title\",\n      \"titleZh\": \"optional Chinese title\",\n      \"summary\": \"one concise Chinese summary\",\n      \"reason\": \"why this looks like a paper and what evidence supports acceptance or candidate status\",\n      \"status\": \"candidate or accepted\",\n      \"confidence\": 0.0,\n      \"acceptedVenue\": \"ACL 2026 / AAAI / CVPR 2026, or empty\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"main evidence URL\",\n      \"canonicalUrl\": \"paper/project/homepage URL if available\",\n      \"pdfUrl\": \"optional PDF URL\",\n      \"authors\": [\"author\"],\n      \"keywords\": [\"llm\", \"agent\"],\n      \"platforms\": [\"x\", \"xiaohongshu\", \"homepage\"],\n      \"evidence\": [\n        {\n          \"platform\": \"x\",\n          \"url\": \"https://...\",\n          \"title\": \"search result title\",\n          \"author\": \"author if visible\",\n          \"snippet\": \"search or page excerpt\",\n          \"readerTitle\": \"reader title\",\n          \"readerExcerpt\": \"reader excerpt\",\n          \"publishDate\": \"optional\"\n        }\n      ]\n    }\n  ]\n}\n\nCandidates:\n[\n  {\n    \"id\": \"unofficial-b09792bf2db3\",\n    \"title\": \"MegaRAG: Multimodal Graph-based RAG\",\n    \"titleZh\": \"\",\n    \"summary\": \"发现页在公开页面中识别到 ACL 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。\",\n    \"reason\": \"Evidence-backed fallback found explicit ACL 2026 signal in https://github.com/AI-Application-and-Integration-Lab/MegaRAG.\",\n    \"status\": \"accepted\",\n    \"confidence\": 0.78,\n    \"acceptedVenue\": \"ACL 2026\",\n    \"acceptedYear\": 2026,\n    \"primaryUrl\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n    \"keywords\": [\n      \"multimodal\",\n      \"reasoning\",\n      \"rag\"\n    ],\n    \"platforms\": [\n      \"web\"\n    ],\n    \"evidence\": [\n      {\n        \"platform\": \"web\",\n        \"url\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n        \"title\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG\",\n        \"snippet\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG GitHub。NameName egs egs init repo Aug 14, 2025 megarag megarag init repo Aug 14, 2025 test test init repo Aug 14, 2025 .env.sh .env.sh init repo Aug 14, 2025 .gitignore .gitignore init repo Aug 14, 2025 LICENSE LICENS...\",\n        \"readerTitle\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG\",\n        \"readerExcerpt\": \"## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation !Image 1: License __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview !Image 2: MegaRAG Architecture ## π¦ Installation #### Requirements - Python 3.9+ (3.10 re...\",\n        \"publishDate\": \"\"\n      }\n    ]\n  }\n]",
       "systemPrompt": "You clean and enrich already-detected paper candidates. Return JSON only. Do not invent unsupported facts.",
       "model": "glm-4.5-flash",
-      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-b09792bf2db3\",\n      \"title\": \"MegaRAG: Multimodal Graph-based RAG\",\n      \"summary\": \"MegaRAG是一种基于多模态知识图谱的检索增强生成方法，用于文档上的全局视觉问答。\",\n      \"reason\": \"GitHub仓库标题明确标注为ACL 2026论文，描述了结合图推理与页面检索技术的多模态知识图谱构建方法。\",\n      \"status\": \"accepted\",\n      \"confidence\": 0.78,\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n      \"canonicalUrl\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n      \"pdfUrl\": \"\",\n      \"authors\": [],\n      \"keywords\": [\"multimodal\", \"reasoning\", \"rag\"],\n      \"platforms\": [\"web\"],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n          \"title\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG\",\n          \"snippet\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG GitHub。NameName egs egs init repo Aug 14, 2025 megarag megarag init repo Aug 14, 2025 test test init repo Aug 14, 2025 .env.sh .env.sh init repo Aug 14, 2025 .gitignore .gitignore init repo Aug 14, 2025 LICENSE LICENS...\",\n          \"readerTitle\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based RAG\",\n          \"readerExcerpt\": \"## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation !Image 1: License __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview !Image 2: MegaRAG Architecture ## π¦ Installation #### Requirements - Python 3.9+ (3.10 re...\",\n          \"publishDate\": \"\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "responseText": "```json\n{\n  \"papers\": [\n    {\n      \"id\": \"unofficial-b09792bf2db3\",\n      \"title\": \"MegaRAG: Multimodal Graph-based RAG\",\n      \"summary\": \"MegaRAG是一种基于多模态知识图谱的文档问答系统，结合了图推理和页面检索技术。\",\n      \"reason\": \"GitHub仓库标题明确显示论文已被ACL 2026接受，仓库内容包含论文相关代码和材料。\",\n      \"status\": \"accepted\",\n      \"confidence\": 0.78,\n      \"acceptedVenue\": \"ACL 2026\",\n      \"acceptedYear\": 2026,\n      \"primaryUrl\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n      \"canonicalUrl\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n      \"keywords\": [\n        \"multimodal\",\n        \"reasoning\",\n        \"rag\"\n      ],\n      \"platforms\": [\n        \"web\"\n      ],\n      \"evidence\": [\n        {\n          \"platform\": \"web\",\n          \"url\": \"https://github.com/AI-Application-and-Integration-Lab/MegaRAG\",\n          \"title\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG\",\n          \"snippet\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: [ACL 2026] MegaRAG: Multimodal Graph-based RAG GitHub。NameName egs egs init repo Aug 14, 2025 megarag megarag init repo Aug 14, 2025 test test init repo Aug 14, 2025 .env.sh .env.sh init repo Aug 14, 2025 .gitignore .gitignore init repo Aug 14, 2025 LICENSE LICENS...\",\n          \"readerTitle\": \"GitHub - AI-Application-and-Integration-Lab/MegaRAG: MegaRAG: Multimodal Graph-based Retrieval Augmented Generation\",\n          \"readerExcerpt\": \"## MegaRAG: Multimodal Graph-based Retrieval Augmented Generation !Image 1: License __MegaRAG__ enables __global visual question answering__ on documents by constructing a __Multimodal Knowledge Graph (MMKG)__. It combines graph-based reasoning with page retrieval techniques for precise and rich responses. ## π Overview !Image 2: MegaRAG Architecture ## π¦ Installation #### Requirements - Python 3.9+ (3.10 re...\",\n          \"publishDate\": \"\"\n        }\n      ]\n    }\n  ]\n}\n```",
       "parsedCount": 1,
       "extractor": "zhipu-chat-refinement",
-      "durationMs": 59834
+      "durationMs": 56754
     }
   ],
   "rejectedCandidates": [],
   "summary": {
     "searchQueriesRun": 18,
-    "skippedSearchPlans": 472,
+    "skippedSearchPlans": 462,
     "selectedSearchPlans": 18,
     "modelSearchPlans": 0,
     "followUpSearchPlans": 4,
-    "fallbackCandidates": 4,
+    "fallbackCandidates": 5,
     "searchStageBreakdown": {
       "seed": {
         "queries": 2,
-        "raw": 100,
-        "kept": 70,
+        "raw": 99,
+        "kept": 69,
         "rejected": 30
       },
       "repository": {
@@ -6436,9 +6337,9 @@
       },
       "homepage": {
         "queries": 2,
-        "raw": 100,
-        "kept": 56,
-        "rejected": 44
+        "raw": 95,
+        "kept": 52,
+        "rejected": 43
       },
       "chinese": {
         "queries": 2,
@@ -6448,9 +6349,9 @@
       },
       "broad": {
         "queries": 2,
-        "raw": 50,
+        "raw": 49,
         "kept": 22,
-        "rejected": 28
+        "rejected": 27
       },
       "follow-up": {
         "queries": 4,
@@ -6459,20 +6360,19 @@
         "rejected": 6
       }
     },
-    "rawSearchEvidenceCollected": 345,
-    "searchEvidenceCollected": 206,
-    "rejectedSearchEvidence": 137,
+    "rawSearchEvidenceCollected": 338,
+    "searchEvidenceCollected": 201,
+    "rejectedSearchEvidence": 135,
     "readerEnrichedEvidence": 14,
     "extractionBatchesRun": 4,
-    "skippedExtractionBatches": 0,
-    "extractedCandidates": 6,
+    "skippedExtractionBatches": 1,
+    "extractedCandidates": 8,
     "rejectedCandidates": 0,
     "added": 0,
-    "updated": 6,
-    "durationMs": 690248
+    "updated": 8,
+    "durationMs": 649273
   },
   "errors": [
-    "Extraction failed for batch 2: request timed out after 90000ms",
     "Extraction failed for batch 3: request timed out after 90000ms"
   ]
 }
