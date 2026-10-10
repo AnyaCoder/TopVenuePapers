@@ -1,11 +1,60 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T07:29:29.386Z",
+  "generatedAt": "2026-10-10T07:14:07.518Z",
   "notes": [
     "Reconciliation first removes unofficial entries already present in the official catalog mirror.",
     "Remaining candidates are checked with Zhipu search evidence for main-conference acceptance signals."
   ],
   "papers": [
+    {
+      "id": "unofficial-a4efd9cae71d",
+      "title": "Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents__ > > Niu Lian*, Yuting Wang*",
+      "summary": "Discovery evidence found an explicit ACL 2026 Main paper signal for Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents__ > > Niu Lian*, Yuting Wang*; waiting for Zhipu enrichment.",
+      "reason": "GitHub页面明确显示论文已被ACL 2026会议接收，标题已清理掉会议前缀和格式符号。",
+      "primaryUrl": "https://github.com/EliSpectre/MM-Mem",
+      "canonicalUrl": "https://github.com/EliSpectre/MM-Mem",
+      "pdfUrl": "",
+      "sourceId": "unofficial-a4efd9cae71d",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.8888888888888888,
+      "acceptedVenue": "ACL 2026 Main",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-10-03T06:30:08.899Z",
+      "updatedAt": "2026-10-10T07:14:07.048Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "zhipu-chat",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vlm",
+        "multimodal",
+        "agent",
+        "reasoning",
+        "video understanding",
+        "benchmark",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/EliSpectre/MM-Mem",
+          "title": "GitHub - EliSpectre/MM-Mem: [ACL-26 (main)] From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents",
+          "snippet": "GitHub - EliSpectre/MM-Mem: [ACL-26 ( )] From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents GitHub。 Init Apr 16, 2026 Init Apr 16, 2026 Init Apr 16, 2026 Init Apr 19, 2026 README.md Init Apr 18, 2026 MM-Mem: From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents News: Our paper has been accepted to the ACL 2026 Conference. This repository contains...",
+          "readerTitle": "GitHub - EliSpectre/MM-Mem: [ACL-26 (main)] From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents",
+          "readerExcerpt": "!Image 1: ACL 2026 Conference Accepted banner __News:__ Our paper has been accepted to the __ACL 2026 Conference__. !Image 2: arXiv !Image 3: ACL 2026 Conference Accepted This repository contains the official __PyTorch__ implementation of: > __From Verbatim to Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents__ > > Niu Lian*, Yuting Wang*, Hanshu Yao, Jinpeng Wang, Bin Chen, Yaowei Wang, Min Zhang, and Shu-Tao Xia. --- > __Note__: This repository contains a partial release of the . The complete implementation will be made available gradually. Stay tuned for upcoming updates! !Image 4: Pipeline Overview ## 1. Introduction __MM-Mem__ is a novel multimodal memory architecture inspired by __Fuzzy-Trace Theory__ for long-horizon video understanding. It overcomes the limitations of existing paradigms by structuring memory hierarch...",
+          "publishDate": "",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
     {
       "id": "unofficial-c3195f2b58ce",
       "title": "Is this chart lying to me? Automating the detection of misleading visualizations. The Misviz and Misviz-synth datasets are released under a CC-BY-SA 4.0 licens...",
@@ -21,7 +70,7 @@
       "acceptedVenue": "ACL 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-08-31T07:02:14.169Z",
-      "updatedAt": "2026-10-09T07:22:28.190Z",
+      "updatedAt": "2026-10-10T07:03:35.562Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -77,104 +126,6 @@
       "evidenceCount": 3
     },
     {
-      "id": "unofficial-a4efd9cae71d",
-      "title": "Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents__ > > Niu Lian*, Yuting Wang*",
-      "summary": "发现页在公开页面中识别到 ACL 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ACL 2026 Main paper signal for Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents__ > > Niu Lian*, Yuting Wang*; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/EliSpectre/MM-Mem",
-      "canonicalUrl": "https://github.com/EliSpectre/MM-Mem",
-      "pdfUrl": "",
-      "sourceId": "unofficial-a4efd9cae71d",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.8888888888888888,
-      "acceptedVenue": "ACL 2026 Main",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-10-03T06:30:08.899Z",
-      "updatedAt": "2026-10-09T07:22:28.189Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vlm",
-        "multimodal",
-        "agent",
-        "reasoning",
-        "video understanding",
-        "benchmark",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/EliSpectre/MM-Mem",
-          "title": "GitHub - EliSpectre/MM-Mem: [ACL-26 (main)] From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents",
-          "snippet": "GitHub - EliSpectre/MM-Mem: [ACL-26 ( )] From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents GitHub。 Init Apr 16, 2026 Init Apr 16, 2026 Init Apr 16, 2026 Init Apr 19, 2026 README.md Init Apr 18, 2026 MM-Mem: From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents News: Our paper has been accepted to the ACL 2026 Conference. This repository contains...",
-          "readerTitle": "GitHub - EliSpectre/MM-Mem: [ACL-26 (main)] From Verbatim to Gist Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents",
-          "readerExcerpt": "!Image 1: ACL 2026 Conference Accepted banner __News:__ Our paper has been accepted to the __ACL 2026 Conference__. !Image 2: arXiv !Image 3: ACL 2026 Conference Accepted This repository contains the official __PyTorch__ implementation of: > __From Verbatim to Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents__ > > Niu Lian*, Yuting Wang*, Hanshu Yao, Jinpeng Wang, Bin Chen, Yaowei Wang, Min Zhang, and Shu-Tao Xia. --- > __Note__: This repository contains a partial release of the . The complete implementation will be made available gradually. Stay tuned for upcoming updates! !Image 4: Pipeline Overview ## 1. Introduction __MM-Mem__ is a novel multimodal memory architecture inspired by __Fuzzy-Trace Theory__ for long-horizon video understanding. It overcomes the limitations of existing paradigms by structuring memory hierarch...",
-          "publishDate": "",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
-      "id": "unofficial-b7b98a191c06",
-      "title": "Scalable QA for 4D Perception in Vision Language Models - 4DWorldBench: A Comprehensive Evaluation Framework for 3D/4D World Generation Models - A3: To...",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Scalable QA for 4D Perception in Vision Language Models - 4DWorldBench: A Comprehensive Evaluation Framework for 3D/4D World Generation Models - A3: To...; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://m0rtzz.github.io/paper-notes/CVPR2026/multimodal_vlm/vq-va_world_towards_high-quality_visual_question-visual_answering",
-      "canonicalUrl": "https://m0rtzz.github.io/paper-notes/CVPR2026/multimodal_vlm/vq-va_world_towards_high-quality_visual_question-visual_answering",
-      "pdfUrl": "",
-      "sourceId": "unofficial-b7b98a191c06",
-      "year": 2026,
-      "status": "accepted",
-      "confidence": 0.9444444444444444,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-10-09T07:22:28.187Z",
-      "updatedAt": "2026-10-09T07:22:28.187Z",
-      "lastCheckedAt": "",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "vision language model",
-        "vlm",
-        "multimodal",
-        "mllm",
-        "agent",
-        "reasoning",
-        "rag"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://m0rtzz.github.io/paper-notes/CVPR2026/multimodal_vlm/vq-va_world_towards_high-quality_visual_question-visual_answering",
-          "title": "[论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering",
-          "snippet": "[CVPR 2026][多模态VLM][视觉问答] 这篇论文把\"看图提问、用图回答\"(Visual Question-Visual Answering, VQ-VA)这一原本只有 GPT-Image / NanoBanana 等闭源系统才有的能力带给开源模型:用一条五智能体流水线从网页图文交错文档里挖出约 180 万条\"需要世界知识与推理才能完成图像变换\"的训练样本,外加人工标注的 IntelligentBench 评测集;在这批数据上微调 LightFusion 后,IntelligentBench 得分从 7.78 飙到 53.06,超过所有开源模型并大幅缩小与闭源系统的差距。 标签:CVPR 2026 · 多模态VLM · 视觉问答 · 图像生成 · 数据构建 · Agent流水线 · 世界知识 VQ-VA World: Towards High-Quality Visual Question-Visual Answering¶ 会议: CVPR 2026 论文: CVF Open Access 代码: https://github.com/chenhuigou/VQ-VA...",
-          "readerTitle": "[论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering",
-          "readerExcerpt": "[论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering 跳转至 📚 AI Paper Notes [论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering 正在初始化搜索引擎 Star on GitHub - 🏠 首页 - 📷 CVPR2026 - 🔬 ICLR2026 - 🎞️ ECCV2026 - 💬 ACL2026 - 🧪 ICML2026 - 🤖 AAAI2026 - 🧠 NeurIPS2025 - 📹 ICCV2025 - 🧪 ICML2025 - 💬 ACL2025 - 📷 CVPR2025 - 🎞️ ECCV2024 📚 AI Paper Notes Star on GitHub - 🏠 首页 - 📷 CVPR2026 📷 CVPR2026 - LLM (135) LLM (135) - 💡 LLM Reasoning (16) - 🦾 LLM Agent (42) - 👥 Multi-Agent (2) - ⚖️ 对齐 / RLHF (12) - 🔒 LLM 安全 (12) - 👻 幻觉检测 (33) - ⚡ LLM 效率 (8) - 📚 预训练 (5) - ✏️ 知识编辑 (2) - 💬 LLM 其他 (3) - 生成与多模态 (1335) 生成与多模态 (1335) - 🎨 图像生成 (490) - 🎬 视频生成 (182) - 🧩 多模态 VLM (418) 🧩 多模态 VLM (418) - 4DP-QA: Scalable QA for 4D Perception in Vision Language Models - 4DWorldBench: A Comprehensive Evaluation Framework for 3D/4D World Generation Models - A3: To...",
-          "publishDate": "2026/09/07",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1
-    },
-    {
       "id": "unofficial-7cbe8ae24cfa",
       "title": "CVPR2026-Papers-with-Code/README.md at main · amusi/CVPR2026-Papers-with-Code",
       "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
@@ -189,7 +140,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-09-14T06:15:24.511Z",
-      "updatedAt": "2026-10-09T07:22:28.185Z",
+      "updatedAt": "2026-10-10T07:03:35.558Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -248,7 +199,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-10-04T06:50:14.966Z",
-      "updatedAt": "2026-10-09T07:22:28.184Z",
+      "updatedAt": "2026-10-10T07:03:35.557Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -297,7 +248,7 @@
       "acceptedVenue": "CVPR 2026 Main",
       "acceptedYear": 2026,
       "discoveredAt": "2026-05-07T05:31:40.151Z",
-      "updatedAt": "2026-10-09T07:22:28.181Z",
+      "updatedAt": "2026-10-10T07:03:35.554Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
       "metadataSource": "local-fallback",
@@ -394,6 +345,202 @@
       "evidenceCount": 7
     },
     {
+      "id": "unofficial-1948951b5bb9",
+      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
+      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
+      "pdfUrl": "",
+      "sourceId": "unofficial-1948951b5bb9",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Oral",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-18T04:13:29.657Z",
+      "updatedAt": "2026-10-10T07:14:07.516Z",
+      "lastCheckedAt": "2026-10-10T07:14:07.516Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "multimodal",
+        "reasoning",
+        "rag",
+        "benchmark"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Cominclip/OmniVerifier",
+          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
+          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
+          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
+          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
+          "publishDate": "2026-07-16",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
+        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
+        "venue": "ICLR 2026 Oral"
+      }
+    },
+    {
+      "id": "unofficial-7899e52a4c97",
+      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
+      "pdfUrl": "",
+      "sourceId": "unofficial-7899e52a4c97",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-22T04:33:16.677Z",
+      "updatedAt": "2026-10-10T07:14:07.517Z",
+      "lastCheckedAt": "2026-10-10T07:14:07.517Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/WonderLandxD/E2E-ViT",
+          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
+          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
+          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
+          "publishDate": "2026-07-20",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
+        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
+        "venue": "CVPR 2026"
+      }
+    },
+    {
+      "id": "unofficial-c264154ef7de",
+      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
+      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
+      "pdfUrl": "",
+      "sourceId": "unofficial-c264154ef7de",
+      "year": 2026,
+      "status": "officially-published",
+      "confidence": 0.78,
+      "acceptedVenue": "ICLR 2026 Poster",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-07-08T04:31:27.368Z",
+      "updatedAt": "2026-10-10T07:14:07.517Z",
+      "lastCheckedAt": "2026-10-10T07:14:07.517Z",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "agent",
+        "reinforcement learning"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://github.com/Colin-Jing/ASPC",
+          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
+          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
+          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
+          "publishDate": "2026-06-10",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1,
+      "acceptanceEvidence": {
+        "confidence": 1,
+        "url": "https://openreview.net/forum?id=liOHottW7G",
+        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
+        "venue": "ICLR 2026 Poster"
+      }
+    },
+    {
+      "id": "unofficial-b7b98a191c06",
+      "title": "Scalable QA for 4D Perception in Vision Language Models - 4DWorldBench: A Comprehensive Evaluation Framework for 3D/4D World Generation Models - A3: To...",
+      "summary": "发现页在公开页面中识别到 CVPR 2026 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
+      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Scalable QA for 4D Perception in Vision Language Models - 4DWorldBench: A Comprehensive Evaluation Framework for 3D/4D World Generation Models - A3: To...; waiting for Zhipu enrichment.",
+      "primaryUrl": "https://m0rtzz.github.io/paper-notes/CVPR2026/multimodal_vlm/vq-va_world_towards_high-quality_visual_question-visual_answering",
+      "canonicalUrl": "https://m0rtzz.github.io/paper-notes/CVPR2026/multimodal_vlm/vq-va_world_towards_high-quality_visual_question-visual_answering",
+      "pdfUrl": "",
+      "sourceId": "unofficial-b7b98a191c06",
+      "year": 2026,
+      "status": "accepted",
+      "confidence": 0.9444444444444444,
+      "acceptedVenue": "CVPR 2026",
+      "acceptedYear": 2026,
+      "discoveredAt": "2026-10-09T07:22:28.187Z",
+      "updatedAt": "2026-10-09T07:22:28.187Z",
+      "lastCheckedAt": "",
+      "enrichmentStatus": "provisional",
+      "metadataSource": "local-fallback",
+      "authors": [],
+      "keywords": [
+        "llm",
+        "vision language model",
+        "vlm",
+        "multimodal",
+        "mllm",
+        "agent",
+        "reasoning",
+        "rag"
+      ],
+      "titleAliases": [],
+      "aliases": [],
+      "platforms": [
+        "web"
+      ],
+      "evidence": [
+        {
+          "platform": "web",
+          "url": "https://m0rtzz.github.io/paper-notes/CVPR2026/multimodal_vlm/vq-va_world_towards_high-quality_visual_question-visual_answering",
+          "title": "[论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering",
+          "snippet": "[CVPR 2026][多模态VLM][视觉问答] 这篇论文把\"看图提问、用图回答\"(Visual Question-Visual Answering, VQ-VA)这一原本只有 GPT-Image / NanoBanana 等闭源系统才有的能力带给开源模型:用一条五智能体流水线从网页图文交错文档里挖出约 180 万条\"需要世界知识与推理才能完成图像变换\"的训练样本,外加人工标注的 IntelligentBench 评测集;在这批数据上微调 LightFusion 后,IntelligentBench 得分从 7.78 飙到 53.06,超过所有开源模型并大幅缩小与闭源系统的差距。 标签:CVPR 2026 · 多模态VLM · 视觉问答 · 图像生成 · 数据构建 · Agent流水线 · 世界知识 VQ-VA World: Towards High-Quality Visual Question-Visual Answering¶ 会议: CVPR 2026 论文: CVF Open Access 代码: https://github.com/chenhuigou/VQ-VA...",
+          "readerTitle": "[论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering",
+          "readerExcerpt": "[论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering 跳转至 📚 AI Paper Notes [论文解读] VQ-VA World: Towards High-Quality Visual Question-Visual Answering 正在初始化搜索引擎 Star on GitHub - 🏠 首页 - 📷 CVPR2026 - 🔬 ICLR2026 - 🎞️ ECCV2026 - 💬 ACL2026 - 🧪 ICML2026 - 🤖 AAAI2026 - 🧠 NeurIPS2025 - 📹 ICCV2025 - 🧪 ICML2025 - 💬 ACL2025 - 📷 CVPR2025 - 🎞️ ECCV2024 📚 AI Paper Notes Star on GitHub - 🏠 首页 - 📷 CVPR2026 📷 CVPR2026 - LLM (135) LLM (135) - 💡 LLM Reasoning (16) - 🦾 LLM Agent (42) - 👥 Multi-Agent (2) - ⚖️ 对齐 / RLHF (12) - 🔒 LLM 安全 (12) - 👻 幻觉检测 (33) - ⚡ LLM 效率 (8) - 📚 预训练 (5) - ✏️ 知识编辑 (2) - 💬 LLM 其他 (3) - 生成与多模态 (1335) 生成与多模态 (1335) - 🎨 图像生成 (490) - 🎬 视频生成 (182) - 🧩 多模态 VLM (418) 🧩 多模态 VLM (418) - 4DP-QA: Scalable QA for 4D Perception in Vision Language Models - 4DWorldBench: A Comprehensive Evaluation Framework for 3D/4D World Generation Models - A3: To...",
+          "publishDate": "2026/09/07",
+          "query": ""
+        }
+      ],
+      "evidenceCount": 1
+    },
+    {
       "id": "unofficial-7c457864ebdd",
       "title": "ACL 2026 accepted paper: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation",
       "titleZh": "情境化对话推荐中的动态与隐性偏好推理",
@@ -412,7 +559,7 @@
       "updatedAt": "2026-10-08T07:33:25.709Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "reasoning",
@@ -468,7 +615,7 @@
       "updatedAt": "2026-10-08T07:32:14.987Z",
       "lastCheckedAt": "",
       "enrichmentStatus": "provisional",
-      "metadataSource": "zhipu-chat",
+      "metadataSource": "local-fallback",
       "authors": [],
       "keywords": [
         "multimodal",
@@ -504,153 +651,6 @@
         }
       ],
       "evidenceCount": 2
-    },
-    {
-      "id": "unofficial-c264154ef7de",
-      "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Poster paper signal for Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Colin-Jing/ASPC",
-      "canonicalUrl": "https://github.com/Colin-Jing/ASPC",
-      "pdfUrl": "",
-      "sourceId": "unofficial-c264154ef7de",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Poster",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-08T04:31:27.368Z",
-      "updatedAt": "2026-10-09T07:29:29.384Z",
-      "lastCheckedAt": "2026-10-09T07:29:29.384Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "agent",
-        "reinforcement learning"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Colin-Jing/ASPC",
-          "title": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "snippet": "Colin-Jing/ASPC Open more menu Folders and files Latest 4 4 algorithms algorithms configs/ offline configs/ offline requirements requirements .gitignore .gitignore LICENSE LICENSE NOTICE NOTICE README.md README.md THIRD_PARTY_LICENSES THIRD_PARTY_LICENSES environment.yml environment.yml View all files This repository contains the ASPC algorithm and several baseline offline RL algorithms (WPC, IQL, TD3+BC, ReBRAC, etc.). Venue: ICLR 2026 (Accepted) Environment Setup The environment dependencie...",
-          "readerTitle": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub",
-          "readerExcerpt": "GitHub - Colin-Jing/ASPC: Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning(ICLR 2026) · GitHub Skip to content ## Navigation Menu Toggle navigation Sign in Appearance settings - Platform - AI CREATION - GitHub CopilotWrite better with AI - GitHub Copilot appDirect agents from issue to merge - MCP RegistryNewIntegrate external tools - DEVELOPER WORKFLOWS - Automate any workflow - spacesInstant dev environments - Plan and track work - ReviewManage changes - APPLICATION - GitHub Advanced Find and fix vulnerabilities - Secure your as you build - Secret protectionStop leaks before they start - EXPLORE - Why GitHub - Documentation - Blog - Changelog - Marketplace View all features - Solutions - BY COMPANY SIZE - Enterprises - Small and medium teams - Startups - Nonprofits - BY USE CASE - App Modernization - DevSecOps - DevOps - CI/CD - View all use cases - BY INDUST...",
-          "publishDate": "2026-06-10",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=liOHottW7G",
-        "title": "Adaptive Scaling of Policy Constraints for Offline Reinforcement Learning",
-        "venue": "ICLR 2026 Poster"
-      }
-    },
-    {
-      "id": "unofficial-7899e52a4c97",
-      "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-      "summary": "发现页在公开页面中识别到 CVPR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit CVPR 2026 paper signal for Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "canonicalUrl": "https://github.com/WonderLandxD/E2E-ViT",
-      "pdfUrl": "",
-      "sourceId": "unofficial-7899e52a4c97",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "CVPR 2026",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-22T04:33:16.677Z",
-      "updatedAt": "2026-10-09T07:29:29.385Z",
-      "lastCheckedAt": "2026-10-09T07:29:29.385Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/WonderLandxD/E2E-ViT",
-          "title": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models",
-          "snippet": "Open more menu Folders and files Latest 4 4 data_jsons data_jsons .gitignore .gitignore LICENSE LICENSE README.md README.md e2e_vit.py e2e_vit.py extract_conch_visual.py extract_conch_visual.py run.sh run.sh train.py train.py View all files More items E2E-ViT: Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction Paper Link Install pip install torch torchvision timm scikit-survival pillow tqdm tensorboard Patch Extraction E2E-V...",
-          "readerTitle": "GitHub - WonderLandxD/E2E-ViT: [CVPR 2026] Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-          "readerExcerpt": "CVPR 2026 | Paper Link ## Install ``` pip install torch torchvision timm scikit-survival pillow tqdm tensorboard ``` ## Patch Extraction E2E-VIT takes pre-cropped patches as input. You can use any WSI preprocessing tool to extract 224×224 patches from whole-slide images, such as CLAM, TRIDENT and PIANO. After extraction, organise the output as: ``` / └── / └── / ├── _ x_ y.jpg ├── _ x_ y.jpg └── ... ``` Example: ``` os_patches/ └── os_cptac_ccrcc/ ├── C3L-00026-21/ │ ├── no000000_000004096x_000013312y.jpg │ ├── no000001_000005120x_000011264y.jpg │ └── ... └── C3L-00418-21/ └── ... ``` Filename convention: the last two `_`-separated fields before `.jpg` must be ` x` and ` y` (e.g. `no000052_008192x_015360y.jpg`). ## Quick Start Or a single fold (use vit_small as an example): ``` python train.py \\ --data_json data_jsons/os_cptac_ccrcc_patchseq_dataset.json \\ --data_root /path/to/your/pa...",
-          "publishDate": "2026-07-20",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://cvpr.thecvf.com/virtual/2026/poster/37583",
-        "title": "Turning Pre-Trained Vision Transformers into End-to-End Histopathology Whole Slide Image Models for Survival Prediction",
-        "venue": "CVPR 2026"
-      }
-    },
-    {
-      "id": "unofficial-1948951b5bb9",
-      "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-      "summary": "发现页在公开页面中识别到 ICLR 2026 Main 的明确论文/官方代码证据，已先入库等待 Zhipu 后续补全中文摘要。",
-      "reason": "Discovery evidence found an explicit ICLR 2026 Oral paper signal for Generative Universal Verifier as Multimodal Meta-Reasoner; waiting for Zhipu enrichment.",
-      "primaryUrl": "https://github.com/Cominclip/OmniVerifier",
-      "canonicalUrl": "https://github.com/Cominclip/OmniVerifier",
-      "pdfUrl": "",
-      "sourceId": "unofficial-1948951b5bb9",
-      "year": 2026,
-      "status": "officially-published",
-      "confidence": 0.78,
-      "acceptedVenue": "ICLR 2026 Oral",
-      "acceptedYear": 2026,
-      "discoveredAt": "2026-07-18T04:13:29.657Z",
-      "updatedAt": "2026-10-09T07:29:29.385Z",
-      "lastCheckedAt": "2026-10-09T07:29:29.385Z",
-      "enrichmentStatus": "provisional",
-      "metadataSource": "local-fallback",
-      "authors": [],
-      "keywords": [
-        "llm",
-        "multimodal",
-        "reasoning",
-        "rag",
-        "benchmark"
-      ],
-      "titleAliases": [],
-      "aliases": [],
-      "platforms": [
-        "web"
-      ],
-      "evidence": [
-        {
-          "platform": "web",
-          "url": "https://github.com/Cominclip/OmniVerifier",
-          "title": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral & ICML 2026] Generative Universal Verifier as Multimodal Meta-Reasoner · GitHub",
-          "snippet": "Open more menu Folders and files Latest 25 25 data data examples examples scripts scripts tests tests verl verl README.md README.md inference.py inference.py inference_vllm.py inference_vllm.py requirements.txt requirements.txt sequential_omniverifier_tts.py sequential_omniverifier_tts.py setup.py setup.py viverbench_eval_model_based.py viverbench_eval_model_based.py viverbench_eval_rule_based.py viverbench_eval_rule_based.py View all files More items Introduction We introduce Generative Univ...",
-          "readerTitle": "GitHub - Cominclip/OmniVerifier: [ICLR 2026 Oral] Generative Universal Verifier as Multimodal Meta-Reasoner",
-          "readerExcerpt": "## Generative Universal Verifier as Multimodal Meta-Reasoner !Image 1: CURE Paper on arXiv !Image 2: Coding Datasets on Hugging Face !Image 3: ReasonFlux rs on Hugging Face ### Introduction We introduce __Generative Universal Verifier__, a novel concept and plugin designed for next-generation multimodal reasoning in vision-language models and unified multimodal models, providing the fundamental capability of reflection and refinement on visual outcomes during the reasoning and generation process. - __ViVerBench__: a comprehensive benchmark spanning 16 categories of critical tasks for evaluating visual outcomes in multimodal reasoning. - __OmniVerifier-7B__: Trained on large-scale visual verification data, the first omni-capable generative verifier trained for universal visual verification and achieves notable gains on ViVerBench(+8.3). - __OmniVerifier-TTS__, a sequential test-time sc...",
-          "publishDate": "2026-07-16",
-          "query": ""
-        }
-      ],
-      "evidenceCount": 1,
-      "acceptanceEvidence": {
-        "confidence": 1,
-        "url": "https://openreview.net/forum?id=DM0Y0oL33T",
-        "title": "Generative Universal Verifier as Multimodal Meta-Reasoner",
-        "venue": "ICLR 2026 Oral"
-      }
     },
     {
       "id": "unofficial-ffb5140d7bb4",
