@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T06:06:50.846Z",
+  "generatedAt": "2026-10-15T05:53:28.110Z",
   "model": "glm-4.5-flash",
   "searchTool": "search_pro",
   "readerTool": "reader",
@@ -29,7 +29,7 @@
       "chinese-2",
       "broad-2",
       "follow-up-2",
-      "follow-up-21",
+      "follow-up-11",
       "follow-up-1",
       "follow-up-4"
     ],
@@ -57,287 +57,287 @@
       "plans": []
     },
     "followUpSearchPlans": 4,
-    "skippedFollowUpSearchPlans": 48
+    "skippedFollowUpSearchPlans": 50
   },
   "progress": [
     {
-      "at": "2026-10-14T06:06:50.846Z",
+      "at": "2026-10-15T05:53:28.110Z",
       "message": "Discovery started: 14/98 initial queries, max 4 follow-up queries, max 14 readers, max 4 extraction batches."
     },
     {
-      "at": "2026-10-14T06:06:50.848Z",
+      "at": "2026-10-15T05:53:28.113Z",
       "message": "[initial search 1/14] seed-1: \"accepted to\" \"AAAI 2026\" \"official code\""
     },
     {
-      "at": "2026-10-14T06:06:52.593Z",
-      "message": "[initial search 1/14] done raw=6 kept=5 rejected=1 in 1.7s"
+      "at": "2026-10-15T05:53:29.831Z",
+      "message": "[initial search 1/14] done raw=1 kept=0 rejected=1 in 1.7s"
     },
     {
-      "at": "2026-10-14T06:06:52.593Z",
+      "at": "2026-10-15T05:53:29.831Z",
       "message": "[initial search 2/14] repository-1: site:github.com \"AAAI 2026\" \"official code\" \"LLM\""
     },
     {
-      "at": "2026-10-14T06:06:54.059Z",
-      "message": "[initial search 2/14] done raw=6 kept=1 rejected=5 in 1.5s"
+      "at": "2026-10-15T05:53:30.964Z",
+      "message": "[initial search 2/14] done raw=6 kept=1 rejected=5 in 1.1s"
     },
     {
-      "at": "2026-10-14T06:06:54.059Z",
+      "at": "2026-10-15T05:53:30.964Z",
       "message": "[initial search 3/14] paper-index-1: arxiv \"accepted to\" \"2026\" \"large language model\""
     },
     {
-      "at": "2026-10-14T06:06:55.064Z",
-      "message": "[initial search 3/14] done raw=6 kept=2 rejected=4 in 1.0s"
+      "at": "2026-10-15T05:53:32.270Z",
+      "message": "[initial search 3/14] done raw=6 kept=2 rejected=4 in 1.3s"
     },
     {
-      "at": "2026-10-14T06:06:55.064Z",
+      "at": "2026-10-15T05:53:32.270Z",
       "message": "[initial search 4/14] social-introducing-11: \"Introducing\" LLM VLM multimodal agent reasoning 2026"
     },
     {
-      "at": "2026-10-14T06:06:56.511Z",
-      "message": "[initial search 4/14] done raw=2 kept=1 rejected=1 in 1.4s"
+      "at": "2026-10-15T05:53:33.872Z",
+      "message": "[initial search 4/14] done raw=2 kept=1 rejected=1 in 1.6s"
     },
     {
-      "at": "2026-10-14T06:06:56.511Z",
+      "at": "2026-10-15T05:53:33.872Z",
       "message": "[initial search 5/14] homepage-1: site:github.io \"accepted to\" \"2026\" \"LLM\""
     },
     {
-      "at": "2026-10-14T06:07:02.440Z",
-      "message": "[initial search 5/14] done raw=0 kept=0 rejected=0 in 5.9s"
+      "at": "2026-10-15T05:53:34.905Z",
+      "message": "[initial search 5/14] done raw=0 kept=0 rejected=0 in 1.0s"
     },
     {
-      "at": "2026-10-14T06:07:02.440Z",
+      "at": "2026-10-15T05:53:34.905Z",
       "message": "[initial search 6/14] chinese-1: 论文接收 顶会 大模型 AAAI ACL ICLR 2026"
     },
     {
-      "at": "2026-10-14T06:07:03.612Z",
-      "message": "[initial search 6/14] done raw=6 kept=6 rejected=0 in 1.2s"
+      "at": "2026-10-15T05:53:36.248Z",
+      "message": "[initial search 6/14] done raw=6 kept=6 rejected=0 in 1.3s"
     },
     {
-      "at": "2026-10-14T06:07:03.612Z",
+      "at": "2026-10-15T05:53:36.248Z",
       "message": "[initial search 7/14] broad-1: \"2026\" \"official repo\" \"multimodal\""
     },
     {
-      "at": "2026-10-14T06:07:04.976Z",
-      "message": "[initial search 7/14] done raw=6 kept=5 rejected=1 in 1.4s"
+      "at": "2026-10-15T05:53:37.667Z",
+      "message": "[initial search 7/14] done raw=4 kept=3 rejected=1 in 1.4s"
     },
     {
-      "at": "2026-10-14T06:07:04.976Z",
+      "at": "2026-10-15T05:53:37.667Z",
       "message": "[initial search 8/14] seed-2: \"accepted to\" \"ACL 2026\" \"official code\""
     },
     {
-      "at": "2026-10-14T06:07:06.348Z",
-      "message": "[initial search 8/14] done raw=2 kept=1 rejected=1 in 1.4s"
+      "at": "2026-10-15T05:53:38.871Z",
+      "message": "[initial search 8/14] done raw=2 kept=1 rejected=1 in 1.2s"
     },
     {
-      "at": "2026-10-14T06:07:06.348Z",
+      "at": "2026-10-15T05:53:38.871Z",
       "message": "[initial search 9/14] repository-2: site:github.com \"ACL 2026\" \"accepted\" \"multimodal\""
     },
     {
-      "at": "2026-10-14T06:07:07.673Z",
-      "message": "[initial search 9/14] done raw=5 kept=0 rejected=5 in 1.3s"
+      "at": "2026-10-15T05:53:39.970Z",
+      "message": "[initial search 9/14] done raw=5 kept=0 rejected=5 in 1.1s"
     },
     {
-      "at": "2026-10-14T06:07:07.673Z",
+      "at": "2026-10-15T05:53:39.970Z",
       "message": "[initial search 10/14] paper-index-2: arxiv \"project page\" \"2026\" \"vision language model\""
     },
     {
-      "at": "2026-10-14T06:07:08.890Z",
-      "message": "[initial search 10/14] done raw=6 kept=3 rejected=3 in 1.2s"
+      "at": "2026-10-15T05:53:41.144Z",
+      "message": "[initial search 10/14] done raw=6 kept=2 rejected=4 in 1.2s"
     },
     {
-      "at": "2026-10-14T06:07:08.890Z",
+      "at": "2026-10-15T05:53:41.144Z",
       "message": "[initial search 11/14] social-introducing-21: \"Introducing\" video understanding 3D Gaussian Splatting robotics embodied AI 2026"
     },
     {
-      "at": "2026-10-14T06:07:10.403Z",
-      "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 1.5s"
+      "at": "2026-10-15T05:53:42.840Z",
+      "message": "[initial search 11/14] done raw=0 kept=0 rejected=0 in 1.7s"
     },
     {
-      "at": "2026-10-14T06:07:10.403Z",
+      "at": "2026-10-15T05:53:42.840Z",
       "message": "[initial search 12/14] homepage-2: site:github.io \"paper\" \"multimodal\" \"2026\""
     },
     {
-      "at": "2026-10-14T06:07:11.663Z",
-      "message": "[initial search 12/14] done raw=0 kept=0 rejected=0 in 1.3s"
+      "at": "2026-10-15T05:53:43.914Z",
+      "message": "[initial search 12/14] done raw=0 kept=0 rejected=0 in 1.1s"
     },
     {
-      "at": "2026-10-14T06:07:11.664Z",
+      "at": "2026-10-15T05:53:43.914Z",
       "message": "[initial search 13/14] chinese-2: 新论文 多模态 CVPR ICLR 2026"
     },
     {
-      "at": "2026-10-14T06:07:13.042Z",
-      "message": "[initial search 13/14] done raw=6 kept=6 rejected=0 in 1.4s"
+      "at": "2026-10-15T05:53:45.197Z",
+      "message": "[initial search 13/14] done raw=6 kept=6 rejected=0 in 1.3s"
     },
     {
-      "at": "2026-10-14T06:07:13.042Z",
+      "at": "2026-10-15T05:53:45.197Z",
       "message": "[initial search 14/14] broad-2: \"2026\" \"project page\" \"large language model\""
     },
     {
-      "at": "2026-10-14T06:07:14.335Z",
-      "message": "[initial search 14/14] done raw=6 kept=4 rejected=2 in 1.3s"
+      "at": "2026-10-15T05:53:46.818Z",
+      "message": "[initial search 14/14] done raw=6 kept=4 rejected=2 in 1.6s"
     },
     {
-      "at": "2026-10-14T06:07:14.360Z",
+      "at": "2026-10-15T05:53:46.851Z",
       "message": "Follow-up search started: 4 evidence-derived queries."
     },
     {
-      "at": "2026-10-14T06:07:14.360Z",
-      "message": "[follow-up search 1/4] follow-up-2: site:github.com \"ICLR 2026\" \"paper\""
+      "at": "2026-10-15T05:53:46.851Z",
+      "message": "[follow-up search 1/4] follow-up-2: site:github.com \"EMNLP 2026\" \"llm multimodal agent\""
     },
     {
-      "at": "2026-10-14T06:07:16.270Z",
-      "message": "[follow-up search 1/4] done raw=6 kept=1 rejected=5 in 1.9s"
+      "at": "2026-10-15T05:53:48.088Z",
+      "message": "[follow-up search 1/4] done raw=6 kept=2 rejected=4 in 1.2s"
     },
     {
-      "at": "2026-10-14T06:07:16.270Z",
-      "message": "[follow-up search 2/4] follow-up-21: site:x.com \"启动装配：LLM client、ToolService、memory、skill store │ └── stage_context.py\""
+      "at": "2026-10-15T05:53:48.088Z",
+      "message": "[follow-up search 2/4] follow-up-11: site:x.com \"01 成果一 《Multimodal Fusion via Self-Consistent Task-Gradient Fields》-- ICML 2026 该篇论文由2023级研究生熊佳芋（第一作者）发表在CCFA类推荐、机器学习领域国际顶级会议 ICML 2026。 简介：多模态学习的难点在于既要在不同输入间保留任务相关信息，又不能因融合而损害特征提取。现有的激进融合会使模态表征相互纠缠，对缺失输入变得脆弱；而用辅助损失强行分离特\""
     },
     {
-      "at": "2026-10-14T06:07:17.909Z",
-      "message": "[follow-up search 2/4] done raw=1 kept=1 rejected=0 in 1.6s"
+      "at": "2026-10-15T05:53:49.606Z",
+      "message": "[follow-up search 2/4] done raw=0 kept=0 rejected=0 in 1.5s"
     },
     {
-      "at": "2026-10-14T06:07:17.909Z",
-      "message": "[follow-up search 3/4] follow-up-1: \"ICLR 2026\" \"paper\" \"official code\""
+      "at": "2026-10-15T05:53:49.606Z",
+      "message": "[follow-up search 3/4] follow-up-1: \"EMNLP 2026\" \"llm multimodal agent\" \"official code\""
     },
     {
-      "at": "2026-10-14T06:07:19.110Z",
-      "message": "[follow-up search 3/4] done raw=6 kept=6 rejected=0 in 1.2s"
+      "at": "2026-10-15T05:53:51.384Z",
+      "message": "[follow-up search 3/4] done raw=6 kept=1 rejected=5 in 1.8s"
     },
     {
-      "at": "2026-10-14T06:07:19.110Z",
-      "message": "[follow-up search 4/4] follow-up-4: site:github.com \"EMNLP 2026\" \"llm multimodal agent\""
+      "at": "2026-10-15T05:53:51.384Z",
+      "message": "[follow-up search 4/4] follow-up-4: site:github.com \"ICML 2026\" \"llm agent rag\""
     },
     {
-      "at": "2026-10-14T06:07:20.409Z",
-      "message": "[follow-up search 4/4] done raw=6 kept=2 rejected=4 in 1.3s"
+      "at": "2026-10-15T05:53:52.464Z",
+      "message": "[follow-up search 4/4] done raw=6 kept=1 rejected=5 in 1.1s"
     },
     {
-      "at": "2026-10-14T06:07:20.421Z",
+      "at": "2026-10-15T05:53:52.474Z",
       "message": "Reader stage started: 14 candidate links."
     },
     {
-      "at": "2026-10-14T06:07:20.421Z",
-      "message": "[reader 1/14] skip 整理好了！CCF-A、CCF-B人工智能学术会议清单！"
+      "at": "2026-10-15T05:53:52.474Z",
+      "message": "[reader 1/14] read Artificial Intelligence"
     },
     {
-      "at": "2026-10-14T06:07:20.421Z",
-      "message": "[reader 1/14] done in 0ms"
+      "at": "2026-10-15T05:54:19.433Z",
+      "message": "[reader 1/14] done in 27.0s error=request timed out after 20000ms"
     },
     {
-      "at": "2026-10-14T06:07:20.421Z",
+      "at": "2026-10-15T05:54:19.434Z",
       "message": "[reader 2/14] read Computation and Language"
     },
     {
-      "at": "2026-10-14T06:07:21.199Z",
-      "message": "[reader 2/14] done in 778ms"
+      "at": "2026-10-15T05:54:20.624Z",
+      "message": "[reader 2/14] done in 1.2s"
     },
     {
-      "at": "2026-10-14T06:07:21.199Z",
+      "at": "2026-10-15T05:54:20.624Z",
       "message": "[reader 3/14] skip 彻底，被豆包工作Agent惊艳到了"
     },
     {
-      "at": "2026-10-14T06:07:21.199Z",
+      "at": "2026-10-15T05:54:20.624Z",
       "message": "[reader 3/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:21.199Z",
-      "message": "[reader 4/14] skip NeurIPS放榜、AAAI首轮出分！转投还有29+16+8场CCF，A类12场可冲！"
+      "at": "2026-10-15T05:54:20.624Z",
+      "message": "[reader 4/14] skip 【CVPR 2026】WorldMM：长视频推理的动态多模态记忆智能体"
     },
     {
-      "at": "2026-10-14T06:07:21.199Z",
+      "at": "2026-10-15T05:54:20.624Z",
       "message": "[reader 4/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:21.199Z",
-      "message": "[reader 5/14] read Updated 2026-10-07 · GitHub"
+      "at": "2026-10-15T05:54:20.624Z",
+      "message": "[reader 5/14] skip 2026年AI学术平台TOP5评测与使用策略"
     },
     {
-      "at": "2026-10-14T06:07:38.174Z",
-      "message": "[reader 5/14] done in 17.0s"
+      "at": "2026-10-15T05:54:20.624Z",
+      "message": "[reader 5/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:38.174Z",
-      "message": "[reader 6/14] skip CV计算机视觉每日开源代码Paper with code速览-2026.10.8"
+      "at": "2026-10-15T05:54:20.624Z",
+      "message": "[reader 6/14] read Updated 2026-10-07 · GitHub"
     },
     {
-      "at": "2026-10-14T06:07:38.174Z",
-      "message": "[reader 6/14] done in 0ms"
+      "at": "2026-10-15T05:54:36.555Z",
+      "message": "[reader 6/14] done in 15.9s"
     },
     {
-      "at": "2026-10-14T06:07:38.174Z",
+      "at": "2026-10-15T05:54:36.555Z",
       "message": "[reader 7/14] skip 顶会录用！中山大学本科生一作论文被ICML 2026接收"
     },
     {
-      "at": "2026-10-14T06:07:38.174Z",
+      "at": "2026-10-15T05:54:36.555Z",
       "message": "[reader 7/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:38.174Z",
+      "at": "2026-10-15T05:54:36.555Z",
       "message": "[reader 8/14] read ant: Mitigating Visual Laziness via Counterfactual Visual Alignment in MLLMs"
     },
     {
-      "at": "2026-10-14T06:07:40.063Z",
-      "message": "[reader 8/14] done in 1.9s"
+      "at": "2026-10-15T05:54:38.239Z",
+      "message": "[reader 8/14] done in 1.7s"
     },
     {
-      "at": "2026-10-14T06:07:40.064Z",
-      "message": "[reader 9/14] skip 快2027年了，这些思路还可以发论文？"
+      "at": "2026-10-15T05:54:38.239Z",
+      "message": "[reader 9/14] read Computer Vision and Pattern Recognition"
     },
     {
-      "at": "2026-10-14T06:07:40.064Z",
-      "message": "[reader 9/14] done in 0ms"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 9/14] done in 660ms"
     },
     {
-      "at": "2026-10-14T06:07:40.064Z",
-      "message": "[reader 10/14] read Computer Vision and Pattern Recognition"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 10/14] skip 2026年计算机科学与技术学院研究生优秀科研成果展（一）"
     },
     {
-      "at": "2026-10-14T06:07:41.250Z",
-      "message": "[reader 10/14] done in 1.2s"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 10/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:41.250Z",
-      "message": "[reader 11/14] skip 【ICLR 2026】M3-Agent 论文解读：把长期记忆做成实体中心多模态图"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 11/14] skip ACL两篇Skill，杀疯了"
     },
     {
-      "at": "2026-10-14T06:07:41.250Z",
+      "at": "2026-10-15T05:54:38.899Z",
       "message": "[reader 11/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:41.250Z",
-      "message": "[reader 12/14] read GitHub - google-research/rrsi"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 12/14] skip ECCV 2026上的多模态融合工作"
     },
     {
-      "at": "2026-10-14T06:07:42.298Z",
-      "message": "[reader 12/14] done in 1.0s"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 12/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:42.299Z",
-      "message": "[reader 13/14] skip 【ICLR 2026】🥇MemGen：为自进化智能体编织生成式潜在记忆"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 13/14] skip 【CVPR 2026】🥇WorldMM：长视频推理的动态多模态记忆智能体"
     },
     {
-      "at": "2026-10-14T06:07:42.299Z",
+      "at": "2026-10-15T05:54:38.899Z",
       "message": "[reader 13/14] done in 0ms"
     },
     {
-      "at": "2026-10-14T06:07:42.299Z",
-      "message": "[reader 14/14] skip 【ICLR 2026】🥇MemGAS：从单粒度到多粒度，会话智能体的长期记忆关联与选择"
+      "at": "2026-10-15T05:54:38.899Z",
+      "message": "[reader 14/14] read 的开源教程，旨在帮助开发者理解和掌握在大模型时代，如何为复杂、长时间运行的 AI 智能体（Agent）构建健壮的底层运行架构。"
     },
     {
-      "at": "2026-10-14T06:07:42.299Z",
-      "message": "[reader 14/14] done in 0ms"
+      "at": "2026-10-15T05:54:48.997Z",
+      "message": "[reader 14/14] done in 10.1s"
     },
     {
-      "at": "2026-10-14T06:07:42.301Z",
+      "at": "2026-10-15T05:54:49.001Z",
       "message": "Evidence-backed fallback staged 0 provisional candidates while Zhipu refinement catches up."
     },
     {
-      "at": "2026-10-14T06:07:42.301Z",
+      "at": "2026-10-15T05:54:49.001Z",
       "message": "Zhipu chat refinement upgrades provisional candidates into cleaned metadata when capacity is available."
     },
     {
-      "at": "2026-10-14T06:07:42.301Z",
+      "at": "2026-10-15T05:54:49.001Z",
       "message": "Zhipu refinement stage started: 0/0 candidate batches."
     }
   ],
@@ -355,117 +355,11 @@
       "intent": "",
       "parentUrl": "",
       "requestedCount": 6,
-      "rawResultCount": 6,
-      "resultCount": 5,
+      "rawResultCount": 1,
+      "resultCount": 0,
       "rejectedCount": 1,
-      "startedAt": "2026-10-14T06:06:50.848Z",
-      "results": [
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://bkso.baidu.com/item/%E7%BE%8E%E5%9B%BD%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8D%8F%E4%BC%9A%E5%B9%B4%E4%BC%9A/67189359?fromtitle=AAAI&fromid=13827607",
-          "title": "美国人工智能协会年会",
-          "snippet": "同义词\nAAAI（人工智能国际性会议）一般指美国人工智能协会年会\nAAAI\nConference on Artificial Intelligence），是由国际先进人工智能协会（Association for the Advancement of Artificial Intelligence， AAAI）主办的人工智能领域的国际学术会议。\n该会议自1979年创办，每年举办一届。截至2026年1月，已举办至第四十届。第四十届会议（AAAI 2026）于2026年1月20日至27日在新加坡博览中心举行，共收到23,680篇有效投稿，录用论文4,167篇，接收率为17.6%，并评选出5篇杰出论文奖。\nAAAI Conference on Artificial Intelligence、Annual AAAI Conference on Artificial Intelligence\n目录\n活动宗旨\n美国人工智能协会年会宗旨是促进人工智能领域的创新研究，以及研究人员、从业者、科学家、学生、工程师之间的学术交流。\n会议特点\nAAAI\n自1979年创办以来，每年举办一届。其接收论文范围涵盖了人工智能领域的多个方向，包括机器学习、知识表示与推理、自然语言处理、计算机视觉、智能体与多智能体系统等。AAAI是人工智能领域历史最悠久、涵盖内容最广泛的国际顶级学术会议之一，被\n中国计算机学会\n（CCF）和\n中国人工智能学会\n（CAAI）评为A类会议，已成为全球AI学者、企业与科研机构展示创新成果、进行学术交流的核心平台。以AAAI 2026为例，会议共收到23680篇有效投稿，最终4167篇论文",
-          "publishDate": "2026-09-17",
-          "relevanceScore": 16,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:论文",
-            "announcement:录用",
-            "topic:智能体",
-            "venue:aaai"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "http://mp.weixin.qq.com/s?__biz=MzU1MjY4MTA1MQ==&mid=2247751656&idx=1&sn=02ea065aeea2f4162c186bcdc3803198",
-          "title": "NeurIPS放榜、AAAI首轮出分！转投还有29+16+8场CCF，A类12场可冲！",
-          "snippet": "NeurIPS 2026 的录用名单已经确定，AAAI 2027 首轮评审结果也在近日放出。国庆之际，两条通知就一前一后抵达。假如这两处都没有传来佳音，下一站该改投哪场会议，得尽快拿定主意。 2026年10-12月CCF会议截稿时间一览：29168场，冲刺倒计时！ 2026年最后一个季度，CCF推荐会议投稿的黄金窗口期！A类会议扎堆，B/C类选择丰富，你的论文准备好了吗？ 2026年10月：29场会议密集截稿，A类打头阵 10月是全年截稿最密集的月份之一，共有29场CCF推荐会议截止投稿，从A类到C类覆盖了计算机领域的各个方向。最引人注目的是10月1日国庆当天，VLDB 2027（数据库领域A类）与Eurographics 2027（计算机图形学B类）同时截稿。 紧接着10月2日又是一个小高峰，FSE 2027（软件工程A类）、DCC 2027（数据压缩B类）、ECIR 2027（信息检索C类）和ICC 2027（通信与网络C类）四场会议同日截止。 值得重点关注的时间节点： 10月12日 ：自然语言处理方向三场会议同日截稿—— COLING 2027 、 NAACL 2027 （均为B类，ARR机制）以及 ALT 2027 （学习理论C类）。 10月14日 ： OOPSLA 2027 （程序语言A类，第1轮）截稿，这是编程语言领域顶会。 10月17日 ： SIGMOD 2027 （数据管理A类，第4轮）截稿，数据库领域旗舰会议。 10月25日 ： WWW 2027 （Web、搜索与推荐A类）截稿。 10月31日 ： CSCWD 2027 （协同设计C类）为本月收官。 2026年",
-          "publishDate": "2026-09-29",
-          "relevanceScore": 25,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:录用",
-            "topic:3dgs",
-            "topic:具身",
-            "venue:aaai",
-            "venue:acl",
-            "venue:cvpr",
-            "venue:neurips",
-            "venue:www",
-            "venue:顶会"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-          "title": "整理好了！CCF-A、CCF-B人工智能学术会议清单！",
-          "snippet": "同学们应该都知道 今年 3 月，CCF正式发布了第七版会议和期刊目录\n对于 AI 方向的同学来说，本次调整中最受关注的变化莫过于两个：ICLR 首次被收录即空降 A 类会议，IJCAI\n今天，深度之眼帮同学们梳理了 CCF 第七版目录中人工智能领域的 A 类和 B 类会议，帮你投稿选会不再纠结（注意，只是人工智能领域哈）。\n人工智能 CCF-A 类7个顶尖会议人工智能 CCF-B 类14个重要会议\n01\n人工智能 CCF-A 类学术会议\nCCF-A 类代表国际顶尖水平，录用率极低，也是咱们同学的最高目标。第七版目录中，A 类会议共 7 个：AAAI\n01AAAI\nAAAI Conference on Artificial Intelligence · AAAI 人工智能会议\n，CCF-A，AAAI 出版，人工智能领域历史最悠久的综合性顶级会议之一，覆盖机器学习、自然语言处理\n、计算机视觉、知识表示等广泛方向，2026 年投稿量达 23680 篇，录用率仅 17.6%。\n02NeurIPS\n人工智能与机器学习领域规模最大、影响力最强的顶级会议之一，涵盖深度学习、计算神经科学\n、统计学习等方向，与 ICML、ICLR 并称机器学习三大顶会。此次目录公示期间恰逢 NeurIPS 相关事件，最终 NeurIPS 仍保持在 A 类会议中。\n03ICML\n国际机器学习大会，CCF-A，机器学习领域历史最悠久、影响最广的顶级会议，谷歌学术\n04ICLR\n国际学习表征会议，CCF-A，深度学习与表征学习领域的顶级会议，2026 年首次被 CCF 收录即空降 A 类，与 NeurIPS、ICML",
-          "publishDate": "2026-09-30",
-          "relevanceScore": 33,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:录用",
-            "topic:智能体",
-            "topic:具身",
-            "venue:aaai",
-            "venue:acl",
-            "venue:emnlp",
-            "venue:cvpr",
-            "venue:iccv",
-            "venue:iclr"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://blog.gitcode.com/21fc40dd9826f61bee9d35065d25dcee.html",
-          "title": "OOTDiffusion 官方仓库实战指南：Outfitting Fusion 可控虚拟试穿模型的安装、推理与源码解析",
-          "snippet": "OOTDiffusion 官方仓库实战指南：Outfitting Fusion 可控虚拟试穿模型的安装、推理与源码解析\n2026-09-16 17:04:52作者：史锋燃Gardner\n[AAAI 2025] Official implementation of \"OOTDiffusion: Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on\"\nhttps://gitcode.com/GitHubTrending/oo/OOTDiffusion\nOOTDiffusion（Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on，AAAI 2025）是基于隐空间扩散模型的虚拟试穿（Virtual Try-on）开源实现，本指南以仓库 README.md 为核心，结合源码带你完成环境搭建、权重下载、半身/全身模型的命令行推理与 Gradio Web 演示，并深入解析其\"双 UNet CLIP 融合\"的底层推理链路。读完本文，你将能够独立跑通 VITON-HD 与 Dress Code 两套模型的完整试穿流程，并理解掩码生成、姿态引导、图像引导尺度等关键参数的实际作用。\n一、项目定位与核心思想\nOOTDiffusion 由 Xiao-i Research 团队（Yuhao Xu、Tao Gu、Weifeng Chen、Chengcai Chen）于 2024 年提出，论文见 arXiv 2403.0177",
-          "publishDate": "2026-09-16",
-          "relevanceScore": 16,
-          "relevanceSignals": [
-            "paper:preprint",
-            "paper:arxiv",
-            "paper:论文",
-            "announcement:official implementation",
-            "announcement:开源",
-            "venue:aaai"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "seed",
-          "url": "https://blog.csdn.net/weixin_29091445/article/details/166217462",
-          "title": "一个API Key打通所有大模型：2026年AI编程工具统一网关实战指南",
-          "snippet": "2026年做AI编程，最烦人的其实不是模型不够强，而是Key太多。ChatGPT一个Key，Claude一个Key，DeepSeek一个Key，通义一个Key，本地Ollama不用Key但要改配置。我手上有三个项目同时跑，光是把不同Key填进不同的AI编程工具就浪费了一个下午，还时不时看到\n401 unauthorized\n和\nllm-deepseek: no api key for provider route \"deepseek-official\"\n这种奇怪报错。后来我把整个工作流改成\"一个API Key打通所有主流大模型\"，痛苦瞬间消失。这篇东西就是我在2026年落地这套方案的完整记录，包含了原理、部署步骤、AI编程工具接入方法、以及踩坑排查的全过程，适合那些被Key管理搞到崩溃、想在同一个工具里随意切换大模型的开发者参考。\n1. 为什么\"一个Key管所有模型\"成了2026年AI编程工具的刚需\n1.1 Key太多导致的连锁问题，比模型能力不达标更头疼\n很多人一开始跟我一样，觉得用AI编程嘛，哪个模型强就开哪个会员、拿哪个Key，本地部署一个开源模型也凑合。但真正把AI编程工具用起来之后，问题根本不是模型选哪个，而是Key和配置项多到管不过来。\nCursor要配一个Key，Continue插件要配一个Key，Cline/Roo Code也要配，团队里每个人的环境变量还都不一样。更麻烦的是，同一套代码仓库，今天用DeepSeek做代码补全，明天想换成通义千问看看效果，就得去改Base URL、换API Key、重启插件。项目一多，我根本记不清哪个Key对应哪个平台，哪个平台还",
-          "publishDate": "2026-09-20",
-          "relevanceScore": 9,
-          "relevanceSignals": [
-            "announcement:开源",
-            "topic:llm",
-            "topic:agent",
-            "topic:大模型"
-          ],
-          "queryLabel": "seed-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        }
-      ],
+      "startedAt": "2026-10-15T05:53:28.113Z",
+      "results": [],
       "rejected": [
         {
           "platform": "web",
@@ -497,7 +391,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1745
+      "durationMs": 1718
     },
     {
       "label": "repository-1",
@@ -515,7 +409,7 @@
       "rawResultCount": 6,
       "resultCount": 1,
       "rejectedCount": 5,
-      "startedAt": "2026-10-14T06:06:52.593Z",
+      "startedAt": "2026-10-15T05:53:29.831Z",
       "results": [
         {
           "platform": "web",
@@ -634,7 +528,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1466
+      "durationMs": 1133
     },
     {
       "label": "paper-index-1",
@@ -652,7 +546,7 @@
       "rawResultCount": 6,
       "resultCount": 2,
       "rejectedCount": 4,
-      "startedAt": "2026-10-14T06:06:54.059Z",
+      "startedAt": "2026-10-15T05:53:30.964Z",
       "results": [
         {
           "platform": "arxiv",
@@ -806,7 +700,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1005
+      "durationMs": 1306
     },
     {
       "label": "social-introducing-11",
@@ -824,7 +718,7 @@
       "rawResultCount": 2,
       "resultCount": 1,
       "rejectedCount": 1,
-      "startedAt": "2026-10-14T06:06:55.064Z",
+      "startedAt": "2026-10-15T05:53:32.270Z",
       "results": [
         {
           "platform": "x",
@@ -875,7 +769,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1447
+      "durationMs": 1602
     },
     {
       "label": "homepage-1",
@@ -893,7 +787,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:06:56.511Z",
+      "startedAt": "2026-10-15T05:53:33.872Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -903,7 +797,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 5929
+      "durationMs": 1033
     },
     {
       "label": "chinese-1",
@@ -921,7 +815,7 @@
       "rawResultCount": 6,
       "resultCount": 6,
       "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:07:02.440Z",
+      "startedAt": "2026-10-15T05:53:34.905Z",
       "results": [
         {
           "platform": "web",
@@ -948,41 +842,17 @@
         {
           "platform": "web",
           "stage": "chinese",
-          "url": "http://mp.weixin.qq.com/s?__biz=MzI1ODM0MTA0OA==&mid=2247497716&idx=1&sn=ad6caf9551e9f804c04d8cbabeb6652f",
-          "title": "快2027年了，这些思路还可以发论文？",
-          "snippet": "做大模型研究，如果自己课题里的方法改来改去没什么进展，不妨看看相近方向甚至交叉领域的工作。不过大模型相关论文实在太多，想系统了解几个方向，光搜集、筛选文献就要花不少时间。 所以我这次重新整理了一份505篇大模型论文合集，包含264篇前沿论文和241篇顶会论文，分开归类，既能用来了解不同方向的研究进展，也方便在选题、文献调研时寻找可参考的研究案例。 如果你正在做大模型相关课题，可以先领取一份，后续按自己的研究方向查阅。文末免费获取！ 一、264篇大模型前沿论文 这部分共264篇，按照6大研究方向、10研究热点进行整理。 创新路径 细分热点 多模态融合与行业大模型 多模态大模型、医学大模型、医学多模态大模型 大模型知识增强与检索增强 大模型RAG、大模型知识图谱 时间序列基础模型与预测大模型 大模型时序、时间序列预训练大模型 大模型后训练与智能体决策 大模型对齐、强化学习大模型 大模型可信增强与因果推理 大模型可解释性、因果推断大模型、大模型因果发现 大模型驱动科学计算与优化 大模型 PINN、大模型运筹优化 价值在于能帮你找到不同的研究参照。比如做RAG，可以顺着知识图谱方向继续调研；做大模型应用，可以看看医学、时序等垂直领域的研究路线。 如果暂时不知道创新点从哪里入手，可以先围绕自己的课题找几篇相关工作，再对照相邻方向的研究问题和技术路线。 二、241篇大模型顶会论文 这部分筛选自2026年CVPR、ECCV、AAAI、ICLR、ICML、NeurIPS、ACL、SIGKDD这8大主流顶会。 如果前一部分是帮助你了解不同方向，那么这一部分更适合用来集中查看顶会中有哪些相关工作、",
-          "publishDate": "2026-10-14",
-          "relevanceScore": 27,
+          "url": "http://mp.weixin.qq.com/s?__biz=MzAwOTY5MzMzNA==&mid=2651455965&idx=1&sn=18dbd26af45f8a27856e285aab36903b",
+          "title": "易鑫与北大三篇合作论文入选国际顶会EMNLP 2026",
+          "snippet": "近期，易鑫（02858.HK）与北京大学合作的三篇学术论文，获国际自然语言处理领域顶级会议EMNLP 2026录用，其中两篇入选主会（Main Conference），一篇入选会议子刊（Findings）。三篇论文均聚焦大模型可靠推理与机理理解前沿方向，是易鑫在大模型基础研究领域取得的重要进展。 易鑫与北大三篇合作论文从17669篇投稿中脱颖而出 易鑫携手北大，揽获国际顶会背书 Part.1 EMNLP是自然语言处理与人工智能领域最具影响力的国际会议之一，与ACL、NAACL并称为自然语言处理领域三大顶级学术会议”。随着AI领域研究的爆发式增长，EMNLP 2026的竞争愈加激烈。本届大会共收到全球投稿17,669篇，创下历史新高。在双盲评审与两阶段遴选机制的严格把关下，主会录用率从上届的22.2%收紧至约15.4%，Findings录用率仅约14.3%。易鑫与北大合作的三篇论文能脱颖而出，其研究质量与创新分量可见一斑。 此次与易鑫合作的北大计算机学院是国内计算机学科的顶尖机构，在人工智能、自然语言处理、大模型等前沿方向长期处于国内领先地位。双方的合作，成功实现了顶尖学术研究能力与金融科技产业场景的深度融合。三篇合作论文的入选，不仅是对现阶段产学研成果的最好印证，也为后续在大模型可信应用等方向的深入合作打下基础。 聚焦可信度”难题，产学研合作深化 Part.2 大模型在金融业务落地中最大的挑战在于可信度”与合规性”。三篇合作论文分别从证据恢复、推理机制、行为控制三个维度，共同回应了可信度”难题：其一厘清大模型答错” 的本质，为区分推理能力缺失”与表达失败” 提供了统一诊断协议，",
+          "publishDate": "2026-09-22",
+          "relevanceScore": 15,
           "relevanceSignals": [
             "paper:论文",
-            "topic:rag",
+            "announcement:录用",
             "topic:大模型",
-            "topic:多模态",
-            "topic:智能体",
-            "venue:aaai",
             "venue:acl",
-            "venue:cvpr",
-            "venue:iclr",
-            "venue:icml"
-          ],
-          "queryLabel": "chinese-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "chinese",
-          "url": "http://mp.weixin.qq.com/s?__biz=MjM5NzAzODg3MA==&mid=2651375012&idx=1&sn=66ec9c8ba08ad6c8690a7a2ca25790c2",
-          "title": "跨域聚力，研竞逐新",
-          "snippet": "腾小飞们，金秋十月 新的学期渐入佳境 课堂之外 你是否也对科研心生好奇？ 想尝试科研 却不知道第一步从哪里迈出？ 读过不少论文 仍好奇研究想法如何变成成果？ 听说过复芏项目 想知道学长学姐怎样一路走来？ 带着这些问题，来和学长学姐聊聊吧 本次科研经验交流论坛由腾飞书院自管会主办 联合计算与智能创新学院分团委学生会 智能机器人与先进制造创新学院分团委学生会 共同开展 我们的论坛预计举办两期 分别聚焦科研与竞赛两个领域 本期聚焦科研经验分享 邀请嘉宾从亲身经历出发，聊聊他们的经验 从好奇出发 向科研靠近 从科研入门到顶会论文 本期分享将带你了解不同方向的科研经历 现场还设有互动问答 欢迎把困惑带来，与嘉宾面对面交流 无论你正在寻找起点，还是已经开始尝试 都欢迎来听听他们的故事，寻找自己的方向 听听他们的科研故事 陶超然 计算与智能创新学院系统软件与安全实验室2026级硕士生，研究方向为软件安全，目前聚焦于利用静态分析技术结合大模型检测软件中的漏洞。以第一作者在网安顶会 ACM CCS 2026 发表论文一篇，并获得 20 漏洞 CVE 编号。 柳德闻 智能科学与技术专业2023级本科生，连续两年获国家奖学金，主持一项国自然本科生项目。参与曦源项目并获优秀结题，主持腾飞科创项目并以第一发明人获国家发明专利授权。曾获数模美赛 O 奖（特等奖）、数模国赛二等奖。以第一作者共同第一作者投稿三篇计算机类顶级会议论文，一篇论文被 ICML 2026 接收。 张子程 计算与智能创新学院人工智能专业2023级本科生。获2024、2025年国家奖学金，获全国商汤奖学金。以第一作者身份在CCF-A类会",
-          "publishDate": "2026-09-30",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "paper:论文",
-            "topic:大模型",
-            "venue:cvpr",
-            "venue:iclr",
-            "venue:icml",
+            "venue:emnlp",
             "venue:顶会"
           ],
           "queryLabel": "chinese-1",
@@ -1013,25 +883,6 @@
         {
           "platform": "web",
           "stage": "chinese",
-          "url": "https://zhuanlan.zhihu.com/p/2088422456872658831",
-          "title": "NeurIPS 2026 收录论文集汇总",
-          "snippet": "Annual Conference on Neural Information Processing Systems (NeurIPS) 2026 主会共收到 30,709 篇有效投稿，接收 7,900 篇，接收率25.7%，其中Oral 112篇，Spotlight\n292篇。相比于NeurIPS 2025主会接收5290篇，2026年接受论文增长约50%。\nNeurIPS2026收录论文集\n汇总：https://hongsong-wang.github.io/NeurIPS2026/\n所有论文汇总到一个网页上，方便基于作者和研究方向关键词检索，每篇论文给出对应的arXiv链接及官网链接，作者，摘要和GitHub代码链接，作者也超链接到OpenReview\n上的主页，为人工智能方向的科研及从业人员论文检索便利（由于官方的发表论文\n集还没有公布，全文还看不到。我给出部分论文的arXiv链接）。\n网页截图如下：\n搜索Kaiming He\n历年顶会论文门户网址 (视觉-语言-学习-机器人论文门户)：https://hongsong-wang.github.io/CVPaperPortal/\n若该网页CVPaperPortal对您有所帮助，请在https://github.com/hongsong-wang/CVPaperPortal页面右上角点个Star",
-          "publishDate": "2026-09-30",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "paper:论文",
-            "venue:neurips",
-            "venue:顶会"
-          ],
-          "queryLabel": "chinese-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "chinese",
           "url": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119",
           "title": "彻底，被豆包工作Agent惊艳到了",
           "snippet": "大家好，我是PaperAgent，不是Agent！ 今年AI顶会差不多开完了：ICLR、AAAI、ACL、CVPR、ICML（12月份NeurIPS），接收的Paper也都放榜。每次面对几千篇论文，整理Excel与PPT，做研究热点趋势分析&挖掘都让人头大。 AAAI/ICLR/ICML-2026论文清单 以往用AI处理，得先把这些文件上传到云端，AI改完再下载回来，工作流断成几截，一个下午就耗进去了。 直到最近，豆包工作悄悄上线了办公Agent新特性，彻底惊艳到我了：支持本地Office文件编辑。也就是说Excel&PPT的对话、文件浏览、编辑在一个工作流完成，不被打断，想想就很Nice。 我赶紧拿手头的ICML 2026论文验证了一番——Excel分析、PPT美化全给办了，而且办得相当漂亮。 Excel专业技术图表：ICML 2026 论文以 LLM 为绝对主导，扩散生成与 RL/PPO 强势回归，研究重心已从架构创新转向效率、推理与 Agent 应用 PPT智能体研究洞察：多智能体与安全对齐为红海（各占20%）；Agent学习与自进化（RSI）有前瞻性，供给稀缺 用下来的真实感受：本地Office文件分析&编辑这事儿，你可以放心交给豆包工作。 6500行的Excel，它真没让我碰公式 搞科研的都知道，整理数据不费脑子，但极度消耗头发。 我先在豆包工作的侧栏工作台选中了之前整理的ICML 2026的论文汇总表。 里面列了论文标题、作者，还有一列 primaryareaen（研究方向，比如Deep Learning）。 表行间距略大，一眼看过去有点丑，拿间距调整，背景色修改试",
@@ -1052,6 +903,48 @@
           "queryLabel": "chinese-1",
           "queryIntent": "",
           "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "chinese",
+          "url": "https://blog.csdn.net/weixin_29046035/article/details/166329323",
+          "title": "2026年AI学术平台TOP5评测与使用策略",
+          "snippet": "1. 项目背景与价值解析\n在人工智能技术日新月异的今天，学术资源的获取效率直接决定了研究者的成长速度。2026年这个时间节点尤为特殊——大模型技术进入平台期，多模态研究迎来爆发，边缘AI应用开始落地。传统学术平台的信息筛选机制已经难以满足研究者对前沿动态的即时需求。\n过去三年间，我亲身体验了47个国内外AI学术平台，发现真正能带来实质性帮助的不足10%。这个榜单的筛选标准不仅考量收录论文的质量，更注重以下三个维度：\n前沿性（是否第一时间收录顶会预印本）\n交互性（能否快速定位关联研究）\n工程价值（论文是否附带可复现代码）\n2. 核心评测维度详解\n2.1 收录时延与覆盖范围\n顶级会议的审稿周期平均为4.6个月，而重要突破往往在arXiv预印阶段就已引发讨论。优质平台需要满足：\n预印本收录延迟<24小时\n覆盖NeurIPS/ICML/CVPR等全部顶会\n包含至少3个细分领域（如LLM、AIGC、Robotics）\n实测发现，部分平台对ICLR收录存在3天以上的延迟，这对需要快速跟进SOTA方法的研究者极为不利。\n2.2 检索系统的智能程度\n传统关键词搜索在跨模态研究中效率低下。2026年领先平台普遍具备：\n论文图谱自动构建（引用关系可视化）\n数学公式语义搜索（支持LaTeX片段查询）\n方法对比矩阵生成（自动提取实验数据）\n例如搜索\"3D Gaussian Splatting\"时，优秀平台能直接显示不同变体的PSNR/SSIM对比，而非简单罗列相关论文。\n2.3 配套资源完整度\n可复现性已成为评价论文的重要指标。我们重点考察：\n代码仓库自动关联率\n数据集获取便捷度\n云实验环境集成\n某平",
+          "publishDate": "2026-09-21",
+          "relevanceScore": 30,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "paper:论文",
+            "paper:预印本",
+            "topic:llm",
+            "topic:robotics",
+            "topic:3d gaussian",
+            "topic:gaussian splatting",
+            "topic:大模型",
+            "topic:多模态",
+            "venue:cvpr"
+          ],
+          "queryLabel": "chinese-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "chinese",
+          "url": "https://bkso.baidu.com/item/%E7%BE%8E%E5%9B%BD%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8D%8F%E4%BC%9A%E5%B9%B4%E4%BC%9A/67189359?fromtitle=AAAI&fromid=13827607",
+          "title": "美国人工智能协会年会",
+          "snippet": "同义词\nAAAI（人工智能国际性会议）一般指美国人工智能协会年会\nAAAI\nConference on Artificial Intelligence），是由国际先进人工智能协会（Association for the Advancement of Artificial Intelligence， AAAI）主办的人工智能领域的国际学术会议。\n该会议自1979年创办，每年举办一届。截至2026年1月，已举办至第四十届。第四十届会议（AAAI 2026）于2026年1月20日至27日在新加坡博览中心举行，共收到23,680篇有效投稿，录用论文4,167篇，接收率为17.6%，并评选出5篇杰出论文奖。\nAAAI Conference on Artificial Intelligence、Annual AAAI Conference on Artificial Intelligence\n目录\n活动宗旨\n美国人工智能协会年会宗旨是促进人工智能领域的创新研究，以及研究人员、从业者、科学家、学生、工程师之间的学术交流。\n会议特点\nAAAI\n自1979年创办以来，每年举办一届。其接收论文范围涵盖了人工智能领域的多个方向，包括机器学习、知识表示与推理、自然语言处理、计算机视觉、智能体与多智能体系统等。AAAI是人工智能领域历史最悠久、涵盖内容最广泛的国际顶级学术会议之一，被\n中国计算机学会\n（CCF）和\n中国人工智能学会\n（CAAI）评为A类会议，已成为全球AI学者、企业与科研机构展示创新成果、进行学术交流的核心平台。以AAAI 2026为例，会议共收到23680篇有效投稿，最终4167篇论文",
+          "publishDate": "2026-09-17",
+          "relevanceScore": 11,
+          "relevanceSignals": [
+            "paper:论文",
+            "announcement:录用",
+            "topic:智能体",
+            "venue:aaai"
+          ],
+          "queryLabel": "chinese-1",
+          "queryIntent": "",
+          "parentUrl": ""
         }
       ],
       "rejected": [],
@@ -1062,7 +955,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1172
+      "durationMs": 1343
     },
     {
       "label": "broad-1",
@@ -1077,92 +970,18 @@
       "intent": "",
       "parentUrl": "",
       "requestedCount": 6,
-      "rawResultCount": 6,
-      "resultCount": 5,
+      "rawResultCount": 4,
+      "resultCount": 3,
       "rejectedCount": 1,
-      "startedAt": "2026-10-14T06:07:03.612Z",
+      "startedAt": "2026-10-15T05:53:36.248Z",
       "results": [
         {
           "platform": "web",
           "stage": "broad",
-          "url": "https://blog.sciencenet.cn/blog-3652364-1553989.html",
-          "title": "科学网—[转载]2026年多模态、机器学习与数据科学国际学术会议 (MMLDS 2026)",
-          "snippet": "2026 International Conference on Multimodality, Machine Learning and Data Science (MMLDS 2026)\n【会议日期】2026年10月30日至11月1日\n【会议地点】中国 郑州\n【收录检索】ACM 出版，EI Compendex, Scopus收录检索\n【接收/拒稿通知】投稿后1周内\n请点击【论文投稿/报名参会】\n大会简介\n在信息技术以指数级速度演进的时代，数据已成为驱动社会进步与科学突破的新石油”。然而，单一模态的数据（如纯文本、孤立图像）所能承载的信息和价值已日趋接近其理论边界。人工智能的下一次范式转移，正汇聚于多模态学习、机器学习与数据科学三者的深度融合与交叉创新。\n为汇聚全球智慧，共同探索这一交叉领域的未来，2026年多模态、机器学习与数据科学国际学术会议将于2026年10月30日至11月1日在中国郑州隆重举行。本次会议旨在为全球学者、工程师及行业领袖构建一个国际化学术交流平台，围绕多模态感知与理解、机器学习理论与方法、数据科学与智能系统以及前沿应用等核心议题展开深度研讨与碰撞。在这里，您将分享最新研究成果，展示学术影响力；与领域专家面对面交流，激发创新灵感；拓展国际合作网络，推动实质性的科研合作；把握学科发展趋势，了解未来研究方向。\n指导单位\n中国指挥与控制学会具身智能专委会\n主办单位\n郑州升达经贸管理学院\n承办单位\n郑州升达经贸管理学院信息工程学院\n协办单位\n华北水利水电大学信息工程学院\n河南农业大学信息与管理科学学院\n河南工程学院计算机学院\n郑州航空工业管理学院电子信息学院\n河南财",
-          "publishDate": "2026-09-24",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:录用",
-            "topic:multimodal",
-            "topic:多模态",
-            "topic:具身"
-          ],
-          "queryLabel": "broad-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "broad",
-          "url": "https://blog.sciencenet.cn/blog-3462448-1556126.html",
-          "title": "科学网—[转载]2026年图像处理与多模态融合国际学术会议",
-          "snippet": "2026 International Conference on Image Processing and Multimodal Fusion (IPMF 2026)\n主办单位：西安理工大学，郑州大学\n立即报名参会立即点击投稿\n1. 双校联办，权威可靠 西安理工大学与郑州大学共同支持，学术背景深厚。2. SPIE出版，检索稳定 录用论文由SPIE出版 (ISSN: 0277-786X) ，并提交至EI Compendex、Scopus检索，学术信誉高。3. 聚焦热门赛道 紧扣图像处理、多模态融合、深度学习等前沿主题，契合AI与大数据领域研究热点。\n请点击【论文投稿/报名参会】\n重要信息时间：2026年11月20-22日地点：中国·西安 官网：www.ic-ipmf.com二轮截稿时间：2026年10月30日（可享早鸟优惠，可联系会议秘书）收录检索：EI Compendex、Scopus 大会简介\n随着人工智能和大数据技术的快速发展，图像处理与多模态融合已成为推动智能制造、智慧城市、医疗健康等领域变革的核心驱动力。2026年图像处理与多模态融合国际学术会议（IPMF 2026）由西安理工大学，郑州大学主办，将于2026年11月20-22日在中国·西安召开。多模态数据融合技术能够整合视觉、语音、文本等多种信息源，显著提升系统的感知与决策能力，具有广阔的应用前景和研究价值。IPMF 2026将汇聚国内外顶尖专家学者，通过主题报告、分论坛报告、海报展示等形式，全面展示该领域的最新进展和未来趋势。\n请点击【论文投稿/报名参会】\n组织单位\n主办单位：西安理工大学，郑州大学\n请点击【论文投稿",
-          "publishDate": "2026-10-11",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:录用",
-            "topic:multimodal",
-            "topic:多模态",
-            "venue:www"
-          ],
-          "queryLabel": "broad-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "broad",
-          "url": "https://www.medtranslation.cn/yixuetuku/20260920/270073.html",
-          "title": "2026 国际共识：颅内多模态监测的植入标准",
-          "snippet": "全称：Intracranial multimodal monitoring in neurocritical care (NeurocoreiMMM): an open, decentralized consensus，2026 发表，德尔菲 3 轮专家投票，75% 为强共识，5075% 中等共识，50% 未达成共识。 iMMM 定义：同时使用2 种有创颅内监测手段，直接获取颅内生理参数；包含脑实质、脑室内、硬膜下；不含头皮 / 体表无创监测。 常用组合：ICP PbtO；ICP 脑实质微透析；ICP 颅内 ECoG 等。",
-          "publishDate": "2026-09-20",
-          "relevanceScore": 6,
-          "relevanceSignals": [
-            "topic:multimodal",
-            "topic:多模态",
-            "venue:www"
-          ],
-          "queryLabel": "broad-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "broad",
-          "url": "https://www.cnblogs.com/wozhendekun/p/23029797",
-          "title": "【ACM出版】2026年多模态、机器学习与数据科学国际学术会议 (MMLDS 2026)",
-          "snippet": "2026年多模态、机器学习与数据科学国际学术会议\n2026 International Conference on Multimodality, Machine Learning and Data Science (MMLDS 2026)\n在这里看更多会议官网详情\n【会议日期】2026年10月30日至11月1日\n【会议地点】中国 郑州\n【收录检索】ACM 出版，EI Compendex, Scopus收录检索\n组织单位\n指导单位：中国指挥与控制学会具身智能专委会\n主办单位：郑州升达经贸管理学院\n承办单位：郑州升达经贸管理学院信息工程学院\n协办单位：河南工程学院软件学院、郑州航空工业管理学院电子信息学院、河南财政金融学院计算机与人工智能学院\n征稿主题\nTrack 1: 多模态学习与人工智能\n图像理解 Image Understanding\n视频分析 Video Analysis\n语音识别与处理 Speech Recognition & Processing\n文本与语言模型 Text & Language Modeling\n跨模态检索 Cross-Modal Retrieval\n多模态融合技术 Multimodal Fusion Techniques\n情感计算与认知分析 Affective Computing & Cognitive Analysis\n医学影像分析 Medical Image Analysis\n自然语言处理 Natural Language Processing\n生成式模型 Generative Models\n人机交互智能 Intelligent Human-Com",
-          "publishDate": "2026-09-18",
-          "relevanceScore": 10,
-          "relevanceSignals": [
-            "topic:multimodal",
-            "topic:reinforcement learning",
-            "topic:多模态",
-            "topic:具身",
-            "venue:www"
-          ],
-          "queryLabel": "broad-1",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "broad",
-          "url": "https://zhuanlan.zhihu.com/p/2088995841566569283",
+          "url": "https://blog.csdn.net/Margrop/article/details/166941484",
           "title": "Token Plan成为历史！MiniMax重磅突袭 M Plan：全模态额度大一统、H3视频解禁，手把手带你免密打通 Claude Code 与 Cursor",
           "snippet": "核心震撼导读：如果你以为大模型的订阅模式依然停留在按量充值扣币、写几行代码就得肉疼看一眼后台余额”，那么今天刚刚降临的 MiniMax M Plan 将彻底颠覆你对全模态智能体（Agentic Multimodal Stack）日常工作流的认知！\n旧时代终结，全模态大一统空降：2026 年 10 月 1 日，MiniMax 官方正式官宣全新个人 AI 订阅服务 M Plan，同时宣告历史悠久的旧版 Token Plan 即日起停售退役。全新的 M Plan 划分为 Go、Explore 与 Build 三大档位，打破了以往文本、视频、生图、语音各立山头的割裂计费局面，将所有前沿生成模型归拢入一个统一的共享额度池；\n顶级视频模型 H3 正式解禁入驻：在 Explore 与 Build 档位中，备受行业瞩目的新一代影视级视频生成模型 MiniMax H3（Hailuo 架构） 首次被纳入个人日常订阅包中，彻底告别单次生成昂贵扣费的心理包袱，为创意设计与长程多模态智能体铺平了道路；\n双轨落地：免密客户端与第三方 Agent 神级联动：M Plan 提供两条平滑接入路径——既可以直接登录官方 MiniMax Code (MCode) 全平台客户端实现零配置开箱即用，又能在控制台一键生成 M Plan API Key，以 100% 协议级兼容无缝接入 Claude Code、Cursor、OpenCode、Codex 与 Cline 等全球主流自主编程工具；\n小学生秒懂的生活大比方：为了让没有技术背景的读者也能瞬间看懂这套体系的绝妙之处，本文用游乐园单次买票 vs 畅玩通票手环”、合租宿",
-          "publishDate": "2026-10-01",
+          "publishDate": "2026-10-09",
           "relevanceScore": 10,
           "relevanceSignals": [
             "topic:multimodal",
@@ -1174,16 +993,51 @@
           "queryLabel": "broad-1",
           "queryIntent": "",
           "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "broad",
+          "url": "http://mp.weixin.qq.com/s?__biz=MzIyMzU4NDMyOQ==&mid=2247662310&idx=3&sn=be8abbd2c1eee4a9fb645c2d93c8a494",
+          "title": "上海交大×中国电信统一多模态生成：让模型从自己的图像中学习",
+          "snippet": "论文基本信息 原文标题：Dreaming in Flow: Generative Grounding Feedback for Self-Evolving Unified Multimodal Models 首次公开：2026年9月8日 署名单位：上海交通大学、中国电信人工智能研究院、中国科学技术大学 原论文： https://arxiv.org/abs/2609.08282 龙哥导读 现在的多模态模型，一边能看懂图片，一边能生成图片，但这两项能力通常像住在同一栋楼里的两个部门：共享一套大模型，却很少真正交流。上海交大与中国电信人工智能研究院等团队提出的办法很有意思——让模型先做梦”生成图，再检查自己的梦，最后把检查结果反过来教会下一次生成与理解。最值得看的不是自我进化”这个大词，而是团队如何避免模型把自己的错误越学越牢。 最近讨论统一多模态模型时，大家经常盯着两个问题：它能不能既看图又画图？参数是不是足够大？但真正难的地方其实藏在训练过程里：模型拥有两种能力，不等于两种能力会互相帮助。 一个模型可能很会描述图片，却在生成时画错数量、位置和属性；也可能很会生成漂亮画面，却在回答图片问题时被语言习惯带偏。更麻烦的是，如果直接拿模型自己生成的图继续训练，错误的手指、错位的杯子、少掉的人物，都可能被当成经验”重新喂回去。梦可以成为教材，也可能成为谣言制造机。 这篇论文给出的答案是生成式定位反馈。它不额外寻找成对图文数据，也不依赖另一个大模型逐张打分，而是让统一模型内部的理解”和生成”形成双向闭环：生成先提供一段视觉经历，理解负责检查这段经历；理解提炼出的视觉证据，再去修正生成方向。 ",
+          "publishDate": "2026-09-30",
+          "relevanceScore": 12,
+          "relevanceSignals": [
+            "paper:arxiv",
+            "paper:论文",
+            "topic:multimodal",
+            "topic:大模型",
+            "topic:多模态"
+          ],
+          "queryLabel": "broad-1",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "broad",
+          "url": "https://news.aibase.com/tw/news/31291",
+          "title": "OpenRouter發佈 2026 嵌入模型選型指南：實測 19 款、 37 個目錄條目，按場景把最佳候選擺上桌",
+          "snippet": "嵌入向量模型決定了你的檢索系統到底能撈回什麼——它把每段輸入壓成一個向量，讓相關的東西彼此靠近，應用於是能按語義而非字面去檢索。正因如此，選哪個模型永遠是RAG、多語言檔案庫、代碼倉庫和圖文集合各自不同的考題。OpenRouter在9月11日覈實了自家嵌入模型目錄，共37個條目，並通過embeddings API向19個模型發了批量請求、跑了28項檢查，用一份實測指南把選型邏輯攤開。\n最實用的結論是分場景給候選人。英文RAG默認從openai/text-embedding-3-small起步，它價格低、上下文8192token、維度還可調;當輸入超過8192token，或想在Voyage4各檔間切換而不重建索引時，就測voyage-4-large，它給到32000token上下文和四檔可選維度，且與其他Voyage4層級向量兼容;想要開放權重替代，qwen3-embedding-8b有更長上下文窗和更低提示詞價。多語言檢索交給qwen3-embedding-8b（公開權重、支持100多種語言），代碼搜索用voyage-code-4，文本加圖像檢索則選google/gemini-embedding-2或voyage-multimodal-3.5。付費文本里最便宜的是perplexity/pplx-embed-v1-0.6b，每百萬輸入token僅0.004美元;免費文本路由nvidia/nemotron-3-embed-1b:free則帶32768token上下文。\n把入圍選手擺在一張表裏，差異一目瞭然。text-embedding-3-small是文本、8192上下文、1536",
+          "publishDate": "2026-09-23",
+          "relevanceScore": 4,
+          "relevanceSignals": [
+            "topic:multimodal",
+            "topic:rag"
+          ],
+          "queryLabel": "broad-1",
+          "queryIntent": "",
+          "parentUrl": ""
         }
       ],
       "rejected": [
         {
           "platform": "web",
           "stage": "broad",
-          "url": "https://guangzhou.11467.com/info/50582803.htm",
-          "title": "阿塞拜疆巴库陆路铁路、公路运输物流代理",
-          "snippet": "从中国运输货物到阿塞拜疆（Azerbaijan），主要通过陆路（铁路、公路）、多式联运（海铁联运）以及空运。由于阿塞拜疆位于里海西岸，货物通常需要穿越中亚并跨越里海。\n以下是 2026 年主流的运输路线及方式：\n1. 中欧班列 / 跨里海国际运输路线 (TITR / 中间走廊)\n这是目前中国到阿塞拜疆核心、热门的贸易通道，被称为中间走廊”（Middle Corridor）。\n路线： 中国（西安/成都/天津/义乌等） 经霍尔果斯或阿拉山口口岸出境 横通哈萨克斯坦全境 到达哈萨克斯坦阿克套港（Aktau）或库雷克港 换乘里海轮渡（集装箱船） 跨越里海 到达阿塞拜疆巴库（阿拉特港 Alat）。\n时效： 2026 年新数据显示，西安至巴库的班列时效已缩短至 12-15 天 左右。\n优点： 比传统海运快一倍以上，比空运便宜。2026 年初，天津也新开通了直达巴库的跨里海班列。\n2. 传统海铁联运 (Sea-Land Multimodal)\n适合对时间不敏感、货量巨大且追求低成本的物资。\n主要路线： 中国各港口（上海/宁波/深圳等）海运 经苏伊士运河 到达格鲁吉亚的波季港（Poti）或巴统港（Batumi） 转公路或铁路 运抵阿塞拜疆巴库。\n备选路线（波斯湾线）： 中国港口 到达伊朗阿巴斯港（Bandar Abbas） 经伊朗境内铁路/公路北上 运抵阿塞拜疆南部边境。\n时效： 通常需要 35-45 天。\n3. 公路运输 (Road Freight / TIR 运输)\n得益于卡车航班和 TIR（国际公路运输系统）的发展，公路直达在 2026 年也十分活跃。\n路线： 中国境内卡车集货 新疆口岸",
-          "publishDate": "2026-10-12",
+          "url": "https://bydrug.pharmcube.com/news/detail/9a6000ca065d098d94a35a8deb9e1c56",
+          "title": "Cell！翌圣HiActi®细胞因子助力超分子靶向嵌合体SupTAC实现体内时空可控蛋白降解医药新闻-ByDrug-一站式医药资源共享中心-医药魔方",
+          "snippet": "中国科学院化学研究所汪铭团队 开发了可编程的超分子靶向嵌合体 SupTAC，实现组织特异性和时间可控的蛋白降解，并将其拓展至 BTK 磷酸化调控。 该平台已在小鼠、兔、比格犬和恒河猴中验证不同靶蛋白的组织特异性降解能力；其中，通过肺特异性降解ACSL4，SupTAC 显著缓解小鼠肺部铁死亡和炎症，为组织特异性蛋白降解的疾病治疗应用提供了概念验证。 相关成果以 Multimodal supramolecular targeting chimeras enable spatiotemporally resolved protein degradation in vivo ”为题于2026年1月在Cell上在线发表。",
+          "publishDate": "2026-09-24",
           "relevanceScore": 2,
           "relevanceSignals": [
             "topic:multimodal"
@@ -1200,7 +1054,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1364
+      "durationMs": 1419
     },
     {
       "label": "seed-2",
@@ -1218,7 +1072,7 @@
       "rawResultCount": 2,
       "resultCount": 1,
       "rejectedCount": 1,
-      "startedAt": "2026-10-14T06:07:04.976Z",
+      "startedAt": "2026-10-15T05:53:37.667Z",
       "results": [
         {
           "platform": "web",
@@ -1267,7 +1121,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1372
+      "durationMs": 1204
     },
     {
       "label": "repository-2",
@@ -1285,9 +1139,28 @@
       "rawResultCount": 5,
       "resultCount": 0,
       "rejectedCount": 5,
-      "startedAt": "2026-10-14T06:07:06.348Z",
+      "startedAt": "2026-10-15T05:53:38.871Z",
       "results": [],
       "rejected": [
+        {
+          "platform": "web",
+          "stage": "repository",
+          "url": "https://github.com/LowEntropyAI/awesome-proactive-agent",
+          "title": "LowEntropyAI/awesome-proactive-agent",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
+          "publishDate": "2026-10-09",
+          "relevanceScore": 6,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:multimodal",
+            "topic:agent",
+            "reject:non-paper-page",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "repository-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "web",
           "stage": "repository",
@@ -1335,40 +1208,14 @@
         {
           "platform": "web",
           "stage": "repository",
-          "url": "https://github.com/llm-as-a-verifier/llm-as-a-verifier",
-          "title": "LLM-as-a-Verifier is a general-purpose framework ...",
-          "snippet": "\"LLM-as-a-Verifier\" ()\n| Documentation | Website | Paper | Claude Code Plugin | Twitter/X | Slack |\nLLM-as-a-Verifier achieves SOTA performance across agentic benchmarks, including Terminal-Bench, SWE-Bench Verified, MedAgentBench, RoboRewardBench and more. We invite the community to contribute more use cases!\n\"pip install llm-verifier\"To install the latest from a clone:\n\"pip install -e .\"What's new in 0.3.0 (full notes in CHANGELOG.md):\n- Terminal-Bench 4.0 benchmark: \"deepseek-flash\"verifying Claude Code / Opus 5.5 rollouts — can a weaker model verify outputs from a stronger model?\n- LLM-as-a-Verifier V3: task-agnostic Terminal-Bench 4 criteria in \"criteria/terminalbench4.md\"\n- DeepSeek ba",
-          "publishDate": "2026-10-10",
-          "relevanceScore": 10,
+          "url": "https://github.com/OpenAdaptAI",
+          "title": "OpenAdapt.AI",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in OpenAdaptAI\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nSta",
+          "publishDate": "2026-09-29",
+          "relevanceScore": 3,
           "relevanceSignals": [
-            "paper:paper",
-            "topic:llm",
             "topic:agent",
-            "topic:reinforcement learning",
             "venue:acl",
-            "reject:non-paper-page",
-            "source:high-signal-url"
-          ],
-          "queryLabel": "repository-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "repository",
-          "url": "https://www.github.com/topics/multi-agent",
-          "title": "multi-agent",
-          "snippet": "Here are 17,350 public repositories matching this topic... \nLanguage: All\nbytedance  /  deer-flow\nAn open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.\nnodejs python agent typescript ai podcast multi-agent superagent harness ai-agents llm langchain agentic langgraph agentic-framework agentic-workflow deep-research langmanus\n Updated  Sep 25, 2026 Python\nruvnet  /  ruflo\n Star  73.2k\n Code   Issues   Pull requests   Discussions \n     The original agent harness. Deploy intelligent multi-player swarms, coordinate ",
-          "publishDate": "2026-09-25",
-          "relevanceScore": 12,
-          "relevanceSignals": [
-            "announcement:开源",
-            "topic:llm",
-            "topic:multimodal",
-            "topic:multi-modal",
-            "topic:agent",
-            "topic:rag",
-            "venue:www",
             "reject:non-paper-page",
             "source:high-signal-url"
           ],
@@ -1384,7 +1231,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1325
+      "durationMs": 1099
     },
     {
       "label": "paper-index-2",
@@ -1400,9 +1247,9 @@
       "parentUrl": "",
       "requestedCount": 6,
       "rawResultCount": 6,
-      "resultCount": 3,
-      "rejectedCount": 3,
-      "startedAt": "2026-10-14T06:07:07.673Z",
+      "resultCount": 2,
+      "rejectedCount": 4,
+      "startedAt": "2026-10-15T05:53:39.970Z",
       "results": [
         {
           "platform": "arxiv",
@@ -1451,31 +1298,33 @@
           "queryLabel": "paper-index-2",
           "queryIntent": "",
           "parentUrl": ""
-        },
+        }
+      ],
+      "rejected": [
         {
           "platform": "arxiv",
           "stage": "paper-index",
-          "url": "https://arxiv.org/list/cs.AI/recent?show=100&skip=100",
+          "url": "https://arxiv.org/list/cs.AI/pastweek?show=500&skip=0",
           "title": "Artificial Intelligence",
-          "snippet": "Authors and titles for recent submissions\nThu, 8 Oct 2026 (continued, showing 100 of 282 entries )\n[101]  arXiv:2610.08927   [ pdf ,  html ,  other ] \nTitle:  Can AI Agents Make Open-Ended Scientific Discovery? Evidence from Station \nWenyu Du ,  Stephen Chung\nComments:  preprint \nSubjects: Artificial Intelligence (cs.AI) ; Multiagent Systems (cs.MA) \n[102]  arXiv:2610.08923   [ pdf ,  html ,  other ] \nTitle:  AdaGuard: Enhancing Safety and Policy Compliance with Reasoning-Enabled LLM-As-A-Judge Guardrails \nMelissa Kazemi Rad ,  Sihui Dai ,  Isha Slavin ,  Kushal Chawla ,  Mann Patel ,  Jian Ni ,  William M. Campbell ,  Stephen Rawls ,  Sambit Sahu\nSubjects: Artificial Intelligence (cs.AI)\n[1",
-          "publishDate": "2026-10-09",
-          "relevanceScore": 20,
+          "snippet": "Total of 1649 entries :  1-500 501-1000 1001-1500 1501-1649\nShowing up to 500 entries per page:   fewer  |   more  |   all\nTitle:  Can Language Models Play the Wikipedia Game? \nComments:  64 pages (14-page main text, references and 16 appendices), 17 figures, 10 tables \nSubjects: Artificial Intelligence (cs.AI) ; Information Retrieval (cs.IR) \nTitle:  RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics \nComments:  Accepted at CIKM 2026 \nSubjects: Artificial Intelligence (cs.AI) ; Information Retrieval (cs.IR) \nTitle:  X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems \nComments:  18 pages. Project page:  \nSubjects: Artificial Intelligence (cs.AI)",
+          "publishDate": "2026-10-13",
+          "relevanceScore": 23,
           "relevanceSignals": [
-            "paper:preprint",
             "paper:arxiv",
             "paper:project page",
             "topic:llm",
+            "topic:large language model",
+            "topic:multimodal",
             "topic:agent",
             "topic:reasoning",
             "topic:robotics",
-            "source:high-signal-url"
+            "topic:embodied",
+            "topic:reinforcement learning"
           ],
           "queryLabel": "paper-index-2",
           "queryIntent": "",
           "parentUrl": ""
-        }
-      ],
-      "rejected": [
+        },
         {
           "platform": "arxiv",
           "stage": "paper-index",
@@ -1556,7 +1405,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1217
+      "durationMs": 1174
     },
     {
       "label": "social-introducing-21",
@@ -1574,7 +1423,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:07:08.890Z",
+      "startedAt": "2026-10-15T05:53:41.144Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1584,7 +1433,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1513
+      "durationMs": 1696
     },
     {
       "label": "homepage-2",
@@ -1602,7 +1451,7 @@
       "rawResultCount": 0,
       "resultCount": 0,
       "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:07:10.403Z",
+      "startedAt": "2026-10-15T05:53:42.840Z",
       "results": [],
       "rejected": [],
       "responseKeys": [
@@ -1612,7 +1461,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1260
+      "durationMs": 1074
     },
     {
       "label": "chinese-2",
@@ -1630,8 +1479,26 @@
       "rawResultCount": 6,
       "resultCount": 6,
       "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:07:11.664Z",
+      "startedAt": "2026-10-15T05:53:43.914Z",
       "results": [
+        {
+          "platform": "web",
+          "stage": "chinese",
+          "url": "https://blog.csdn.net/weixin_29061509/article/details/166427003",
+          "title": "ICLR 2026论文入选经验：从选题到投稿的全流程解析",
+          "snippet": "1. 实验室论文入选ICLR 2026的技术复盘\n实验室四篇论文同时被ICLR 2026接收的消息传来时，我们正在调试一个多模态模型的损失函数。咖啡机突然发出完成的提示音——这个巧合后来被团队戏称为\"学术成果的物理通知系统\"。作为全程参与这四篇论文工作的研究者，我想通过本文梳理从选题到投稿的全流程经验，特别会聚焦那些在常规学术论文中不会展开的\"实验室生存技巧\"。\nICLR（International Conference on Learning Representations）作为机器学习领域的顶级会议，2026年的投稿量预计将突破8000篇，录用率可能继续维持在25%左右。在这样的竞争环境下，我们团队采用了一套组合策略：两篇论文主打方法论创新（分别涉及注意力机制改进和损失函数设计），一篇专注应用突破（医疗影像分析），最后一篇则是理论证明（关于神经网络泛化能力的边界）。这种\"211\"的配比既分散了风险，又形成了学术观点的立体呈现。\n2. 论文选题与创新点设计\n2.1 方法论类论文的破局思路\n《Dynamic Sparse Attention for Efficient Transformers》这篇的灵感来源于一个被忽视的工程现象：我们在部署视觉Transformer模型时，发现超过78%的注意力权重集中在5%的token对上。通过系统性地分析12个主流数据集的注意力模式，我们提出了一种动态稀疏化方法。关键技术在于：\n实时重要性评估模块：采用轻量级CNN预测token重要性分数\n可微分稀疏化：通过改进的top-k算子实现端到端训练\n硬件感知设计：算法复杂度与GPU内存访问模式匹",
+          "publishDate": "2026-09-22",
+          "relevanceScore": 11,
+          "relevanceSignals": [
+            "paper:论文",
+            "announcement:录用",
+            "topic:多模态",
+            "venue:iclr"
+          ],
+          "queryLabel": "chinese-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
         {
           "platform": "web",
           "stage": "chinese",
@@ -1659,47 +1526,6 @@
         {
           "platform": "web",
           "stage": "chinese",
-          "url": "https://blog.csdn.net/weixin_29061509/article/details/166427003",
-          "title": "ICLR 2026论文入选经验：从选题到投稿的全流程解析",
-          "snippet": "1. 实验室论文入选ICLR 2026的技术复盘\n实验室四篇论文同时被ICLR 2026接收的消息传来时，我们正在调试一个多模态模型的损失函数。咖啡机突然发出完成的提示音——这个巧合后来被团队戏称为\"学术成果的物理通知系统\"。作为全程参与这四篇论文工作的研究者，我想通过本文梳理从选题到投稿的全流程经验，特别会聚焦那些在常规学术论文中不会展开的\"实验室生存技巧\"。\nICLR（International Conference on Learning Representations）作为机器学习领域的顶级会议，2026年的投稿量预计将突破8000篇，录用率可能继续维持在25%左右。在这样的竞争环境下，我们团队采用了一套组合策略：两篇论文主打方法论创新（分别涉及注意力机制改进和损失函数设计），一篇专注应用突破（医疗影像分析），最后一篇则是理论证明（关于神经网络泛化能力的边界）。这种\"211\"的配比既分散了风险，又形成了学术观点的立体呈现。\n2. 论文选题与创新点设计\n2.1 方法论类论文的破局思路\n《Dynamic Sparse Attention for Efficient Transformers》这篇的灵感来源于一个被忽视的工程现象：我们在部署视觉Transformer模型时，发现超过78%的注意力权重集中在5%的token对上。通过系统性地分析12个主流数据集的注意力模式，我们提出了一种动态稀疏化方法。关键技术在于：\n实时重要性评估模块：采用轻量级CNN预测token重要性分数\n可微分稀疏化：通过改进的top-k算子实现端到端训练\n硬件感知设计：算法复杂度与GPU内存访问模式匹",
-          "publishDate": "2026-09-22",
-          "relevanceScore": 11,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:录用",
-            "topic:多模态",
-            "venue:iclr"
-          ],
-          "queryLabel": "chinese-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "chinese",
-          "url": "https://blog.csdn.net/Discover304/article/details/165346611",
-          "title": "【ICLR 2026】M3-Agent 论文解读：把长期记忆做成实体中心多模态图",
-          "snippet": "摘要\n本文解读 ICLR 2026 论文《Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory》。该论文提出 M3-Agent，通过融合实体中心的多模态记忆图、情景记忆与语义记忆的双类型生成与强化学习驱动的多轮检索推理，让多模态智能体像人一样边看边听、边记边更新，在需要时靠记忆作答。其特别之处在于：记忆不是向量库也不是更长的上下文，而是可增量写入、可按实体检索、可用权重投票自我纠错的独立结构；同时发布了配套基准 M3-Bench（100 段机器人第一视角视频 920 段网络视频，共 4,490 条开放式问答）。实验表明 M3-Agent 在 M3-Bench-robot 30.7%、M3-Bench-web 48.9%、VideoMME-long 61.8% 三项上全面超越最强提示基线（6.7 / 7.7 / 5.3），其中语义记忆与身份等价的消融分别掉 17.1 / 19.2 / 13.1 分，为长期记忆智能体的设计提供了可量化的借鉴。\n视频讲解：点击观看 B 站视频\n摘要\n论文基本信息\n背景与动机\n研究主线：从问题到结论\n基准/方法设计\n分类全景\n方法细节\n实验设计与结果\n结果对比总结\n关键发现\n局限性\n常见问题（FAQ）\nM3-Agent 和普通的长上下文模型有什么区别？\n为什么非要多轮检索，单轮 RAG 不行吗？\n情景记忆和语义记忆分别是什么？\nM3-Bench 和已有的长视频基准有什么不同？\n记忆模型的训练数据是怎么来的？\n这套方法可以迁移到别的具",
-          "publishDate": "2026-09-15",
-          "relevanceScore": 19,
-          "relevanceSignals": [
-            "paper:论文",
-            "topic:multimodal",
-            "topic:agent",
-            "topic:reasoning",
-            "topic:rag",
-            "topic:多模态",
-            "topic:智能体",
-            "topic:具身",
-            "venue:iclr"
-          ],
-          "queryLabel": "chinese-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "chinese",
           "url": "https://blog.csdn.net/weixin_43312117/article/details/167807712",
           "title": "全新的五模态信息融合数据集，包括RGB、事件、热成像、4D 雷达与 LiDAR",
           "snippet": "CVPR 2026DSERT-RoLL 五模态信息融合数据集\n论文信息\n题目： DSERT-RoLL : Robust Multi-Modal Perception for Diverse Driving Conditions with Stereo Event-RGB-Thermal Cameras, 4D Radar, and Dual-LiDAR面向多样化驾驶条件的鲁棒多模态感知——融合双目事件-RGB-热成像相机、4D 雷达与双LiDAR\n发表： CVPR 2026\n作者： Hoonhee Cho、Jae-Young Kang、Yuhwan Jeong、Yunseo Yang、Wonyoung Lee、Youngho Kim、Kuk-Jin Yoon；\n单位： 韩国科学技术院（KAIST）视觉智能实验室。\n代码：\nhttps://jeongyh98.github.io/dsert-roll\n论文摘要\n目前的自动驾驶数据集大多只关注RGB和LiDAR的数据，而新的传感器数据很少，不同传感器之间的公平比较很困难。DSERT-RoLL同时包含了双目事件、RGB、热成像相机、4D雷达以及两个LiDAR，并且给出了二维/三维框、轨迹ID以及自车里程计；配套的方法在统一的空间里自适应地融合各个传感器的信息来提高复杂的天气和光照条件下三维检测的稳定性。\n主要创新之处\nDSERT-RoLL基准的不同场景和多种传感器\n数据集在同一个道路环境里同步获取五种传感器的信息，包括六种天气状况以及四种光照情况，可以进行公平对比，也可以解决事件摄像头、热成像仪和4D雷达数据不够的问题。\n统一了二维和",
@@ -1718,17 +1544,20 @@
         {
           "platform": "web",
           "stage": "chinese",
-          "url": "https://blog.csdn.net/weixin_42663213/article/details/165527573",
-          "title": "CVPR 2026论文录用经验与计算机视觉前沿研究",
-          "snippet": "1. 项目背景与意义\n实验室6篇论文同时被CVPR 2026录用，这在计算机视觉领域是一个相当亮眼的成绩。作为计算机视觉领域的顶级会议，CVPR（IEEE Conference on Computer Vision and Pattern Recognition）的论文录用率常年维持在25%左右，竞争异常激烈。能够有6篇论文同时被录用，不仅体现了实验室在计算机视觉领域的研究实力，也反映了团队在选题、方法创新和实验验证等方面的系统性优势。\n从近年来的趋势看，CVPR论文的投稿数量持续增长，2025年已突破1万篇，预计2026年将再创新高。在这样的背景下，6篇论文同时被录用，相当于在万军丛中杀出重围，其难度可想而知。这不仅是对实验室研究成果的认可，也为实验室在学术界的声誉和影响力带来了显著提升。\n2. 论文选题与研究方向分析\n2.1 计算机视觉前沿热点\n从CVPR近年来的录用论文来看，以下几个方向持续受到关注：\n自监督学习与弱监督学习\n多模态理解与生成\n3D视觉与场景理解\n视频理解与动作识别\n医学图像分析\n视觉与语言结合\n实验室的6篇论文很可能围绕这些前沿方向展开，每个选题都瞄准了当前计算机视觉领域的关键挑战。比如在自监督学习方向，如何减少对标注数据的依赖；在多模态理解方向，如何更好地融合视觉和语言信息；在3D视觉方向，如何提升场景重建的精度和效率等。\n2.2 创新方法解析\n高质量的CVPR论文通常具备以下特点：\n方法创新性：提出新的网络结构、训练策略或优化目标\n理论完备性：有严谨的数学推导和理论分析\n实验充分性：在多个标准数据集上验证有效性\n代码开源：提供可复现的实现代码\n实验室",
-          "publishDate": "2026-09-15",
-          "relevanceScore": 12,
+          "url": "https://www.bilibili.com/video/BV1B9eG6WEMN/",
+          "title": "【CVPR 2026】🥇WorldMM：长视频推理的动态多模态记忆智能体",
+          "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning (CVPR 2026) — 把长视频记忆从「文本摘要 固定片段检索」升级为「三类互补记忆 由智能体自选模态与时间尺度」的证据检索。 - 提出 WorldMM：一个动态多模态记忆智能体，为长视频同时构建三类互补记忆，并在推理时自适应取用。 - 把 情节记忆（多时间尺度事件图）、语义记忆（持续演化的关系图）与 视觉记忆（特征索引 帧时间戳索引）整合进同一框架。 - 覆盖 5 个长视频问答基准，时间跨度从 小时级 到 周级（EgoLifeQA、Ego-R1、HippoVlog、LVBench、Video-MME）。 - 仅靠 自适应多轮检索（上限 5 步）即可在平均准确率上超过最强基线 8.4 个点。 本视频由 AI 自动生成，仅供学术交流使用。",
+          "publishDate": "2026-09-16",
+          "relevanceScore": 17,
           "relevanceSignals": [
             "paper:论文",
-            "announcement:开源",
-            "announcement:录用",
+            "topic:multimodal",
+            "topic:agent",
+            "topic:reasoning",
             "topic:多模态",
-            "venue:cvpr"
+            "topic:智能体",
+            "venue:cvpr",
+            "venue:www"
           ],
           "queryLabel": "chinese-2",
           "queryIntent": "",
@@ -1737,22 +1566,44 @@
         {
           "platform": "web",
           "stage": "chinese",
-          "url": "https://zhuanlan.zhihu.com/p/2091641278291300582",
-          "title": "CV计算机视觉每日开源代码Paper with code速览-2026.10.8",
-          "snippet": "墙裂推荐：想获取更多前沿论文及算法\n优化idea冲击顶会或发表专利，包含目标检测、目标跟踪、图像分割、视频分割\n、可见光红外融合、多任务学习、多模态基础模型、文生图、自动驾驶、BEV、占用预测、具身智能VLA、深度估计\n、点云3D检测、医学图像分割、医学图像目标检测、医学大模型、缺陷检测\n、人群/目标计数、视频编辑、图像去雨等众多主题，请参考：https://qcno08je5sgu.feishu.cn/\n点击加入—>CV计算机视觉交流群\nCV计算机视觉每日开源代码Paper with code速览-2026.10.8\n1.【Visual Grounding\n】Focus When Necessary: Adaptive Routing and Collaborative Grounding for Training-Free Visual Grounding\n本文提出LazyMCoT，一种免训练的视觉定位框架，按样本难度自适应分配算力：以首token不确定度\n与保形预测跳过易样本，难样本由跨模态注意力与视觉专家协同精确定位，提升精度并降低推理延迟。\n2.【世界模型\n】Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban\nMetis面向自动驾驶与城市导航，用MoT专家架构解耦\n、推理免生成视频，显著降低延迟与成本，在NAVSIM与CityWalker取得SOTA。\n3.【多模态大模型】（ECCV2026）UniDDT: Unifying Multimoda",
-          "publishDate": "2026-10-08",
-          "relevanceScore": 29,
+          "url": "http://mp.weixin.qq.com/s?__biz=MzAxNDA1MTQwNg==&mid=2651433112&idx=2&sn=7607c1c2cf23ac66cf3e1399a6ae8964",
+          "title": "2026年计算机科学与技术学院研究生优秀科研成果展（一）",
+          "snippet": "优秀论文成果(一) 华侨大学计算机 科学与技术学院 研究生 #01 成果一 《Multimodal Fusion via Self-Consistent Task-Gradient Fields》-- ICML 2026 该篇论文由2023级研究生熊佳芋（第一作者）发表在CCFA类推荐、机器学习领域国际顶级会议 ICML 2026。 简介：多模态学习的难点在于既要在不同输入间保留任务相关信息，又不能因融合而损害特征提取。现有的激进融合会使模态表征相互纠缠，对缺失输入变得脆弱；而用辅助损失强行分离特征又常引发优化冲突。为此我们提出自洽场自编码器（SCFAE）：为每种模态配备轻量自编码器以保全信息，让任务损失作为 \"驱动力\" 筛选预测性特征，重建损失作为 \"约束力\" 把特征分离到独立子空间，两者经由互补子空间协同运作以缓解优化干扰。在音频 - 视频 - 文本、音频 - 视频和图像 - 视频三类基准上，SCFAE 以简洁结构稳健应对数据缺失与输入尺寸不均，梯度分析也证实其能规避冲突、维持稳定的训练动力学。 ICML （International Conference on Machine Learning，国际机器学习大会）由国际机器学习学会（IMLS）主办，是机器学习领域的顶级学术会议，与 NeurIPS、ICLR 并称 \"机器学习三大顶会\"。会议每年吸引全球顶尖学者和业界研究者投稿交流，涵盖深度学习、强化学习、统计学习、生成模型等前沿方向，录用论文学术含金量极高，是衡量研究成果国际影响力的重要标杆。 日期：2026.5.29 #02 成果二 《Center-Guided Dive",
+          "publishDate": "2026-10-15",
+          "relevanceScore": 19,
           "relevanceSignals": [
-            "paper:paper",
             "paper:论文",
-            "announcement:开源",
-            "topic:llm",
-            "topic:vlm",
-            "topic:vision-language",
+            "announcement:录用",
             "topic:multimodal",
-            "topic:vla",
+            "topic:多模态",
+            "venue:iclr",
+            "venue:icml",
+            "venue:neurips",
+            "venue:顶会"
+          ],
+          "queryLabel": "chinese-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "chinese",
+          "url": "https://discover304.blog.csdn.net/article/details/165367071",
+          "title": "【CVPR 2026】WorldMM：长视频推理的动态多模态记忆智能体",
+          "snippet": "摘要\n本文解读 CVPR 2026（Highlight）论文《WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning》。该论文提出 WorldMM——一个动态多模态记忆智能体，通过融合多时间尺度情节记忆、持续演化的语义记忆与双模式视觉记忆，让视频大模型在不处理全量帧的前提下完成小时级到周级的长视频推理，其特别之处在于把「用哪种模态、取多长的时间窗」这两个决定下放给检索智能体自行决策。实验表明它在五个长视频问答基准上平均准确率 69.5%，超过最强基线 8.4 个百分点，检索的时间交并比达到 10.09（最强基线 HippoRAG 仅 4.00），为长视频记忆系统提供了可复用的设计范式。\n视频讲解：点击观看 B 站视频\n论文基本信息\n标题（英文） WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning\n作者 Woongyeong Yeo, Kangsan Kim, Jaehong Yoon, Sung Ju Hwang\n机构 KAIST (MLAI Lab) · NTU Singapore · DeepAuto.ai\n2512.02425\nworldmm.github.io\n背景与动机\n长视频记忆的问题从哪里来？视频大模型（video LLM）在短视频理解上已经相当成熟，但当视频长度扩展到数小时甚至数天，两个约束立刻显现：一是上下文容量——一段日长视频即使按每秒 1 帧采样，帧数也远超模型的上下文窗口；二是细节损失——把视频压成文",
+          "publishDate": "2026-09-18",
+          "relevanceScore": 23,
+          "relevanceSignals": [
+            "paper:论文",
+            "topic:llm",
+            "topic:multimodal",
+            "topic:agent",
             "topic:reasoning",
-            "topic:reinforcement learning"
+            "topic:rag",
+            "topic:大模型",
+            "topic:多模态",
+            "topic:智能体",
+            "venue:cvpr"
           ],
           "queryLabel": "chinese-2",
           "queryIntent": "",
@@ -1767,7 +1618,7 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1378
+      "durationMs": 1283
     },
     {
       "label": "broad-2",
@@ -1785,7 +1636,7 @@
       "rawResultCount": 6,
       "resultCount": 4,
       "rejectedCount": 2,
-      "startedAt": "2026-10-14T06:07:13.042Z",
+      "startedAt": "2026-10-15T05:53:45.197Z",
       "results": [
         {
           "platform": "web",
@@ -1806,16 +1657,32 @@
         {
           "platform": "web",
           "stage": "broad",
-          "url": "https://www.cnblogs.com/xine/p/23034590",
-          "title": "【大模型Wiki】15 · 2026 大模型格局",
-          "snippet": "大模型 Wiki · 补充篇 15 2026-09 整理（信息截至 2026-09-18）\n一、当前旗舰格局：\"三强多极\"\n#\nOpenAI GPT-6 Astra（2026-09-03）、GPT-5.6 Sol/Luna、Terra Astra：Symphony 架构、105 万上下文、Agent 执行 深度推理；四模型双轨产品线\nAnthropic Claude Fable 5.1、Opus 5 / 5.2 灰度 长时连续作业、自主校验，编码场景曾长期霸榜\nGoogle Gemini 3 / 3.8 Flash 全模态 agentic reasoning，1M 上下文，配套 Agent 编程环境\nMeta Muse Spark 1.3 工具调用效率、高性价比\nxAI Grok 4.5（~1.5T MoE） 50 万上下文、异步 agentic RL（用真实开发会话轨迹训练）\nOpenAI 内部（OpenRouter 口径）：Astra（输入 10/输出\n50 每百万 token） Luna（1/50 价格走量） Sol（快） Terra 组成完整价格带。2026-09 第一周，OpenAI 调用金额 30 多个月来首次反超 Anthropic。\n二、GPT 家族大事记（补全到 2026）\n#\nGPT-1/2/3 20182020 见第 02 篇\nChatGPT / GPT-4 2022-11 / 2023-03 消费级引爆 / 多模态起点\nGPT-4o、o1 2024 原生多模态 / 推理范式开启\nGPT-4.5、o3 2025 上半年 知识模型与推理模型并行\nGPT-5 ",
-          "publishDate": "2026-09-19",
-          "relevanceScore": 10,
+          "url": "https://blog.csdn.net/2401_85390073/article/details/167260012",
+          "title": "2026年大模型技能图谱：程序员进阶必备，小白弯道超车秘籍！",
+          "snippet": "本文为程序员及AI小白提供了一套2026年最新的大模型系统化学习路线，涵盖基础理论入门、核心技术解析、编程基础与工具使用、实战项目与案例分析、高级应用开发、模型微调与私有化部署、前沿技术探索等七个阶段。通过循序渐进的学习，读者可掌握大模型核心能力，实现从入门了解到精通落地的全链路进阶，抢占AI行业风口，提升职场竞争力。\n2026年，大模型产业彻底告别概念炒作”，正式迈入技术深耕规模化落地”的黄金攻坚期，成为程序员提升核心竞争力、实现职场跃迁的必备技能，更是零基础小白切入AI领域的最优赛道。无论你是刚入门的编程小白，想快速解锁AI技能、抢占行业风口；还是在岗程序员，想突破技术瓶颈、拓展职业边界，这套2026年最新系统化学习路线，都能帮你少走90%的弯路，高效完成从入门了解”到精通落地”的全链路进阶。全程紧跟2026年大模型技术趋势，融入当下最热门的开发工具、实战场景与行业需求，建议CSDN老铁收藏备用，循序渐进、稳步提升，轻松拿捏大模型核心能力。\n第一阶段：基础理论入门（小白友好，筑牢根基）\n核心目标：摆脱大模型黑盒”认知，清晰掌握大模型的基本概念、发展背景及行业定位，建立完整的基础认知框架，为后续学习扫清障碍。\n核心学习内容：\n人工智能演进与大模型兴起：梳理AI从传统算法到生成式大模型的迭代脉络，重点了解2024-2026年大模型的产业落地趋势（如数字员工、垂直领域适配等），理解大模型为何能成为千行百业的核心基础设施。\n核心定义解析：明确大模型（Large Language Model, LLM）的官方定义、核心特征，区分通用人工智能（AGI）与当前大模型的差异，结合2026年",
+          "publishDate": "2026-10-08",
+          "relevanceScore": 6,
           "relevanceSignals": [
+            "topic:llm",
+            "topic:large language model",
+            "topic:大模型"
+          ],
+          "queryLabel": "broad-2",
+          "queryIntent": "",
+          "parentUrl": ""
+        },
+        {
+          "platform": "web",
+          "stage": "broad",
+          "url": "http://www.coreui.cn/news/5396",
+          "title": "LLM Agent 2026：从原型到生产级工程实践-编程新知",
+          "snippet": "2026/10/8 7:45:46\n# LLM Agent 2026从原型到生产级工程实践## 1. 背景与挑战Agent 不只是带工具的聊天机器人”2025年LLM Agent 从技术热词变成了工程现实。正如 Orq.ai 在《LLM Agents in 2026》中所定义An LLM agent is a software component powered by a large language model that can autonomously make decisions, carry out tasks, and interact with users or tools to achieve specific goals.” 与普通 Chatbot 或裸 LLM 的本质区别在于 Agent 具备推理、记忆、工具调用三大能力能执行多步工作流并在动态环境中自我迭代。但现实是大多数团队在 20242025 年积累的 Agent 原型仍停留在Demo 即产品”阶段。核心痛点集中在- 循环失控LLM 生成重复工具调用导致无限循环和 token 浪费。- 工具调用失败API 返回错误、超时Agent 缺乏回退策略。- 状态不一致多轮对话中记忆清空或上下文污染。- 生产级可靠性缺失没有验证步骤和熔断机制。从展示”到生产”需要在架构上做三件事约束循环、引入验证、设计回退。本文将以 Python 3.11 LangChain 0.3.0 为例展示一个可复用的生产级 Agent 实现并讨论部署架构和版本管理策略。## 2. 技术原理Agent 的核心循环与安全设计 2.1 标准 A",
+          "publishDate": "2026-10-07",
+          "relevanceScore": 8,
+          "relevanceSignals": [
+            "topic:llm",
+            "topic:large language model",
             "topic:agent",
-            "topic:reasoning",
-            "topic:大模型",
-            "topic:多模态",
             "venue:www"
           ],
           "queryLabel": "broad-2",
@@ -1825,35 +1692,16 @@
         {
           "platform": "web",
           "stage": "broad",
-          "url": "https://blog.gitcode.com/971465bdbf2a2e98924f01ce4959901d.html",
-          "title": "一周2500星的风口信号：对比学习语言模型会成为开源社区下一站吗？",
-          "snippet": "如果说过去两年开源大模型社区的主线，是\"把生成做得更快、更长、更便宜\"，那么 2026 年 9 月下旬突然冲上 GitHub 热榜的 Contrastive Language Models（CLM）项目，则提出了一个相反方向的命题：当任务根本不需要\"生成\"时，为什么还要让模型逐 token 地写答案？\n这个仓库在发布后一周内积累了约 2500 星，一度登上 GitHub 热榜前六，社区讨论从\"这是什么\"迅速升级到\"它会不会带火一整条新生态\"。本文基于仓库源码（\n）与社区公开信息，拆解 CLM 的技术内核、它可能撬动的生态链条，以及\"风口\"判断背后的证据与隐患。\n从 star 增速看风向：为什么是 2026 年的这个时点\nCLM 的火爆并非孤立事件。它发布的时点，恰逢两个趋势的交汇：\n其一，Agent 成为大模型的主流消费场景。工具调用、GUI 操作、游戏控制、代码修复，这些任务共享一个结构：模型面对一个不断变化的状态，从一个封闭的候选集合里选出一个动作。传统做法是把这当作生成任务——模型先写一大段推理，再输出答案文本，服务端再解析、校验、兜底。生成成本（尤其是长上下文下的 KV Cache 与逐 token 解码）成了决策链路里最大的延迟来源。\n其二，\"System One\"式快速决策成为研究共识。CLM 在 README 中自述为 \"A System One Model for Fast and Generalizable Decision-Making\"（见 README.md），核心卖点不是更强的生成能力，而是把决策从\"思考型\"（System Two）下沉为\"直觉型\"（S",
-          "publishDate": "2026-10-10",
-          "relevanceScore": 5,
+          "url": "https://www.yeyulingfeng.com/a/1078014.html",
+          "title": "AI小道消息 · 9月25日 21:32",
+          "snippet": "本期速览\n01 LLMs-from-scratch 构建教程\n02 qwen-image-2.1 2K生成\n04 Unsloth 桌面应用微调大模型\n01LLMs-from-scratch 构建教程\n来源（X） · @XAMTOAI · 2026-09-25 00:23\n想看清语言模型内部，别只调 API。GitHub 大约 10.5 万星。Raschka 这本 Build a Large Language Model (From Scratch)的官方仓库，从分词、注意力、手写 GPT，写到预训练、分类微调和指令微调。每章有 notebook 和说明。主线在普通笔记本就能跑完，有显卡会更快。附录补 PyTorch；LoRA 等在附加材料里。它教的是小模型怎么搭起来，不是把 ChatGPT 原样炼出来。https://github.com/rasbt/LLMs-from-scratch\n02qwen-image-2.1 2K生成\n来源（X） · @Pluvio9yte · 2026-09-24 23:39\n不要再研究什么无审查版模型了！qwen-image-2.1 拿来本地平替 GPT-image-2.5 才是最香的！完整部署教程来了我不明白，qwen-image-2.1 本地部署完本来就没有验证和审核，大伙为啥都把重心放在奇怪的地方了。这次 qwen-image-2.1 给我带来最大的震撼，还是其原生2K的生成质量，完全不输 GPT-image-2.5。最关键的一点是，它生成的图片不会出现GPT 经常出现的那种噪点，非常适合拿来做首帧参考图，拿去跑AIGC短片。给大家带来单卡",
+          "publishDate": "2026-09-25",
+          "relevanceScore": 8,
           "relevanceSignals": [
-            "announcement:开源",
-            "topic:agent",
-            "topic:大模型"
-          ],
-          "queryLabel": "broad-2",
-          "queryIntent": "",
-          "parentUrl": ""
-        },
-        {
-          "platform": "web",
-          "stage": "broad",
-          "url": "http://mp.weixin.qq.com/s?__biz=Mzk0ODI4NTE2Nw==&mid=2247542037&idx=1&sn=2b7fe733b5f7e4d918bda4ec8f88b0a7",
-          "title": "我校教师在Nature旗下期刊《Communications AI & Computing》发表研究成果",
-          "snippet": "固定布局 工具条上设置固定宽高， 背景可以设置被包含， 可以完美对齐背景图和文字， 以及用于模板制作。 固定布局 工具条上设置固定宽高， 背景可以设置被包含， 可以完美对齐背景图和文字， 以及用于模板制作。 发布时间：2026年10月 来源：市政与环境工程学院 近日，我校教师牟天蔚与中国科学院沈阳自动化研究所研究员苑明哲合作，在Nature旗下期刊《Communications AI & Computing》上共同发表题为LeakAgent: A Multi-Agent System for Leak Detection using Multi-modal Large Language Model Coordination in Water Distribution Network（一种基于多模态大语言模型协调的供水管网漏损检测多智能体系统）”的研究论文。该刊作为Nature Portfolio旗下重要期刊，致力于报道人工智能及其工程与交叉学科计算应用的前沿突破。 成果介绍：该研究面向城市供水管网漏损智能检测与精细化运维这一重大工程问题，提出了一种用于供水管网漏损检测的多智能体框架LeakAgent。通过跨智能体共享压力敏感度与图特征匹配模型的协同设计，成功攻克了传统方法在全流程任务割裂严重和全局/区域检测分离两大难题，实现了检测精度与端到端协同效率的双重优化。实验结果表明，该框架在多个公开数据集上表现优异，不仅显著提升了检测精度，还大幅优化了计算效率。这一创新性解决方案为城市水务数字化管理与安全提供了技术支撑，并在实际管网工程应用中展现出巨大的潜力与广阔的前景。 图1 文章研",
-          "publishDate": "2026-10-09",
-          "relevanceScore": 13,
-          "relevanceSignals": [
-            "paper:论文",
+            "topic:llm",
             "topic:large language model",
-            "topic:multi-modal",
-            "topic:agent",
-            "topic:多模态",
-            "topic:智能体"
+            "topic:大模型",
+            "venue:www"
           ],
           "queryLabel": "broad-2",
           "queryIntent": "",
@@ -1864,12 +1712,22 @@
         {
           "platform": "web",
           "stage": "broad",
-          "url": "https://club.mscbsc.com/t735747p1.html",
-          "title": "2026中美人工智能市场竞争：大型语言模型全球使用模",
-          "snippet": "系统梳理综合资料《2026中美人工智能市场竞争：大型语言模型全球使用模》的核心内容，聚焦核心技术与应用场景解析，为信息通信与智能技术领域提供权威参考。\n【资料简介】\n本资料为综合资料，聚焦信息通信与智能技术领域，围绕核心技术与应用场景解析等方向展开系统阐述，梳理技术演进脉络、关键能力与典型实践，为相关从业者理解产业动态与落地路径提供清晰框架与参考。\n【核心看点】\n· 核心技术与应用场景解析\n【适合用于】\n· 技术研究 · 学习参考 · 方案设计\n【适合人群】\n通信网络工程师、系统架构师、运营商技术与规划人员、设备商研发工程师、行业解决方案专家、高校通信相关专业师生\n【下载建议】\n建议从事信息通信与智能技术相关工作的技术人员下载全文，深入理解报告中的核心观点与数据支撑，为技术选型、方案设计与战略研判提供实践参考。",
-          "publishDate": "2026-09-27",
-          "relevanceScore": 0,
-          "relevanceSignals": [],
+          "url": "https://blog.gitcode.com/f40df0e67442cc26a13d3aac69ed1817.html",
+          "title": "2026前沿速览：Awesome-Agentic-Reasoning最新收录的智能体推理论文亮点与趋势分析",
+          "snippet": "Awesome-Agentic-Reasoning 是一份持续更新的智能体推理（Agentic Reasoning）论文精选清单，基于已被 TMLR 正式收录的综述 A Survey of Agentic Reasoning for Large Language Models 构建。它系统覆盖了规划、工具调用、搜索、记忆、多智能体协作与真实应用六大方向，是新手和普通研究者追踪大模型智能体（AI Agent）前沿趋势的一份完整指南。\n最新动态：从论文到 TMLR 收录的里程碑\n这个项目在 2026 年接连迎来三项重大进展，也是判断其\"含金量\"的硬指标：\n01/21/26 综述论文正式发布，覆盖递归自我改进（RSI）与集体智能体两大主题\n03/09/26 官方 Slides 上线，帮助快速掌握综述核心洞察\n09/19/26 综述被 TMLR（Transactions on Machine Learning Research）正式接收\n详细时间线可查阅 README.md 的 News 板块，演讲幻灯片则保存在 materials/Agentic Reasoning Survey Talk.pdf。\n这张总览图清晰展示了项目的知识版图：智能体推理被组织为基础推理 自进化推理 集体推理三层，每层又按\"上下文推理（In-Context）\"与\"后训练推理（Post-Training）\"两种优化范式展开。\n基础能力篇：规划、工具调用与智能体搜索\n规划推理：从工作流设计到树搜索\n清单将规划推理拆分为工作流设计、树搜索/算法模拟、过程形式化、任务分解与外部辅助五个子类。ReAct、Tree of",
+          "publishDate": "2026-10-11",
+          "relevanceScore": 12,
+          "relevanceSignals": [
+            "paper:论文",
+            "topic:llm",
+            "topic:large language model",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:post-training",
+            "topic:大模型",
+            "topic:智能体",
+            "reject:non-paper-page"
+          ],
           "queryLabel": "broad-2",
           "queryIntent": "",
           "parentUrl": ""
@@ -1877,13 +1735,16 @@
         {
           "platform": "web",
           "stage": "broad",
-          "url": "http://mp.weixin.qq.com/s?__biz=MzI4OTc4MzI5OA==&mid=2247899007&idx=3&sn=48ebcf6ad748c9f5bc7f398374fb4de5",
-          "title": "6890 万、大模型大单",
-          "snippet": "2026 年 9 月 18 日， 中国科学院计算机网络信息中心发布《2026 年 9 至 12 月政府采购意向》。 项目名称： 中国科学院计算机网络信息中心科学基础大模型采购项目 采购需求： 拟采购科学基础大模型软件系统开发及配套服务，构建面向多学科的科学基础大模型平台，突破传统科研依赖文献调研、密集实验与盲目试错的效率瓶颈，通过深度融合人工智能技术、海量科学数据、自动化实验与先进高通量计算工具，全面加速材料、化学、生物等领域的科学发现、实验设计与优化进程。 系统立足于泛模态科学数据表征与智能化推理双轮驱动，将前沿生成式大模型与跨尺度科学计算、实验规划无缝连接，支持泛模态数据表征与理解、知识长程推理、复杂计算智能求解、科研支持引擎等核心能力，支持万亿参数模型并行训练与轻量化推理，支持多种数据模态，部署于多个硬件平台。 为多学科科学领域提供从文献研读、假设生成、理论预测、实验规划到数字验证与结果评估的全链路闭环研发环境。 预算金额：6890 万元 预计采购时间：2026 - 09 云头条声明：如以上内容有误或侵犯到你公司、机构、单位或个人权益，请联系我们说明理由，我们会配合，无条件删除处理。",
-          "publishDate": "2026-09-20",
-          "relevanceScore": 2,
+          "url": "https://news.sciencenet.cn/htmlpaper/2026/9/202691613050505155571.shtm",
+          "title": "LAF 从“智能助教”到“学科引擎”：AI如何重塑大学课堂—论文",
+          "snippet": "论文标题：Research on the Development of a Large Language Model-Based Artificial Intelligence Teaching Assistant and Discipline-Based Knowledge Engine for Urban Planning: A Case Study of the New Science of Cities 期刊：Landscape Architecture Frontiers 作者：Tian ZHENG, Junhao XIA, Yue MA, Xiaolan HUANG, Ying LONG 发表时间：15 Jun 2026 DOI：10.15302/J-LAF-2026-0017 微信链接：点击此处阅读微信文章\n注：原中英文全文刊发于《景观设计学（中英文）》（Landscape Architecture Frontiers）2026年第3期。 导 读 人工智能（AI）的快速发展正推动高等教育由传统教学模式向智能化教学形态深刻转型。本文围绕AI助教系统开发、教学实践应用与学科引擎构建3个维度展开探讨。研究结果表明，通过融合领域知识注入、检索增强生成机制与文生图能力优化，AI助教不仅显著提升了专业知识问答的准确性，还在城市空间场景的图像生成任务中展现出较高的表达精度及对中国本土城市场景的适配能力。基于此，本文进一步提出以大语言模型为基底、面向学科知识体系深度定制的学科引擎建设路径，构建融合了文本生成、知识图谱与文生图协同驱动的系统架构，以实现从通用型语言模型向学科智能引擎",
+          "publishDate": "2026-09-16",
+          "relevanceScore": 3,
           "relevanceSignals": [
-            "topic:大模型"
+            "paper:paper",
+            "paper:论文",
+            "topic:large language model",
+            "reject:non-paper-page"
           ],
           "queryLabel": "broad-2",
           "queryIntent": "",
@@ -1897,343 +1758,10 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1293
+      "durationMs": 1621
     },
     {
       "label": "follow-up-2",
-      "query": "site:github.com \"ICLR 2026\" \"paper\"",
-      "stage": "follow-up",
-      "phase": "follow-up",
-      "platform": "github",
-      "searchEngine": "search_pro",
-      "domainFilter": "github.com",
-      "recencyFilter": "oneMonth",
-      "contentSize": "high",
-      "intent": "venue-year GitHub sibling search",
-      "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-      "requestedCount": 6,
-      "rawResultCount": 6,
-      "resultCount": 1,
-      "rejectedCount": 5,
-      "startedAt": "2026-10-14T06:07:14.360Z",
-      "results": [
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/google-research/rrsi",
-          "title": "GitHub - google-research/rrsi",
-          "snippet": "Check out our paper and project page for more details.\n- [09/21/2026] Our paper is out! Check it out! [project page]\nAn LLM agent's capability is largely set by its harness: the prompts, control flow, tools, memory and context management around a frozen model. Evolving the harness against a fixed evolve set is effective but overfits: the harness memorizes the training tasks, and large in-distribution gains shrink or vanish out of distribution. RRSI keeps the harness edit space open and regularizes the search trajectory through it instead.\nOn the proposal side, an annealed budget caps how many independent edits one candidate may bundle, the proposer is conditioned on the full edit history so ",
-          "publishDate": "2026-09-21",
-          "relevanceScore": 21,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:project page",
-            "announcement:our paper",
-            "topic:llm",
-            "topic:agent",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-2",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        }
-      ],
-      "rejected": [
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/README_CN.md",
-          "title": "Auto-claude-code-research-in-sleep (ARIS ⚔️ )",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-10-08",
-          "relevanceScore": 6,
-          "relevanceSignals": [
-            "paper:paper",
-            "topic:agent",
-            "reject:non-paper-page",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-2",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/yzhao062/awesome-auditable-ai",
-          "title": "GitHub - yzhao062/awesome-auditable-ai",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-10-11",
-          "relevanceScore": 10,
-          "relevanceSignals": [
-            "paper:paper",
-            "topic:llm",
-            "topic:agent",
-            "venue:icml",
-            "reject:non-paper-page",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-2",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/ggml-org/llama.cpp/discussions/20969",
-          "title": "TurboQuant - Extreme KV Cache Quantization · ggml-org ...",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-10-07",
-          "relevanceScore": 11,
-          "relevanceSignals": [
-            "paper:paper",
-            "paper:arxiv",
-            "topic:llm",
-            "topic:agent",
-            "reject:non-paper-page",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-2",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/NVlabs/LongLive",
-          "title": "NVlabs/LongLive: Long Video Gen / World Model ...",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-10-08",
-          "relevanceScore": 14,
-          "relevanceSignals": [
-            "paper:paper",
-            "topic:vla",
-            "topic:agent",
-            "topic:robotics",
-            "topic:embodied",
-            "topic:world model",
-            "reject:non-paper-page",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-2",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        }
-      ],
-      "responseKeys": [
-        "created",
-        "id",
-        "request_id",
-        "search_intent",
-        "search_result"
-      ],
-      "durationMs": 1910
-    },
-    {
-      "label": "follow-up-21",
-      "query": "site:x.com \"启动装配：LLM client、ToolService、memory、skill store │ └── stage_context.py\"",
-      "stage": "follow-up",
-      "phase": "follow-up",
-      "platform": "x",
-      "searchEngine": "search_pro",
-      "domainFilter": "x.com",
-      "recencyFilter": "oneMonth",
-      "contentSize": "high",
-      "intent": "exact title social announcement",
-      "parentUrl": "https://www.github.com/datawhalechina/self-harness",
-      "requestedCount": 6,
-      "rawResultCount": 1,
-      "resultCount": 1,
-      "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:07:16.270Z",
-      "results": [
-        {
-          "platform": "x",
-          "stage": "follow-up",
-          "url": "https://x.com/i/article/2103863862655172789",
-          "title": "本体「论」：LLM 应用的基础设施？",
-          "snippet": "![Article cover image](https://pbs.twimg.com/media/HTJr9aEagAAYwRT?format=webp&name=medium)\n\n本体「论」：LLM 应用的基础设施？\n\n![zhonghm](https://pbs.twimg.com/profile_images/1945623132619911168/2ygzQM8R_normal.jpg) zhonghm @ zhonghm Sep 26\n\n随着大语言模型的发展，很多在学术界用了多年的术语被一个个翻出来，成了流行词。智能体（agent）是一个例子。Wooldridge 和 Jennings 在 1995 年的综述里给过它一个「弱定义」，要求具备自主性、社交能力、反应性和主动性。\n\n![](https://pbs.twimg.com/media/HTJsP3fbkAA3ACm.jpg)\n\n世界模型的出处更早，1943 年心理学家 Craik 在《解释的本质》里写过，生物体头脑里带着一个外部现实的缩小模型（small-scale model），可以先在里面试各种做法，再决定怎么行动。\n\n具身智能常被追溯到 Brooks 1991 年的论文《Intelligence without representation》，他认为智能行为不一定需要在内部显式地表示世界，可以直接把世界本身当作模型来用。\n\n本体论也成了这个名单上的一员。它源自哲学，原本研究的是「存在」：什么东西存在，存在的东西有哪些基本类别。拉丁词 ontologia 已知最早出现在 1606 年 Lorhard 的《",
-          "publishDate": "2026-09-26",
-          "relevanceScore": 23,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:accepted by",
-            "topic:llm",
-            "topic:agent",
-            "topic:大模型",
-            "topic:智能体",
-            "topic:具身",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-21",
-          "queryIntent": "exact title social announcement",
-          "parentUrl": "https://www.github.com/datawhalechina/self-harness"
-        }
-      ],
-      "rejected": [],
-      "responseKeys": [
-        "created",
-        "id",
-        "request_id",
-        "search_intent",
-        "search_result"
-      ],
-      "durationMs": 1639
-    },
-    {
-      "label": "follow-up-1",
-      "query": "\"ICLR 2026\" \"paper\" \"official code\"",
-      "stage": "follow-up",
-      "phase": "follow-up",
-      "platform": "web",
-      "searchEngine": "search_pro",
-      "domainFilter": "",
-      "recencyFilter": "oneMonth",
-      "contentSize": "high",
-      "intent": "expand from venue-year signal to sibling papers",
-      "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-      "requestedCount": 6,
-      "rawResultCount": 6,
-      "resultCount": 6,
-      "rejectedCount": 0,
-      "startedAt": "2026-10-14T06:07:17.909Z",
-      "results": [
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://www.bilibili.com/video/BV1p4em6fEjY/",
-          "title": "【ICLR 2026】🥇Log-Linear Attention：用对数级增长的隐藏状态打通线性注意力与全注意力",
-          "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】Log-Linear Attention (ICLR 2026) — 把因果掩码 M 从半可分推广到分层低秩，用Fenwick 树分桶换来介于线性注意力与全注意力之间的第三条路径。 - 提出 Log-Linear Attention：把线性注意力/SSM 里那个固定大小的隐藏状态，换成一个大小随序列长度对数增长的状态集合。 - 关键切口是掩码结构：在统一形式 P A M 下，A 是注意力核、M 是因果掩码；决定复杂度的不是去掉了 softmax，而是 M 的结构。 - 用 Fenwick 树分桶把前缀切成 O(log T) 个大小指数增长的桶：近期 token 保留高分辨率，远端 token 只留粗粒度摘要。 - 与半可分（sss）掩码不同，分层掩码让训练落在 O(T log T)、解码状态落在 O(log T)，且依然保持矩阵乘密集的并行形式。 - 这是一个通用框架：任何具备分块并行原语的线性注意力都能被「提升」为 log-linear 版本；作者用 Mamba-2 与 Gated DeltaNet 两个实例做验证。 本视频由 AI 自动生成，仅供学术交流使用。",
-          "publishDate": "2026-09-18",
-          "relevanceScore": 11,
-          "relevanceSignals": [
-            "paper:论文",
-            "venue:iclr",
-            "venue:www",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "expand from venue-year signal to sibling papers",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://www.bilibili.com/video/BV1LTeL6WEHG/",
-          "title": "【ICLR 2026】🥇MemGen：为自进化智能体编织生成式潜在记忆",
-          "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】MemGen: Weaving Generative Latent Memory for Self-Evolving Agents (ICLR 2026) — MemGen 把何时记、记什么”从人工设计的粒度，变成可学习的潜在生成过程——冻结推理核，只训练两个 LoRA。 - 提出 MemGen：一个动态生成式的智能体记忆框架。 - 把 RL 训练的记忆触发器 与 生成式记忆编织器 整合在一起。 - 覆盖 9 个数据集 / 5 大领域：web search、具身动作、数学、科学推理、代码。 - 仅需 冻结推理核 两个 LoRA 即可获得 跨域可迁移的记忆增益。 本视频由 AI 自动生成，仅供学术交流使用。",
-          "publishDate": "2026-09-16",
-          "relevanceScore": 17,
-          "relevanceSignals": [
-            "paper:论文",
-            "topic:agent",
-            "topic:智能体",
-            "topic:具身",
-            "venue:iclr",
-            "venue:www",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "expand from venue-year signal to sibling papers",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://www.bilibili.com/video/BV1UVeV66EeC/",
-          "title": "【ICLR 2026】🥇MemGAS：从单粒度到多粒度，会话智能体的长期记忆关联与选择",
-          "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents (ICLR 2026) — 把长期记忆从「单一粒度切分 固定 top-k 检索」改写为 多粒度记忆单元 GMM 关联 熵路由自适应选择。 - 提出 MemGAS：一个面向会话智能体的长期记忆关联 选择 检索框架。 - 把每条会话记忆拆成 四种粒度单元：session、turn、LLM 生成的 summary 与 keyword，即 Mi Si, Ti, Ui, Ki。 - GMM 关联：新记忆与历史记忆的相似度向量经高斯混合模型聚类，分成 accept / reject 集合， 在关联图上建立跨粒度边——模拟人类记忆巩固。 - 熵路由：以各粒度相似度分布的 Shannon 熵衡量置信度，逆熵加权 wg (1/Hg)/(1/Hg')， 再经 PPR 在关联图上传播，最后用 LLM 过滤冗余。 - 全程训练-free：gpt-4o-mini 零样本提示，不微调任何模块。 本视频由 AI 自动生成，仅供学术交流使用。",
-          "publishDate": "2026-09-15",
-          "relevanceScore": 17,
-          "relevanceSignals": [
-            "paper:论文",
-            "topic:llm",
-            "topic:agent",
-            "topic:智能体",
-            "venue:iclr",
-            "venue:www",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "expand from venue-year signal to sibling papers",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://www.bilibili.com/video/BV1BwY165Eah/",
-          "title": "【ICLR 2026】🏆ELMUR：长时程部分可观测决策，给每一层 Transformer 装上可重写的外部记忆",
-          "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL Problems (ICLR 2026) — 把「缓存上一段的激活」换成「每层一条显式的记忆轨道 LRU 重写规则」， 用近乎恒定的额外成本换来 10 万倍于注意力窗口的有效记忆跨度。 - 论文开场的具体场景：机器人煮意面——盐溶进汤里看不见，于是它反复加盐，直到整锅不能吃。缺的不是算力，而是对「已经加过盐」的记忆。 - 长时程 部分可观测是一般设定：关键线索出现在决策之前很久（本组前期工作把它量化为「相关性视界」）。 - 两条现成路线都不成立：扩大窗口让注意力代价平方增长；截断历史直接遗忘。朴素记忆扩展在规模与稀疏奖励下崩塌。 - 本文的切口不是把窗口做长，而是给每一层外挂一个可读、可写、按需重写的记忆轨道，段与段之间只传递这一份有界状态。 - 覆盖范围：T-Maze（合成）、POPGym-48（棋盘 控制）、MIKASA-Robo（视觉稀疏奖励操作），附录再加 D4RL MuJoCo 与 ViZDoom。 本视频由 AI 自动生成，仅供学术交流使用。",
-          "publishDate": "2026-09-15",
-          "relevanceScore": 11,
-          "relevanceSignals": [
-            "paper:论文",
-            "venue:iclr",
-            "venue:www",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "expand from venue-year signal to sibling papers",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://www.bilibili.com/video/BV1s8e76LEGB/",
-          "title": "【ICLR 2026】🥇MoM：把「一份大记忆」换成「多份小记忆」的线性序列建模",
-          "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文信息】MoM: Linear Sequence Modeling with Mixture-of-Memories（ICLR 2026，arXiv:2502.13685，上海人工智能实验室 清华 复旦 港科广 港中文） 线性序列模型把整段历史压成一份固定大小的矩阵记忆状态 Mt（dd）：训练复杂度 O(n)、推理记忆 O(1)，但召回密集型任务上表现塌方。作者指出瓶颈不在容量，而在记忆干扰——不同来源的信息写进同一份状态，新信息覆盖旧信息（论文引 David Eagleman：记忆的敌人不是时间，而是其它记忆”）。 MoM 用多份彼此独立的记忆状态替代单份记忆：路由器对每个 token 选 top-k 份记忆写入，未激活的记忆保持不变；另有一份始终激活的共享记忆承载长程信息；读出时按重要性分数加权求和成混合记忆。因为「先混合再查询」与「先各自查询再混合」数学等价，MoM 可以直接复用现成的 varlen Triton 算子，不需要新写内核。 关键结果： · 13 亿参数下召回密集型任务平均 36.04，与 Transformer 的 37.31 只差 1.27 分（同规模 Gated DeltaNet 仅 32.30）； · 4.44 亿参数的多记忆模型（41.97 / 28.16）超过 5.50 亿参数的单记忆扩容版（41.32 / 26.32）——收益来自记忆分离而非参数堆叠； · 2K 上下文训练外推到 32K：Transformer 困惑度涨到 2271.3，MoM 在外推区间保持最低； · LongBench 平均",
-          "publishDate": "2026-09-17",
-          "relevanceScore": 16,
-          "relevanceSignals": [
-            "paper:arxiv",
-            "paper:论文",
-            "topic:llm",
-            "venue:iclr",
-            "venue:www",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "expand from venue-year signal to sibling papers",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://blog.csdn.net/weixin_29061509/article/details/166427003",
-          "title": "ICLR 2026论文入选经验：从选题到投稿的全流程解析",
-          "snippet": "1. 实验室论文入选ICLR 2026的技术复盘\n实验室四篇论文同时被ICLR 2026接收的消息传来时，我们正在调试一个多模态模型的损失函数。咖啡机突然发出完成的提示音——这个巧合后来被团队戏称为\"学术成果的物理通知系统\"。作为全程参与这四篇论文工作的研究者，我想通过本文梳理从选题到投稿的全流程经验，特别会聚焦那些在常规学术论文中不会展开的\"实验室生存技巧\"。\nICLR（International Conference on Learning Representations）作为机器学习领域的顶级会议，2026年的投稿量预计将突破8000篇，录用率可能继续维持在25%左右。在这样的竞争环境下，我们团队采用了一套组合策略：两篇论文主打方法论创新（分别涉及注意力机制改进和损失函数设计），一篇专注应用突破（医疗影像分析），最后一篇则是理论证明（关于神经网络泛化能力的边界）。这种\"211\"的配比既分散了风险，又形成了学术观点的立体呈现。\n2. 论文选题与创新点设计\n2.1 方法论类论文的破局思路\n《Dynamic Sparse Attention for Efficient Transformers》这篇的灵感来源于一个被忽视的工程现象：我们在部署视觉Transformer模型时，发现超过78%的注意力权重集中在5%的token对上。通过系统性地分析12个主流数据集的注意力模式，我们提出了一种动态稀疏化方法。关键技术在于：\n实时重要性评估模块：采用轻量级CNN预测token重要性分数\n可微分稀疏化：通过改进的top-k算子实现端到端训练\n硬件感知设计：算法复杂度与GPU内存访问模式匹",
-          "publishDate": "2026-09-22",
-          "relevanceScore": 15,
-          "relevanceSignals": [
-            "paper:论文",
-            "announcement:录用",
-            "topic:多模态",
-            "venue:iclr",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-1",
-          "queryIntent": "expand from venue-year signal to sibling papers",
-          "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410"
-        }
-      ],
-      "rejected": [],
-      "responseKeys": [
-        "created",
-        "id",
-        "request_id",
-        "search_intent",
-        "search_result"
-      ],
-      "durationMs": 1201
-    },
-    {
-      "label": "follow-up-4",
       "query": "site:github.com \"EMNLP 2026\" \"llm multimodal agent\"",
       "stage": "follow-up",
       "phase": "follow-up",
@@ -2248,7 +1776,7 @@
       "rawResultCount": 6,
       "resultCount": 2,
       "rejectedCount": 4,
-      "startedAt": "2026-10-14T06:07:19.110Z",
+      "startedAt": "2026-10-15T05:53:46.851Z",
       "results": [
         {
           "platform": "web",
@@ -2270,7 +1798,7 @@
             "topic:post-training",
             "source:high-signal-url"
           ],
-          "queryLabel": "follow-up-4",
+          "queryLabel": "follow-up-2",
           "queryIntent": "venue-year GitHub sibling search",
           "parentUrl": "https://arxiv.org/list/cs.CL/recent"
         },
@@ -2292,8 +1820,180 @@
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
-          "queryLabel": "follow-up-4",
+          "queryLabel": "follow-up-2",
           "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
+        }
+      ],
+      "rejected": [
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/LowEntropyAI/awesome-proactive-agent",
+          "title": "LowEntropyAI/awesome-proactive-agent",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
+          "publishDate": "2026-10-09",
+          "relevanceScore": 8,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:multimodal",
+            "topic:agent",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-2",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://www.github.com/topics/multi-agent",
+          "title": "multi-agent",
+          "snippet": "Here are 17,350 public repositories matching this topic... \nLanguage: All\nbytedance  /  deer-flow\nAn open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.\nnodejs python agent typescript ai podcast multi-agent superagent harness ai-agents llm langchain agentic langgraph agentic-framework agentic-workflow deep-research langmanus\n Updated  Sep 25, 2026 Python\nruvnet  /  ruflo\n Star  73.2k\n Code   Issues   Pull requests   Discussions \n     The original agent harness. Deploy intelligent multi-player swarms, coordinate ",
+          "publishDate": "2026-09-25",
+          "relevanceScore": 14,
+          "relevanceSignals": [
+            "announcement:开源",
+            "topic:llm",
+            "topic:multimodal",
+            "topic:multi-modal",
+            "topic:agent",
+            "topic:rag",
+            "venue:www",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-2",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/topics/android-agent",
+          "title": "android-agent · GitHub Topics",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
+          "publishDate": "2026-09-16",
+          "relevanceScore": 11,
+          "relevanceSignals": [
+            "topic:llm",
+            "topic:vlm",
+            "topic:multimodal",
+            "topic:agent",
+            "venue:neurips",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-2",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://www.github.com/topics/skill",
+          "title": "skill",
+          "snippet": "Here are 7,301 public repositories matching this topic... \nJuliusBrussee  /  caveman\n     why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.\ntokens caveman claude llm prompt-engineering anthropic claude-code\n Updated  Sep 23, 2026 Go\nLeonxlnx  /  taste-skill\n Sponsor \n Star  89.6k\n Code   Issues   Pull requests   Discussions \nTaste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop \nagent design ai frontend skills skill coding codex claude nocode lowcode vibecoding claude-code\n Updated  Sep 23, 2026 JavaScript\nComposioHQ  /  awesome-claude-skills\n Star  75.6k\n Code   Issues   Pu",
+          "publishDate": "2026-09-24",
+          "relevanceScore": 28,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:llm",
+            "topic:multimodal",
+            "topic:agent",
+            "topic:rag",
+            "venue:acl",
+            "venue:emnlp",
+            "venue:cvpr",
+            "venue:iccv",
+            "venue:iclr"
+          ],
+          "queryLabel": "follow-up-2",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
+        }
+      ],
+      "responseKeys": [
+        "created",
+        "id",
+        "request_id",
+        "search_intent",
+        "search_result"
+      ],
+      "durationMs": 1237
+    },
+    {
+      "label": "follow-up-11",
+      "query": "site:x.com \"01 成果一 《Multimodal Fusion via Self-Consistent Task-Gradient Fields》-- ICML 2026 该篇论文由2023级研究生熊佳芋（第一作者）发表在CCFA类推荐、机器学习领域国际顶级会议 ICML 2026。 简介：多模态学习的难点在于既要在不同输入间保留任务相关信息，又不能因融合而损害特征提取。现有的激进融合会使模态表征相互纠缠，对缺失输入变得脆弱；而用辅助损失强行分离特\"",
+      "stage": "follow-up",
+      "phase": "follow-up",
+      "platform": "x",
+      "searchEngine": "search_pro",
+      "domainFilter": "x.com",
+      "recencyFilter": "oneMonth",
+      "contentSize": "high",
+      "intent": "exact title social announcement",
+      "parentUrl": "http://mp.weixin.qq.com/s?__biz=MzAxNDA1MTQwNg==&mid=2651433112&idx=2&sn=7607c1c2cf23ac66cf3e1399a6ae8964",
+      "requestedCount": 6,
+      "rawResultCount": 0,
+      "resultCount": 0,
+      "rejectedCount": 0,
+      "startedAt": "2026-10-15T05:53:48.088Z",
+      "results": [],
+      "rejected": [],
+      "responseKeys": [
+        "created",
+        "id",
+        "request_id",
+        "search_intent",
+        "search_result"
+      ],
+      "durationMs": 1518
+    },
+    {
+      "label": "follow-up-1",
+      "query": "\"EMNLP 2026\" \"llm multimodal agent\" \"official code\"",
+      "stage": "follow-up",
+      "phase": "follow-up",
+      "platform": "web",
+      "searchEngine": "search_pro",
+      "domainFilter": "",
+      "recencyFilter": "oneMonth",
+      "contentSize": "high",
+      "intent": "expand from venue-year signal to sibling papers",
+      "parentUrl": "https://arxiv.org/list/cs.CL/recent",
+      "requestedCount": 6,
+      "rawResultCount": 6,
+      "resultCount": 1,
+      "rejectedCount": 5,
+      "startedAt": "2026-10-15T05:53:49.606Z",
+      "results": [
+        {
+          "platform": "arxiv",
+          "stage": "follow-up",
+          "url": "https://arxiv.org/list/cs.AI/pastweek?show=250&skip=41",
+          "title": "Artificial Intelligence",
+          "snippet": "Showing up to 250 entries per page:   fewer  |   more  |   all\nTitle:  SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models \nSubjects: Artificial Intelligence (cs.AI)\nTitle:  Learning Situation-Conditioned Thinking Policies for Long-Term LLM Agents \nSubjects: Artificial Intelligence (cs.AI) ; Robotics (cs.RO) \nTitle:  Dual- versus Single-Suggestion AI Support for Radiographic Interpretation in Residents: Randomized Multireader Study \nSubjects: Artificial Intelligence (cs.AI) ; Computers and Society (cs.CY) \nTitle:  World Potential Model: Pretrained World Knowledge as Progress Potentials \nSubjects: Artificial Intelligence (cs.AI)\nTitle:  DrugTargetWorld: A Synt",
+          "publishDate": "2026-10-09",
+          "relevanceScore": 36,
+          "relevanceSignals": [
+            "paper:paper",
+            "paper:preprint",
+            "paper:arxiv",
+            "topic:llm",
+            "topic:multimodal",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:robotics",
+            "topic:embodied",
+            "topic:world model"
+          ],
+          "queryLabel": "follow-up-1",
+          "queryIntent": "expand from venue-year signal to sibling papers",
           "parentUrl": "https://arxiv.org/list/cs.CL/recent"
         }
       ],
@@ -2318,69 +2018,76 @@
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "venue-year GitHub sibling search",
+          "queryLabel": "follow-up-1",
+          "queryIntent": "expand from venue-year signal to sibling papers",
           "parentUrl": "https://arxiv.org/list/cs.CL/recent"
         },
         {
           "platform": "web",
           "stage": "follow-up",
-          "url": "https://github.com/yzhao062/awesome-auditable-ai",
-          "title": "GitHub - yzhao062/awesome-auditable-ai",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-10-11",
-          "relevanceScore": 10,
+          "url": "https://aihot.virxact.com/items/cmuknsyrq1yf2ro9h5u9s4a1u",
+          "title": "Google Research 推出 AI 视频联合导演，用 4 个智能体框架生成连贯的长视频",
+          "snippet": "AI 导读\nGoogle Research 推出 AI 视频联合导演，由 4 个智能体框架组成，运行在 Gemini 和 Veo 之上，用于解决多镜头 AI 视频中的身份漂移和级联错误问题。\n原文 · 保持原样，未翻译 \nGoogle Research  has introduced an  AI video co-director  for long-form video generation. The suite of 4 agentic frameworks turns short clips into coherent, minutes-long stories. It targets identity drift and cascading errors, the 2 failures that break most multi-shot AI video pipelines today.\nWhy Long AI Videos Fall Apart\nDiffusion models render high-fidelity clips in seconds. Stitching those clips into a story is harder. Most agentic pipelines chain modules with independent, handcrafted prompts. That causes  semantic drift , where attire or scenery shifts between shots. It also ca",
+          "publishDate": "2026-09-28",
+          "relevanceScore": 24,
           "relevanceSignals": [
             "paper:paper",
+            "paper:project page",
             "topic:llm",
+            "topic:vlm",
+            "topic:mllm",
+            "topic:multimodal",
             "topic:agent",
-            "venue:icml",
-            "reject:non-paper-page",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
+            "topic:rag",
+            "topic:智能体",
+            "venue:emnlp"
           ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "venue-year GitHub sibling search",
+          "queryLabel": "follow-up-1",
+          "queryIntent": "expand from venue-year signal to sibling papers",
           "parentUrl": "https://arxiv.org/list/cs.CL/recent"
         },
         {
-          "platform": "web",
+          "platform": "arxiv",
           "stage": "follow-up",
-          "url": "https://github.com/12britz/awesome-free-models",
-          "title": "12britz/awesome-free-models: A curated list of free AI ...",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-10-12",
-          "relevanceScore": 3,
+          "url": "https://arxiv.org/list/cs.AI/pastweek?show=2000&skip=493",
+          "title": "Artificial Intelligence",
+          "snippet": "Showing up to 2000 entries per page:   fewer  |  more  |  all\nTitle:  ScholarStack: Layered Research Asset Orchestration and Cross-Task Reuse for Scientific Agents \nSubjects: Artificial Intelligence (cs.AI)\nTitle:  PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI \nSubjects: Artificial Intelligence (cs.AI)\nTitle:  Are Human-Aligned Models Models of Humans? A Turing-Test Gap in Preference Alignment \nSubjects: Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL); Machine Learning (cs.LG) \nTitle:  AgentBetta: Verification-Driven Adaptive Configuration of an AI Nano-Agent through Selective Expansion and Verified Contraction \nSubje",
+          "publishDate": "2026-09-25",
+          "relevanceScore": 26,
           "relevanceSignals": [
-            "topic:agent",
-            "reject:non-paper-page",
-            "source:high-signal-url",
-            "source:evidence-follow-up"
-          ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "venue-year GitHub sibling search",
-          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
-        },
-        {
-          "platform": "web",
-          "stage": "follow-up",
-          "url": "https://github.com/topics/android-agent",
-          "title": "android-agent · GitHub Topics",
-          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
-          "publishDate": "2026-09-16",
-          "relevanceScore": 11,
-          "relevanceSignals": [
+            "paper:preprint",
+            "paper:arxiv",
+            "announcement:accepted by",
             "topic:llm",
+            "topic:large language model",
             "topic:vlm",
             "topic:multimodal",
             "topic:agent",
-            "venue:neurips",
+            "topic:reasoning",
+            "venue:emnlp"
+          ],
+          "queryLabel": "follow-up-1",
+          "queryIntent": "expand from venue-year signal to sibling papers",
+          "parentUrl": "https://arxiv.org/list/cs.CL/recent"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/LowEntropyAI/awesome-proactive-agent",
+          "title": "LowEntropyAI/awesome-proactive-agent",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
+          "publishDate": "2026-10-09",
+          "relevanceScore": 8,
+          "relevanceSignals": [
+            "paper:paper",
+            "topic:multimodal",
+            "topic:agent",
             "reject:non-paper-page",
             "source:high-signal-url",
             "source:evidence-follow-up"
           ],
-          "queryLabel": "follow-up-4",
-          "queryIntent": "venue-year GitHub sibling search",
+          "queryLabel": "follow-up-1",
+          "queryIntent": "expand from venue-year signal to sibling papers",
           "parentUrl": "https://arxiv.org/list/cs.CL/recent"
         }
       ],
@@ -2391,37 +2098,177 @@
         "search_intent",
         "search_result"
       ],
-      "durationMs": 1299
+      "durationMs": 1778
+    },
+    {
+      "label": "follow-up-4",
+      "query": "site:github.com \"ICML 2026\" \"llm agent rag\"",
+      "stage": "follow-up",
+      "phase": "follow-up",
+      "platform": "github",
+      "searchEngine": "search_pro",
+      "domainFilter": "github.com",
+      "recencyFilter": "oneMonth",
+      "contentSize": "high",
+      "intent": "venue-year GitHub sibling search",
+      "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119",
+      "requestedCount": 6,
+      "rawResultCount": 6,
+      "resultCount": 1,
+      "rejectedCount": 5,
+      "startedAt": "2026-10-15T05:53:51.384Z",
+      "results": [
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://gist.github.com/masta-g3/8f7227397b1053b42e727bbd6abf1d2e",
+          "title": "Updated 2026-10-07 · GitHub",
+          "snippet": "Compressing Large Language Models using Low Rank and Low Precision Decomposition |\n|  | Video Enriched Retrieval Augmented Generation Using Aligned Video Captions |\n|  | Mechanistic Interpretability of Binary and Ternary Transformers |\n|  | Enhanced Robot Arm at the Edge with NLP and Vision Systems |\n|  | Generative Query Reformulation Using Ensemble Prompting, Document Fusion, and Relevance Feedback |\n|  | HEART-felt Narratives: Tracing Empathy and Narrative Style in Personal Stories with LLMs |\n|  | Reason3D: Searching and Reasoning 3D Segmentation via Large Language Model |\n|  | THREAD: Thinking Deeper with Recursive Spawning |\n|  | Match, Compare, or Select? An Investigation of Large Lan",
+          "publishDate": "2026-10-08",
+          "relevanceScore": 24,
+          "relevanceSignals": [
+            "topic:llm",
+            "topic:large language model",
+            "topic:vision language",
+            "topic:multimodal",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:video understanding",
+            "topic:rag",
+            "topic:post-training",
+            "source:high-signal-url"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119"
+        }
+      ],
+      "rejected": [
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/topics/context-management",
+          "title": "context-management",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
+          "publishDate": "2026-10-05",
+          "relevanceScore": 9,
+          "relevanceSignals": [
+            "topic:llm",
+            "topic:agent",
+            "topic:rag",
+            "topic:智能体",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/OpenGithubs/github-monthly-rank",
+          "title": "Github开源项目:每月📈飙升榜top30,每月1号早上8点更新",
+          "snippet": "- Discover社区: - OpenGithub社区：\n- Github : - 微信公众号: >>搜索开源推荐官\n- 头条社区: >>搜索Discover社区\n- 知乎社区: >>搜索Open Github社区\n- 订阅Github: >> Github周刊 , Github月刊\n- 订阅榜单 : >> Github日榜 , Github周榜 , Github月榜\n- 喜欢分享&关注开源, +微信: open_github\n2026.09.30月榜最佳项目前5名\n- **榜单增长第1名 : tt-a1i/archify **\n- 开源地址：\n- 开源时间：2026-04-15\n- ⭐ 总星标数量：74146⭐\n- 月Star增长量：40043⭐\n- 项目描述: Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.\n- **榜单增长第2名 : ayghri/i-have-adhd **\n- 开源地址：\n- 开源时间：2026-05-14\n- ⭐ 总星标数量：52110⭐\n- 月Star增长量：27516⭐\n- 项目描述: A skill to stop your coding agent from burying the answer. ADHD-friendly output.\n- **榜单增长第3名 : Nandha",
+          "publishDate": "2026-10-01",
+          "relevanceScore": 10,
+          "relevanceSignals": [
+            "announcement:开源",
+            "topic:llm",
+            "topic:agent",
+            "topic:reasoning",
+            "topic:rag",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://www.github.com/topics/multi-agent",
+          "title": "multi-agent",
+          "snippet": "Here are 17,350 public repositories matching this topic... \nLanguage: All\nbytedance  /  deer-flow\nAn open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.\nnodejs python agent typescript ai podcast multi-agent superagent harness ai-agents llm langchain agentic langgraph agentic-framework agentic-workflow deep-research langmanus\n Updated  Sep 25, 2026 Python\nruvnet  /  ruflo\n Star  73.2k\n Code   Issues   Pull requests   Discussions \n     The original agent harness. Deploy intelligent multi-player swarms, coordinate ",
+          "publishDate": "2026-09-25",
+          "relevanceScore": 14,
+          "relevanceSignals": [
+            "announcement:开源",
+            "topic:llm",
+            "topic:multimodal",
+            "topic:multi-modal",
+            "topic:agent",
+            "topic:rag",
+            "venue:www",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119"
+        },
+        {
+          "platform": "web",
+          "stage": "follow-up",
+          "url": "https://github.com/aliyun/ai-agent-handbook/blob/main/04-governance/%E7%AC%AC%2014%20%E7%AB%A0%E3%80%80Agent%20%E5%AE%89%E5%85%A8.md",
+          "title": "第14 章Agent 安全.md",
+          "snippet": "Skip to content\n\nNavigation Menu\n\nSign in\n\n-\n\nAI CODE CREATION\n\nGitHub Copilot Write better code with AI\nGitHub Copilot app Direct agents from issue to merge\nMCP Registry Integrate external tools\n\nDEVELOPER WORKFLOWS\n\nActions Automate any workflow\nCodespaces Instant dev environments\nIssues Plan and track work\nCode Review Manage code changes\nCode Quality Enforce quality at merge\n\nAPPLICATION SECURITY\n\nGitHub Advanced Security Find and fix vulnerabilities\nCode security Secure your code as you build\nSecret protection Stop leaks before they start\n\nEXPLORE\n\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\n\nView all features\n-\n\nBY COMPANY SIZE\n\nEnterprises\nSmall and medium teams\nStartups\nNonpro",
+          "publishDate": "2026-09-24",
+          "relevanceScore": 3,
+          "relevanceSignals": [
+            "topic:agent",
+            "reject:non-paper-page",
+            "source:high-signal-url",
+            "source:evidence-follow-up"
+          ],
+          "queryLabel": "follow-up-4",
+          "queryIntent": "venue-year GitHub sibling search",
+          "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119"
+        }
+      ],
+      "responseKeys": [
+        "created",
+        "id",
+        "request_id",
+        "search_intent",
+        "search_result"
+      ],
+      "durationMs": 1080
     }
   ],
   "readers": [
     {
-      "platform": "web",
-      "stage": "seed",
-      "url": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-      "title": "整理好了！CCF-A、CCF-B人工智能学术会议清单！",
-      "snippet": "同学们应该都知道 今年 3 月，CCF正式发布了第七版会议和期刊目录\n对于 AI 方向的同学来说，本次调整中最受关注的变化莫过于两个：ICLR 首次被收录即空降 A 类会议，IJCAI\n今天，深度之眼帮同学们梳理了 CCF 第七版目录中人工智能领域的 A 类和 B 类会议，帮你投稿选会不再纠结（注意，只是人工智能领域哈）。\n人工智能 CCF-A 类7个顶尖会议人工智能 CCF-B 类14个重要会议\n01\n人工智能 CCF-A 类学术会议\nCCF-A 类代表国际顶尖水平，录用率极低，也是咱们同学的最高目标。第七版目录中，A 类会议共 7 个：AAAI\n01AAAI\nAAAI Conference on Artificial Intelligence · AAAI 人工智能会议\n，CCF-A，AAAI 出版，人工智能领域历史最悠久的综合性顶级会议之一，覆盖机器学习、自然语言处理\n、计算机视觉、知识表示等广泛方向，2026 年投稿量达 23680 篇，录用率仅 17.6%。\n02NeurIPS\n人工智能与机器学习领域规模最大、影响力最强的顶级会议之一，涵盖深度学习、计算神经科学\n、统计学习等方向，与 ICML、ICLR 并称机器学习三大顶会。此次目录公示期间恰逢 NeurIPS 相关事件，最终 NeurIPS 仍保持在 A 类会议中。\n03ICML\n国际机器学习大会，CCF-A，机器学习领域历史最悠久、影响最广的顶级会议，谷歌学术\n04ICLR\n国际学习表征会议，CCF-A，深度学习与表征学习领域的顶级会议，2026 年首次被 CCF 收录即空降 A 类，与 NeurIPS、ICML",
-      "publishDate": "2026-09-30",
-      "relevanceScore": 33,
+      "platform": "arxiv",
+      "stage": "follow-up",
+      "url": "https://arxiv.org/list/cs.AI/pastweek?show=250&skip=41",
+      "title": "Artificial Intelligence",
+      "snippet": "Showing up to 250 entries per page:   fewer  |   more  |   all\nTitle:  SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models \nSubjects: Artificial Intelligence (cs.AI)\nTitle:  Learning Situation-Conditioned Thinking Policies for Long-Term LLM Agents \nSubjects: Artificial Intelligence (cs.AI) ; Robotics (cs.RO) \nTitle:  Dual- versus Single-Suggestion AI Support for Radiographic Interpretation in Residents: Randomized Multireader Study \nSubjects: Artificial Intelligence (cs.AI) ; Computers and Society (cs.CY) \nTitle:  World Potential Model: Pretrained World Knowledge as Progress Potentials \nSubjects: Artificial Intelligence (cs.AI)\nTitle:  DrugTargetWorld: A Synt",
+      "publishDate": "2026-10-09",
+      "relevanceScore": 36,
       "relevanceSignals": [
-        "paper:论文",
-        "announcement:录用",
-        "topic:智能体",
-        "topic:具身",
-        "venue:aaai",
-        "venue:acl",
-        "venue:emnlp",
-        "venue:cvpr",
-        "venue:iccv",
-        "venue:iclr"
+        "paper:paper",
+        "paper:preprint",
+        "paper:arxiv",
+        "topic:llm",
+        "topic:multimodal",
+        "topic:agent",
+        "topic:reasoning",
+        "topic:robotics",
+        "topic:embodied",
+        "topic:world model"
       ],
-      "queryLabel": "seed-1",
-      "queryIntent": "",
-      "parentUrl": "",
+      "queryLabel": "follow-up-1",
+      "queryIntent": "expand from venue-year signal to sibling papers",
+      "parentUrl": "https://arxiv.org/list/cs.CL/recent",
       "readerTitle": "",
-      "readerExcerpt": "",
-      "durationMs": 0,
-      "skipped": true
+      "readerExcerpt": "reader failed: request timed out after 20000ms",
+      "readerError": "request timed out after 20000ms",
+      "durationMs": 26959,
+      "skipped": false
     },
     {
       "platform": "arxiv",
@@ -2447,8 +2294,8 @@
       "queryIntent": "",
       "parentUrl": "",
       "readerTitle": "Computation and Language",
-      "readerExcerpt": "Computation and Language Skip to main content ![Image 1: archive](https://arxiv.org/static/base/1.0.1/images/arxiv-logo-primary-light.svg) Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search # Computation and Language ## Authors and titles for recent submissions - Mon, 12 Oct 2026 - Fri, 9 Oct 2026 - Thu, 8 Oct 2026 - Wed, 7 Oct 2026 - Tue, 6 Oct 2026 See today's new changes Total of 768 entries : 1-50 51-100 101-150 151-200 ... 751-768 Showing up to 50 entries per page: fewer | more | all ### Mon, 12 Oct 2026 (showing first 50 of 116 entries ) [1] arXiv:2610.13912 [pdf, html, other] : Title: RSI-Anything: Unlocking Recursive Self-Improvement with World Models Taoyong Cui, Pinxian Zeng, Wanghan Xu, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang Comments: Code: this https URL Subjects: Computation and Language (cs.CL) [2] arXiv:2610.13910 [pdf, html, other] : Title: When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors Shubh Garg, Chen Shani Subjects: Computation and Language (cs.CL) [3] arXiv:2610.13896 [pdf, html, other] : Title: Structural Automata for Neural Semantic Parsing Xiao Zhang Subjects: Computation and Language (cs.CL) [4] arXiv:2610.13895 [pdf, html, other] : Title: Task Context Shapes Component Roles in Language Models Sovesh Mohapatra, Dani S Bassett Co",
-      "durationMs": 778,
+      "readerExcerpt": "Computation and Language Skip to main content ![Image 1: archive](https://arxiv.org/static/base/1.0.1/images/arxiv-logo-primary-light.svg) Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search # Computation and Language ## Authors and titles for recent submissions - Thu, 15 Oct 2026 - Wed, 14 Oct 2026 - Mon, 12 Oct 2026 - Fri, 9 Oct 2026 - Thu, 8 Oct 2026 See today's new changes Total of 763 entries : 1-50 51-100 101-150 151-200 ... 751-763 Showing up to 50 entries per page: fewer | more | all ### Thu, 15 Oct 2026 No updates for this time period. ### Wed, 14 Oct 2026 (showing first 50 of 385 entries ) [1] arXiv:2610.18868 [pdf, html, other] : Title: Tev: Scaling Long-Horizon Agentic Environments with Dense Progress Rewards Wenbo Hu, Shraman Pramanick, Krishna Kumar Singh, Nanyun Peng, Kai-Wei Chang, Yong Jae Lee Comments: this https URL Subjects: Computation and Language (cs.CL); Artificial Intelligence (cs.AI); Computer Vision and Pattern Recognition (cs.CV); Machine Learning (cs.LG) [2] arXiv:2610.18862 [pdf, html, other] : Title: DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning Minghao Luo, Liang Chen Subjects: Computation and Language (cs.CL); Artificial Intelligence (cs.AI); Machine Learning (cs.LG) [3] arXiv:2610.18861 [pdf, html, other] : Title: Hybrid Reasoning Agents Jiaru Zou, Yunzhe Qi, Sirui Chen, Federico Bianchi, Sha",
+      "durationMs": 1190,
       "skipped": false
     },
     {
@@ -2481,25 +2328,53 @@
     },
     {
       "platform": "web",
-      "stage": "seed",
-      "url": "http://mp.weixin.qq.com/s?__biz=MzU1MjY4MTA1MQ==&mid=2247751656&idx=1&sn=02ea065aeea2f4162c186bcdc3803198",
-      "title": "NeurIPS放榜、AAAI首轮出分！转投还有29+16+8场CCF，A类12场可冲！",
-      "snippet": "NeurIPS 2026 的录用名单已经确定，AAAI 2027 首轮评审结果也在近日放出。国庆之际，两条通知就一前一后抵达。假如这两处都没有传来佳音，下一站该改投哪场会议，得尽快拿定主意。 2026年10-12月CCF会议截稿时间一览：29168场，冲刺倒计时！ 2026年最后一个季度，CCF推荐会议投稿的黄金窗口期！A类会议扎堆，B/C类选择丰富，你的论文准备好了吗？ 2026年10月：29场会议密集截稿，A类打头阵 10月是全年截稿最密集的月份之一，共有29场CCF推荐会议截止投稿，从A类到C类覆盖了计算机领域的各个方向。最引人注目的是10月1日国庆当天，VLDB 2027（数据库领域A类）与Eurographics 2027（计算机图形学B类）同时截稿。 紧接着10月2日又是一个小高峰，FSE 2027（软件工程A类）、DCC 2027（数据压缩B类）、ECIR 2027（信息检索C类）和ICC 2027（通信与网络C类）四场会议同日截止。 值得重点关注的时间节点： 10月12日 ：自然语言处理方向三场会议同日截稿—— COLING 2027 、 NAACL 2027 （均为B类，ARR机制）以及 ALT 2027 （学习理论C类）。 10月14日 ： OOPSLA 2027 （程序语言A类，第1轮）截稿，这是编程语言领域顶会。 10月17日 ： SIGMOD 2027 （数据管理A类，第4轮）截稿，数据库领域旗舰会议。 10月25日 ： WWW 2027 （Web、搜索与推荐A类）截稿。 10月31日 ： CSCWD 2027 （协同设计C类）为本月收官。 2026年",
-      "publishDate": "2026-09-29",
-      "relevanceScore": 25,
+      "stage": "chinese",
+      "url": "https://discover304.blog.csdn.net/article/details/165367071",
+      "title": "【CVPR 2026】WorldMM：长视频推理的动态多模态记忆智能体",
+      "snippet": "摘要\n本文解读 CVPR 2026（Highlight）论文《WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning》。该论文提出 WorldMM——一个动态多模态记忆智能体，通过融合多时间尺度情节记忆、持续演化的语义记忆与双模式视觉记忆，让视频大模型在不处理全量帧的前提下完成小时级到周级的长视频推理，其特别之处在于把「用哪种模态、取多长的时间窗」这两个决定下放给检索智能体自行决策。实验表明它在五个长视频问答基准上平均准确率 69.5%，超过最强基线 8.4 个百分点，检索的时间交并比达到 10.09（最强基线 HippoRAG 仅 4.00），为长视频记忆系统提供了可复用的设计范式。\n视频讲解：点击观看 B 站视频\n论文基本信息\n标题（英文） WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning\n作者 Woongyeong Yeo, Kangsan Kim, Jaehong Yoon, Sung Ju Hwang\n机构 KAIST (MLAI Lab) · NTU Singapore · DeepAuto.ai\n2512.02425\nworldmm.github.io\n背景与动机\n长视频记忆的问题从哪里来？视频大模型（video LLM）在短视频理解上已经相当成熟，但当视频长度扩展到数小时甚至数天，两个约束立刻显现：一是上下文容量——一段日长视频即使按每秒 1 帧采样，帧数也远超模型的上下文窗口；二是细节损失——把视频压成文",
+      "publishDate": "2026-09-18",
+      "relevanceScore": 23,
       "relevanceSignals": [
         "paper:论文",
-        "announcement:录用",
-        "topic:3dgs",
-        "topic:具身",
-        "venue:aaai",
-        "venue:acl",
-        "venue:cvpr",
-        "venue:neurips",
-        "venue:www",
-        "venue:顶会"
+        "topic:llm",
+        "topic:multimodal",
+        "topic:agent",
+        "topic:reasoning",
+        "topic:rag",
+        "topic:大模型",
+        "topic:多模态",
+        "topic:智能体",
+        "venue:cvpr"
       ],
-      "queryLabel": "seed-1",
+      "queryLabel": "chinese-2",
+      "queryIntent": "",
+      "parentUrl": "",
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "durationMs": 0,
+      "skipped": true
+    },
+    {
+      "platform": "web",
+      "stage": "chinese",
+      "url": "https://blog.csdn.net/weixin_29046035/article/details/166329323",
+      "title": "2026年AI学术平台TOP5评测与使用策略",
+      "snippet": "1. 项目背景与价值解析\n在人工智能技术日新月异的今天，学术资源的获取效率直接决定了研究者的成长速度。2026年这个时间节点尤为特殊——大模型技术进入平台期，多模态研究迎来爆发，边缘AI应用开始落地。传统学术平台的信息筛选机制已经难以满足研究者对前沿动态的即时需求。\n过去三年间，我亲身体验了47个国内外AI学术平台，发现真正能带来实质性帮助的不足10%。这个榜单的筛选标准不仅考量收录论文的质量，更注重以下三个维度：\n前沿性（是否第一时间收录顶会预印本）\n交互性（能否快速定位关联研究）\n工程价值（论文是否附带可复现代码）\n2. 核心评测维度详解\n2.1 收录时延与覆盖范围\n顶级会议的审稿周期平均为4.6个月，而重要突破往往在arXiv预印阶段就已引发讨论。优质平台需要满足：\n预印本收录延迟<24小时\n覆盖NeurIPS/ICML/CVPR等全部顶会\n包含至少3个细分领域（如LLM、AIGC、Robotics）\n实测发现，部分平台对ICLR收录存在3天以上的延迟，这对需要快速跟进SOTA方法的研究者极为不利。\n2.2 检索系统的智能程度\n传统关键词搜索在跨模态研究中效率低下。2026年领先平台普遍具备：\n论文图谱自动构建（引用关系可视化）\n数学公式语义搜索（支持LaTeX片段查询）\n方法对比矩阵生成（自动提取实验数据）\n例如搜索\"3D Gaussian Splatting\"时，优秀平台能直接显示不同变体的PSNR/SSIM对比，而非简单罗列相关论文。\n2.3 配套资源完整度\n可复现性已成为评价论文的重要指标。我们重点考察：\n代码仓库自动关联率\n数据集获取便捷度\n云实验环境集成\n某平",
+      "publishDate": "2026-09-21",
+      "relevanceScore": 30,
+      "relevanceSignals": [
+        "paper:arxiv",
+        "paper:论文",
+        "paper:预印本",
+        "topic:llm",
+        "topic:robotics",
+        "topic:3d gaussian",
+        "topic:gaussian splatting",
+        "topic:大模型",
+        "topic:多模态",
+        "venue:cvpr"
+      ],
+      "queryLabel": "chinese-1",
       "queryIntent": "",
       "parentUrl": "",
       "readerTitle": "",
@@ -2529,39 +2404,11 @@
       ],
       "queryLabel": "follow-up-4",
       "queryIntent": "venue-year GitHub sibling search",
-      "parentUrl": "https://arxiv.org/list/cs.CL/recent",
+      "parentUrl": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512418&idx=1&sn=8d74c2d9720ec66a3c9dfc02d9c08119",
       "readerTitle": "Updated 2026-10-13",
       "readerExcerpt": "| | | | --- | --- | | | Cedille: A large autoregressive French language model | | | The Wisdom of Hindsight Makes Language Models Better Instruction Followers | | | ChatGPT: A Study on its Utility for Ubiquitous Software Engineering Tasks | | | Query2doc: Query Expansion with Large Language Models | | | The Internal State of an LLM Knows When its Lying | | | Structured information extraction from complex scientific text with fine-tuned large language models | | | Same Model, Different Weakness: How Language and Modality Reshape the Jailbreak Attack Surface in Frontier MLLMs | | | TrueTeacher: Learning Factual Consistency Evaluation with Large Language Models | | | Large Language Models Encode Clinical Knowledge | | | PoET: A generative model of protein families as sequences-of-sequences | | | Fine-Grained Human Feedback Gives Better Rewards for Language Model Training | | | Prompt Sapper: LLM-Empowered Software Engineering Infrastructure for AI-Native Services | | | SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs | | | Modeling Protein Using Large-scale Pretrain Language Model | | | A Watermark for Large Language Models | | | GPT is becoming a Turing machine: Here are some ways to program it | | | Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model | | | Large Language Models are Zero-Shot Reasone",
-      "durationMs": 16975,
+      "durationMs": 15931,
       "skipped": false
-    },
-    {
-      "platform": "web",
-      "stage": "chinese",
-      "url": "https://zhuanlan.zhihu.com/p/2091641278291300582",
-      "title": "CV计算机视觉每日开源代码Paper with code速览-2026.10.8",
-      "snippet": "墙裂推荐：想获取更多前沿论文及算法\n优化idea冲击顶会或发表专利，包含目标检测、目标跟踪、图像分割、视频分割\n、可见光红外融合、多任务学习、多模态基础模型、文生图、自动驾驶、BEV、占用预测、具身智能VLA、深度估计\n、点云3D检测、医学图像分割、医学图像目标检测、医学大模型、缺陷检测\n、人群/目标计数、视频编辑、图像去雨等众多主题，请参考：https://qcno08je5sgu.feishu.cn/\n点击加入—>CV计算机视觉交流群\nCV计算机视觉每日开源代码Paper with code速览-2026.10.8\n1.【Visual Grounding\n】Focus When Necessary: Adaptive Routing and Collaborative Grounding for Training-Free Visual Grounding\n本文提出LazyMCoT，一种免训练的视觉定位框架，按样本难度自适应分配算力：以首token不确定度\n与保形预测跳过易样本，难样本由跨模态注意力与视觉专家协同精确定位，提升精度并降低推理延迟。\n2.【世界模型\n】Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban\nMetis面向自动驾驶与城市导航，用MoT专家架构解耦\n、推理免生成视频，显著降低延迟与成本，在NAVSIM与CityWalker取得SOTA。\n3.【多模态大模型】（ECCV2026）UniDDT: Unifying Multimoda",
-      "publishDate": "2026-10-08",
-      "relevanceScore": 29,
-      "relevanceSignals": [
-        "paper:paper",
-        "paper:论文",
-        "announcement:开源",
-        "topic:llm",
-        "topic:vlm",
-        "topic:vision-language",
-        "topic:multimodal",
-        "topic:vla",
-        "topic:reasoning",
-        "topic:reinforcement learning"
-      ],
-      "queryLabel": "chinese-2",
-      "queryIntent": "",
-      "parentUrl": "",
-      "readerTitle": "",
-      "readerExcerpt": "",
-      "durationMs": 0,
-      "skipped": true
     },
     {
       "platform": "web",
@@ -2613,36 +2460,8 @@
       "parentUrl": "",
       "readerTitle": "Staying VIGILant: Mitigating Visual Laziness via Counterfactual Visual Alignment in MLLMs",
       "readerExcerpt": "1]UAB 2]Yale 3]UNSW 4]Tulane 5]Georgia Tech 6]NEU 7]OSU 8]UIowa 9]Harvard \\contribution[*]Equal Contributions \\contribution[†]Co-advising Chen Liu Chih-Ting Liao Yunbei Zhang Qizhen Lan Yuxiang Wei Lin Zhao Janet Wang Jianyang Gu Muchao Ye Tianyang Wang Hao Xu [ [ [ [ [ [ [ [ [ xixiao@uab.edu ###### Abstract Multimodal large language models (MLLMs) extend large language models (LLMs) with visual perception, enabling joint reasoning over images and text. Despite inheriting strong reasoning capabilities from LLMs, they remain prone to hallucinations that contradict their visual inputs. Mechanistic studies indicate that this weakness stems from visual laziness: MLLMs encode the correct visual evidence internally, but overly rely on strong language priors during response. Existing alignment methods, such as direct preference optimization, primarily optimize outcome-level rewards based on text. This introduces an optimization bias toward linguistic shortcuts, leading to responses that often contradict the visual evidence. To address this, we propose Visual Information Gain In aLignment (VIGIL), a reinforcement-learning (RL) post-training framework that shifts the focus from numerical reward fitting to causal visual grounding. VIGIL introduces a geometric constraint that explicitly maximizes the mutual information between the visual input and the generated response. We achieve this b",
-      "durationMs": 1889,
+      "durationMs": 1684,
       "skipped": false
-    },
-    {
-      "platform": "web",
-      "stage": "chinese",
-      "url": "http://mp.weixin.qq.com/s?__biz=MzI1ODM0MTA0OA==&mid=2247497716&idx=1&sn=ad6caf9551e9f804c04d8cbabeb6652f",
-      "title": "快2027年了，这些思路还可以发论文？",
-      "snippet": "做大模型研究，如果自己课题里的方法改来改去没什么进展，不妨看看相近方向甚至交叉领域的工作。不过大模型相关论文实在太多，想系统了解几个方向，光搜集、筛选文献就要花不少时间。 所以我这次重新整理了一份505篇大模型论文合集，包含264篇前沿论文和241篇顶会论文，分开归类，既能用来了解不同方向的研究进展，也方便在选题、文献调研时寻找可参考的研究案例。 如果你正在做大模型相关课题，可以先领取一份，后续按自己的研究方向查阅。文末免费获取！ 一、264篇大模型前沿论文 这部分共264篇，按照6大研究方向、10研究热点进行整理。 创新路径 细分热点 多模态融合与行业大模型 多模态大模型、医学大模型、医学多模态大模型 大模型知识增强与检索增强 大模型RAG、大模型知识图谱 时间序列基础模型与预测大模型 大模型时序、时间序列预训练大模型 大模型后训练与智能体决策 大模型对齐、强化学习大模型 大模型可信增强与因果推理 大模型可解释性、因果推断大模型、大模型因果发现 大模型驱动科学计算与优化 大模型 PINN、大模型运筹优化 价值在于能帮你找到不同的研究参照。比如做RAG，可以顺着知识图谱方向继续调研；做大模型应用，可以看看医学、时序等垂直领域的研究路线。 如果暂时不知道创新点从哪里入手，可以先围绕自己的课题找几篇相关工作，再对照相邻方向的研究问题和技术路线。 二、241篇大模型顶会论文 这部分筛选自2026年CVPR、ECCV、AAAI、ICLR、ICML、NeurIPS、ACL、SIGKDD这8大主流顶会。 如果前一部分是帮助你了解不同方向，那么这一部分更适合用来集中查看顶会中有哪些相关工作、",
-      "publishDate": "2026-10-14",
-      "relevanceScore": 27,
-      "relevanceSignals": [
-        "paper:论文",
-        "topic:rag",
-        "topic:大模型",
-        "topic:多模态",
-        "topic:智能体",
-        "venue:aaai",
-        "venue:acl",
-        "venue:cvpr",
-        "venue:iclr",
-        "venue:icml"
-      ],
-      "queryLabel": "chinese-1",
-      "queryIntent": "",
-      "parentUrl": "",
-      "readerTitle": "",
-      "readerExcerpt": "",
-      "durationMs": 0,
-      "skipped": true
     },
     {
       "platform": "arxiv",
@@ -2669,27 +2488,106 @@
       "parentUrl": "",
       "readerTitle": "Computer Vision and Pattern Recognition",
       "readerExcerpt": "Computer Vision and Pattern Recognition Skip to main content ![Image 1: archive](https://arxiv.org/static/base/1.0.1/images/arxiv-logo-primary-light.svg) Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search # Computer Vision and Pattern Recognition ## Authors and titles for recent submissions - Mon, 12 Oct 2026 - Fri, 9 Oct 2026 - Thu, 8 Oct 2026 - Wed, 7 Oct 2026 - Tue, 6 Oct 2026 See today's new changes Total of 995 entries : 1-50 51-100 101-150 151-200 ... 951-995 Showing up to 50 entries per page: fewer | more | all ### Mon, 12 Oct 2026 (showing first 50 of 153 entries ) [1] arXiv:2610.13947 [pdf, html, other] : Title: Towards Physically Grounded Articulated 3D Assets: A Multi-Agent Pipeline and Benchmark Xudong Cai, Ruijie Zhu, Haoliang Shang, Ruining Li, Marc Pollefeys, Shangzhe Wu, Andrea Vedaldi, Chuanxia Zheng Subjects: Computer Vision and Pattern Recognition (cs.CV) [2] arXiv:2610.13944 [pdf, html, other] : Title: InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators Xuanlang Dai, Jiazi Bu, Yujie Zhou, Yuhong Liu, Beichen Zhang, Penghui Yang, Ziyu Liu, Yuhang Zang Comments: 26 pages, 19 figures Subjects: Computer Vision and Pattern Recognition (cs.CV) [3] arXiv:2610.13941 [pdf, html, other] : Title: Images Talk Back: Guiding MMDiTs by Suppressing Image-to-Text Feedback Yucheng Yang, Xiaoxiao Sun, Shusheng Yang, Jiakang",
-      "durationMs": 1186,
+      "durationMs": 660,
       "skipped": false
     },
     {
       "platform": "web",
       "stage": "chinese",
-      "url": "https://blog.csdn.net/Discover304/article/details/165346611",
-      "title": "【ICLR 2026】M3-Agent 论文解读：把长期记忆做成实体中心多模态图",
-      "snippet": "摘要\n本文解读 ICLR 2026 论文《Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory》。该论文提出 M3-Agent，通过融合实体中心的多模态记忆图、情景记忆与语义记忆的双类型生成与强化学习驱动的多轮检索推理，让多模态智能体像人一样边看边听、边记边更新，在需要时靠记忆作答。其特别之处在于：记忆不是向量库也不是更长的上下文，而是可增量写入、可按实体检索、可用权重投票自我纠错的独立结构；同时发布了配套基准 M3-Bench（100 段机器人第一视角视频 920 段网络视频，共 4,490 条开放式问答）。实验表明 M3-Agent 在 M3-Bench-robot 30.7%、M3-Bench-web 48.9%、VideoMME-long 61.8% 三项上全面超越最强提示基线（6.7 / 7.7 / 5.3），其中语义记忆与身份等价的消融分别掉 17.1 / 19.2 / 13.1 分，为长期记忆智能体的设计提供了可量化的借鉴。\n视频讲解：点击观看 B 站视频\n摘要\n论文基本信息\n背景与动机\n研究主线：从问题到结论\n基准/方法设计\n分类全景\n方法细节\n实验设计与结果\n结果对比总结\n关键发现\n局限性\n常见问题（FAQ）\nM3-Agent 和普通的长上下文模型有什么区别？\n为什么非要多轮检索，单轮 RAG 不行吗？\n情景记忆和语义记忆分别是什么？\nM3-Bench 和已有的长视频基准有什么不同？\n记忆模型的训练数据是怎么来的？\n这套方法可以迁移到别的具",
-      "publishDate": "2026-09-15",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzAxNDA1MTQwNg==&mid=2651433112&idx=2&sn=7607c1c2cf23ac66cf3e1399a6ae8964",
+      "title": "2026年计算机科学与技术学院研究生优秀科研成果展（一）",
+      "snippet": "优秀论文成果(一) 华侨大学计算机 科学与技术学院 研究生 #01 成果一 《Multimodal Fusion via Self-Consistent Task-Gradient Fields》-- ICML 2026 该篇论文由2023级研究生熊佳芋（第一作者）发表在CCFA类推荐、机器学习领域国际顶级会议 ICML 2026。 简介：多模态学习的难点在于既要在不同输入间保留任务相关信息，又不能因融合而损害特征提取。现有的激进融合会使模态表征相互纠缠，对缺失输入变得脆弱；而用辅助损失强行分离特征又常引发优化冲突。为此我们提出自洽场自编码器（SCFAE）：为每种模态配备轻量自编码器以保全信息，让任务损失作为 \"驱动力\" 筛选预测性特征，重建损失作为 \"约束力\" 把特征分离到独立子空间，两者经由互补子空间协同运作以缓解优化干扰。在音频 - 视频 - 文本、音频 - 视频和图像 - 视频三类基准上，SCFAE 以简洁结构稳健应对数据缺失与输入尺寸不均，梯度分析也证实其能规避冲突、维持稳定的训练动力学。 ICML （International Conference on Machine Learning，国际机器学习大会）由国际机器学习学会（IMLS）主办，是机器学习领域的顶级学术会议，与 NeurIPS、ICLR 并称 \"机器学习三大顶会\"。会议每年吸引全球顶尖学者和业界研究者投稿交流，涵盖深度学习、强化学习、统计学习、生成模型等前沿方向，录用论文学术含金量极高，是衡量研究成果国际影响力的重要标杆。 日期：2026.5.29 #02 成果二 《Center-Guided Dive",
+      "publishDate": "2026-10-15",
       "relevanceScore": 19,
+      "relevanceSignals": [
+        "paper:论文",
+        "announcement:录用",
+        "topic:multimodal",
+        "topic:多模态",
+        "venue:iclr",
+        "venue:icml",
+        "venue:neurips",
+        "venue:顶会"
+      ],
+      "queryLabel": "chinese-2",
+      "queryIntent": "",
+      "parentUrl": "",
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "durationMs": 0,
+      "skipped": true
+    },
+    {
+      "platform": "web",
+      "stage": "chinese",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk0MTYzMzMxMA==&mid=2247512569&idx=2&sn=21cb4c9960bd7a42a4447ad173633c45",
+      "title": "ACL两篇Skill，杀疯了",
+      "snippet": "上个月截稿ddl的ICLR2027朋友们都跟着冲了吗？ 现整理了 ICLR 2026、ICML 2026、CVPR 2026、AAAI 2026、ACL 2026、KDD 2026 六大顶会 ，合计整理出 460 篇2026年高引机器学习论文。 下面介绍两篇关于skill的高引论文： 这两篇论文，一篇专治过度思考，一篇专治学完就忘。共同点是：它们都相信\"技能\"应该被显式地拆解、沉淀、复用。 论文合集，回复「2026机器学习顶会合集」全拿走 第一篇：DRP——教师不动笔，只动剪刀 背景：不是不会，是想太多 以 o1、DeepSeek-R1 为代表的推理模型靠长思维链封神，但小模型学这套容易走火入魔：冗余回溯、反复自我纠正，token 烧了一堆，还容易被自己的啰嗦带偏。现有两条路都不完美——推理时剪枝容易\"想一半就交卷\"，蒸馏压缩则有个隐形炸弹：教师是简洁的 Short-CoT 风格，学生是话痨 Long-CoT 风格，风格错位导致学生根本学不动教师的答案。 DRP 框架总览 DRP 框架总览：让学生模型自己生成长思维链，教师模型负责剪枝，再蒸馏回学生。 方案：学生的作业，教师来批改 DRP 的思路很妙：不让学生抄教师的答案，而是让教师把学生自己的作业改短，再让学生照着改后版本重新学。三步走： 技能感知分解 ：教师把学生生成的思维链切成原子步骤，每步标注用了什么技能——\"读取数量\"\"代数表示\"比按句子硬切更细（平均 12.6 步 vs 8.3 步），语义边界也更稳； 步骤级剪枝 ：教师对每步四选一——保留、删除、改写、合并，最后还要按学生原本的语气风格重写一遍，保证\"还是你自己说话",
+      "publishDate": "2026-10-11",
+      "relevanceScore": 17,
+      "relevanceSignals": [
+        "paper:论文",
+        "venue:aaai",
+        "venue:acl",
+        "venue:cvpr",
+        "venue:iclr",
+        "venue:icml",
+        "venue:kdd",
+        "venue:顶会"
+      ],
+      "queryLabel": "chinese-1",
+      "queryIntent": "",
+      "parentUrl": "",
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "durationMs": 0,
+      "skipped": true
+    },
+    {
+      "platform": "web",
+      "stage": "chinese",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247642480&idx=1&sn=6ef40db174e0c2bf88b4c1f2e611f03d",
+      "title": "ECCV 2026上的多模态融合工作",
+      "snippet": "准备做多模态融合方向的朋友看过来，我这次整理了260篇多模态融合论文多模态代码库，其中论文部分包括： 6篇入门必读论文 103篇今年最新顶会论文 151篇前沿高分论文 这里的顶会论文筛选自CVPR/ECCV/ICLR/AAAI/IJCAI/ACM MM/NeurIPS/WWW/ICML等主流会议。前沿高分论文则按照基础架构应用方法论四条主流研究路线重新整理，方便你根据自己的研究进度和兴趣点找论文。 如果你是刚准备入门多模态、正在做相关课题、准备选题找创新点，以及需要论文复现和找Baseline，这套资料就非常适合你，可以直接收好！ 扫码添加小享，回复多模态融合25” 免费获取全部论文经典模型代码库 01刚入门，先解决从哪里开始看” 多模态融合涉及的东西其实比较杂，直接从最新论文开始，容易导致每篇都能看懂一点，但看完以后还是不知道这个方向到底是怎么发展起来的。 所以我单独整理了6篇入门必读论文。建议你先把一些经典的融合思路和基本研究脉络建立起来，再去看后面的前沿工作，会更容易理解为什么后面的论文要这么设计。 02想追前沿，重点看今年大家在研究什么” 这部分整理了103篇今年最新顶会论文。覆盖CVPR/ICLR/AAAI/IJCAI/ACM MM/NeurIPS/WWW/ICML等会议，主要用来快速了解近期多模态融合有哪些新的研究问题、新的方法和新的应用。 如果平时没有时间一个会议一个会议地翻，这部分可以直接拿来做一轮集中筛选。尤其是准备开题、写综述或者想了解近期研究趋势的，可以重点看这一部分。 03准备找创新，不要只盯着单篇论文 除了追最新顶会，我还整理了151篇前沿高分论文。这",
+      "publishDate": "2026-09-22",
+      "relevanceScore": 25,
+      "relevanceSignals": [
+        "paper:论文",
+        "announcement:新论文",
+        "topic:多模态",
+        "venue:aaai",
+        "venue:cvpr",
+        "venue:iclr",
+        "venue:icml",
+        "venue:neurips",
+        "venue:ijcai",
+        "venue:www"
+      ],
+      "queryLabel": "chinese-2",
+      "queryIntent": "",
+      "parentUrl": "",
+      "readerTitle": "",
+      "readerExcerpt": "",
+      "durationMs": 0,
+      "skipped": true
+    },
+    {
+      "platform": "web",
+      "stage": "chinese",
+      "url": "https://www.bilibili.com/video/BV1B9eG6WEMN/",
+      "title": "【CVPR 2026】🥇WorldMM：长视频推理的动态多模态记忆智能体",
+      "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning (CVPR 2026) — 把长视频记忆从「文本摘要 固定片段检索」升级为「三类互补记忆 由智能体自选模态与时间尺度」的证据检索。 - 提出 WorldMM：一个动态多模态记忆智能体，为长视频同时构建三类互补记忆，并在推理时自适应取用。 - 把 情节记忆（多时间尺度事件图）、语义记忆（持续演化的关系图）与 视觉记忆（特征索引 帧时间戳索引）整合进同一框架。 - 覆盖 5 个长视频问答基准，时间跨度从 小时级 到 周级（EgoLifeQA、Ego-R1、HippoVlog、LVBench、Video-MME）。 - 仅靠 自适应多轮检索（上限 5 步）即可在平均准确率上超过最强基线 8.4 个点。 本视频由 AI 自动生成，仅供学术交流使用。",
+      "publishDate": "2026-09-16",
+      "relevanceScore": 17,
       "relevanceSignals": [
         "paper:论文",
         "topic:multimodal",
         "topic:agent",
         "topic:reasoning",
-        "topic:rag",
         "topic:多模态",
         "topic:智能体",
-        "topic:具身",
-        "venue:iclr"
+        "venue:cvpr",
+        "venue:www"
       ],
       "queryLabel": "chinese-2",
       "queryIntent": "",
@@ -2702,88 +2600,35 @@
     {
       "platform": "web",
       "stage": "follow-up",
-      "url": "https://github.com/google-research/rrsi",
-      "title": "GitHub - google-research/rrsi",
-      "snippet": "Check out our paper and project page for more details.\n- [09/21/2026] Our paper is out! Check it out! [project page]\nAn LLM agent's capability is largely set by its harness: the prompts, control flow, tools, memory and context management around a frozen model. Evolving the harness against a fixed evolve set is effective but overfits: the harness memorizes the training tasks, and large in-distribution gains shrink or vanish out of distribution. RRSI keeps the harness edit space open and regularizes the search trajectory through it instead.\nOn the proposal side, an annealed budget caps how many independent edits one candidate may bundle, the proposer is conditioned on the full edit history so ",
-      "publishDate": "2026-09-21",
-      "relevanceScore": 21,
+      "url": "https://www.github.com/datawhalechina/self-harness",
+      "title": "的开源教程，旨在帮助开发者理解和掌握在大模型时代，如何为复杂、长时间运行的 AI 智能体（Agent）构建健壮的底层运行架构。",
+      "snippet": ".github/ workflows\nUpdate deploy.yml\nApr 15, 2026\ncode/ miniMaster2.0\ndocs(architecture): 更新项目架构文档注释\nApr 21, 2026\ndocs\nfix text\nApr 25, 2026\n.gitignore\nupdate layout\nApr 15, 2026\nREADME.md\nrefactor(miniMaster): 重构项目结构并同步更新文档\nApr 18, 2026\npackage-lock.json\nadd package-lock\nApr 11, 2026\nCaution\n项目简介\n本项目是一本关于  Harness Engineering  的开源教程，旨在帮助开发者理解和掌握在大模型时代，如何为复杂、长时间运行的 AI 智能体（Agent）构建健壮的底层运行架构。\n随着智能体技术的发展，AI 系统的开发范式正在经历深刻的演进：从单次的提示词工程（Prompt Engineering），到动态信息管理的上下文工程（Context Engineering），最终迈向系统级的 Harness Engineering。\n本教程包含理论讲解和实践代码两部分：\n理论部分 ：系统介绍提示词工程、上下文工程、harness 的核心概念、设计原则、实现策略。以及为什么会一步步演进到 harness engineering 实践部分 ：通过 miniMaster 项目（一个最小化的 Harness 实现），展示如何将 Harness 理论应用于实际开发\n项目受众\n本教程适合以下人群：\n",
+      "publishDate": "2026-10-05",
+      "relevanceScore": 17,
       "relevanceSignals": [
-        "paper:paper",
-        "paper:project page",
-        "announcement:our paper",
+        "announcement:开源",
         "topic:llm",
         "topic:agent",
+        "topic:大模型",
+        "topic:智能体",
+        "venue:www",
         "source:high-signal-url",
         "source:evidence-follow-up"
       ],
       "queryLabel": "follow-up-2",
       "queryIntent": "venue-year GitHub sibling search",
-      "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-      "readerTitle": "GitHub - google-research/rrsi",
-      "readerExcerpt": "## RRSI: Regularized Recursive Self-Improvement of Agent Harnesses Check out our paper and project page for more details. ## 🔥 Updates - [09/21/2026] Our paper is out! Check it out! [project page] ## 🧬 Overview ![Image 1: RRSI overview: proposal-side and selection-side regularization of the harness search](https://github.com/google-research/rrsi/raw/main/assets/rrsi_overview.png) An LLM agent's capability is largely set by its harness: the prompts, control flow, tools, memory and context management around a frozen model. Evolving the harness against a fixed evolve set is effective but overfits: the harness memorizes the training tasks, and large in-distribution gains shrink or vanish out of distribution. RRSI keeps the harness edit space open and regularizes the search trajectory through it instead. On the proposal side, an annealed budget caps how many independent edits one candidate may bundle, the proposer is conditioned on the full edit history so a falsified hypothesis is not redrawn, and a stalled run is redirected toward components it has never exercised. On the selection side, a critic screens every candidate for suite-specific logic before it is evaluated, a noise-adjusted floor blocks gains within evaluation variance, a cost rule requires added inference tokens to be paid for by measured gain, and components that stop helping are pruned. ### ✨ Key features - __Open ",
-      "durationMs": 1048,
-      "skipped": false,
-      "githubReadme": {
-        "title": "google-research/rrsi README",
-        "excerptLength": 3000
-      }
-    },
-    {
-      "platform": "web",
-      "stage": "follow-up",
-      "url": "https://www.bilibili.com/video/BV1LTeL6WEHG/",
-      "title": "【ICLR 2026】🥇MemGen：为自进化智能体编织生成式潜在记忆",
-      "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】MemGen: Weaving Generative Latent Memory for Self-Evolving Agents (ICLR 2026) — MemGen 把何时记、记什么”从人工设计的粒度，变成可学习的潜在生成过程——冻结推理核，只训练两个 LoRA。 - 提出 MemGen：一个动态生成式的智能体记忆框架。 - 把 RL 训练的记忆触发器 与 生成式记忆编织器 整合在一起。 - 覆盖 9 个数据集 / 5 大领域：web search、具身动作、数学、科学推理、代码。 - 仅需 冻结推理核 两个 LoRA 即可获得 跨域可迁移的记忆增益。 本视频由 AI 自动生成，仅供学术交流使用。",
-      "publishDate": "2026-09-16",
-      "relevanceScore": 17,
-      "relevanceSignals": [
-        "paper:论文",
-        "topic:agent",
-        "topic:智能体",
-        "topic:具身",
-        "venue:iclr",
-        "venue:www",
-        "source:evidence-follow-up"
-      ],
-      "queryLabel": "follow-up-1",
-      "queryIntent": "expand from venue-year signal to sibling papers",
-      "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-      "readerTitle": "",
-      "readerExcerpt": "",
-      "durationMs": 0,
-      "skipped": true
-    },
-    {
-      "platform": "web",
-      "stage": "follow-up",
-      "url": "https://www.bilibili.com/video/BV1UVeV66EeC/",
-      "title": "【ICLR 2026】🥇MemGAS：从单粒度到多粒度，会话智能体的长期记忆关联与选择",
-      "snippet": "P1 横屏（适合电脑） P2 竖屏（适合手机） 【论文分享】From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents (ICLR 2026) — 把长期记忆从「单一粒度切分 固定 top-k 检索」改写为 多粒度记忆单元 GMM 关联 熵路由自适应选择。 - 提出 MemGAS：一个面向会话智能体的长期记忆关联 选择 检索框架。 - 把每条会话记忆拆成 四种粒度单元：session、turn、LLM 生成的 summary 与 keyword，即 Mi Si, Ti, Ui, Ki。 - GMM 关联：新记忆与历史记忆的相似度向量经高斯混合模型聚类，分成 accept / reject 集合， 在关联图上建立跨粒度边——模拟人类记忆巩固。 - 熵路由：以各粒度相似度分布的 Shannon 熵衡量置信度，逆熵加权 wg (1/Hg)/(1/Hg')， 再经 PPR 在关联图上传播，最后用 LLM 过滤冗余。 - 全程训练-free：gpt-4o-mini 零样本提示，不微调任何模块。 本视频由 AI 自动生成，仅供学术交流使用。",
-      "publishDate": "2026-09-15",
-      "relevanceScore": 17,
-      "relevanceSignals": [
-        "paper:论文",
-        "topic:llm",
-        "topic:agent",
-        "topic:智能体",
-        "venue:iclr",
-        "venue:www",
-        "source:evidence-follow-up"
-      ],
-      "queryLabel": "follow-up-1",
-      "queryIntent": "expand from venue-year signal to sibling papers",
-      "parentUrl": "https://zhuanlan.zhihu.com/p/2088752825387967410",
-      "readerTitle": "",
-      "readerExcerpt": "",
-      "durationMs": 0,
-      "skipped": true
+      "parentUrl": "https://arxiv.org/list/cs.CL/recent",
+      "readerTitle": "GitHub - datawhalechina/self-harness: 本项目是关于Harness Engineering的开源教程，旨在帮助开发者理解和掌握在大模型时代，如何为复杂、长时间运行的 AI 智能体（Agent）构建健壮的底层运行架构。",
+      "readerExcerpt": "## self-harness - 实战指南（⚠️ Alpha内测） ![Image 1: self-harness](https://www.github.com/datawhalechina/self-harness/raw/main/docs/images/self-harness.png) ![Image 2: Stars](https://camo.githubusercontent.com/46546bbbbf9df022a5bc195f1c75440b3f3dd35b8ac7dfc7d9667e9e3169b5b3/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f646174617768616c656368696e612f73656c662d6861726e6573733f7374796c653d666f722d7468652d6261646765266c6162656c3d535441525326636f6c6f723d666636623662266c6162656c436f6c6f723d333333) ![Image 3: Forks](https://camo.githubusercontent.com/fbbe307f8ba149795212698387356fe24805f8c88d05a9aa472d580b4e81da5a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f646174617768616c656368696e612f73656c662d6861726e6573733f7374796c653d666f722d7468652d6261646765266c6162656c3d464f524b5326636f6c6f723d346563646334266c6162656c436f6c6f723d333333) ![Image 4: Tutorial](https://camo.githubusercontent.com/61863f1e0b13edf5781b3f1919fc5e3a4cebbd89600dc518d688c75f02a2c0b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5455544f5249414c2d4861726e657373253230456e67696e656572696e672d3334393864623f7374796c653d666f722d7468652d6261646765266c6162656c436f6c6f723d333333) ![Image 5: 在线阅读](https://camo.githubusercontent.com/99508b0cdff001762bfe37fc6029e97e8998dba3fa311e8998e527aac900c05b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652fe59ca8e7babfe99885",
+      "durationMs": 10098,
+      "skipped": false
     }
   ],
   "extractionBatches": [],
   "rejectedCandidates": [],
   "summary": {
     "searchQueriesRun": 18,
-    "skippedSearchPlans": 132,
+    "skippedSearchPlans": 134,
     "selectedSearchPlans": 18,
     "modelSearchPlans": 0,
     "followUpSearchPlans": 4,
@@ -2791,8 +2636,8 @@
     "searchStageBreakdown": {
       "seed": {
         "queries": 2,
-        "raw": 8,
-        "kept": 6,
+        "raw": 3,
+        "kept": 1,
         "rejected": 2
       },
       "repository": {
@@ -2804,8 +2649,8 @@
       "paper-index": {
         "queries": 2,
         "raw": 12,
-        "kept": 5,
-        "rejected": 7
+        "kept": 4,
+        "rejected": 8
       },
       "social": {
         "queries": 2,
@@ -2827,20 +2672,20 @@
       },
       "broad": {
         "queries": 2,
-        "raw": 12,
-        "kept": 9,
+        "raw": 10,
+        "kept": 7,
         "rejected": 3
       },
       "follow-up": {
         "queries": 4,
-        "raw": 19,
-        "kept": 10,
-        "rejected": 9
+        "raw": 18,
+        "kept": 4,
+        "rejected": 14
       }
     },
-    "rawSearchEvidenceCollected": 76,
-    "searchEvidenceCollected": 41,
-    "rejectedSearchEvidence": 32,
+    "rawSearchEvidenceCollected": 68,
+    "searchEvidenceCollected": 28,
+    "rejectedSearchEvidence": 38,
     "readerEnrichedEvidence": 14,
     "extractionBatchesRun": 0,
     "skippedExtractionBatches": 0,
@@ -2848,7 +2693,7 @@
     "rejectedCandidates": 0,
     "added": 0,
     "updated": 0,
-    "durationMs": 51621
+    "durationMs": 81179
   },
   "errors": []
 }
